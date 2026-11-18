@@ -1,0 +1,551 @@
+{
+  "checkedOn": "2026-11-10",
+  "exclusions": [
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "7234096",
+      "title": "해운대 클럽디 오아시스/클럽디오아시스 통합권/스파 이용권 (10/1~10/31)",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "6117838",
+      "title": "[전국] 히어로플레이파크 소인권",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "7090451",
+      "title": "해운대 클럽디 오아시스 특별 식음+통합권(7H) 패키지 (10/12~10/31)",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "6117161",
+      "title": "하이리페움 온천사우나(스파) 이용권(1인/쿠폰)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "4233664",
+      "title": "[키즈][충청/영남/호남지역] 숲파티포레 10월 이벤트 마녀의숲",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3851518",
+      "title": "[무료배송] 트래블메이트 보야지 캐리어벨트",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848558",
+      "title": "[무료배송] 트래블메이트 파르아비옹 캐리어벨트",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862737",
+      "title": "[무료배송] 트래블메이트 헤이 로포텐 워시팩",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3923081",
+      "title": "[무료배송]크리스탈클라우드 캐리어 정리 방수 압축파우치 SET(20인치/24인치/28인치)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "4234837",
+      "title": "[키즈][영남/호남/충청] 숲파티포레와 숲탐험대가 되어보는 시간, 숲체험교실",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924346",
+      "title": "[무료배송] 크리스탈클라우드 초미니 무선 블루투스 셀카봉 CC",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924388",
+      "title": "[무료배송]크리스탈클라우드 USB PD 20W C타입 GaN초고속 충전기 어댑터CC",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924337",
+      "title": "[무료배송] 크리스탈클라우드 5포트 PD 35W 멀티어댑터 CC-306 시에나블루",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "4834500",
+      "title": "[키즈][서울/경기/부산/창원] 10월 이벤트 마녀의 숲체험 프라이빗",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848616",
+      "title": "[무료배송] 트래블메이트 스카이본 스탠다드 라이트 폴딩 보스턴백",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924364",
+      "title": "[무료배송] 크리스탈클라우드 여행용 핸드폰 거치대 비행기 기내용 유모차 [블랙/화이트]",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3923494",
+      "title": "[무료배송]크리스탈클라우드 5포트 USB 5.6A 멀티어댑터 돼지코콘센트CC-305Plus",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848562",
+      "title": "[무료배송] 트래블메이트 파르아비옹 2 in 1 목베개",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924371",
+      "title": "[무료배송] 크리스탈클라우드 USB-A to C타입 OTG 젠더",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862772",
+      "title": "[무료배송] 트래블메이트 뉴욕시티 트랜싯 캐리어벨트",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924382",
+      "title": "[무료배송] 크리스탈클라우드 전문가용 바리깡 이발기",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862745",
+      "title": "[무료배송] 트래블메이트 라이트 폴딩 트래블팩 3종",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3852122",
+      "title": "[무료배송] 트래블메이트 보야지 캐리어커버 (M/L)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862774",
+      "title": "[무료배송] 트래블메이트 뉴욕시티 트랜싯 캐리어커버 (S/M/L)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924391",
+      "title": "[무료배송] 크리스탈클라우드 국산 돼지코 220V 변환 110V 플러그 여행용어댑터 6개입",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924390",
+      "title": "[무료배송] 크리스탈클라우드 휴대용 LED 미니 에어 펌프",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924381",
+      "title": "[무료배송] 크리스탈클라우드 프리미엄 완전 자동 전동 와인오프너 와인따개 [골드/실버]",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848512",
+      "title": "[무료배송] 트래블메이트 파르아비옹 네임택",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848668",
+      "title": "[무료배송] 트래블메이트 스카이본 스탠다드 라이트 폴딩 숄더백",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924385",
+      "title": "[무료배송] 크리스탈클라우드 전동 발 각질 제거기",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3861132",
+      "title": "[무료배송] 트래블메이트 입체형 수면안대",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862786",
+      "title": "[무료배송] 트래블메이트 캐리어벨트",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862491",
+      "title": "[무료배송] 트래블메이트 여행용 안전 복대 라운드형",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862687",
+      "title": "[무료배송] 트래블메이트 메모리폼 목베개",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848712",
+      "title": "[무료배송] 트래블메이트 클루니 여행용 기내/수하물 캐리어 (20/24/28인치)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848688",
+      "title": "[무료배송] 트래블메이트 코모 여행용 기내/수하물 캐리어 (20/24/28인치)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862730",
+      "title": "[무료배송] 트래블메이트 헤이 로포텐 웨어팩 (S/M/L)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862732",
+      "title": "[무료배송] 트래블메이트 헤이 로포텐 슈즈팩",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924340",
+      "title": "[무료배송] 크리스탈클라우드 5포트 PD 70W GaN  멀티 어댑터 돼지코 CC",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862766",
+      "title": "[무료배송] 트래블메이트 네임택 2 SET",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924352",
+      "title": "크리스탈클라우드 맥세이프 보조배터리 아이폰 미니 고속 무선 충전 배터리팩 5000mAh",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924350",
+      "title": "크리스탈클라우드 휴대용 전기포트 여행용 접이식 분유포트 멀티포트 커피포트 주전자 포트기",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3861125",
+      "title": "[무료배송] 트래블메이트 입체형 수면안대(ver 2) + 귀마개",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862770",
+      "title": "[무료배송] 트래블메이트 뉴욕시티 트랜싯 네임택",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862777",
+      "title": "[무료배송] 트래블메이트  TSA 3다이얼 캐리어벨트",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924366",
+      "title": "[무료배송] 크리스탈클라우드 스마트폰 방수팩 넥스트랩 암밴드",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848585",
+      "title": "[무료배송] 트래블메이트 파르아비옹 캐리어커버",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862696",
+      "title": "[무료배송] 트래블메이트 포터블 메모리폼 목베개",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862768",
+      "title": "[무료배송] 트래블메이트 트롤리 파트너",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862728",
+      "title": "[무료배송] 트래블메이트 에어 펌프 목베개 V2",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3843155",
+      "title": "[무료배송] 트래블메이트 뉴욕시티 트랜싯 2in1 비즈목베개",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862791",
+      "title": "[무료배송] 트래블메이트 캐리어 바퀴 커버",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862797",
+      "title": "[무료배송] 트래블메이트 투명 여권케이스",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3843157",
+      "title": "[무료배송] 트래블메이트 TSA 3다이얼 자물쇠",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862751",
+      "title": "[무료배송] 트래블메이트 라이트 폴딩 트래블팩 6종",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848535",
+      "title": "[무료배송] 트래블메이트 파르아비옹 여권케이스",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3842592",
+      "title": "[무료배송] 트래블메이트 포르토 여행용 기내/수하물 캐리어 (20/24/28인치)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848661",
+      "title": "[무료배송] 트래블메이트 스카이본 스탠다드 라이트 폴딩 백팩",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924378",
+      "title": "[무료배송] 크리스탈클라우드 와인 쿨러 칠링백 쿨링백 쿨러백 보냉백 칠러 [블랙/버건디]",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3846819",
+      "title": "[무료배송] 트래블메이트 도난방지 휴대폰 스트랩",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924348",
+      "title": "[무료배송] 크리스탈클라우드 휴대용 여행 수건 압축 스포츠 타월 25개",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3848714",
+      "title": "[무료배송] 트래블메이트 에코 스포츠 타월 (소형/대형)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3862592",
+      "title": "[무료배송] 트래블메이트 목걸이 안전지갑",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "7233841",
+      "title": "해운대 클럽디 오아시스 After3통합권+케이준샐러드 무료 (10/1~10/31)",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "6325732",
+      "title": "[즉시확정] 팬스타 쓰시마링크호 대마도 왕복 승선권 (당일·1박2일 중 선택)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3851391",
+      "title": "[무료배송] 트래블메이트 보야지 네임택",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "5792828",
+      "title": "조향사와 함께 만드는 인센스스틱 만들기",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "5785482",
+      "title": "조향사와 함께하는 향수만들기",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "7264121",
+      "title": "현지인과 함께하는 하이킹 + 막걸리 시음 (800m 숨겨진 산속 마을)",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3924369",
+      "title": "[무료배송] 크리스탈클라우드 C타입 to USB-A OTG 젠더",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "7340469",
+      "title": "[전국] 도심형 실내 키즈 테마파크 챔피언/플레이타임 18개점 / 키즈카페/챔피언키즈카페",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "7341597",
+      "title": "[전국] 도심형 실내 키즈 테마파크 챔피언1250/블랙벨트 37개점 / 키즈카페/챔피언키즈",
+      "reason": "부산 위치/이용 지점 미확인 또는 일반 배송 상품"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3886725",
+      "title": "[오픈특가] 다낭 부산이발관 한시장점(자체 픽업차량 운영, 마사지)",
+      "reason": "베트남 소재 동명 업소"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "3886726",
+      "title": "[오픈특가] 다낭 한시장 부산이발관&뷰스파 마사지(픽업 차량 운영)",
+      "reason": "베트남 소재 동명 업소"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "5871879",
+      "title": "[★9/23 부산출발★] 나가사키 2박 3일 크루즈 여행",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "externalId": "5871901",
+      "title": "[★9/25 부산출발★] 후쿠오카 2박 3일 크루즈 여행",
+      "reason": "관찰 제목의 이용/출발 기간 경과"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "117422810",
+      "title": "[경남] 창원 요트 131 투어",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "54036174",
+      "title": "아시아 8개국에서 사용 가능한 5G/4G eSIM | 멀티 네트워크 지원, ChatGPT 및 Google Maps 지원 | 일일 500MB - 총 50GB | 1~30일 | 24시간 결제 | QR 코드",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "85483615",
+      "title": "아시아 10개 지역 5G eSIM | 다중 통신사 · 모든 AI 지원 | 1~30일 | QR코드",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "100584441",
+      "title": "한국 전자 입국 카드 KoreaArrivalCard 등록 작성 서비스·입국 신고 서비스",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "103973562",
+      "title": "한국 입국 카드 대필 서비스·한국 입국 신고 서비스",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "114231701",
+      "title": "크루즈에 최적화된 산토리니: 피르고스 또는 블랙 비치, 오이아 & 피라",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "104195263",
+      "title": "서울 출발 | 원주 소금산 케이블카 투어: 천년 은행나무 전망과 원주의 자연 풍경 즐기기",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "102509061",
+      "title": "튀니스 + 시디 부 사이드 + 안토니우스 목욕장 + 카르타고 유적지 당일 치기 여행",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "116479894",
+      "title": "2027 시라카와고 라이트업 한정 일일 투어 | 다카야마 왕복",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "103331968",
+      "title": "서던하이랜드+타랄가 동물원 한국인 가이드 투어 호주 시드니 자유여행",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "102082151",
+      "title": "청두 레서 판다 숲 공원 1일 투어: 전용 차량 + 입장권",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "79086351",
+      "title": "한국 서울 MBC 방송국 투어",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "96180020",
+      "title": "북큐슈 가을 단풍 한정: 고코노에 유메 오쓰리바시, 야바케이 계곡, 히토메핫케이 전망대 & 우사신궁 일일 투어",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    },
+    {
+      "providerId": "PROVIDER_A",
+      "externalId": "95816003",
+      "title": "사이공 아오자이 시티 투어 - 영어/중국어/일본어/한국어 가이드 동반 그룹 투어",
+      "reason": "부산과 무관한 추천 또는 부산 적용 범위 미검수"
+    }
+  ],
+  "rawCounts": {
+    "PROVIDER_A": 93,
+    "PROVIDER_B": 29,
+    "PROVIDER_C": 261,
+    "PROVIDER_D": 10
+  }
+}

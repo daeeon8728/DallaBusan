@@ -1,0 +1,56 @@
+{
+  "name": "trip-fit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.11.0",
+  "engines": {
+    "node": ">=24.14.1 <25",
+    "npm": ">=11.11.0 <12"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run build --workspace @trip-fit/domain && concurrently --kill-others --names domain,server,web \"npm run dev --workspace @trip-fit/domain\" \"npm run dev --workspace @trip-fit/server\" \"npm run dev --workspace @trip-fit/web\"",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "npm run typecheck --workspaces && tsc -p tsconfig.tools.json",
+    "test": "vitest",
+    "check:providers": "tsx scripts/check-provider-boundaries.ts",
+    "build": "npm run build --workspace @trip-fit/domain && npm run build --workspace @trip-fit/server && npm run build --workspace @trip-fit/web",
+    "test:e2e": "playwright test",
+    "start": "node --env-file-if-exists=.env apps/server/dist/index.js --serve-web",
+    "db:migrate": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/db-migrate.ts",
+    "db:seed": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/seed-local.ts",
+    "data:import": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/import-attractions.ts",
+    "data:publish": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/publish-destinations.ts",
+    "data:refresh": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/refresh-attractions.ts",
+    "data:food:refresh": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/refresh-guides.ts food",
+    "data:recommended:refresh": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/refresh-guides.ts recommended",
+    "data:parking:refresh": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/refresh-parking.ts",
+    "data:parking:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-parking.ts",
+    "data:themes:build": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/build-theme-routes.ts",
+    "data:themes:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-theme-routes.ts",
+    "data:themes:export-attractions": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/export-route-attractions.ts",
+    "db:restore": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/restore-database.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.0",
+    "@types/node": "24.19.2",
+    "concurrently": "10.0.7",
+    "eslint": "10.14.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.7",
+    "globals": "17.14.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1",
+    "vitest": "4.1.12",
+    "vite": "7.3.7"
+  },
+  "overrides": {
+    "minimatch": "11.0.5"
+  }
+}

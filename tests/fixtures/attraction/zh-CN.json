@@ -1,0 +1,25 @@
+{
+  "fixtureNotice": "SYNTHETIC TEST ONLY - not verified operating data",
+  "getAttractionZhs": {
+    "header": {
+      "code": "00",
+      "message": "NORMAL_CODE"
+    },
+    "pageNo": 1,
+    "numOfRows": 100,
+    "totalCount": 1,
+    "item": [
+      {
+        "UC_SEQ": 999999,
+        "MAIN_TITLE": "테스트 원문",
+        "TITLE": "测试专用",
+        "GUGUN_NM": "테스트 구역",
+        "LAT": "35.16",
+        "LNG": "129.06",
+        "MAIN_IMG_NORMAL": "https://example.test/test-image.jpg",
+        "ITEMCNTNTS": "<p>Synthetic test description only.</p>",
+        "HLDY_INFO": "Test-only holiday text"
+      }
+    ]
+  }
+}

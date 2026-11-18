@@ -1,0 +1,1573 @@
+{
+  "reviewedOn": "2026-11-11",
+  "identityPolicy": "source-id + identical original title + identical non-null coordinates; retain different source IDs; reject conflicts",
+  "entries": [
+    {
+      "sourceId": "255",
+      "aliases": [
+        "흰여울",
+        "Huinnyeoul"
+      ],
+      "related": [
+        {
+          "offerId": "c-3884129",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3884129",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885185",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885185",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885009",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885009",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3884130",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3884130",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-52607026",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/52607026/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-107439639",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/107439639/",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "258",
+      "aliases": [
+        "태종대",
+        "Taejongdae"
+      ],
+      "related": [
+        {
+          "offerId": "c-6325733",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6325733",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115543424",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115498235",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115498235/",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "261",
+      "aliases": [
+        "해동용궁사",
+        "용궁사",
+        "Haedong Yonggungsa"
+      ],
+      "related": [
+        {
+          "offerId": "c-3885009",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885009",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-5905549",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/5905549",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7126287",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7126287",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-58846256",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/58846256/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-89497025",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/89497025/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-110387409",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110387409/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-111014746",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/111014746/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-113203701",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113203701/",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "278",
+      "aliases": [
+        "오륙도",
+        "Oryukdo"
+      ],
+      "related": [
+        {
+          "offerId": "c-3881177",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881177",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7128595",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7128595",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-52607026",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/52607026/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116035531",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116035531/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115543424",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115399593",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115399593/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115498235",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115498235/",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "280",
+      "aliases": [
+        "송정",
+        "Songjeong"
+      ],
+      "related": [
+        {
+          "offerId": "c-3827513",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827513",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881426",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881426",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827549",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827549",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827520",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827520",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827543",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827543",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6117004",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117004",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-114305559",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114305559/",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "286",
+      "aliases": [
+        "송도",
+        "Songdo Beach"
+      ],
+      "related": [
+        {
+          "offerId": "c-7358717",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7358717",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118066",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118066",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118085",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118085",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118072",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118072",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118078",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118078",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881491",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881491",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118077",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118077",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116035531",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116035531/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-113719020",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113719020/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116131802",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116131802/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-111065296",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/111065296/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-68151207",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/busan-songdo-sea-cable-car-68151207?curr=KRW&locale=ko-KR&poiType=3&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-2278",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/2278-night-tour-busan",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "326",
+      "aliases": [
+        "송도둘렛길"
+      ],
+      "related": [
+        {
+          "offerId": "c-3881491",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881491",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "348",
+      "aliases": [
+        "청사포",
+        "미포",
+        "스카이캡슐",
+        "스카이 캡슐",
+        "블루라인",
+        "Cheongsapo",
+        "Mipo",
+        "Sky Capsule"
+      ],
+      "related": [
+        {
+          "offerId": "c-3881177",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881177",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885009",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885009",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6264437",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6264437",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7126287",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7126287",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7258612",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7258612",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-52607026",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/52607026/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-94397147",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/94397147/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-88485075",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/88485075/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-69581486",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/69581486/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-89497025",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/89497025/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-100513677",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513677/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116035531",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116035531/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-114490504",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114490504/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-111014746",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/111014746/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-110516690",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110516690/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-54078332",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/54078332/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115543424",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115399593",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115399593/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116131802",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116131802/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115498235",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115498235/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-113203701",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113203701/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-106818615",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106818615/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-114316446",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114316446/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-106331183",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106331183/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-131154386",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/haeundae-blueline-park-131154386?curr=KRW&locale=ko-KR&poiType=3&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-153154006",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/haeundae-blueline-park-train-153154006?curr=KRW&locale=ko-KR&poiType=66&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-74132",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-148741",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "365",
+      "aliases": [
+        "감천",
+        "Gamcheon"
+      ],
+      "related": [
+        {
+          "offerId": "c-3881177",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881177",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885009",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885009",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-5905549",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/5905549",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881490",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881490",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881494",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881494",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6199380",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6199380",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-52607026",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/52607026/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-58846256",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/58846256/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-89497025",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/89497025/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-41692978",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/41692978/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-114490504",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114490504/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-110387409",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110387409/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115543424",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115399593",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115399593/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116131802",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116131802/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115498235",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115498235/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-113203701",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113203701/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-104371693",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/104371693/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-107439639",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/107439639/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-74132",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-44779",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/44779-busan-gamcheon-cultural-village-hanbok-rental",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-282525",
+          "relationship": "stay",
+          "areaLabel": "남포동 · Nampo-dong",
+          "evidenceUrl": "https://www.klook.com/ko/hotels/detail/282525-aventree-hotel-busan/?check_in=2026-12-10&check_out=2026-12-11&room_num=1&adult_num=1&child_num=0&age=&page_source=",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "366",
+      "aliases": [
+        "다대포",
+        "Dadaepo"
+      ],
+      "related": [
+        {
+          "offerId": "c-3881492",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881492",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "367",
+      "aliases": [
+        "영화체험박물관",
+        "영화체험",
+        "씨네뮤지엄"
+      ],
+      "related": [
+        {
+          "offerId": "c-6118021",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118021",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "368",
+      "aliases": [
+        "용두산",
+        "부산타워",
+        "Yongdusan"
+      ],
+      "related": [
+        {
+          "offerId": "c-6117873",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117873",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118085",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118085",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3829434",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3829434",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115543424",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "371",
+      "aliases": [
+        "황령산",
+        "Hwangnyeong"
+      ],
+      "related": [
+        {
+          "offerId": "c-4815786",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/4815786",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7128595",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7128595",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7258620",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7258620",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "373",
+      "aliases": [
+        "해운대",
+        "Haeundae"
+      ],
+      "related": [
+        {
+          "offerId": "c-3885009",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885009",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885472",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885472",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881397",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881397",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881429",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881429",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6117190",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117190",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827841",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827841",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6117087",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117087",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827640",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827640",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7333765",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7333765",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6440494",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6440494",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-4750050",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/4750050",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827525",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827525",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6117821",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117821",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6116982",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6116982",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3884895",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3884895",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827644",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827644",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6056941",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6056941",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827699",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827699",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6116974",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6116974",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3827643",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827643",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6117004",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117004",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-88485075",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/88485075/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-69581486",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/69581486/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-89497025",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/89497025/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-100513677",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513677/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-100513676",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513676/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116035531",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116035531/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-114839641",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114839641/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-114844069",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114844069/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-110516690",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110516690/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115543424",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115399593",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115399593/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116131802",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116131802/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-115498235",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115498235/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-21508511",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/21508511/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-116642062",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116642062/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-131154386",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/haeundae-blueline-park-131154386?curr=KRW&locale=ko-KR&poiType=3&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-153154006",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/haeundae-blueline-park-train-153154006?curr=KRW&locale=ko-KR&poiType=66&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-74132",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-148741",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-266140",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.klook.com/ko/hotels/detail/266140-toyoko-inn-busan-haeundae-no2/?check_in=2026-12-13&check_out=2026-12-14&room_num=1&adult_num=1&child_num=0&age=&page_source=",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-111713",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/111713-haeundae-river-cruise-in-busan",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "d-2205026",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1977017&hid=2205026",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "d-1974844",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1977017&hid=1974844",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-1018022",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.klook.com/ko/hotels/detail/1018022-grand-josun-busan/?check_in=2026-12-09&check_out=2026-12-10&room_num=1&adult_num=1&child_num=0&age=&page_source=",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "d-16933389",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1977017&hid=16933389",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-439669",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.klook.com/ko/hotels/detail/439669-paradise-hotel-busan/?check_in=2026-12-09&check_out=2026-12-10&room_num=1&adult_num=1&child_num=0&age=&page_source=",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "d-65460",
+          "relationship": "stay",
+          "areaLabel": "해운대 · Haeundae",
+          "evidenceUrl": "https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1977017&hid=65460",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "377",
+      "aliases": [
+        "광안리",
+        "Gwangalli"
+      ],
+      "related": [
+        {
+          "offerId": "c-3881418",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881418",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885036",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885036",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3885472",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885472",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-3881397",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3881397",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6303887",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6303887",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6325733",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6325733",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-4447567",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/4447567",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7128595",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7128595",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7269658",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7269658",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-96899974",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/96899974/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-113784051",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113784051/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-111067571",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/111067571/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-111713",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/111713-haeundae-river-cruise-in-busan",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-2278",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/2278-night-tour-busan",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "402",
+      "aliases": [
+        "범어사",
+        "Beomeosa"
+      ],
+      "related": [
+        {
+          "offerId": "c-3885184",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3885184",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "420",
+      "aliases": [
+        "벡스코",
+        "BEXCO"
+      ],
+      "related": [
+        {
+          "offerId": "c-6117945",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117945",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7344059",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7344059",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "550",
+      "aliases": [
+        "부산타워",
+        "부산 타워",
+        "Busan Tower"
+      ],
+      "related": [
+        {
+          "offerId": "c-6117873",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6117873",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118085",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118085",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "1310",
+      "aliases": [
+        "롯데월드",
+        "Lotte World"
+      ],
+      "related": [
+        {
+          "offerId": "c-7367807",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7367807",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-99814776",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/99814776/",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-136624941",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/lotte-world-adventure-busan-136624941?curr=KRW&locale=ko-KR&poiType=66&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-75094",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/75094-lotte-world-busan",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "1422",
+      "aliases": [
+        "송도해상케이블카",
+        "송도 케이블카",
+        "Songdo Cable Car"
+      ],
+      "related": [
+        {
+          "offerId": "c-7358717",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7358717",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118066",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118066",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118085",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118085",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118072",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118072",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118078",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118078",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-6118077",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6118077",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "a-ticket-68151207",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/busan-songdo-sea-cable-car-68151207?curr=KRW&locale=ko-KR&poiType=3&scene=ticket",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "b-2278",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.klook.com/ko/activity/2278-night-tour-busan",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "2191",
+      "aliases": [
+        "포디움다이브"
+      ],
+      "related": [
+        {
+          "offerId": "c-7173980",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7173980",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "2551",
+      "aliases": [
+        "황령산",
+        "Hwangnyeong"
+      ],
+      "related": [
+        {
+          "offerId": "c-4815786",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/4815786",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7128595",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7128595",
+          "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "c-7258620",
+          "relationship": "experience",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7258620",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "2678",
+      "aliases": [
+        "리틀프린스하우스",
+        "리틀 프린스 하우스",
+        "Little Prince House"
+      ],
+      "related": [
+        {
+          "offerId": "c-6199380",
+          "relationship": "ticket",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/6199380",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "277",
+      "aliases": [
+        "유엔기념공원",
+        "UN기념공원",
+        "UN Memorial Cemetery"
+      ],
+      "related": [
+        {
+          "offerId": "c-7126287",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/7126287",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    },
+    {
+      "sourceId": "1329",
+      "aliases": [
+        "전포공구길",
+        "전리단길",
+        "Jeonpo Gonggu Street"
+      ],
+      "related": [
+        {
+          "offerId": "c-3827698",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://experiences.myrealtrip.com/products/3827698",
+          "reviewedOn": "2026-11-11"
+        }
+      ]
+    }
+  ]
+}

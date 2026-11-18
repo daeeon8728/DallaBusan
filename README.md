@@ -1,0 +1,59 @@
+# dallaBusan (Trip Fit)
+
+부산 관광지·맛집·테마여행 안내와 티켓·투어·체험·숙소 제휴 상품을 제공하는 React/TypeScript 사이트입니다. 예약과 결제는 외부 판매처에서 진행합니다. AI·예산·자동 일정·로그인 기능은 현재 범위에 없습니다.
+
+## 내려받은 폴더에서 작업 이어가기
+
+Node.js **24.14.1**, npm **11.11.0**을 설치합니다. 버전 범위는 package.json, 정확한 의존성은 package-lock.json에 고정돼 있습니다. Git clone 또는 GitHub의 Download ZIP을 풀고 프로젝트 루트에서 실행합니다.
+
+~~~powershell
+git clone https://github.com/daeeon8728/DallaBusan.git
+cd DallaBusan
+npm.cmd ci
+if (-not (Test-Path -LiteralPath .env)) { Copy-Item -LiteralPath .env.example -Destination .env }
+npm.cmd run db:restore
+npm.cmd run dev
+~~~
+
+개발 웹: [localhost:5173](http://127.0.0.1:5173), 서버: [localhost:3001](http://127.0.0.1:3001). macOS/Linux에서는 npm.cmd 대신 npm을 사용하고 .env.example을 .env로 복사합니다. ZIP으로 받은 경우 git clone/cd 단계만 생략합니다.
+
+**기존 작업 폴더에서는 db:restore를 다시 실행하지 마세요.** 기존 DB가 있으면 이 명령은 덮어쓰지 않고 실패합니다. 새 폴더에서는 저장된 공공 자료를 API 호출 없이 복원합니다. API 키가 없어도 저장된 상품·관광지·맛집·테마여행을 표시할 수 있습니다.
+
+.env의 실제 비밀 값은 GitHub에 포함하지 않습니다. 현재 PC와 동일한 공공 API 갱신 권한이 필요하면 기존 .env를 새 작업 폴더로 **개인적으로 복사**하거나 .env.example의 해당 항목에 발급 키를 입력하세요. 기존 파일을 덮어쓰지 말고 비교해 필요한 값을 옮깁니다. 키를 GitHub 이슈·커밋·브라우저 코드에 넣지 마세요. AI/OAuth/제휴 API의 자리표시자 설정은 구현 완료를 뜻하지 않습니다.
+
+## 현재 포함된 기능과 자료
+
+- 저장 상품303개 중 공개302개. 중립 provider 설정, 실제 발급 제휴 링크, 상품 이미지 근거·사진 권리·번역 데이터를 포함합니다. 전체 OTA 재고 수를 뜻하지 않습니다.
+- 관광정보220개 원본 ID 그룹 / 1,044언어 레코드. 관광지 검색·상세·명시적으로 검수된 상품 관계를 제공합니다.
+- 맛집2,127언어 레코드와 테마여행1,191언어 레코드. /food, /recommended의 목록·상세에서 공공 소개·운영시간 등 원문을 제공합니다. 실시간 영업 상태가 아닙니다.
+- 한국어·영어·일본어·중국어 간체/번체 UI. 상품 제목의4개 외국어 편집 번역과 누락 시 원문 대체를 구분합니다.
+- 공영주차장615건의 원본·정규화·품질 자료와 수동 갱신 CLI. 주차 화면·공개 주차 API는 없습니다.
+- 선별 테마 코스17개와 관광지/맛집 명시 매핑44개, 방문 순서 근거·coverage. 내부 검수용이고 새 페이지/API가 없습니다. 사람 승인·현장 검증은 대기이며 추천은 비활성입니다.
+
+## 실행 및 검증
+
+~~~powershell
+npm.cmd run lint
+npm.cmd run typecheck
+npm.cmd run test -- --run
+npm.cmd run check:providers
+npm.cmd run build
+npx.cmd playwright install chromium
+npm.cmd run test:e2e
+npm.cmd run start
+~~~
+
+start는 빌드한 웹/API를 기본3001에서 제공합니다. 실행 전에 build가 필요합니다. E2E는4317의 별도 서버와 메모리 DB, 외부 요청 대역을 사용합니다. 테스트 브라우저 설치는 최초1회만 필요합니다. 외부 지역/다른 네트워크에 공개하는 호스팅·터널은 별도이며 저장소 업로드만으로 서버가 열리지는 않습니다.
+
+## 데이터 복원과 갱신
+
+config/catalog에는 공개 카탈로그와 내부 검토 자료가 있습니다. data/snapshots/trip-fit.sqlite와 manifest.json은 기존 공공 관광 DB를 보존한 복원용 백업입니다. SHA-256·테이블·행 수·SQLite 무결성을 확인한 뒤 db:restore가 새 DB를 만듭니다. 실제 작업 DB는 기본 var/trip-fit.sqlite이며 Git에 올리지 않습니다.
+
+~~~powershell
+npm.cmd run data:themes:check
+npm.cmd run data:parking:check
+~~~
+
+위 검사는 외부 API/키 없이 로컬 결과를 검증합니다. 공공 API를 새로 수집하려면 .env 키가 필요합니다. 원본 갱신이 검토 승인까지 자동 갱신하지는 않습니다. 명령과 순서는 [운영 절차](docs/operations.md), [인수인계](docs/handoff.md)를 따릅니다.
+
+작업 전에 [AGENTS.md](AGENTS.md) → [intent.md](docs/intent.md) → [spec.md](docs/spec.md) → [plan.md](docs/plan.md), [최신 카탈로그 계획](docs/catalog-plan.md)을 읽으세요. [proof.md](docs/proof.md)에 검증 이력과 미확인 범위, [코스 검수](docs/theme-route-review-2026-11-14.md)에 보류 근거가 있습니다. 신규 사이트 채널 승인·상시 호스팅·실시간 가격/재고·사람의 코스 승인은 완료된 것으로 표시하지 않습니다.

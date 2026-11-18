@@ -1,0 +1,2816 @@
+{
+  "generatedFrom": "local-public-api-database",
+  "sourceLanguageRecords": 1044,
+  "sourceGroups": 220,
+  "note": "Source-ID groups are tourism information records, not a deduplicated physical-place count.",
+  "identityEvidence": "Exact source ID, original title and non-null coordinates checked across locales; different IDs retained.",
+  "linkedSources": 25,
+  "relationships": 190,
+  "uniqueLinkedOffers": 117,
+  "items": [
+    {
+      "slug": "gamcheon",
+      "sourceId": "365",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 22,
+      "status": "linked"
+    },
+    {
+      "slug": "gwangalli",
+      "sourceId": "377",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 14,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-255",
+      "sourceId": "255",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 6,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-256",
+      "sourceId": "256",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-257",
+      "sourceId": "257",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-258",
+      "sourceId": "258",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 3,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-259",
+      "sourceId": "259",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-260",
+      "sourceId": "260",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-261",
+      "sourceId": "261",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 8,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-262",
+      "sourceId": "262",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-264",
+      "sourceId": "264",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-265",
+      "sourceId": "265",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-266",
+      "sourceId": "266",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-267",
+      "sourceId": "267",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-268",
+      "sourceId": "268",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-269",
+      "sourceId": "269",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-270",
+      "sourceId": "270",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-272",
+      "sourceId": "272",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-273",
+      "sourceId": "273",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-274",
+      "sourceId": "274",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-275",
+      "sourceId": "275",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-276",
+      "sourceId": "276",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-277",
+      "sourceId": "277",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-278",
+      "sourceId": "278",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 7,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-279",
+      "sourceId": "279",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-280",
+      "sourceId": "280",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 7,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-281",
+      "sourceId": "281",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-285",
+      "sourceId": "285",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-286",
+      "sourceId": "286",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 13,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-287",
+      "sourceId": "287",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-288",
+      "sourceId": "288",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-289",
+      "sourceId": "289",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-290",
+      "sourceId": "290",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-291",
+      "sourceId": "291",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-295",
+      "sourceId": "295",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-296",
+      "sourceId": "296",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-297",
+      "sourceId": "297",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-298",
+      "sourceId": "298",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-299",
+      "sourceId": "299",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-301",
+      "sourceId": "301",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-302",
+      "sourceId": "302",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-304",
+      "sourceId": "304",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-308",
+      "sourceId": "308",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-313",
+      "sourceId": "313",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-314",
+      "sourceId": "314",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-315",
+      "sourceId": "315",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-325",
+      "sourceId": "325",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-326",
+      "sourceId": "326",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-333",
+      "sourceId": "333",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-334",
+      "sourceId": "334",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-335",
+      "sourceId": "335",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-340",
+      "sourceId": "340",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-343",
+      "sourceId": "343",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-344",
+      "sourceId": "344",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-346",
+      "sourceId": "346",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-347",
+      "sourceId": "347",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-348",
+      "sourceId": "348",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 28,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-354",
+      "sourceId": "354",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-358",
+      "sourceId": "358",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-359",
+      "sourceId": "359",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-361",
+      "sourceId": "361",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-362",
+      "sourceId": "362",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-364",
+      "sourceId": "364",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-366",
+      "sourceId": "366",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-367",
+      "sourceId": "367",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-368",
+      "sourceId": "368",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 4,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-369",
+      "sourceId": "369",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-370",
+      "sourceId": "370",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-371",
+      "sourceId": "371",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 3,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-372",
+      "sourceId": "372",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-373",
+      "sourceId": "373",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 48,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-396",
+      "sourceId": "396",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-397",
+      "sourceId": "397",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-402",
+      "sourceId": "402",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-409",
+      "sourceId": "409",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-415",
+      "sourceId": "415",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-418",
+      "sourceId": "418",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-419",
+      "sourceId": "419",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-420",
+      "sourceId": "420",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 2,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-421",
+      "sourceId": "421",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-425",
+      "sourceId": "425",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-426",
+      "sourceId": "426",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-430",
+      "sourceId": "430",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-432",
+      "sourceId": "432",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-433",
+      "sourceId": "433",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-439",
+      "sourceId": "439",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-444",
+      "sourceId": "444",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-445",
+      "sourceId": "445",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-450",
+      "sourceId": "450",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-456",
+      "sourceId": "456",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-457",
+      "sourceId": "457",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-458",
+      "sourceId": "458",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-459",
+      "sourceId": "459",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-463",
+      "sourceId": "463",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-483",
+      "sourceId": "483",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-501",
+      "sourceId": "501",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-508",
+      "sourceId": "508",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-511",
+      "sourceId": "511",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-527",
+      "sourceId": "527",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-550",
+      "sourceId": "550",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 2,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-757",
+      "sourceId": "757",
+      "locales": [
+        "en",
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-771",
+      "sourceId": "771",
+      "locales": [
+        "ja",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-783",
+      "sourceId": "783",
+      "locales": [
+        "ja"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-788",
+      "sourceId": "788",
+      "locales": [
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-804",
+      "sourceId": "804",
+      "locales": [
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-813",
+      "sourceId": "813",
+      "locales": [
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-832",
+      "sourceId": "832",
+      "locales": [
+        "ko",
+        "zh-CN"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-833",
+      "sourceId": "833",
+      "locales": [
+        "en",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-835",
+      "sourceId": "835",
+      "locales": [
+        "ja"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-838",
+      "sourceId": "838",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-848",
+      "sourceId": "848",
+      "locales": [
+        "en",
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-849",
+      "sourceId": "849",
+      "locales": [
+        "ja"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-850",
+      "sourceId": "850",
+      "locales": [
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-859",
+      "sourceId": "859",
+      "locales": [
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-862",
+      "sourceId": "862",
+      "locales": [
+        "zh-CN"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-876",
+      "sourceId": "876",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1014",
+      "sourceId": "1014",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1016",
+      "sourceId": "1016",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1024",
+      "sourceId": "1024",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1031",
+      "sourceId": "1031",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1142",
+      "sourceId": "1142",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1179",
+      "sourceId": "1179",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1185",
+      "sourceId": "1185",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1305",
+      "sourceId": "1305",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1310",
+      "sourceId": "1310",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 4,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-1322",
+      "sourceId": "1322",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1329",
+      "sourceId": "1329",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-1422",
+      "sourceId": "1422",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 8,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-1434",
+      "sourceId": "1434",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1440",
+      "sourceId": "1440",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1444",
+      "sourceId": "1444",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1449",
+      "sourceId": "1449",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1653",
+      "sourceId": "1653",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1671",
+      "sourceId": "1671",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1673",
+      "sourceId": "1673",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1674",
+      "sourceId": "1674",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1676",
+      "sourceId": "1676",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1677",
+      "sourceId": "1677",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1696",
+      "sourceId": "1696",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1709",
+      "sourceId": "1709",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1718",
+      "sourceId": "1718",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1731",
+      "sourceId": "1731",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1772",
+      "sourceId": "1772",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1776",
+      "sourceId": "1776",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1777",
+      "sourceId": "1777",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1796",
+      "sourceId": "1796",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1798",
+      "sourceId": "1798",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1857",
+      "sourceId": "1857",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1862",
+      "sourceId": "1862",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1866",
+      "sourceId": "1866",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1867",
+      "sourceId": "1867",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1868",
+      "sourceId": "1868",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1881",
+      "sourceId": "1881",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1890",
+      "sourceId": "1890",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-1900",
+      "sourceId": "1900",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2013",
+      "sourceId": "2013",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2019",
+      "sourceId": "2019",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2024",
+      "sourceId": "2024",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2034",
+      "sourceId": "2034",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2065",
+      "sourceId": "2065",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2067",
+      "sourceId": "2067",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2077",
+      "sourceId": "2077",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2078",
+      "sourceId": "2078",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2079",
+      "sourceId": "2079",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2081",
+      "sourceId": "2081",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2082",
+      "sourceId": "2082",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2085",
+      "sourceId": "2085",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2086",
+      "sourceId": "2086",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2095",
+      "sourceId": "2095",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2102",
+      "sourceId": "2102",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2104",
+      "sourceId": "2104",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2105",
+      "sourceId": "2105",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2106",
+      "sourceId": "2106",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2119",
+      "sourceId": "2119",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2121",
+      "sourceId": "2121",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2133",
+      "sourceId": "2133",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2138",
+      "sourceId": "2138",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2139",
+      "sourceId": "2139",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2140",
+      "sourceId": "2140",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2143",
+      "sourceId": "2143",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2145",
+      "sourceId": "2145",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2153",
+      "sourceId": "2153",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2155",
+      "sourceId": "2155",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2157",
+      "sourceId": "2157",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2166",
+      "sourceId": "2166",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2172",
+      "sourceId": "2172",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2173",
+      "sourceId": "2173",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2186",
+      "sourceId": "2186",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2187",
+      "sourceId": "2187",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2188",
+      "sourceId": "2188",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2189",
+      "sourceId": "2189",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2191",
+      "sourceId": "2191",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-2200",
+      "sourceId": "2200",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2202",
+      "sourceId": "2202",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2204",
+      "sourceId": "2204",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2206",
+      "sourceId": "2206",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2210",
+      "sourceId": "2210",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2218",
+      "sourceId": "2218",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2220",
+      "sourceId": "2220",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2229",
+      "sourceId": "2229",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2237",
+      "sourceId": "2237",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2239",
+      "sourceId": "2239",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2240",
+      "sourceId": "2240",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2274",
+      "sourceId": "2274",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2275",
+      "sourceId": "2275",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2284",
+      "sourceId": "2284",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2288",
+      "sourceId": "2288",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2299",
+      "sourceId": "2299",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2314",
+      "sourceId": "2314",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2408",
+      "sourceId": "2408",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2491",
+      "sourceId": "2491",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2551",
+      "sourceId": "2551",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 3,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-2566",
+      "sourceId": "2566",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2587",
+      "sourceId": "2587",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2588",
+      "sourceId": "2588",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2594",
+      "sourceId": "2594",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2612",
+      "sourceId": "2612",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2678",
+      "sourceId": "2678",
+      "locales": [
+        "en",
+        "ja",
+        "ko",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "related": 1,
+      "status": "linked"
+    },
+    {
+      "slug": "busan-2753",
+      "sourceId": "2753",
+      "locales": [
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    },
+    {
+      "slug": "busan-2857",
+      "sourceId": "2857",
+      "locales": [
+        "ko"
+      ],
+      "related": 0,
+      "status": "no-confirmed-product-mapping"
+    }
+  ]
+}

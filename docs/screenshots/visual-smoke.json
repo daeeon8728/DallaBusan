@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-11-10T01:59:13.585Z",
+  "realProductImages": true,
+  "affiliateNavigations": 0,
+  "apiStatus": 200,
+  "invalidLocale": 400,
+  "privateRoute": 404,
+  "pageErrors": [],
+  "outputs": [
+    {
+      "desktop": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "cards": 24,
+        "visibleImages": [
+          {
+            "loaded": true,
+            "destination": false
+          },
+          {
+            "loaded": true,
+            "destination": false
+          },
+          {
+            "loaded": true,
+            "destination": false
+          },
+          {
+            "loaded": true,
+            "destination": false
+          }
+        ]
+      }
+    }
+  ]
+}

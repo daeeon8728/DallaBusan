@@ -1,0 +1,625 @@
+{
+  "version": 1,
+  "mappings": [
+    {
+      "id": "attraction-433",
+      "place": {
+        "service": "attraction",
+        "sourceId": "433",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "f09f5459cad26feaad4995302ecad473b1a0928bb8beae9d65c68f22e294490b",
+      "expectedName": "석불사",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-366",
+      "place": {
+        "service": "attraction",
+        "sourceId": "366",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "eb6dd2a6de764d7ba6f8b8d6b31d9ac04cc97fa984888db1ea45d89902c6f5da",
+      "expectedName": "다대포 해수욕장",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-365",
+      "place": {
+        "service": "attraction",
+        "sourceId": "365",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "2a593a288a3aa5da4598687a0bd34592f3d616ee58e90c6a6219d1691a93c54f",
+      "expectedName": "감천문화마을",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-255",
+      "place": {
+        "service": "attraction",
+        "sourceId": "255",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "a93308855246b2cfeca149eb0a53e866165919984af9cd163e9369b940562a2f",
+      "expectedName": "흰여울문화마을",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1117",
+      "place": {
+        "service": "food",
+        "sourceId": "1117",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "403a3a369cfc4643cb212d66b5d1a975270219fe6976a6c4866211d58e42cb81",
+      "expectedName": "양평칼국수 본점",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-961",
+      "place": {
+        "service": "food",
+        "sourceId": "961",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "dfa040d679183caf4881a188cff02651b3980141c9741decf3f96095692b1742",
+      "expectedName": "몽실종가돼지국밥 감천문화마을 본점",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-920",
+      "place": {
+        "service": "food",
+        "sourceId": "920",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "e624f2fd66795c29edd532e87163d00c354b57892344c58b5f3e21930b885a06",
+      "expectedName": "에테르",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-354",
+      "place": {
+        "service": "attraction",
+        "sourceId": "354",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "57c3de4bb8c58f53b501705abea15f0f210e3fd773e2c89a73e702fa66caaf75",
+      "expectedName": "부산시민공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-278",
+      "place": {
+        "service": "attraction",
+        "sourceId": "278",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "cbaec5fbf07f44dc75de8a1366d1278ed2455b20b36e01f76f377f6b42e57962",
+      "expectedName": "오륙도",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-377",
+      "place": {
+        "service": "attraction",
+        "sourceId": "377",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "b02840108e65c25005c3077b06f828ffa1d3eb37e022619e89cf6560a728e123",
+      "expectedName": "광안리해수욕장",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1571",
+      "place": {
+        "service": "food",
+        "sourceId": "1571",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "bbb9647b6d91d935255689db11eb450b2f42831e9d9dcd270f5f2eba7744c0c0",
+      "expectedName": "레땅",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1519",
+      "place": {
+        "service": "food",
+        "sourceId": "1519",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "41365eac9c84a3d16acaa6ae09b569826d07d321b251bde1d73c3805fb6456ee",
+      "expectedName": "할매재첩국부산본점",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-2612",
+      "place": {
+        "service": "attraction",
+        "sourceId": "2612",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "62d52dfd4bee59055169141f9e3060ed0875026fa4395cf125e9d1312f8d1bed",
+      "expectedName": "회동수원지",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-396",
+      "place": {
+        "service": "attraction",
+        "sourceId": "396",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "6106407e226551873305491fac8fc09d99b87518bd359e73fde0f63dcd23b4a8",
+      "expectedName": "금정산",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-402",
+      "place": {
+        "service": "attraction",
+        "sourceId": "402",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "60489ca34205d2cf56631aab616f5925df725bd0cb5d4b7c9373904ada431e70",
+      "expectedName": "범어사",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-372",
+      "place": {
+        "service": "attraction",
+        "sourceId": "372",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "869ef909a769ad0fd6b3dbbd1d5346e9514ca330a2bf85d4135980de86897c84",
+      "expectedName": "F1963",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-289",
+      "place": {
+        "service": "attraction",
+        "sourceId": "289",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "9aad5b1089b042ce8761ef25ea77804f98b41ad25cf23688e573d8736c719c48",
+      "expectedName": "부산시립미술관",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": [
+        "시립미술관"
+      ]
+    },
+    {
+      "id": "attraction-361",
+      "place": {
+        "service": "attraction",
+        "sourceId": "361",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "38c28e842613a4039db09e20a4750542092783dc936c9f4bfb692b0c00a92214",
+      "expectedName": "영화의 거리",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-2274",
+      "place": {
+        "service": "attraction",
+        "sourceId": "2274",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "669f800afa224a1761bbf6d70c273405edee2efb00c479e65f17e7c08c5e15fc",
+      "expectedName": "동백섬",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1589",
+      "place": {
+        "service": "food",
+        "sourceId": "1589",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "dc28e6022972c81c428570d2fce0fcd0b4df6a3a3f69243e4c273197c314e085",
+      "expectedName": "마이클어반팜테이블",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1841",
+      "place": {
+        "service": "food",
+        "sourceId": "1841",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "703fde9494a4d1887b0b401e5349526fd4777210541479b4ad982cd52bd6d613",
+      "expectedName": "면옥향천",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-2334",
+      "place": {
+        "service": "food",
+        "sourceId": "2334",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "5b78ecda6b8213490990854a883a237f079cd557814cc3e697a70e51637108bd",
+      "expectedName": "못난이식당 해운대점",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1593",
+      "place": {
+        "service": "food",
+        "sourceId": "1593",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "17974ebf5216d2f8c5df65835fdfb8258eb550d1d79133c9b9aa23d18c328bf2",
+      "expectedName": "셔블",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-364",
+      "place": {
+        "service": "attraction",
+        "sourceId": "364",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "2995eff96422f5f0fd48cb47d0bd46b9045195696427db069225df4885beb990",
+      "expectedName": "40계단, 문화관",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-368",
+      "place": {
+        "service": "attraction",
+        "sourceId": "368",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "4aa89e34cd958c794be8daeca99c256cee18aa49725003888cce2435176ea25e",
+      "expectedName": "용두산공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1570",
+      "place": {
+        "service": "food",
+        "sourceId": "1570",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "12a698f279ee4008304ec465ccc6d4f78d10725b4a45ddb95de0daee7427c66d",
+      "expectedName": "이재모피자",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-280",
+      "place": {
+        "service": "attraction",
+        "sourceId": "280",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "95bab8f2c23f51f18007ccb58433f2f2d7c6a09b5a611722316643641ac9ae7b",
+      "expectedName": "송정해수욕장, 죽도공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-259",
+      "place": {
+        "service": "attraction",
+        "sourceId": "259",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "0ddaab577ea0f02eb062d6678754dc2e596f7dbdd37020221ac7647e9ec5740d",
+      "expectedName": "죽성성당",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-261",
+      "place": {
+        "service": "attraction",
+        "sourceId": "261",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "b6dee0198957718dbb8bdb50dab3ea49d323bcb3b0f35ab18728bb717ba012c6",
+      "expectedName": "해동용궁사",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-290",
+      "place": {
+        "service": "attraction",
+        "sourceId": "290",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "562ac33d2a9c9491b6d5a2fde4cd48f79ff57ce8a5f8115f12f2c5a53443c05a",
+      "expectedName": "오랑대공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-439",
+      "place": {
+        "service": "attraction",
+        "sourceId": "439",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "5f0dc5461529af4443f2e4410c572ef8e075f124fb5b81a082f0a8df02cafb8b",
+      "expectedName": "동래향교, 기장향교",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-419",
+      "place": {
+        "service": "attraction",
+        "sourceId": "419",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "7ac67edde16e3ff3a55cae21d78623687e8288cf0d3b0b052c78b4ddf47280c9",
+      "expectedName": "복천박물관, 복천동고분군",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-1434",
+      "place": {
+        "service": "attraction",
+        "sourceId": "1434",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "0bc68f8aeec6b26b41c892a5957e2bece8f814fce4bf32991e4444874947a9a7",
+      "expectedName": "화명생태공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-1673",
+      "place": {
+        "service": "attraction",
+        "sourceId": "1673",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "ce9a51bc6324a11b0e8fd0c8d202f32b4c604bfce118eefb21874c93ea2c730d",
+      "expectedName": "대저생태공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-325",
+      "place": {
+        "service": "attraction",
+        "sourceId": "325",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "4a8a52824788f7ed4734bbcd2d92325b17d1814f72f7cffce62307ebf794a295",
+      "expectedName": "삼락생태공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-2157",
+      "place": {
+        "service": "attraction",
+        "sourceId": "2157",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "91f3821a6e6802379914a0053d41e85747a4d960c91a505d6296047a89781417",
+      "expectedName": "다대포 바다누리길",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-1671",
+      "place": {
+        "service": "attraction",
+        "sourceId": "1671",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "63096e1baa8435351a68265fd157f1dd631ee04a9b02cc55fd9ede629848cb24",
+      "expectedName": "부산현대미술관",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-333",
+      "place": {
+        "service": "attraction",
+        "sourceId": "333",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "f701e3803d41b83f57f3efc40fd145343b7baa7b2178823639ee312d7fa5ffd7",
+      "expectedName": "장림포구 (부네치아)",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-272",
+      "place": {
+        "service": "attraction",
+        "sourceId": "272",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "775acf9e80e51d3ff9afe530d991c852730e582500e8ca695b340fcf9b41c4df",
+      "expectedName": "보수동책방골목",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-550",
+      "place": {
+        "service": "attraction",
+        "sourceId": "550",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "e050c8da46ef318187643d1698faea4139b79e2863e7086c2503d627f3a3d62f",
+      "expectedName": "부산타워",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-103",
+      "place": {
+        "service": "food",
+        "sourceId": "103",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "9275e69a9ef7d7804cc261ddbd5fbba170a47b453b2014b13c51300ec9aae4f3",
+      "expectedName": "거인통닭",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "food-1558",
+      "place": {
+        "service": "food",
+        "sourceId": "1558",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "d432ee3c739db1e3f9aedb344fe17be3ecb8d654db132527639b13ce116458b5",
+      "expectedName": "동경밥상",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-285",
+      "place": {
+        "service": "attraction",
+        "sourceId": "285",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "c8f7bc10a3e6dd3b4bb477c2b3d4bdc4ff789edc20c38a9c7048901ec020b318",
+      "expectedName": "민락수변공원",
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공공 원본의 명시적 서비스/ID·상호·주소·좌표를 대조했다. 원본 근거 검토이며 현장 방문·영업 확인·사람 승인을 뜻하지 않는다.",
+      "reviewedAliases": []
+    },
+    {
+      "id": "attraction-373",
+      "place": {
+        "service": "attraction",
+        "sourceId": "373",
+        "locale": "ko"
+      },
+      "expectedFingerprint": "2243a4a5b64477ca85c144657fd977d0160ab4b60c9cfa62acd9a18491bb6d9e",
+      "expectedName": "해운대",
+      "reviewedAliases": [
+        "해운대해수욕장"
+      ],
+      "reviewedAt": "2026-11-14",
+      "reviewMethod": "assistant-source-evidence",
+      "identityNote": "공식 원본의 이름/주소/좌표를 대조하고 서비스/ID를 명시했다. 이름이 같은 다른 원본 ID를 병합하지 않았고 현장 확인은 수행하지 않았다."
+    }
+  ]
+}

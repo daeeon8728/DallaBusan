@@ -1,0 +1,17 @@
+{
+  "name": "@trip-fit/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=../../.env --import tsx --watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@trip-fit/domain": "0.1.0",
+    "@fastify/static": "10.1.10",
+    "fastify": "5.12.8",
+    "zod": "4.6.7"
+  }
+}

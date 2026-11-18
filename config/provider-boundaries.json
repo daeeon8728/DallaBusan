@@ -1,0 +1,12 @@
+{
+  "forbiddenBrandTokens": [
+    "agoda",
+    "klook",
+    "trip.com",
+    "myrealtrip",
+    "아고다",
+    "클룩",
+    "트립닷컴",
+    "마이리얼트립"
+  ]
+}

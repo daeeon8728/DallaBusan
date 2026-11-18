@@ -1,0 +1,64 @@
+{
+  "providers": [
+    {
+      "enabled": false,
+      "approvalStatus": "pending",
+      "supportedProductTypes": [],
+      "supportedLocales": [],
+      "allowedHosts": [],
+      "baseUrl": "",
+      "providerId": "PROVIDER_A",
+      "displayName": "트립닷컴",
+      "partnerIdEnv": "PROVIDER_A_PARTNER_ID",
+      "trackingCodeEnv": "PROVIDER_A_TRACKING_CODE",
+      "apiBaseUrlEnv": "PROVIDER_A_API_BASE_URL",
+      "apiKeyEnv": "PROVIDER_A_API_KEY",
+      "apiSecretEnv": "PROVIDER_A_API_SECRET"
+    },
+    {
+      "enabled": false,
+      "approvalStatus": "pending",
+      "supportedProductTypes": [],
+      "supportedLocales": [],
+      "allowedHosts": [],
+      "baseUrl": "",
+      "providerId": "PROVIDER_B",
+      "displayName": "클룩",
+      "apiBaseUrlEnv": "PROVIDER_B_API_BASE_URL",
+      "apiKeyEnv": "PROVIDER_B_API_KEY",
+      "apiSecretEnv": "PROVIDER_B_API_SECRET",
+      "partnerIdEnv": "PROVIDER_B_PARTNER_ID",
+      "trackingCodeEnv": "PROVIDER_B_TRACKING_CODE"
+    },
+    {
+      "enabled": false,
+      "approvalStatus": "pending",
+      "supportedProductTypes": [],
+      "supportedLocales": [],
+      "allowedHosts": [],
+      "baseUrl": "",
+      "providerId": "PROVIDER_C",
+      "displayName": "마이리얼트립",
+      "apiBaseUrlEnv": "PROVIDER_C_API_BASE_URL",
+      "apiKeyEnv": "PROVIDER_C_API_KEY",
+      "apiSecretEnv": "PROVIDER_C_API_SECRET",
+      "partnerIdEnv": "PROVIDER_C_PARTNER_ID",
+      "trackingCodeEnv": "PROVIDER_C_TRACKING_CODE"
+    },
+    {
+      "enabled": false,
+      "approvalStatus": "pending",
+      "supportedProductTypes": [],
+      "supportedLocales": [],
+      "allowedHosts": [],
+      "baseUrl": "",
+      "providerId": "PROVIDER_D",
+      "displayName": "아고다",
+      "apiBaseUrlEnv": "PROVIDER_D_API_BASE_URL",
+      "apiKeyEnv": "PROVIDER_D_API_KEY",
+      "apiSecretEnv": "PROVIDER_D_API_SECRET",
+      "partnerIdEnv": "PROVIDER_D_PARTNER_ID",
+      "trackingCodeEnv": "PROVIDER_D_TRACKING_CODE"
+    }
+  ]
+}

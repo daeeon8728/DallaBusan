@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-11T16:35:15.374Z",
+  "baseUrl": "https://hollywood-county-confirmed-discover.trycloudflare.com",
+  "actualBookingNavigations": 0,
+  "pages": [
+    {
+      "path": "/search?locale=ko",
+      "heading": "관광지 검색",
+      "overflow": false,
+      "loadedImages": 33
+    },
+    {
+      "path": "/places/gamcheon?locale=en",
+      "related": 22,
+      "uniquePhotos": 22,
+      "failedImages": 0,
+      "overflow": false
+    },
+    {
+      "path": "/places/busan-402?locale=ko",
+      "overflow": false,
+      "visitInfo": "운영시간\n매일 08:00 - 17:00\n시설 이용요금 안내\n무료\n찾아가는 방법\n도시철도 1호선 범어사역 5, 7번 출구 → 범어사입구 정류장 버스 환승 90번 -> 범어사매표소 정류장 하차 도보 5분 주차 범어사 주차장(유료)\n문의처\n051-508-3122",
+      "photoVisible": true
+    }
+  ],
+  "errors": [],
+  "languages": [
+    {
+      "locale": "ko",
+      "status": 200,
+      "total": 303,
+      "localized": true,
+      "fallback": 0
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "total": 303,
+      "localized": true,
+      "fallback": 0
+    },
+    {
+      "locale": "ja",
+      "status": 200,
+      "total": 303,
+      "localized": true,
+      "fallback": 0
+    },
+    {
+      "locale": "zh-CN",
+      "status": 200,
+      "total": 303,
+      "localized": true,
+      "fallback": 0
+    },
+    {
+      "locale": "zh-TW",
+      "status": 200,
+      "total": 303,
+      "localized": true,
+      "fallback": 0
+    }
+  ]
+}

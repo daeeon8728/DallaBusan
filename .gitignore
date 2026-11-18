@@ -1,0 +1,26 @@
+node_modules/
+**/dist/
+coverage/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.log
+*.sqlite
+*.sqlite-*
+*.db
+config/providers.local.json
+
+var/imports/
+
+config/catalog/*.pending.json
+
+var/tools/
+
+# Portable, reviewed public-data backup; active DBs stay local.
+!data/snapshots/trip-fit.sqlite
+
+# Local publishing-session metadata, not project source.
+sites/

@@ -1,0 +1,10 @@
+{
+  "checkedOn": "2026-11-11",
+  "attractionImages": {
+    "enabled": true,
+    "source": "https://www.data.go.kr/data/15063481/openapi.do",
+    "licenseName": "이용허락범위 제한 없음",
+    "licenseUrl": "https://www.data.go.kr/ugs/selectPortalPolicyView.do",
+    "note": "Current data.go.kr dataset license verified from rendered HTML and JSON-LD; older Busan mirror has different wording. Attribute every image; use only images supplied for that source ID."
+  }
+}

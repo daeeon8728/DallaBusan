@@ -1,0 +1,7 @@
+* text=auto eol=lf
+# Applied migration checksums depend on exact original bytes.
+apps/server/db/migrations/*.sql -text
+*.sqlite binary
+*.png binary
+*.jpg binary
+*.hwp binary

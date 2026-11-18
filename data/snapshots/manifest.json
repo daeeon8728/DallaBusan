@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "createdAt": "2026-11-18T09:21:16.235Z",
+  "source": "local-public-tourism-catalog",
+  "sha256": "ee619683a38d756b46fb1c00d714d740c72da67e89ad5126b0c930ea1011fd4b",
+  "tables": {
+    "schema_migrations": 2,
+    "providers": 4,
+    "places": 1044,
+    "place_translations": 1044,
+    "products": 0,
+    "attraction_pages": 15,
+    "attraction_records": 1044,
+    "attraction_imports": 12
+  }
+}
