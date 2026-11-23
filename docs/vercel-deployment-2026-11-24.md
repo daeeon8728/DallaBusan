@@ -42,7 +42,8 @@
           "source": "/places/:path*",
           "destination": "/index.html"
         }
-      ]
+      ],
+      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"
     },
     "server": {
       "root": "apps/server",
@@ -53,7 +54,8 @@
         "src/app.ts": {
           "includeFiles": "{../../config/catalog/**,../../data/snapshots/**}"
         }
-      }
+      },
+      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"
     }
   },
   "rewrites": [
@@ -95,6 +97,14 @@ Vite의127.0.0.1:3001 프록시는 기존 npm run dev 전용이며 Vercel에서�
 클라우드가 INVALID_RUNTIME으로 거부한 services.server.runtime의 nodejs24.x를 제거했다. Fastify 프레임워크로 런타임을 자동 감지하며 Node24는 apps/server/package.json의 engines.node=>=24.14.1 <25와 lockfile로 지정한다. 이는 루트 엔진 및 .node-version과 일치한다. 로컬 CLI 성공은 클라우드 설정 검증 통과를 보장하지 않았다. 수정 후 클라우드 재배포 결과는 별도로 확인한다.
 
 근거: [서비스 runtime 자동 감지](https://vercel.com/docs/services/config-reference#runtime),[Node 버전 engines 설정](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions#version-overrides-in-packagejson).
+
+## 빌드 도구 설치 수정
+
+클라우드에서 tsc: command not found가 발생했다. TypeScript는 루트 devDependencies에 있으므로 서비스별 기본 설치에만 의존하지 않는다. web/server의 installCommand를 cd ../.. && npm ci --include=dev --workspaces --include-workspace-root로 명시해 저장소 루트 도구와 전체 workspace를 lockfile대로 설치한다. NODE_ENV=production 또는 omit=dev 환경에서도 dev 포함을 명시한다. 별도의 전역 tsc나 임시 최신 패키지를 설치하지 않는다.
+
+이전 설치 로그가 없어 루트 workspace 제외와 production 의존성 생략 중 어느 설정이 실제 원인인지는 단정하지 않는다. 이 수정은 두 경우를 모두 처리한다. 실제 클라우드 재배포는 별도 확인한다.
+
+근거: [서비스 installCommand](https://vercel.com/docs/services/config-reference#installcommand),[Vercel 개발 의존성 누락](https://vercel.com/docs/deployments/troubleshoot-a-build#missing-development-dependencies),[npm ci](https://docs.npmjs.com/cli/v11/commands/npm-ci/).
 
 ## 실행 코드 변경
 

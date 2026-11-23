@@ -5,7 +5,7 @@ import { describe,expect,it } from 'vitest';
 import { loadRuntimeDatabaseConfig,loadDatabaseConfig } from '../../apps/server/src/config/env.js';
 import { openDatabase } from '../../apps/server/src/db/client.js';
 const Rule=z.object({source:z.string(),destination:z.string()});
-const Service=z.object({root:z.string(),framework:z.string(),runtime:z.string().optional(),buildCommand:z.string(),outputDirectory:z.string().optional(),entrypoint:z.string().optional(),bindings:z.array(z.unknown()).optional(),functions:z.record(z.string(),z.object({includeFiles:z.string()})).optional(),rewrites:z.array(Rule).optional()});
+const Service=z.object({root:z.string(),framework:z.string(),runtime:z.string().optional(),installCommand:z.string(),buildCommand:z.string(),outputDirectory:z.string().optional(),entrypoint:z.string().optional(),bindings:z.array(z.unknown()).optional(),functions:z.record(z.string(),z.object({includeFiles:z.string()})).optional(),rewrites:z.array(Rule).optional()});
 const input:unknown=JSON.parse(readFileSync(new URL('../../vercel.json',import.meta.url),'utf8'));
 const config=z.object({services:z.strictObject({web:Service,server:Service}),rewrites:z.array(z.object({source:z.string(),destination:z.object({service:z.string()})}))}).passthrough().parse(input);
 describe('Vercel services deployment',()=>{
@@ -19,7 +19,7 @@ describe('Vercel services deployment',()=>{
  });
  it('defines only the real frontend and backend, with per-service builds and no made-up runtime callers',()=>{
   expect(Object.keys(config.services).sort()).toEqual(['server','web']);expect(config.services.web.root).toBe('apps/web');expect(config.services.server.root).toBe('apps/server');expect(config.services.server.entrypoint).toBe('src/app.ts');expect(config.services.server).not.toHaveProperty('runtime');expect(config.services.web.outputDirectory).toBe('dist');
-  for(const name of ['web','server'] as const){const service=config.services[name];expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/domain');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/'+name);expect(service.bindings??[]).toEqual([]);}
+  for(const name of ['web','server'] as const){const service=config.services[name];expect(service.installCommand).toBe('cd ../.. && npm ci --include=dev --workspaces --include-workspace-root');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/domain');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/'+name);expect(service.bindings??[]).toEqual([]);}
   for(const key of ['buildCommand','framework','functions','installCommand','outputDirectory'])expect(config).not.toHaveProperty(key);
  });
  it('routes API root and subpaths to the backend without stripping the existing /api prefix',()=>{

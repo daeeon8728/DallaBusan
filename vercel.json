@@ -35,7 +35,8 @@
           "source": "/places/:path*",
           "destination": "/index.html"
         }
-      ]
+      ],
+      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"
     },
     "server": {
       "root": "apps/server",
@@ -46,7 +47,8 @@
         "src/app.ts": {
           "includeFiles": "{../../config/catalog/**,../../data/snapshots/**}"
         }
-      }
+      },
+      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"
     }
   },
   "rewrites": [

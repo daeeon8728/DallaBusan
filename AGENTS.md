@@ -117,3 +117,5 @@ config/catalog/food-photo-overrides.json의 명시 검수 5개 연결(사진 누
 루트 vercel.json은 web(Vite)/server(Fastify) 두 서비스다. /api 및 /api/**는 server,나머지는 web이며 접두사를 제거하지 않는다. 현재 정적 브라우저→공개 API 구조에는 서버 간 호출/바인딩이 없다. 바인딩을 Vite 빌드나 브라우저 환경변수로 넣지 않는다. 요청 함수 app.ts는 runtime을 지연 생성하고 ready 후 전달하며 로컬 index.ts의 listen과 분리한다. HTTP 함수는 항상 readOnlySnapshot:true로 공개 백업을 읽고 migrate/mkdir/수집/쓰기를 하지 않는다. 로컬·CLI DB는 기존 규칙을 유지한다. .vercel와 임시 CLI 도구는 Git 제외다. 사용자가 서비스명·공개 경로·바인딩 최종 확인을 요청했으므로 확인 전 push/배포하지 않는다. vercel dev의 저장소 원본 파일 정적 서빙과 클라우드 배포 결과를 구분하고 개발 서버를 외부에 공개하지 않는다. docs/vercel-deployment-2026-11-24.md의 한계와 Preview 검증 절차를 따른다.
 
 Services의 runtime에 nodejs24.x 같은 함수 산출물 버전 문자열을 넣지 않는다. Fastify는 자동 감지하며 Node24는 apps/server/package.json의 engines.node와 lockfile로 관리한다. 로컬 CLI 성공과 클라우드 구성 검증/배포 성공을 구분한다.
+
+Vercel 서비스별 installCommand는 저장소 루트에서 npm ci --include=dev --workspaces --include-workspace-root를 실행한다. 루트 TypeScript와 workspace 개발 의존성을 포함하며 NODE_ENV=production에도 빌드 도구를 생략하지 않는다. 기존 node_modules만으로 배포 설치를 검증했다고 주장하지 말고 깨끗한 복사본에서 설치→서비스별 빌드를 확인한다. 전역 tsc/npx 최신 버전으로 누락을 숨기지 않는다.
