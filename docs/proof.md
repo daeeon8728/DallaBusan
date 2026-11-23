@@ -1201,3 +1201,12 @@ E2E는 npm run start의 dist와 외부 사진/예약 대역을 사용한다. 공
 - npm.cmd run test:e2e -- tests/e2e/foundation.spec.ts tests/e2e/promotions.spec.ts tests/e2e/public-guides.spec.ts는 종료0,모바일/태블릿/PC45개. 외부 사진/예약은 대역이다. 별도 dist start smoke의 /,/food/70,/recommended,/places/gamcheon,/search는 모두200,종료0.
 
 최종 소스의 클라우드 재배포/실제 화면 검증은 다음 후속 기록으로 구분한다.
+
+
+### 실제 Vercel 공개 사이트 복구 확인
+
+코드 커밋84288e4의 자동 배포 완료 후 https://dallabusan.vercel.app에서 실제 HTTP/브라우저 검증을 수행했다. health200,상품 API total402,프로모션3,음식점 total514가 모두200이었다. /config/catalog/offers.json,/data/snapshots/trip-fit.sqlite,/.env는404였다. 설정 .이나 서버 전용 데이터가 웹 정적 응답으로 공개되지 않음을 해당 경로에서 확인했다.
+
+실제 공개 화면에서 상품 카드24개/프로모션 카드3개,신규 영어 진입,5개 언어 선택 후 카드 유지,브라우저 pageerror0을 확인했다. 외부 제공처 사진만 대역이며 상품/프로모션 API는 실제 배포 응답이다. 예약 클릭/결제는 하지 않았다. var/imports/vercel-20261123/live-recovery.json에 결과를 보존했다. [공개 쿠폰 화면](screenshots/vercel-live-promotions-2026-11-24.png)과 [공개 상품 화면](screenshots/vercel-live-products-2026-11-24.png)을 직접 열어 읽을 수 있는 카드/조건 표시를 확인했다. 상품 캡처의 단색 사진은 대역으로 실제 사진 확보 증거가 아니다.
+
+이전6115ad8의 배포 Ready/실제 API500과 최종84288e4의 실제200 복구를 구분한다. CLI 캐시 경고/설치 스크립트 경고를 API 실패 원인으로 단정하거나 경고를 숨기지 않았다. 실제 원인은 함수 패키징의 ES 모듈 진입점과 API에 불필요했던 정적 의존성의 ESM require였다. 최종 검증 기록/시연 이미지만 별도 문서 커밋으로 반영하며 앱 코드는 바꾸지 않는다.
