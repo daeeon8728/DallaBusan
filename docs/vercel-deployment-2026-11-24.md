@@ -53,8 +53,7 @@
         "src/app.ts": {
           "includeFiles": "{../../config/catalog/**,../../data/snapshots/**}"
         }
-      },
-      "runtime": "nodejs24.x"
+      }
     }
   },
   "rewrites": [
@@ -90,6 +89,12 @@
 현재 브라우저 React 코드가 같은 도메인의 /api를 직접 호출한다. 정적 web 서비스 안에는 server를 호출하는 서버 함수가 없으며,server의 HTTP 요청은 외부 공공 제공처/환율 등에 한정된다. 따라서 내부 서비스 호출과 바인딩은 **0개**다. 함수 런타임에만 제공되는 바인딩을 Vite 빌드 변수나 VITE_*로 노출하지 않았다. 앱을 BFF/SSR로 바꿔 API를 완전히 내부로 만들려면 별도 설계 확인이 필요하다.
 
 Vite의127.0.0.1:3001 프록시는 기존 npm run dev 전용이며 Vercel에서는 최상위 /api rewrite가 API 서비스로 바로 보낸다. server의 localhost 문자열은 URL 경로 파싱용 기준 주소이며 HTTP 서비스 호출이 아니다. 내부 서비스 URL을 수동 환경변수로 만들지 않았다.
+
+## 런타임 버전 수정
+
+클라우드가 INVALID_RUNTIME으로 거부한 services.server.runtime의 nodejs24.x를 제거했다. Fastify 프레임워크로 런타임을 자동 감지하며 Node24는 apps/server/package.json의 engines.node=>=24.14.1 <25와 lockfile로 지정한다. 이는 루트 엔진 및 .node-version과 일치한다. 로컬 CLI 성공은 클라우드 설정 검증 통과를 보장하지 않았다. 수정 후 클라우드 재배포 결과는 별도로 확인한다.
+
+근거: [서비스 runtime 자동 감지](https://vercel.com/docs/services/config-reference#runtime),[Node 버전 engines 설정](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions#version-overrides-in-packagejson).
 
 ## 실행 코드 변경
 

@@ -46,8 +46,7 @@
         "src/app.ts": {
           "includeFiles": "{../../config/catalog/**,../../data/snapshots/**}"
         }
-      },
-      "runtime": "nodejs24.x"
+      }
     }
   },
   "rewrites": [

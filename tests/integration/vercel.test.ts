@@ -9,8 +9,16 @@ const Service=z.object({root:z.string(),framework:z.string(),runtime:z.string().
 const input:unknown=JSON.parse(readFileSync(new URL('../../vercel.json',import.meta.url),'utf8'));
 const config=z.object({services:z.strictObject({web:Service,server:Service}),rewrites:z.array(z.object({source:z.string(),destination:z.object({service:z.string()})}))}).passthrough().parse(input);
 describe('Vercel services deployment',()=>{
+ it('selects Node 24 through the server package engines rather than a service runtime version',()=>{
+  const packageInput:unknown=JSON.parse(readFileSync(new URL('../../apps/server/package.json',import.meta.url),'utf8'));
+  const serverPackage=z.object({engines:z.object({node:z.string()})}).parse(packageInput);
+  const lockInput:unknown=JSON.parse(readFileSync(new URL('../../package-lock.json',import.meta.url),'utf8'));
+  const lock=z.object({packages:z.record(z.string(),z.object({engines:z.object({node:z.string()}).optional()}).passthrough())}).parse(lockInput);
+  expect(serverPackage.engines.node).toBe('>=24.14.1 <25');
+  expect(lock.packages['apps/server']?.engines?.node).toBe(serverPackage.engines.node);
+ });
  it('defines only the real frontend and backend, with per-service builds and no made-up runtime callers',()=>{
-  expect(Object.keys(config.services).sort()).toEqual(['server','web']);expect(config.services.web.root).toBe('apps/web');expect(config.services.server.root).toBe('apps/server');expect(config.services.server.entrypoint).toBe('src/app.ts');expect(config.services.server.runtime).toBe('nodejs24.x');expect(config.services.web.outputDirectory).toBe('dist');
+  expect(Object.keys(config.services).sort()).toEqual(['server','web']);expect(config.services.web.root).toBe('apps/web');expect(config.services.server.root).toBe('apps/server');expect(config.services.server.entrypoint).toBe('src/app.ts');expect(config.services.server).not.toHaveProperty('runtime');expect(config.services.web.outputDirectory).toBe('dist');
   for(const name of ['web','server'] as const){const service=config.services[name];expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/domain');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/'+name);expect(service.bindings??[]).toEqual([]);}
   for(const key of ['buildCommand','framework','functions','installCommand','outputDirectory'])expect(config).not.toHaveProperty(key);
  });

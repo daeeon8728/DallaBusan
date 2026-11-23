@@ -1136,3 +1136,28 @@ Vercel CLI66.6.0 네이티브 설치는 Windows VLT 심볼릭 링크 EPERM으로
 사용자 제공 안내3번이 서비스 이름·공개 범위·바인딩의 최종 확인을 요청했다. 따라서 web/server 두 이름,/ 및 /api 공개,내부 전용 서비스 없음,바인딩0개를 확인받기 전에는 commit/push/Vercel 프로젝트 연결/환경변수 업로드/배포하지 않는다. 최종 설정 전체와 검토 항목은 docs/vercel-deployment-2026-11-24.md를 따른다.
 
 후속 사용자 지시: 최종 구성 제시 후 push 승인을 받았다. 검증 완료 변경을 DallaBusan/main에 커밋·푸시한다. 이 승인을 Vercel 클라우드 배포/Preview 검증 완료로 해석하지 않는다.
+
+
+## 2026-11-24 INVALID_RUNTIME 수정
+
+클라우드 오류: Service server has invalid runtime nodejs24.x. 이전 설정에서 Node 함수 산출물의 런타임 버전 문자열을 Services runtime에 직접 넣은 것이 원인이다. 이전 로컬 성공은 클라우드 검증까지 증명하지 못했다.
+
+변경: vercel.json의 services.server.runtime 삭제,Fastify 자동 감지 유지. apps/server/package.json에 루트/.node-version과 같은 engines.node=>=24.14.1 <25를 추가하고 npm.cmd install --package-lock-only --ignore-scripts --offline --no-audit --no-fund(종료0)로 lockfile의 해당 workspace 엔진 메타데이터3줄만 갱신했다. 의존성 버전은 바꾸지 않았다. tests/integration/vercel.test.ts에서 runtime 생략과 서버 Node24/lock 일치 회귀를 확인한다. AGENTS.md와 Vercel 검토 문서의 잘못된 예제도 수정했다.
+
+| 명령/확인 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,29파일375개 |
+| npm.cmd run check:providers | 종료0,101소스 |
+| npm.cmd run build | 종료0,173모듈 |
+| npm.cmd run test:e2e -- tests/e2e/foundation.spec.ts tests/e2e/public-guides.spec.ts | 종료0,모바일/태블릿/PC36개 |
+| 최신 공식 CLI66.6.0 JS vercel dev --local --listen4318 --yes | 종료0,자동 감지 API health/offers/홈/맛집 직접 진입 모두200,작업 후 프로세스 트리 종료 |
+| NODE_ENV=test,빌드된 HTTP 함수 smoke | 종료0,API200/비공개 파일404/공개 DB SHA 불변 |
+| git diff --check | 공백 오류 없음 |
+
+CLI 실제 실행 근거는 var/imports/vercel-20261123/runtime-fix-cli.{log,json},빌드 HTTP 함수 근거는 같은 폴더 function-smoke.json이다. E2E는 npm run start의 dist를 사용하며 외부 사진/예약은 대역이다. 화면 코드는 변경하지 않아 관련36개만 재검증했고 이전 전체162개 결과와 구분한다. E2E 자동 시연 캡처는 test-results의 catalog-home.png에 있다. 데이터/번역 원본을 바꾸지 않아 수집/현지화 갱신은 재실행하지 않았다. 신규 상품 수집/추가/제외0,기존 공개 상품402/관광지220/음식점514 유지. .env와 DB는 변경하지 않았다.
+
+클라우드 재배포 성공은 아직 미확인이다. 사용자의 push 승인 범위에서 수정 커밋을 같은 DallaBusan/main으로 반영한다. Vercel에서 최신 커밋을 배포한 후 클라우드 빌드/함수 번들과 비공개 경로를 추가 확인해야 한다. 이전 기록의 로컬 CLI 원본 파일 서빙 한계는 이 수정으로 해결했다고 주장하지 않는다.
+
+근거: https://vercel.com/docs/services/config-reference#runtime 및 https://vercel.com/docs/functions/runtimes/node-js/node-js-versions#version-overrides-in-packagejson.
