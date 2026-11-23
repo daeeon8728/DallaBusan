@@ -84,3 +84,7 @@ npm.cmd run data:parking:check
 설정 기반 우선순위와 메인 대표 묶음,증빙이 필요한 한국어 예약 조건을 적용한다. 현재117개 공개 링크/메인113개,미검증185개는 비공개다. 세부 출처·원본 보존·조건부 배지는 docs/affiliate-presentation-review-2026-11-23.md를 따른다.
 
 KKday285개 추가의 출처/보류/다국어 예약 링크는 [신규 카탈로그 검수](docs/provider-e-catalog-review-2026-11-23.md)를 참고하세요.
+
+## Vercel 다중 서비스 배포 준비
+
+루트 vercel.json에서 web과 server를 정의한다. 현재 구성은 사용자 최종 확인 대기이며,세부 공개 경로·바인딩0개 근거·읽기 전용 공공 DB·Windows 로컬 CLI 한계는 [배포 검토](docs/vercel-deployment-2026-11-24.md)를 따른다. 로컬 vercel dev 서버를 외부 공개하지 않으며,실제 배포/패키징 검증 완료로 해석하지 않는다.

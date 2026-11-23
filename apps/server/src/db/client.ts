@@ -4,9 +4,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 
-export function openDatabase(filename: string) {
-  if (filename !== ':memory:') mkdirSync(dirname(filename), { recursive: true });
-  const db = new DatabaseSync(filename);
+export function openDatabase(filename: string, options: { readOnly?: boolean } = {}) {
+  if (!options.readOnly && filename !== ':memory:') mkdirSync(dirname(filename), { recursive: true });
+  const db = new DatabaseSync(filename, { readOnly: options.readOnly ?? false });
   db.exec('PRAGMA foreign_keys = ON; PRAGMA busy_timeout = 5000;');
   return db;
 }

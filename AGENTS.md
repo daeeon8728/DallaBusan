@@ -111,3 +111,7 @@ config/catalog/food-photo-overrides.json의 명시 검수 5개 연결(사진 누
 첫 UI 진입/잘못된 locale은 en이다. 유효한 명시 URL과 헤더 선택을 우선하고 홈/새로고침/뒤로가기도 URL로 보존한다. 최초 HTML도 영어다. 기존 공공 API의 default ko 계약은 전체 변경하지 않고 UI가 locale을 명시한다. 한국어 회귀 E2E는 locale=ko를 명시하고 영어 기본 진입은 별도 검증한다.
 
 메인 특가·쿠폰은 config/catalog/promotions.json 검수 항목만 /api/promotions 최소 DTO로 제공한다. 공식 출처·기간·짧은 reviewExpiresAt·시장/신규회원/최소금액/상한/여행일을 기록하며 가격·장바구니에서 차감하지 않는다. 공통 validateLink로 추적·중첩 목적지를 검증하고 제한 제공처의 예약 자격을 우회하지 않는다. 만료/미승인/재검수 경과 자동 비공개와 클라이언트 만료/재시도/오래된 응답 차단을 유지한다. 로컬 API 재조회는 외부 행사 자동 수집이 아니다. 현재3건 확인/2사 보류이며 docs/promotion-review-2026-11-23.md와 JSON을 따른다. 모든 국가·옵션 적용을 보장하거나 과거/재배포 금지 코드를 추측해 쓰지 않는다.
+
+## 2026-11-24 Vercel Services 배포 검토
+
+루트 vercel.json은 web(Vite)/server(Fastify) 두 서비스다. /api 및 /api/**는 server,나머지는 web이며 접두사를 제거하지 않는다. 현재 정적 브라우저→공개 API 구조에는 서버 간 호출/바인딩이 없다. 바인딩을 Vite 빌드나 브라우저 환경변수로 넣지 않는다. 요청 함수 app.ts는 runtime을 지연 생성하고 ready 후 전달하며 로컬 index.ts의 listen과 분리한다. HTTP 함수는 항상 readOnlySnapshot:true로 공개 백업을 읽고 migrate/mkdir/수집/쓰기를 하지 않는다. 로컬·CLI DB는 기존 규칙을 유지한다. .vercel와 임시 CLI 도구는 Git 제외다. 사용자가 서비스명·공개 경로·바인딩 최종 확인을 요청했으므로 확인 전 push/배포하지 않는다. vercel dev의 저장소 원본 파일 정적 서빙과 클라우드 배포 결과를 구분하고 개발 서버를 외부에 공개하지 않는다. docs/vercel-deployment-2026-11-24.md의 한계와 Preview 검증 절차를 따른다.

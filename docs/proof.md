@@ -1088,3 +1088,51 @@ E2E 외부 이미지/제휴 예약은 대역이며 실제 제휴 클릭·예약�
 로컬3001과 preview4320을 새 dist로 교체했고 공개 주소 https://restoration-harper-considerations-choir.trycloudflare.com/ 에 반영했다. PC/서버/터널에 의존하는 기존 임시 미리보기다. 한국어 브라우저 설정으로도 실제 첫 URL이 /?locale=en이 된 것을3개 뷰포트에서 확인했다.
 
 [영어 첫 화면](screenshots/home-english-desktop-2026-11-23.png),특가 영역 [모바일](screenshots/home-promotions-mobile-2026-11-23.png)/[태블릿](screenshots/home-promotions-tablet-2026-11-23.png)/[PC](screenshots/home-promotions-desktop-2026-11-23.png)를 저장했다. 모바일/PC를 직접 열어 조건·쿠폰·기한·출처/예약 동작과 가로 넘침 없음을 확인했다.
+
+
+## Vercel Services 배포 구성 검토
+
+### 범위와 변경 파일
+
+사용자가 제공한 Services 안내에 맞춰 최종 확인 가능한 로컬 구성을 작성했다. 루트의 가상 app 대신 web(apps/web,Vite)와 server(apps/server,Fastify)만 정의했다. /api 및 /api/**는 server,나머지는 web으로 전달하며 API 접두사를 유지한다. 정적 브라우저→동일 출처 공개 /api 구조이므로 서버 간 호출/내부 바인딩은0개다. 빌드/브라우저에 런타임 바인딩 변수를 넣지 않았다.
+
+- 구성: vercel.json,.gitignore,apps/web/vite.config.ts. 서비스별 domain 선행 빌드,SPA 경로,API 전용 JSON/DB 포함과 Node24 런타임을 명시했다.
+- 서버: apps/server/src/{app-factory,runtime,app,index}.ts,config/env.ts,db/client.ts. 기존 앱 조립을 보존하고 로컬 listen과 지연 초기화 HTTP 함수를 분리했다. 함수는 VERCEL 변수 유무와 관계없이 공개 SQLite 스냅샷을 읽기 전용으로 열며 DB 생성/마이그레이션을 하지 않는다. 로컬/수집 CLI DB 동작은 유지한다.
+- 검사: tests/integration/vercel.test.ts의5개 검사로 그래프/라우팅/SPA/서버 전용 포함/DB 쓰기 거부와 SHA 불변을 확인한다.
+- 문서: AGENTS.md,README.md,docs/operations.md,docs/vercel-deployment-2026-11-24.md와 본 기록. 시연은 docs/screenshots/vercel-services-desktop-2026-11-24.png다.
+
+.env,package.json,package-lock.json 내용과 공공 DB·상품·원본/번역·테마 자료는 변경하지 않았다. 포털 신규 수집0건,상품 추가/제외0건이며 기존 공개 상품402/관광지220/음식점514를 유지한다. 전체 OTA 재고/신규 사이트 승인/공개 배포를 수행했다고 주장하지 않는다.
+
+### 명령과 결과
+
+| 명령/확인 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,29파일374테스트 |
+| npm.cmd run check:providers | 종료0,101소스 |
+| npm.cmd run data:localization:check | 종료0,issues=[] |
+| npm.cmd run build | 종료0,domain→server→web,173모듈 |
+| npm.cmd run test:e2e | 종료0,전체162개 |
+| 최신 공식 CLI66.6.0 JS vercel dev --local --listen4318 | 두 서비스 감지/API200/영어 첫 화면/맛집5언어 상세 직접 진입,브라우저 오류0 |
+| 빌드 HTTP 함수 직접 smoke | 종료0,VERCEL 플래그 없이도 읽기 전용,API200,config/DB/.env/비API 경로404,스냅샷 SHA 불변 |
+| dist standalone start smoke | 종료0,API/홈/검색/맛집 직접 진입200,config/DB404. HTML Accept의 /.env는 파일 대신 홈 index와 동일한 HTML200임을 본문 비교 |
+| 웹 dist 파일 검사 | 8파일,config/DB/.env 포함0 |
+
+최종 로그는 var/imports/vercel-20261123/{lint,typecheck,tests,providers,localization,build,e2e}.log와 {browser-smoke,function-smoke,dist-smoke,public-artifact}.json에 있다. 원본 DB1044행 읽기와 쓰기 거부는 통합 검사에 포함된다. npm run start로 임시4319에서 실행한 뒤 같은 dist 명령을 자동 smoke로 검증했으며 해당 임시 프로세스는 종료했다. 기존3001/4320과 임시 공개 터널은 이번 변경으로 재시작하지 않았다.
+
+### 실패·수정 및 검증 한계
+
+Vercel CLI66.6.0 네이티브 설치는 Windows VLT 심볼릭 링크 EPERM으로 실패했다. OS 권한 설정은 바꾸지 않았다. 기존64.2.0 JS로 진단한 뒤 Git 제외 var/tools/vercel-cli에 공식 @vercel/cli-support@66.6.0을 테스트용으로 설치했다. Windows 플랫폼 제한 때문에 해당 임시 도구 설치에만 force를 사용했고 프로젝트 의존성/lockfile에는 추가하지 않았다. 공식 schema 자체의 draft 표기와 numeric exclusiveMinimum 불일치로 독립 AJV6 검증이 실패했으므로 이를 통과로 기록하지 않는다. 실제 최신 CLI가 설정을 파싱하고 두 서비스를 실행했다.
+
+초기 app.ts는 named 앱 팩토리여서 CLI가 HTTP 처리기를 찾지 못했다. 팩토리를 보존한 별도 파일과 실제 HTTP 진입점으로 분리했다. 초기 HTTP 처리의 Fastify 준비 전 hooks 오류는 app.ready 이후 전달로 수정했다. 최종 전체 검사를 다시 통과했다. 문서/진단 스크립트 변수 및 모듈 실행 형식 오류는 스크립트를 수정했다. 최초 standalone smoke는 HTML Accept 누락과 /.env의 SPA HTML 응답을404로 가정하여 실패했으며,브라우저 헤더와 본문 비교로 검사 기대를 바로잡았다. 환경 파일 내용 노출로 판정하지 않는다. SQLite 실험/Rollup 주석 경고는 비차단이며 최종 빌드는 종료0이다.
+
+중요: vercel dev --local64/66은 이 저장소에서 config/catalog·data/snapshots·docs 원본 파일을 정적 HTTP200으로 응답했다. 경로 rewrite/Vite fs 제한만으로 로컬 CLI 동작을 차단하지 못했다. 이 검사 서버를 외부 터널에 연결하지 않았고 검증 후 종료했다. 웹 dist에는 해당 파일이 없고 API 함수 자체는404이나,아직 클라우드 Preview 빌드의 파일 포함/라우팅을 검사하지 않았다. 사용자 확인 후 Preview에서 비공개 경로를 재검증하기 전 정식 공개 성공으로 보고하지 않는다.
+
+### 실제·대역·최종 확인 대기
+
+로컬 최신 Vercel CLI/빌드 함수/읽기 전용 공개 스냅샷 응답은 실제다. E2E와 CLI 브라우저의 외부 이미지/예약은 대역이며 실제 예약·결제·반복 제휴 클릭은 없다. 신규 공공 API 수집이나 유료 호출도 없다. 저장된 시연 이미지를 직접 열어 영어 특가 카드·조건·쿠폰 배치를 확인했다.
+
+사용자 제공 안내3번이 서비스 이름·공개 범위·바인딩의 최종 확인을 요청했다. 따라서 web/server 두 이름,/ 및 /api 공개,내부 전용 서비스 없음,바인딩0개를 확인받기 전에는 commit/push/Vercel 프로젝트 연결/환경변수 업로드/배포하지 않는다. 최종 설정 전체와 검토 항목은 docs/vercel-deployment-2026-11-24.md를 따른다.
+
+후속 사용자 지시: 최종 구성 제시 후 push 승인을 받았다. 검증 완료 변경을 DallaBusan/main에 커밋·푸시한다. 이 승인을 Vercel 클라우드 배포/Preview 검증 완료로 해석하지 않는다.

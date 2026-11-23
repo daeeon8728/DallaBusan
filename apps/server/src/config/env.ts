@@ -31,6 +31,13 @@ export function loadDatabaseConfig(source: Readonly<Record<string, string | unde
   return { filename: filename === ':memory:' ? filename : resolve(fileURLToPath(new URL('../../../../', import.meta.url)), filename) };
 }
 
+// Vercel functions read the published snapshot; CLI/local databases stay writable.
+export function loadRuntimeDatabaseConfig(source: Readonly<Record<string,string|undefined>> = process.env, readOnlySnapshot = false) {
+  return readOnlySnapshot || source.VERCEL === '1'
+    ? { filename: fileURLToPath(new URL('../../../../data/snapshots/trip-fit.sqlite', import.meta.url)), readOnly: true }
+    : { ...loadDatabaseConfig(source), readOnly: false };
+}
+
 const AttractionEnvSchema = z.object({
   ATTRACTION_SERVICE_KEY: z.string().trim().default(''),
   ATTRACTION_TIMEOUT_MS: z.coerce.number().int().min(1).max(30000).default(10000),

@@ -24,3 +24,6 @@ var/tools/
 
 # Local publishing-session metadata, not project source.
 sites/
+
+# Local Vercel project links, build output and pulled environment files.
+.vercel/
