@@ -49,13 +49,14 @@
       "root": "apps/server",
       "framework": "fastify",
       "entrypoint": "src/app.ts",
-      "buildCommand": "cd ../.. && npm run build --workspace @trip-fit/domain && npm run build --workspace @trip-fit/server",
+      "buildCommand": "cd ../.. && npm run build --workspace @trip-fit/domain && npm run typecheck --workspace @trip-fit/server",
       "functions": {
         "src/app.ts": {
-          "includeFiles": "{../../config/catalog/**,../../data/snapshots/**}"
+          "includeFiles": "{config/catalog/**,data/snapshots/**}"
         }
       },
-      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"
+      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root",
+      "outputDirectory": "."
     }
   },
   "rewrites": [
@@ -105,6 +106,14 @@ Vite의127.0.0.1:3001 프록시는 기존 npm run dev 전용이며 Vercel에서�
 이전 설치 로그가 없어 루트 workspace 제외와 production 의존성 생략 중 어느 설정이 실제 원인인지는 단정하지 않는다. 이 수정은 두 경우를 모두 처리한다. 실제 클라우드 재배포는 별도 확인한다.
 
 근거: [서비스 installCommand](https://vercel.com/docs/services/config-reference#installcommand),[Vercel 개발 의존성 누락](https://vercel.com/docs/deployments/troubleshoot-a-build#missing-development-dependencies),[npm ci](https://docs.npmjs.com/cli/v11/commands/npm-ci/).
+
+## 실제 클라우드 함수 실패 조사
+
+공개 사이트의 HTML은200이지만 health/offers/promotions/food API는500이었다. 로그인된 Vercel Logs에서 /var/task/app.js의 SyntaxError: Cannot use import statement outside a module을 확인했다. 최신 @vercel/backends는 빌드 뒤 dist/app.js를 발견하면 해당 디렉터리를 함수 루트로 사용한다. 일반 tsc 산출물에는 루트 ESM package.json/데이터 배치가 없으므로 이 자동 선택을 사용하지 않는다.
+
+server.outputDirectory를 .로 지정해 원본 TypeScript를 Vercel의 모듈 보존 .mjs 변환/추적 대상으로 유지한다. 서버 서비스의 buildCommand는 domain 빌드와 서버 typecheck만 실행한다. 기존 로컬 npm run build/start는 그대로 유지한다. 함수 includeFiles는 저장소 기준 config/catalog/** 및 data/snapshots/**를 명시한다. API 전용 서비스의 . 설정은 정적 파일 공개 지시가 아니며 API 비공개 경로를 별도 검증한다.
+
+이 수정의 패키징 검증/실제 배포 결과는 docs/proof.md를 따른다.
 
 ## 실행 코드 변경
 

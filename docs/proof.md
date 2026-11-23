@@ -1161,3 +1161,28 @@ CLI 실제 실행 근거는 var/imports/vercel-20261123/runtime-fix-cli.{log,jso
 클라우드 재배포 성공은 아직 미확인이다. 사용자의 push 승인 범위에서 수정 커밋을 같은 DallaBusan/main으로 반영한다. Vercel에서 최신 커밋을 배포한 후 클라우드 빌드/함수 번들과 비공개 경로를 추가 확인해야 한다. 이전 기록의 로컬 CLI 원본 파일 서빙 한계는 이 수정으로 해결했다고 주장하지 않는다.
 
 근거: https://vercel.com/docs/services/config-reference#runtime 및 https://vercel.com/docs/functions/runtimes/node-js/node-js-versions#version-overrides-in-packagejson.
+
+
+## 2026-11-24 실제 API500 조사 및 수정 진행
+
+사용자 공개 URL https://dallabusan.vercel.app의 HTML200,health/offers/promotions/food API500 FUNCTION_INVOCATION_FAILED를 직접 확인했다. GitHub 상태는 성공이었고 Vercel Overview도 Ready였으나 함수 오류율100%였다. 로그인된 Logs에서 /var/task/app.js의 SyntaxError: Cannot use import statement outside a module을 읽었다. 원인은 빌더가 일반 dist/app.js를 독립 함수 루트로 선택하는 모듈/파일 배치였다. 서비스의 outputDirectory=.와 원본 TypeScript 빌더,저장소 기준 includeFiles로 수정했다. 아래 검증 결과를 추가하며 클라우드 복구 여부와 로컬 패키징 결과를 구분한다.
+
+
+### 공식 함수 패키징 재현과 회귀 검사
+
+공식 @vercel/backends27.0.0(격리 설치 CLI66.6.0 제공)의 실제 build를 기존 깨끗한 설치 복사본에서 실행하고 NodejsLambda 파일을 독립 임시 디렉터리에 추출했다. 수정 전 handler=app.js,892파일의 패키지는 실행 종료1(ERR_REQUIRE_CYCLE_MODULE)로 실패했다. 클라우드 로그의 SyntaxError와 로컬 예외 이름은 다르며 모듈/루트 배치 실패라는 증거로 구분한다. 수정 후 handler=apps/server/src/app.mjs,825파일의 패키지는 실행 종료0이고 상품402/프로모션3/음식점514 및 health가200이었다. offers.json/promotions.json/공개 SQLite가 함수에 포함된 것도 확인했다. 원본 tsc dist가 남아 있는 상태에서도 outputDirectory=.로 해당 산출물의 자동 선택을 막았다.
+
+실험에서 설치는 앞서 검증한 clean npm ci 결과를 사용하고 builder의 installCommand만 빈 값으로 두어 반복 설치를 생략했다. 빌드 명령/실제 패키징은 실행했다. 수정 전후 모두 Node24 --no-experimental-detect-module 조건으로 독립 패키지를 검사했다. 이는 Windows 검사이며 실제 Linux 클라우드 결과는 별도다. 진단 스크립트/결과는 Git 제외 var/imports/vercel-20261123/backend-packaging.{mjs,json}다.
+
+| 명령 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,29파일375개 |
+| npm.cmd run check:providers | 종료0,101소스 |
+| npm.cmd run build | 종료0,173모듈 |
+| npm.cmd run test:e2e -- tests/e2e/foundation.spec.ts tests/e2e/promotions.spec.ts | 종료0,모바일/태블릿/PC27개 |
+
+E2E는 npm run start의 dist와 외부 사진/예약 대역을 사용한다. 공식 함수 빌더 smoke는 별도 실제 패키지 실행이다. 검사 스크립트 첫 진단/브라우저 창 위치 오류는 재선택 후 정상 로그 화면을 읽어 복구했다. .env/DB/원본 카탈로그/번역/의존성/lockfile은 변경하지 않았다. 신규 포털 수집/상품 추가·제외0,기존 공개 상품402/관광지220/음식점514 유지. 내부 결제/AI/일정 기능은 추가하지 않았다.
+
+사용자의 기존 push 승인 범위에서 동일 main으로 반영하고 공개 URL의 상품·프로모션 API 및 화면을 추가 확인한다. 클라우드 복구 결과는 아래 후속 기록과 최종 보고를 따르며 아직 확인하기 전 성공으로 쓰지 않는다.

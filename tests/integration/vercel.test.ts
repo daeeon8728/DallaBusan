@@ -18,8 +18,8 @@ describe('Vercel services deployment',()=>{
   expect(lock.packages['apps/server']?.engines?.node).toBe(serverPackage.engines.node);
  });
  it('defines only the real frontend and backend, with per-service builds and no made-up runtime callers',()=>{
-  expect(Object.keys(config.services).sort()).toEqual(['server','web']);expect(config.services.web.root).toBe('apps/web');expect(config.services.server.root).toBe('apps/server');expect(config.services.server.entrypoint).toBe('src/app.ts');expect(config.services.server).not.toHaveProperty('runtime');expect(config.services.web.outputDirectory).toBe('dist');
-  for(const name of ['web','server'] as const){const service=config.services[name];expect(service.installCommand).toBe('cd ../.. && npm ci --include=dev --workspaces --include-workspace-root');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/domain');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/'+name);expect(service.bindings??[]).toEqual([]);}
+  expect(Object.keys(config.services).sort()).toEqual(['server','web']);expect(config.services.web.root).toBe('apps/web');expect(config.services.server.root).toBe('apps/server');expect(config.services.server.entrypoint).toBe('src/app.ts');expect(config.services.server).not.toHaveProperty('runtime');expect(config.services.web.outputDirectory).toBe('dist');expect(config.services.server.outputDirectory).toBe('.');
+  for(const name of ['web','server'] as const){const service=config.services[name];expect(service.installCommand).toBe('cd ../.. && npm ci --include=dev --workspaces --include-workspace-root');expect(service.buildCommand).toContain('npm run build --workspace @trip-fit/domain');expect(service.buildCommand).toContain('npm run '+(name==='server'?'typecheck':'build')+' --workspace @trip-fit/'+name);expect(service.bindings??[]).toEqual([]);}
   for(const key of ['buildCommand','framework','functions','installCommand','outputDirectory'])expect(config).not.toHaveProperty(key);
  });
  it('routes API root and subpaths to the backend without stripping the existing /api prefix',()=>{
@@ -30,7 +30,7 @@ describe('Vercel services deployment',()=>{
  });
  it('rewrites known SPA entry routes while allowing asset and private-file misses to remain 404',()=>{
   const rewrites=config.services.web.rewrites??[];for(const source of ['/','/search','/saved','/cart','/food/:path*','/recommended/:path*','/places/:path*'])expect(rewrites).toContainEqual({source,destination:'/index.html'});
-  expect(rewrites.some((rule:{source:string})=>rule.source==='/(.*)')).toBe(false);expect(config.services.server.functions?.['src/app.ts']?.includeFiles).toContain('../../config/catalog/**');expect(config.services.server.functions?.['src/app.ts']?.includeFiles).toContain('../../data/snapshots/**');
+  expect(rewrites.some((rule:{source:string})=>rule.source==='/(.*)')).toBe(false);expect(config.services.server.functions?.['src/app.ts']?.includeFiles).toContain('config/catalog/**');expect(config.services.server.functions?.['src/app.ts']?.includeFiles).toContain('data/snapshots/**');
  });
  it('selects a bundled read-only snapshot on Vercel and preserves explicit local/CLI databases',()=>{
   const settings=loadRuntimeDatabaseConfig({VERCEL:'1',DATABASE_PATH:'must-not-create.sqlite'});expect(settings.readOnly).toBe(true);expect(loadRuntimeDatabaseConfig({},true).readOnly).toBe(true);expect(settings.filename.replaceAll('\\','/')).toMatch(/\/data\/snapshots\/trip-fit.sqlite$/);

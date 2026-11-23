@@ -119,3 +119,5 @@ config/catalog/food-photo-overrides.json의 명시 검수 5개 연결(사진 누
 Services의 runtime에 nodejs24.x 같은 함수 산출물 버전 문자열을 넣지 않는다. Fastify는 자동 감지하며 Node24는 apps/server/package.json의 engines.node와 lockfile로 관리한다. 로컬 CLI 성공과 클라우드 구성 검증/배포 성공을 구분한다.
 
 Vercel 서비스별 installCommand는 저장소 루트에서 npm ci --include=dev --workspaces --include-workspace-root를 실행한다. 루트 TypeScript와 workspace 개발 의존성을 포함하며 NODE_ENV=production에도 빌드 도구를 생략하지 않는다. 기존 node_modules만으로 배포 설치를 검증했다고 주장하지 말고 깨끗한 복사본에서 설치→서비스별 빌드를 확인한다. 전역 tsc/npx 최신 버전으로 누락을 숨기지 않는다.
+
+API 서비스는 일반 tsc dist를 함수 루트로 자동 선택하지 않게 outputDirectory=.를 유지한다. 서비스 buildCommand는 domain build와 server typecheck이며 Vercel이 원본 모듈을 변환/추적한다. @vercel/backends의 includeFiles는 저장소 루트 기준이다. 로컬 HTTP smoke뿐 아니라 실제 빌더가 만든 함수 파일을 독립 디렉터리에서 실행하고 상품·프로모션 API를 검사한다. Ready 상태만으로 서비스 정상 동작을 판정하지 않는다.

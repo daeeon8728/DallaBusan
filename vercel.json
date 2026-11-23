@@ -42,13 +42,14 @@
       "root": "apps/server",
       "framework": "fastify",
       "entrypoint": "src/app.ts",
-      "buildCommand": "cd ../.. && npm run build --workspace @trip-fit/domain && npm run build --workspace @trip-fit/server",
+      "buildCommand": "cd ../.. && npm run build --workspace @trip-fit/domain && npm run typecheck --workspace @trip-fit/server",
       "functions": {
         "src/app.ts": {
-          "includeFiles": "{../../config/catalog/**,../../data/snapshots/**}"
+          "includeFiles": "{config/catalog/**,data/snapshots/**}"
         }
       },
-      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"
+      "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root",
+      "outputDirectory": "."
     }
   },
   "rewrites": [
