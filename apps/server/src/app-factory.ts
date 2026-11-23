@@ -7,7 +7,6 @@ import { registerGuideRoutes } from './routes/guides.js';
 import { registerExchangeRoutes } from './routes/exchange.js';
 import type { ExchangeService } from './services/exchange.js';
 import Fastify, { LogController } from 'fastify';
-import fastifyStatic from '@fastify/static';
 import { extname } from 'node:path';
 import type { HealthResponse } from '@trip-fit/domain';
 import type { ServerConfig } from './config/env.js';
@@ -41,7 +40,11 @@ export function buildApp(config: ServerConfig, webRoot?: string, catalog?: Catal
   if (parking) registerParkingDirectoryRoutes(app, parking);
 
   if (webRoot !== undefined) {
-    app.register(fastifyStatic, { root: webRoot });
+    // Static hosting belongs to the standalone server; API functions never load it.
+    app.register(async (staticApp) => {
+      const { default: fastifyStatic } = await import('@fastify/static');
+      await staticApp.register(fastifyStatic, { root: webRoot });
+    });
     app.setNotFoundHandler((request, reply) => {
       const pathname = new URL(request.url, 'http://localhost').pathname;
       const isApi = pathname === '/api' || pathname.startsWith('/api/');

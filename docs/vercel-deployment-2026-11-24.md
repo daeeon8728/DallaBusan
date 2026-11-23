@@ -146,3 +146,7 @@ vercel dev --local은 이 저장소에서 config/catalog·data/snapshots·docs�
 최종 구성 제시 후 사용자 push 승인을 받았다. 클라우드 배포 결과는 별도 검증한다. Vercel 프로젝트 Root Directory는 저장소 루트,서비스 구성은 이 파일을 기준으로 검토한다. 초기 저장 데이터 표시는 새 API 키 없이 가능하며,공공자료 갱신 키 등 실제 필요한 비밀 값은 추후 Vercel 서버 환경변수로만 설정한다. root .env를 Git/프런트에 올리지 않는다.
 
 근거: [Services](https://vercel.com/docs/services),[서비스 설정](https://vercel.com/docs/services/config-reference),[라우팅](https://vercel.com/docs/services/routing),[바인딩](https://vercel.com/docs/services/bindings),[Fastify](https://vercel.com/docs/frameworks/backend/fastify).
+
+## 후속 API 의존성 분리
+
+모듈 경로 수정 후 클라우드 로그에서 @fastify/static→content-disposition의 ERR_REQUIRE_ESM을 추가 확인했다. 정적 플러그인을 API 진입점의 최상위 로딩에서 제외하고 webRoot가 있는 독립 화면 서버에서만 동적으로 불러온다. 로컬과 API의 기존 경로는 유지한다. 공식 함수 패키지를 --no-experimental-require-module/NODE_ENV=production으로 검사했으며 상세 결과와 실제 사이트 복구 여부는 proof.md를 따른다.

@@ -1186,3 +1186,18 @@ CLI 실제 실행 근거는 var/imports/vercel-20261123/runtime-fix-cli.{log,jso
 E2E는 npm run start의 dist와 외부 사진/예약 대역을 사용한다. 공식 함수 빌더 smoke는 별도 실제 패키지 실행이다. 검사 스크립트 첫 진단/브라우저 창 위치 오류는 재선택 후 정상 로그 화면을 읽어 복구했다. .env/DB/원본 카탈로그/번역/의존성/lockfile은 변경하지 않았다. 신규 포털 수집/상품 추가·제외0,기존 공개 상품402/관광지220/음식점514 유지. 내부 결제/AI/일정 기능은 추가하지 않았다.
 
 사용자의 기존 push 승인 범위에서 동일 main으로 반영하고 공개 URL의 상품·프로모션 API 및 화면을 추가 확인한다. 클라우드 복구 결과는 아래 후속 기록과 최종 보고를 따르며 아직 확인하기 전 성공으로 쓰지 않는다.
+
+
+### 후속 클라우드 예외: API의 불필요한 정적 의존성
+
+6115ad8 자동 배포 완료 후 실제 API는 여전히500이었다. 최신 Vercel Logs는 이전 app.js 구문 오류 대신 ERR_REQUIRE_ESM: @fastify/static이 content-disposition/dist/index.js를 require할 수 없다는 오류를 보였다. 해당 라이브러리는 독립 로컬 웹 서버에서만 필요하므로 app-factory의 최상위 import를 제거하고 webRoot가 있는 플러그인 초기화 경로에서만 동적 import한다. API 전용 런타임에서 정적 모듈이 로드되면 실패하는 회귀 검사를 추가했다. 이 후속 변경의 검증과 실제 클라우드 결과를 아래에 기록한다.
+
+
+후속 최종 검증:
+
+- 공식 @vercel/backends의 실제 함수 패키지에 --no-experimental-require-module을 적용해 수정 전 @fastify/static→content-disposition의 ERR_REQUIRE_ESM을 동일하게 재현했다. 수정 후 같은 제한에서 health200/상품402/프로모션3/맛집514를 반환하고 종료0이었다. NODE_ENV=production도 동일 결과다. 근거: var/imports/vercel-20261123/backend-static-packaging.{mjs,json}. 앞선 ESM 진입점 재현은 backend-packaging.json으로 별도 보존한다.
+- 최초 편집은 CRLF 정적 import 치환이 남아 typecheck가 실패했다. 개행에 무관하게 해당 import를 제거한 뒤 전체 검사를 다시 실행했다. 검사 비활성화는 없다.
+- npm.cmd run lint / typecheck / check:providers / build 모두 종료0,경계101소스,web173모듈. npm.cmd run test -- --run은30파일376개,종료0. 신규 tests/integration/api-runtime.test.ts는 정적 모듈 로드를 예외로 만들어 API 독립성과 응답 DTO를 검증한다.
+- npm.cmd run test:e2e -- tests/e2e/foundation.spec.ts tests/e2e/promotions.spec.ts tests/e2e/public-guides.spec.ts는 종료0,모바일/태블릿/PC45개. 외부 사진/예약은 대역이다. 별도 dist start smoke의 /,/food/70,/recommended,/places/gamcheon,/search는 모두200,종료0.
+
+최종 소스의 클라우드 재배포/실제 화면 검증은 다음 후속 기록으로 구분한다.
