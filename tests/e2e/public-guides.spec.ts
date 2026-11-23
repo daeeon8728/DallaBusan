@@ -9,7 +9,7 @@ test.beforeEach(async({context})=>{
   });
 });
 test('restaurant tab shows actual menu/hours and opens a directly addressable detail',async({page},testInfo)=>{
-  await page.goto('/');await page.getByRole('link',{name:'맛집 찾기',exact:true}).click();
+  await page.goto('/?locale=ko');await page.getByRole('link',{name:'맛집 찾기',exact:true}).click();
   await expect(page).toHaveURL(/\/food\?locale=ko/);await expect(page.getByRole('heading',{level:1,name:'맛집 찾기'})).toBeVisible();
   await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
   const first=page.getByTestId('public-guide-card').first();await expect(first).toContainText('만드리곤드레밥');await expect(first).toContainText('10:00-20:00');

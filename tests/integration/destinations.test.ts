@@ -17,8 +17,8 @@ describe('reviewed destination guides and affiliate relations', () => {
     const service = createDestinationService(config, offers, () => '2026-11');
     expect(service.list('ko').featured).toHaveLength(2);
     expect(service.list('ko').catalogTotal).toBe(220);
-    expect(service.get('gamcheon','ko')?.related).toHaveLength(22);
-    expect(service.get('gwangalli','ko')?.related).toHaveLength(14);
+    expect(service.get('gamcheon','ko')?.related).toHaveLength(17);
+    expect(service.get('gwangalli','ko')?.related).toHaveLength(5);
     const detail = service.get('gamcheon','ko');
     expect(detail?.destination.address).toContain('감내2로 203');
     expect(detail?.related.find(link => link.relationship === 'stay')?.areaLabel).toContain('남포동');
@@ -68,7 +68,7 @@ describe('reviewed destination guides and affiliate relations', () => {
     item.translations.push(text);
     expect(() => createDestinationService(config,offers)).toThrow();
     item.translations.pop();
-    const link = item.related[0]; if (!link) throw Error('Missing relation');
+    const link = item.related.find(link=>{const offer=offers.get(link.offerId);return offer&&offer.category!=='stay';}); if (!link) throw Error('Missing active non-stay relation');
     link.relationship = 'stay'; link.areaLabel = 'Test-only invalid area';
     expect(() => createDestinationService(config,offers)).toThrow();
   });

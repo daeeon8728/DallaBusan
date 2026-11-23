@@ -41,7 +41,7 @@ export const GuideQuerySchema = z.strictObject({
   locale: LocaleSchema.default('ko'), q: z.string().trim().max(100).default(''), district: z.string().trim().max(100).default(''),
   category: z.string().trim().max(100).default(''), page: z.coerce.number().int().min(1).max(1000).default(1),
 });
-export const PublicGuideSchema = GuideRecordSchema.omit({ coordinates: true }).extend({ translationFallback: z.boolean() });
+export const PublicGuideSchema = GuideRecordSchema.omit({ coordinates: true }).extend({ translationFallback: z.boolean(), contentTranslation: z.enum(['source','machine']).default('source') });
 export const GuideListSchema = z.strictObject({
   kind: GuideKindSchema, locale: LocaleSchema, items: z.array(PublicGuideSchema), source: GuideSourceSchema,
   total: z.number().int().nonnegative(), availableTotal: z.number().int().nonnegative(),

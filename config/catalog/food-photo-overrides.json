@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-23",
+  "reviewedBy": "assistant-source-evidence",
+  "licenseUrl": "https://www.data.go.kr/ugs/selectPortalPolicyView.do",
+  "sourceDatasetUrl": "https://www.data.go.kr/data/15063472/openapi.do",
+  "rules": [
+    {
+      "targetId": "1548",
+      "sourceId": "1850",
+      "targetFingerprint": "1d7e5321cdb9db4d1ef93e1026a1102804ab83234ff38a0d19e4f4e1bfe7550f",
+      "sourceFingerprint": "880c4408a1dc1f133ee1f1a36a4dd6ec2dd2259268a734cb80cb98a26bad8f97",
+      "originalImageUrl": null,
+      "imageUrl": "https://www.visitbusan.net/uploadImgs/files/cntnts/20240422093323560_ttiel",
+      "sourceUrl": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1850",
+      "evidence": [
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1548",
+          "excerpt": "초필살돼지구이 | 부산 해운대구 마린시티3로 23 (우동) | 051-747-5571"
+        },
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1850",
+          "excerpt": "초필살돼지구이 해운대 본점 | 해운대구 마린시티3로 23 \n벽산E오렌지프라자 A동 107호 | 0507-1417-5516"
+        }
+      ],
+      "reviewNote": "동일 도로명주소/좌표 및 음식 종류, 명시된 지점명을 대조했다. 전화 표기/상세 층호 차이를 원본에 보존하고 사진만 연결한다."
+    },
+    {
+      "targetId": "1580",
+      "sourceId": "1826",
+      "targetFingerprint": "b6673b28bcd3d259869acbfb6beffcac8c3f75450bf78a3b9beb0c003ecac447",
+      "sourceFingerprint": "fe943293f736032553ecad51d152041584a65db1c0e6dd4d9ab7741e8f7f2ccb",
+      "originalImageUrl": null,
+      "imageUrl": "https://www.visitbusan.net/uploadImgs/files/cntnts/20240418103340192_ttiel",
+      "sourceUrl": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1826",
+      "evidence": [
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1580",
+          "excerpt": "뉼리 | 부산 수영구 민락수변로 7 (민락동) | 010-5381-8102"
+        },
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1826",
+          "excerpt": "뉼리 광안리점 | 수영구 민락수변로7 ok타운 8층 | 0507-1374-3870"
+        }
+      ],
+      "reviewNote": "동일 도로명주소/좌표 및 음식 종류, 명시된 지점명을 대조했다. 전화 표기/상세 층호 차이를 원본에 보존하고 사진만 연결한다."
+    },
+    {
+      "targetId": "1625",
+      "sourceId": "164",
+      "targetFingerprint": "4abb6a7386d711d6689eec5d8b934718c07e972e30bc1c2412aa5f033607a7b2",
+      "sourceFingerprint": "5fd9d6c7a2bdbe6f7e42942dfc1bfcab2ff67a2d80672cf017a688fbc56c3944",
+      "originalImageUrl": null,
+      "imageUrl": "https://www.visitbusan.net/uploadImgs/files/cntnts/20230608100341246_ttiel",
+      "sourceUrl": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=164",
+      "evidence": [
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1625",
+          "excerpt": "할매재첩국 | 부산 사상구 낙동대로1530번길 20-15 (삼락동) | 051-301-5321"
+        },
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=164",
+          "excerpt": "할매재첩국 | 사상구 낙동대로1530번길 20-15 | 051-301-7069"
+        },
+        {
+          "url": "https://big5chinese.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=87033",
+          "excerpt": "부산광역시 사상구 낙동대로1530번길20-15 | 문의 +82-51-301-5321 | 웹사이트 www.051-301-7069.kti114.net"
+        }
+      ],
+      "reviewNote": "공식 VISITKOREA의 동일 도로명주소/문의전화 051-301-5321/홈페이지 051-301-7069 연결을 함께 확인했다. 전화번호 충돌은 원본에 보존하고 사진만 연결한다."
+    },
+    {
+      "targetId": "1639",
+      "sourceId": "1251",
+      "targetFingerprint": "d4f65e4cbf0219db0fc67b1299a60615b36f6a38a3b96dfa9ed08bf99c129268",
+      "sourceFingerprint": "1f0d34cbb468e8956e658d010ffd4b5e0545c9bb25444864d3b582ff666e5466",
+      "originalImageUrl": null,
+      "imageUrl": "https://www.visitbusan.net/uploadImgs/files/cntnts/20220511142349184_ttiel",
+      "sourceUrl": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1251",
+      "evidence": [
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1639",
+          "excerpt": "톤쇼우 | 부산 수영구 광안해변로279번길 13 (민락동) | 051-752-7978"
+        },
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1251",
+          "excerpt": "톤쇼우 광안점 | 광안해변로279번길 13 | 010-5835-7978"
+        }
+      ],
+      "reviewNote": "광안해변로279번길 13의 광안점으로 한정한다. 금정구 금강로 247-10의 동명 지점(1506)은 제외한다. 좌표 약15m와 전화 표기 차이는 보존한다."
+    },
+    {
+      "targetId": "1612",
+      "sourceId": "112",
+      "targetFingerprint": "78decf80783164178d40914474d7c448225ef549d2a40926e7fd6ab73c3df13e",
+      "sourceFingerprint": "65fc7b9d176edd450c279550c2f6aa4ef4363a465769df0046ca3ba93771c23b",
+      "originalImageUrl": "https://www.visitbusan.net/uploadImgs/files/cntnts/20230613131233567_ttiel",
+      "imageUrl": "https://www.visitbusan.net/uploadImgs/files/cntnts/20240419101804650_ttiel",
+      "sourceUrl": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=112",
+      "evidence": [
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=1612",
+          "excerpt": "부산명물횟집 | 부산 중구 자갈치해안로 55 (남포동4가) | 0507-1338-7617"
+        },
+        {
+          "url": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201002001000&lang_cd=ko&uc_seq=112",
+          "excerpt": "부산명물횟집 | 중구 자갈치해안로 55 | 051-245-4995"
+        }
+      ],
+      "reviewNote": "자갈치해안로 55의 부산명물횟집 공식 공공자료 사진. 고장난 원본/썸네일은 HTTP200 HTML로 확인했다. 동일 상호/도로명주소/회백반 소개를 대조하고 전화 표기 차이는 보존한다."
+    }
+  ]
+}

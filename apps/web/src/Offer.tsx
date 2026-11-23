@@ -1,4 +1,11 @@
+import { BookingLanguage } from './BookingLanguage.js';
+import { BookingNotice } from './BookingNotice.js';
+import { Price } from './currency/Price.js';
+import { AddToCart } from './cart/CartControls.js';
+import { SaveButton } from './saved/SaveButton.js';
 import { useEffect, useRef, useState } from 'react';
+import { useGuideRequest } from './hooks/useGuideRequest.js';
+import { PublicOfferSchema } from '@trip-fit/domain';
 import type { Locale, PublicOffer } from '@trip-fit/domain';
 import { getDetailCopy } from './i18n/details.js';
 import { getCopy } from './i18n/index.js';
@@ -20,16 +27,12 @@ export function Icon({ name, size = 22 }: { name: IconName; size?: number }) {
   };
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name]} /></svg>;
 }
-function priceText(offer: PublicOffer, locale: Locale) {
-  if (!offer.referencePrice) return null;
-  return new Intl.NumberFormat(locale, { style: 'currency', currency: offer.referencePrice.currency, maximumFractionDigits: offer.referencePrice.currency === 'KRW' || offer.referencePrice.currency === 'JPY' ? 0 : 2 }).format(Number(offer.referencePrice.amount));
-}
 function OfferImage({ offer, locale }: { offer: PublicOffer; locale: Locale }) {
   const [failed, setFailed] = useState(false);
   const copy = getCopy(locale);
   const details = getDetailCopy(locale);
   const label = offer.image.kind === 'destination' ? details.destinationPhoto : offer.image.kind === 'illustration' ? details.examplePhoto : null;
-  return <div className="offer-image">
+  return <div className="offer-image"><BookingNotice offer={offer} locale={locale}/>
     {failed ? <div className="offer-photo-placeholder"><Icon name={offer.category} size={40} /><span>{details.photoMissing}</span></div>
       : <img src={offer.image.url} alt={label ? offer.title + ' · ' + label : offer.title} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} />}
     {label && !failed && <span className="image-label">{label}</span>}
@@ -45,43 +48,57 @@ function PhotoCredit({offer,locale}: {offer:PublicOffer;locale:Locale}) {
 }
 export function OfferCard({ offer, locale, onOpen }: { offer: PublicOffer; locale: Locale; onOpen: (offer: PublicOffer) => void }) {
   const copy = getCopy(locale);
-  const price = priceText(offer, locale);
-  return <article className="offer-card" data-testid="offer-card" data-offer-id={offer.id}>
+  const price = offer.referencePrice;
+  return <article className="offer-card" data-testid="offer-card" data-offer-id={offer.id}><SaveButton target={{kind:"offer",id:offer.id,title:offer.title}} locale={locale}/>
     <button className="image-button" onClick={() => onOpen(offer)} aria-label={offer.title + ' — ' + copy.details}><OfferImage key={offer.image.url} offer={offer} locale={locale} /><span className="card-corner"><Icon name="arrow" size={19} /></span></button>
     <div className="card-meta"><span>{copy.categories[offer.category]}</span><span className="provider-name">{offer.provider.displayName}</span></div>
     <h3><button onClick={() => onOpen(offer)}>{offer.title}</button></h3>
     {offer.localizationStatus === 'fallback' && <p className="original-note">{copy.original}</p>}{offer.localizationStatus === 'translated' && <p className="translated-note">{getDetailCopy(locale).translated}</p>}
-    <PhotoCredit offer={offer} locale={locale} />
+    <BookingLanguage offer={offer} locale={locale}/><PhotoCredit offer={offer} locale={locale} />
     <p className="scope-note">{copy.scopes[offer.scope]}</p>
-    <div className="card-bottom"><div>{price ? <><span className="price-label">{copy.reference}</span><strong>{price}</strong></> : <span className="unknown-price">{copy.unknownPrice}</span>}</div><button className="text-action" onClick={() => onOpen(offer)}>{copy.details}<Icon name="arrow" size={16} /></button></div>
+    <div className="card-bottom"><div>{price ? <><span className="price-label">{copy.reference}</span><strong><Price amount={price.amount} currency={price.currency} locale={locale}/></strong></> : <span className="unknown-price">{copy.unknownPrice}</span>}</div><button className="text-action" onClick={() => onOpen(offer)}>{copy.details}<Icon name="arrow" size={16} /></button></div>
+    <AddToCart offer={offer} locale={locale}/>
   </article>;
 }
-export function OfferDialog({ offer, locale, onClose }: { offer: PublicOffer | null; locale: Locale; onClose: () => void }) {
+function OfferDialogContent({ offer, locale, onClose }: { offer: PublicOffer | null; locale: Locale; onClose: () => void }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const offerId = offer?.id;
   const copy = getCopy(locale);
   useEffect(() => {
     const dialog = ref.current;
-    if (!offer || !dialog) return;
-    const trigger = document.activeElement;
+    if (!offerId || !dialog) return;
     if (!dialog.open) dialog.showModal();
     return () => {
       if (dialog.open) dialog.close();
-      if (trigger instanceof HTMLElement && trigger.isConnected) trigger.focus({ preventScroll: true });
     };
-  }, [offer]);
+  }, [offerId]);
   if (!offer) return null;
   return <dialog ref={ref} className="offer-dialog" onCancel={onClose} onClose={onClose} aria-labelledby="offer-title">
     <button className="close-dialog" onClick={onClose} aria-label={copy.close}>×</button>
     <OfferImage key={offer.id} offer={offer} locale={locale} />
-    <div className="dialog-body"><p className="dialog-kicker">{copy.categories[offer.category]} · {copy.scopes[offer.scope]}</p><h2 id="offer-title">{offer.title}</h2>
+    <div className="dialog-body"><p className="dialog-kicker">{copy.categories[offer.category]} · {copy.scopes[offer.scope]}</p><h2 id="offer-title">{offer.title}</h2><SaveButton target={{kind:"offer",id:offer.id,title:offer.title}} locale={locale} inline/>
       {offer.localizationStatus === 'fallback' && <p className="original-note">{copy.original}</p>}{offer.localizationStatus === 'translated' && <p className="translated-note">{getDetailCopy(locale).translated}</p>}
       {offer.localizationStatus === 'translated' && <details className="original-title"><summary>{getDetailCopy(locale).originalTitle}</summary><p lang={offer.originalTitleLocale}>{offer.originalTitle}</p><p>{getDetailCopy(locale).translationNote}</p></details>}
-      <PhotoCredit offer={offer} locale={locale} />
+      <BookingLanguage offer={offer} locale={locale}/><PhotoCredit offer={offer} locale={locale} />
       <p className="dialog-provider">{offer.provider.displayName}</p>
-      <div className="dialog-price">{offer.referencePrice ? <><span>{copy.reference}</span><strong>{priceText(offer, locale)}</strong><small>{copy.priceDate}: {offer.referencePrice.observedOn}</small></> : <strong>{copy.unknownPrice}</strong>}</div>
-      <p className="fine-print">{copy.priceNote}</p><p className="fine-print">{copy.availability}</p>
+      <div className="dialog-price">{offer.referencePrice ? <><span>{copy.reference}</span><strong><Price amount={offer.referencePrice.amount} currency={offer.referencePrice.currency} locale={locale}/></strong><small>{copy.priceDate}: {offer.referencePrice.observedOn}</small></> : <strong>{copy.unknownPrice}</strong>}</div>
+      <AddToCart offer={offer} locale={locale}/><p className="fine-print">{copy.priceNote}</p><p className="fine-print">{copy.availability}</p>
       <a className="primary-button booking-link" href={offer.href} target="_blank" rel="sponsored noopener noreferrer">{copy.book}<Icon name="arrow" size={20} /></a>
       <p className="external-note">{copy.external}</p><p className="affiliate-note">{copy.disclosure}</p>
     </div>
   </dialog>;
 }
+
+function ResolvedOfferDialog({offer,locale,onClose}:{offer:PublicOffer;locale:Locale;onClose:()=>void}) {
+  const [trigger]=useState(()=>document.activeElement);
+  useEffect(()=>()=>{queueMicrotask(()=>{if(trigger instanceof HTMLElement&&trigger.isConnected)trigger.focus({preventScroll:true});});},[trigger]);
+  const request=useGuideRequest('/api/offers/'+encodeURIComponent(offer.id)+'?locale='+locale,PublicOfferSchema);
+  const current=request.value;
+  return current?<OfferDialogContent offer={current} locale={locale} onClose={onClose}/>:<PendingOfferDialog locale={locale} onClose={onClose} failed={request.error!==null} retry={request.retry}/>;
+}
+function PendingOfferDialog({locale,onClose,failed,retry}:{locale:Locale;onClose:()=>void;failed:boolean;retry:()=>void}){
+  const ref=useRef<HTMLDialogElement>(null);const copy=getCopy(locale);
+  useEffect(()=>{const dialog=ref.current;if(!dialog)return;dialog.showModal();return()=>dialog.close();},[]);
+  return <dialog ref={ref} className="offer-dialog" onCancel={onClose} onClose={onClose}><button className="close-dialog" onClick={onClose} aria-label={copy.close}>×</button><div className="dialog-body"><p>{failed?copy.failed:copy.loading}</p>{failed&&<button onClick={retry}>{copy.retry}</button>}</div></dialog>;
+}
+export function OfferDialog({offer,locale,onClose}:{offer:PublicOffer|null;locale:Locale;onClose:()=>void}) {return offer?<ResolvedOfferDialog key={offer.id} offer={offer} locale={locale} onClose={onClose}/>:null;}

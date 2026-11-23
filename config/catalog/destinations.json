@@ -258,6 +258,13 @@
           "areaLabel": "남포동 · Nampo-dong",
           "evidenceUrl": "https://www.klook.com/ko/hotels/detail/282525-aventree-hotel-busan/?check_in=2026-12-10&check_out=2026-12-11&room_num=1&adult_num=1&child_num=0&age=&page_source=",
           "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "e-131061",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131061-busan-one-day-tour-south-korea",
+          "reviewedOn": "2026-11-23"
         }
       ],
       "addressLocale": "ko"
@@ -604,6 +611,13 @@
           "areaLabel": null,
           "evidenceUrl": "https://kr.trip.com/things-to-do/detail/107439639/",
           "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "e-131061",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131061-busan-one-day-tour-south-korea",
+          "reviewedOn": "2026-11-23"
         }
       ],
       "addressLocale": "ko"
@@ -1286,6 +1300,13 @@
           "areaLabel": null,
           "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113203701/",
           "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "e-131061",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131061-busan-one-day-tour-south-korea",
+          "reviewedOn": "2026-11-23"
         }
       ],
       "addressLocale": "ko"
@@ -6508,6 +6529,13 @@
           "areaLabel": null,
           "evidenceUrl": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour",
           "reviewedOn": "2026-11-11"
+        },
+        {
+          "offerId": "e-131061",
+          "relationship": "tour",
+          "areaLabel": null,
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131061-busan-one-day-tour-south-korea",
+          "reviewedOn": "2026-11-23"
         }
       ],
       "addressLocale": "ko"

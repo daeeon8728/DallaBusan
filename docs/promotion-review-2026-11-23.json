@@ -1,0 +1,73 @@
+{
+  "reviewedOn": "2026-11-23",
+  "reviewedBy": "assistant-source-evidence",
+  "published": [
+    {
+      "id": "aquarium-november-sale",
+      "providerId": "PROVIDER_B",
+      "sourceUrl": "https://www.klook.com/en-US/blog/klook-promo-codes/",
+      "checkedOn": "2026-11-23",
+      "startsOn": "2026-11-09",
+      "endsOn": "2026-11-30",
+      "reviewExpiresAt": "2026-11-25T15:00:00Z",
+      "evidence": {
+        "excerpt": "Busan SEA LIFE Aquarium / Brickman Admission Ticket | 27% off | 2026/11/09 | 2026/11/30",
+        "basis": "Official dated campaign links activity/150181. Affiliate redirect template and exact account attribution copied from existing approved export; only the observed nested product destination changes. No price or inventory asserted."
+      }
+    },
+    {
+      "id": "busan-tour-coupon",
+      "providerId": "PROVIDER_E",
+      "sourceUrl": "https://www.kkday.com/en/promo/black_friday26",
+      "checkedOn": "2026-11-23",
+      "startsOn": "2026-10-10",
+      "endsOn": "2026-12-31",
+      "reviewExpiresAt": "2026-11-25T15:00:00Z",
+      "evidence": {
+        "excerpt": "MYSTOUR10: 10% OFF; capped USD 20; minimum USD 100; Korea tours/experiences included; booking Oct 10–Dec 31 2026; travel Oct 1–Dec 31 2026; once per user; limited quantity.",
+        "basis": "Official global-English campaign terms. Korea tour eligibility is conditional, not a guarantee that every option or customer can redeem. No code marked blog-reader-only is copied."
+      }
+    },
+    {
+      "id": "new-user-activities",
+      "providerId": "PROVIDER_A",
+      "sourceUrl": "https://www.trip.com/hot/trip.com-promo-code/",
+      "checkedOn": "2026-11-23",
+      "startsOn": "2026-11-23",
+      "endsOn": "2026-12-31",
+      "reviewExpiresAt": "2026-11-25T15:00:00Z",
+      "evidence": {
+        "excerpt": "Global New User 5% OFF, Tours/Attractions; claim coupon; until 2026-12-31.",
+        "basis": "Official global coupon table, checked 2026-11-23. Publication starts on review date (not claimed as campaign launch date). CTA browses existing Busan tours; no individual product is asserted coupon-eligible."
+      }
+    }
+  ],
+  "held": [
+    {
+      "providerId": "PROVIDER_D",
+      "sources": [
+        "https://www.agoda.com/deals",
+        "https://www.agoda.com/c/WelcomeBackGlobal"
+      ],
+      "reason": "Fresh official HTML had only evergreen fallback cards updated in 2021; current Busan campaign period, eligibility and approved campaign affiliate destination not verified."
+    },
+    {
+      "providerId": "PROVIDER_C",
+      "sources": [
+        "https://www.myrealtrip.com/main/experiences?routeType=domestic",
+        "https://www.myrealtrip.com/promotions/ep164"
+      ],
+      "reason": "Busan campaign ended Nov22. Other campaigns were unrelated, outbound, or had unverified foreign-booking eligibility; existing restricted 185 offers remain unpublished."
+    }
+  ],
+  "rejectedExamples": [
+    {
+      "sourceUrl": "https://www.kkday.com/en-sg/promo/sg_octobersavers",
+      "reason": "Old campaign/code names and crawl dates do not establish current validity."
+    },
+    {
+      "sourceUrl": "https://www.kkday.com/zh-tw/blog/25229/kkday-bank-coupon",
+      "reason": "Reader-only code prohibits redistribution. Invalid dates such as 11/31 and weekday/card restrictions were not silently corrected or republished."
+    }
+  ]
+}

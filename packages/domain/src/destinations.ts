@@ -11,7 +11,7 @@ export const DestinationQuerySchema = z.strictObject({
 });
 export const DestinationSchema = z.strictObject({
   slug: DestinationSlugSchema, name: z.string().min(1), description: z.string().min(1),
-  locale: LocaleSchema, requestedLocale: LocaleSchema, translationFallback: z.boolean(),
+  locale: LocaleSchema, requestedLocale: LocaleSchema, translationFallback: z.boolean(), contentTranslation: z.enum(['source','machine']).default('source'),
   address: z.string().min(1).nullable(), addressLocale: LocaleSchema.default('ko'), district: z.string().nullable(), holidayInfo: z.string().nullable(),
   sourceUrl: SafeHttpsSchema, addressSourceUrl: SafeHttpsSchema,
   sourceRetrievedAt: z.iso.datetime(), reviewedOn: z.iso.date().nullable(),

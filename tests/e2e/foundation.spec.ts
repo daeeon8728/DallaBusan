@@ -8,7 +8,7 @@ test.beforeEach(async ({ page, context }) => {
     if (route.request().resourceType() === 'image') return route.fulfill({ contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="600" height="400" fill="#8dc6d8"/></svg>' });
     return route.fulfill({ contentType: 'text/html', body: '<title>External booking test</title><p>External booking test</p>' });
   });
-  await page.goto('/');
+  await page.goto('/?locale=ko');
   await expect(page.getByTestId('offer-card').first()).toBeVisible();
 });
 
@@ -35,8 +35,8 @@ test('search, provider filter, empty state and reset work', async ({ page, reque
   const cards = page.getByTestId('offer-card');
   await expect(cards.first()).toBeVisible();
   expect((await cards.allTextContents()).every(text => text.includes('아쿠아리움'))).toBe(true);
-  const json: { providers: Array<{ id: string; displayName: string }> } = await (await request.get('/api/offers')).json();
-  const provider = json.providers[0]; if (!provider) throw new Error('Test catalog is missing a provider');
+  const json: { items: Array<{ provider:{ id: string; displayName: string } }> } = await (await request.get('/api/offers?q='+encodeURIComponent('아쿠아리움'))).json();
+  const provider = json.items[0]?.provider; if (!provider) throw new Error('Test catalog is missing a provider');
   await page.getByRole('combobox', { name: '예약 사이트' }).selectOption(provider.id);
   await expect(page.locator('.offer-grid')).toHaveAttribute('aria-busy', 'false');
   expect((await cards.locator('.provider-name').allTextContents()).every(name => name === provider.displayName)).toBe(true);

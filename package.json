@@ -33,7 +33,10 @@
     "data:themes:build": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/build-theme-routes.ts",
     "data:themes:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-theme-routes.ts",
     "data:themes:export-attractions": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/export-route-attractions.ts",
-    "db:restore": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/restore-database.ts"
+    "db:restore": "npm run build --workspace @trip-fit/domain && node --env-file-if-exists=.env --import tsx scripts/restore-database.ts",
+    "data:parking-directory:refresh": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/refresh-parking-directory.ts",
+    "data:parking-directory:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-parking-directory.ts",
+    "data:localization:check": "npm run build --workspace @trip-fit/domain && tsx scripts/check-localization.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

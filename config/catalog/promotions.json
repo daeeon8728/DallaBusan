@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "enabled": true,
+      "approvalStatus": "approved",
+      "checkedOn": "2026-11-23",
+      "reviewExpiresAt": "2026-11-25T15:00:00Z",
+      "id": "aquarium-november-sale",
+      "providerId": "PROVIDER_B",
+      "kind": "sale",
+      "priority": 10,
+      "sourceUrl": "https://www.klook.com/en-US/blog/klook-promo-codes/",
+      "startsOn": "2026-11-09",
+      "endsOn": "2026-11-30",
+      "code": null,
+      "texts": {
+        "en": {
+          "title": "SEA LIFE Busan aquarium",
+          "benefit": "27% off selected tickets",
+          "conditions": "US-site offer; selected options only. Check local eligibility and final price."
+        },
+        "ko": {
+          "title": "씨라이프 부산 아쿠아리움",
+          "benefit": "선택 티켓 27% 할인",
+          "conditions": "미국 사이트 행사·일부 옵션 한정. 이용 지역 조건과 최종 가격을 확인하세요."
+        },
+        "ja": {
+          "title": "SEA LIFE 釜山水族館",
+          "benefit": "対象チケット27%オフ",
+          "conditions": "米国サイトの対象プラン限定。地域条件と最終価格をご確認ください。"
+        },
+        "zh-CN": {
+          "title": "SEA LIFE 釜山水族馆",
+          "benefit": "指定门票优惠27%",
+          "conditions": "美国站活动，仅限指定方案；请确认地区资格及最终价格。"
+        },
+        "zh-TW": {
+          "title": "SEA LIFE 釜山水族館",
+          "benefit": "指定門票73折",
+          "conditions": "美國站活動，限指定方案；請確認地區資格與最終價格。"
+        }
+      },
+      "target": {
+        "kind": "affiliate",
+        "href": "https://affiliate.klook.com/redirect?aid=138334&_currency=USD&k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Factivity%2F150181",
+        "bookingSourceUrl": "https://www.klook.com/en-US/activity/150181",
+        "bookingLocale": "en",
+        "linkEvidence": "approved-template"
+      },
+      "evidence": {
+        "excerpt": "Busan SEA LIFE Aquarium / Brickman Admission Ticket | 27% off | 2026/11/09 | 2026/11/30",
+        "basis": "Official dated campaign links activity/150181. Affiliate redirect template and exact account attribution copied from existing approved export; only the observed nested product destination changes. No price or inventory asserted."
+      }
+    },
+    {
+      "enabled": true,
+      "approvalStatus": "approved",
+      "checkedOn": "2026-11-23",
+      "reviewExpiresAt": "2026-11-25T15:00:00Z",
+      "id": "busan-tour-coupon",
+      "providerId": "PROVIDER_E",
+      "kind": "coupon",
+      "priority": 20,
+      "sourceUrl": "https://www.kkday.com/en/promo/black_friday26",
+      "startsOn": "2026-10-10",
+      "endsOn": "2026-12-31",
+      "code": "MYSTOUR10",
+      "texts": {
+        "en": {
+          "title": "A coupon for Busan tours",
+          "benefit": "10% off · up to USD 20",
+          "conditions": "Spend USD 100 on eligible tours; one use. Book and travel by Dec 31. Account/region rules apply."
+        },
+        "ko": {
+          "title": "부산 투어 할인 쿠폰",
+          "benefit": "10% 할인 · 최대 USD 20",
+          "conditions": "대상 투어 USD 100 이상·1회. 12/31까지 예약·이용. 계정·지역 조건 적용."
+        },
+        "ja": {
+          "title": "釜山ツアークーポン",
+          "benefit": "10%オフ・上限USD 20",
+          "conditions": "対象ツアーUSD 100以上・1回。予約・参加12/31まで。地域・会員条件あり。"
+        },
+        "zh-CN": {
+          "title": "釜山行程优惠券",
+          "benefit": "9折 · 最高省USD 20",
+          "conditions": "指定行程满USD 100，限一次；12/31前预订并出行，须满足账号及地区条件。"
+        },
+        "zh-TW": {
+          "title": "釜山行程折扣碼",
+          "benefit": "9折 · 最高折USD 20",
+          "conditions": "指定行程滿USD 100，限一次；12/31前預訂並出行，須符合帳號與地區條件。"
+        }
+      },
+      "target": {
+        "kind": "offer",
+        "offerId": "e-11186",
+        "externalId": "11186",
+        "sourceUrl": "https://www.kkday.com/zh-tw/product/11186-busan-day-tour-taejongdae-gamcheon-culture-village-songdo-skywalk-haedongyonggungsa-temple-or-yacht-tour"
+      },
+      "evidence": {
+        "excerpt": "MYSTOUR10: 10% OFF; capped USD 20; minimum USD 100; Korea tours/experiences included; booking Oct 10–Dec 31 2026; travel Oct 1–Dec 31 2026; once per user; limited quantity.",
+        "basis": "Official global-English campaign terms. Korea tour eligibility is conditional, not a guarantee that every option or customer can redeem. No code marked blog-reader-only is copied."
+      }
+    },
+    {
+      "enabled": true,
+      "approvalStatus": "approved",
+      "checkedOn": "2026-11-23",
+      "reviewExpiresAt": "2026-11-25T15:00:00Z",
+      "id": "new-user-activities",
+      "providerId": "PROVIDER_A",
+      "kind": "coupon",
+      "priority": 30,
+      "sourceUrl": "https://www.trip.com/hot/trip.com-promo-code/",
+      "startsOn": "2026-11-23",
+      "endsOn": "2026-12-31",
+      "code": null,
+      "texts": {
+        "en": {
+          "title": "New-user activity coupon",
+          "benefit": "5% off eligible activities",
+          "conditions": "New users: claim first; selected bookings. Region/account terms apply; confirm eligibility."
+        },
+        "ko": {
+          "title": "신규회원 액티비티 쿠폰",
+          "benefit": "대상 액티비티 5% 할인",
+          "conditions": "신규회원·사전 쿠폰 수령·대상 예약 한정. 지역·계정별 적용 여부 확인."
+        },
+        "ja": {
+          "title": "新規会員向け体験クーポン",
+          "benefit": "対象の体験が5%オフ",
+          "conditions": "新規会員・事前取得・対象予約のみ。地域・会員条件をご確認ください。"
+        },
+        "zh-CN": {
+          "title": "新用户活动优惠券",
+          "benefit": "指定活动95折",
+          "conditions": "仅新用户，须先领券并选择适用预订；请确认地区及账号资格。"
+        },
+        "zh-TW": {
+          "title": "新用戶體驗優惠券",
+          "benefit": "指定活動95折",
+          "conditions": "限新用戶，須先領券並選擇適用訂單；請確認地區與帳號資格。"
+        }
+      },
+      "target": {
+        "kind": "catalog",
+        "category": "tour"
+      },
+      "evidence": {
+        "excerpt": "Global New User 5% OFF, Tours/Attractions; claim coupon; until 2026-12-31.",
+        "basis": "Official global coupon table, checked 2026-11-23. Publication starts on review date (not claimed as campaign launch date). CTA browses existing Busan tours; no individual product is asserted coupon-eligible."
+      }
+    }
+  ]
+}

@@ -681,3 +681,410 @@ production smoke에서 /, /api/health, /api/guides/recommended?locale=ko는200, 
 복원은 SHA-256·스키마/테이블·행 수·무결성 검사 후 새 파일에만 수행하며 기존 DB를 덮어쓰지 않는다. 실제 .env·런타임 DB·node_modules·dist·임시 수집/로그·호스팅 세션은 제외하고 README/handoff에 필요한 재생성/개별 키 복사 방법을 기록했다. 현재 PC의 .env·기존 DB는 삭제/수정하지 않는다.
 
 첫 비밀키 검사에서 Git의 디렉터리 항목을 파일로 읽으려 해 EISDIR로 중단됐고, 실제 파일만 검사하도록 수정했다. 후보206파일·기존2커밋·DB에서 환경에 설정된 실제 비밀 값6개의 원문/URL인코딩 일치가0건이었다. 이는 공개 제휴 링크의 추적 ID와 구분한 검사다. 문서 작성 도구의 템플릿 문자열 구문 오류는 파일 변경 전에 발생했고 안전한 코드 펜스로 수정했다. 초기 lint가 테스트 finally 내 throw를 지적해 경로 확인을 finally 밖으로 옮겼고 수정 후 lint 종료0이다. 오류를 숨기거나 검사를 비활성화하지 않았다.
+
+
+## 2026-11-18 로그인 없는 찜하기·부산 주차 공개자료 연동
+
+### 변경과 현재 동작
+
+- apps/web/src/saved/{store,useSaved,SaveButton,SavedPage}: 버전1 localStorage 계약·200개 제한·동일 기기/사이트 주소의 재접속 복원·저장/삭제·다중 탭 이벤트 동기화·종류별 필터·12개씩 조회. 관광지·맛집·상품의 중립 종류/ID/저장 당시 이름/시각만 저장한다. 예약 URL/가격/계정/API 키는 저장하지 않는다. 현재 언어·공개 여부는 기존 검증 API에서 다시 조회한다.
+- App.tsx, Offer.tsx, Destinations.tsx, PublicGuides.tsx: 목록·상세의44px 하트, /saved 및 상단 저장 개수, 저장 실패/손상 안내 연결. 손상 자료는 명시적 확인 전 보존하며 초기화도 해당 키만 지운다. 다른 브라우저/기기로 자동 동기화하지 않는다. 동시에 다른 탭이 변경할 때는 localStorage의 마지막 저장을 기준으로 갱신한다.
+- packages/domain/src/parking-directory.ts, server/config/parking-directory.ts, providers/parking-directory/client.ts, services/{normalize-parking-directory,parking-directory}.ts, repositories/parking-directory.ts, routes/parking-directory.ts: 공개 다운로드 계약·전체 페이지 검증·기관+관리번호 정규화·중복 보류·원자 게시·안전한 공개 DTO·검색/주변 조회. 기존 서버 app/index에 연결했다.
+- scripts/refresh-parking-directory.ts, check-parking-directory.ts, package.json: 키 없는 공개자료 전체 수동 갱신/로컬 재계산 검사. config/catalog/parking-directory.json에 원본653행·페이지별 해시·품질·보류 사유와 파생641건을 보관한다. 실패 시 마지막 성공본을 보존하고 방문자 검색으로 외부 API를 재호출하지 않는다.
+- web/Parking.tsx, i18n/{saved,parking}.ts, global.css: 기존 검색에서 주차 검색/요금·운영 구분 필터·페이지 이동, 관광지/맛집 상세에서 대표 좌표1km 이내 최대3건·외부 위치 링크·주소 복사·출처/날짜/원문 안내.5개 UI 언어를 지원한다. 별도 주차 페이지·내장 지도·AI·일정 엔진은 추가하지 않았다.
+- tests/unit/saved-items.test.ts, parking-directory.test.ts, fixtures/parking-directory.ts, e2e/saved-parking.spec.ts: 새로고침·언어·다중 탭·실패·손상/초기화·만료 데이터·주차 필터/원문/거리/수집 완전성 회귀 검사.
+- AGENTS/README/intent/spec/plan/catalog-plan/operations와 [주차 수집 보고서](parking-directory-2026-11-18.md)를 갱신했다. eslint.config.js는 var의 수집 원본·생성 자료·이전 임시 복제본을 정식 소스 검사와 분리했다. apps/packages/scripts/tests의 검사는 유지한다. 의존성 설치·lockfile·.env·기존 DB·기존 주차615행은 변경하지 않았다.
+
+### 실제 수집 범위와 데이터 판단
+
+2026-11-18에 [전국주차장정보표준데이터](https://www.data.go.kr/data/15012896/standard.do)를 확인하고 공식 웹 다운로드의 전체18,994행(10,000/8,994)을 수집해 부산 주소/기관653행을 선별했다. 실제 수집 CLI에서도 header→2개 데이터 페이지→최종 header의4번 공개 요청을 수행해 전체 건수/계약/페이지별 해시를 검증했다. 수집시각은2026-11-18T10:25:21.470Z, 원본 개별 기준일은2026-04-17~2026-10-30이다. 수집시각을 시설의 현재 상태로 사용하지 않는다.
+
+원본은 공영423/민영230, 유료613/무료40이다. 중복 식별12행을 보류한 게시641건은 공영411/민영230, 유료603/자료상 무료37/요금 미확인1이다. 무료 표기와 양수 요금이 모순된1건은 무료로 분류하지 않았다. 좌표 없는8건은 검색에 남기되 주변 거리 계산/지도 링크에서 제외했다. 구·군16개에 자료가 있으나 구별 전체 시설 대비 수록률과 모든 민영/부설/신규 시설 포함 여부는 알 수 없다. 원본 대상 밖 거주자우선 구역도 포함하지 않는다. UI/API의 allCityParkingGuaranteed=false, liveAvailability=false를 검증했다.
+
+[부산시설공단 실시간 API](https://www.data.go.kr/data/15157490/openapi.do)는 별도 서비스 활용 키를 요구한다. 신규 신청·약관 동의를 대신 하지 않았으며 빈자리 API를 연결했다고 표시하지 않는다. OSM 공개 질의는HTTP406으로 실패해 결과를 사용하지 않았다. 다른 서비스의 미검수 주차료/영업 상태는 가져오지 않았다. 기존615건의 오래된 공영 자료를 신규641건과 합쳐 전체 개수를 부풀리지 않았다.
+
+### 검증 명령과 최종 종료 결과
+
+| 명령/검사 | 결과 |
+| --- | --- |
+| npm.cmd run data:parking-directory:refresh | 종료0,실제 전체 다운로드·653원본/641게시/12보류 원자 저장 |
+| npm.cmd run data:parking-directory:check | 종료0,원본→정규화→품질 재계산 일치 |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0,workspaces와 tools strict |
+| npm.cmd run test -- --run | 종료0,18파일/278개 통과(기존249+신규29) |
+| npm.cmd run check:providers | 종료0,70소스 파일 통과 |
+| npm.cmd run build | 종료0,domain→server→web153모듈 |
+| npm.cmd run test:e2e -- --reporter=line | 종료0,모바일360/태블릿768/PC1280의전체90개 통과(기존69+신규21) |
+| dist production start smoke | 종료0,임시 포트·메모리 DB로 실행 후 서버 종료 |
+
+저장 키 차단/공간 부족은 성공으로 표시하지 않고 마지막 저장을 보존한다. 손상 데이터/잘못된 버전·불필요 URL 필드·잘못된 ID는 거부한다.200개 한도에서 삭제 가능, 최대 길이의200개 이름도 정상 복원됨을 확인했다. 판매 중단/404 상품을 자동 삭제하거나 예전 예약 링크로 복원하지 않는다. 현재 API 실패 시 찜 자체를 유지한다. 공식 수집 HTTP 실패·부분 페이지·수집 중 전체 건수 변경·파생 결과 변조·중복 ID·무료/유료 충돌·다른 기관의 동일 번호·좌표 누락/범위 밖·오래된 자료·모호한 위치·빈 결과·엄격한 HTTP 입력을 검증했다.
+
+초기 lint가 catch 변수의 원인 정보 누락을 지적해 안전한 source config 오류에 cause를 연결했다. 테스트 입력의 선택 필드 타입 오류는 누락 가능성을 명시해 수정했다. 첫 찜 한도 테스트에서 초기화 전 toggle의 오류 상태가 덮이는 문제를 발견해 초기화 시점을 고쳤고, 큰 정상 저장 자료가 크기 제한으로 손상 취급되지 않도록 경계도 검증했다. 최초 전체 E2E는85통과/5실패였다. 태블릿 영어 메뉴 폭 초과2건은 헤더를 두 줄/내부 스크롤로 수정했다. 나머지3건은 다대포 명칭이 주차장 원본 이름에 없어 빠진 경우였다. 공식 명소명/별칭과 대표 좌표1km 안의 주차장 검색을 합치고 해당 근거를 UI에 표시했다. 이후 전체90개를 다시 실행해 모두 통과했다. 검사를 끄거나 실패를 숨기지 않았다.
+
+### 산출물 실행·비밀 경계·화면 증거
+
+실제 production 모드의 /, /saved?locale=en, /food, /api/health, /api/offers?limit=1, 주차 검색/무료/민영/다대포/감천 주변 API는200이었다. 공개 상품302개, 주차641개/무료37개/민영230개, 다대포 명소명 결과와 반경 제한을 확인했다. raw config/DB/.env의JSON 요청과 테마 추천 API는404다. /.env에HTML을 요청하면 SPA 셸만 반환되는 기존 동작을 별도 검사했고 키·환경 필드 내용은 없었다. 실제 환경 비밀 값이 공개 응답·웹 JS에 포함되지 않음을 검사했다. 기존 SQLite는 사용하지 않고 임시 메모리 DB를 정리했다. 결과는 var/imports/saved-parking-production-smoke-2026-11-18.json에 있다.
+
+화면 캡처: [찜 모바일](screenshots/saved-mobile-2026-11-18.png), [찜 태블릿](screenshots/saved-tablet-2026-11-18.png), [찜 PC](screenshots/saved-desktop-2026-11-18.png), [주차 모바일](screenshots/parking-mobile-2026-11-18.png), [주차 태블릿](screenshots/parking-tablet-2026-11-18.png), [주차 PC](screenshots/parking-desktop-2026-11-18.png). 찜 모바일/PC와 주차 PC 이미지를 직접 확인했다. 파란 단색 상품/맛집 이미지는 외부 요청 대역이며 운영 사진을 교체한 것이 아니다. 실제 제휴 클릭·예약·결제·유료 API·새 포털 상품 수집은0이다. 상품 저장303/공개302와 PROVIDER_A78/B29/C185/D10을 유지했다. 미검증 계정/사이트 승인·전체 OTA 재고·공개 배포로 과장하지 않는다.
+
+모든 실제 주차장 전수 목록과 실시간 빈자리/현재 운영의 확보, 공단 신규 API 신청·개별 현장 검수·주차 예약·자동 수집 스케줄러·기기간 계정 동기화는 미구현이다. 이 기능을 확인할 기존3001/4320/5173 서버는 검사 시 실행 중이지 않았으며 임시 검사 서버만 실행/종료했다. 운영 서버를 임의로 공개 배포하거나 제휴 채널에 제출하지 않았다.
+
+### 최종 미번역 표시 점검
+
+찜 목록에서도 서버가 원문 대체를 반환하면 원문 제목 안내와 실제 제목 언어(lang)를 표시하도록 확인했다. 이후 최종 lint/typecheck/build는 종료0이다. 관련 E2E에 원문 대체 시나리오를 추가해 총8시나리오×3화면=24개를 재검증했다. 앞선 전체90개 통과 이후 추가된3개를 포함하며 기존69개 화면 시나리오는 그대로다. 단위·통합278개와 주차 수집/산출물 검사 결과는 유지된다.
+
+
+## 2026-11-18 상품 장바구니·통화별 참고 합계
+
+### 변경 파일과 동작
+
+- packages/domain/src/cart.ts와 index.ts: 수량1~99·100상품 저장 계약, 중복/상태 검증, 원통화별 십진수 합산/곱셈. BigInt로0.10+0.20 및 큰 금액을 정확하게 계산한다. React·HTTP·DB·환경 변수에 의존하지 않는다.
+- apps/web/src/cart/{store,useCart,money,CartControls,useCartOffers,CartPage}: 별도 localStorage 키 dallabusan.cart.v1, 반복 담기 중복 방지, 수량·삭제·새로고침/다중 탭 유지, 손상/저장 실패 안내, 현재 공개 DTO 재조회와 통화별 합계 화면.
+- App.tsx: 오른쪽 위 언어 선택창 옆 cart-nav를 header-actions 안에 배치하고 /cart 직접 진입·언어·뒤로 가기를 연결했다.
+- Offer.tsx 및 saved/SavedPage.tsx: 모든 상품 카드·관련 상품·상품 상세·찜한 상품에 담기 버튼을 제공한다. 관광지/맛집 공공 정보 자체를 판매 상품처럼 장바구니에 넣지 않는다.
+- i18n/cart.ts와 global.css:5개 UI 언어와 모바일/태블릿/PC,44px 조작, 상품별 수량과 참고 합계·통화별 합계·미확인/제외 안내.
+- tests/fixtures/cart.ts, unit/cart.test.ts, e2e/cart.spec.ts: 계산/저장19개 단위 테스트와6개 브라우저 시나리오×3화면. fixture는 테스트에서만 사용한다.
+- intent/spec/plan/catalog-plan/operations, README, AGENTS 및 이 proof: 사용자 승인 범위와 가격 기준·미구현 범위를 기록했다. 새 의존성·lockfile·.env·기존 DB·상품/주차 데이터는 변경하지 않았다. 이전 찜/주차 작업의 수정 상태를 보존했다.
+
+### 가격과 상품 정체성 경계
+
+현재 원본303개 가격은 KRW254/USD29/가격 없음20이며 공개 DTO는 승인·기간 검증 후302개다. 원본의 금액은 관찰한 참고가로, 실제 옵션별 최소가·실시간 최저가 필드가 없다. 따라서 실제 최저가를 만들어 표시하지 않고 **표시 가격 기준 참고 합계**라고 명시했다. 원래 가격의 관찰일을 보여주고 사용자 선택 수량만 곱한다. 인원·박수·세금·최종 옵션·재고·환율을 임의 적용하지 않는다. 통화가 다르면 별도 합계이며 전체 원화 환산·내부 결제·AI/여행 예산 엔진은 추가하지 않는다.
+
+장바구니에는 id/providerId/externalId/title/quantity/addedAt만 보관한다. URL·가격·통화·서명/계정 비밀을 저장하지 않는다. 목록을 열거나 새로고침/명시적 갱신 시 기존 검증된 /api/offers/:id를 현재 언어로 동시 최대6건 조회하며 오래된 요청/응답을 차단한다. provider/external 정체성이 바뀌거나404/실패하면 항목을 자동 삭제하지 않되 그 가격/예약 링크는 제외한다. 미확인 가격은0원으로 세지 않고 별도 개수로 표시하며, 확인된 금액만 있으면 부분 합계라고 안내한다. 전부 미확인이면 통화 금액을 생성하지 않는다.
+
+### 실행과 최종 결과
+
+| 명령/검사 | 최종 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0,workspaces 및 tools strict |
+| npm.cmd run test -- --run | 종료0,19파일/297개(기존278+신규19) |
+| npm.cmd run check:providers | 종료0,78소스 파일 통과 |
+| npm.cmd run build | 종료0,domain→server→web161모듈 |
+| npm.cmd run test:e2e -- --reporter=line | 종료0,전체111개(기존93+장바구니18),360/768/1280px |
+| dist production start smoke | 종료0,/cart?locale=en 포함,임시 메모리 DB 사용 후 서버 종료 |
+
+소수 오차·큰 금액·다른 통화·단위 누락·중복 ID·수량 경계·100개 제한·반복 담기·새로고침·다중 탭·차단/할당량 실패·손상 자료의 명시적 초기화·찜 보존을 검증했다. 브라우저에서 카드/상세/찜에서 담기, 수량·삭제·언어 전환, 서버에서 다시 받은 가격 반영, 통화별 금액/미확인 제외,404 및 같은 ID의 externalId 변경 시 과거 링크 차단을 확인했다. 단위/브라우저 검사는 첫 실행부터 최종 종료0이며 검사를 끄거나 실패를 숨기지 않았다. SQLite experimental·Zod PURE·Playwright 색상 환경 경고는 기존 비차단 경고다.
+
+production smoke에서 /cart?locale=en,기존 홈/찜/맛집/상품 API/주차 검색·다대포/감천 주변은200이고 내부 config/DB/.env JSON 요청/미구현 테마 추천 API는404였다. 최종 웹 bundle에 장바구니 코드가 포함되고 실제 환경 비밀 값이 공개 응답/웹 JS에 없음을 확인했다. 공개 상품302개와 주차641건을 유지했다. 결과 파일은 var/imports/cart-production-smoke-2026-11-18.json이다.
+
+시연: [모바일](screenshots/cart-mobile-2026-11-18.png), [태블릿](screenshots/cart-tablet-2026-11-18.png), [PC](screenshots/cart-desktop-2026-11-18.png). 모바일/PC 이미지를 직접 확인해 언어 선택창 옆 배치·수량·합계·가로 넘침 없음을 확인했다. 단색 상품 이미지는 E2E 외부 이미지 대역이며 운영 사진을 교체한 것이 아니다. 실제 제휴 예약 클릭/결제·새 포털 상품 수집·가격 API/환율 호출·공개 배포는0이다. 기존 승인/미승인 상태와 상품 카탈로그 데이터를 변경하지 않았다.
+
+실시간 최소가 확보·옵션/인원/박수 계산·환율 환산·재고 예약·통합 결제·기기간 계정 동기화는 미구현이다. 현재 합계를 최종 지불액이나 실제 최저가로 표시하지 않는다.
+
+
+## 2026-11-19 언어별 상품 표시 환산
+
+최신 요청으로 이전의 표시 환산 제외만 해제했다. ko/KRW, en/USD, ja/JPY, zh-CN/CNY, zh-TW/TWD이며 원래 통화/금액/가격 관찰일·providerId/externalId·제휴 URL은 보존한다. 카드·상세·관광지 연관 카드·찜한 상품·장바구니에 공용 표시를 적용했다. 환산가(≈)와 원가격, 제공일 범위·출처·실패 복구/재시도를 제공하며 환율 없음은 원통화와 분리 합계로 복구한다. 가격 없음은0원이 아니며 현재 판매 확인 실패/정체성 불일치는 이전 규칙대로 제외한다.
+
+변경 파일: packages/domain/src/{exchange,cart,index}.ts; apps/server/src/config/exchange.ts,services/exchange.ts,routes/exchange.ts,app.ts,index.ts; apps/web/src/currency/{context.ts,ExchangeProvider.tsx,Price.tsx},i18n/exchange.ts,main.tsx,App.tsx,Offer.tsx,saved/SavedPage.tsx,cart/CartPage.tsx,styles/global.css; tests/{fixtures/exchange.ts,unit/exchange.test.ts,integration/exchange.test.ts,e2e/exchange.spec.ts}; AGENTS.md,README.md,docs/{intent,spec,plan,catalog-plan,operations,proof}.md. 의존성/lockfile/.env/원본 상품·가격·제휴 설정/기존 DB는 변경하지 않았다. 상품 원본303·공개302를 유지하며 신규 포털 수집0, 제휴 클릭/예약/결제0이다.
+
+실제 연동: [공식 문서](https://frankfurter.dev/) 확인 후 keyless v2/rates의 USD→KRW/JPY/CNY/TWD 실제4개 행을 파싱했다. 운영 API는 /api/exchange-rates에서 조회200, USD1을 포함한5개 통화와 검증된 DTO만 제공한다. 실제 제공일이 KRW/JPY/CNY2026-11-19,TWD2026-11-18로 달라 날짜 범위를 그대로 보인다. 실시간 거래/체결 환율이나 오늘의 모든 통화 동시 고시라고 주장하지 않는다. API키 설정은 추가로 필요 없으며 임의 환율/개발 fixture를 운영에 사용하지 않았다.
+
+수치는 유리수 BigInt 교차환산·half-up 단가 반올림(KRW/JPY0,USD/CNY/TWD2자리) 후 수량을 곱해 합산한다. 매우 큰 중간값·0원 원자료·소수 경계·다른 통화 교차환산을 검증했다. 공개 원가격 스키마를 넓히지 않고 장바구니 계산 중간값만128자리까지 허용한다. 다른 통화의 원금액을 직접 더하거나 가격/환율/예약 URL을 localStorage에 저장하지 않는다.
+
+서버는 고정 HTTPS 소스·리디렉션 차단·8초/16KiB 한계,1시간 메모리 캐시/동시요청 통합/실패60초 재시도,최대24시간 마지막 성공 캐시(오래된 환율 표기)를 적용한다. 누락/중복/음수/0/미래/7일 초과/과대/손상 응답과 임의 URL 쿼리는 거부한다. 브라우저는 취소/이전 응답 차단·시간초과·1시간 재조회·재시도를 제공한다. 언어는 통화 기본값이며 국적을 판정하지 않는다.
+
+실패와 수정: 최초 E2E에서3가지 시나리오×3화면의9개가 실패했다. 전역 환율 안내 role=status가 기존 맛집 검색 상태와 중복돼6개가 실패해 aria-live=polite로 안내를 유지하면서 역할 충돌을 해소했다. 신규 환산 테스트3개는 역순으로 저장되는 장바구니의 첫 항목(가격 없음)을 증량하고 금액 변화를 기대한 테스트 선택 오류였으며 가격이 있는 원본 offer ID를 명시해 고쳤다. 기존 검사를 완화/삭제하지 않았다. 최초 dist smoke는 백그라운드 시작 직후 요청해 ECONNREFUSED였고 준비 후 같은 산출물로 재검증해 성공했다. 기존 SQLite experimental·Zod PURE·Playwright 색상 경고는 비차단 경고다.
+
+실제 dist smoke: localhost3001·내부4320·기존 공개 HTTPS에서 health/메인/cart?locale=ja/saved?locale=zh-TW/환율 API/공개 상품 API 정상,비공개 .env/config JSON404를 확인했다. 결과는 var/imports/exchange-production-smoke-2026-11-19.json이다. 실제10USD 표시는 당시 KRW13334/JPY1594/CNY66.62/TWD329.28,영어USD10으로 검증했다. 기존 공개 터널을 유지하며 PC/프로세스에 의존하는 임시 미리보기다. 신규 사이트 채널 승인·상시 호스팅·실시간 상품 가격 수집은 이 결과에 포함하지 않는다.
+
+최종 검증 표·시연 캡처는 아래에 기록한다.
+
+추가 검증:2차 E2E는119/120 통과했다. 모바일 새로고침 직후 의도된 원통화 로딩 상태(2개 합계)에서 단일 합계를 바로 검사해 strict selector가 실패한 타이밍 문제였다. 오류 캡처 시점에는 이미 환산 합계42000으로 정상 전환돼 있었으며 새로고침 후 환율 출처가 표시되고 합계가1개가 될 때까지 기다린 뒤 정확한 금액을 검사하도록 수정했다. 임의 대기나 재시도로 실패를 무시하지 않고 준비 상태를 검증한다.
+
+
+| 최종 검증 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0,workspaces 및 tools strict |
+| npm.cmd run test -- --run | 종료0,21파일314개(기존297+환율17) |
+| npm.cmd run check:providers | 종료0,86소스 파일 |
+| npm.cmd run build | 종료0,domain→server→web166모듈 |
+| npm.cmd run test:e2e -- --reporter=line | 최종 종료0,120개 전체(기존111+환율9),360/768/1280px,2.1분 |
+| dist production start/실제 환율 smoke | 종료0,localhost3001·4320·공개HTTPS,공개상품302 유지 |
+| 공개 최신 bundle/비밀값 검사 | 종료0,index-C5Xgh789.js와CSS200,환율 코드 포함,실제 .env 비밀값 노출0 |
+
+단위/통합/E2E의 환율·가격 수치는 fixture/대역이며 외부 이미지도 대역이다. 실제 keyless API 연동과 production smoke는 별도 실제 요청이며 가격/제휴 URL을 수집·갱신한 검사가 아니다. 실제 제휴 이동·결제/유료 API 호출·키 변경·공개 채널 신규 신청은 수행하지 않았다. 브라우저 검사는5개 언어의 카드/상세/찜/장바구니·통화 혼합 교차환산·수량·미확인 제외·새로고침/언어 전환·느린 환율 응답·오류/재시도와 기존 전체 기능을 포함한다.
+
+시연: [모바일](screenshots/exchange-mobile-2026-11-19.png), [태블릿](screenshots/exchange-tablet-2026-11-19.png), [PC](screenshots/exchange-desktop-2026-11-19.png). 모바일/PC 이미지를 직접 열어 원가격과 환산가·수량·참고 합계·안내 영역과 가로 넘침 없음을 확인했다. 단색 상품 사진은 검증용 대역이며 운영 사진을 대체하지 않았다. 실제 bundle 확인 결과는 var/imports/exchange-bundle-smoke-2026-11-19.json이다.
+
+현재 공개 미리보기 https://fin-precisely-lexmark-dynamic.trycloudflare.com 과 http://localhost:3001 에 새 산출물을 반영했다. 기존 브라우저는 새로고침 후 새 코드가 적용된다. 환산은 참고 표시이며 판매처의 기존 발급 예약 링크/외부 통화·수수료·가격을 변경하지 않는다. 주차/음식점 원문 요금의 자동 환산·실제 환전/결제·AI/예산 엔진은 범위 밖이다.
+
+
+## 2026-11-19 콘텐츠 다국어 전수 수정
+
+원인·보완 수·필드 범위·준비 번역 서비스와 미검수 상태·사진 원본 확인은 [검수 보고서](localization-review-2026-11-19.md)를 따른다. 상품302·관광지220·맛집538의5개 언어 주요 표시 필드 검사0건 오류를 확인했다. 기계 번역은 별도 표기하며 원문 보기/원본 DTO와 주차 원문은 유지한다.
+
+변경: config/catalog/{content-translations,offers}.json; 서버 config/{localization,offers}.ts,services/{guides,destinations,offers}.ts,index.ts; domain/{guides,destinations}.ts; web Offer.tsx,PublicGuides.tsx,Destinations.tsx,i18n/localization.ts; scripts/check-localization.ts; tests/integration/content-localization.test.ts,tests/e2e/content-localization.spec.ts; package.json의 오프라인 검수 명령과 관련 명세/운영/AGENTS. 기존 수정 파일과 사용자 작업을 보존했다. npm 의존성/lockfile/.env·공공 원본/DB·상품 URL/가격/관찰일·사진은 변경하지 않았다. 원본 상품303/공개302, 신규 포털 수집0/제휴 클릭0/예약·결제0/유료 API0이다.
+
+준비 과정의 긴 URL/섞인 한글/기하 문자 때문에31개 번역 단위를 보류해 발행하지 않았다. 긴 문장을 분할하고 기존 외국어 본문은 한글 조각만 보완해3544개 전체가 검증된 후 원자 게시했다. 성공 캐시를 보존하고 운영 트래픽에 번역 제공처를 연결하지 않았다. 최초 단위 실행은 번역 데이터가 아직 발행되기 전이라3개 파일 읽기 검사가 실패했으며 데이터 완성 후 전체321개 통과를 확인했다. 모달 effect의 객체 의존성 lint 경고는 실제 사용하는 상품 ID에 의존하도록 고쳐0경고를 유지했다.
+
+후속 질문의 사진 누락47건은 실제 음식점 API2회로 전부 사진/썸네일 URL 없음이 확인됐다. 주소가 있는3개 이미지 표본은HTTP200이었다. 원본 사진 미제공과 파일 손상/네트워크 실패를 구분했고 사진을 임의 교체하지 않았다.
+
+최종 검증·시연과 서버 상태는 아래에 기록한다.
+
+
+| 最終 검증 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0,최종 테스트 수정 후 재검사 포함 |
+| npm.cmd run typecheck | 종료0,모든 workspaces/tools strict |
+| npm.cmd run test -- --run | 종료0,22파일321개(기존314+신규7) |
+| npm.cmd run check:providers | 종료0,88소스 파일 |
+| npm.cmd run data:localization:check | 종료0,5개 언어×상품302/관광지220/음식점538,주요 표시 필드 오류0 |
+| npm.cmd run build | 종료0,domain→server→web167모듈 |
+| 변경 E2E 집중 검사 | 종료0,6개/15초,기존 fallback 검증의 변경된 동작과 이전 DTO 상세 재조회 |
+| npm.cmd run test:e2e -- --reporter=line | 최종 종료0,126개 전체/2.3분,360/768/1280px |
+| dist production start smoke | 종료0,localhost3001/4320 재시작 및 공개 HTTPS4개 외국어 API/페이지 확인 |
+
+최초 E2E는120통과/6실패였다.3개는 한국어 요청에서 일본어 원문 fallback을 기대한 과거 검증이 이제 실제 한국어 번역을 받는 정상 변경과 충돌한 것이므로 번역 상태 machine/요청 locale/연관 상품 검증으로 갱신했다. 원문이 바뀌거나 번역이 없는 경우의 fallback 검사 자체는 단위/통합 테스트에 유지한다. 나머지3개는 로딩 중 pointer-events:none인 기존 카드에 클릭을 강제하려던 새 테스트 시나리오가 불가능한 것이었다. 강제 클릭이나 타임아웃 증대 없이 실제 이전 언어 DTO를 대역으로 반환해 현재 언어 상세 API의 재조회가 정상 동작하는지 검사하도록 고쳤다. 집중6개 및 전체126개를 통과했다. 검사를 끄거나 실패를 숨기지 않았다.
+
+실제 서버 smoke는 신규 번들 index-U9h2Ixnk.js와4개 외국어 상품/관광지/음식점 응답200,목록538,직접 상세/장바구니 경로200,비공개 .env/번역 JSON404,실제 .env 비밀값 노출0을 확인했다. 기존 임시 터널은 Unauthorized:Tunnel not found 및 DNS 소멸로 만료됐으므로 새HTTP/2 터널로 전환했다. 상시 호스팅·신규 제휴 채널 승인은 아니다. 결과는 var/imports/localization-production-smoke-2026-11-19.json이다. 전수 결과는 [기계 판독 검수 결과](localization-audit-2026-11-19.json)다.
+
+시연: [모바일](screenshots/localized-food-mobile-2026-11-19.png), [태블릿](screenshots/localized-food-tablet-2026-11-19.png), [PC](screenshots/localized-food-desktop-2026-11-19.png). 모바일/PC를 직접 열어 번체 표시·기계 번역 안내·접힌 원문 이름·없는 상세 정보의 미제공 표시·가로 넘침 없음을 확인했다. 단색 사진은 E2E 대역이며 실제 사진 교체가 아니다. 브라우저 검사의 환율/외부 이미지/이전 언어 DTO는 대역이고 실제 부산 음식점 API사진 대조2회와 production HTTPS검사는 별도 실연동이다.
+
+현재 공개 주소: https://wing-convenient-compound-checks.trycloudflare.com . 로컬 주소 http://localhost:3001 도 최신 산출물이다.
+
+
+## 2026-11-19 사진 없는 중복 음식점24건 제외
+
+사용자가 지시한 사진 있는/없는 중복 쌍 중 사진 없는24개만 공개 제외했다. 원본 고유 ID538개/사진 없는47개는 원본 파일에 보존하고 공개514개/사진 있는491개/사진 없는 독립23개를 유지한다. 사진 있는 항목끼리의 중복 가능성은 이번에 삭제하지 않았다. 이름이 같은 별도 무궁화1591과1230을 모두 유지한다. ID24쌍·원문 주소 충돌과 전화/좌표 대조는 [검수 보고서](food-dedup-review-2026-11-19.md)를 따른다.
+
+변경 파일: apps/server/src/config/food-visibility.ts,config/catalog/food-visibility.json,services/guides.ts,index.ts; scripts/check-localization.ts; tests/integration/{food-visibility,content-localization}.test.ts,tests/e2e/food-visibility.spec.ts; docs/localization-audit-2026-11-19.json 및 intent/spec/plan/catalog-plan/operations/검수 보고서/proof/AGENTS/README/시연. 원본 공공 JSON·DB·내부 테마 fingerprint·기존 사용자 파일·사진·가격·제휴 URL과 .env/의존성/lockfile은 변경하지 않았다. 공개 상품302/관광지220은 유지한다. 포털 수집/새 공공 API/실제 제휴 이동·예약·결제·유료 API/번역 서비스 호출0이다.
+
+목록의 페이지 계산 전 제외하고 상세에서도404를 반환해 한국어 fallback으로 되살리지 않는다. 같은 숫자의 추천여행 ID에는 적용하지 않는다. 기존 찜의 삭제된 ID를 자동 삭제/재매핑하지 않고 저장 이름과 공개 확인 불가 상태를 유지한다. 설정은 source fingerprint·사진 상태·존재/중복/self/chain을 검증하므로 원본이나 사진이 바뀌면 재검수를 요구한다. 자동 유사도 병합이나 현장 확인 완료가 아니다.
+
+| 검증 명령 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0,workspace/tools strict |
+| npm.cmd run test -- --run | 종료0,23파일328개(기존321+신규7) |
+| npm.cmd run check:providers | 종료0,89소스 파일 |
+| npm.cmd run data:localization:check | 종료0,5개 언어의 현재 공개 음식점514개/주요 표시 필드 오류0 |
+| npm.cmd run build | 종료0,domain→server→web167모듈 |
+| npm.cmd run test:e2e -- --reporter=line | 종료0,132개 전체(기존126+신규6),360/768/1280px,2.4분 |
+| dist production start smoke | 종료0,localhost3001/4320 재시작 및 기존 공개 HTTPS확인 |
+
+이번 구현의 단위/브라우저 검사는 첫 전체 실행부터 통과했다. 오류를 숨기거나 검사를 비활성화하지 않았다. 기존 SQLite experimental·Zod PURE·색상 환경 경고는 비차단 경고다. 단위/통합에서24개×5개 언어 상세 차단/유지 사진,목록514/사진 없음23,같은 이름 다른지점 보호,다른 서비스 보존,새 사진·원문 변경의 재검수,원본 객체 불변,서버404를 검증했다. E2E는 기장손칼국수 검색1건/사진 있는1817 유지·새로고침·제외1541 오류 안내·독립1591 유지·기존 찜 보존을 검증한다.
+
+실제 공개 API에서5개 언어 모두 목록514/기장손칼국수 검색1건(ID1817·사진 URL있음)/제외1541의404/독립 무궁화1591의 유지와 사진 없음,화면200,비공개 .env/검수 JSON404를 확인했다. 결과는 var/imports/food-dedup-production-smoke-2026-11-19.json이다. 실제 원격 사진 파일의 전체 가용성·현재 영업/주소/좌표의 현장 확인을 의미하지 않는다. 브라우저의 외부 이미지는 대역이며 실제 부산 API나 외부 예약을 반복하지 않았다.
+
+시연: [모바일](screenshots/food-deduplicated-mobile-2026-11-19.png), [태블릿](screenshots/food-deduplicated-tablet-2026-11-19.png), [PC](screenshots/food-deduplicated-desktop-2026-11-19.png). 모바일/PC 캡처를 직접 열어 사진 있는 유지 ID의 단일 상세·정보·가로 넘침 없음을 확인했다. 단색 사진은 검증 대역으로 실제 사진을 대체하지 않았다.
+
+반영된 공개 주소: https://wing-convenient-compound-checks.trycloudflare.com . 로컬 http://localhost:3001 도 최신 산출물이며 PC/터널 프로세스에 의존하는 미리보기다.
+
+
+## 2026-11-23 제휴 링크 우선순위·조건부 한국어 예약
+
+### 변경과 데이터 결과
+
+- 설정 우선순위: 클룩(PROVIDER_B,10) → 트립닷컴(PROVIDER_A,20) → 아고다(PROVIDER_D,30). 마이리얼트립(PROVIDER_C,40)은4가지 증빙을 모두 요구하는 조건부 정책이다. 이름/도메인/추적 값은 기존 config 경계에 두고 서비스·컴포넌트에 업체별 분기를 넣지 않았다.
+- 원본303개를 보존했다. 기존 비활성1개와 조건 미확인185개를 공개 제외하여 공개 예약 링크117개가 남는다. 확인한 동일 숙소4묶음은 메인에서 우선 링크1개씩 선택해113개 대표 상품을 표시한다. 메인 숙소21개다. 검색/상세에는 유효한 대체 판매처를 유지하며, 직접 판매처 필터를 고르면 해당 판매처 상품을 볼 수 있다.
+-4묶음은 그랜드 조선 부산/아스티 부산역/롯데호텔 부산/파라다이스 부산이다. 원본 ID·제목·판매처·출처 URL을 묶음 근거에 고정하고 변경 시 재검수를 요구한다. 서로 다른 투어·옵션·숙소 지점은 이름 유사도로 합치지 않는다. 객실·날짜·인원·가격의 동일성을 주장하지 않는다.
+- 마이리얼트립185개에는 한국인 가이드/외국인 참여/통역사/해외카드의 공동 증빙이 없으므로 공개 링크를 제외했다. 실제 해당 조건 확인0개, 운영 예약 배지0개다. 조건을 모두 확인한 미래 상품만 이미지 오른쪽 위에5개 언어 예약 안내를 표시한다. 증빙은 신원·기간·허용 출처를 검증하고 매 요청에서 만료를 다시 확인한다. 증빙 원문은 DTO에 넣지 않는다.
+- 제외 상품의 직접 API는404이며 디렉터리 우회 링크도 차단한다. 기존 찜/장바구니는 보존하되 예전 URL을 다시 노출하지 않는다. 상세창은 최신 상품 조회 성공 뒤에만 예약 링크를 표시한다. 비동기 상세창 전환 후 닫을 때 최초 실행 버튼으로 초점을 복구한다.
+
+상세 근거: [제휴 노출 검수](affiliate-presentation-review-2026-11-23.md).
+
+### 변경 파일
+
+- config/catalog/offers.json: 중립 판매처 순위·조건 정책·검수된 숙소4묶음. 기존 원본 링크/가격/사진을 바꾸지 않았다.
+- packages/domain/src/offers.ts: home/catalog 조회 계약과 공개 예약 안내 코드.
+- apps/server/src/config/offers.ts, apps/server/src/services/offers.ts: 증빙/그룹 스키마·정확한 원본 검증·전체 노출 경로 제한·순위와 대표 선택.
+- apps/web/src/App.tsx, Offer.tsx, BookingNotice.tsx, styles/global.css: 메인 조회·조건 배지·실패 시 이전 링크 차단·초점 복원.
+- tests/integration/offer-presentation.test.ts, tests/e2e/offer-presentation.spec.ts: 신규10개 단위/통합과9개 반응형 브라우저 시나리오. 기존 offers/localization/content-localization/destination-search/destinations/foundation/exchange 검사는 새로운 공개 범위를 반영했다.
+- AGENTS.md, README.md, docs/intent.md, spec.md, plan.md, catalog-plan.md, operations.md와 위 검수 문서: 최신 정책/복구 방법. docs/localization-audit-2026-11-19.json은 현재 공개117/220/514 기준으로 재계산했다.
+- .env 기존 값·공공 JSON/DB·제휴 발급 URL·상품 원가격·원본 사진·lockfile을 이번 작업에서 변경하지 않았다. 다른 이전 작업 변경은 그대로 보존했다.
+
+### 최종 검증
+
+| 명령 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,24파일338개 전체 통과 |
+| npm.cmd run check:providers | 종료0,90소스 파일 통과 |
+| npm.cmd run data:localization:check | 종료0,5개 언어별 상품117/관광지220/음식점514,오류0 |
+| npm.cmd run build | 종료0,domain → server → web,168모듈 |
+| npm.cmd run test:e2e -- --reporter=line | 종료0,141개 전체 통과,360/768/1280px,1.5분 |
+| npm.cmd run test:e2e -- tests/e2e/offer-presentation.spec.ts --reporter=line | 종료0,9개 통과,11.1초; 배지가 보이는 카드 영역으로 캡처 보완 |
+| dist start smoke | localhost3001/preview4320 최신 산출물 시작·health200;5개 언어/117링크/113대표/제한 상품404/대체 상세200/비공개 파일404 확인 |
+
+단위 검사는 설정만으로 순위 변경,3단계 대체 순위,원가격/링크 신원 보존,명시 판매처 필터,변경된 그룹 거부,4조건/ID/출처/확인일/유효기한 검증,실행 중 증빙 만료와404를 확인한다. 브라우저는 메인 중복 제거·재로딩·5개 언어 배지 위치/가로 넘침·이전 상세 URL 차단과 기존 저장/장바구니/환율/다국어/음식점 기능을 확인한다.
+
+### 실패와 수정
+
+초기 단위 검사7개는 이전302개 공개 범위/4개 판매처를 전제로 했거나 이제 제외된 상품을 분류 오류 fixture로 사용했다. 실제 공개 범위와 활성 fixture로 수정했다. 첫 전체 E2E는12개가 실패했다: 관련 관광지25→13,숙소 대표20 예상→21,첫 페이지 원통화KRW 예상→USD 변경과 상세창 비동기 전환 시 초점 복원 회귀였다. 데이터 기반 기대값을 고치고 초점은 상위 상세창에서 최초 버튼을 보관·복원하도록 수정했다. 다음 검사에서 남은3개는 관련상품 필터 해제 뒤 범어사 원문 검색이 인근 설명 포함5개를 반환하는 정상 결과를1개로 가정했다. 기존 다른 검색 회복 테스트와 동일한 원문 검색 범위5개로 고친 뒤 전체141개가 통과했다. 검사를 끄거나 오류를 숨기지 않았다.
+
+로컬 편집/검증 보조 명령에서 Python 경로 없음,JavaScript 문자열/메서드 오타,CRLF 일치 실패와 require/top-level await 혼용이 있었다. Node 사용/정확한 메서드/개행 정규화/명시적 ESM 실행으로 수정했다. 새 공개 주소의 첫 확인은 응답 검증/기록 뒤 강제 process.exit가 Windows Node 종료 assert를 일으켜 자연 종료로 다시 검사했다. 기존 임시 공개 주소는 fetch 실패하여 HTTP/2 터널을 새로 연결했다. SQLite experimental/Zod PURE/색상 환경 알림은 빌드·검사를 막지 않는 기존 경고다.
+
+### 실제·대역·미실행
+
+운영 데이터의 조건부 배지는0개다. 양성 배지/유효 증빙/테스트용 중간 판매처는 테스트 전용이며 운영 상품/검수 완료로 발행하지 않았다. 공개 상품 추가0,신규 제휴 URL 발급0,실제 제휴 클릭/예약/결제0,유료 AI/API 호출0이다. 공식 공개 상품 페이지2개를 읽으려 했고1개는 조회 실패했다. 영어 진행·외국인 참여만으로4조건 충족이나 해외카드 지원을 보장하지 않았다. 신규 채널 승인/모든 OTA 전체 재고/실시간 가격·재고 확인은 수행하지 않았다. 외부 이미지/예약 페이지의 E2E는 대역이다.
+
+캡처는 조건부 배지의 테스트 전용 양성 시연: [모바일](screenshots/booking-notice-mobile-2026-11-23.png), [태블릿](screenshots/booking-notice-tablet-2026-11-23.png), [PC](screenshots/booking-notice-desktop-2026-11-23.png). 모바일/PC 이미지를 직접 열어 오른쪽 위 배지와 찜 버튼이 겹치지 않음을 확인했다. 단색 상품 이미지는 대역이며 실제 운영 상품 사진을 교체하지 않았다.
+
+터미널 상세 로그: var/imports/affiliate-{lint,typecheck,tests,providers,localization,e2e,badge-e2e}-20261123.log. 실제 HTTP 결과: var/imports/affiliate-production-smoke-2026-11-23.json. 공개 연결 확인 결과는 아래 최종 반영 기록을 따른다.
+
+최종 공개 반영: https://restoration-harper-considerations-choir.trycloudflare.com . localhost3001/preview4320/공개 HTTPS3개 서버 모두5개 언어 및 위 HTTP 검증을 통과했고 자연 종료0을 확인했다. 기존 임시 URL은 새 주소로 교체했다. PC·터널 프로세스에 의존하는 임시 미리보기이며 영구 호스팅/신규 제휴 사이트 승인을 의미하지 않는다.
+
+
+## 2026-11-23 조건부 예약 상품 공식 전체 재검수
+
+후속 요청에 따라 마이리얼트립 기존185개 상품의 공식 상세 URL을 직접 수집했다. 가이드 관련46개를 먼저 확인하고 나머지139개까지 확장했다.185개 모두HTTP200이고 본상품 쿼리와 providerId/externalId 신원이 일치한다(체험/투어182,패키지3; pkg- namespace 유지). 함께 본 상품/광고/후기 내용은 본상품 조건 증빙에서 제외했다. 자체 본문 구조와 주요 외국인 대상8개 후보 안내를 대조했다. 모든 이미지 속 문구·모든 선택 옵션·개인 문의까지 검증한 것은 아니다.
+
+해외카드는 공식 도움말에서3DS 인증,VISA/Mastercard/JCB/UnionPay 및 발급사/BIN 승인 제한을 확인했다. 한국인 가이드 진행/외국인 참가/통역 제공까지4조건을 모두 확인한 상품은0개다. 운영 bookingEligibility에 미확인 값을 추가하지 않았고 재노출0개/실제 배지0개,기존 공개117/메인113을 유지한다. 조건 미확인은 실제 이용 불가를 뜻하지 않는다. 회사 소재지나 한국어·외국어 진행으로 가이드 국적/통역사 동반을 추정하지 않았다.
+
+변경 파일은 docs/provider-c-eligibility-review-2026-11-23.md(주요 후보·조건별 근거·추가 확인 필요 사항),docs/booking-eligibility-audit-2026-11-23.json(185개 ID/출처/확인일/원문 SHA-256/보류 결정),docs/affiliate-presentation-review-2026-11-23.md(최신 재검수 링크),이 proof다. 검수 JSON은 공개 상품 설정으로 불러오지 않는다. 코드/기존 상품/URL/사진/가격/.env/lockfile/DB는 이번 작업에서 변경하지 않았다. 실제 예약 URL 방문/결제/제휴 발급/파트너 메시지 전송은0건이다.
+
+검증: 전체 수집 종료0(185/185),원문 SHA-256과 본상품 ID 대조 종료0(불일치0),기존 실제 설정 기반 서비스 조회 종료0(제한185개 상세 전부null/공개117/메인113),npm.cmd run test -- --run tests/integration/offer-presentation.test.ts 종료0(10개 통과). 감사 기록의185개 유일성/상태/보류 결정과 문서5개 상대 참조를 검사했다. 결과 로그는 var/imports/provider-c-eligibility-20261123/verification.log,원문 HTML/수집 색인은 같은 디렉터리다.
+
+실패/복구: 검색 웹 리더가 일부 상품을 읽지 못했으나 직접 공식 HTTP로185개를 확보했다. 공식 결제 도움말의 직접 HTTP 접근은403이어서 최초 보조 감사 명령의200기대 검사가 실패했고 Windows Node 종료 assert도 발생했다. 공식 웹 리더에서는 해당 본문을 읽을 수 있어 접근 방법을 명시해 기록했다.403을200으로 바꾸지 않았으며,검증 가능한 상품 신원/파일 해시와 현재 서비스 차단 검사는 분리하여 종료0으로 확인했다.
+
+미실행: AGENTS.md의 문서만 변경 시 구조/참조 검증 규칙에 따라 lint/typecheck/전체 테스트/전체 E2E/build와서버 재시작을 반복하지 않았다. 이번에는 실제 복원/배지 변경이 없어 신규 화면 캡처도 만들지 않았다. 이전 대역 배지를 실제 조건 확인의 근거로 쓰지 않았다. 실제 카드 결제/판매자 문의/현장·사람 승인은 수행하지 않았다.
+
+[재검수 보고서](provider-c-eligibility-review-2026-11-23.md),[185개 상품 감사 기록](booking-eligibility-audit-2026-11-23.json).
+
+
+## 2026-11-23 KKday 부산 상품285개 추가
+
+### 적용/검수 결과
+
+KKpartners 로그인 채널의 부산 목록/상품12213 전용 링크 발급을 직접 확인했다. 포털이 안내한 선택 CID 추적 규칙으로 기존 원본 URL의 제휴 링크를 구성했다. 실제 발급1개는 portal-generated,나머지284개는 approved-template로 구분한다. 임의 추적 값/단축 URL을 만들지 않았다. 새 계약 동의/사이트 채널 신청·키 발급·예약/결제·메시지 전송은 수행하지 않았다. websiteApproval=unverified를 유지한다.
+
+5개 언어×6개 상위 부산 범주의 고유136페이지를 수집했다. 재시도1회 포함137개 캡처/1,221개 카드에서290개 원본 ID로 정규화하고285개를 추가했다.5개는 지역 불일치·범위 불명확·상담용으로 보류했다. 기존 상품303개와 원본 미검증185개 제외를 보존하며 현재 raw588/public402/home398이다. 원본 상품 ID를 언어별로 병합하고,다른 판매 옵션/다른 판매처를 제목 유사도로 합치지 않았다. 동일 숙소4묶음의 기존 우선 대표도 유지한다.
+
+신규 구분: 관광132/스파22/요트9/체험45/사진7/음식10/교통24/패키지8/티켓28. 범위: 부산 내203/부산 출발26/부산 도착9/지역 복합47. 관찰 참고가279/가격 미확인6,명시 무료 가격9개다. 미확인은0으로 넣지 않았다. 상품별 공식 사진 URL285개가 서로 다르며,각 원본 상품 카드/상세와의 연결을 보존한다.5개의 원어 지연 로딩 사진은 같은 상품의 다른 언어 카드에서 보완하고36659는 공식 상세 첫 이미지를 확인했다. 모든 사진의 시각적 고유성/전체 CDN 가용성을 보장하는 수치는 아니다.
+
+[검수 보고서](provider-e-catalog-review-2026-11-23.md)에 범주/언어별 수·5개 보류 ID·상세 지역 확인·범위/옵션 제한·사진/번역 근거를 기록했다. 131061의 자체 설명에서 확인한4개 명소에만 투어 관계를 추가했다. 스카이캡슐 포함 여부가 B/C/W 옵션별로 다름을 기록했다.
+
+### 변경 파일
+
+config/catalog/offers.json: PROVIDER_E/순위35/추적·호스트·ID 패턴,285개 원본 ID·언어별 URL·가격·이미지·정적 제목·원문 해시. provider-e-source.json: 공식 원본/채널 근거/제외/현재 발행 대조. provider-e-editorial-titles.json: 누락/미번역의 원문 고정 편집 요약(machine-unreviewed). product-image-sources.json:285개 정확한 상품별 사진 근거. destination-relations.json과destinations.json:확인된 투어1개×명소4곳. config/provider-boundaries.json:신규 상호 경계 검사.
+
+apps/server/src/config/offers.ts:원문 해시/다국어 URL·원본 언어/공식 카드 사진 계약. apps/server/src/services/offers.ts:설정 기반 원본 ID/CID/다국어 목적지 검증·동일한 언어의 사진 출처 링크. packages/domain/src/offers.ts:최소 공개 bookingLocale. apps/web/src/BookingLanguage.tsx,Offer.tsx,styles/global.css:관찰한 원어 예약 페이지가 없을 때 실제 예약 페이지 언어 안내. 업체별 UI/비즈니스 분기는 추가하지 않았다.
+
+신규 tests/integration/provider-extension.test.ts의7개 검사와 tests/e2e/provider-extension.spec.ts의9개 반응형 검사. 기존 검사는402개 공개/398개 메인·명소 관계17개·실제 전체 페이지와 언어별 링크에 맞췄다. docs/intent/spec/plan/catalog-plan/operations,AGENTS.md,README.md와 다국어 감사 결과를 갱신했다. 기존 .env·lockfile·공공 DB/원본·비공개 API 값은 이번 작업에서 변경하지 않았다. 기존 사용자의 다른 변경은 보존했다.
+
+### 최종 실행 결과
+
+| 명령 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,25파일345개(기존338+신규7) 통과 |
+| npm.cmd run check:providers | 종료0,91소스 파일 |
+| npm.cmd run data:localization:check | 종료0,5개 언어별 상품402/명소220/음식점514,오류0 |
+| npm.cmd run build | 종료0,domain→server→web169모듈 |
+| npm.cmd run test:e2e -- --reporter=line | 종료0,150개 전체(기존141+신규9),360/768/1280px,1.7분 |
+| dist start smoke | 종료0,localhost3001/preview4320/공개 HTTPS3개에서5개 언어×285개 전부 확인 |
+
+원본 언어·제목 변경 시 번역 재검수,다른 상품 ID/잘못된 호스트/잘못된·중복·누락 CID의 거부,원어 미제공 URL 보존과 실제 예약 언어,제외 상품404,현재 DTO에 소스/증빙/개인 설정 미노출을 검증했다. 브라우저에서는 필터/페이지/재로딩·5개 언어 상세·이미지 연결/스폰서 링크·기존 장바구니/찜/환율/공공 정보도 통과했다. 실제 제휴 링크를 클릭하거나 결제하지 않았다.
+
+실제 API에서 새 공급자285개,전체402/메인398,4개 판매처 순서,각 상품의 원본 ID·CID와 실제 언어별 href·사진 출처 href,명소 관계,보류5개/기존 제한 상품404와원어 미제공시 일본어 유지(e-36659)를 확인했다. 비공개 JSON은404이며 HTML Accept의 /.env 응답은 기존 SPA fallback으로 공개 index.html과 완전히 같은 내용임을 확인했다. 실제 .env 값/설정은 노출되지 않았다. 이는 /.env에 대한 HTML 요청까지404였다고 주장하는 결과가 아니다.
+
+실제 CDN 표본3개(e-12213,e-36659,e-131061)는200,image/jpeg 또는image/webp였다. 브라우저 E2E의 외부 이미지/환율 실패는 대역이며 실제 사진285개 전체를 HTTP 검사하거나 실시간 가격/재고를 확인한 것은 아니다. 서버 결과는 var/imports/provider-e-20261123/production-smoke.json,검사 로그는 같은 디렉터리의 lint/typecheck/tests/providers/localization/build/e2e.log다.
+
+### 실패와 수정
+
+일반 HTTP 수집403은 정상 로그인 브라우저 UI로 대체했다. 초기 로딩/페이지 번호만 바뀌는 상태와 재렌더링을 실제 상품 ID·마지막 페이지 수로 검출해 잘못된 중간 캡처는 제외했다. 원어 카드 사진이 비어 있던6개를 같은 상품의 관찰된 사진으로 보완했다. 일반 OS 클립보드 저장은 가상 클립보드와 달라 실패했고 다른 클립보드 내용은 저장하지 않았다. 고정 파일/Origin·CSRF·크기 제한의 임시 loopback 폼으로 옮긴 후 해당 서버를 종료했다.
+
+초기 단위6개 실패는 미번역 한국어2건,고정7페이지 가정,다국어 href와 사진 출처의 불일치였다. 원문 실제 언어·번역/전체 페이지·해당 언어 사진 출처를 수정했다. 다음3개는 서로 다른 언어여도 같은 고유명사 표기가 가능하다는 점을 반영하지 못한 테스트였다. 공식 라운지 미번역도 보완하고 각 언어의 정확한 검수 제목과 대조하도록 수정했다. 이전 build가 새 이미지 근거 enum을 모르는 상태의 E2E 시작 실패는 fresh build 후 해소했다. 첫 전체 E2E147통과/3실패는 새 테스트가 실제 접근성 이름의 화살표를 빠뜨린 것이었고 올바른 이름으로150개 통과했다. 서버 smoke는 브라우저 HTML Accept 유무/기존 SPA fallback의 index 응답을 구분하도록 수정한 후3개 서버 전부 종료0을 확인했다. 검사를 비활성화하거나 시간 제한을 늘리지 않았다.
+
+### 시연과 반영 주소
+
+실제 포털 발급 [캡처](screenshots/kkday-affiliate-link-2026-11-23.jpg)를 직접 열어 상품 원본 URL/CID 발급 결과를 확인했다. 상품 목록 [모바일](screenshots/provider-e-mobile-2026-11-23.png),[태블릿](screenshots/provider-e-tablet-2026-11-23.png),[PC](screenshots/provider-e-desktop-2026-11-23.png)도 저장했고 모바일/PC를 직접 열어285개 필터 결과·카드 정렬·가로 넘침 없음을 확인했다. 단색 사진/환율 실패 안내는 테스트 대역이며 운영 이미지를 변경하지 않았다.
+
+실제 반영: https://restoration-harper-considerations-choir.trycloudflare.com/search?provider=PROVIDER_E&locale=zh-TW . localhost3001도 최신 산출물이다. 공개 주소는 기존 PC/터널 프로세스에 의존하는 임시 미리보기다. 전체 OTA 재고/모든 국적의 가입·결제 성공/신규 채널 승인·영구 호스팅 완료로 보고하지 않는다.
+
+
+## 2026-11-23 누락·깨진 사진 검수 및 보완
+
+### 변경과 결과
+
+공개 상품402/관광지220/맛집514의 사진을 확인했다. 고유 이미지1,111개를 전체 GET 후 Chromium Image.decode로 실제 검사해1,110개 정상/1개 고장을 확인했다. 상품·관광지에는 이번 검사에서 누락/깨짐이 없었다. 맛집은 누락23개 중 동일 장소의 사용 가능한 공공사진4개를 추가하고 부산명물횟집(1612)의 깨진 사진1개를 교체했다. 원본538/공개514/중복 제외24 유지, 표시 사진 있음495/미확보19다. 미확보19곳의 이름·주소·확인 출처·미적용 사유를 [검수 목록](photo-review-2026-11-23.md)에 모두 기록했고 개별 네트워크/디코딩 결과는 [JSON](photo-audit-2026-11-23.json)에 보존했다. 신규 포털 상품 수집/추가0이며 공개 상품402를 유지했다.
+
+변경 파일: apps/server/src/config/food-photos.ts, config/catalog/food-photo-overrides.json, apps/server/src/index.ts, apps/server/src/services/guides.ts, tests/integration/food-photos.test.ts, tests/e2e/food-photos.spec.ts, AGENTS.md와 위 검수 문서/JSON 및 이 proof·캡처3개. 기존 작업의 다른 수정 파일은 보존했다. .env·package/lockfile·원본 food.json·DB·관광지/상품 사진·번역·테마 지문·음식점 중복 정책은 변경하지 않았다.
+
+사진 연결은 서비스별 ID의 명시 검수5쌍이며 이름/거리 자동 매칭이 아니다. 대상/사진 원본의 전체 언어 지문·원래 URL·제공 ID/사진·데이터셋·라이선스를 검증한 뒤 공개 중복 제외 다음에 표시만 보완한다. 원본이 바뀌면 재검수하며 추천여행의 같은 숫자 ID는 건드리지 않는다. 전화/주소/좌표 표기 차이를 임의 교정하거나 가게ID를 병합하지 않았다. 사진 제공은 부산시 FoodService의 실제 해당 장소 이미지로 한정하고 기존 출처·이용 조건 표기를 유지했다. 검수는 assistant-source-evidence이며 사람·현장 승인과 구별한다.
+
+### 실행한 검증
+
+| 명령/확인 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,26파일351테스트 통과 |
+| npm.cmd run check:providers | 종료0,92소스 통과 |
+| npm.cmd run data:localization:check | 종료0,5언어 issues=[] |
+| npm.cmd run build | 종료0,domain→server→web,web169모듈 |
+| npm.cmd run test:e2e | 종료0,모바일/태블릿/PC153개 통과 |
+| dist start smoke | localhost3001/preview4320/기존 공개 터널 모두 종료0 |
+| 실제 이미지 GET/디코딩 | 기존1,111주소 중 정상1,110/실패1; 적용 후 연결된1,110고유주소는 전부 정상 확인 주소 |
+| 실제 FoodService5언어+공식 상세24곳 | 정상/썸네일 누락 및 공통 기본 이미지 대조,원본 발행/덮어쓰기 없음 |
+
+새 통합 테스트는5개 언어 목록/상세/한국어 fallback의 일관성,514개 공개/19개 미확보,원본 무변경,기존 중복24개404,다른 지점/추천여행 namespace 분리,대상·사진 원본 변경 시 실패,잘못된 사진/원본ID·라이선스·중복설정 거부,최소 DTO를 확인했다. E2E는 언어별 목록/상세/새로고침/이미지 실패 안내와 반응형 가로 넘침을 검사했다. 기존 찜·장바구니·환율·제휴 링크 회귀 검증도 전체 통과했다.
+
+실행 로그와 작업 원본은 로컬 var/imports/photo-review-20261123/{typecheck,tests,providers,localization,build,e2e}.log 및 image-audit.json,food-api-current-*.json,official-page-audit.json,source-*.html,production-smoke.json,screenshots.json에 있다. lint는 터미널 종료0으로 확인했다. 이미지 네트워크 요약/전체 결과는 Git 포함 docs/photo-audit-2026-11-23.json에서도 볼 수 있다.
+
+### 실제/대역/미실행과 실패 처리
+
+E2E 외부 이미지는 대역이고 예약/제휴 클릭은 테스트 대역이다. 실제 사진 검수는 별도 전체 GET/디코딩이며 부산시 API는 기존 .env 서버 전용 키로 읽기만 했다. 사진 URL이 없던 곳에 공통 기본 이미지/다른 지점/권리 미확인 이미지/생성 이미지를 넣지 않았다. 인터넷 전체 사진 부재나 실시간 영업·재고·예약을 검증한 것으로 보고하지 않는다. 외부 사진의 향후 변경/접근 차단을 보장하지 않는다. 로그인·일정·지도·유료 API·예약/결제는 미실행이며 본 요청 범위가 아니다.
+
+일반 샌드박스의 공식 페이지 요청 실패는 승인된 네트워크 실행으로 재시도해 성공했다. 1612의 정상/썸네일 모두200 HTML임을 별도 확인하여 잘못된 성공 판정을 피했다. 서버 재시작 직후 첫 smoke는 준비 전 fetch failed였고 준비 상태 확인 후3개 주소 전체에서 다시 통과했다. 구현 검사 실패는 없었고 검사 비활성화는 하지 않았다. SQLite 실험 기능 및 의존성 Rollup 주석 경고는 기존 환경의 비차단 경고이며 빌드는 성공했다.
+
+### 실행 서버와 시연 캡처
+
+실제 dist 서버3001/4320을 새 산출물로 교체했다. 각 주소에서 사진5건×5언어=25상세,미확보19건의 null,중복1541의404,비공개 사진 설정404,상품402/관광지220/맛집514와 직접 상세 HTML 진입을 확인했다. 공개 반영 주소: https://restoration-harper-considerations-choir.trycloudflare.com/food/1639?locale=en . 기존 PC/터널에 의존하는 임시 미리보기다.
+
+[모바일](screenshots/food-photo-mobile-2026-11-23.png),[태블릿](screenshots/food-photo-tablet-2026-11-23.png),[PC](screenshots/food-photo-desktop-2026-11-23.png) 캡처는 실제 외부 사진(대역 없음)을 표시했다. 모두 이미지1200×545 디코딩과 가로 넘침 없음을 확인했고 모바일/PC를 직접 열어 올바른 광안점 사진·출처 표기·다국어 설명을 확인했다.
+
+
+## 2026-11-23 외국인 영어 기본 진입·메인 특가 쿠폰
+
+### 변경 및 실제 공개 범위
+
+웹 첫 진입/언어 없는 URL/잘못된 locale은 영어(en)로 열고,명시적 유효 언어와 헤더 선택을 우선한다. HTML lang/title/description도 영어로 바꿨다. 선택 언어는 URL과 홈 브랜드/검색 링크·새로고침/뒤로가기에 유지한다. 기기 언어·국적 자동 추정이나 별도 저장 키는 추가하지 않았다. API의 기존 기본언어 계약은 보존하고 UI가 선택 locale을 보낸다.
+
+메인 추천 명소 앞에 특가·쿠폰3건을5개 언어로 표시한다. 공식 기간·시장/신규회원·최소 결제액/상한·여행일·확인일·쿠폰 복사·공식 조건·검증된 제휴 이동을 제공한다. source 날짜와 짧은 재검수 만료를 구별하며 서버/클라이언트 모두 만료를 제거한다. 현재 재검수 기한은2026-11-26 00:00 Asia/Seoul이다. 클라이언트60초/포커스 복귀 재조회는 로컬 API이며 외부 이벤트 자동 수집은 아니다.
+
+이번 포털 상품 수집/카탈로그 상품 추가0,프로모션 공개3,제공처 보류2사다. 상품402/메인398/관광지220/맛집514 및 기존 사진·중복 제외·찜/장바구니 데이터는 보존했다. 새 아쿠아리움 목적지는 공식 행사에서 확인한 예약 프로모션으로만 연결했고 새 가격/상품 재고를 만들어 등록하지 않았다. 할인액을 가격/환산/장바구니에서 미리 차감하지 않았다. 제공처별 근거·적용 조건·종료/미확인/자격 보류 사유는 [검수 문서](promotion-review-2026-11-23.md)와 [JSON](promotion-review-2026-11-23.json)에 있다.
+
+### 변경 파일
+
+- UI: apps/web/index.html,App.tsx,Promotions.tsx,i18n/{index,locale,promotions}.ts,styles/global.css.
+- 계약/서버: packages/domain/src/{index,promotions}.ts,apps/server/src/{app,index}.ts,config/promotions.ts,services/promotions.ts,routes/promotions.ts. services/offers.ts의 기존 validateLink를 공통 검증 함수로 내보내 재사용했다.
+- 설정: config/catalog/promotions.json,offers.json의 공식 글로벌 출처 호스트1개 추가. 업체별 분기/상호·도메인/추적 값은 서비스·UI·domain에 넣지 않았다.
+- 검증: tests/unit/default-locale.test.ts,tests/integration/promotions.test.ts,tests/e2e/promotions.spec.ts 및 기존 한국어 시나리오 E2E의 명시 locale URL.
+- 문서: AGENTS.md,docs/{intent,spec,plan,catalog-plan,proof}.md,프로모션 검수 MD/JSON,화면 캡처4개. .env/lockfile/의존성/원본 공공 DB·스냅샷·번역·테마 자료는 변경하지 않았다.
+
+### 실행 결과
+
+| 명령/확인 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 종료0 |
+| npm.cmd run typecheck | 종료0 |
+| npm.cmd run test -- --run | 종료0,28파일369테스트 통과 |
+| npm.cmd run check:providers | 종료0,99소스 통과 |
+| npm.cmd run data:localization:check | 종료0,5언어 issues=[] |
+| npm.cmd run build | 종료0,domain→server→web,173모듈 |
+| npm.cmd run test:e2e | 종료0,모바일/태블릿/PC162개 통과 |
+| 새 dist 서버 smoke | localhost3001/preview4320/공개 터널 모두 종료0 |
+
+새 테스트는 한국어 브라우저에서도 영어 신규 진입,잘못된 언어 fallback,명시 언어·헤더 변경·새로고침·브랜드 홈·뒤로가기,5개 언어 조건,공식 제공처 호스트/추적·중첩 목적지,상품 정체성/공개 자격,새 중립 제공처 확장,시작 전·종료·보류·재검수 만료 제외,최소 DTO,쿠폰 복사 성공/실패,미갱신 캐시의 만료 제거/재시도,메인 배치와 필터 진입을 확인했다. 기존 찜·장바구니·환율·음식점/관광지·예약 링크 회귀도 통과했다.
+
+로그: var/imports/promotions-20261123/{lint,typecheck,tests,providers,localization,build,e2e}.log. 초기 실패 로그 e2e-first.log도 보존했다. 공식 원문 HTML과 실제 공개 서버/시연 결과는 같은 폴더의 production-smoke.json,screenshots.json과 원문 *.html에 있다(작업 파일은 Git 제외).
+
+### 실패와 수정
+
+첫 빌드의 ProviderIdSchema import 경로를 domain catalog 경계로 바로잡았다. React 렌더 중 Date.now 호출은 lazy state 초기화로 수정해 purity 검사를 통과했다. 문서 저장 스크립트의 CommonJS/ESM 실행 형식 오류는 올바른 실행 형식으로 수정한 뒤 저장했다. 최초 전체 E2E는144통과/18실패였으며 원인은6개 기존 한국어 시나리오×3뷰포트의 언어 없는 추가 URL9개였다. 해당 시나리오가 의도한 한국어를 URL로 명시하고 새 영어 기본 진입 테스트를 유지한 뒤 전체162개가 통과했다. 테스트를 삭제/건너뛰거나 시간 제한을 늘리지 않았다. 기존 SQLite/Rollup 의존성 경고는 비차단이며 빌드 종료0이다.
+
+### 실제·대역·보류 및 서버 반영
+
+공식 행사 원문 검색/HTTP 조회는 실제다. 아쿠아리움 상세 일반 HTTP403과 일부 공식 행사403은 공식 검색 도구의 원문/날짜·실제 연결 ID와 대조했으며 보호를 우회하지 않았다. 아고다 정적 HTML의 오래된 상시 카드,끝난 마이리얼트립 부산 행사/외국인 자격 미확인 항목은 발행하지 않았다. 쿠폰이 모든 국적·계정·옵션에서 결제 적용된다고 주장하지 않는다.
+
+E2E 외부 이미지/제휴 예약은 대역이며 실제 제휴 클릭·예약·결제·쿠폰 발급/소진은 수행하지 않았다. 시연 캡처의 외부 상품 이미지는 대역,특가 카드는 외부 사진 없는 실제 UI다. 실제 공개 API/HTML smoke는 별도이며 /api/promotions의 기본 en·5언어 각3건·공개 상품402/맛집514·검수 설정404를 확인했다. 신규 사이트 채널 승인이나 정식 도메인 배포는 이번 범위가 아니다.
+
+로컬3001과 preview4320을 새 dist로 교체했고 공개 주소 https://restoration-harper-considerations-choir.trycloudflare.com/ 에 반영했다. PC/서버/터널에 의존하는 기존 임시 미리보기다. 한국어 브라우저 설정으로도 실제 첫 URL이 /?locale=en이 된 것을3개 뷰포트에서 확인했다.
+
+[영어 첫 화면](screenshots/home-english-desktop-2026-11-23.png),특가 영역 [모바일](screenshots/home-promotions-mobile-2026-11-23.png)/[태블릿](screenshots/home-promotions-tablet-2026-11-23.png)/[PC](screenshots/home-promotions-desktop-2026-11-23.png)를 저장했다. 모바일/PC를 직접 열어 조건·쿠폰·기한·출처/예약 동작과 가로 넘침 없음을 확인했다.

@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-19",
+  "reviewedBy": "assistant-source-evidence",
+  "policy": "exclude-reviewed-photo-less-duplicates-only",
+  "rules": [
+    {
+      "excludedId": "1541",
+      "retainedId": "1817",
+      "excludedFingerprint": "c126c11f8914172650125d8cec89f69efe5f41605624e5b38a411d0b6410973c",
+      "retainedFingerprint": "b034222f6ace262b634bffc05939dc7420e6c46e15727437409a4debfa1ff5b4",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"기장손칼국수\",\"address\":\"부산 부산진구 서면로 56 (부전동)\",\"phone\":\"051-806-6832\",\"coordinates\":{\"lat\":35.15551,\"lng\":129.0583}},\"retained\":{\"name\":\"기장손칼국수\",\"address\":\"부산진구 서면로 56\",\"phone\":\"051-806-6832\",\"coordinates\":{\"lat\":35.15566,\"lng\":129.05814}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1544",
+      "retainedId": "950",
+      "excludedFingerprint": "3313630232d2cc29cd7eec2e51387f9ee5354fca2319e4930f9e1e85d23b5a33",
+      "retainedFingerprint": "d85749b66b639f0ecb460aad1a70b41d353c4a57e159750330039b543d10a7fe",
+      "reason": "alias-same-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"언양불고기부산집\",\"address\":\"부산 수영구 남천바다로 32 (남천동)\",\"phone\":\"051-754-1004\",\"coordinates\":{\"lat\":35.14793,\"lng\":129.11354}},\"retained\":{\"name\":\"광안리 언양불고기 부산집\",\"address\":\"수영구 남천바다로 32\",\"phone\":\"051-754-1004\",\"coordinates\":{\"lat\":35.1479,\"lng\":129.11357}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1550",
+      "retainedId": "1534",
+      "excludedFingerprint": "04d26e8d9e6b096d141c073b543d714e8ffb5d0cd26112c18df1de1b9c5b0d8d",
+      "retainedFingerprint": "1ba6e9ddd9df25504ca3ee3c3bbeeb5fe716e48ebdc5cfaf92988e88cecb9795",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"부다면옥\",\"address\":\"부산 해운대구 중동1로 36 (중동)\",\"phone\":\"051-746-8872\",\"coordinates\":{\"lat\":35.162384,\"lng\":129.16298}},\"retained\":{\"name\":\"부다면옥\",\"address\":\"해운대구 중동1로 36 2층\",\"phone\":\"051-746-8872\",\"coordinates\":{\"lat\":35.162384,\"lng\":129.16298}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1554",
+      "retainedId": "884",
+      "excludedFingerprint": "79385a24b2181acc3e693f41d0359ad93abbf27ff43ba9b77442ac5fb3886a89",
+      "retainedFingerprint": "41ee1fd0cf0f905ca918f0e7ea9f959e164116479823d6b41c1b84f6756f1f9d",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"탐복\",\"address\":\"부산 기장군 일광읍 문오성길 31\",\"phone\":\"051-727-4213\",\"coordinates\":{\"lat\":35.28275,\"lng\":129.25766}},\"retained\":{\"name\":\"탐복\",\"address\":\"기장군 일광읍 문오성길 31\",\"phone\":\"051-727-4213\",\"coordinates\":{\"lat\":35.282757,\"lng\":129.25768}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1557",
+      "retainedId": "1487",
+      "excludedFingerprint": "43a63383de6657462e2fb1e8cb47ada3b4097135eaa3241075a21a6088a8a503",
+      "retainedFingerprint": "e8255b33c1deabc750181bd84c31392e43adae56cf497f9da7095a8e18e1c296",
+      "reason": "same-name-phone-coordinates-address-conflict",
+      "evidence": "{\"excluded\":{\"name\":\"산동완탕교자관\",\"address\":\"부산 동구 중앙대로248번길 3-11 (초량동)\",\"phone\":\"070-8240-2385\",\"coordinates\":{\"lat\":35.119602,\"lng\":129.04268}},\"retained\":{\"name\":\"산동완탕교자관\",\"address\":\"동구 중앙대로296번길 11\",\"phone\":\"070-8240-2385\",\"coordinates\":{\"lat\":35.119602,\"lng\":129.04268}},\"note\":\"Exact original name, phone and coordinates agree; street addresses conflict. No current address is inferred.\"}"
+    },
+    {
+      "excludedId": "1560",
+      "retainedId": "1847",
+      "excludedFingerprint": "97ec679d37935b7440f3fa005719f5243cafa5c68167280e20c7baf9e5228863",
+      "retainedFingerprint": "033d51eda37f98591b385e446a775d1fb0f410372c5113345b07ca9d63758d78",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"쇼진\",\"address\":\"부산 해운대구 구남로 9 (우동)\",\"phone\":\"0507-1354-8060\",\"coordinates\":{\"lat\":35.163307,\"lng\":129.1596}},\"retained\":{\"name\":\"쇼진\",\"address\":\"해운대구 구남로 9, 라마다앙코르호텔 214호\",\"phone\":\"0507-1354-8060\",\"coordinates\":{\"lat\":35.163307,\"lng\":129.1596}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1561",
+      "retainedId": "2340",
+      "excludedFingerprint": "a81aa9cb872b7de23a7b508131f4fb0b894092bdcf3458a537f46b18564132ef",
+      "retainedFingerprint": "a0c2974aa16e7f7a3ace60531a56be0dd7f981c07a8e38305c53875fe3c3de97",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"스시시안\",\"address\":\"부산 해운대구 센텀1로 9 (우동)\",\"phone\":\"051-611-2684\",\"coordinates\":{\"lat\":35.167847,\"lng\":129.13097}},\"retained\":{\"name\":\"스시시안\",\"address\":\"해운대구 센텀1로 9 E동상가 2층 210호\",\"phone\":\"051-611-2684\",\"coordinates\":{\"lat\":35.167683,\"lng\":129.13104}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1563",
+      "retainedId": "2362",
+      "excludedFingerprint": "945799306d99184c8188e910795a2fdbd8c31756b99aeae1bf986047c9c1e1ff",
+      "retainedFingerprint": "7ad0732ad376b7813a78679632e5df09c44c0a8012e2ca0b0d89f71594260fd4",
+      "reason": "same-name-address-coordinates-contact-format-differs",
+      "evidence": "{\"excluded\":{\"name\":\"야키토리해공\",\"address\":\"부산 수영구 민락본동로19번길 30-5 (민락동)\",\"phone\":\"0507-1479-8334\",\"coordinates\":{\"lat\":35.158237,\"lng\":129.12712}},\"retained\":{\"name\":\"야키토리 해공\",\"address\":\"수영구 민락본동로 19번길 30-5, 1층\",\"phone\":\"051-758-8333\",\"coordinates\":{\"lat\":35.158234,\"lng\":129.1271}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1564",
+      "retainedId": "1835",
+      "excludedFingerprint": "0309af5f2df7bcf3930205846e46ad2406f7a9f571a9406fb2ce1a768e9d731c",
+      "retainedFingerprint": "30d845c4bc8ccbbdd1d37ef6696a82da6c95c7bda150d6f82492ab39675f7d7b",
+      "reason": "same-name-address-coordinates-contact-format-differs",
+      "evidence": "{\"excluded\":{\"name\":\"제로베이스\",\"address\":\"부산 수영구 민락로33번길 17 (민락동)\",\"phone\":\"0507-1300-0326\",\"coordinates\":{\"lat\":35.15741,\"lng\":129.12096}},\"retained\":{\"name\":\"제로베이스\",\"address\":\"수영구 민락로33번길 17 202호\",\"phone\":\"070-8803-0318\",\"coordinates\":{\"lat\":35.15741,\"lng\":129.12096}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1569",
+      "retainedId": "1911",
+      "excludedFingerprint": "e1d514b066f7d9e67220a9085841f61efc8fa0cd91b079d00cbaf4696e1e75a2",
+      "retainedFingerprint": "d50b77b1b3d350895074cb0676e2a90d46bb8019c8889abb847c03e10faf352d",
+      "reason": "same-address-phone-explicit-relocation",
+      "evidence": "{\"excluded\":{\"name\":\"음주양식당오스테리아어부\",\"address\":\"부산 해운대구 해운대로570번길 23 더세일링타워 3층\",\"phone\":\"051-802-8858\",\"coordinates\":{\"lat\":35.160618,\"lng\":129.1566}},\"retained\":{\"name\":\"오스테리아 어부\",\"address\":\"부산 해운대구 해운대로570번길 23 더세일링타워 3층\",\"phone\":\"+82 51-802-8858\",\"coordinates\":{\"lat\":35.153946,\"lng\":129.06253}},\"note\":\"Retained source explicitly states relocation to Haeundae in 2026. Coordinates are inconsistent and are not corrected here.\"}"
+    },
+    {
+      "excludedId": "1570",
+      "retainedId": "124",
+      "excludedFingerprint": "0e87968d9f6373e4c486b56e5a83d66b39bb3240ab2c6eab246fd4d66f61a1a7",
+      "retainedFingerprint": "47df6b3682ab5c0ea615bc97d4843b59c0eb28723556c7a5e587454d864a8254",
+      "reason": "alias-same-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"이재모피자\",\"address\":\"부산 중구 광복중앙로 31 (신창동1가)\",\"phone\":\"051-255-9494\",\"coordinates\":{\"lat\":35.1021,\"lng\":129.03058}},\"retained\":{\"name\":\"이재모피자 본점\",\"address\":\"중구 광복중앙로 31\",\"phone\":\"051-255-9494\",\"coordinates\":{\"lat\":35.102104,\"lng\":129.0306}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1573",
+      "retainedId": "2328",
+      "excludedFingerprint": "35bc0b84c0e30e63496ef0712bd586a6de9bab51b9167d5e9c76d1249acbfaf2",
+      "retainedFingerprint": "be75f840de2d6bf5af92f55bc2b91ab53ae79fc9a1f87da722763a77f554449f",
+      "reason": "same-name-address-coordinates-contact-format-differs",
+      "evidence": "{\"excluded\":{\"name\":\"달타이\",\"address\":\"부산 해운대구 달맞이길 193 (중동)\",\"phone\":\"0507-1403-1127\",\"coordinates\":{\"lat\":35.158127,\"lng\":129.18245}},\"retained\":{\"name\":\"달타이\",\"address\":\"해운대구 달맞이길 193 1층\",\"phone\":\"051-741-1122\",\"coordinates\":{\"lat\":35.158108,\"lng\":129.18246}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1588",
+      "retainedId": "1843",
+      "excludedFingerprint": "83ab01ef743138a3e26bd656eba8fb398d23fd74b1f1e89a3c05ca1155537123",
+      "retainedFingerprint": "3a68d7024169ebd75371592810fd7f4a65a5ff37f61beb907916f2971c7d290a",
+      "reason": "same-name-address-coordinates-contact-format-differs",
+      "evidence": "{\"excluded\":{\"name\":\"르도헤\",\"address\":\"부산광역시 해운대구 마린시티3로 37 (우동)\",\"phone\":\"0507-1438-8522\",\"coordinates\":{\"lat\":35.15545,\"lng\":129.1466}},\"retained\":{\"name\":\"르도헤\",\"address\":\"해운대구 마린시티3로 37 213, 214호\",\"phone\":\"051-747-8522\",\"coordinates\":{\"lat\":35.15545,\"lng\":129.1466}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1590",
+      "retainedId": "1944",
+      "excludedFingerprint": "58965a5692b3b0a23981b8c8ee41d90d8a6c7b04fa2485f0c4284d28df0f2e04",
+      "retainedFingerprint": "7ea7ace9bd60473d302113ea0f33ded4ddfca5169adbfc1e191ed8e0cf626742",
+      "reason": "same-name-address-coordinates-contact-format-differs",
+      "evidence": "{\"excluded\":{\"name\":\"모리\",\"address\":\"부산 해운대구 해운대해변로298번길 24  (중동)\",\"phone\":\"0507-1349-9891\",\"coordinates\":{\"lat\":35.160202,\"lng\":129.16658}},\"retained\":{\"name\":\"모리\",\"address\":\"해운대구 해운대해변로 298번길 24, 팔레드시즈 2층 2-4호, Busan, 48099, 대한민국\",\"phone\":\"+82 51-731-9889\",\"coordinates\":{\"lat\":35.16014,\"lng\":129.1666}},\"note\":\"Retain 1944 at the same street address and coordinates. Do not merge the different-address photo record 1844.\"}"
+    },
+    {
+      "excludedId": "1597",
+      "retainedId": "1946",
+      "excludedFingerprint": "215d2f91dd958f0eb1c8d945558204c364eba5233327507d7bbc4f8b740cfb2e",
+      "retainedFingerprint": "6c0d3b294476ce5a774612050a978da16b859fcff64de8fc2da7e316e27e8639",
+      "reason": "same-name-phone-address-coordinate-conflict",
+      "evidence": "{\"excluded\":{\"name\":\"차오란\",\"address\":\"부산 해운대구 달맞이길 30 (중동)\",\"phone\":\"051-922-1250\",\"coordinates\":{\"lat\":35.16133,\"lng\":129.16801}},\"retained\":{\"name\":\"차오란\",\"address\":\"해운대구 달맞이길 30, 시그니엘 부산 5층, Busan, 48099, 대한민국\",\"phone\":\"+82 51-922-1250\",\"coordinates\":{\"lat\":35.16,\"lng\":129.16978}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1599",
+      "retainedId": "2344",
+      "excludedFingerprint": "be33515b23400578969f8c0afd50e17a6cf6d1e8025886dbef62071bec046164",
+      "retainedFingerprint": "4f0155d34f068c90522b5dfc541266d306cab65239ed36200a6dbfa24404ca56",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"팔레트\",\"address\":\"부산 해운대구 달맞이길65번길 154 3층\",\"phone\":\"051-626-2364\",\"coordinates\":{\"lat\":35.131638,\"lng\":129.11977}},\"retained\":{\"name\":\"팔레트\",\"address\":\"해운대구 달맞이길65번길 154, 3층\",\"phone\":\"051-626-2364\",\"coordinates\":{\"lat\":35.156513,\"lng\":129.17834}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1603",
+      "retainedId": "872",
+      "excludedFingerprint": "442c2fc801f014a9e7c965b37cccfdba4b3a14d348ad308251c2ec3759e7107c",
+      "retainedFingerprint": "1194f0e65fd4a5f0a7b42a5e4cabb63632c3945db9e1f02078b9ad21167c2fd8",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"구포촌국수\",\"address\":\"부산 금정구 금샘로 490 (남산동)\",\"phone\":\"051-515-1751\",\"coordinates\":{\"lat\":35.26658,\"lng\":129.08473}},\"retained\":{\"name\":\"구포촌국수\",\"address\":\"부산 금정구 금샘로 490\",\"phone\":\"051-515-1751\",\"coordinates\":{\"lat\":35.266575,\"lng\":129.08475}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1605",
+      "retainedId": "1278",
+      "excludedFingerprint": "3999d34786b44e641b5b0c1ecaf75d8887b158ab23b48982c8450f0aefaf20d0",
+      "retainedFingerprint": "56bc0592a49d6a3c141e7525ac62f7d8da364d28d530209625223698ce1a58fd",
+      "reason": "alias-same-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"금용\",\"address\":\"부산 북구 구포만세길 75 (구포동)\",\"phone\":\"051-332-1261\",\"coordinates\":{\"lat\":35.205463,\"lng\":128.99666}},\"retained\":{\"name\":\"금용만두\",\"address\":\"구포만세길 75\",\"phone\":\"051-332-1261\",\"coordinates\":{\"lat\":35.205463,\"lng\":128.99666}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1610",
+      "retainedId": "1813",
+      "excludedFingerprint": "0866f20e52af4afa7302ff20c7a7066e51e3db974d4cba2f3e0b2172d632bb60",
+      "retainedFingerprint": "1f080949a29624fafc35166eed65f2a7db83824523ffbaf2803e1c913db36385",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"배종관동래삼계탕\",\"address\":\"부산 동래구 동래로116번길 39 (복천동)\",\"phone\":\"051-555-2464\",\"coordinates\":{\"lat\":35.20526,\"lng\":129.08475}},\"retained\":{\"name\":\"배종관동래삼계탕\",\"address\":\"동래구 동래로 116번길 39\",\"phone\":\"051-555-2464\",\"coordinates\":{\"lat\":35.20526,\"lng\":129.08475}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1621",
+      "retainedId": "92",
+      "excludedFingerprint": "6ccfd641688b31209d337aacfbed996743fd60d841e7247a3df549be954fb553",
+      "retainedFingerprint": "27a4caf4769f6b4bc8dc6404d782e10b836ef33a7e314fabc96ff5be190da23e",
+      "reason": "alias-same-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"원조할매낙지\",\"address\":\"부산 부산진구 골드테마길 10 (범천동)\",\"phone\":\"051-643-5037\",\"coordinates\":{\"lat\":35.14214,\"lng\":129.06015}},\"retained\":{\"name\":\"원조할매집\",\"address\":\"부산진구 골드테마길 10\",\"phone\":\"051-643-5037\",\"coordinates\":{\"lat\":35.142147,\"lng\":129.06017}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1629",
+      "retainedId": "1831",
+      "excludedFingerprint": "38e358044f09318421deedd87470cc8ed7e84ee9a2e755afd57254c4f28aa659",
+      "retainedFingerprint": "19dca306dc5f4a04d9adab2dbc4241b6ee4098587f05fb78e371e3d2656fa0d3",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"무슈뱅상\",\"address\":\"부산 수영구 광남로48번길 19 (남천동)\",\"phone\":\"051-625-1125\",\"coordinates\":{\"lat\":35.146374,\"lng\":129.11293}},\"retained\":{\"name\":\"무슈뱅상\",\"address\":\"수영구 광남로 48번길 19\",\"phone\":\"051-625-1125\",\"coordinates\":{\"lat\":35.146374,\"lng\":129.11293}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1630",
+      "retainedId": "2354",
+      "excludedFingerprint": "9aaf55407745aec4b56dcbbbfbe7233e0b6ac062354c4ca3059cc48e41efd280",
+      "retainedFingerprint": "fa2c40a44db7fc6d97aac40035b0a4f9d500be87eb9b80b02cdcd84228c2fc20",
+      "reason": "same-name-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"보느파티쓰 리\",\"address\":\"부산 연제구 교대로 7 (거제동)\",\"phone\":\"051-502-2451\",\"coordinates\":null},\"retained\":{\"name\":\"보느파티쓰리\",\"address\":\"연제구 교대로 7, 2층\",\"phone\":\"051-502-2451\",\"coordinates\":{\"lat\":35.19527,\"lng\":129.07895}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1631",
+      "retainedId": "1465",
+      "excludedFingerprint": "9bc1ab7cfa594f87e054dc67ea938070fc27fcb9e2289b924a76b30f0b42123f",
+      "retainedFingerprint": "0c9ea44c33b4d0bf032c82adc8938be0e3d4efe0b287578e38ef5735bc3ac391",
+      "reason": "alias-same-phone-address",
+      "evidence": "{\"excluded\":{\"name\":\"브레드365\",\"address\":\"부산 남구 못골로41번길 13 (대연동)\",\"phone\":\"051-711-1951\",\"coordinates\":{\"lat\":35.135815,\"lng\":129.08633}},\"retained\":{\"name\":\"bread365\",\"address\":\"남구 못골로 41번길 13 상가 205동 101호\",\"phone\":\"051-711-1951\",\"coordinates\":{\"lat\":35.135845,\"lng\":129.08633}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    },
+    {
+      "excludedId": "1638",
+      "retainedId": "2907",
+      "excludedFingerprint": "a078e717ff30357941b0d9c7853583736e100842f24358e1a8e733d243a273c1",
+      "retainedFingerprint": "b5261dabe3c0ecfcbea53b05dae4bfc0591c3b7bcd3accca233903cfce7557f9",
+      "reason": "same-name-phone-address-coordinate-conflict",
+      "evidence": "{\"excluded\":{\"name\":\"쥬가정효\",\"address\":\"부산 해운대구 해운대로 620 (우동) 해운대 라뮤에뜨 3층\",\"phone\":\"051-741-3515\",\"coordinates\":{\"lat\":35.165035,\"lng\":129.15915}},\"retained\":{\"name\":\"쥬가정효\",\"address\":\"해운대구 해운대로620, 3층(303호)\",\"phone\":\"051-741-3515\",\"coordinates\":{\"lat\":35.162964,\"lng\":129.15845}},\"note\":\"Explicit source ID pair; no fuzzy runtime matching.\"}"
+    }
+  ]
+}

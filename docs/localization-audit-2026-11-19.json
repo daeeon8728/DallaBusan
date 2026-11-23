@@ -1,0 +1,45 @@
+{
+  "counts": [
+    {
+      "locale": "ko",
+      "offers": 402,
+      "destinations": 220,
+      "food": 514,
+      "destinationMachine": 7,
+      "foodMachine": 2
+    },
+    {
+      "locale": "en",
+      "offers": 402,
+      "destinations": 220,
+      "food": 514,
+      "destinationMachine": 220,
+      "foodMachine": 9
+    },
+    {
+      "locale": "ja",
+      "offers": 402,
+      "destinations": 220,
+      "food": 514,
+      "destinationMachine": 216,
+      "foodMachine": 101
+    },
+    {
+      "locale": "zh-CN",
+      "offers": 402,
+      "destinations": 220,
+      "food": 514,
+      "destinationMachine": 218,
+      "foodMachine": 177
+    },
+    {
+      "locale": "zh-TW",
+      "offers": 402,
+      "destinations": 220,
+      "food": 514,
+      "destinationMachine": 219,
+      "foodMachine": 232
+    }
+  ],
+  "issues": []
+}

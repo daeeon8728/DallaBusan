@@ -14,17 +14,17 @@ describe('editorial product translations and verified media', () => {
   it.each(['en','ja','zh-CN','zh-TW'] as const)('translates all published titles into %s, preserving the original and affiliate target', locale => {
     const config=loadOfferCatalogConfig(); const service=createOfferService(config,()=> '2026-11-12');
     const originals=new Map(config.offers.map(offer=>[offer.id,offer]));
-    const items=Array.from({length:7},(_,i)=>service.list(OfferQuerySchema.parse({locale,page:i+1,limit:48})).items).flat();
-    expect(items).toHaveLength(302);
+    const items=Array.from({length:service.list(OfferQuerySchema.parse({locale,limit:48})).pages},(_,i)=>service.list(OfferQuerySchema.parse({locale,page:i+1,limit:48})).items).flat();
+    expect(items).toHaveLength(402);
     for(const item of items){
       expect(item.titleLocale).toBe(locale);expect(item.localizationStatus).toBe(item.originalTitleLocale===locale?'original':'translated');
-      if(item.originalTitleLocale!==locale)expect(item.title).not.toBe(item.originalTitle);expect(item.originalTitle).toBe(originals.get(item.id)?.title);
-      expect(item.href).toBe(originals.get(item.id)?.href);expect(service.get(item.id,locale)?.title).toBe(item.title);
+      expect(item.title).toBe(item.originalTitleLocale===locale?item.originalTitle:originals.get(item.id)?.localizedTitles[locale]);expect(item.originalTitle).toBe(originals.get(item.id)?.title);
+      expect(item.href).toBe(originals.get(item.id)?.localizedHrefs[locale]??originals.get(item.id)?.href);expect(service.get(item.id,locale)?.title).toBe(item.title);
     }
     expect(service.list(OfferQuerySchema.parse({locale,q:'Gamcheon'})).total).toBeGreaterThan(10);
   });
   it('falls back explicitly if a product has no reviewed translation', () => {
-    const config=loadOfferCatalogConfig();const offer=config.offers[0];if(!offer)throw Error('missing offer');
+    const config=loadOfferCatalogConfig();const offer=config.offers.find(item=>config.providers.find(provider=>provider.id===item.providerId)?.bookingPolicy==='open');if(!offer)throw Error('missing offer');
     offer.localizedTitles={};const item=createOfferService(config).get(offer.id,'en');
     expect(item?.localizationStatus).toBe('fallback');expect(item?.titleLocale).toBe('ko');expect(item?.title).toBe(offer.title);
   });

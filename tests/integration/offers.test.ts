@@ -27,7 +27,7 @@ describe('affiliate destination and public data boundary', () => {
   it('loads the actual four-provider catalog and validates every published link', () => {
     const config = loadOfferCatalogConfig(); const offers = service(config);
     const result = offers.list(OfferQuerySchema.parse({ limit: 48 }));
-    expect(result.catalogTotal).toBe(302);
+    expect(result.catalogTotal).toBe(402);
     expect(result.providers).toHaveLength(4);
     expect(new Set(config.offers.map(offer => offer.id)).size).toBe(config.offers.length);
     expect(result.items.every(offer => offer.href.startsWith('https:'))).toBe(true);

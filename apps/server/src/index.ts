@@ -1,5 +1,13 @@
+import { loadPromotionCatalog } from './config/promotions.js';
+import { createPromotionService } from './services/promotions.js';
+import { loadFoodPhotoOverrides } from './config/food-photos.js';
+import { loadFoodVisibility } from './config/food-visibility.js';
+import { loadParkingDirectory,buildParkingAnchors,loadParkingAttractions } from './config/parking-directory.js';
+import { createParkingDirectoryService } from './services/parking-directory.js';
 import { loadGuideSnapshot } from './config/guides.js';
 import { createGuideService } from './services/guides.js';
+import { loadTextLocalizer } from './config/localization.js';
+import { createExchangeService } from './services/exchange.js';
 import { stat } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { buildApp } from './app.js';
@@ -19,11 +27,19 @@ async function main() {
   if (webRoot !== undefined) {
     await stat(fileURLToPath(new URL('../../web/dist/index.html', import.meta.url)));
   }
+  const localization = loadTextLocalizer();
+  const destinationConfig = loadDestinationConfig();
+  const foodSnapshot = loadGuideSnapshot('food');
+  const foodVisibility = foodSnapshot ? loadFoodVisibility(foodSnapshot) : undefined;
+  const foodPhotos = foodSnapshot && foodVisibility ? loadFoodPhotoOverrides(foodSnapshot,foodVisibility) : undefined;
+  const parking = createParkingDirectoryService(loadParkingDirectory(), buildParkingAnchors(destinationConfig,foodSnapshot,loadParkingAttractions()));
   const attraction = loadAttractionConfig();
-  const offers = createOfferService(loadOfferCatalogConfig());
+  const offerConfig = loadOfferCatalogConfig();
+  const offers = createOfferService(offerConfig);
+  const promotions = createPromotionService(loadPromotionCatalog(),offerConfig,offers);
   const db = openDatabase(loadDatabaseConfig().filename);
   try { migrate(db); } catch (error) { db.close(); throw error; }
-  const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, createDestinationService(loadDestinationConfig(), offers), createGuideService({food:loadGuideSnapshot('food'),recommended:loadGuideSnapshot('recommended')}));
+  const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, createDestinationService(destinationConfig, offers,undefined,localization), createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos),parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
   app.addHook('onClose', async () => { db.close(); });
   const stop = async () => {
     await app.close();

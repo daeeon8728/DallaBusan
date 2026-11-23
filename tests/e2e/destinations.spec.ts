@@ -11,7 +11,7 @@ test.beforeEach(async ({ context }) => {
 });
 
 test('separate search includes monthly guides and the complete destination booking flow', async ({page,context},testInfo) => {
-  await page.goto('/search');
+  await page.goto('/search?locale=ko');
   await expect(page.getByRole('heading',{level:1,name:'관광지 검색'})).toBeVisible();
   const banner = page.getByTestId('monthly-destinations');
   await expect(banner.getByRole('link').first()).toBeVisible();
@@ -23,7 +23,7 @@ test('separate search includes monthly guides and the complete destination booki
   await expect(page.getByText('부산광역시 사하구 감내2로 203',{exact:true})).toBeVisible();
   await expect(page.getByText('휴무 안내',{exact:true})).toBeVisible();
   expect(await page.getByTestId('related-tour').getByTestId('offer-card').count()).toBeGreaterThan(3);
-  await expect(page.getByTestId('related-ticket').getByTestId('offer-card')).toHaveCount(1);
+  await expect(page.getByTestId('related-ticket').getByTestId('offer-card')).toHaveCount(0);
   await expect(page.getByTestId('related-stay').getByText('남포동 · Nampo-dong',{exact:true})).toBeVisible();
   await expect(page.getByText(/도보권을 의미하지 않습니다/)).toBeVisible();
   await page.screenshot({path:testInfo.outputPath('gamcheon-guide.png'),fullPage:false,animations:'disabled'});
@@ -71,20 +71,20 @@ test('deep linked destination switches five languages and retains language on re
 
 test('destination failure retries, missing pages and empty related groups are explicit', async ({page}) => {
   await page.route('**/api/destinations/gamcheon?**',route => route.fulfill({status:503,body:'{}'}));
-  await page.goto('/places/gamcheon');
+  await page.goto('/places/gamcheon?locale=ko');
   await expect(page.getByRole('alert')).toContainText('명소 정보를 불러오지 못했습니다.');
   await page.unroute('**/api/destinations/gamcheon?**');
   await page.getByRole('button',{name:'다시 불러오기',exact:true}).click();
   await expect(page.getByRole('heading',{level:1,name:'감천문화마을'})).toBeVisible();
-  await page.goto('/places/missing-place');
+  await page.goto('/places/missing-place?locale=ko');
   await expect(page.getByRole('heading',{level:1,name:'명소를 찾을 수 없습니다.'})).toBeVisible();
-  await page.goto('/places/gwangalli');
+  await page.goto('/places/gwangalli?locale=ko');
   await expect(page.getByTestId('related-stay').getByText('검수된 관련 상품을 준비하고 있습니다.')).toBeVisible();
   await expect(page.getByTestId('related-stay').getByTestId('offer-card')).toHaveCount(0);
 });
 
 test('all imported tourism records are searchable, paginated and filterable by linked offers', async ({page}) => {
-  await page.goto('/search');
+  await page.goto('/search?locale=ko');
   const results=page.getByTestId('destination-results');
   await expect(results.getByTestId('destination-result')).toHaveCount(6);
   await expect(results.getByRole('status')).toContainText('전체 220개');
@@ -94,31 +94,35 @@ test('all imported tourism records are searchable, paginated and filterable by l
   expect(await results.getByTestId('destination-result').first().locator('h3').innerText()).not.toBe(first);
   await results.getByRole('checkbox').check();
   await expect(results.locator('.destination-results-grid')).toHaveAttribute('aria-busy','false');
-  await expect(results.getByRole('status')).toContainText('25개 관광정보');
+  await expect(results.getByRole('status')).toContainText('13개 관광정보');
+  await results.getByRole('checkbox').uncheck();
   await page.getByRole('searchbox').fill('범어사');
   await page.getByRole('button',{name:'검색',exact:true}).click();
-  await expect(results.getByTestId('destination-result')).toHaveCount(1);
+  // Full source-text search also finds four nearby attractions mentioning the temple.
+  await expect(results.getByTestId('destination-result')).toHaveCount(5);
   await results.getByRole('link').filter({has:page.getByRole('heading',{name:'범어사',exact:true})}).click();
   await expect(page.getByRole('heading',{level:1,name:'범어사',exact:true})).toBeVisible();
   await expect(page.getByText('부산광역시 금정구 범어사로 250',{exact:true})).toBeVisible();
-  await expect(page.getByTestId('related-experience').getByTestId('offer-card')).toHaveCount(1);
+  await expect(page.getByTestId('related-experience').getByTestId('offer-card')).toHaveCount(0);
   await expect(page.locator('.source-status')).toBeVisible();
   await expect(page.locator('.destination-page > .destination-photo img')).toHaveAttribute('src',/^https:/);
 });
 
-test('place aliases find related affiliate stays and an unknown source language remains explicit', async ({page}) => {
-  await page.goto('/search?q=Gamcheon&category=stay');
+test('place aliases find related affiliate stays and a missing source language is explicitly machine translated', async ({page}) => {
+  await page.goto('/search?q=Gamcheon&category=stay&locale=ko');
   await expect(page.getByTestId('offer-card')).toHaveCount(1);
   await expect(page.getByTestId('offer-card').locator('h3')).toContainText('아벤트리');
   await expect(page.getByTestId('destination-results').getByText('감천문화마을',{exact:true})).toBeVisible();
   await page.goto('/places/busan-783?locale=ko');
-  await expect(page.locator('.translation-notice')).toBeVisible();
-  await expect(page.locator('.destination-facts dd[lang="ja"]').first()).toBeVisible();
+  await expect(page.locator('.destination-facts .translated-note')).toContainText('자동 번역');
+  await expect(page.locator('.destination-facts dd[lang="ko"]').first()).toBeVisible();
+  const localized=DestinationDetailSchema.parse(await(await page.request.get('/api/destinations/busan-783?locale=ko')).json());
+  expect(localized.destination).toMatchObject({locale:'ko',translationFallback:false,contentTranslation:'machine'});
   await expect(page.getByTestId('related-stay').getByTestId('offer-card')).toHaveCount(0);
 });
 
 test('failed tourism search retains previous records and recovers on retry', async ({page}) => {
-  await page.goto('/search');
+  await page.goto('/search?locale=ko');
   const results=page.getByTestId('destination-results');
   await expect(results.getByTestId('destination-result')).toHaveCount(6);
   await page.route('**/api/destinations?**',async route=>{
@@ -168,7 +172,7 @@ test('tourism details include visit information and exact seller photographs wit
   await expect(page.locator('.visit-info')).toContainText('Opening hours');
   await expect(page.locator('.visit-info')).toContainText('Getting there');
   const cards=page.getByTestId('offer-card');
-  await expect(cards).toHaveCount(22);
+  await expect(cards).toHaveCount(17);
   const urls=await cards.locator('img').evaluateAll(images=>images.map(image=>image.getAttribute('src')));
   const input:unknown=await(await page.request.get('/api/destinations/gamcheon?locale=en')).json();
   const detail=DestinationDetailSchema.parse(input);
@@ -189,7 +193,7 @@ test('failed product images show a neutral placeholder instead of an unrelated b
     if(route.request().resourceType()==='image')return route.abort();
     return route.fallback();
   });
-  await page.goto('/search');
+  await page.goto('/search?locale=ko');
   const first=page.getByTestId('offer-card').first();
   await expect(first.locator('.offer-photo-placeholder')).toBeVisible();
   await expect(first.locator('img')).toHaveCount(0);

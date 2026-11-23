@@ -1,0 +1,3 @@
+import type { Locale } from '@trip-fit/domain';
+/** Keep decimal strings exact even above Number.MAX_SAFE_INTEGER. */
+export function formatCartMoney(amount:string,currency:string,locale:Locale){const [whole,fraction]=amount.split('.');if(!whole||!/^\d+$/.test(whole)||fraction!==undefined&&!/^\d+$/.test(fraction))throw new Error('Invalid money');const grouped=new Intl.NumberFormat(locale,{maximumFractionDigits:0}).format(BigInt(whole));const separator=new Intl.NumberFormat(locale).formatToParts(1.1).find(part=>part.type==='decimal')?.value??'.';const minimum=new Intl.NumberFormat(locale,{style:'currency',currency}).resolvedOptions().minimumFractionDigits??0;const decimals=(fraction??'').padEnd(minimum,'0');return currency+' '+grouped+(decimals?separator+decimals:'');}

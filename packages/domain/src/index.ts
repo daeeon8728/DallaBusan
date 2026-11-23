@@ -6,3 +6,11 @@ export * from './destinations.js';
 export * from './guides.js';
 export * from './parking.js';
 export * from './theme-routes.js';
+
+export * from './parking-directory.js';
+
+export * from './cart.js';
+
+export * from './exchange.js';
+
+export * from './promotions.js';

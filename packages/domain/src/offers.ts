@@ -15,6 +15,7 @@ export const OfferQuerySchema = z.strictObject({
   category: OfferCategorySchema.optional(), provider: ProviderIdSchema.optional(),
   scope: OfferScopeSchema.optional(), page: z.coerce.number().int().min(1).max(1000).default(1),
   limit: z.coerce.number().int().min(1).max(48).default(24),
+  view: z.enum(['catalog','home']).default('catalog'),
 });
 export const PublicProviderSchema = z.strictObject({ id: ProviderIdSchema, displayName: z.string().min(1) });
 export const PublicOfferSchema = z.strictObject({
@@ -32,6 +33,8 @@ export const PublicOfferSchema = z.strictObject({
   }),
   checkedOn: z.iso.date(), expiresOn: z.iso.date().nullable(),
   linkEvidence: z.enum(['official-export', 'portal-generated', 'approved-template']),
+  bookingNotice: z.literal('korean-site-international-cards').nullable().default(null),
+  bookingLocale:LocaleSchema.nullable().default(null),
 });
 export const OfferDirectorySchema = z.strictObject({
   id: z.string().min(1), provider: PublicProviderSchema, href: SafeHttpsSchema,

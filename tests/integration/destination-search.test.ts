@@ -28,7 +28,7 @@ describe('complete public API tourism search', () => {
     expect(destinations.list('en',{q:'감천 문화 마을'}).items.some(item => item.slug === 'gamcheon')).toBe(true);
     expect(destinations.list('ko',{q:'Gamcheon'}).items.some(item => item.slug === 'gamcheon')).toBe(true);
     const linked = destinations.list('ko',{linked:'linked',limit:48});
-    expect(linked.total).toBe(25);
+    expect(linked.total).toBe(13);
     expect(linked.items.every(item => item.relatedOfferCount>0)).toBe(true);
     expect(destinations.list('ko',{q:'not-a-real-tourism-place'}).total).toBe(0);
     expect(destinations.list('ko',{q:'범어사'}).items.some(item => item.slug==='busan-402')).toBe(true);

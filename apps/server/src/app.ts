@@ -1,5 +1,11 @@
+import { registerPromotionRoutes } from './routes/promotions.js';
+import type { PromotionService } from './services/promotions.js';
+import type { ParkingDirectoryService } from './services/parking-directory.js';
+import { registerParkingDirectoryRoutes } from './routes/parking-directory.js';
 import type { GuideService } from './services/guides.js';
 import { registerGuideRoutes } from './routes/guides.js';
+import { registerExchangeRoutes } from './routes/exchange.js';
+import type { ExchangeService } from './services/exchange.js';
 import Fastify, { LogController } from 'fastify';
 import fastifyStatic from '@fastify/static';
 import { extname } from 'node:path';
@@ -12,7 +18,7 @@ import { registerOfferRoutes } from './routes/offers.js';
 import type { DestinationService } from './services/destinations.js';
 import { registerDestinationRoutes } from './routes/destinations.js';
 
-export function buildApp(config: ServerConfig, webRoot?: string, catalog?: CatalogService, offers?: OfferService, destinations?: DestinationService, guides?: GuideService) {
+export function buildApp(config: ServerConfig, webRoot?: string, catalog?: CatalogService, offers?: OfferService, destinations?: DestinationService, guides?: GuideService, parking?: ParkingDirectoryService, exchange?: ExchangeService, promotions?: PromotionService) {
   const app = Fastify({
     logger: config.NODE_ENV !== 'test',
     logController: new LogController({ disableRequestLogging: true }),
@@ -26,10 +32,13 @@ export function buildApp(config: ServerConfig, webRoot?: string, catalog?: Catal
     status: 'ok', service: 'trip-fit-api', stage: 1,
   }));
 
+  registerExchangeRoutes(app, exchange);
+  if (promotions) registerPromotionRoutes(app,promotions);
   if (catalog) registerCatalogRoutes(app, catalog);
   if (offers) registerOfferRoutes(app, offers, destinations);
   if (destinations) registerDestinationRoutes(app, destinations);
   if (guides) registerGuideRoutes(app, guides);
+  if (parking) registerParkingDirectoryRoutes(app, parking);
 
   if (webRoot !== undefined) {
     app.register(fastifyStatic, { root: webRoot });
