@@ -16,10 +16,10 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { LocaleSchema, OfferQuerySchema, OffersResponseSchema, type Locale, type OfferCategory, type OffersResponse, type PublicOffer } from '@trip-fit/domain';
 import { getCopy, LANGUAGE_OPTIONS, readUiLocale } from './i18n/index.js';
 import { Icon, OfferCard, OfferDialog } from './Offer.js';
-import { DestinationPage, DestinationResults } from './Destinations.js';
+import { DestinationPage, DestinationResults, MonthlyDestinations } from './Destinations.js';
 import { getGuideCopy } from './i18n/guide.js';
 
-function canonicalRoute(path:string) { return path==='/recommended'||path.startsWith('/recommended/') ? '/courses/inspiration'+path.slice('/recommended'.length) : path; }
+function canonicalRoute(path:string) { return path==='/courses/inspiration'||path.startsWith('/courses/inspiration/') ? '/recommended'+path.slice('/courses/inspiration'.length) : path; }
 
 const QUICK_CATEGORIES: OfferCategory[] = ['ticket', 'tour', 'yacht', 'package', 'activity', 'stay'];
 
@@ -50,7 +50,7 @@ export default function App() {
   const isCourses=route==='/courses'||route.startsWith('/courses/');
   const guideKind = route === "/food" || route.startsWith("/food/") ? "food" : route === "/recommended" || route.startsWith("/recommended/") ? "recommended" : null;
   function navigate(path: string) { const target=new URL(path,window.location.origin); target.pathname=canonicalRoute(target.pathname); target.searchParams.set('locale',locale); if(target.pathname==='/search'&&target.searchParams.has('provider')) { setProvider(target.searchParams.get('provider')??''); setCategory(target.searchParams.get('category')??''); setScope(target.searchParams.get('scope')??''); setQuery(''); setSearch(''); setPage(1); setState('loading'); } window.history.pushState(null, '', target.pathname+target.search); setRoute(target.pathname); setNavigationVersion(value=>value+1); setSelected(null); window.scrollTo({top:0,behavior:'instant'}); }
-  useEffect(()=>{if(window.location.pathname!==route&&canonicalRoute(window.location.pathname)===route)window.history.replaceState(null,'',route+window.location.search);},[route]);
+  useEffect(()=>{if(window.location.pathname!==route&&canonicalRoute(window.location.pathname)===route)window.history.replaceState(null,'',route+window.location.search);},[route,navigationVersion]);
   useEffect(() => {
     const back = () => {
       setRoute(canonicalRoute(window.location.pathname)); setNavigationVersion(value=>value+1); setSelected(null);
@@ -98,7 +98,7 @@ export default function App() {
   function changePage(value: number) { setState('loading'); setPage(value); document.getElementById('offers')?.scrollIntoView({ behavior: 'smooth' }); }
   return <>
     <a className="skip-link" href="#main">{copy.skip}</a>
-    <header className="site-header"><a className="brand" href={'/?locale='+locale} aria-label="dallaBusan"><img src="/brand/dallabusan-logo.png" alt="dallaBusan" width="1254" height="1254" /></a><span className="header-tagline">{copy.tagline}</span><nav className="header-nav" aria-label={guide.navigation}><a href={'/?locale='+locale} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/"); } }}>{guide.home}</a><a href={'/search?locale='+locale} aria-current={route === "/search" ? "page" : undefined} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/search"); } }}>{guide.searchTitle}</a><a href={'/courses?locale='+locale} data-testid="courses-nav" aria-current={isCourses?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/courses');}}}>{courseCopy.nav}</a><a href={'/food?locale='+locale} aria-current={guideKind==='food'?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/food');}}}>{publicGuide.food}</a><a href={'/saved?locale='+locale} aria-current={route==='/saved'?'page':undefined} data-testid="saved-nav" onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/saved');}}}>{savedCopy.nav}<span className="saved-count" aria-live="polite">{saved.entries.length}</span></a></nav>
+    <header className="site-header"><a className="brand" href={'/?locale='+locale} aria-label="dallaBusan"><img src="/brand/dallabusan-logo.png" alt="dallaBusan" width="1254" height="1254" /></a><span className="header-tagline">{copy.tagline}</span><nav className="header-nav" aria-label={guide.navigation}><a href={'/?locale='+locale} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/"); } }}>{guide.home}</a><a href={'/search?locale='+locale} aria-current={route === "/search" ? "page" : undefined} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/search"); } }}>{guide.searchTitle}</a><a href={'/courses?locale='+locale} data-testid="courses-nav" aria-current={isCourses?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/courses');}}}>{courseCopy.nav}</a><a href={'/food?locale='+locale} aria-current={guideKind==='food'?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/food');}}}>{publicGuide.food}</a><a href={'/recommended?locale='+locale} data-testid="recommended-nav" aria-current={guideKind==='recommended'?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/recommended');}}}>{publicGuide.recommended}</a><a href={'/saved?locale='+locale} aria-current={route==='/saved'?'page':undefined} data-testid="saved-nav" onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/saved');}}}>{savedCopy.nav}<span className="saved-count" aria-live="polite">{saved.entries.length}</span></a></nav>
       <div className="header-actions"><CartNav locale={locale} onNavigate={navigate}/><label className="language-select"><span aria-hidden="true">◎</span><span className="sr-only">{copy.language}</span><select aria-label={copy.language} value={locale} onChange={event => updateFilter(() => setLocale(LocaleSchema.parse(event.target.value)))}>{LANGUAGE_OPTIONS.map(item => <option key={item.locale} value={item.locale}>{item.label}</option>)}</select></label></div>
     </header>
     <main id="main"><ExchangeNotice locale={locale}/><SavedNotice locale={locale}/><CartNotice locale={locale}/>
@@ -110,6 +110,7 @@ export default function App() {
         </div><span className="hero-caption">GWANGALLI, BUSAN <span>01 / THE COAST</span></span>
       </section>
       {route === "/" && <Promotions key={locale} locale={locale} onNavigate={navigate} onOpen={setSelected}/>}
+      <MonthlyDestinations locale={locale} onNavigate={navigate}/>
 
       {route === "/search" && <><DestinationResults locale={locale} query={query} onNavigate={navigate} /><ParkingSearch locale={locale} query={query}/></>}
       <section className="quick-section section-wrap" aria-labelledby="discover-title"><div className="section-intro"><p className="eyebrow blue">FIND YOUR MOMENT</p><h2 id="discover-title">{copy.discover}</h2></div>

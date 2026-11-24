@@ -143,6 +143,6 @@
 
 최신 사용자 요청으로 /courses 목록·상세와 /api/courses를 추가한다. 가족/데이트/맛집/dallaBusan 각10개,총40개는 editorial-idea 미리보기이며 최적화/운영자·현장 검수가 끝난 일정이 아니다. 원본 ID/지문과 기존 공개 제외 정책을 검증하며 불일치 시 코스 전체를 보류한다. 기존 내부17개 테마의 pending/not-performed/recommendationEnabled=false는 보존한다.
 
-상단 메뉴는 Home → Attraction search → Busan Courses → Find restaurants → Saved다. 기존 Travel inspiration은 /courses/inspiration으로 통합하고 /recommended의 기존 링크도 전환한다. 추천 명소2개는 코스 허브로 이동한다. 가족의 주차/메뉴는 기존 출처 안내로 연결하며 아이 적합성/빈자리·입구/최적 동선 검증을 주장하지 않는다.
+상단 메뉴는 Home → Attraction search → Busan Courses → Find restaurants → Travel inspiration → Saved다. 코스는 기존 페이지에 추가한다. 관광지 검색(/search),관광지 상세(/places/:slug),추천여행(/recommended와상세)은 별도 메뉴/페이지로 유지하고 홈·검색의 관광지 추천 배너를 보존한다. 잘못 통합했던 /courses/inspiration 링크는 /recommended로 호환 연결한다. 가족의 주차/메뉴는 기존 출처 안내로 연결하며 아이 적합성/빈자리·입구/최적 동선 검증을 주장하지 않는다.
 
 홈 팝업은 사용자 수정 v2 콜라주와 5개 언어 HTML을 사용한다. 하단2버튼만 두며 Close/Escape/카테고리 이동은 탭 세션,하루 안 보기는 기기 현지 날짜 자정까지 억제한다. 전용 저장 키만 쓰고 찜/장바구니는 보존한다. 저장 실패를 성공으로 표시하지 않으며 키보드/초점 복귀/360px를 검증한다. 상세 상태·미선정 장소/수상/동선 이월은 docs/courses-plan.md와 docs/proof.md를 따른다.

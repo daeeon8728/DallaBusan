@@ -1281,3 +1281,29 @@ dallabusan/main에548f815를 push하고 https://dallabusan.vercel.app에서 실�
 실제 배포 브라우저의 새 영어 진입에서 v2 이미지 팝업/하단2버튼,하루 안 보기 후 새로고침 억제,상단 코스 메뉴 이동/40개,가족 필터10개와 URL 새로고침,fa01 상세3개 순서 노드,주변 주차 안내 펼침,360px 가로 넘침없음·pageerror0을 확인했다. API는 실제 공개 응답이며 상품 사진/제휴사/이 반복 검증의GTM은 대역이다. 앞선 Google Analytics 단발 실제 전송 검증과 구분한다. 근거 var/imports/courses-20261124/live-check.json.
 
 Google 파일f17fc9a/GTM코드22bb93e/코스548f815를 순서대로 분리 배포했다. 앱 코드의 검증/실제 배포를 마쳤으며 이 후속 커밋은 공개 검증 기록만 추가한다. 원본 데이터/제휴 승인/운영자·현장 검수 상태는 올리지 않았다.
+
+
+## 2026-11-24 관광지·추천여행 독립 페이지 복구
+
+사용자가 기존 관광지 정보 페이지가 사라졌다고 지적했다. 원본 관광지220개/상세/API는 남아 있었지만 코스 추가 시 Travel inspiration 메뉴를 제거하고 /recommended를 코스 내부로 전환했으며 홈·검색의 명소 배너까지 옮긴 것이 원인이었다. 기존 정보 페이지 보존이라는 요구를 잘못 해석한 구현과 이를 기대한 검사도 함께 수정했다.
+
+- App.tsx: 상단 Home → Attraction search → Busan Courses → Find restaurants → Travel inspiration → Saved6개 메뉴를 제공한다. 기존 /search·/places/:slug와 /recommended·/recommended/:id를 독립적으로 복구하고 코스는 검색/맛집 사이에 추가한다.
+- CoursesPage.tsx와 i18n/public-guides.ts: 코스 안에 추천여행/명소를 합친 구성을 제거하고 추천여행의 내부 목록/상세/뒤로가기 링크를 원래 /recommended로 복구했다. 이미 공유된 /courses/inspiration[/:id]는 쿼리와 언어를 보존해 /recommended로 호환 연결한다.
+- global.css: 좁은 화면에서6개 메뉴를 숨기는 가로 스크롤 대신 줄바꿈을 적용했다. 홈·관광지 검색의 명소 추천 배너2개를 원래 위치로 복구했다. 기존220개 명소/공공 원문·상세·관련 상품 관계,40개 코스와 팝업은 보존한다.
+- navigation-preservation.spec.ts:5개 언어와3개 화면 크기에서6개 메뉴 동시 노출,검색→명소 정보/관련 상품,독립 추천여행 목록·상세·새로고침·뒤로가기,코스40개 공존을 검사한다. 기존 courses-popup/destinations/public-guides 검사도 페이지가 사라진 상태를 기대하지 않게 교정했다.
+- AGENTS/intent/spec/plan/catalog-plan/courses-plan의 잘못된 통합 지시를 수정했다. 과거 proof는 이력으로 보존하며 이 절이 최종 복구 상태다.
+
+| 검증 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 최종 종료0 |
+| npm.cmd run typecheck | 최종 종료0 |
+| npm.cmd run test -- --run |32파일384개,종료0 |
+| npm.cmd run check:providers |109소스,종료0 |
+| npm.cmd run build | domain→server→web,178모듈,종료0 |
+| 관련 E2E7파일 |123개,모바일/태블릿/PC·5언어,종료0/2.6분 |
+| dist serveWeb smoke | /search,/places/gamcheon,/recommended,/recommended/58,/courses,/courses/inspiration/58 모두200 |
+| dist 실제 스냅샷 API | 관광지220/영문 추천여행238/코스40,모두200 |
+
+최초 신규 회귀 검사의 DOM타입이 HTMLElement|SVGElement여서 href 속성 접근이 typecheck에 실패했다. getAttribute와 기준 URL로 처리해 최종 통과했다. 타입 단언/검사 해제/제한시간 증가는 없다. [모바일 복구 화면](screenshots/restored-attractions-mobile-2026-11-24.png)과 [PC 복구 화면](screenshots/restored-attractions-desktop-2026-11-24.png)을 직접 열어6개 메뉴와 관광지 배너를 확인했다. 외부 이미지/제휴 이동/GTM은 대역이며 로컬 번들 사진은 그대로 사용한다.
+
+신규 포털 수집/상품 추가·제외0. 원본 카탈로그/DB/번역/제휴 정책/.env/의존성/lockfile/Google확인파일·GTM은 변경하지 않았다. 서버/domain/Vercel 설정 변경이 없어 이번에 공식 API 함수 재패키징·공공데이터 재수집·번역 재생성을 반복하지 않았다. 전체 E2E189개 중 변경과 관련된123개를 실행했으며 나머지66개는 이번 미실행이다. 공개 배포 후 실제 URL과 메뉴를 아래 후속 기록으로 확인한다.

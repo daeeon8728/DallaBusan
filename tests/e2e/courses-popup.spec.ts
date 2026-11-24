@@ -79,15 +79,18 @@ test('all four categories contain ten ideas, support URL refresh/back and source
   await page.screenshot({path:testInfo.outputPath('courses-family.png'),animations:'disabled'});
 });
 
-test('popup categories lead to the hub; featured attractions and existing inspiration are consolidated', async ({page}) => {
-  await page.goto('/'); await expect(page.getByTestId('course-popup')).toBeVisible(); await expect(page.getByTestId('monthly-destinations')).toHaveCount(0);
+test('popup opens courses while the original destination and inspiration pages remain independent', async ({page}) => {
+  await page.goto('/'); await expect(page.getByTestId('course-popup')).toBeVisible();
+  await expect(page.getByTestId('monthly-destinations').locator('a')).toHaveCount(2);
   await page.getByTestId('course-popup').getByRole('link',{name:/Family/}).click();
   await expect(page).toHaveURL(/\/courses\?category=family/); await expect(page.getByTestId('course-card')).toHaveCount(10);
+  await expect(page.getByTestId('monthly-destinations')).toHaveCount(0);
+  await page.getByTestId('recommended-nav').click(); await expect(page).toHaveURL(/\/recommended\?locale=en/);
+  await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
+  await page.getByTestId('public-guide-card').first().getByRole('link').click(); await expect(page).toHaveURL(/\/recommended\/\d+/);
+  await page.goto('/courses/inspiration/58?locale=ja'); await expect(page).toHaveURL(/\/recommended\/58\?locale=ja/);
+  await page.goto('/search?locale=en'); await expect(page.getByTestId('destination-results')).toBeVisible();
   await expect(page.getByTestId('monthly-destinations').locator('a')).toHaveCount(2);
-  await page.locator('.course-subnav a[href^="/courses/inspiration"]').click(); await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
-  await page.getByTestId('public-guide-card').first().getByRole('link').click(); await expect(page).toHaveURL(/\/courses\/inspiration\/\d+/);
-  await page.goto('/recommended?locale=en&category=walking'); await expect(page).toHaveURL(/\/courses\/inspiration/);
-  await page.goto('/search?locale=en'); await expect(page.getByTestId('destination-results')).toBeVisible(); await expect(page.getByTestId('monthly-destinations')).toHaveCount(0);
 });
 
 test('family parking is informational and course failure retries without fabricating content', async ({page}) => {

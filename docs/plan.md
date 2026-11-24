@@ -336,4 +336,4 @@ UI·도메인·비즈니스 서비스는 PROVIDER_A 등의 providerId와 공통 
 
 ## 2026-11-24 최신 코스 구현 범위
 
-사용자의 최신 구현 요청에 따라 docs/courses-plan.md의0절과 docs/catalog-plan.md의 최신 절을 우선한다. /courses의40개 editorial-idea 미리보기와 통합 추천여행/추천명소,수정 v2 팝업을 구현했다. 검증된 최적 일정40개/사람·현장 승인으로 해석하지 않는다. 실행·한계·검증은 docs/proof.md에 기록한다.
+사용자의 최신 구현 요청에 따라 docs/courses-plan.md의0절과 docs/catalog-plan.md의 최신 절을 우선한다. /courses의40개 editorial-idea 미리보기와 기존 관광지·추천여행과 별도로 제공하는 코스,수정 v2 팝업을 구현했다. 검증된 최적 일정40개/사람·현장 승인으로 해석하지 않는다. 실행·한계·검증은 docs/proof.md에 기록한다.

@@ -10,9 +10,9 @@ test.beforeEach(async ({ context }) => {
   });
 });
 
-test('course hub includes monthly guides and the complete destination booking flow', async ({page,context},testInfo) => {
-  await page.goto('/courses?locale=ko');
-  await expect(page.getByRole('heading',{level:1,name:'나에게 맞는 부산을 찾아보세요.'})).toBeVisible();
+test('separate search includes monthly guides and the complete destination booking flow', async ({page,context},testInfo) => {
+  await page.goto('/search?locale=ko');
+  await expect(page.getByRole('heading',{level:1,name:'관광지 검색'})).toBeVisible();
   const banner = page.getByTestId('monthly-destinations');
   await expect(banner.getByRole('link').first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);

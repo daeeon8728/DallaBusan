@@ -34,7 +34,7 @@ test('restaurant name/menu searches, district, page and history persist',async({
 test('themed travel has separate filters, detailed public story and explicit unknown hours',async({page},testInfo)=>{
   await page.goto('/recommended?locale=ko');await expect(page.getByRole('heading',{level:1,name:'추천여행'})).toBeVisible();await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
   await page.getByLabel('테마',{exact:true}).selectOption({label:'도보여행'});await expect(page).toHaveURL(/category=/);
-  await page.getByTestId('public-guide-card').first().getByRole('link').click();await expect(page).toHaveURL(/\/courses\/inspiration\/58/);
+  await page.getByTestId('public-guide-card').first().getByRole('link').click();await expect(page).toHaveURL(/\/recommended\/58/);
   await expect(page.getByRole('heading',{level:1})).toContainText('초량이바구길');await expect(page.locator('.public-guide-facts')).toContainText('찾아가는 방법');
   await expect(page.locator('.public-guide-facts')).toContainText('공공 정보에 등록되지 않았습니다.');expect(await page.locator('.public-guide-story script').count()).toBe(0);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.screenshot({path:testInfo.outputPath('recommended-detail.png'),fullPage:false,animations:'disabled'});
