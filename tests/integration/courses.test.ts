@@ -23,6 +23,8 @@ describe('source-linked editorial course previews', () => {
       expect(new Set(data.items.map(x=>x.id)).size).toBe(40);
       for (const item of data.items) {
         expect(item.locale).toBe(locale); expect(item.status).toBe('editorial-idea'); expect(item.routeCheck).toBe('pending'); expect(item.fieldValidation).toBe('not-performed');
+        expect(item.steps.every(step=>step.kind!=='note'&&step.coordinates!==null)).toBe(true);
+        expect(item.route.status).toBe('road-route');expect(item.route).not.toHaveProperty('geometry');expect(item.intro.length).toBeGreaterThan(10);
         expect(item).not.toHaveProperty('travelMinutes'); expect(item).not.toHaveProperty('award'); expect(item).not.toHaveProperty('bookingUrl');
         for(const step of item.steps) if(step.kind==='note') { expect(step.href).toBeNull(); expect(step.id).toBeNull(); } else {
           expect(step.href).toMatch(/^\/(places|food)\//); expect(step.id).not.toBeNull(); expect(step.sourceUrl).toMatch(/^https?:/);
@@ -49,14 +51,17 @@ describe('source-linked editorial course previews', () => {
     const list: unknown = (await app.inject('/api/courses?category=food')).json(); expect(CoursesResponseSchema.parse(list).items).toHaveLength(10);
     const detail: unknown = (await app.inject('/api/courses/fa01?locale=en')).json(), course = CourseDetailSchema.parse(detail).course;
     expect(course.steps[0]?.href).toBe('/places/busan-1310');
+    expect(course.route.geometry.length).toBeGreaterThan(1);expect(course.route.legs).toHaveLength(course.steps.length-1);expect(course.steps[1]?.menu).not.toBeNull();
+    expect(course.steps.every(step=>step.stayMinutes>=10&&step.description!==null)).toBe(true);
     for(const path of ['/api/courses?locale=invalid','/api/courses?category=invalid','/api/courses/invalid']) expect((await app.inject(path)).statusCode).toBe(400);
     expect((await app.inject('/api/courses/fa99')).statusCode).toBe(404);
     const incomplete: unknown = (await app.inject('/api/courses/fo10')).json();
-    expect(CourseDetailSchema.parse(incomplete).course.steps.at(-1)?.name).toContain('not selected');
+    expect(CourseDetailSchema.parse(incomplete).course.steps.some(step=>step.kind==='note')).toBe(false);
+    expect(CourseDetailSchema.parse(incomplete).course.steps.some(step=>step.id==='959'&&step.kind==='food')).toBe(true);
   });
   it('withholds an entire course when a linked stop cannot be resolved instead of skipping it', () => {
     const config = structuredClone(loadCourseCatalog()), first = config.items[0]; if (!first) throw Error('No course');
-    first.steps.push({kind:'food',id:'missing-place'});
+    first.steps.push({kind:'food',id:'missing-place',stayMinutes:45});
     const service = createCourseService(config,createDestinationService(loadDestinationConfig(),createOfferService(loadOfferCatalogConfig())),createGuideService({food:loadGuideSnapshot('food'),recommended:null}));
     expect(service.get(first.id,'en')).toBeNull(); expect(service.list('en').items.some(x=>x.id===first.id)).toBe(false);
   });

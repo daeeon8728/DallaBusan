@@ -1314,3 +1314,50 @@ Google 파일f17fc9a/GTM코드22bb93e/코스548f815를 순서대로 분리 배�
 841ab3f를 dallabusan/main에 push한 후 https://dallabusan.vercel.app의 실제 API/브라우저로 검증했다.360px/1280px 모두6개 메뉴(/,/search,/courses,/food,/recommended,/saved)가 동시에 온전히 보였고 검색의 관광지6개·추천 배너2개,독립 /recommended 목록12개/상세/새로고침,코스40개,감천문화마을 상세,기존 /courses/inspiration/58?locale=ja의 /recommended/58 호환 연결을 확인했다. 가로 넘침없음/pageerror0/검증 종료0이다.
 
 상품 이미지/제휴사/GTM은 대역이며 관광지·추천여행·코스 API는 실제 공개 응답이다. 근거 var/imports/restored-navigation-20261124/live-check.json. 최종 메뉴/페이지 복구를 공개 사이트에서 확인했으며 이 후속 커밋은 검증 기록만 추가한다.
+
+
+## 2026-11-24 코스40개 상세 보완·Leaflet 도로 지도
+
+### 변경
+
+- config/catalog/courses.json v2: 네 카테고리 각10개,총40개. 명시적 원본100개/장소 표시125회. 미선정 안내 노드0. 메인 식사+디저트/가족 관광·식사·휴식 등 실제 공개 장소를 연결하고 5개 언어 소개·확인사항/장소별 권장 체류를 추가했다.
+- packages/domain/src/courses.ts, 서버 config/courses·course-routes/services/courses·course-routing/runtime: 좌표/메뉴·설명·시간·휴무·사진·원문 수집일과 스냅샷 경로 DTO. 목록에는 geometry/상세 설명을 보내지 않는다.
+- config/catalog/course-routes.json, scripts/refresh-course-routes.ts·check-course-routes.ts, package.json: 고정 무료 OSRM 수집/오프라인 재검증. 키/의존성/lockfile 변경 없음.
+- web CoursesPage/CourseMap/courses.css/config/course-map/i18n/course-map: 도보·차량 구분, 번호 마커/선택/전체 경로/구간 길찾기·출처/타일 오류 재시도/지도 모듈 실패 때 목록 유지/사진 실패 안내. 지도 청크는 상세 진입 때 지연 로딩한다.
+- tests/unit/course-routing.test.ts, tests/integration/courses.test.ts, tests/e2e/course-map.spec.ts 및 기존 코스 팝업 검사 수정. AGENTS/intent/spec/plan/catalog-plan/courses-plan과 별도 course-map-review 문서에 최신 범위·운영을 반영했다.
+- 관광지 검색·관광지 상세·맛집·추천여행·6개 메뉴·홈/검색 월간 배너·팝업·찜/장바구니를 유지한다. 기존 내부17개 테마 파일/원본/검수 상태는 수정하지 않았다.
+
+### 명령·결과
+
+| 검증 | 종료/결과 |
+| --- | --- |
+| npm run lint | 0 |
+| npm run typecheck | 0, web/server/domain/tools strict |
+| npm run check:providers | 0,114개 소스 |
+| npm run test -- --run | 0,33파일387개 |
+| npm run build | 0,domain→server→web |
+| npm run data:courses:check | 0,40코스/40도로경로/100원본/미정0/외부호출0 |
+| npm run data:localization:check | 0,5개 언어 각각 상품402/관광지220/맛집514,issues0 |
+| npm run test:e2e | 0,전체198개(360/768/1280px) |
+| npm run test:e2e -- tests/e2e/course-map.spec.ts tests/e2e/courses-popup.spec.ts | 0,최종 원문 날짜·사진 실패·번호 개선 후30개 재검증 |
+| node var/imports/course-maps-20261124/dist-smoke.mjs | 0,10개 HTML/검증파일200,5언어×40개 상세/각125개 장소·124개 사진/모든 경로·수집일 확인 |
+| node var/imports/course-maps-20261124/package-check.mjs | 0,실제 Vercel backend builder 산출물833파일을 독립 임시 폴더에서 실행; health/상품402/프로모션3/맛집514/영·일40코스/번체 상세200 및 도로 경로 확인 |
+
+전체198개 회귀 후 최종 변경은 번호 방향/팝업 닫기·사진 실패/원문 날짜 표시이며 영향 범위30개와 전체 단위·타입/린트/경계/빌드/데이터 검사를 재수행했다. 빌드의 Zod pure 주석 및507KB 메인 청크 경고는 비차단이다. 지도157KB(gzip46KB)는 별도 지연 청크다. 기존 Node SQLite 실험/색상 환경 경고도 오류로 숨기지 않았다.
+
+### 실제 수집·대역·실패 수정
+
+- 실제 FOSSGIS OSRM 40개 최초 요청(1.5초 간격), CU01 차량 스냅300m 초과1건을 거절했다. 좌표를 옮기지 않고 도보 모드로1회 재수집해40개 전부 확보했다. 검사 명령은 이후 외부 요청0,운영 API도 라우팅을 호출하지 않는다.
+- 첫 build에서 React 클래스 override 및 react-leaflet 미사용 barrel 선언의 비공개 core 경로 오류가 발생했다. override와 공개 subpath imports로 해결했다. 검사 비활성화/skipLibCheck/타입 단언으로 덮지 않았다.
+- 최초 dist smoke는 HTML 페이지 요청에 Accept:text/html을 넣지 않아/search404가 발생했다. 실제 브라우저 헤더를 추가해 재검증 후10개200을 확인했다. 앱 라우팅을 완화하지 않았다. 실패 정리 과정의 Windows Node 종료 assertion은 자식 종료를 명시적으로 기다리도록 검증 스크립트를 수정한 뒤 사라졌다.
+- 브라우저의 OSM 타일/외부 이미지/외부 링크/GTM은 대역이다. 실제 타일을 headless로 반복 탐색하지 않고 지도 마커/geometry/선택/실패/재시도·누락 중간좌표 비연결·가로 넘침 없음·콘솔 오류0을 검증했다. source 사진을 새로 현장 검증/실시간 디코딩했다고 주장하지 않는다.
+- 기존 깨끗한 npm ci 결과의 의존성을 재사용한 Vercel 재빌드이며, 새 npm ci를 했다고 보고하지 않는다. lockfile/의존성이 바뀌지 않았다. API 함수는 공개 snapshot 읽기 전용을 유지하고 static 플러그인 최상위 로딩 없이 --no-experimental-require-module 조건으로 실행했다.
+- 사진 미제공: DA10 food:1627 레망파티쓰리1곳. 다른 지점/기본 이미지를 실사진처럼 붙이지 않았다.
+- 현장 입구/사유지·해안 통제/기상·대기줄·어린이 메뉴·알레르기·주차 진입은 미검수다. 수상 배지/현지인 전용/짧은 웨이팅/실시간 교통/전역 최적화를 주장하지 않는다. editorial-idea/routeCheck=pending/fieldValidation=not-performed 및 내부17개 pending 플래그는 유지한다.
+
+### 시연 캡처·근거
+
+- docs/design/course-maps-2026-11-24/mobile.png 및 desktop.png: 최종360/1280px 지도 화면. 타일/외부 사진 대역임을 명시한다.
+- 로컬 실행 근거: var/imports/course-maps-20261124/dist-smoke.json,package-check.json. 임시 도구/산출물은 Git 제외한다.
+- 서비스 이용 정책·40개 순서/거리·운영 명령·한계는 docs/course-map-review-2026-11-24.md 참조.
+- 공개 배포의 반영 여부는 push 후 별도 기록한다. 이번 변경은 GTM/Google 태그 설정을 수정하지 않았다.

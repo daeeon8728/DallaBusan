@@ -132,3 +132,7 @@ API 함수가 사용하지 않는 정적 서버 플러그인을 최상위 import
 상단 메뉴는 Home → Attraction search → Busan Courses → Find restaurants → Travel inspiration → Saved다. 코스는 기존 페이지에 추가한다. 관광지 검색(/search),관광지 상세(/places/:slug),추천여행(/recommended와상세)은 별도 메뉴/페이지로 유지하고 홈·검색의 관광지 추천 배너를 보존한다. 잘못 통합했던 /courses/inspiration 링크는 /recommended로 호환 연결한다. 가족의 주차/메뉴는 기존 출처 안내로 연결하며 아이 적합성/빈자리·입구/최적 동선 검증을 주장하지 않는다.
 
 홈 팝업은 사용자 수정 v2 콜라주와 5개 언어 HTML을 사용한다. 하단2버튼만 두며 Close/Escape/카테고리 이동은 탭 세션,하루 안 보기는 기기 현지 날짜 자정까지 억제한다. 전용 저장 키만 쓰고 찜/장바구니는 보존한다. 저장 실패를 성공으로 표시하지 않으며 키보드/초점 복귀/360px를 검증한다. 상세 상태·미선정 장소/수상/동선 이월은 docs/courses-plan.md와 docs/proof.md를 따른다.
+
+## 2026-11-24 코스 상세 보완·내장 지도
+
+최신 사용자 요청으로 40개 공개 편집 코스에 React-Leaflet/OSM 지도와 OSRM 도보·차량 경로를 허용한다. 이전 내장 지도 미구현 범위는 이 기능에 한해 대체한다. AI·예산·실시간 교통·글로벌 최적화·현장 승인으로 확대하지 않는다. 원본 대표 좌표를 임의로 입구로 옮기지 않는다. 라우팅은 `data:courses:routes:refresh` CLI의 고정 keyless 서비스에서 1.5초 간격으로만 호출하며 HTTP 함수/브라우저는 저장 snapshot을 읽는다. `data:courses:check`를 실행한다. 모드·순서·ID·좌표 지문 변경 시 저장 경로를 사용하지 않고, 누락 중간 지점을 건너 연결하지 않는다. 타일 테스트는 대역이며 실제 OSM 타일 prefetch/오프라인 다운로드를 금지한다. 경로 수집일/출처·모델 예상 이동·편집 체류시간을 구분하고 human/field pending 상태를 유지한다. 메뉴/사진/운영시간은 기존 검수·언어·공개 제외 정책을 우회하지 않는다. 관광지 검색·추천여행·홈/검색 배너와 팝업은 보존한다. 상세는 docs/course-map-review-2026-11-24.md를 따른다.

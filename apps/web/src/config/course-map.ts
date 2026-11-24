@@ -1,0 +1,1 @@
+export const COURSE_MAP = {tiles:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',fixMap:'https://www.openstreetmap.org/fixthemap'};

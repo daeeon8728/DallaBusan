@@ -1,7 +1,17 @@
 {
-  "version": 1,
+  "version": 2,
   "reviewedOn": "2026-11-24",
   "sources": [
+    {
+      "kind": "destination",
+      "id": "busan-1179",
+      "sha256": "8eea93b6bafc1d57a456dc00c37e7a9b8535201a76253c248e8e332bb1aab47b"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1185",
+      "sha256": "81afcc7ba20b97deebc7e365a428cd382ca673e88b0174f235dfcb393a7633c2"
+    },
     {
       "kind": "destination",
       "id": "busan-1310",
@@ -9,48 +19,8 @@
     },
     {
       "kind": "destination",
-      "id": "busan-261",
-      "sha256": "e980ee1f1c9ed7559b9f9092e9bf0e71d18a58759aa7ef5a0422cbf9908629e9"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-291",
-      "sha256": "8253122c24d6fcd8f0605b3d61eb272951877f0cadd731978355996aae58d0d3"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-2172",
-      "sha256": "07bda7efafce708226145da4589d5797dfa0e87d4430ee3f58f5436b2a25aef1"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-340",
-      "sha256": "8871608f3412f18129e746a34051d9f01c14385b5e61220860cb613bafca0d5f"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-373",
-      "sha256": "e939ab1940fc82d8262581599816b72424b8f7bae2ac18a2ac693b3ed9bbb638"
-    },
-    {
-      "kind": "food",
-      "id": "2899",
-      "sha256": "8d304e3e512d565eea7732abcdf1582ef9cb2b60433ad623f8e3f40d3ad25ddd"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-2274",
-      "sha256": "883e6d9161ef11ef2a1ddf348641c01de9fe743b72c1b2534c34f0b8a391b101"
-    },
-    {
-      "kind": "food",
-      "id": "1628",
-      "sha256": "71b01c047eda9ddad50272eb214f3ea3f2948b1a7cc739e9bca94b1a1ada3462"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-286",
-      "sha256": "e8b3810a05de163879ef738c4f2dbd93dfda0db9b7ab41587315f1f2d7d3f005"
+      "id": "busan-1329",
+      "sha256": "75b4ed4918d3cc62fdfbe57336274036f0fbb1fbc914193096e5bb8d6008e5e9"
     },
     {
       "kind": "destination",
@@ -59,28 +29,8 @@
     },
     {
       "kind": "destination",
-      "id": "busan-326",
-      "sha256": "9ab8ef0a4ceb21a41cac29ec89ee9598c984ca78771b80d0414e18eaf7ca9912"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-276",
-      "sha256": "7ffa97c977b4e9e5214bbef59d48ed6d90197eb629fb263e420a27a774b708df"
-    },
-    {
-      "kind": "food",
-      "id": "204",
-      "sha256": "1b20cc2c644c42329f1c0012cee8cb05fc5f5aa822469d291de2733f6e596e44"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-1731",
-      "sha256": "184872ef3890e7f55c83efe0283ddf30b9cc38566f1e6191e1cff13b79142c5c"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-304",
-      "sha256": "df36e9df4bfa648457cd8c3e8ca85236f23a64940f76f94dcc36e96b84e92476"
+      "id": "busan-1653",
+      "sha256": "b44bf5d2263eb744e6870df5b6a058512c6fbbc54820a4473b0f41e7097fbbe3"
     },
     {
       "kind": "destination",
@@ -89,223 +39,13 @@
     },
     {
       "kind": "destination",
-      "id": "busan-344",
-      "sha256": "2d00998a121eb717a42f0f0d57fd914d64cc4fb05b28873be5e5ee71f04142eb"
-    },
-    {
-      "kind": "food",
-      "id": "2371",
-      "sha256": "d85c537c032a3faae0ea63d49d4a99b91011a5cce4f2e2b5aa8af68e5f758e4f"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-402",
-      "sha256": "4464ed1856b835ca518d413bd9d730576635c0c66d25bfde5e320d721c0548b6"
-    },
-    {
-      "kind": "food",
-      "id": "2884",
-      "sha256": "9373c02426cd4c847459cb892411f90c525965b5fd5fe0fc574dbba15bacabe1"
-    },
-    {
-      "kind": "food",
-      "id": "1816",
-      "sha256": "9583e9e4765122ef11963941644e261498e9f47e8221febdc90f079a6ad08466"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-280",
-      "sha256": "400c10b9054fb4e7add562c897e812a528b92b079a7214688f2fb1725d9131c3"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-348",
-      "sha256": "90871a7889a15607d5f962be7dd4a900fc061bcf041f5df3710614c26ec854c9"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-285",
-      "sha256": "3e502532f262f8600d07cdf5ef955aec8e30e4e9b9bd1db5238e4d28fce3330e"
-    },
-    {
-      "kind": "destination",
-      "id": "gwangalli",
-      "sha256": "00ae887a618dfceb838d56dddb15dfbaf73776b70c6d8af1f6b2492b9aaaacae"
-    },
-    {
-      "kind": "food",
-      "id": "1845",
-      "sha256": "0cbce2bd259aac17152e64239956ed3722512ad0d1c6c72e6f0d44375b5bf540"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-255",
-      "sha256": "4c773c056ecdd73a6f21787e4a4809af939298be3b6d78bc4089d17d4fb86425"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-833",
-      "sha256": "df275b582b61368405fbae95d8fab415b835f1f159cc5658a6cdb2f967c9aa46"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-287",
-      "sha256": "c0c038f68596e77a5114e5fdbf260b4072e2042343fe4124b5feda2378153088"
-    },
-    {
-      "kind": "destination",
       "id": "busan-1718",
       "sha256": "4e8e387bad842dd5867587f959730131a810ad09b693aea0e0395fef04857503"
     },
     {
       "kind": "destination",
-      "id": "busan-366",
-      "sha256": "67f3e3c2dd22748cda5df42b06b1d7f68fc7536b6cd614e2ddf37d029cb6d5e3"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-372",
-      "sha256": "ab74242d1008e3d73afa58845639bd8f6b550706e96eff0b939b01f7d62ea4f9"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-362",
-      "sha256": "279e130bc513d8ed49edaddae442eecc8001b18172d08198d34e5fe4121f16f8"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-1329",
-      "sha256": "75b4ed4918d3cc62fdfbe57336274036f0fbb1fbc914193096e5bb8d6008e5e9"
-    },
-    {
-      "kind": "food",
-      "id": "1636",
-      "sha256": "0513bf8e43becb1f035c69eb8b186c9add0690c5a7fe802da0df0e987331f91a"
-    },
-    {
-      "kind": "food",
-      "id": "2887",
-      "sha256": "5064a637523e8aae3db01af7fc490874275e71b283d539c0ecb2d017483a3ae6"
-    },
-    {
-      "kind": "food",
-      "id": "1817",
-      "sha256": "ed96bc4be75a76f84ea0a05763e78a59f1e92685d3fdceeb8683865ac5d28b74"
-    },
-    {
-      "kind": "food",
-      "id": "1511",
-      "sha256": "7f899323d95715efcbf9a878fd61b76b42d32e58fb2ba3c84b2ca1423168d747"
-    },
-    {
-      "kind": "food",
-      "id": "1459",
-      "sha256": "39b4c6714106d67f96ad4ee94c4f75e48eabb1739ae1fab4bacc33191902f3cc"
-    },
-    {
-      "kind": "food",
-      "id": "1609",
-      "sha256": "68811a44a41f2e78cc5fb44c637845550e3520c9b481702a945389bc1eb5a90e"
-    },
-    {
-      "kind": "food",
-      "id": "1837",
-      "sha256": "d0c73d42f61a663a5b0412752a0666adc29595d76beb2d109d1bbe0d602ce8c5"
-    },
-    {
-      "kind": "food",
-      "id": "1445",
-      "sha256": "0db712c149d228696a026f4908accc438aee539d609fdf4d6465975e3a6fc81f"
-    },
-    {
-      "kind": "food",
-      "id": "1515",
-      "sha256": "8c654990639c00b5e12a80d5421bf3030b50a70718c7e449126de753b468ece8"
-    },
-    {
-      "kind": "food",
-      "id": "926",
-      "sha256": "73efb1af91b112f7aefa5fce1c03ea85c6fb53fa4761f1864d2413eb57389ace"
-    },
-    {
-      "kind": "food",
-      "id": "1506",
-      "sha256": "797d80204ed66be4e1dd29de3ce47cd813d94d3ced3d159c1b34238fcc35ebfe"
-    },
-    {
-      "kind": "food",
-      "id": "1452",
-      "sha256": "54652762b4de4556782463e14de882ffbb6aced4fc2aa94a56b44d186b9e19cf"
-    },
-    {
-      "kind": "food",
-      "id": "1221",
-      "sha256": "6c8666e663039b00a3b5ca603bc59752cfa323b566634930e95d83e8c416606f"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-262",
-      "sha256": "5ad1afac81df16fd7d15ccfdc2616ef8d22e1583bc0ebf0caf6ec5c1a02dcfb7"
-    },
-    {
-      "kind": "food",
-      "id": "174",
-      "sha256": "055ef24099eee60be85b9fe1446fda89d841dab8600ee3b06170e4ccb4dea809"
-    },
-    {
-      "kind": "food",
-      "id": "1108",
-      "sha256": "857ddf3a8c427b1d1a8364ff14e76378cb1d2d1b9544bb48573cde45bcc88190"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-354",
-      "sha256": "5b97c12b603e79fdc4906eaba9c6aa8d2bb9f051b33b04b974b0d7adfb90e463"
-    },
-    {
-      "kind": "food",
-      "id": "1921",
-      "sha256": "769609cc9724d0a0e8bacc477ad4335c349afddac50820e789415a1d1695089b"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-333",
-      "sha256": "47403d577030e488c20098c2e9c12a7b22d929152e79ebd63f3332eb0e77bb7c"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-2173",
-      "sha256": "765a1cfc1b649d79b64b75eeb7dbafb10be0918ee8b5ef0488d7a0055aaa0786"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-301",
-      "sha256": "48384cf94f6e687becf14190b70deca09b3f79864950e503ece35be76cac25d6"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-2594",
-      "sha256": "d992c7c600782d6485b3711c29dba42febba11f9f21cbb6e5286a9a9529100aa"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-369",
-      "sha256": "d8737bda09063df45d41c92e5d842a0f06cb3135f0b6e533005845f6c039cc83"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-256",
-      "sha256": "f1b84333fe052f3d16f9ad04ade23a35fbd5da7c8104ea7e4a2fb44620e6c3d5"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-2133",
-      "sha256": "d46e9b6cf489335bbdd70c9d75aa3060ec944aa1529dbdfcf39206060cc09f09"
-    },
-    {
-      "kind": "destination",
-      "id": "busan-2612",
-      "sha256": "9a1dbab872a61790ec8352dface93e8842e14dc88275fe0bbb02ff32e6ea999b"
+      "id": "busan-1731",
+      "sha256": "184872ef3890e7f55c83efe0283ddf30b9cc38566f1e6191e1cff13b79142c5c"
     },
     {
       "kind": "destination",
@@ -318,19 +58,449 @@
       "sha256": "ca040ed46e7a4daa3379b1905affd9dd329cea7eac531dde735bcb95fbf3cc5a"
     },
     {
+      "kind": "destination",
+      "id": "busan-2086",
+      "sha256": "e33cb6f1b71fd14cb43df77239d2d60635b19fe529d97fc622d2e22029c6c6d9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2095",
+      "sha256": "ad449bfeca60aace6651efb27f988b0368bc92a832a908e1e8a877d373b2c33e"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2121",
+      "sha256": "c0a8fd0a52268e0a42331a2be0a9424b8faa5352bfaab8bd76b93939cba4f841"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2133",
+      "sha256": "d46e9b6cf489335bbdd70c9d75aa3060ec944aa1529dbdfcf39206060cc09f09"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2140",
+      "sha256": "d7a01c6717062fc44b7817e89d994efb2b00ac147604fdb97d4f6a2e414c8c31"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2157",
+      "sha256": "26b77e579f345444122efc4a881138035cf6bd0abef3569ca3df6f78dbd1883e"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2172",
+      "sha256": "07bda7efafce708226145da4589d5797dfa0e87d4430ee3f58f5436b2a25aef1"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2173",
+      "sha256": "765a1cfc1b649d79b64b75eeb7dbafb10be0918ee8b5ef0488d7a0055aaa0786"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2206",
+      "sha256": "876b5794d07fb5f5653ae3863b81701397fdc7ff0575b2d7ff78d98c08aa25d6"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2274",
+      "sha256": "883e6d9161ef11ef2a1ddf348641c01de9fe743b72c1b2534c34f0b8a391b101"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2314",
+      "sha256": "bd557b1b58f178a8fe95d2bf22b7bf146fb4bd61099ce4a49590426bcb861bbc"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-255",
+      "sha256": "4c773c056ecdd73a6f21787e4a4809af939298be3b6d78bc4089d17d4fb86425"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-256",
+      "sha256": "f1b84333fe052f3d16f9ad04ade23a35fbd5da7c8104ea7e4a2fb44620e6c3d5"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2566",
+      "sha256": "8f8e267d69853f1d9cc35598a7ba7072f65e7d98c90ae623fb2c8fefeac4e3c5"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2587",
+      "sha256": "8b30cb1026d762f076a8b208993a0086b04e7ef66750ba9d5d9729fb340690c0"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2594",
+      "sha256": "d992c7c600782d6485b3711c29dba42febba11f9f21cbb6e5286a9a9529100aa"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-261",
+      "sha256": "e980ee1f1c9ed7559b9f9092e9bf0e71d18a58759aa7ef5a0422cbf9908629e9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2612",
+      "sha256": "9a1dbab872a61790ec8352dface93e8842e14dc88275fe0bbb02ff32e6ea999b"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-266",
+      "sha256": "145907194ca0861077664a0e0feef921138173a1afab972d0b3ef425e2020553"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2753",
+      "sha256": "1f355edb193dff43e54b15fd2b511ec3bb8fe4c2abcb98071c27aed1cc60ff4d"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-276",
+      "sha256": "7ffa97c977b4e9e5214bbef59d48ed6d90197eb629fb263e420a27a774b708df"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-278",
+      "sha256": "18c72c6112da5bf9e0bcc1548009b17e83a026ebd595c8147181ff056e17b264"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-280",
+      "sha256": "400c10b9054fb4e7add562c897e812a528b92b079a7214688f2fb1725d9131c3"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-285",
+      "sha256": "3e502532f262f8600d07cdf5ef955aec8e30e4e9b9bd1db5238e4d28fce3330e"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-286",
+      "sha256": "e8b3810a05de163879ef738c4f2dbd93dfda0db9b7ab41587315f1f2d7d3f005"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-287",
+      "sha256": "c0c038f68596e77a5114e5fdbf260b4072e2042343fe4124b5feda2378153088"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-290",
+      "sha256": "eaf49f5baea954267377ab477c017bda5d8061fdc9427581c0201f43f3e988df"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-291",
+      "sha256": "8253122c24d6fcd8f0605b3d61eb272951877f0cadd731978355996aae58d0d3"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-301",
+      "sha256": "48384cf94f6e687becf14190b70deca09b3f79864950e503ece35be76cac25d6"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-304",
+      "sha256": "df36e9df4bfa648457cd8c3e8ca85236f23a64940f76f94dcc36e96b84e92476"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-325",
+      "sha256": "57adb948822179ff5e7d514f2b3cdf811aecf9ac1ad390ec8f39b6314b212d2e"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-326",
+      "sha256": "9ab8ef0a4ceb21a41cac29ec89ee9598c984ca78771b80d0414e18eaf7ca9912"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-333",
+      "sha256": "47403d577030e488c20098c2e9c12a7b22d929152e79ebd63f3332eb0e77bb7c"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-340",
+      "sha256": "8871608f3412f18129e746a34051d9f01c14385b5e61220860cb613bafca0d5f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-344",
+      "sha256": "2d00998a121eb717a42f0f0d57fd914d64cc4fb05b28873be5e5ee71f04142eb"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-354",
+      "sha256": "5b97c12b603e79fdc4906eaba9c6aa8d2bb9f051b33b04b974b0d7adfb90e463"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-361",
+      "sha256": "5aab2d27bed723a904f13a8bb6c03997f2d948f69168c8239c2d9c581fb73507"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-362",
+      "sha256": "279e130bc513d8ed49edaddae442eecc8001b18172d08198d34e5fe4121f16f8"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-366",
+      "sha256": "67f3e3c2dd22748cda5df42b06b1d7f68fc7536b6cd614e2ddf37d029cb6d5e3"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-369",
+      "sha256": "d8737bda09063df45d41c92e5d842a0f06cb3135f0b6e533005845f6c039cc83"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-372",
+      "sha256": "ab74242d1008e3d73afa58845639bd8f6b550706e96eff0b939b01f7d62ea4f9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-373",
+      "sha256": "e939ab1940fc82d8262581599816b72424b8f7bae2ac18a2ac693b3ed9bbb638"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-397",
+      "sha256": "60560217488c2f5b06e00216ec596d57b6d17045459978c27e7639e80fd1ea89"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-402",
+      "sha256": "4464ed1856b835ca518d413bd9d730576635c0c66d25bfde5e320d721c0548b6"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-415",
+      "sha256": "554003adc47ba01ccc0f7b0abf7d09f7a95877b0e3e6155eaa35b9311444a19f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-757",
+      "sha256": "78f95acca93d10e8b34d5482a381c22d37703364e29fd5530a534b93f6446e2f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-832",
+      "sha256": "41b96b7c5d4e5e7303d2903b3f7d87cf4e864adbfd5360053ef89f042dc7b7fe"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-833",
+      "sha256": "df275b582b61368405fbae95d8fab415b835f1f159cc5658a6cdb2f967c9aa46"
+    },
+    {
+      "kind": "destination",
+      "id": "gwangalli",
+      "sha256": "00ae887a618dfceb838d56dddb15dfbaf73776b70c6d8af1f6b2492b9aaaacae"
+    },
+    {
       "kind": "food",
-      "id": "1513",
-      "sha256": "20b9817fb7a2b04d4f1b97f79ff9222bd6d9a1d2a5fa1373f300a4671a79367b"
+      "id": "1108",
+      "sha256": "857ddf3a8c427b1d1a8364ff14e76378cb1d2d1b9544bb48573cde45bcc88190"
     },
     {
-      "kind": "destination",
-      "id": "busan-334",
-      "sha256": "3e82c4af405ee0084a3b31812883e9d881fffcff917c31eaa677504101aae856"
+      "kind": "food",
+      "id": "1118",
+      "sha256": "a2fea48533948d3fbaedc272b1a97a144af406f992f912ff84d894549d414490"
     },
     {
-      "kind": "destination",
-      "id": "busan-1014",
-      "sha256": "ae392ba1b1a377380fcf35673b6264b2e340e5b972826b1a9b7ef4be0cf7c6f4"
+      "kind": "food",
+      "id": "1221",
+      "sha256": "6c8666e663039b00a3b5ca603bc59752cfa323b566634930e95d83e8c416606f"
+    },
+    {
+      "kind": "food",
+      "id": "1264",
+      "sha256": "7a94303382b4e9c8050cca6d575847a262d5c8ddb7f508b07f4faa2c006b1716"
+    },
+    {
+      "kind": "food",
+      "id": "1445",
+      "sha256": "0db712c149d228696a026f4908accc438aee539d609fdf4d6465975e3a6fc81f"
+    },
+    {
+      "kind": "food",
+      "id": "1447",
+      "sha256": "d60adb9d793f67efc0cf4f73ff815b90391a338cd38a36bf266123ef3eb5fa46"
+    },
+    {
+      "kind": "food",
+      "id": "1448",
+      "sha256": "7b031a3f1996fbadeea629db59569df73c70b6fdffb405abfa09daeedd469b6f"
+    },
+    {
+      "kind": "food",
+      "id": "1452",
+      "sha256": "54652762b4de4556782463e14de882ffbb6aced4fc2aa94a56b44d186b9e19cf"
+    },
+    {
+      "kind": "food",
+      "id": "1458",
+      "sha256": "b0258bc9f3254c390b388c95ffe7ff2b7b137af02ecf261131d0a53208f51320"
+    },
+    {
+      "kind": "food",
+      "id": "1459",
+      "sha256": "39b4c6714106d67f96ad4ee94c4f75e48eabb1739ae1fab4bacc33191902f3cc"
+    },
+    {
+      "kind": "food",
+      "id": "1460",
+      "sha256": "3863afd0a9e9871b1c5c26a8a5ca031a17991c5238fddb5190a2282fbefe69b7"
+    },
+    {
+      "kind": "food",
+      "id": "1477",
+      "sha256": "efcbc5df338b6a0dcbda4316f8a315904f03b84ee6aa865adf5d2a8605c28915"
+    },
+    {
+      "kind": "food",
+      "id": "1506",
+      "sha256": "797d80204ed66be4e1dd29de3ce47cd813d94d3ced3d159c1b34238fcc35ebfe"
+    },
+    {
+      "kind": "food",
+      "id": "1507",
+      "sha256": "05bf3a9c94ae0f30ab05c390d7b2c332b66abb958ede99d3578c4f69a74eb814"
+    },
+    {
+      "kind": "food",
+      "id": "1511",
+      "sha256": "7f899323d95715efcbf9a878fd61b76b42d32e58fb2ba3c84b2ca1423168d747"
+    },
+    {
+      "kind": "food",
+      "id": "1515",
+      "sha256": "8c654990639c00b5e12a80d5421bf3030b50a70718c7e449126de753b468ece8"
+    },
+    {
+      "kind": "food",
+      "id": "1589",
+      "sha256": "5427ddbdbfe136157c10f47a7d304bd3b360254e608f4ec8201975d5689e3d9e"
+    },
+    {
+      "kind": "food",
+      "id": "1609",
+      "sha256": "68811a44a41f2e78cc5fb44c637845550e3520c9b481702a945389bc1eb5a90e"
+    },
+    {
+      "kind": "food",
+      "id": "1617",
+      "sha256": "e44d11b84f058f4e3dbe614a305c273509916ac2d1704b1f177cbaefdf6a9d2e"
+    },
+    {
+      "kind": "food",
+      "id": "1627",
+      "sha256": "ee39a5262bfbc32891a47a2d1d4e6de6942d6460342d34b99f86fbc46a10f481"
+    },
+    {
+      "kind": "food",
+      "id": "1628",
+      "sha256": "71b01c047eda9ddad50272eb214f3ea3f2948b1a7cc739e9bca94b1a1ada3462"
+    },
+    {
+      "kind": "food",
+      "id": "1636",
+      "sha256": "0513bf8e43becb1f035c69eb8b186c9add0690c5a7fe802da0df0e987331f91a"
+    },
+    {
+      "kind": "food",
+      "id": "1804",
+      "sha256": "b9d85df1379bb5ce2b1dc9ad0b3ca592c86c9735ef6042991ba96cab9aa47519"
+    },
+    {
+      "kind": "food",
+      "id": "1816",
+      "sha256": "9583e9e4765122ef11963941644e261498e9f47e8221febdc90f079a6ad08466"
+    },
+    {
+      "kind": "food",
+      "id": "1817",
+      "sha256": "ed96bc4be75a76f84ea0a05763e78a59f1e92685d3fdceeb8683865ac5d28b74"
+    },
+    {
+      "kind": "food",
+      "id": "1837",
+      "sha256": "d0c73d42f61a663a5b0412752a0666adc29595d76beb2d109d1bbe0d602ce8c5"
+    },
+    {
+      "kind": "food",
+      "id": "1845",
+      "sha256": "0cbce2bd259aac17152e64239956ed3722512ad0d1c6c72e6f0d44375b5bf540"
+    },
+    {
+      "kind": "food",
+      "id": "1905",
+      "sha256": "d2276bb3b056248f20cbea6c4beac22273d141a91a9b1494b2f0df70a8d237cd"
+    },
+    {
+      "kind": "food",
+      "id": "1921",
+      "sha256": "769609cc9724d0a0e8bacc477ad4335c349afddac50820e789415a1d1695089b"
+    },
+    {
+      "kind": "food",
+      "id": "204",
+      "sha256": "1b20cc2c644c42329f1c0012cee8cb05fc5f5aa822469d291de2733f6e596e44"
+    },
+    {
+      "kind": "food",
+      "id": "212",
+      "sha256": "e4efe76e9dde2586a0c37b097dba54828aa6a5824b7c22c389087141fbcf024f"
+    },
+    {
+      "kind": "food",
+      "id": "2371",
+      "sha256": "d85c537c032a3faae0ea63d49d4a99b91011a5cce4f2e2b5aa8af68e5f758e4f"
+    },
+    {
+      "kind": "food",
+      "id": "245",
+      "sha256": "994a3261f8499d1d5d76e46a20abede9380dafd849314e3318c4595c16fc6733"
+    },
+    {
+      "kind": "food",
+      "id": "2884",
+      "sha256": "9373c02426cd4c847459cb892411f90c525965b5fd5fe0fc574dbba15bacabe1"
+    },
+    {
+      "kind": "food",
+      "id": "2899",
+      "sha256": "8d304e3e512d565eea7732abcdf1582ef9cb2b60433ad623f8e3f40d3ad25ddd"
+    },
+    {
+      "kind": "food",
+      "id": "865",
+      "sha256": "869815a34d1a759c885351cb1b22df899e4ff8506614768d991780682b9cbecf"
+    },
+    {
+      "kind": "food",
+      "id": "920",
+      "sha256": "1088dc82b6653d52755ac1e8280917391df5652bc37237d343021b44189b7472"
+    },
+    {
+      "kind": "food",
+      "id": "926",
+      "sha256": "73efb1af91b112f7aefa5fce1c03ea85c6fb53fa4761f1864d2413eb57389ace"
+    },
+    {
+      "kind": "food",
+      "id": "959",
+      "sha256": "fadd0482d52a9c0cc18f661d1297693d42a2092e4b69c3ee4a4f9600cfdd2b17"
+    },
+    {
+      "kind": "food",
+      "id": "960",
+      "sha256": "a65e71cdfc0cd560bc152546c3a5b15161b32a7f1e9d4045ddd220d99f12231b"
     }
   ],
   "items": [
@@ -348,29 +518,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-1310"
+          "id": "busan-1310",
+          "stayMinutes": 180
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "kind": "food",
+          "id": "1804",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "kind": "destination",
+          "id": "busan-2172",
+          "stayMinutes": 35
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "아동 메뉴·알레르기·연령 제한은 매장과 시설에 직접 확인하세요.",
+        "en": "Confirm children’s menus, allergies and age restrictions directly with each venue.",
+        "ja": "子ども用メニュー、アレルギー、年齢制限は各施設へ直接確認してください。",
+        "zh-CN": "儿童菜单、过敏原及年龄限制请直接向场所确认。",
+        "zh-TW": "兒童菜單、過敏原及年齡限制請直接向場館確認。"
+      }
     },
     {
       "id": "fa02",
@@ -386,17 +562,40 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-261"
+          "id": "busan-261",
+          "stayMinutes": 50
         },
         {
           "kind": "destination",
-          "id": "busan-291"
+          "id": "busan-291",
+          "stayMinutes": 70
+        },
+        {
+          "kind": "food",
+          "id": "1804",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-2172"
+          "id": "busan-2172",
+          "stayMinutes": 35
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "사찰 예절과 실내 휴관일을 확인하고 걷기 편한 신발을 준비하세요.",
+        "en": "Check temple etiquette and indoor closing days, and wear comfortable shoes.",
+        "ja": "寺院のマナーと屋内施設の休館日を確認し、歩きやすい靴でお越しください。",
+        "zh-CN": "请确认寺庙礼仪及室内设施休馆日，穿着适合步行的鞋。",
+        "zh-TW": "請確認寺廟禮儀與室內設施休館日，穿著適合步行的鞋。"
+      }
     },
     {
       "id": "fa03",
@@ -412,29 +611,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-340"
+          "id": "busan-340",
+          "stayMinutes": 150
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "kind": "food",
+          "id": "1804",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "kind": "destination",
+          "id": "busan-290",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "아동 메뉴·알레르기·연령 제한은 매장과 시설에 직접 확인하세요.",
+        "en": "Confirm children’s menus, allergies and age restrictions directly with each venue.",
+        "ja": "子ども用メニュー、アレルギー、年齢制限は各施設へ直接確認してください。",
+        "zh-CN": "儿童菜单、过敏原及年龄限制请直接向场所确认。",
+        "zh-TW": "兒童菜單、過敏原及年齡限制請直接向場館確認。"
+      }
     },
     {
       "id": "fa04",
@@ -450,21 +655,40 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-373"
+          "id": "busan-373",
+          "stayMinutes": 45
         },
         {
           "kind": "food",
-          "id": "2899"
+          "id": "2899",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-2274"
+          "id": "busan-2274",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "1628"
+          "id": "1628",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "fa05",
@@ -480,17 +704,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-286"
+          "id": "busan-286",
+          "stayMinutes": 40
         },
         {
           "kind": "destination",
-          "id": "busan-1422"
+          "id": "busan-1422",
+          "stayMinutes": 80
         },
         {
-          "kind": "destination",
-          "id": "busan-326"
+          "kind": "food",
+          "id": "960",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "케이블카는 왕복 이용을 가정한 체류시간입니다. 지도 선은 지상 연결만 표시하며 운행·탑승·기상·티켓을 확인하세요.",
+        "en": "The stay allows for a return cable-car ride. The map shows ground connections only; check operations, boarding, weather and tickets.",
+        "ja": "滞在時間はケーブルカー往復利用の目安です。地図は地上の接続のみ。運行、乗場、天候、チケットを確認してください。",
+        "zh-CN": "停留时间按缆车往返预留。地图仅显示地面连接，请确认运营、乘车点、天气与门票。",
+        "zh-TW": "停留時間以纜車往返預留。地圖僅顯示地面連接，請確認營運、搭乘處、天候與門票。"
+      }
     },
     {
       "id": "fa06",
@@ -506,17 +748,40 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-276"
+          "id": "busan-276",
+          "stayMinutes": 80
         },
         {
           "kind": "food",
-          "id": "204"
+          "id": "204",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-1731"
+          "id": "busan-1731",
+          "stayMinutes": 40
+        },
+        {
+          "kind": "food",
+          "id": "1459",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "아동 메뉴·알레르기·연령 제한은 매장과 시설에 직접 확인하세요.",
+        "en": "Confirm children’s menus, allergies and age restrictions directly with each venue.",
+        "ja": "子ども用メニュー、アレルギー、年齢制限は各施設へ直接確認してください。",
+        "zh-CN": "儿童菜单、过敏原及年龄限制请直接向场所确认。",
+        "zh-TW": "兒童菜單、過敏原及年齡限制請直接向場館確認。"
+      }
     },
     {
       "id": "fa07",
@@ -532,23 +797,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-304"
+          "id": "busan-1671",
+          "stayMinutes": 90
         },
         {
           "kind": "destination",
-          "id": "busan-1671"
+          "id": "busan-304",
+          "stayMinutes": 45
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "kind": "food",
+          "id": "1118",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "아동 메뉴·알레르기·연령 제한은 매장과 시설에 직접 확인하세요.",
+        "en": "Confirm children’s menus, allergies and age restrictions directly with each venue.",
+        "ja": "子ども用メニュー、アレルギー、年齢制限は各施設へ直接確認してください。",
+        "zh-CN": "儿童菜单、过敏原及年龄限制请直接向场所确认。",
+        "zh-TW": "兒童菜單、過敏原及年齡限制請直接向場館確認。"
+      }
     },
     {
       "id": "fa08",
@@ -564,91 +841,133 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-344"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "id": "busan-344",
+          "stayMinutes": 90
         },
         {
           "kind": "food",
-          "id": "2371"
+          "id": "1507",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "food",
+          "id": "2371",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "fa09",
       "category": "family",
       "titles": {
-        "ko": "범어사 천천히",
-        "en": "A Gentle Temple Day",
-        "ja": "梵魚寺をゆっくり巡る",
-        "zh-CN": "慢游梵鱼寺",
-        "zh-TW": "慢遊梵魚寺"
+        "ko": "범어사와 온천장 나들이",
+        "en": "Beomeosa & Oncheonjang Day",
+        "ja": "梵魚寺と温泉場のお出かけ",
+        "zh-CN": "梵鱼寺与温泉场一日游",
+        "zh-TW": "梵魚寺與溫泉場一日遊"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-402"
+          "id": "busan-2314",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "destination",
+          "id": "busan-402",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "2884"
+          "id": "2884",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "1816"
+          "id": "1816",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "사찰 예절과 실내 휴관일을 확인하고 걷기 편한 신발을 준비하세요.",
+        "en": "Check temple etiquette and indoor closing days, and wear comfortable shoes.",
+        "ja": "寺院のマナーと屋内施設の休館日を確認し、歩きやすい靴でお越しください。",
+        "zh-CN": "请确认寺庙礼仪及室内设施休馆日，穿着适合步行的鞋。",
+        "zh-TW": "請確認寺廟禮儀與室內設施休館日，穿著適合步行的鞋。"
+      }
     },
     {
       "id": "fa10",
       "category": "family",
       "titles": {
-        "ko": "송정 바다와 열차",
-        "en": "Songjeong Beach Train",
-        "ja": "松亭の海と列車",
-        "zh-CN": "松亭海滨与列车",
-        "zh-TW": "松亭海濱與列車"
+        "ko": "송정 해변과 가족 식사",
+        "en": "Songjeong Beach & Family Bites",
+        "ja": "松亭ビーチと家族ごはん",
+        "zh-CN": "松亭海滩与家庭美食",
+        "zh-TW": "松亭海灘與家庭美食"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-280"
+          "id": "busan-280",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "열차·캡슐 예약과 돌아오는 교통 확인",
-            "en": "Check train or capsule reservations and return travel",
-            "ja": "列車・カプセルの予約と帰路を確認",
-            "zh-CN": "确认列车或胶囊车预约与返程交通",
-            "zh-TW": "確認列車或膠囊車預約與返程交通"
-          }
+          "kind": "food",
+          "id": "1477",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-348"
+          "id": "busan-2095",
+          "stayMinutes": 30
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "kind": "food",
+          "id": "1460",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "관광·식사·휴식을 함께 계획한 가족 나들이입니다. 표시된 메뉴와 주차 정보를 확인해 가족에게 맞는 속도로 즐기세요.",
+        "en": "A family day with time for sights, a meal and breaks. Use the listed menus and parking information to plan around your family’s needs.",
+        "ja": "観光・食事・休憩を組み合わせた家族のお出かけ。掲載メニューと駐車場情報を確認し、家族のペースで楽しみましょう。",
+        "zh-CN": "结合观光、用餐和休息的家庭出游。请参考菜单与停车信息，按家人的节奏安排行程。",
+        "zh-TW": "結合觀光、用餐與休息的家庭出遊。請參考菜單與停車資訊，依家人的步調安排行程。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "da01",
@@ -663,94 +982,129 @@
       "status": "editorial-idea",
       "steps": [
         {
-          "kind": "destination",
-          "id": "busan-285"
+          "kind": "food",
+          "id": "212",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "gwangalli"
+          "id": "busan-285",
+          "stayMinutes": 40
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "kind": "destination",
+          "id": "gwangalli",
+          "stayMinutes": 50
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "da02",
       "category": "date",
       "titles": {
-        "ko": "미포에서 청사포",
-        "en": "Coastal Capsule Date",
-        "ja": "尾浦から青沙浦へ",
-        "zh-CN": "尾浦到青沙浦",
-        "zh-TW": "尾浦到青沙浦"
+        "ko": "해운대 아트와 달맞이 차",
+        "en": "Haeundae Art & Dalmaji Tea",
+        "ja": "海雲台アートとタルマジのお茶",
+        "zh-CN": "海云台艺术与迎月品茶",
+        "zh-TW": "海雲臺藝術與迎月品茶"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-348"
+          "id": "busan-373",
+          "stayMinutes": 45
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "열차·캡슐 예약과 돌아오는 교통 확인",
-            "en": "Check train or capsule reservations and return travel",
-            "ja": "列車・カプセルの予約と帰路を確認",
-            "zh-CN": "确认列车或胶囊车预约与返程交通",
-            "zh-TW": "確認列車或膠囊車預約與返程交通"
-          }
+          "kind": "destination",
+          "id": "busan-2753",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "kind": "food",
+          "id": "1845",
+          "stayMinutes": 50
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "계단·경사·주거 골목이 있는 코스입니다. 유모차·휠체어 이동 가능 여부와 현장 출입을 확인하세요.",
+        "en": "Expect slopes, stairs or residential lanes. Check stroller/wheelchair access and local entry signs.",
+        "ja": "坂道・階段・住宅街の路地を含みます。ベビーカーや車椅子の通行と現地の立入案内を確認してください。",
+        "zh-CN": "路线包含坡道、台阶或住宅巷道。请确认婴儿车、轮椅通行条件及现场出入规定。",
+        "zh-TW": "路線包含坡道、階梯或住宅巷弄。請確認嬰兒車、輪椅通行條件與現場出入規定。"
+      }
     },
     {
       "id": "da03",
       "category": "date",
       "titles": {
-        "ko": "달맞이 차 한 잔",
-        "en": "Dalmaji Tea Afternoon",
-        "ja": "タルマジでお茶時間",
-        "zh-CN": "迎月路午后品茶",
-        "zh-TW": "迎月路午後品茶"
+        "ko": "마린시티 디저트 산책",
+        "en": "Marine City Dessert Walk",
+        "ja": "マリンシティのデザート散歩",
+        "zh-CN": "海洋城甜点漫步",
+        "zh-TW": "海洋城甜點漫步"
       },
       "status": "editorial-idea",
       "steps": [
         {
-          "kind": "food",
-          "id": "1845"
+          "kind": "destination",
+          "id": "busan-2121",
+          "stayMinutes": 45
         },
         {
           "kind": "destination",
-          "id": "busan-348"
+          "id": "busan-2274",
+          "stayMinutes": 50
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "food",
+          "id": "1628",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "destination",
+          "id": "busan-361",
+          "stayMinutes": 30
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "da04",
@@ -766,29 +1120,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-255"
+          "id": "busan-255",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "food",
+          "id": "920",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "kind": "destination",
+          "id": "busan-2140",
+          "stayMinutes": 35
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "계단·경사·주거 골목이 있는 코스입니다. 유모차·휠체어 이동 가능 여부와 현장 출입을 확인하세요.",
+        "en": "Expect slopes, stairs or residential lanes. Check stroller/wheelchair access and local entry signs.",
+        "ja": "坂道・階段・住宅街の路地を含みます。ベビーカーや車椅子の通行と現地の立入案内を確認してください。",
+        "zh-CN": "路线包含坡道、台阶或住宅巷道。请确认婴儿车、轮椅通行条件及现场出入规定。",
+        "zh-TW": "路線包含坡道、階梯或住宅巷弄。請確認嬰兒車、輪椅通行條件與現場出入規定。"
+      }
     },
     {
       "id": "da05",
@@ -803,18 +1163,36 @@
       "status": "editorial-idea",
       "steps": [
         {
-          "kind": "destination",
-          "id": "busan-286"
+          "kind": "food",
+          "id": "960",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-1422"
+          "id": "busan-286",
+          "stayMinutes": 45
         },
         {
           "kind": "destination",
-          "id": "busan-833"
+          "id": "busan-1422",
+          "stayMinutes": 80
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "케이블카는 왕복 이용을 가정한 체류시간입니다. 지도 선은 지상 연결만 표시하며 운행·탑승·기상·티켓을 확인하세요.",
+        "en": "The stay allows for a return cable-car ride. The map shows ground connections only; check operations, boarding, weather and tickets.",
+        "ja": "滞在時間はケーブルカー往復利用の目安です。地図は地上の接続のみ。運行、乗場、天候、チケットを確認してください。",
+        "zh-CN": "停留时间按缆车往返预留。地图仅显示地面连接，请确认运营、乘车点、天气与门票。",
+        "zh-TW": "停留時間以纜車往返預留。地圖僅顯示地面連接，請確認營運、搭乘處、天候與門票。"
+      }
     },
     {
       "id": "da06",
@@ -830,17 +1208,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-287"
+          "id": "busan-287",
+          "stayMinutes": 35
         },
         {
           "kind": "destination",
-          "id": "busan-1718"
+          "id": "busan-1718",
+          "stayMinutes": 40
         },
         {
           "kind": "destination",
-          "id": "busan-366"
+          "id": "busan-366",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "da07",
@@ -856,87 +1252,123 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-372"
+          "id": "busan-372",
+          "stayMinutes": 75
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "kind": "food",
+          "id": "1589",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-362"
+          "id": "busan-362",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "da08",
       "category": "date",
       "titles": {
-        "ko": "을숙도 미술 산책",
-        "en": "Eulsukdo Art Date",
-        "ja": "乙淑島のアート散歩",
-        "zh-CN": "乙淑岛艺术之旅",
-        "zh-TW": "乙淑島藝術之旅"
+        "ko": "을숙도 미술과 삼락 강변",
+        "en": "Eulsukdo Art & Samnak Riverside",
+        "ja": "乙淑島アートと三楽の川辺",
+        "zh-CN": "乙淑岛艺术与三乐河畔",
+        "zh-TW": "乙淑島藝術與三樂河畔"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-1671"
+          "id": "busan-1671",
+          "stayMinutes": 90
+        },
+        {
+          "kind": "food",
+          "id": "865",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-304"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "id": "busan-325",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "da09",
       "category": "date",
       "titles": {
-        "ko": "전포와 서면",
-        "en": "Jeonpo Evening Date",
-        "ja": "田浦と西面の夕べ",
-        "zh-CN": "田浦与西面之夜",
-        "zh-TW": "田浦與西面之夜"
+        "ko": "서면 아트와 케이크",
+        "en": "Seomyeon Art & Cake",
+        "ja": "西面アートとケーキ",
+        "zh-CN": "西面艺术与蛋糕",
+        "zh-TW": "西面藝術與蛋糕"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-1329"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "id": "busan-1653",
+          "stayMinutes": 45
         },
         {
           "kind": "food",
-          "id": "1636"
+          "id": "1447",
+          "stayMinutes": 50
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1185",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "실내 공간의 휴무·주문 마감과 주거 구간의 현장 안내를 확인하세요.",
+        "en": "Check indoor closure days, last orders and local guidance around residential streets.",
+        "ja": "屋内施設の定休日、ラストオーダー、住宅街の現地案内を確認してください。",
+        "zh-CN": "请确认室内场所休息日、最后点餐时间及住宅街区现场提示。",
+        "zh-TW": "請確認室內場館公休日、最後點餐時間與住宅街區現場提示。"
+      }
     },
     {
       "id": "da10",
@@ -951,30 +1383,36 @@
       "status": "editorial-idea",
       "steps": [
         {
+          "kind": "destination",
+          "id": "busan-2566",
+          "stayMinutes": 30
+        },
+        {
           "kind": "food",
-          "id": "2887"
+          "id": "1264",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
-            "en": "Choose a meal in this area; check hours and menu",
-            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
-            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
-            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
-          }
+          "kind": "food",
+          "id": "1627",
+          "stayMinutes": 50
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "풍경과 문화, 식사 또는 카페를 연결한 둘만의 시간입니다. 장소별 체류시간은 자유롭게 바꾸고 마지막 장소까지 여유를 남겨두세요.",
+        "en": "Make room for scenery, culture and a meal or café together. Adjust the suggested stay at each stop and leave time to enjoy the final place.",
+        "ja": "景色や文化、食事やカフェを楽しむ二人の時間。各スポットの滞在目安は自由に変えて、最後の場所までゆっくり楽しんでください。",
+        "zh-CN": "串联风景、文化与餐厅或咖啡馆的双人时光。各站停留时间可自由调整，为最后一站留些余裕。",
+        "zh-TW": "串聯風景、文化與餐廳或咖啡館的雙人時光。各站停留時間可自由調整，為最後一站留些餘裕。"
+      },
+      "tips": {
+        "ko": "실내 공간의 휴무·주문 마감과 주거 구간의 현장 안내를 확인하세요.",
+        "en": "Check indoor closure days, last orders and local guidance around residential streets.",
+        "ja": "屋内施設の定休日、ラストオーダー、住宅街の現地案内を確認してください。",
+        "zh-CN": "请确认室内场所休息日、最后点餐时间及住宅街区现场提示。",
+        "zh-TW": "請確認室內場館公休日、最後點餐時間與住宅街區現場提示。"
+      }
     },
     {
       "id": "fo01",
@@ -990,23 +1428,35 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1817"
+          "id": "1817",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "destination",
+          "id": "busan-1329",
+          "stayMinutes": 40
         },
         {
           "kind": "food",
-          "id": "1636"
+          "id": "1636",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "메뉴는 공공정보 원문 기준이며 판매·가격·대기시간을 보장하지 않습니다. 식이 제한은 주문 전에 확인하세요.",
+        "en": "Menus come from the public source; availability, prices and queue times are not guaranteed. Confirm dietary needs before ordering.",
+        "ja": "メニューは公開情報に基づき、販売状況・価格・待ち時間は保証されません。食事制限は注文前に確認してください。",
+        "zh-CN": "菜单依据公开资料，不保证供应、价格或排队时间。饮食限制请在点餐前确认。",
+        "zh-TW": "菜單依據公開資料，不保證供應、價格或排隊時間。飲食限制請在點餐前確認。"
+      }
     },
     {
       "id": "fo02",
@@ -1022,23 +1472,30 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1511"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "id": "1511",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "1459"
+          "id": "1459",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "메뉴는 공공정보 원문 기준이며 판매·가격·대기시간을 보장하지 않습니다. 식이 제한은 주문 전에 확인하세요.",
+        "en": "Menus come from the public source; availability, prices and queue times are not guaranteed. Confirm dietary needs before ordering.",
+        "ja": "メニューは公開情報に基づき、販売状況・価格・待ち時間は保証されません。食事制限は注文前に確認してください。",
+        "zh-CN": "菜单依据公开资料，不保证供应、价格或排队时间。饮食限制请在点餐前确认。",
+        "zh-TW": "菜單依據公開資料，不保證供應、價格或排隊時間。飲食限制請在點餐前確認。"
+      }
     },
     {
       "id": "fo03",
@@ -1054,23 +1511,35 @@
       "steps": [
         {
           "kind": "food",
-          "id": "2884"
+          "id": "2884",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "destination",
+          "id": "busan-397",
+          "stayMinutes": 45
         },
         {
           "kind": "food",
-          "id": "1816"
+          "id": "1816",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "메뉴는 공공정보 원문 기준이며 판매·가격·대기시간을 보장하지 않습니다. 식이 제한은 주문 전에 확인하세요.",
+        "en": "Menus come from the public source; availability, prices and queue times are not guaranteed. Confirm dietary needs before ordering.",
+        "ja": "メニューは公開情報に基づき、販売状況・価格・待ち時間は保証されません。食事制限は注文前に確認してください。",
+        "zh-CN": "菜单依据公开资料，不保证供应、价格或排队时间。饮食限制请在点餐前确认。",
+        "zh-TW": "菜單依據公開資料，不保證供應、價格或排隊時間。飲食限制請在點餐前確認。"
+      }
     },
     {
       "id": "fo04",
@@ -1086,23 +1555,35 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1609"
+          "id": "1609",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "destination",
+          "id": "busan-2753",
+          "stayMinutes": 45
         },
         {
           "kind": "food",
-          "id": "1845"
+          "id": "1845",
+          "stayMinutes": 50
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "계단·경사·주거 골목이 있는 코스입니다. 유모차·휠체어 이동 가능 여부와 현장 출입을 확인하세요.",
+        "en": "Expect slopes, stairs or residential lanes. Check stroller/wheelchair access and local entry signs.",
+        "ja": "坂道・階段・住宅街の路地を含みます。ベビーカーや車椅子の通行と現地の立入案内を確認してください。",
+        "zh-CN": "路线包含坡道、台阶或住宅巷道。请确认婴儿车、轮椅通行条件及现场出入规定。",
+        "zh-TW": "路線包含坡道、階梯或住宅巷弄。請確認嬰兒車、輪椅通行條件與現場出入規定。"
+      }
     },
     {
       "id": "fo05",
@@ -1118,23 +1599,35 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1837"
+          "id": "1837",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "권역 간 차량·택시 이동 계획",
-            "en": "Plan a car or taxi transfer between areas",
-            "ja": "エリア間は車・タクシー移動を計画",
-            "zh-CN": "规划区域间驾车或出租车交通",
-            "zh-TW": "規劃區域間開車或計程車交通"
-          }
+          "kind": "destination",
+          "id": "busan-256",
+          "stayMinutes": 45
         },
         {
           "kind": "food",
-          "id": "1445"
+          "id": "1445",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "실내 공간의 휴무·주문 마감과 주거 구간의 현장 안내를 확인하세요.",
+        "en": "Check indoor closure days, last orders and local guidance around residential streets.",
+        "ja": "屋内施設の定休日、ラストオーダー、住宅街の現地案内を確認してください。",
+        "zh-CN": "请确认室内场所休息日、最后点餐时间及住宅街区现场提示。",
+        "zh-TW": "請確認室內場館公休日、最後點餐時間與住宅街區現場提示。"
+      }
     },
     {
       "id": "fo06",
@@ -1150,23 +1643,30 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1515"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "id": "1515",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "926"
+          "id": "926",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "메뉴는 공공정보 원문 기준이며 판매·가격·대기시간을 보장하지 않습니다. 식이 제한은 주문 전에 확인하세요.",
+        "en": "Menus come from the public source; availability, prices and queue times are not guaranteed. Confirm dietary needs before ordering.",
+        "ja": "メニューは公開情報に基づき、販売状況・価格・待ち時間は保証されません。食事制限は注文前に確認してください。",
+        "zh-CN": "菜单依据公开资料，不保证供应、价格或排队时间。饮食限制请在点餐前确认。",
+        "zh-TW": "菜單依據公開資料，不保證供應、價格或排隊時間。飲食限制請在點餐前確認。"
+      }
     },
     {
       "id": "fo07",
@@ -1182,59 +1682,74 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1506"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "id": "1506",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "1452"
+          "id": "1452",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "메뉴는 공공정보 원문 기준이며 판매·가격·대기시간을 보장하지 않습니다. 식이 제한은 주문 전에 확인하세요.",
+        "en": "Menus come from the public source; availability, prices and queue times are not guaranteed. Confirm dietary needs before ordering.",
+        "ja": "メニューは公開情報に基づき、販売状況・価格・待ち時間は保証されません。食事制限は注文前に確認してください。",
+        "zh-CN": "菜单依据公开资料，不保证供应、价格或排队时间。饮食限制请在点餐前确认。",
+        "zh-TW": "菜單依據公開資料，不保證供應、價格或排隊時間。飲食限制請在點餐前確認。"
+      }
     },
     {
       "id": "fo08",
       "category": "food",
       "titles": {
-        "ko": "기장 밀면과 바다 커피",
-        "en": "Gijang Noodles & Coast",
-        "ja": "機張のミルミョンと海辺",
-        "zh-CN": "机张小麦面与海岸",
-        "zh-TW": "機張小麥麵與海岸"
+        "ko": "기장 밀면과 소금빵",
+        "en": "Gijang Noodles & Salt Bread",
+        "ja": "機張ミルミョンと塩パン",
+        "zh-CN": "机张小麦面与盐面包",
+        "zh-TW": "機張小麥麵與鹽麵包"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "food",
-          "id": "1221"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "권역 간 차량·택시 이동 계획",
-            "en": "Plan a car or taxi transfer between areas",
-            "ja": "エリア間は車・タクシー移動を計画",
-            "zh-CN": "规划区域间驾车或出租车交通",
-            "zh-TW": "規劃區域間開車或計程車交通"
-          }
+          "id": "1221",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-262"
+          "id": "busan-757",
+          "stayMinutes": 40
         },
         {
           "kind": "food",
-          "id": "174"
+          "id": "1448",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "fo09",
@@ -1250,55 +1765,79 @@
       "steps": [
         {
           "kind": "food",
-          "id": "1108"
+          "id": "1108",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-354"
+          "id": "busan-354",
+          "stayMinutes": 60
         },
         {
           "kind": "food",
-          "id": "2371"
+          "id": "2371",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "fo10",
       "category": "food",
       "titles": {
-        "ko": "수영 국밥과 동네 디저트",
-        "en": "Suyeong Soup Trail",
-        "ja": "水営のクッパ巡り",
-        "zh-CN": "水营汤饭之旅",
-        "zh-TW": "水營湯飯之旅"
+        "ko": "남천 국밥과 단팥 디저트",
+        "en": "Namcheon Soup & Sweet Red Beans",
+        "ja": "南川スープと小豆スイーツ",
+        "zh-CN": "南川汤饭与红豆甜点",
+        "zh-TW": "南川湯飯與紅豆甜點"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "food",
-          "id": "1921"
+          "id": "1921",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "food",
+          "id": "959",
+          "stayMinutes": 45
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "디저트 가게 선정 중·확정 코스 아님",
-            "en": "Dessert venue not selected yet; this idea is incomplete",
-            "ja": "デザート店は選定中・未完成のアイデアです",
-            "zh-CN": "甜品店尚待确定，此构想未完成",
-            "zh-TW": "甜品店尚待確定，此構想未完成"
-          }
+          "kind": "destination",
+          "id": "gwangalli",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "실제 식당의 식사 메뉴와 디저트 가게를 연결했습니다. 메뉴와 휴무일을 먼저 확인하고 대기가 길면 다음 방문 시간을 조정하세요.",
+        "en": "Pair a main meal with a real dessert stop. Read the source menus and days off first, and adjust your timing if there is a queue.",
+        "ja": "食事のお店と実在するデザートのお店を組み合わせました。メニューと定休日を先に確認し、行列があれば時間を調整してください。",
+        "zh-CN": "将正餐餐厅与甜点店串联起来。先查看原始菜单和休息日，如遇排队请灵活调整时间。",
+        "zh-TW": "將正餐餐廳與甜點店串聯起來。先查看原始菜單與公休日，遇到排隊時請彈性調整時間。"
+      },
+      "tips": {
+        "ko": "메뉴는 공공정보 원문 기준이며 판매·가격·대기시간을 보장하지 않습니다. 식이 제한은 주문 전에 확인하세요.",
+        "en": "Menus come from the public source; availability, prices and queue times are not guaranteed. Confirm dietary needs before ordering.",
+        "ja": "メニューは公開情報に基づき、販売状況・価格・待ち時間は保証されません。食事制限は注文前に確認してください。",
+        "zh-CN": "菜单依据公开资料，不保证供应、价格或排队时间。饮食限制请在点餐前确认。",
+        "zh-TW": "菜單依據公開資料，不保證供應、價格或排隊時間。飲食限制請在點餐前確認。"
+      }
     },
     {
       "id": "cu01",
@@ -1314,23 +1853,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-286"
+          "id": "busan-286",
+          "stayMinutes": 45
         },
         {
           "kind": "destination",
-          "id": "busan-326"
+          "id": "busan-833",
+          "stayMinutes": 45
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "출입·운영·날씨를 방문 전 확인",
-            "en": "Check access, opening and weather before visiting",
-            "ja": "訪問前に立入・営業・天候を確認",
-            "zh-CN": "出发前确认开放情况、营业与天气",
-            "zh-TW": "出發前確認開放情況、營業與天氣"
-          }
+          "kind": "destination",
+          "id": "busan-326",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "cu02",
@@ -1346,23 +1897,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-1718"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "id": "busan-2157",
+          "stayMinutes": 50
         },
         {
           "kind": "destination",
-          "id": "busan-366"
+          "id": "busan-1718",
+          "stayMinutes": 40
+        },
+        {
+          "kind": "destination",
+          "id": "busan-366",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "cu03",
@@ -1378,23 +1941,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-333"
+          "id": "busan-333",
+          "stayMinutes": 45
         },
         {
           "kind": "destination",
-          "id": "busan-2173"
+          "id": "busan-2173",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "출입·운영·날씨를 방문 전 확인",
-            "en": "Check access, opening and weather before visiting",
-            "ja": "訪問前に立入・営業・天候を確認",
-            "zh-CN": "出发前确认开放情况、营业与天气",
-            "zh-TW": "出發前確認開放情況、營業與天氣"
-          }
+          "kind": "destination",
+          "id": "busan-1718",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "실내 공간의 휴무·주문 마감과 주거 구간의 현장 안내를 확인하세요.",
+        "en": "Check indoor closure days, last orders and local guidance around residential streets.",
+        "ja": "屋内施設の定休日、ラストオーダー、住宅街の現地案内を確認してください。",
+        "zh-CN": "请确认室内场所休息日、最后点餐时间及住宅街区现场提示。",
+        "zh-TW": "請確認室內場館公休日、最後點餐時間與住宅街區現場提示。"
+      }
     },
     {
       "id": "cu04",
@@ -1410,23 +1985,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-372"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "id": "busan-301",
+          "stayMinutes": 45
         },
         {
           "kind": "destination",
-          "id": "busan-301"
+          "id": "busan-372",
+          "stayMinutes": 75
+        },
+        {
+          "kind": "food",
+          "id": "1589",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "실내 공간의 휴무·주문 마감과 주거 구간의 현장 안내를 확인하세요.",
+        "en": "Check indoor closure days, last orders and local guidance around residential streets.",
+        "ja": "屋内施設の定休日、ラストオーダー、住宅街の現地案内を確認してください。",
+        "zh-CN": "请确认室内场所休息日、最后点餐时间及住宅街区现场提示。",
+        "zh-TW": "請確認室內場館公休日、最後點餐時間與住宅街區現場提示。"
+      }
     },
     {
       "id": "cu05",
@@ -1442,29 +2029,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-2594"
+          "id": "busan-266",
+          "stayMinutes": 30
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "휴식 시간",
-            "en": "Take a break",
-            "ja": "ひと休み",
-            "zh-CN": "休息时间",
-            "zh-TW": "休息時間"
-          }
+          "kind": "destination",
+          "id": "busan-2594",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "출입·운영·날씨를 방문 전 확인",
-            "en": "Check access, opening and weather before visiting",
-            "ja": "訪問前に立入・営業・天候を確認",
-            "zh-CN": "出发前确认开放情况、营业与天气",
-            "zh-TW": "出發前確認開放情況、營業與天氣"
-          }
+          "kind": "food",
+          "id": "245",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "계단·경사·주거 골목이 있는 코스입니다. 유모차·휠체어 이동 가능 여부와 현장 출입을 확인하세요.",
+        "en": "Expect slopes, stairs or residential lanes. Check stroller/wheelchair access and local entry signs.",
+        "ja": "坂道・階段・住宅街の路地を含みます。ベビーカーや車椅子の通行と現地の立入案内を確認してください。",
+        "zh-CN": "路线包含坡道、台阶或住宅巷道。请确认婴儿车、轮椅通行条件及现场出入规定。",
+        "zh-TW": "路線包含坡道、階梯或住宅巷弄。請確認嬰兒車、輪椅通行條件與現場出入規定。"
+      }
     },
     {
       "id": "cu06",
@@ -1480,23 +2073,40 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-369"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "id": "busan-369",
+          "stayMinutes": 30
         },
         {
           "kind": "destination",
-          "id": "busan-256"
+          "id": "busan-256",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "food",
+          "id": "1905",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1179",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "계단·경사·주거 골목이 있는 코스입니다. 유모차·휠체어 이동 가능 여부와 현장 출입을 확인하세요.",
+        "en": "Expect slopes, stairs or residential lanes. Check stroller/wheelchair access and local entry signs.",
+        "ja": "坂道・階段・住宅街の路地を含みます。ベビーカーや車椅子の通行と現地の立入案内を確認してください。",
+        "zh-CN": "路线包含坡道、台阶或住宅巷道。请确认婴儿车、轮椅通行条件及现场出入规定。",
+        "zh-TW": "路線包含坡道、階梯或住宅巷弄。請確認嬰兒車、輪椅通行條件與現場出入規定。"
+      }
     },
     {
       "id": "cu07",
@@ -1512,29 +2122,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-2133"
+          "id": "busan-2133",
+          "stayMinutes": 40
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "destination",
+          "id": "busan-278",
+          "stayMinutes": 60
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "출입·운영·날씨를 방문 전 확인",
-            "en": "Check access, opening and weather before visiting",
-            "ja": "訪問前に立入・営業・天候を確認",
-            "zh-CN": "出发前确认开放情况、营业与天气",
-            "zh-TW": "出發前確認開放情況、營業與天氣"
-          }
+          "kind": "food",
+          "id": "1459",
+          "stayMinutes": 45
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     },
     {
       "id": "cu08",
@@ -1550,23 +2166,35 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-2612"
+          "id": "busan-2206",
+          "stayMinutes": 40
         },
         {
           "kind": "destination",
-          "id": "busan-1798"
+          "id": "busan-2612",
+          "stayMinutes": 45
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "출입·운영·날씨를 방문 전 확인",
-            "en": "Check access, opening and weather before visiting",
-            "ja": "訪問前に立入・営業・天候を確認",
-            "zh-CN": "出发前确认开放情况、营业与天气",
-            "zh-TW": "出發前確認開放情況、營業與天氣"
-          }
+          "kind": "destination",
+          "id": "busan-1798",
+          "stayMinutes": 60
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "야외 산책과 실내 관람의 운영시간은 다를 수 있습니다. 우천 시 산책을 줄이고 휴관 여부를 확인하세요.",
+        "en": "Outdoor walks and indoor visits may have different opening hours. Shorten walks in rain and check closure days.",
+        "ja": "屋外散策と屋内見学では利用時間が異なります。雨天は散策を短くし、休館日を確認してください。",
+        "zh-CN": "室外步道与室内参观时间可能不同。下雨时请缩短步行并确认休馆日。",
+        "zh-TW": "戶外步道與室內參觀時間可能不同。下雨時請縮短步行並確認休館日。"
+      }
     },
     {
       "id": "cu09",
@@ -1582,65 +2210,84 @@
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-2081"
+          "id": "busan-2086",
+          "stayMinutes": 45
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "짧은 산책·개방 구간 확인",
-            "en": "A short walk; check open paths locally",
-            "ja": "短い散歩・通行可能な道を現地で確認",
-            "zh-CN": "短途散步，请确认道路开放情况",
-            "zh-TW": "短途散步，請確認道路開放情況"
-          }
+          "kind": "destination",
+          "id": "busan-2081",
+          "stayMinutes": 50
         },
         {
           "kind": "food",
-          "id": "1513"
+          "id": "1617",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "destination",
+          "id": "busan-415",
+          "stayMinutes": 30
         }
-      ]
+      ],
+      "mode": "walking",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "실내 공간의 휴무·주문 마감과 주거 구간의 현장 안내를 확인하세요.",
+        "en": "Check indoor closure days, last orders and local guidance around residential streets.",
+        "ja": "屋内施設の定休日、ラストオーダー、住宅街の現地案内を確認してください。",
+        "zh-CN": "请确认室内场所休息日、最后点餐时间及住宅街区现场提示。",
+        "zh-TW": "請確認室內場館公休日、最後點餐時間與住宅街區現場提示。"
+      }
     },
     {
       "id": "cu10",
       "category": "dallabusan",
       "titles": {
-        "ko": "가덕도 항구 하루",
-        "en": "Gadeokdo Harbor Day",
-        "ja": "加徳島の港を巡る",
-        "zh-CN": "加德岛港口一日",
-        "zh-TW": "加德島港口一日"
+        "ko": "가덕도 전망과 대항항",
+        "en": "Gadeok Views & Daehang Harbour",
+        "ja": "加徳島の眺望と大項港",
+        "zh-CN": "加德岛观景与大项港",
+        "zh-TW": "加德島觀景與大項港"
       },
       "status": "editorial-idea",
       "steps": [
         {
           "kind": "destination",
-          "id": "busan-334"
+          "id": "busan-832",
+          "stayMinutes": 30
         },
         {
-          "kind": "note",
-          "texts": {
-            "ko": "권역 간 차량·택시 이동 계획",
-            "en": "Plan a car or taxi transfer between areas",
-            "ja": "エリア間は車・タクシー移動を計画",
-            "zh-CN": "规划区域间驾车或出租车交通",
-            "zh-TW": "規劃區域間開車或計程車交通"
-          }
+          "kind": "food",
+          "id": "1458",
+          "stayMinutes": 60
         },
         {
           "kind": "destination",
-          "id": "busan-1014"
-        },
-        {
-          "kind": "note",
-          "texts": {
-            "ko": "출입·운영·날씨를 방문 전 확인",
-            "en": "Check access, opening and weather before visiting",
-            "ja": "訪問前に立入・営業・天候を確認",
-            "zh-CN": "出发前确认开放情况、营业与天气",
-            "zh-TW": "出發前確認開放情況、營業與天氣"
-          }
+          "id": "busan-2587",
+          "stayMinutes": 40
         }
-      ]
+      ],
+      "mode": "driving",
+      "intro": {
+        "ko": "유명 명소 밖의 해안·마을·문화 공간을 더 천천히 살펴봅니다. 주민의 생활공간과 현장 출입 안내를 존중하며 여행하세요.",
+        "en": "Slow down around coastal places, neighbourhoods and cultural spaces beyond the usual highlights. Respect residents and local access signs.",
+        "ja": "定番の名所から少し離れ、海辺や街、文化空間をゆっくり巡ります。住民の暮らしと現地の立入案内を尊重してください。",
+        "zh-CN": "放慢脚步，探索热门景点之外的海岸、街区和文化空间。请尊重居民生活及现场出入规定。",
+        "zh-TW": "放慢腳步，探索熱門景點之外的海岸、街區與文化空間。請尊重居民生活及現場出入規定。"
+      },
+      "tips": {
+        "ko": "해안 구간은 기상·바람·출입 통제를 확인하고 어두워지기 전에 이동하세요.",
+        "en": "Check coastal weather, wind and access restrictions; move on before it gets dark.",
+        "ja": "海沿いは天候・風・通行規制を確認し、暗くなる前に移動してください。",
+        "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
+        "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
+      }
     }
   ]
 }

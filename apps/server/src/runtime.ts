@@ -1,3 +1,4 @@
+import {loadCourseRoutes} from './config/course-routes.js';
 import { loadCourseCatalog } from './config/courses.js';
 import { createCourseService } from './services/courses.js';
 import { registerCourseRoutes } from './routes/courses.js';
@@ -35,7 +36,8 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const foodSnapshot = loadGuideSnapshot('food');
   const foodVisibility = foodSnapshot ? loadFoodVisibility(foodSnapshot) : undefined;
   const foodPhotos = foodSnapshot && foodVisibility ? loadFoodPhotoOverrides(foodSnapshot,foodVisibility) : undefined;
-  const parking = createParkingDirectoryService(loadParkingDirectory(), buildParkingAnchors(destinationConfig,foodSnapshot,loadParkingAttractions()));
+  const parkingAnchors=buildParkingAnchors(destinationConfig,foodSnapshot,loadParkingAttractions());
+  const parking = createParkingDirectoryService(loadParkingDirectory(),parkingAnchors);
   const attraction = loadAttractionConfig();
   const offerConfig = loadOfferCatalogConfig();
   const offers = createOfferService(offerConfig);
@@ -46,7 +48,7 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const destinationService=createDestinationService(destinationConfig,offers,undefined,localization);
   const guideService=createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos);
   const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, destinationService, guideService,parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
-  registerCourseRoutes(app,createCourseService(loadCourseCatalog(),destinationService,guideService));
+  registerCourseRoutes(app,createCourseService(loadCourseCatalog(),destinationService,guideService,parkingAnchors,loadCourseRoutes()));
   app.addHook('onClose', async () => { db.close(); });
   return app;
 }

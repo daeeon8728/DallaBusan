@@ -96,7 +96,7 @@ test('popup opens courses while the original destination and inspiration pages r
 test('family parking is informational and course failure retries without fabricating content', async ({page}) => {
   await page.goto('/courses/fa01?locale=en');
   await expect(page.locator('.course-warning')).toHaveCount(2);
-  await page.getByTestId('nearby-parking').locator('summary').click(); await expect(page.locator('.parking-notice')).toBeVisible();
+  await page.getByTestId('nearby-parking').first().locator('summary').click(); await expect(page.locator('.parking-notice')).toBeVisible();
   await page.route('**/api/courses?*',route=>route.fulfill({status:503,json:{error:'Unavailable'}}));
   await page.goto('/courses?locale=en'); await expect(page.locator('.courses-page [role="alert"]')).toContainText('could not be loaded');
   await expect(page.getByTestId('course-card')).toHaveCount(0); await page.unroute('**/api/courses?*');
