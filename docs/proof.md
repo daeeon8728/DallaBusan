@@ -1419,3 +1419,33 @@ E2E는 외부 이미지·OSM 타일·GTM/외부 링크 대역을 사용한다. �
 
 - 심사 접수 메타데이터 갱신 후 최종 lint/typecheck/광고 단위3개/npm run build 모두 종료0. 빌드 산출물 해시는 이전 비활성 상태와 동일하며 광고 실행 게이트를 켜지 않았다. 이 상태 기록 변경 뒤 브라우저93개 전체를 반복하지 않았고, 승인 상태별 차단 단위 검사를 재수행했다.
 - 이번 작업의 신규 제휴상품/포털 수집0,기존 원본/공개 제외/가격·찜·장바구니 데이터를 변경하지 않았다. 활성 광고·CMP 계정 설정·실제 광고 수익 검증은 미실행(심사 및 운영자 동의 검토 미완료). 구현/검증 준비와 외부 심사 대기를 구분한다.
+
+
+## 2026-11-24 상품 상세창 확대·바깥 닫기·관련 상품
+
+요청: 작은 상품 창을 확대하고 스크롤 후에도 X/바깥 여백 클릭으로 닫으며, 하단에 관련 상품을 표시한다. 구현·운영 기준은 [검토 문서](offer-dialog-review-2026-11-24.md)에 기록했다.
+
+변경 파일: packages/domain/src/offers.ts(최대6개 관련 DTO), apps/server/src/services/offers.ts(현재 공개 상품 선정), services/destinations.ts(검수 명소 관계), routes/offers.ts(관련 조회 API), apps/web/src/Offer.tsx(단일 지속 dialog·포인터/초점·새 상세 조회·관련 카드), offer-dialog.css/main.tsx(최대1120px·모바일·고정 닫기·스크롤), i18n/offer-dialog.ts(5개 언어), tests/integration/offers.test.ts와 tests/e2e/offer-dialog.spec.ts, 기존 cart/exchange E2E의 상세 본문 한정, AGENTS.md/catalog-plan.md/검토 문서/본 기록/시연 캡처.
+
+| 검증 명령 | 종료/관찰 결과 |
+| --- | --- |
+| npm run lint | 0, 최종 UI 수정 후 재실행0 |
+| npm run typecheck | 0, server/web/domain/tools strict |
+| npm run test -- --run | 0, 34파일393개 통과 |
+| npm run check:providers | 0, 118개 소스 경계 통과 |
+| npm run build | 0, domain→server→web, 최종 UI 수정 후 재빌드0 |
+| npm run test:e2e -- tests/e2e/offer-dialog.spec.ts | 0, 3개 화면12개 통과 |
+| npm run test:e2e | 0, 최종 빌드의 전체216개 통과, 4.5분 |
+| node var/imports/offer-dialog-20261124/dist-smoke.mjs | 0, dist start의7개 페이지200·5개 언어 관련 API 각6개·catalog402 |
+| node var/imports/offer-dialog-20261124/package-check.mjs | 0, 실제 Vercel 빌더의 독립 함수833파일, require(ESM) 제한 플래그로 실행, 관련5개 언어 각6개와 각 항목 최신 상세 DTO 동일 검증 |
+| git diff --check | 0, 기존 CRLF→LF 안내만 존재 |
+
+실패 검사/무시한 오류 없음. 초기 CSS import 순서가 전역의 기존560px 규칙보다 뒤에 오도록 수정한 후 실제 너비를 브라우저로 검증했다. 단위 테스트 이후의 최종 제품 변경은 영문 장식 문구1줄 제거이며, 최종 lint/build/전체216개 E2E를 재실행했다. Vite의 기존 Zod 주석·500KB 청크 안내 및 Node SQLite/색상 경고는 비차단이며 검사를 비활성화하지 않았다.
+
+브라우저에서360/768/1280px, 상세 확대·고정44px X·끝까지 스크롤·바깥 포인터 시작/끝으로 닫기·본문 클릭/밖으로 드래그는 유지·Escape·초점/배경 스크롤 복구·동일 창 관련 전환·로딩/오류에서도 닫기·관련 오류 재시도·5개 언어·가로 넘침 없음 확인. 기존 cart/가격 검사는 관련 카드의 별도 버튼/가격과 구분해 .dialog-body/.dialog-price만 지정했다.
+
+시연 캡처: [PC 상세](design/offer-dialog-2026-11-24/desktop-product-details.png), [PC 하단](design/offer-dialog-2026-11-24/desktop-related-products.png), [모바일 상세](design/offer-dialog-2026-11-24/mobile-product-details.png), [모바일 하단](design/offer-dialog-2026-11-24/mobile-related-products.png). 외부 사진은 실제 상품 사진을 대체하지 않고 **브라우저 테스트에서만 단색 이미지 대역**이며 개인정보/실계정 화면이 아니다.
+
+실제/대역 구분: 실제 로컬 서버·Vercel 빌더/함수 산출물·기존 검수 공개 스냅샷을 사용했다. E2E의 외부 이미지/GTM/링크는 대역, NODE_ENV=test의 환율은 테스트 대역이다. 실제 제휴 클릭/예약/결제/광고 노출·유료 API·공공 데이터 재수집은 미실행(범위 아님). 이번 신규 포털 수집/제휴 발급0, 공개402/메인398/명소220/맛집514/코스40 및 기존 비공개 정책·상품 가격·저장/장바구니 자료는 변경하지 않았다. 깨끗한 의존성 재설치는 lockfile/의존성 변경이 없어 생략했으며 이전 검증 설치본에서 현재 소스를 실제 함수로 다시 패키징했다.
+
+공개 배포 및 실사이트 최종 결과는 이어서 기록한다.

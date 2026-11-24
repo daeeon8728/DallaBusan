@@ -70,6 +70,10 @@ export function createDestinationService(input: DestinationConfig, offers: Offer
         page: query.page, pages: Math.ceil(selected.length / query.limit),
       });
     },
+    relatedOfferIdsForOffer(id:string){
+      return new Set(config.destinations.filter(item=>item.related.some(link=>link.offerId===id))
+        .flatMap(item=>item.related.map(link=>link.offerId)).filter(candidate=>candidate!==id));
+    },
     relatedOfferIdsForSearch(query: string) {
       const needle = normalize(query);
       if (!needle) return new Set<string>();

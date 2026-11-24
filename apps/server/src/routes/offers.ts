@@ -11,6 +11,14 @@ export function registerOfferRoutes(app: FastifyInstance, offers: OfferService, 
     if (!query.success) return reply.code(400).send({ error: 'invalid-offer-query' });
     return offers.list(query.data, destinations?.relatedOfferIdsForSearch(query.data.q));
   });
+  app.get('/api/offers/:id/related',async(request,reply)=>{
+    reply.header('Cache-Control','no-store');
+    const params=z.strictObject({id:z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/)}).safeParse(request.params);
+    const query=z.strictObject({locale:LocaleSchema.default('en')}).safeParse(request.query);
+    if(!params.success||!query.success)return reply.code(400).send({error:'invalid-offer-query'});
+    const result=offers.related(params.data.id,query.data.locale,destinations?.relatedOfferIdsForOffer(params.data.id));
+    return result??reply.code(404).send({error:'offer-unavailable'});
+  });
   app.get('/api/offers/:id', async (request, reply) => {
     reply.header('Cache-Control', 'no-store');
     const params = z.strictObject({ id: z.string().regex(/^[a-zA-Z0-9_-]{1,100}$/) }).safeParse(request.params);

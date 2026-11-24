@@ -1,5 +1,5 @@
 import { PRODUCT_PHOTO_LABELS } from '../config/localization.js';
-import { PublicOfferSchema, OffersResponseSchema, OfferQuerySchema, SafeHttpsSchema, type OfferQuery, type PublicOffer, type Locale } from '@trip-fit/domain';
+import { RelatedOffersResponseSchema, PublicOfferSchema, OffersResponseSchema, OfferQuerySchema, SafeHttpsSchema, type OfferQuery, type PublicOffer, type Locale } from '@trip-fit/domain';
 import { OfferCatalogConfigSchema, type OfferCatalogConfig, type OfferProviderConfig } from '../config/offers.js';
 
 export function validateLink(href: string, provider: OfferProviderConfig,externalId?:string) {
@@ -78,6 +78,18 @@ export function createOfferService(input: OfferCatalogConfig, today = () => new 
   });
   return {
     get(id: string, locale: Locale = 'ko') { const offer=current().find(value => value.id===id); return offer?localize(offer,locale):null; },
+    related(id:string,locale:Locale,placeIds:ReadonlySet<string>=new Set()){
+      const all=current(),base=all.find(offer=>offer.id===id);
+      if(!base)return null;
+      // Source identities and reviewed place mappings only; no title-similarity merging.
+      const candidates=all.filter(offer=>offer.id!==id&&(placeIds.has(offer.id)||(offer.category===base.category&&offer.scope===base.scope)));
+      candidates.sort((a,b)=>Number(placeIds.has(b.id))-Number(placeIds.has(a.id)));
+      const seenGroups=new Set<string>();
+      const baseGroup=groups.get(base.id);if(baseGroup)seenGroups.add(baseGroup);
+      const items=candidates.filter(offer=>{const group=groups.get(offer.id);if(!group)return true;if(seenGroups.has(group))return false;seenGroups.add(group);return true;}).slice(0,6)
+        .map(offer=>({offer:localize(offer,locale),reason:placeIds.has(offer.id)?'shared-place':'same-category'}));
+      return RelatedOffersResponseSchema.parse({offerId:id,locale,items});
+    },
     list(query: OfferQuery, relatedIds: ReadonlySet<string> = new Set()) {
       const all = current().map(offer=>localize(offer,query.locale));
       const needle = query.q.normalize('NFKC').toLocaleLowerCase(query.locale);

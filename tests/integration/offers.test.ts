@@ -140,3 +140,29 @@ describe('read-only offers HTTP API', () => {
   });
 
 });
+
+
+describe('related offer selection',()=>{
+ it('prioritizes explicit reviewed place links, then same category/scope; excludes self, unavailable entries and caps at six',()=>{
+  const config=fixture(),base=config.offers[0];if(!base)throw Error('No fixture');
+  for(let i=0;i<10;i++)config.offers.push({...base,id:'candidate-'+i,externalId:'candidate-'+i,priority:i+2});
+  config.offers.push({...base,id:'place-linked',externalId:'place-linked',category:'tour',priority:100});
+  config.offers.push({...base,id:'different-scope',externalId:'different-scope',scope:'regional'});
+  config.offers.push({...base,id:'hidden',externalId:'hidden',enabled:false});
+  config.offers.push({...base,id:'expired',externalId:'expired',expiresOn:'2026-11-09'});
+  const related=service(config).related(base.id,'en',new Set(['place-linked','hidden','expired']));
+  expect(related?.items).toHaveLength(6);expect(related?.items[0]).toMatchObject({offer:{id:'place-linked'},reason:'shared-place'});
+  expect(related?.items.slice(1).every(item=>item.reason==='same-category'&&item.offer.scope===base.scope&&item.offer.category===base.category)).toBe(true);
+  expect(related?.items.some(item=>[base.id,'hidden','expired','different-scope'].includes(item.offer.id))).toBe(false);
+  expect(service(config).related('hidden','en')).toBeNull();expect(service(config).related('expired','en')).toBeNull();
+  expect(service().related(base.id,'en')?.items).toEqual([]);
+ });
+ it('publishes the same fresh localized DTO as direct lookup and has no unvalidated booking links',()=>{
+  const source=service(loadOfferCatalogConfig()),base=source.list(OfferQuerySchema.parse({locale:'en',limit:1})).items[0];if(!base)throw Error('No public offer');
+  for(const locale of ['en','ko','ja','zh-CN','zh-TW'] as const){const related=source.related(base.id,locale);expect(related?.items.length).toBeGreaterThan(0);for(const item of related?.items??[])expect(item.offer).toEqual(source.get(item.offer.id,locale));}
+ });
+ it('serves valid related requests and rejects unknown/invalid base identities or query fields',async()=>{
+  const app=buildApp(loadServerConfig({NODE_ENV:'test'}),undefined,undefined,service());
+  try{const r=await app.inject('/api/offers/test-ticket/related?locale=en');expect(r.statusCode).toBe(200);expect(r.headers['cache-control']).toBe('no-store');expect(r.json()).toEqual({offerId:'test-ticket',locale:'en',items:[]});expect((await app.inject('/api/offers/missing/related')).statusCode).toBe(404);expect((await app.inject('/api/offers/test-ticket/related?locale=bad')).statusCode).toBe(400);expect((await app.inject('/api/offers/test-ticket/related?url=https://example.test')).statusCode).toBe(400);}finally{await app.close();}
+ });
+});

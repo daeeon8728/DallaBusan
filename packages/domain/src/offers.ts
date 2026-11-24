@@ -52,3 +52,8 @@ export type PublicOffer = z.infer<typeof PublicOfferSchema>;
 export type OfferQuery = z.infer<typeof OfferQuerySchema>;
 export type OffersResponse = z.infer<typeof OffersResponseSchema>;
 export type OfferCategory = z.infer<typeof OfferCategorySchema>;
+
+export const RelatedOffersResponseSchema=z.strictObject({
+  offerId:z.string(),locale:LocaleSchema,
+  items:z.array(z.strictObject({offer:PublicOfferSchema,reason:z.enum(['shared-place','same-category'])})).max(6),
+});
