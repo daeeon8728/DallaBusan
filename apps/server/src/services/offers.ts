@@ -1,5 +1,6 @@
+import {offerRecommendationFingerprint} from '../config/offer-recommendations.js';
 import { PRODUCT_PHOTO_LABELS } from '../config/localization.js';
-import { RelatedOffersResponseSchema, PublicOfferSchema, OffersResponseSchema, OfferQuerySchema, SafeHttpsSchema, type OfferQuery, type PublicOffer, type Locale } from '@trip-fit/domain';
+import { RelatedOffersResponseSchema, PublicOfferSchema, OffersResponseSchema, OfferQuerySchema, SafeHttpsSchema, type RelatedOfferPlace, type OfferQuery, type PublicOffer, type Locale } from '@trip-fit/domain';
 import { OfferCatalogConfigSchema, type OfferCatalogConfig, type OfferProviderConfig } from '../config/offers.js';
 
 export function validateLink(href: string, provider: OfferProviderConfig,externalId?:string) {
@@ -61,6 +62,12 @@ export function createOfferService(input: OfferCatalogConfig, today = () => new 
   }
   offers.sort((a, b) => a.providerPriority-b.providerPriority || a.priority - b.priority || (a.value.id < b.value.id ? -1 : a.value.id > b.value.id ? 1 : 0));
   const rawById = new Map(config.offers.map(offer=>[offer.id,offer]));
+  const experienceTypes=new Map<string,Set<string>>();
+  for(const group of config.recommendationGroups)for(const member of group.members){
+    const raw=rawById.get(member.offerId);
+    if(!raw||raw.category==='stay'||raw.sourceUrl!==member.evidenceUrl||offerRecommendationFingerprint(raw)!==member.sourceHash)continue;
+    const types=experienceTypes.get(raw.id)??new Set<string>();types.add(group.id);experienceTypes.set(raw.id,types);
+  }
   const translations = new Map(config.offers.map(item=>[item.id,item.localizedTitles]));
   function displayProvider(provider: OfferProviderConfig, locale: Locale) { return {id:provider.id,displayName:provider.localizedDisplayNames[locale]??provider.displayName}; }
   function localize(offer: PublicOffer,locale: Locale) {
@@ -78,17 +85,23 @@ export function createOfferService(input: OfferCatalogConfig, today = () => new 
   });
   return {
     get(id: string, locale: Locale = 'ko') { const offer=current().find(value => value.id===id); return offer?localize(offer,locale):null; },
-    related(id:string,locale:Locale,placeIds:ReadonlySet<string>=new Set()){
+    related(id:string,locale:Locale,places:readonly RelatedOfferPlace[]=[]){
       const all=current(),base=all.find(offer=>offer.id===id);
       if(!base)return null;
-      // Source identities and reviewed place mappings only; no title-similarity merging.
-      const candidates=all.filter(offer=>offer.id!==id&&(placeIds.has(offer.id)||(offer.category===base.category&&offer.scope===base.scope)));
-      candidates.sort((a,b)=>Number(placeIds.has(b.id))-Number(placeIds.has(a.id)));
-      const seenGroups=new Set<string>();
-      const baseGroup=groups.get(base.id);if(baseGroup)seenGroups.add(baseGroup);
-      const items=candidates.filter(offer=>{const group=groups.get(offer.id);if(!group)return true;if(seenGroups.has(group))return false;seenGroups.add(group);return true;}).slice(0,6)
-        .map(offer=>({offer:localize(offer,locale),reason:placeIds.has(offer.id)?'shared-place':'same-category'}));
-      return RelatedOffersResponseSchema.parse({offerId:id,locale,items});
+      const baseTypes=experienceTypes.get(id)??new Set<string>();
+      const matches=(offer:PublicOffer)=>places.filter(place=>place.experienceIds.includes(offer.id));
+      const sharedTypes=(offer:PublicOffer)=>[...(experienceTypes.get(offer.id)??[])].filter(type=>baseTypes.has(type)).length;
+      const candidates=all.filter(offer=>offer.id!==id&&offer.category!=='stay'&&(matches(offer).length>0||(offer.scope===base.scope&&sharedTypes(offer)>0)));
+      candidates.sort((a,b)=>matches(b).length-matches(a).length||sharedTypes(b)-sharedTypes(a));
+      const baseGroup=groups.get(base.id);
+      function uniqueGroup(candidates:PublicOffer[]){
+        const seen=new Set<string>();if(baseGroup)seen.add(baseGroup);
+        return candidates.filter(offer=>{const group=groups.get(offer.id);if(!group)return true;if(seen.has(group))return false;seen.add(group);return true;}).slice(0,6);
+      }
+      const items=uniqueGroup(candidates).map(offer=>({offer:localize(offer,locale),reason:matches(offer).length?'shared-place':'similar-experience',places:[...new Set(matches(offer).map(place=>place.name))]}));
+      const stays=all.filter(offer=>offer.id!==id&&offer.category==='stay'&&places.some(place=>place.stays.some(link=>link.offerId===offer.id)));
+      const nearbyStays=uniqueGroup(stays).map(offer=>({offer:localize(offer,locale),areas:[...new Set(places.flatMap(place=>place.stays.filter(link=>link.offerId===offer.id).map(link=>link.areaLabel)))]}));
+      return RelatedOffersResponseSchema.parse({offerId:id,locale,items,nearbyStays});
     },
     list(query: OfferQuery, relatedIds: ReadonlySet<string> = new Set()) {
       const all = current().map(offer=>localize(offer,query.locale));

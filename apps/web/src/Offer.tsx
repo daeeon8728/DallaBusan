@@ -1,3 +1,5 @@
+import {StayBanner} from './StayBanner.js';
+import {StayMap} from './StayMap.js';
 import {getOfferDialogCopy} from './i18n/offer-dialog.js';
 import { BookingLanguage } from './BookingLanguage.js';
 import { BookingNotice } from './BookingNotice.js';
@@ -64,13 +66,20 @@ export function OfferCard({ offer, locale, onOpen }: { offer: PublicOffer; local
 function RelatedOffers({offerId,locale,onSelect}:{offerId:string;locale:Locale;onSelect:(id:string)=>void}){
   const copy=getCopy(locale),text=getOfferDialogCopy(locale);
   const request=useGuideRequest('/api/offers/'+encodeURIComponent(offerId)+'/related?locale='+locale,RelatedOffersResponseSchema);
-  return <section className="offer-related" aria-labelledby="offer-related-title" data-testid="offer-related">
-    <header><h3 id="offer-related-title">{text.related}</h3><p>{text.note}</p></header>
-    {request.pending&&<p role="status">{copy.loading}</p>}
-    {request.error&&<div className="error-notice" role="alert"><p>{text.failed}</p><button onClick={request.retry}>{copy.retry}</button></div>}
-    {!request.pending&&!request.error&&request.value?.items.length===0&&<p>{text.empty}</p>}
-    <div className="related-offer-grid">{request.value?.items.map(({offer,reason})=><div key={offer.id}><p className="related-reason">{reason==='shared-place'?text.place:text.category}</p><OfferCard offer={offer} locale={locale} onOpen={selected=>onSelect(selected.id)}/></div>)}</div>
-  </section>;
+  return <div className="offer-related" data-testid="offer-related">
+    <section aria-labelledby="offer-related-title" data-testid="related-experiences"><header><h3 id="offer-related-title">{text.related}</h3><p>{text.note}</p></header>
+      {request.pending&&<p role="status">{copy.loading}</p>}
+      {request.error&&<div className="error-notice" role="alert"><p>{text.failed}</p><button onClick={request.retry}>{copy.retry}</button></div>}
+      {!request.pending&&!request.error&&request.value?.items.length===0&&<p>{text.empty}</p>}
+      <div className="related-offer-grid">{request.value?.items.map(({offer,reason,places})=><div key={offer.id}><p className="related-reason">{reason==='shared-place'?text.place+' · '+places.join(' / '):text.similar}</p><OfferCard offer={offer} locale={locale} onOpen={selected=>onSelect(selected.id)}/></div>)}</div>
+    </section>
+    <section className="related-stays" aria-labelledby="offer-stays-title" data-testid="nearby-stays"><header><h3 id="offer-stays-title">{text.stays}</h3><p>{text.stayNote}</p></header>
+      {request.pending&&<p role="status">{copy.loading}</p>}
+      {!request.pending&&!request.error&&request.value?.nearbyStays.length===0&&<p>{text.noStays}</p>}
+      <div className="related-offer-grid">{request.value?.nearbyStays.map(({offer,areas})=><div key={offer.id}><p className="related-reason">{areas.join(' / ')}</p><OfferCard offer={offer} locale={locale} onOpen={selected=>onSelect(selected.id)}/></div>)}</div>
+      <StayMap locale={locale}/><StayBanner locale={locale}/>
+    </section>
+  </div>;
 }
 function OfferDialogContent({offer,locale,onSelect}:{offer:PublicOffer;locale:Locale;onSelect:(id:string)=>void}){
   const copy=getCopy(locale);

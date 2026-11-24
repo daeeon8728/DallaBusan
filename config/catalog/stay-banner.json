@@ -1,0 +1,46 @@
+{
+  "enabled": true,
+  "providerId": "PROVIDER_D",
+  "baseUrl": "https://sherpa.agoda.com/Dynamic/index/",
+  "allowedHosts": [
+    "sherpa.agoda.com"
+  ],
+  "source": "User-provided official dynamic-banner embed, 2026-11-24. Official init-dynamic_v8.min.js confirms iframe parameters. Domain/channel approval not independently confirmed. apikey is the supplied client-embed publishing identifier, not a server booking API credential.",
+  "settings": {
+    "crt": "2309466341364",
+    "Ver": "1.05",
+    "referenceKey": "cg+oxLukLcLBdn5OMmwqow==",
+    "layout": "squaredynamic",
+    "cid": "1980997",
+    "City": "17172",
+    "wd": "300px",
+    "OverideConf": false,
+    "scrolling": true,
+    "scrollingTime": 3000,
+    "discountonly": false,
+    "ShowSearchbox": false,
+    "apikey": "8cef4026-2446-4267-9522-2c7ae8c9a36d"
+  },
+  "locales": {
+    "en": {
+      "language": "en-us",
+      "currency": "USD"
+    },
+    "ko": {
+      "language": "ko-kr",
+      "currency": "KRW"
+    },
+    "ja": {
+      "language": "ja-jp",
+      "currency": "JPY"
+    },
+    "zh-CN": {
+      "language": "zh-cn",
+      "currency": "CNY"
+    },
+    "zh-TW": {
+      "language": "zh-tw",
+      "currency": "TWD"
+    }
+  }
+}

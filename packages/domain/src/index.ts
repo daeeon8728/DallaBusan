@@ -16,3 +16,5 @@ export * from './exchange.js';
 export * from './promotions.js';
 
 export * from './courses.js';
+
+export * from './stay-map.js';

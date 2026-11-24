@@ -1,3 +1,4 @@
+import {OfferRecommendationGroupsSchema,loadOfferRecommendationGroups} from './offer-recommendations.js';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
@@ -35,6 +36,7 @@ export const RawOfferSchema = z.strictObject({
 }).superRefine((offer,ctx)=>{if(offer.localizedTitleSourceHash&&offer.localizedTitleSourceHash!==createHash('sha256').update(offer.titleLocale+'\0'+offer.title).digest('hex'))ctx.addIssue({code:'custom',message:'Localized title source changed; review required'});});
 export const OfferCatalogConfigSchema = z.strictObject({
   checkedOn: z.iso.date(), contactEmail: z.email(),
+  recommendationGroups:OfferRecommendationGroupsSchema.default([]),
   providers: z.array(OfferProviderConfigSchema),
   offers: z.array(RawOfferSchema),
   featuredGroups:z.array(z.strictObject({id:z.string().min(1),kind:z.enum(['property','verified-product']),reviewedOn:z.iso.date(),basis:z.string().min(1),members:z.array(z.strictObject({offerId:z.string(),providerId:ProviderIdSchema,externalId:z.string(),sourceTitle:z.string(),sourceUrl:SafeHttpsSchema})).min(2)})).default([]),
@@ -74,7 +76,7 @@ export function loadOfferCatalogConfig(): OfferCatalogConfig {
     const translations = z.strictObject({authoredOn:z.iso.date(),kind:z.literal('editorial-title-translations'),items:z.array(z.strictObject({id:z.string(),sourceTitle:z.string(),titles:z.strictObject({en:z.string().min(1).max(500),ja:z.string().min(1).max(500),'zh-CN':z.string().min(1).max(500),'zh-TW':z.string().min(1).max(500)})}))}).parse(rawTranslations);
     if(new Set(translations.items.map(item=>item.id)).size!==translations.items.length)throw new Error('Duplicate translation identity');
     const byId = new Map(translations.items.map(item=>[item.id,item]));
-    return OfferCatalogConfigSchema.parse({...config,offers:config.offers.map(offer=>{const text=byId.get(offer.id);return text?.sourceTitle===offer.title?{...offer,localizedTitles:{...offer.localizedTitles,...text.titles}}:offer;})});
+    return OfferCatalogConfigSchema.parse({...config,recommendationGroups:loadOfferRecommendationGroups(),offers:config.offers.map(offer=>{const text=byId.get(offer.id);return text?.sourceTitle===offer.title?{...offer,localizedTitles:{...offer.localizedTitles,...text.titles}}:offer;})});
   }
   catch { throw new Error('Invalid affiliate offer configuration'); }
 }

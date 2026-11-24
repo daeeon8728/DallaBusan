@@ -70,9 +70,12 @@ export function createDestinationService(input: DestinationConfig, offers: Offer
         page: query.page, pages: Math.ceil(selected.length / query.limit),
       });
     },
-    relatedOfferIdsForOffer(id:string){
-      return new Set(config.destinations.filter(item=>item.related.some(link=>link.offerId===id))
-        .flatMap(item=>item.related.map(link=>link.offerId)).filter(candidate=>candidate!==id));
+    relatedPlacesForOffer(id:string,locale:Locale){
+      return config.destinations.filter(item=>item.related.some(link=>link.offerId===id)).map(item=>({
+        slug:item.slug,name:localizedText(item,locale).text.name,
+        experienceIds:item.related.filter(link=>link.relationship!=='stay').map(link=>link.offerId),
+        stays:item.related.filter(link=>link.relationship==='stay'&&link.areaLabel).map(link=>({offerId:link.offerId,areaLabel:localization.text(link.areaLabel??'','ko',locale).value})),
+      }));
     },
     relatedOfferIdsForSearch(query: string) {
       const needle = normalize(query);

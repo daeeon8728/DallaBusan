@@ -1,0 +1,1288 @@
+{
+  "reviewedOn": "2026-11-24",
+  "kind": "editorial-experience-types",
+  "evidenceStatus": "assistant-source-evidence",
+  "basis": "Explicit IDs selected from existing captured official product titles and source URLs. Describes a marketed experience type only; does not verify venues, inclusions, availability, guide language or human/field approval. No runtime title matching.",
+  "groups": [
+    {
+      "id": "coastal-trains",
+      "members": [
+        {
+          "offerId": "a-ticket-131154386",
+          "sourceHash": "783497bb73a0ae6dcc05142f22ecfe03c53373b927467a369d61e65edf78962f",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/haeundae-blueline-park-131154386?curr=KRW&locale=ko-KR&poiType=3&scene=ticket"
+        },
+        {
+          "offerId": "a-ticket-153154006",
+          "sourceHash": "8c40629fdab6d9620eeba3be0b989a2d3e336a1bb07e98bf90b608f645e38465",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/haeundae-blueline-park-train-153154006?curr=KRW&locale=ko-KR&poiType=66&scene=ticket"
+        },
+        {
+          "offerId": "e-123012",
+          "sourceHash": "3fd6d953844122ae59cd2070eb3750a30a291b15f827ef2b6e7e64c69bf0dfc8",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/123012-haeundae-blueline-park-sky-capsule-beach-train-ticket"
+        }
+      ]
+    },
+    {
+      "id": "city-coastal-day-tours",
+      "members": [
+        {
+          "offerId": "b-74132",
+          "sourceHash": "9751e5a9b103e2490840f23de86fcbe49a16922885799f58743f651324a3c201",
+          "evidenceUrl": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan"
+        },
+        {
+          "offerId": "b-148741",
+          "sourceHash": "555b5dd85518e6342624560518d4db6964e923b94cd6028019cb74268960b5bb",
+          "evidenceUrl": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour"
+        },
+        {
+          "offerId": "a-52607026",
+          "sourceHash": "c6fd100991a16c0adc11c8a03c6074d0d083da366c7917113b19f0f198694a29",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/52607026/"
+        },
+        {
+          "offerId": "a-58846256",
+          "sourceHash": "90447cb58788d7c777a767df59a87ad2e9e29d4a674e1fe3a2d276d7a9253cd4",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/58846256/"
+        },
+        {
+          "offerId": "a-88485075",
+          "sourceHash": "50be1138c95235d3196c258f44fa0a1537b2616e0a1653a1bddc7659c67fd47e",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/88485075/"
+        },
+        {
+          "offerId": "a-69581486",
+          "sourceHash": "f15c235f9558f50077ba8dd6d20a3d8b63ae8b4c39f0be60477572d23d847ae9",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/69581486/"
+        },
+        {
+          "offerId": "a-89497025",
+          "sourceHash": "781da6a9bd77ade3e063675b8ba48e43d59f86b139da79cf52026f683c39fe21",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/89497025/"
+        },
+        {
+          "offerId": "a-41692978",
+          "sourceHash": "6d2850d553c6c300fa7bb8eb15bf949eccd21474ded82e979ce826f758b74753",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/41692978/"
+        },
+        {
+          "offerId": "a-100513677",
+          "sourceHash": "32cbf3bd97711c1840fa9b59e8057c9c2e63cd12c9fbc6fd2840758fcbf034bf",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513677/"
+        },
+        {
+          "offerId": "a-100513676",
+          "sourceHash": "0295f29e19232dc37d8dd81ba9489f53f5a67f451881fc9dd6174df86520b940",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513676/"
+        },
+        {
+          "offerId": "a-116035531",
+          "sourceHash": "cc5380e9630699b33ca1e3ebe76d965d94fbf7328872fb8306febea86de5baed",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116035531/"
+        },
+        {
+          "offerId": "a-114490504",
+          "sourceHash": "f9920e3ad730742565be01a2f0aabba8a4256aeb431208c8a29bdca5fa4cd487",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114490504/"
+        },
+        {
+          "offerId": "a-110387409",
+          "sourceHash": "edc8e5e039a7ed8388866564bd1be985163945e47e6225e3415c194ccbd06c61",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110387409/"
+        },
+        {
+          "offerId": "a-108713425",
+          "sourceHash": "8bf2700b1e5edf44152d223d44a2dde0ca28e39f5040d25e4d1caba66359f35f",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/108713425/"
+        },
+        {
+          "offerId": "a-110516690",
+          "sourceHash": "0c65e94692117e8515dec5373ac8f010214bf9f7be511d7eef6af35a5655815e",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110516690/"
+        },
+        {
+          "offerId": "a-113719020",
+          "sourceHash": "9665b85c28b8b97a073953a3d935073c540296f5af4552bba93689e9478f6335",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113719020/"
+        },
+        {
+          "offerId": "a-115543424",
+          "sourceHash": "67047235f65df855680141b73c697c1f67733233a19841fd7af122f0039ae9cb",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115543424/"
+        },
+        {
+          "offerId": "a-115399593",
+          "sourceHash": "ec9a73d430a3b5009dcc729f7b8006452f7bb9ce0ffd4b8410d492addf86f2d8",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115399593/"
+        },
+        {
+          "offerId": "a-116131802",
+          "sourceHash": "631ef4b910347f791939937571ded33cede35897e20c245228342a7504e49742",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/116131802/"
+        },
+        {
+          "offerId": "a-115498235",
+          "sourceHash": "cc12aec4acf17a20d454dbd59396c3b5000182224ae55a52948b3f4eedae7fdc",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115498235/"
+        },
+        {
+          "offerId": "a-113203701",
+          "sourceHash": "7cb0c3d7427c85450836d881623807a1a429dd8e98968a0bad5509ef45f93d9a",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/113203701/"
+        },
+        {
+          "offerId": "a-106818615",
+          "sourceHash": "112ecd6aeff6d7adaaa4808ae28e0629883c4a47aa0954c2a3b0dbe77f534583",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106818615/"
+        },
+        {
+          "offerId": "a-114316446",
+          "sourceHash": "5a9f991ba08dcbe1b2fd471efeaf0a18db5f3c49fb81a32ca7699041ccff5176",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114316446/"
+        },
+        {
+          "offerId": "a-106331183",
+          "sourceHash": "5a12766146f40a2eb4e9ee6a86d7ac2571ec546b0cbfef88e30c4e61e65cb31c",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106331183/"
+        },
+        {
+          "offerId": "b-144212",
+          "sourceHash": "0a7812e7b8092c71e9a4495b1a8d257875beb5766a01047762fc71aebd6d64bb",
+          "evidenceUrl": "https://www.klook.com/ko/activity/144212-busan-city-one-day-authentic-tour"
+        },
+        {
+          "offerId": "e-131061",
+          "sourceHash": "b2842b5bba172ea667930707b522854331a5d192c9b23fc1a33b1868b96c1ac3",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131061-busan-one-day-tour-south-korea"
+        },
+        {
+          "offerId": "e-11186",
+          "sourceHash": "64706e4733019346927500b03a61a73c18100a7f65ca7bfc57708503d46b0c7d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/11186-busan-day-tour-taejongdae-gamcheon-culture-village-songdo-skywalk-haedongyonggungsa-temple-or-yacht-tour"
+        },
+        {
+          "offerId": "e-260335",
+          "sourceHash": "f03a2e8b7897e6917d09461789417f6a49abff232f3a6c8601d05a2a73d33d8f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/260335-busan-top-attractions-day-tour-south-korea"
+        },
+        {
+          "offerId": "e-282640",
+          "sourceHash": "f58e87a4f2ee637456cbb8d824df9de46b1db37ef3785fa23b35bc4f572d94dd",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/282640-busan-sunset-haeundae-sky-capsule-night-view-tour-south-korea"
+        },
+        {
+          "offerId": "e-601428",
+          "sourceHash": "52a7781fcfc7d7912f61b5189ad2e6d4923d6047ad1da17b6d95107f373bb9de",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/601428"
+        },
+        {
+          "offerId": "e-163887",
+          "sourceHash": "365a0c3ac144d9c7cd8371a577346d85d2e40d4c01e12d144f78ff3a1af51345",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/163887"
+        },
+        {
+          "offerId": "e-621451",
+          "sourceHash": "8c14773c6a85603197d6f8d9c99fe7fdf3e322814760b5d44bacda44241d0d90",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/621451"
+        },
+        {
+          "offerId": "e-249484",
+          "sourceHash": "a28680a1aa67830030650fc58d16323a6515d004a500196f7ea7eb6a18096583",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/249484"
+        },
+        {
+          "offerId": "e-164106",
+          "sourceHash": "9326115b247af3a5cc206929f5d13fac33d312ea1ce5212401810d96348f2267",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/164106"
+        },
+        {
+          "offerId": "e-579871",
+          "sourceHash": "6e6ae4162970befe56634ae26bfa40bdba44eb242fa1150d3a02a70b9d2ae80d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/579871"
+        },
+        {
+          "offerId": "e-538698",
+          "sourceHash": "5444313f6e343e3906f2ad2e425fe313420fc12cd3562f5c08bb175e47e7950a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/538698"
+        },
+        {
+          "offerId": "e-928759",
+          "sourceHash": "4095793f33f23ca43e24483a2730a4e36cf78609a11ece823dabb768e31749bd",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928759"
+        },
+        {
+          "offerId": "e-928744",
+          "sourceHash": "aa88a46715eb178a86ee9aad04dcfbcf55f058b6372f949ec18abdc27a092adc",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928744"
+        },
+        {
+          "offerId": "e-635261",
+          "sourceHash": "7f8a743867277f4e7f0847f862034c654c9acbcb0f28bbd7db1a851ce8dca1b1",
+          "evidenceUrl": "https://www.kkday.com/ja/product/635261"
+        },
+        {
+          "offerId": "e-36652",
+          "sourceHash": "8334c64c35bc779a3467240638c000e5a866e3ebbeefc37adf41e94c6a09ffc5",
+          "evidenceUrl": "https://www.kkday.com/ja/product/36652"
+        },
+        {
+          "offerId": "e-36658",
+          "sourceHash": "59322a2a0c71766e670a9fea51ee2c801c74231d1f21f6bc6ac3fb894935bb87",
+          "evidenceUrl": "https://www.kkday.com/ja/product/36658-sightseeing-hotel-pickup-japanese-guide-haedong-yonggungsa-temple-tsukimi-pass-haeundae-beach-busan-south-korea"
+        },
+        {
+          "offerId": "e-36663",
+          "sourceHash": "e32a47ea71d5848174eadf76958bf50a5169ec97e8dab8db571c4bdc08690b18",
+          "evidenceUrl": "https://www.kkday.com/ja/product/36663"
+        },
+        {
+          "offerId": "e-36664",
+          "sourceHash": "5d32bba3dfba23b608806ed271268f9d2008985d0ad6be42a243aaab79cbe58b",
+          "evidenceUrl": "https://www.kkday.com/ja/product/36664"
+        }
+      ]
+    },
+    {
+      "id": "night-sightseeing",
+      "members": [
+        {
+          "offerId": "b-148741",
+          "sourceHash": "555b5dd85518e6342624560518d4db6964e923b94cd6028019cb74268960b5bb",
+          "evidenceUrl": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour"
+        },
+        {
+          "offerId": "b-2278",
+          "sourceHash": "d8f5cbae492d7c3f760c83663f023a7e9a0c19c5d780143abe9e22760287ead1",
+          "evidenceUrl": "https://www.klook.com/ko/activity/2278-night-tour-busan"
+        },
+        {
+          "offerId": "a-100513677",
+          "sourceHash": "32cbf3bd97711c1840fa9b59e8057c9c2e63cd12c9fbc6fd2840758fcbf034bf",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513677/"
+        },
+        {
+          "offerId": "a-100513676",
+          "sourceHash": "0295f29e19232dc37d8dd81ba9489f53f5a67f451881fc9dd6174df86520b940",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/100513676/"
+        },
+        {
+          "offerId": "a-108772608",
+          "sourceHash": "2f1869334b2f5ca6818cddd03fd50c8c13d3aa736bdc2a3726e32ab097dc9cf5",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/108772608/"
+        },
+        {
+          "offerId": "a-106952160",
+          "sourceHash": "bd9ac9dedd64b6444664fd370088d5d512630ab34fb70842b786e571f376bf75",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106952160/"
+        },
+        {
+          "offerId": "e-282640",
+          "sourceHash": "f58e87a4f2ee637456cbb8d824df9de46b1db37ef3785fa23b35bc4f572d94dd",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/282640-busan-sunset-haeundae-sky-capsule-night-view-tour-south-korea"
+        },
+        {
+          "offerId": "e-181933",
+          "sourceHash": "7f54f8f31016ce68219bc44dcbe4e089e4ba64cfaf60e2456ee49018b1b248ba",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/181933"
+        },
+        {
+          "offerId": "e-538698",
+          "sourceHash": "5444313f6e343e3906f2ad2e425fe313420fc12cd3562f5c08bb175e47e7950a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/538698"
+        },
+        {
+          "offerId": "e-928760",
+          "sourceHash": "6bfe0e43f91e8a83ff731710c0b0c1706dbdfe56b74fbfed37ecbb5d686c7648",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928760"
+        },
+        {
+          "offerId": "e-928765",
+          "sourceHash": "8318444b91b4db82a63d1fbb441975b9b98c75bcaff36d36ade11c72c6652a6b",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928765"
+        },
+        {
+          "offerId": "e-928739",
+          "sourceHash": "c257ba6c698524f29f3ef7721fcde91423a44a149fe5fa5703908ce7cf236f0a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928739"
+        },
+        {
+          "offerId": "e-147171",
+          "sourceHash": "7d9a176ff14ec8c760317cb7aa170ea183c22c65b37816f639f20a8fadf38e7d",
+          "evidenceUrl": "https://www.kkday.com/ja/product/147171"
+        }
+      ]
+    },
+    {
+      "id": "yacht-cruises",
+      "members": [
+        {
+          "offerId": "a-96899974",
+          "sourceHash": "73926de4964fb74207113ac46317ac26653a9628cdf573211f3c4df306ff83df",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/96899974/"
+        },
+        {
+          "offerId": "a-114437871",
+          "sourceHash": "53dc5fd5b0f9eebe563637c58ebcce8090b8805f3ccba1245c5cac11ea2c98fe",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114437871/"
+        },
+        {
+          "offerId": "a-115982564",
+          "sourceHash": "008bcd4937844b0194238b54f91c82b79d1c7c6391c1424d3a74a3edc6910bb3",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115982564/"
+        },
+        {
+          "offerId": "b-91702",
+          "sourceHash": "a26121e0d681d5c4b5570357cd309c5f86d55c406a045baf142d53c559135927",
+          "evidenceUrl": "https://www.klook.com/ko/activity/91702-busan-yacht"
+        },
+        {
+          "offerId": "b-43419",
+          "sourceHash": "b5b5a75b7b469c6f559bba074dbee563af95b48a40e02d823eaa2aacb7773abd",
+          "evidenceUrl": "https://www.klook.com/ko/activity/43419-busan-luxury-yacht-experience"
+        },
+        {
+          "offerId": "b-111713",
+          "sourceHash": "dfa074f721c7bfc92beebea7730be3ff80b173bf45ca326531994289b3e3c9c1",
+          "evidenceUrl": "https://www.klook.com/ko/activity/111713-haeundae-river-cruise-in-busan"
+        },
+        {
+          "offerId": "e-134684",
+          "sourceHash": "2f21a039753b639f4be4cd259288eda1f8ac068938bd4f6696b5100ad9b00e9f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/134684-yacht-holic-busan-yacht-public-tour-gwangan-ri-haeundae-south-korea"
+        },
+        {
+          "offerId": "e-593956",
+          "sourceHash": "060588e322783a43acabfd99c23960074996ed5ecd23921d85c570587b3a6109",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/593956"
+        },
+        {
+          "offerId": "e-145664",
+          "sourceHash": "8553b83e03a984987f01c523c4e83631551bef3c87e3839198023db5b9a89fc5",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/145664-haeundae-river-cruise-busan-south-korea"
+        },
+        {
+          "offerId": "e-24482",
+          "sourceHash": "e801a571872f9f0c7bfea8fde152d8422d2a045ec6317c13ab091dbec076d7f7",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/24482-jagalchi-cruise-boarding-pass-busan-south-korea"
+        },
+        {
+          "offerId": "e-928757",
+          "sourceHash": "e70d25d3a92b9e0360b71aa767e5cab470656d0f66f632db8b928c34935badb8",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928757"
+        }
+      ]
+    },
+    {
+      "id": "theme-park-admission",
+      "members": [
+        {
+          "offerId": "b-75094",
+          "sourceHash": "bd04c35e344ef110b7991e2ea16ed49f19ae1fc09142cb9e8d707fe8ed9790d5",
+          "evidenceUrl": "https://www.klook.com/ko/activity/75094-lotte-world-busan"
+        },
+        {
+          "offerId": "a-ticket-136624941",
+          "sourceHash": "151c1c48d2dc7e418259fd9866b2d1a872a1c029fa00040cef8cb98cc9d4f78c",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/lotte-world-adventure-busan-136624941?curr=KRW&locale=ko-KR&poiType=66&scene=ticket"
+        },
+        {
+          "offerId": "e-19296",
+          "sourceHash": "8503b2ec1894aaab1ec6b8ce8318d7998ac7cf6f0fcf1ef02b06d0e830db5e27",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/19296-busan-lotte-world-adventure-tickets-korea"
+        },
+        {
+          "offerId": "e-133884",
+          "sourceHash": "b17dcb4dfc4aca1ebe88b41044f43c0f5185af033cb6485d3538e5614b9b4fac",
+          "evidenceUrl": "https://www.kkday.com/ko/product/133884"
+        }
+      ]
+    },
+    {
+      "id": "aquarium-admission",
+      "members": [
+        {
+          "offerId": "a-ticket-92862",
+          "sourceHash": "411cdbfc23fe952ac7e62510cb3f174409be44b1a18d793dc2ccf50d5a9cb76d",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/sealife-busan-aquarium-92862?curr=KRW&locale=ko-KR&poiType=3&scene=ticket"
+        },
+        {
+          "offerId": "e-2880",
+          "sourceHash": "85037c65b94781d1888a76607b12a595a291deaa55f912ee6573214aeca67d95",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/2880-sea-life-busan-aquarium-tickets-korea"
+        }
+      ]
+    },
+    {
+      "id": "cable-car-rides",
+      "members": [
+        {
+          "offerId": "a-ticket-68151207",
+          "sourceHash": "903cdc724215ab5ebc182d6c4a08261fb9160dc2a144b1cb2cc763dc7db0c0a5",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/busan-songdo-sea-cable-car-68151207?curr=KRW&locale=ko-KR&poiType=3&scene=ticket"
+        },
+        {
+          "offerId": "e-19674",
+          "sourceHash": "7f1781ae5fe4f74fe2a6c9d97d957b8226d630dc07182e47b0883c0a35e36e3b",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/19674-busan-air-cruise-songdo-marine-cable-car-ticket-south-korea"
+        },
+        {
+          "offerId": "e-111594",
+          "sourceHash": "64ef6f3498009f138548ac62b0b9753c0ba54ec6d70fc714fbb9e33ba55ac832",
+          "evidenceUrl": "https://www.kkday.com/ko/product/111594"
+        }
+      ]
+    },
+    {
+      "id": "luge-rides",
+      "members": [
+        {
+          "offerId": "a-ticket-137759829",
+          "sourceHash": "1d3f263ceb04eafc04e54f059213d5a63b2c4346c5d83e232d0c463ce1ff8d19",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/skyline-luge-busan-137759829?curr=KRW&locale=ko-KR&poiType=3&scene=ticket"
+        },
+        {
+          "offerId": "e-152412",
+          "sourceHash": "82b8a2418d9560e9abb00a9566ecd314c6a0e4b6344bb64a6ac92321a6ea52d2",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/152412-gijang-skyline-luge-ticket-busan-south-korea"
+        }
+      ]
+    },
+    {
+      "id": "observation-decks",
+      "members": [
+        {
+          "offerId": "a-ticket-131154384",
+          "sourceHash": "7eeb335c44fb89b51a74d28872eccb123890d781aa65694292238df1e9c7ac2b",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/busan-x-the-sky-131154384?curr=KRW&locale=ko-KR&poiType=3&scene=ticket"
+        },
+        {
+          "offerId": "e-105514",
+          "sourceHash": "2ccd4eb9a90540c05e96f062de9552c0b0a0b3b5c89ae954dc84d329405a0751",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/105514-busan-x-the-sky-observatory-ticket-haeundae"
+        },
+        {
+          "offerId": "e-19378",
+          "sourceHash": "55c89b2f0024a2093be9a756db26ad46059084b8c32aa426e1e9e0195756fd30",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/19378"
+        },
+        {
+          "offerId": "e-126890",
+          "sourceHash": "bdce8ad1564f41ca52be8145494ed35f0ea82913163e2253abb8b16b6beab03c",
+          "evidenceUrl": "https://www.kkday.com/ko/product/126890"
+        }
+      ]
+    },
+    {
+      "id": "sauna-hot-springs",
+      "members": [
+        {
+          "offerId": "a-111091001",
+          "sourceHash": "edaa2038cfc1317ec8ba20d9a19245057e24080a7bfcfae9bb27fd3cf4b57a02",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/111091001/"
+        },
+        {
+          "offerId": "a-ticket-52529207",
+          "sourceHash": "546e6b250347227c3fafc7300ec832b0e8b404a7ccf54626952877d6c5285c57",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/spa-land-centum-city-52529207?curr=KRW&locale=ko-KR&poiType=66&scene=ticket"
+        },
+        {
+          "offerId": "e-12213",
+          "sourceHash": "b71ccaa0658ddb4f03a523c571d8ac81453fc4e212f8b50e4a3f5f7777769127",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/12213-busan-spa-land-centum-city-ticket"
+        },
+        {
+          "offerId": "e-267802",
+          "sourceHash": "c3e65919ea4bb530402d91c1c075b14a792c3af1cb713ddfb5849656e350becb",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/267802"
+        },
+        {
+          "offerId": "e-771971",
+          "sourceHash": "f4c228c8b747675bcea7267811a9b256dcf5abd0640811aefc95121b39dc236e",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/771971"
+        },
+        {
+          "offerId": "e-185538",
+          "sourceHash": "63bd46dec699b271149816c75b68996f16166a662d2694f22dd1ac8c731dd6a2",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/185538"
+        },
+        {
+          "offerId": "e-771772",
+          "sourceHash": "4f7070293d109c0ef167078d7b60183ad1a27b0259b2711c8393899f35c4214c",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/771772"
+        },
+        {
+          "offerId": "e-105110",
+          "sourceHash": "23b8b08266cf0e9694b04584eade31ee816a5c601439aa06ec537094d8d79f67",
+          "evidenceUrl": "https://www.kkday.com/ko/product/105110"
+        },
+        {
+          "offerId": "a-ticket-143198331",
+          "sourceHash": "7ea6bd6dfe3952a93efa89b8c1b38969598365aa0fea4d2f123a386ee478f492",
+          "evidenceUrl": "https://kr.trip.com/travel-guide/attraction/busan/club-d-oasis-143198331?curr=KRW&locale=ko-KR&poiType=3&scene=ticket"
+        },
+        {
+          "offerId": "e-158792",
+          "sourceHash": "dff89f12ebbaf589c0f3768dae84e8f4a77ee460190d7dc64074cf1fc78d2cf1",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/158792"
+        }
+      ]
+    },
+    {
+      "id": "beauty-massage",
+      "members": [
+        {
+          "offerId": "e-609518",
+          "sourceHash": "5d0221b97bc382b64b8d8c0f70995a81c4f66c82e34d725b6cf09309dac9a44f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/609518"
+        },
+        {
+          "offerId": "e-610279",
+          "sourceHash": "8aa8a3c2f4f2abd08b2836c47b9765b36902252e530e810dcd93c1ad7c0634e2",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/610279"
+        },
+        {
+          "offerId": "e-634415",
+          "sourceHash": "fa6c875d850fbe6c1a2ed84fa3725a9887a3409fc3ff143cc970fa86b57561d8",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/634415"
+        },
+        {
+          "offerId": "e-770549",
+          "sourceHash": "ad72b198da58c561426538717df68b90a504bd4aa453f6b97fae6b75c8c8b3c1",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/770549"
+        },
+        {
+          "offerId": "e-546789",
+          "sourceHash": "a6d1e9065c8323a36a1e4766804e0e68f48c0bcf38b92658e16ee9fc06d9f56a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/546789"
+        },
+        {
+          "offerId": "e-630261",
+          "sourceHash": "d40ebf858e90cf7d164a2b57ec7c0de4489e1ef0d3d2a1048097c8a1d963e579",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/630261"
+        },
+        {
+          "offerId": "e-567443",
+          "sourceHash": "3c41cbff94eb671143316617f069a61bbce0b132893f5b1341b1615c153ab4df",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/567443"
+        },
+        {
+          "offerId": "e-530945",
+          "sourceHash": "9ba04f949225ccf0b6490ad795fc6ce522ceb1a62bd2cfd83e98450ec0642629",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/530945"
+        }
+      ]
+    },
+    {
+      "id": "hanbok-costume-rental",
+      "members": [
+        {
+          "offerId": "b-44779",
+          "sourceHash": "d4cbad898a211b5125d255e250f387b24b738ddd02b8b1362e0ef045162f826a",
+          "evidenceUrl": "https://www.klook.com/ko/activity/44779-busan-gamcheon-cultural-village-hanbok-rental"
+        },
+        {
+          "offerId": "e-18874",
+          "sourceHash": "e41310a8da772b400bb29d8ed8de30b4b597d26a420b821eedc8c191b1381440",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/18874-busan-hanbok-costume-experience-gamcheon-culture-village-korea"
+        },
+        {
+          "offerId": "e-135365",
+          "sourceHash": "5a9dc14b778b6f2bab4ca98d43862abb7eb172fae41ef58be0495e68c8e718d4",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/135365"
+        },
+        {
+          "offerId": "e-580327",
+          "sourceHash": "678e24221b4d04cc6e1006e820ac13223beb8e9af094d5c2f4dcba5dbdbe1e95",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/580327"
+        },
+        {
+          "offerId": "e-619039",
+          "sourceHash": "4d9e66edd6da72528e467f8f364f3b5599aa235b7c3d0c7c7e8d6ce729f91986",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/619039"
+        },
+        {
+          "offerId": "e-135373",
+          "sourceHash": "68c7fae0358a810f6aef5e737c073893d5a6c05335e63bffd83721c3a69a842a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/135373-discount-busan-gamcheon-culture-village-school-uniform-experience-south-korea"
+        }
+      ]
+    },
+    {
+      "id": "theme-park-costume-rental",
+      "members": [
+        {
+          "offerId": "a-99814776",
+          "sourceHash": "cccb17acf940115cf0d959a585aab530752ba1e1c250aa62296d01108670421c",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/99814776/"
+        },
+        {
+          "offerId": "e-133293",
+          "sourceHash": "ff590b5b6fb7888a1de4a36d15e468a726bd1fbb13dfebbda6a475c8ec3baa85",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/133293-busan-lotte-world-school-uniform-rental-south-korea"
+        },
+        {
+          "offerId": "e-546823",
+          "sourceHash": "24776478db1b364cd6a0f6c10eb52a0c9e0e5b92b7c5ae5d681f4ab58ad3b2e1",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/546823"
+        },
+        {
+          "offerId": "e-677818",
+          "sourceHash": "ca665226e825cfcf6082bdfc844afa77688b9249bad8baa2f11f78c2b498b41d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/677818"
+        }
+      ]
+    },
+    {
+      "id": "cooking-classes",
+      "members": [
+        {
+          "offerId": "a-21508511",
+          "sourceHash": "5695ba71532d632388a91316acbe6e54aa48bc413ad53ec984bb65433bcce301",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/21508511/"
+        },
+        {
+          "offerId": "a-106725010",
+          "sourceHash": "e21a288caa815427bb1af9c01ab4e76f53c55045d775c8167a81f61eb6925c3e",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106725010/"
+        },
+        {
+          "offerId": "a-106208893",
+          "sourceHash": "389469039cce4cbe95367529ece3349dd804c6ea502133d046475f09bd35db26",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106208893/"
+        },
+        {
+          "offerId": "e-34444",
+          "sourceHash": "6d1e9e0f6ba728897126437303d2536677670ddecfd4e7bd6325d9f60633afd6",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/34444-korean-cuisine-cooking-class-experience-in-haeundae-busan-south-korea"
+        },
+        {
+          "offerId": "e-765339",
+          "sourceHash": "ded27dff09a42bb0b8bd72f31077c07a208e4af1d2254d231b810a607bb78499",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/765339"
+        },
+        {
+          "offerId": "e-131722",
+          "sourceHash": "b0fbe5a3c55dc4b828721851d4163358ff197c74ba3413077012f4a57e83339f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131722"
+        },
+        {
+          "offerId": "e-131764",
+          "sourceHash": "b85f7c5cf052821967b8382d10af0c31f51f3820f25fca1b2c0e4bda81289f2f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131764"
+        },
+        {
+          "offerId": "e-928784",
+          "sourceHash": "1b0264a6eac1ba1606df3c8e0a8e64ba80208f63d1d0950d3431fea9fc2ac1c2",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928784"
+        },
+        {
+          "offerId": "e-580982",
+          "sourceHash": "65c26760928d6072bd352136af7b080fb8a5d1c3718bc5fba91db88a662ff834",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/580982"
+        },
+        {
+          "offerId": "e-594198",
+          "sourceHash": "e61dc3ab229609173e463f191602f2ac45cc9d8fab56d42db8df3058800fedba",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/594198"
+        }
+      ]
+    },
+    {
+      "id": "barbecue-dining",
+      "members": [
+        {
+          "offerId": "a-114222001",
+          "sourceHash": "1f9abd65204f599dd9bb235d2015d96f30b432a0843d1e60a6c185173d1d98db",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114222001/"
+        },
+        {
+          "offerId": "e-928777",
+          "sourceHash": "124b091aec4cee41a703aacd3da9e1ba23ba63e5bec4f105911bd294111cb0d5",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928777"
+        },
+        {
+          "offerId": "e-928776",
+          "sourceHash": "bc7479e6e97355e1777469966e10fe7335ae60004b45c007352691b3cc29dea6",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928776"
+        }
+      ]
+    },
+    {
+      "id": "food-market-walks",
+      "members": [
+        {
+          "offerId": "e-131777",
+          "sourceHash": "9b8c748c39e4c39bcfaf5da599332df97a6c94f6103caffd4e40a72f2347e386",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131777-jagalchi-fish-market-korean-food-market-tour-with-local-chef-busan-south-korea"
+        },
+        {
+          "offerId": "e-928774",
+          "sourceHash": "58a6440552628d295cc7a3d6cbad4d90866cebff2670d3a2f265e1cd6e9680ea",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928774"
+        },
+        {
+          "offerId": "e-928775",
+          "sourceHash": "eb1ac3b985f3c23779c6e93a53b57e7c345a0f2d6385a47b8ce213c5689be966",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928775"
+        },
+        {
+          "offerId": "e-928769",
+          "sourceHash": "3013d635f26c4d2d5b040f9e23116661919a1822c12fd858894b37a2609b6ffe",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928769"
+        },
+        {
+          "offerId": "a-104371693",
+          "sourceHash": "825d1beef7af8a5e4edb6d67f3cd82e8421aadf2f97f896c69fa38adaf09bec7",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/104371693/"
+        }
+      ]
+    },
+    {
+      "id": "perfume-workshops",
+      "members": [
+        {
+          "offerId": "a-114839641",
+          "sourceHash": "c3f05770ff9d823aa24e216ef23b615866cbab26d997298c2a7b43b250243d09",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114839641/"
+        },
+        {
+          "offerId": "e-772097",
+          "sourceHash": "972b2fad8ccf08a29379902f3aaa701b7b8ce6d574beed17798d197113c74a0e",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/772097"
+        },
+        {
+          "offerId": "e-573510",
+          "sourceHash": "ef084923ff009fa44f9463a2a7c4aa97ab55ac4d69b158c000304f91bd55d830",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/573510"
+        }
+      ]
+    },
+    {
+      "id": "jewelry-workshops",
+      "members": [
+        {
+          "offerId": "a-114844069",
+          "sourceHash": "b37f0ccda173408e64f3f1af0757bf70395d6967acba0b1688d19ddc4661de4a",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114844069/"
+        },
+        {
+          "offerId": "e-268560",
+          "sourceHash": "a2c4e2ed8fe20a504d8e7338c4a8f6678e500ddae7bc072ffdc34a86b2c83cf2",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/268560"
+        },
+        {
+          "offerId": "e-268555",
+          "sourceHash": "40d2614f7f5c745161d0c27c650e0cf7d7317c63a5862915996e4f230ab7dd2b",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/268555"
+        },
+        {
+          "offerId": "e-928783",
+          "sourceHash": "4bde07fbdec0af0df5cc9c2ae726847c6feb70b3e6e4e79a9f6ac255f7d8f36a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928783"
+        },
+        {
+          "offerId": "e-665326",
+          "sourceHash": "fc602f02d502af0214aa255a6a601a341aa0bf77ec1852d4c9eb159721711ba9",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/665326"
+        }
+      ]
+    },
+    {
+      "id": "surfing",
+      "members": [
+        {
+          "offerId": "a-114305559",
+          "sourceHash": "8c8d1bcf10c6c9cffd65d7c94906c4a76b49407a7b1c0375c03020898ca36105",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114305559/"
+        },
+        {
+          "offerId": "e-285664",
+          "sourceHash": "dad6e0f0e69799aa362beb6ee7b187ae0256626e398da9246089596b831c8611",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/285664"
+        },
+        {
+          "offerId": "e-103714",
+          "sourceHash": "b26d5dd1a922ac94741f4b27411ae363d17edc5cfc3ec1c671f3051cde2372f1",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/103714"
+        },
+        {
+          "offerId": "e-771168",
+          "sourceHash": "3b75a175421f66a25848a2b1e23612aba3f3ed909aaccc08ba70daff1658cea3",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/771168"
+        },
+        {
+          "offerId": "e-770824",
+          "sourceHash": "853d8eb592f134d44a080fd9b086196dcfccb0ffef9975c48119fb661b4a85b6",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/770824"
+        }
+      ]
+    },
+    {
+      "id": "paddleboarding",
+      "members": [
+        {
+          "offerId": "e-602360",
+          "sourceHash": "f263a081c7b4469f75faec6fd579068765f9cff74e85a16313d8d58436df4dd1",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/602360"
+        },
+        {
+          "offerId": "e-602362",
+          "sourceHash": "7856951b786b0fbfbfb41436593bf3bbd8017a039327506fbbc4e0822c77e602",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/602362"
+        }
+      ]
+    },
+    {
+      "id": "photography",
+      "members": [
+        {
+          "offerId": "e-568025",
+          "sourceHash": "5c7eb4605d906624d0a021c388054665675e76c8e91c1cfc8060f5ed8d0001b7",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/568025"
+        },
+        {
+          "offerId": "e-21571",
+          "sourceHash": "66e5b671e0c3b293e531808fb9a45d3d3b061525c5abad8922d301f79d4b174f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/21571-busan-night-photo-tour-ibagu-gil-cheonghak-waterside-park-gwangalli-beach-hwangnyeongsan-mountain-korea"
+        },
+        {
+          "offerId": "e-19524",
+          "sourceHash": "271159f1e82ed995700ba2d3b7cda97735c67e40dd0f67b5fe82756580465259",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/19524"
+        },
+        {
+          "offerId": "e-103020",
+          "sourceHash": "6f8135f0936219e5b637181b7368a592c44a2911e38882eac694a205150280a6",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/103020"
+        },
+        {
+          "offerId": "e-581018",
+          "sourceHash": "a25007b79b8a0242540e1a8b79a7a39d020fb82bc41c5976d0f6bf8508ce16aa",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/581018"
+        },
+        {
+          "offerId": "e-929312",
+          "sourceHash": "54d58d6c2c61c2208a1ae96fac2d3462326453d11b0c4b8cc370a2802186d692",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/929312"
+        }
+      ]
+    },
+    {
+      "id": "nightlife-pub-crawls",
+      "members": [
+        {
+          "offerId": "e-605050",
+          "sourceHash": "50c7267e8991795677d26cab07b99586b7a7cef4b98f95171be1974d04b3cb61",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/605050"
+        },
+        {
+          "offerId": "e-928773",
+          "sourceHash": "79e7966143ebdb55363de00050885185545476673b5574809c49318b8c26fa8d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928773"
+        },
+        {
+          "offerId": "e-928778",
+          "sourceHash": "d11447ab0c17603bca228d155b86ac71fc2b18b9f675167d065a4a6ac975e630",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928778"
+        }
+      ]
+    },
+    {
+      "id": "hiking",
+      "members": [
+        {
+          "offerId": "a-82315890",
+          "sourceHash": "19a0f71a0f9694d9cdeae19aeaef895debbb576b6abb403f5122dee0959447c8",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/82315890/"
+        },
+        {
+          "offerId": "e-928770",
+          "sourceHash": "76d77f3cc29156331747ef5f59f4bac65dcf871a9992b46a3f5350ed6afd4cea",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928770"
+        },
+        {
+          "offerId": "e-928768",
+          "sourceHash": "97de2f62b57e94fc88adcc027aee30e06ee1b8995cfd3e48496aa8d3533edb7f",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928768"
+        },
+        {
+          "offerId": "e-928750",
+          "sourceHash": "f18288bbd3be83aca16add54326810a0f1b06ab9fb2ef808ef3bec0618e22059",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928750"
+        }
+      ]
+    },
+    {
+      "id": "arts-exhibitions",
+      "members": [
+        {
+          "offerId": "b-35552",
+          "sourceHash": "0c360a3336f5ea0a16044d227a7bf24320da6c727db03d1d0664afbde040920c",
+          "evidenceUrl": "https://www.klook.com/ko/activity/35552-museum-one-ticket-busan"
+        },
+        {
+          "offerId": "e-35943",
+          "sourceHash": "632d3803978392836599932cf334a6dcaec7bf7fa986080b834bd5ced95cdfbd",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/35943"
+        },
+        {
+          "offerId": "e-184194",
+          "sourceHash": "c8dacce638be057d2db2be30d0e5b1d51ee13b13a50231e3f29bc47ee0f24a56",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/184194"
+        },
+        {
+          "offerId": "e-931211",
+          "sourceHash": "d9862e2f09666a993ab361a7fbe14d992c12a63e9081769a81c19ce96994fc62",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/931211"
+        }
+      ]
+    },
+    {
+      "id": "luggage-delivery",
+      "members": [
+        {
+          "offerId": "a-115087510",
+          "sourceHash": "48fafddba2844409f43ea8752ac3cb41fd8e73af06dcd4071db00bdf1ed59d86",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/115087510/"
+        },
+        {
+          "offerId": "b-142589",
+          "sourceHash": "46bfb2e5728871121953191b869b0ae265d2b5273d1b41681510c1c8853407a7",
+          "evidenceUrl": "https://www.klook.com/ko/activity/142589-busan-luggage-delivery-service"
+        },
+        {
+          "offerId": "b-5825",
+          "sourceHash": "7fea5fc9aa6fd731e56988407da905cec919766ba186b3615d844b4b72d89000",
+          "evidenceUrl": "https://www.klook.com/ko/activity/5825-airport-luggage-services-busan"
+        },
+        {
+          "offerId": "e-712262",
+          "sourceHash": "2e4d23569a9846bdc647a9a63dad8b677f7847b7186e72c887fbe2ae44799054",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/712262"
+        },
+        {
+          "offerId": "e-152658",
+          "sourceHash": "2b3e6f5881bbc4f8342cf013ddd43e3356cc9a2bf187f8f3738b3aba2dca619d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/152658-busan-airport-hotel-luggage-check-in-luggagent-service-gimhae-international-airport-korea"
+        },
+        {
+          "offerId": "e-712252",
+          "sourceHash": "0fea9bda1bc82f191b6877e3caac0ec35c317c897495d6df040e171a3c56b407",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/712252"
+        }
+      ]
+    },
+    {
+      "id": "airport-transfers",
+      "members": [
+        {
+          "offerId": "e-18410",
+          "sourceHash": "afbd4bde15f0ce8d45c864cf5e07ebf89ce2b79d1cf525eb9ed80663383c0465",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/18410"
+        },
+        {
+          "offerId": "e-576728",
+          "sourceHash": "79cd4a79ef010cbe84575379e72b7d2905e16c525a900a3140ee9091da8e34e0",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/576728"
+        },
+        {
+          "offerId": "e-6522",
+          "sourceHash": "7df60ac52348f815f6e9849fc2a65f767be4f871bc80a7d3063de981f28f63b6",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/6522-busan-gimhae-airport-private-transfer-to-busan-city"
+        }
+      ]
+    },
+    {
+      "id": "airport-lounges",
+      "members": [
+        {
+          "offerId": "e-113733",
+          "sourceHash": "f393cd729ad86debc833752ff238e573df1c5ee1460547d034c6fd26b28bfc67",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/113733-incheon-gimpo-gimhae-airport-lounge-pass-south-korea"
+        },
+        {
+          "offerId": "e-597202",
+          "sourceHash": "bb75ba765ef4ee4ba4dda4b9adec12946a0882aeb8c28de38e068cdaed6754e8",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/597202"
+        },
+        {
+          "offerId": "e-597203",
+          "sourceHash": "390911cd3c28b8c0de41e94f7fc61e6737d6c2f92feb5892cdfaac3cd8e77e6d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/597203"
+        },
+        {
+          "offerId": "e-597204",
+          "sourceHash": "0690f70687951b9b45b3cefa3ae4becdd911b1c9243e0aff8f49bd5b0ffd51ad",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/597204"
+        }
+      ]
+    },
+    {
+      "id": "korea-esim",
+      "members": [
+        {
+          "offerId": "a-99131656",
+          "sourceHash": "47944c7a85a24b488bdfc9dd7c5e23a1502680ec268d7053b7c7dc5a435d3e51",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/99131656/"
+        },
+        {
+          "offerId": "a-37694225",
+          "sourceHash": "039f736ceddad94b2d3cbb08fdc78cb4c4dbec965edd96da8cd98b96e434dd98",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/37694225/"
+        },
+        {
+          "offerId": "a-50656608",
+          "sourceHash": "1347cfc84dc20cfaf4b18f2a5edda2de5a40c0569d232c0449e8f55941fd834a",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/50656608/"
+        },
+        {
+          "offerId": "a-46000611",
+          "sourceHash": "7034127b89c12c61cec61b3a911e2dcf1b972f5309bc653a332a9f7aa3f10fc2",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/46000611/"
+        },
+        {
+          "offerId": "e-621635",
+          "sourceHash": "7f6318af6ef64c23db2cc214dc4fedbe6563f62bf0d3fbaf81880e3f5c72c979",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/621635"
+        },
+        {
+          "offerId": "e-925352",
+          "sourceHash": "39c52637cc922c90c88bbb5a12df5f2f95452b68824a51c46200352a8a2c20c7",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/925352"
+        }
+      ]
+    },
+    {
+      "id": "payment-cards",
+      "members": [
+        {
+          "offerId": "a-66033197",
+          "sourceHash": "463ed40c4d18156f4deec513ec639db700c9a7c32431cf3b202799aa16adf27f",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/66033197/"
+        },
+        {
+          "offerId": "e-609660",
+          "sourceHash": "42479f1ee4bbd348a131081bdc4d863f76c4f6daab6cd235a665e81e2020c5cf",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/609660"
+        }
+      ]
+    },
+    {
+      "id": "gyeongju-heritage",
+      "members": [
+        {
+          "offerId": "a-94397157",
+          "sourceHash": "ed7b6754102709fde229a52116123c5e5be958cbebcb6ed524c86f088bfdcda5",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/94397157/"
+        },
+        {
+          "offerId": "a-110396245",
+          "sourceHash": "52e6c5b3a8060aa58a3f00724b481dfe8e014f17d166e1bcba6fee80eef172cd",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/110396245/"
+        },
+        {
+          "offerId": "a-53395314",
+          "sourceHash": "a684da7b40d5f41b4b6fa47eb7101ea743aaf0cf451c3e272505ce4c713ecb2b",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/53395314/"
+        },
+        {
+          "offerId": "b-74147",
+          "sourceHash": "86c541da87bb063da71c88c56ff455761a1ee7236c0e639850ab983b64fa4eee",
+          "evidenceUrl": "https://www.klook.com/ko/activity/74147-gyeongju-oneday-tour-gyeongju"
+        },
+        {
+          "offerId": "e-579922",
+          "sourceHash": "27868efa1aea712a0a79fc1f13ff53a6b7e858615312f5a60cc946a97dfc76c4",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/579922"
+        },
+        {
+          "offerId": "e-131062",
+          "sourceHash": "83df4dd766f39cbebde2ae69b9de37c7b996d345a574ad385cd391a2f79446c3",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/131062-gyeongju-1-day-tour-hwangridan-gil-daereungwon-bulguksa-donggung-wolji-south-korea"
+        },
+        {
+          "offerId": "e-17654",
+          "sourceHash": "f98a91b0ddca2d5774db0979e77a58e364c312dda6d82356d454c7264f8bb0e3",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/17654-day-tour-from-busan-gyeongju-unesco-world-heritage-site-south-korea"
+        },
+        {
+          "offerId": "e-331797",
+          "sourceHash": "4684d8308f1e49dbc514bb6dd25e8567a85b313ffd0252ac6e677d7457f49a38",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/331797"
+        },
+        {
+          "offerId": "e-267252",
+          "sourceHash": "8e605e1fc6a15a8ce0375dea13ca2aa8fb30805abef704edfa775eee9bc5a04a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/267252"
+        },
+        {
+          "offerId": "e-36665",
+          "sourceHash": "2571aafcd462e96ad93b6eac07b40c57ee856177cd8bab72982949d7cdc12cac",
+          "evidenceUrl": "https://www.kkday.com/ja/product/36665"
+        },
+        {
+          "offerId": "e-36681",
+          "sourceHash": "d22bd4721bdb35ed598194a0aecca5aff8f8af2f3e38d7fea9b31a609855acae",
+          "evidenceUrl": "https://www.kkday.com/ja/product/36681"
+        }
+      ]
+    },
+    {
+      "id": "geoje-excursions",
+      "members": [
+        {
+          "offerId": "a-106108964",
+          "sourceHash": "46102a6e4cb24c27e4dc062b6f9ed039c78941d270e1e85a79bd7b37be488554",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/106108964/"
+        },
+        {
+          "offerId": "e-143877",
+          "sourceHash": "f60503625c1bb15c5f731b2ef1ae4f8ffc35eadf737bccd236d9463f8ebd63ea",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/143877-from-busan-oedo-botania-island-geoje-panorama-cable-car-haegeumgang-hill-of-wind-day-tour-korea"
+        }
+      ]
+    },
+    {
+      "id": "private-city-charters",
+      "members": [
+        {
+          "offerId": "a-24375411",
+          "sourceHash": "c248fa6a1bbc55b69610307126476e4c925adef8d91ea6f7cd779862b74c4a37",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/24375411/"
+        },
+        {
+          "offerId": "a-111031890",
+          "sourceHash": "c5b139a52c15f90e39fd9ebb6771b427022fa1ed0d8cc2c4fa27eb6df46d595a",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/111031890/"
+        },
+        {
+          "offerId": "e-287069",
+          "sourceHash": "8a246343bf3d8870109948d05d2b146e8f3fa30eb3c0ce2e2246034f55fd7874",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/287069"
+        },
+        {
+          "offerId": "e-527059",
+          "sourceHash": "38b2075852990fa3b8026dee06c75cca124cde1a309a5b8e605e818fbe37e923",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/527059"
+        },
+        {
+          "offerId": "e-547095",
+          "sourceHash": "68a159684d1730f2be9c0bb5d4ab6f5a38867aa49f86fb1c3c90c7217eb76f94",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/547095"
+        },
+        {
+          "offerId": "e-574877",
+          "sourceHash": "cf2b432b8237af9dd9c3039d58b404384219cf7f682eac9bda2702996489292b",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/574877"
+        },
+        {
+          "offerId": "e-301935",
+          "sourceHash": "2cd35f00bff0a6eea0477d03d9bd30703d08cc03a36cca45175357c1a950389d",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/301935"
+        },
+        {
+          "offerId": "e-575318",
+          "sourceHash": "05b0515f2e7dfd24dcfcc3544ddc79283e319b18a1dd70b82507a3f2ad3febf2",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/575318"
+        },
+        {
+          "offerId": "e-771997",
+          "sourceHash": "03b4ecd0edbdaa553eb6a88f5c7a70a4da242e394c7d929dd4127fa536f97768",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/771997"
+        },
+        {
+          "offerId": "e-219598",
+          "sourceHash": "a12f2cf454372670602c96821fcb2bd732f99c6be78db176e30eedce4dee2dd3",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/219598"
+        },
+        {
+          "offerId": "e-528803",
+          "sourceHash": "345310fe3a82cdd1f2c62b7d71a6b166dc0c34e141622a69ee5f754620c98bf5",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/528803"
+        },
+        {
+          "offerId": "e-536566",
+          "sourceHash": "785375682d5fc6db4c933e6c8da24b24be4c46e4950989c46d70efde22ba4ba7",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/536566"
+        }
+      ]
+    },
+    {
+      "id": "cruise-shore-excursions",
+      "members": [
+        {
+          "offerId": "a-114421145",
+          "sourceHash": "01a0e87e772ed666aafb611cd7430ca7d9c01803c8e1e5dfdda1225ed0df1595",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114421145/"
+        },
+        {
+          "offerId": "a-114270349",
+          "sourceHash": "646f067133de5cc0d4e880777a9fc796e5131c2ef90f8483c08cbdee5713173e",
+          "evidenceUrl": "https://kr.trip.com/things-to-do/detail/114270349/"
+        },
+        {
+          "offerId": "e-262390",
+          "sourceHash": "b673dc55b78fc37c83aa1e36da81eee797991a4abb220e350b95b6c7a5387d79",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/262390-busan-city-full-day-tour-cruise-guests-layover-south-korea"
+        },
+        {
+          "offerId": "e-546686",
+          "sourceHash": "b1e4f0e88a8ade9fe229f9a89b38c08681fcb33e35fb4f812a0a56d3515b3b20",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/546686"
+        },
+        {
+          "offerId": "e-928763",
+          "sourceHash": "421bd9f2331205bc025131110c14b624c5867fd6b48386c9fb724d62ce8ca3d6",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928763"
+        },
+        {
+          "offerId": "e-928753",
+          "sourceHash": "1713df424bb54c385a67ff512c675819292acdcbfe83eab68b929d7eb508e853",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928753"
+        },
+        {
+          "offerId": "e-574731",
+          "sourceHash": "c41fa9cd59dcb5b16431884fe8f890dd2417989c955d801e1437b60d14937e75",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/574731"
+        },
+        {
+          "offerId": "e-928762",
+          "sourceHash": "bf248573834a0b2609089f286f9332112cbfdaf54de50e2d2433c5662f5264d9",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928762"
+        },
+        {
+          "offerId": "e-928761",
+          "sourceHash": "afe2d91ded1c2058d51b4e1f0f6c86ce46203ade444b172b73569d096957b5b5",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928761"
+        },
+        {
+          "offerId": "e-928746",
+          "sourceHash": "798a004e3753dff419e1244659f4bd439015f0cd42f4dd5ab4f6717acb3c2a23",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/928746"
+        },
+        {
+          "offerId": "e-635247",
+          "sourceHash": "66cddca275093f8922dd35e654b288183a9aae2b5222bb6e012f83662a079337",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/635247"
+        }
+      ]
+    },
+    {
+      "id": "attraction-passes",
+      "members": [
+        {
+          "offerId": "e-138477",
+          "sourceHash": "7f079d3f0eb7fcd44b96efc835f46e2df1e1d400cc69c8c312b9992e67a95c4a",
+          "evidenceUrl": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+        },
+        {
+          "offerId": "e-127340",
+          "sourceHash": "72768176336522026265635bbc11d87b3378b4db70fbb626b514a3f019313039",
+          "evidenceUrl": "https://www.kkday.com/ko/product/127340-busan-tour-pass"
+        }
+      ]
+    }
+  ]
+}

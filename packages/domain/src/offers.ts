@@ -55,5 +55,8 @@ export type OfferCategory = z.infer<typeof OfferCategorySchema>;
 
 export const RelatedOffersResponseSchema=z.strictObject({
   offerId:z.string(),locale:LocaleSchema,
-  items:z.array(z.strictObject({offer:PublicOfferSchema,reason:z.enum(['shared-place','same-category'])})).max(6),
+  items:z.array(z.strictObject({offer:PublicOfferSchema,reason:z.enum(['shared-place','similar-experience']),places:z.array(z.string().min(1))})).max(6),
+  nearbyStays:z.array(z.strictObject({offer:PublicOfferSchema,areas:z.array(z.string().min(1)).min(1)})).max(6),
 });
+
+export interface RelatedOfferPlace {slug:string;name:string;experienceIds:readonly string[];stays:readonly {offerId:string;areaLabel:string}[]}

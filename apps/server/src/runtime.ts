@@ -1,3 +1,7 @@
+import {loadStayBannerConfig,createStayBannerConfig} from './config/stay-banner.js';
+import {registerStayBannerRoutes} from './routes/stay-banner.js';
+import {loadStayMapConfig,createStayMapConfig} from './config/stay-map.js';
+import {registerStayMapRoutes} from './routes/stay-map.js';
 import {loadCourseRoutes} from './config/course-routes.js';
 import { loadCourseCatalog } from './config/courses.js';
 import { createCourseService } from './services/courses.js';
@@ -48,6 +52,8 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const destinationService=createDestinationService(destinationConfig,offers,undefined,localization);
   const guideService=createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos);
   const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, destinationService, guideService,parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
+  registerStayBannerRoutes(app,createStayBannerConfig(loadStayBannerConfig(),offerConfig));
+  registerStayMapRoutes(app,createStayMapConfig(loadStayMapConfig(),offerConfig));
   registerCourseRoutes(app,createCourseService(loadCourseCatalog(),destinationService,guideService,parkingAnchors,loadCourseRoutes()));
   app.addHook('onClose', async () => { db.close(); });
   return app;

@@ -1,0 +1,50 @@
+{
+  "enabled": true,
+  "providerId": "PROVIDER_D",
+  "baseUrl": "https://sherpa.agoda.com/Map/index",
+  "allowedHosts": [
+    "sherpa.agoda.com"
+  ],
+  "source": "User-provided official map-tool embed, 2026-11-24; rendering URL confirmed in official sherpa_init_map_02.min.js. Domain/channel approval not independently confirmed.",
+  "settings": {
+    "refKey": "lefRIZ3VdMe6Kwvhr+SSng==",
+    "searchRadius": 5,
+    "cid": 1980996,
+    "latitude": 35.179953,
+    "longitude": 129.075236,
+    "destination": "Busan, South Korea",
+    "isOverideConf": false,
+    "city": 17172,
+    "numberOfChildren": 0,
+    "numberOfAdult": 2,
+    "numberOfRoom": 1,
+    "crt": "2616316188026",
+    "ver": 1
+  },
+  "defaults": {
+    "checkInOffsetDays": 1,
+    "nights": 6
+  },
+  "locales": {
+    "en": {
+      "language": "en-us",
+      "currency": "USD"
+    },
+    "ko": {
+      "language": "ko-kr",
+      "currency": "KRW"
+    },
+    "ja": {
+      "language": "ja-jp",
+      "currency": "JPY"
+    },
+    "zh-CN": {
+      "language": "zh-cn",
+      "currency": "CNY"
+    },
+    "zh-TW": {
+      "language": "zh-tw",
+      "currency": "TWD"
+    }
+  }
+}

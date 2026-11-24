@@ -1456,3 +1456,33 @@ E2E는 외부 이미지·OSM 타일·GTM/외부 링크 대역을 사용한다. �
 구현51b8d77을 git push dallabusan HEAD:main 종료0으로 반영했다. 실제 https://dallabusan.vercel.app 의 /api/offers/b-74132/related는5개 언어 각각200/6개를 반환했다. 실제 배포 브라우저360/1280px에서 상세창 너비344/1120px, 관련 상품6개, 끝 스크롤에도 닫기 버튼 표시, 바깥 여백 클릭 닫기, 동일 창 관련 상품 전환·현재 상세 API의 제목/예약 href 동일, 전환 후 스크롤0, Escape·원래 버튼 초점 복구,6메뉴 유지, 브라우저 pageerror0을 확인했다. live-check.mjs 종료0이며 결과/대역 캡처는 var/imports/offer-dialog-20261124에 로컬 보관한다. 이 실사이트 확인에서도 외부 이미지/GTM은 대역,환율 요청은 차단,실제 제휴 링크 클릭0이다. 공개 배포 동작 확인과 외부 예약/실사진 서버 상태 검증을 구분한다.
 
 사후 변경은 본 검증 기록뿐이므로 제품 빌드/216개 회귀를 반복하지 않았다.
+
+
+## 2026-11-24 관련 관광지·유사 체험과 숙소 분리, 사용자 제공 지도/배너
+
+최신 요청: 같은 관광지/유사 체험 위주의 관련 상품, 주변 숙소 별도 영역. 진행 중 사용자가 공식 지도와 다이내믹 배너 코드를 추가 제공하고, 지도 위치를 ‘상품 상세 숙소 영역 버튼’으로 명시 선택했다. 두 도구 모두 수동 버튼에서만 불러오도록 구현했다. 현재 선정·위젯 경계/발급 설정은 [후속 검토](related-offers-review-2026-11-24.md)를 따른다.
+
+변경: server config/offers.ts·offer-recommendations.ts와 catalog/offer-recommendations.json(34유형217개 ID·원문 지문), services/offers.ts·destinations.ts/related route(같은 명소→명시 유형, 체험/숙소 분리·숙소 그룹 중복 방지), domain/offers.ts·stay-map.ts/index, web/Offer.tsx·StayMap.tsx·StayBanner.tsx·offer-dialog.css·i18n/offer-dialog.ts, server config/routes/stay-map.ts·stay-banner.ts/runtime 및 각 catalog JSON(발급 값·공개 URL/언어·통화·날짜/모션), 관련 단위/E2E·문서/캡처. 새 업체별 리터럴은 config/catalog 및 서버 config 경계에만 둔다. .env/lockfile/의존성/원본 offers.json·공공 DB는 변경하지 않았다.
+
+| 명령 | 종료/결과 |
+| --- | --- |
+| npm run lint | 0, 최종 문구 수정 후 재실행0 |
+| npm run typecheck | 0, server/web/domain/tools strict |
+| npm run test -- --run | 0, 최종36파일401개 통과 |
+| npm run check:providers | 0,126개 소스 경계 통과 |
+| npm run build | 0, domain→server→web, 최종 문구 수정 후 재빌드0 |
+| npm run test:e2e -- tests/e2e/offer-dialog.spec.ts | 0, 지도/숙소 분리 단계18개 통과 |
+| npm run test:e2e | 0, 지도 단계222개/배너 포함228개 전체 통과(최종3.1분) |
+| npm run test:e2e -- tests/e2e/offer-dialog.spec.ts tests/e2e/stay-banner.spec.ts | 0, 최종 안내 문구 수정 후24개 통과 |
+| node var/imports/related-relevance-20261124/dist-smoke.mjs | 0, 최종 dist start7개 페이지·5개 언어 관련 API 모두200,카탈로그402 |
+| node var/imports/related-relevance-20261124/package-check.mjs | 0, 실제 Vercel 독립 함수842파일, require(ESM) 제한 실행으로5개 언어 관련 결과와 최신 DTO 동일/숙소 분리·지도/배너 endpoint200 확인 |
+
+초기 strict 검사에서 중첩 함수 안의 base undefined 가능성을 잡았다. 상위에서 검증한 baseGroup을 캡처하도록 수정했고 any/단언/검사 해제를 쓰지 않았다. git diff --check는 새 E2E 끝의 중복 빈 줄을 지적해 제거한 뒤 재검사한다. 브라우저/단위 검사를 무시하거나 실패를 성공으로 보고하지 않았다. 기존 Vite Zod 주석·500KB 청크 및 Node SQLite/색상 안내는 비차단이다. 전체228개 이후 제품 변경은 지도 반경 단위를 확인 없이 표시하지 않도록5개 언어 안내에서 수치 표현만 제거한 것이며, 최종 lint/build/관련24개와 dist smoke를 다시 확인했다.
+
+확인: 같은 관광지 우선·링크 없는 유형만의 카테고리 보완 금지·반지와 향수/열차와 테마파크 분리·원문 변경 시 유형 연결 중단·5개 언어 DTO·실제 숙소 그룹/제공처 우선순위·제외/빈 목록,360/768/1280px의 체험·숙소 별도 카드와 해당 상세 전환, 지도/배너 버튼 전 외부 iframe0·수동 생성/닫기·에러 재시도,5개 언어/통화·날짜 미래 전환·모션 감소·모바일300px 배너 축소·가로 넘침 없음·고정 닫기/배경 클릭/초점 복구. 기존 찜/장바구니/관광지/맛집/코스/프로모션·AdSense 비활성 유지도 전체 회귀로 확인했다.
+
+캡처: [PC 체험](design/related-offers-2026-11-24/desktop-experiences.png),[PC 숙소](design/related-offers-2026-11-24/desktop-area-stays.png),[모바일 숙소](design/related-offers-2026-11-24/mobile-area-stays.png),[모바일 배너](design/related-offers-2026-11-24/mobile-banner.png). E2E의 사진/iframe/GTM은 **대역**이며 단색 사진·Partner banner mock을 실제 상품 자료로 쓰지 않는다.
+
+실연동/미실행: 공식 초기화 JS와 실제 지도/배너 HTML 각1회 GET200·프레임 차단 헤더 없음 확인, 결과는 var/imports/related-relevance-20261124/vendor-http.json에 로컬 보관했다. 실제 위젯 숙소 결과와 도메인/채널 승인은 이 HTML 응답만으로 확정하지 않는다. 실제 예약/결제/광고 클릭·신규 채널 등록·계약 동의·공공 API 재수집은 미실행(범위 아님). 새 포털 수집/정적 제휴상품 발급0,공개402/메인398/명소220/맛집514/코스40 그대로이며 외부 동적 숙소 결과를 내부 상품/장바구니에 적재하지 않는다. 깨끗한 재설치는 의존성/lock 변경이 없어 생략하고 기존 검증 설치본의 현재 소스로 함수를 다시 만들었다.
+
+공개 배포와 실사이트 확인 결과는 이어서 기록한다.

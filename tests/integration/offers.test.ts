@@ -1,3 +1,6 @@
+import {loadDestinationConfig} from '../../apps/server/src/config/destinations.js';
+import {createDestinationService} from '../../apps/server/src/services/destinations.js';
+import {offerRecommendationFingerprint} from '../../apps/server/src/config/offer-recommendations.js';
 import { describe, expect, it } from 'vitest';
 import { OfferQuerySchema } from '@trip-fit/domain';
 import { OfferCatalogConfigSchema, loadOfferCatalogConfig } from '../../apps/server/src/config/offers.js';
@@ -143,26 +146,50 @@ describe('read-only offers HTTP API', () => {
 
 
 describe('related offer selection',()=>{
- it('prioritizes explicit reviewed place links, then same category/scope; excludes self, unavailable entries and caps at six',()=>{
+ it('prioritizes same places, splits stays and never falls back to a broad category',()=>{
   const config=fixture(),base=config.offers[0];if(!base)throw Error('No fixture');
-  for(let i=0;i<10;i++)config.offers.push({...base,id:'candidate-'+i,externalId:'candidate-'+i,priority:i+2});
-  config.offers.push({...base,id:'place-linked',externalId:'place-linked',category:'tour',priority:100});
+  for(let i=0;i<8;i++)config.offers.push({...base,id:'candidate-'+i,externalId:'candidate-'+i,priority:i+2});
+  config.offers.push({...base,id:'linked-experience',externalId:'linked-experience',category:'activity',priority:100});
   config.offers.push({...base,id:'different-scope',externalId:'different-scope',scope:'regional'});
   config.offers.push({...base,id:'hidden',externalId:'hidden',enabled:false});
   config.offers.push({...base,id:'expired',externalId:'expired',expiresOn:'2026-11-09'});
-  const related=service(config).related(base.id,'en',new Set(['place-linked','hidden','expired']));
-  expect(related?.items).toHaveLength(6);expect(related?.items[0]).toMatchObject({offer:{id:'place-linked'},reason:'shared-place'});
-  expect(related?.items.slice(1).every(item=>item.reason==='same-category'&&item.offer.scope===base.scope&&item.offer.category===base.category)).toBe(true);
-  expect(related?.items.some(item=>[base.id,'hidden','expired','different-scope'].includes(item.offer.id))).toBe(false);
+  config.offers.push({...base,id:'nearby-stay',externalId:'nearby-stay',category:'stay'});
+  config.offers.push({...base,id:'unrelated-stay',externalId:'unrelated-stay',category:'stay'});
+  config.offers.push({...base,id:'unrelated-ticket',externalId:'unrelated-ticket'});
+  config.recommendationGroups=[{id:'curated-type',members:config.offers.filter(o=>[base.id,...Array.from({length:8},(_,i)=>'candidate-'+i),'different-scope'].includes(o.id)).map(o=>({offerId:o.id,sourceHash:offerRecommendationFingerprint(o),evidenceUrl:o.sourceUrl}))}];
+  const places=[{slug:'reviewed-sight',name:'Reviewed sight',experienceIds:[base.id,'linked-experience','hidden','expired'],stays:[{offerId:'nearby-stay',areaLabel:'Reviewed area'}]}];
+  const related=service(config).related(base.id,'en',places);
+  expect(related?.items).toHaveLength(6);expect(related?.items[0]).toMatchObject({offer:{id:'linked-experience'},reason:'shared-place',places:['Reviewed sight']});
+  expect(related?.items.slice(1).every(item=>item.reason==='similar-experience'&&item.offer.scope===base.scope)).toBe(true);
+  expect(related?.items.every(item=>item.offer.category!=='stay')).toBe(true);expect(related?.items.some(item=>[base.id,'hidden','expired','different-scope','unrelated-ticket'].includes(item.offer.id))).toBe(false);
+  expect(related?.nearbyStays).toMatchObject([{offer:{id:'nearby-stay'},areas:['Reviewed area']}]);
   expect(service(config).related('hidden','en')).toBeNull();expect(service(config).related('expired','en')).toBeNull();
-  expect(service().related(base.id,'en')?.items).toEqual([]);
+  expect(service().related(base.id,'en')).toMatchObject({items:[],nearbyStays:[]});
  });
- it('publishes the same fresh localized DTO as direct lookup and has no unvalidated booking links',()=>{
+ it('does not reuse a curated relationship when source identity or title changes',()=>{
+  const config=fixture(),base=config.offers[0];if(!base)throw Error('No fixture');const similar={...base,id:'similar',externalId:'similar'};config.offers.push(similar);
+  config.recommendationGroups=[{id:'same-experience',members:[base,similar].map(o=>({offerId:o.id,sourceHash:offerRecommendationFingerprint(o),evidenceUrl:o.sourceUrl}))}];
+  expect(service(config).related(base.id,'en')?.items).toHaveLength(1);similar.title+=' changed';expect(service(config).related(base.id,'en')?.items).toEqual([]);
+ });
+ it('publishes fresh localized DTOs, curated similar types and reviewed-area stays in five languages',()=>{
   const source=service(loadOfferCatalogConfig()),base=source.list(OfferQuerySchema.parse({locale:'en',limit:1})).items[0];if(!base)throw Error('No public offer');
-  for(const locale of ['en','ko','ja','zh-CN','zh-TW'] as const){const related=source.related(base.id,locale);expect(related?.items.length).toBeGreaterThan(0);for(const item of related?.items??[])expect(item.offer).toEqual(source.get(item.offer.id,locale));}
+  for(const locale of ['en','ko','ja','zh-CN','zh-TW'] as const){const related=source.related(base.id,locale);expect(related?.items.length).toBeGreaterThan(0);for(const item of related?.items??[]){expect(item.offer.category).not.toBe('stay');expect(item.offer).toEqual(source.get(item.offer.id,locale));}}
+  const ring=source.related('a-114844069','en');expect(ring?.items.map(x=>x.offer.id)).toContain('e-268560');expect(ring?.items.some(x=>x.offer.category==='stay'||x.offer.id==='a-114839641')).toBe(false);
+  const sky=source.related('a-ticket-131154386','en');expect(sky?.items.map(x=>x.offer.id)).toContain('e-123012');expect(sky?.items.map(x=>x.offer.id)).not.toContain('e-19296');
+ });
+ it('keeps real attraction relationships ahead of experience types and deduplicates reviewed hotel properties',()=>{
+  const config=loadOfferCatalogConfig(),source=service(config),destinations=createDestinationService(loadDestinationConfig(),source);
+  const places=destinations.relatedPlacesForOffer('b-74132','en'),related=source.related('b-74132','en',places);
+  expect(related?.items).toHaveLength(6);expect(related?.items[0]?.reason).toBe('shared-place');expect(related?.items.every(item=>item.offer.category!=='stay')).toBe(true);
+  expect(related?.nearbyStays.length).toBeGreaterThan(0);expect(related?.nearbyStays.every(item=>item.offer.category==='stay'&&item.areas.length>0)).toBe(true);
+  for(const group of config.featuredGroups){const found=related?.nearbyStays.filter(item=>group.members.some(m=>m.offerId===item.offer.id));expect(found?.length??0).toBeLessThanOrEqual(1);}
+  const hotel=source.related('b-1018022','en',destinations.relatedPlacesForOffer('b-1018022','en'));
+  expect(hotel?.nearbyStays.some(item=>['b-1018022','d-16933389'].includes(item.offer.id))).toBe(false);
+  expect(hotel?.nearbyStays.find(item=>item.offer.id==='b-439669')?.offer.provider.id).toBe('PROVIDER_B');
+  expect(source.related('a-99131656','en')?.nearbyStays).toEqual([]);
  });
  it('serves valid related requests and rejects unknown/invalid base identities or query fields',async()=>{
   const app=buildApp(loadServerConfig({NODE_ENV:'test'}),undefined,undefined,service());
-  try{const r=await app.inject('/api/offers/test-ticket/related?locale=en');expect(r.statusCode).toBe(200);expect(r.headers['cache-control']).toBe('no-store');expect(r.json()).toEqual({offerId:'test-ticket',locale:'en',items:[]});expect((await app.inject('/api/offers/missing/related')).statusCode).toBe(404);expect((await app.inject('/api/offers/test-ticket/related?locale=bad')).statusCode).toBe(400);expect((await app.inject('/api/offers/test-ticket/related?url=https://example.test')).statusCode).toBe(400);}finally{await app.close();}
+  try{const r=await app.inject('/api/offers/test-ticket/related?locale=en');expect(r.statusCode).toBe(200);expect(r.headers['cache-control']).toBe('no-store');expect(r.json()).toEqual({offerId:'test-ticket',locale:'en',items:[],nearbyStays:[]});expect((await app.inject('/api/offers/missing/related')).statusCode).toBe(404);expect((await app.inject('/api/offers/test-ticket/related?locale=bad')).statusCode).toBe(400);expect((await app.inject('/api/offers/test-ticket/related?url=https://example.test')).statusCode).toBe(400);}finally{await app.close();}
  });
 });
