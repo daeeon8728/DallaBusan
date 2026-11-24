@@ -1272,3 +1272,12 @@ Close/Escape/분류 이동은 해당 탭 세션에서 억제한다. 하루 안 �
 [모바일 팝업](screenshots/course-popup-mobile-2026-11-24.png),[PC 팝업](screenshots/course-popup-desktop-2026-11-24.png),[모바일 코스](screenshots/courses-mobile-2026-11-24.png),[PC 코스](screenshots/courses-desktop-2026-11-24.png)를 보존했다. 팝업의 음식만 있는 최신 합성 패널·실제2버튼·모바일 가로 넘침 없음을 직접 열어 확인했다. 코스 사진의 단색은 E2E 대역이며 실제 장소 사진의 신규 확보 증거가 아니다.
 
 Google 파일/태그는 앞선 분리 커밋으로 실제 배포를 확인했으며 코스 구현은 검증 완료 소스를 이어서 push한다. 최종 클라우드 코스 응답/SPA/팝업 결과는 아래 후속 기록을 따른다.
+
+
+### 실제 공개 배포 확인:548f815
+
+dallabusan/main에548f815를 push하고 https://dallabusan.vercel.app에서 실제 검증했다. /api/courses는en/ko/ja/zh-CN/zh-TW 모두200·total40·각분류10이다. /courses,/courses/fa04,/courses/inspiration과Google확인파일은200이며 config/catalog/courses.json,.env,DB경로는404였다.
+
+실제 배포 브라우저의 새 영어 진입에서 v2 이미지 팝업/하단2버튼,하루 안 보기 후 새로고침 억제,상단 코스 메뉴 이동/40개,가족 필터10개와 URL 새로고침,fa01 상세3개 순서 노드,주변 주차 안내 펼침,360px 가로 넘침없음·pageerror0을 확인했다. API는 실제 공개 응답이며 상품 사진/제휴사/이 반복 검증의GTM은 대역이다. 앞선 Google Analytics 단발 실제 전송 검증과 구분한다. 근거 var/imports/courses-20261124/live-check.json.
+
+Google 파일f17fc9a/GTM코드22bb93e/코스548f815를 순서대로 분리 배포했다. 앱 코드의 검증/실제 배포를 마쳤으며 이 후속 커밋은 공개 검증 기록만 추가한다. 원본 데이터/제휴 승인/운영자·현장 검수 상태는 올리지 않았다.
