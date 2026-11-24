@@ -12,6 +12,10 @@
           "destination": "/index.html"
         },
         {
+          "source": "/travel-tools",
+          "destination": "/index.html"
+        },
+        {
           "source": "/search",
           "destination": "/index.html"
         },

@@ -1,0 +1,5 @@
+import {z} from 'zod';import {LocaleSchema,CurrencySchema} from './schemas.js';import {SafeHttpsSchema,PublicProviderSchema} from './offers.js';
+export const TravelToolSchema=z.strictObject({id:z.string().regex(/^[a-z0-9-]+$/),title:z.string().min(1),provider:PublicProviderSchema,kind:z.enum(['stays','experiences']),contentLocale:LocaleSchema,currency:CurrencySchema.nullable(),width:z.number().int().min(250).max(1200),height:z.number().int().min(250).max(3000),fluid:z.boolean(),cardCount:z.literal(6).nullable()});
+export const TravelToolsSchema=z.strictObject({locale:LocaleSchema,items:z.array(TravelToolSchema)});
+export const TravelToolFrameSchema=TravelToolSchema.extend({url:SafeHttpsSchema,frameName:z.string().regex(/^[a-zA-Z0-9_-]+$/),protocol:z.enum(['none','window-proxy'])});
+export const PartnerResizeSchema=z.object({data:z.object({action:z.enum(['resize','expand']),height:z.union([z.number().int(),z.string().regex(/^\d+(px)?$/)]).transform(value=>Number(String(value).replace('px',''))).pipe(z.number().int().min(250).max(1600))})});

@@ -1,0 +1,5 @@
+import type {FastifyInstance} from 'fastify';import {z} from 'zod';import {LocaleSchema} from '@trip-fit/domain';import type {createTravelToolConfig} from '../config/travel-tools.js';
+export function registerTravelToolRoutes(app:FastifyInstance,tools:ReturnType<typeof createTravelToolConfig>){
+ app.get('/api/travel-tools',async(request,reply)=>{reply.header('Cache-Control','no-store');const query=z.strictObject({locale:LocaleSchema.default('en')}).safeParse(request.query);if(!query.success)return reply.code(400).send({error:'invalid-tool-query'});return tools.list(query.data.locale);});
+ app.get('/api/travel-tools/:id',async(request,reply)=>{reply.header('Cache-Control','no-store');const params=z.strictObject({id:z.string().regex(/^[a-z0-9-]{1,80}$/)}).safeParse(request.params),query=z.strictObject({locale:LocaleSchema.default('en')}).safeParse(request.query);if(!params.success||!query.success)return reply.code(400).send({error:'invalid-tool-query'});return tools.get(params.data.id,query.data.locale)??reply.code(404).send({error:'tool-unavailable'});});
+}

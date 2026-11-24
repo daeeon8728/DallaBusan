@@ -1,0 +1,172 @@
+{
+  "reviewedOn": "2026-11-24",
+  "siteOrigin": "https://dallabusan.vercel.app",
+  "tools": [
+    {
+      "id": "stay-search",
+      "providerId": "PROVIDER_D",
+      "enabled": true,
+      "approvalStatus": "approved",
+      "kind": "stays",
+      "titles": {
+        "en": "Search Busan stays",
+        "ko": "부산 숙소 검색",
+        "ja": "釜山の宿泊施設を検索",
+        "zh-CN": "搜索釜山住宿",
+        "zh-TW": "搜尋釜山住宿"
+      },
+      "sourceUrl": "https://partners.agoda.com/Tools/Sherpa",
+      "allowedHosts": [
+        "sherpa.agoda.com"
+      ],
+      "pathPrefix": "/SherpaRender/SimpleSearchWidget",
+      "frameName": "iv_adgshp-165752749",
+      "protocol": "window-proxy",
+      "width": 320,
+      "height": 420,
+      "fluid": false,
+      "cardCount": null,
+      "variants": {
+        "en": {
+          "url": "https://sherpa.agoda.com/SherpaRender/SimpleSearchWidget?ReferenceKey=wNWDLu7DHphf%2FAWWzOBNIw%3D%3D&Language=en-us&Hg=420px&Wd=320px&OverideConf=false&Layout=SquareCalendar&MobOptimized=true&Ver=1.04&crt=2029210731392&Cid=1980997&City=17172&DestinationName=Busan%2C+South+Korea",
+          "contentLocale": "en",
+          "currency": null,
+          "requiredQuery": {
+            "Cid": "1980997",
+            "ReferenceKey": "wNWDLu7DHphf/AWWzOBNIw==",
+            "City": "17172"
+          }
+        }
+      }
+    },
+    {
+      "id": "hotel-search",
+      "providerId": "PROVIDER_A",
+      "enabled": true,
+      "approvalStatus": "approved",
+      "kind": "stays",
+      "titles": {
+        "en": "Find a Busan hotel",
+        "ko": "부산 호텔 찾기",
+        "ja": "釜山のホテルを探す",
+        "zh-CN": "查找釜山酒店",
+        "zh-TW": "尋找釜山飯店"
+      },
+      "sourceUrl": "https://kr.trip.com/partners/tools/searchbox",
+      "allowedHosts": [
+        "www.trip.com"
+      ],
+      "pathPrefix": "/partners/ad/S21522454",
+      "frameName": "S21522454",
+      "protocol": "none",
+      "width": 320,
+      "height": 320,
+      "fluid": false,
+      "cardCount": null,
+      "variants": {
+        "en": {
+          "url": "https://www.trip.com/partners/ad/S21522454?Allianceid=10925986&SID=332880325&trip_sub1=",
+          "contentLocale": "en",
+          "currency": null,
+          "requiredQuery": {
+            "Allianceid": "10925986",
+            "SID": "332880325"
+          }
+        }
+      }
+    },
+    {
+      "id": "experience-picks",
+      "providerId": "PROVIDER_E",
+      "enabled": true,
+      "approvalStatus": "approved",
+      "kind": "experiences",
+      "titles": {
+        "en": "Live ticket & tour picks",
+        "ko": "실시간 티켓·투어 상품",
+        "ja": "最新チケット・ツアー情報",
+        "zh-CN": "最新门票与旅游商品",
+        "zh-TW": "最新門票與旅遊商品"
+      },
+      "sourceUrl": "https://kkpartners.kkday.com/affiliate/product-media",
+      "allowedHosts": [
+        "kkpartners.kkday.com"
+      ],
+      "pathPrefix": "/product-media",
+      "frameName": "partner-experience-picks",
+      "protocol": "none",
+      "width": 1000,
+      "height": 808,
+      "fluid": true,
+      "cardCount": 6,
+      "variants": {
+        "en": {
+          "url": "https://kkpartners.kkday.com/product-media?oid=16343&refer=https%3A%2F%2Fdallabusan.vercel.app%2Ftravel-tools%3Flocale%3Den",
+          "contentLocale": "en",
+          "currency": "USD",
+          "requiredQuery": {
+            "oid": "16343"
+          }
+        },
+        "ko": {
+          "url": "https://kkpartners.kkday.com/product-media?oid=16344&refer=https%3A%2F%2Fdallabusan.vercel.app%2Ftravel-tools%3Flocale%3Dko",
+          "contentLocale": "ko",
+          "currency": "KRW",
+          "requiredQuery": {
+            "oid": "16344"
+          }
+        },
+        "ja": {
+          "url": "https://kkpartners.kkday.com/product-media?oid=16345&refer=https%3A%2F%2Fdallabusan.vercel.app%2Ftravel-tools%3Flocale%3Dja",
+          "contentLocale": "ja",
+          "currency": "JPY",
+          "requiredQuery": {
+            "oid": "16345"
+          }
+        },
+        "zh-CN": {
+          "url": "https://kkpartners.kkday.com/product-media?oid=16346&refer=https%3A%2F%2Fdallabusan.vercel.app%2Ftravel-tools%3Flocale%3Dzh-CN",
+          "contentLocale": "zh-CN",
+          "currency": "CNY",
+          "requiredQuery": {
+            "oid": "16346"
+          }
+        },
+        "zh-TW": {
+          "url": "https://kkpartners.kkday.com/product-media?oid=16347&refer=https%3A%2F%2Fdallabusan.vercel.app%2Ftravel-tools%3Flocale%3Dzh-TW",
+          "contentLocale": "zh-TW",
+          "currency": "TWD",
+          "requiredQuery": {
+            "oid": "16347"
+          }
+        }
+      }
+    },
+    {
+      "id": "activity-search",
+      "providerId": "PROVIDER_B",
+      "enabled": false,
+      "approvalStatus": "pending",
+      "kind": "experiences",
+      "titles": {
+        "en": "Experience search",
+        "ko": "체험 검색",
+        "ja": "体験を検索",
+        "zh-CN": "搜索体验",
+        "zh-TW": "搜尋體驗"
+      },
+      "sourceUrl": "https://affiliate.klook.com/ko/my_ads/ad_tools/search_vertical",
+      "allowedHosts": [
+        "www.klook.com"
+      ],
+      "pathPrefix": "/",
+      "frameName": "pending-activity-search",
+      "protocol": "none",
+      "width": 320,
+      "height": 420,
+      "fluid": false,
+      "cardCount": null,
+      "variants": {}
+    }
+  ]
+}

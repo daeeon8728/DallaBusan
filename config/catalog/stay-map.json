@@ -5,11 +5,11 @@
   "allowedHosts": [
     "sherpa.agoda.com"
   ],
-  "source": "User-provided official map-tool embed, 2026-11-24; rendering URL confirmed in official sherpa_init_map_02.min.js. Domain/channel approval not independently confirmed.",
+  "source": "Issued from official Map tool for active dallaBusan site1980997 on2026-11-24. A new map was generated rather than changing the old map CID.",
   "settings": {
-    "refKey": "lefRIZ3VdMe6Kwvhr+SSng==",
+    "refKey": "wQf+7kcUX9PjA4hCWuvHLw==",
     "searchRadius": 5,
-    "cid": 1980996,
+    "cid": 1980997,
     "latitude": 35.179953,
     "longitude": 129.075236,
     "destination": "Busan, South Korea",
@@ -18,7 +18,7 @@
     "numberOfChildren": 0,
     "numberOfAdult": 2,
     "numberOfRoom": 1,
-    "crt": "2616316188026",
+    "crt": "2029672064549",
     "ver": 1
   },
   "defaults": {
