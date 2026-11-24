@@ -7,4 +7,4 @@ const COPY = {
   'zh-TW': { food: '尋找美食', recommended: '推薦旅行', foodIntro: '循著味道，探索釜山', recommendedIntro: '從小巷到海邊，發現釜山的新玩法', body: '透過釜山市提供的照片與故事，尋找下一站目的地。', search: '搜尋', placeholder: '搜尋店名、菜色或地區', recommendedPlaceholder: '搜尋名稱、主題或地區', district: '地區', category: '主題', all: '全部', results: '{count}筆搜尋結果 · 本語言提供{total}筆資訊', detail: '查看詳情', menu: '招牌菜', about: '介紹', back: '返回列表', loading: '正在載入資訊。', failed: '無法載入資訊，已保留輸入與上次成功的結果。', previousResults: '正在顯示之前的搜尋結果，請等待更新或重試。', retry: '重試', empty: '沒有搜尋結果。', reset: '清除搜尋', previous: '上一頁', next: '下一頁', address: '地址', holiday: '休息日說明', source: '釜山市公共資料', asOf: '擷取日期', fallback: '暫無此語言的資訊，現顯示韓文原文。', titleFallback: '標題顯示公共API原文。', notFound: '找不到相關資訊。', note: '不同語言的收錄範圍可能不同。營業時間與菜單為公共資料原文，並非即時營業狀態，出發前請確認。', noPhoto: '無法載入官方照片。', credit: '釜山廣域市 · Visit Busan', license: '使用許可' },
 } satisfies Record<Locale, Record<string,string>>;
 export function getPublicGuideCopy(locale: Locale) { return COPY[locale]; }
-export function guidePath(kind: GuideKind) { return kind === 'food' ? '/food' : '/recommended'; }
+export function guidePath(kind: GuideKind) { return kind === 'food' ? '/food' : '/courses/inspiration'; }

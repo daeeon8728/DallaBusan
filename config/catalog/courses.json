@@ -1,0 +1,1646 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-24",
+  "sources": [
+    {
+      "kind": "destination",
+      "id": "busan-1310",
+      "sha256": "4b40d109d78e655fd38e100bab66e6a545077fc17b183e4bb1fb9bd71ab792b9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-261",
+      "sha256": "e980ee1f1c9ed7559b9f9092e9bf0e71d18a58759aa7ef5a0422cbf9908629e9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-291",
+      "sha256": "8253122c24d6fcd8f0605b3d61eb272951877f0cadd731978355996aae58d0d3"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2172",
+      "sha256": "07bda7efafce708226145da4589d5797dfa0e87d4430ee3f58f5436b2a25aef1"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-340",
+      "sha256": "8871608f3412f18129e746a34051d9f01c14385b5e61220860cb613bafca0d5f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-373",
+      "sha256": "e939ab1940fc82d8262581599816b72424b8f7bae2ac18a2ac693b3ed9bbb638"
+    },
+    {
+      "kind": "food",
+      "id": "2899",
+      "sha256": "8d304e3e512d565eea7732abcdf1582ef9cb2b60433ad623f8e3f40d3ad25ddd"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2274",
+      "sha256": "883e6d9161ef11ef2a1ddf348641c01de9fe743b72c1b2534c34f0b8a391b101"
+    },
+    {
+      "kind": "food",
+      "id": "1628",
+      "sha256": "71b01c047eda9ddad50272eb214f3ea3f2948b1a7cc739e9bca94b1a1ada3462"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-286",
+      "sha256": "e8b3810a05de163879ef738c4f2dbd93dfda0db9b7ab41587315f1f2d7d3f005"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1422",
+      "sha256": "a4f745ca77aa25e3eb8006c96d10b3d54077a88300eee90d9000b33d7931af3f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-326",
+      "sha256": "9ab8ef0a4ceb21a41cac29ec89ee9598c984ca78771b80d0414e18eaf7ca9912"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-276",
+      "sha256": "7ffa97c977b4e9e5214bbef59d48ed6d90197eb629fb263e420a27a774b708df"
+    },
+    {
+      "kind": "food",
+      "id": "204",
+      "sha256": "1b20cc2c644c42329f1c0012cee8cb05fc5f5aa822469d291de2733f6e596e44"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1731",
+      "sha256": "184872ef3890e7f55c83efe0283ddf30b9cc38566f1e6191e1cff13b79142c5c"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-304",
+      "sha256": "df36e9df4bfa648457cd8c3e8ca85236f23a64940f76f94dcc36e96b84e92476"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1671",
+      "sha256": "5ce9662dbd732ec59badd17a3870791c2a5c93e56e68e63ea7912f3a86c38087"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-344",
+      "sha256": "2d00998a121eb717a42f0f0d57fd914d64cc4fb05b28873be5e5ee71f04142eb"
+    },
+    {
+      "kind": "food",
+      "id": "2371",
+      "sha256": "d85c537c032a3faae0ea63d49d4a99b91011a5cce4f2e2b5aa8af68e5f758e4f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-402",
+      "sha256": "4464ed1856b835ca518d413bd9d730576635c0c66d25bfde5e320d721c0548b6"
+    },
+    {
+      "kind": "food",
+      "id": "2884",
+      "sha256": "9373c02426cd4c847459cb892411f90c525965b5fd5fe0fc574dbba15bacabe1"
+    },
+    {
+      "kind": "food",
+      "id": "1816",
+      "sha256": "9583e9e4765122ef11963941644e261498e9f47e8221febdc90f079a6ad08466"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-280",
+      "sha256": "400c10b9054fb4e7add562c897e812a528b92b079a7214688f2fb1725d9131c3"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-348",
+      "sha256": "90871a7889a15607d5f962be7dd4a900fc061bcf041f5df3710614c26ec854c9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-285",
+      "sha256": "3e502532f262f8600d07cdf5ef955aec8e30e4e9b9bd1db5238e4d28fce3330e"
+    },
+    {
+      "kind": "destination",
+      "id": "gwangalli",
+      "sha256": "00ae887a618dfceb838d56dddb15dfbaf73776b70c6d8af1f6b2492b9aaaacae"
+    },
+    {
+      "kind": "food",
+      "id": "1845",
+      "sha256": "0cbce2bd259aac17152e64239956ed3722512ad0d1c6c72e6f0d44375b5bf540"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-255",
+      "sha256": "4c773c056ecdd73a6f21787e4a4809af939298be3b6d78bc4089d17d4fb86425"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-833",
+      "sha256": "df275b582b61368405fbae95d8fab415b835f1f159cc5658a6cdb2f967c9aa46"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-287",
+      "sha256": "c0c038f68596e77a5114e5fdbf260b4072e2042343fe4124b5feda2378153088"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1718",
+      "sha256": "4e8e387bad842dd5867587f959730131a810ad09b693aea0e0395fef04857503"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-366",
+      "sha256": "67f3e3c2dd22748cda5df42b06b1d7f68fc7536b6cd614e2ddf37d029cb6d5e3"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-372",
+      "sha256": "ab74242d1008e3d73afa58845639bd8f6b550706e96eff0b939b01f7d62ea4f9"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-362",
+      "sha256": "279e130bc513d8ed49edaddae442eecc8001b18172d08198d34e5fe4121f16f8"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1329",
+      "sha256": "75b4ed4918d3cc62fdfbe57336274036f0fbb1fbc914193096e5bb8d6008e5e9"
+    },
+    {
+      "kind": "food",
+      "id": "1636",
+      "sha256": "0513bf8e43becb1f035c69eb8b186c9add0690c5a7fe802da0df0e987331f91a"
+    },
+    {
+      "kind": "food",
+      "id": "2887",
+      "sha256": "5064a637523e8aae3db01af7fc490874275e71b283d539c0ecb2d017483a3ae6"
+    },
+    {
+      "kind": "food",
+      "id": "1817",
+      "sha256": "ed96bc4be75a76f84ea0a05763e78a59f1e92685d3fdceeb8683865ac5d28b74"
+    },
+    {
+      "kind": "food",
+      "id": "1511",
+      "sha256": "7f899323d95715efcbf9a878fd61b76b42d32e58fb2ba3c84b2ca1423168d747"
+    },
+    {
+      "kind": "food",
+      "id": "1459",
+      "sha256": "39b4c6714106d67f96ad4ee94c4f75e48eabb1739ae1fab4bacc33191902f3cc"
+    },
+    {
+      "kind": "food",
+      "id": "1609",
+      "sha256": "68811a44a41f2e78cc5fb44c637845550e3520c9b481702a945389bc1eb5a90e"
+    },
+    {
+      "kind": "food",
+      "id": "1837",
+      "sha256": "d0c73d42f61a663a5b0412752a0666adc29595d76beb2d109d1bbe0d602ce8c5"
+    },
+    {
+      "kind": "food",
+      "id": "1445",
+      "sha256": "0db712c149d228696a026f4908accc438aee539d609fdf4d6465975e3a6fc81f"
+    },
+    {
+      "kind": "food",
+      "id": "1515",
+      "sha256": "8c654990639c00b5e12a80d5421bf3030b50a70718c7e449126de753b468ece8"
+    },
+    {
+      "kind": "food",
+      "id": "926",
+      "sha256": "73efb1af91b112f7aefa5fce1c03ea85c6fb53fa4761f1864d2413eb57389ace"
+    },
+    {
+      "kind": "food",
+      "id": "1506",
+      "sha256": "797d80204ed66be4e1dd29de3ce47cd813d94d3ced3d159c1b34238fcc35ebfe"
+    },
+    {
+      "kind": "food",
+      "id": "1452",
+      "sha256": "54652762b4de4556782463e14de882ffbb6aced4fc2aa94a56b44d186b9e19cf"
+    },
+    {
+      "kind": "food",
+      "id": "1221",
+      "sha256": "6c8666e663039b00a3b5ca603bc59752cfa323b566634930e95d83e8c416606f"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-262",
+      "sha256": "5ad1afac81df16fd7d15ccfdc2616ef8d22e1583bc0ebf0caf6ec5c1a02dcfb7"
+    },
+    {
+      "kind": "food",
+      "id": "174",
+      "sha256": "055ef24099eee60be85b9fe1446fda89d841dab8600ee3b06170e4ccb4dea809"
+    },
+    {
+      "kind": "food",
+      "id": "1108",
+      "sha256": "857ddf3a8c427b1d1a8364ff14e76378cb1d2d1b9544bb48573cde45bcc88190"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-354",
+      "sha256": "5b97c12b603e79fdc4906eaba9c6aa8d2bb9f051b33b04b974b0d7adfb90e463"
+    },
+    {
+      "kind": "food",
+      "id": "1921",
+      "sha256": "769609cc9724d0a0e8bacc477ad4335c349afddac50820e789415a1d1695089b"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-333",
+      "sha256": "47403d577030e488c20098c2e9c12a7b22d929152e79ebd63f3332eb0e77bb7c"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2173",
+      "sha256": "765a1cfc1b649d79b64b75eeb7dbafb10be0918ee8b5ef0488d7a0055aaa0786"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-301",
+      "sha256": "48384cf94f6e687becf14190b70deca09b3f79864950e503ece35be76cac25d6"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2594",
+      "sha256": "d992c7c600782d6485b3711c29dba42febba11f9f21cbb6e5286a9a9529100aa"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-369",
+      "sha256": "d8737bda09063df45d41c92e5d842a0f06cb3135f0b6e533005845f6c039cc83"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-256",
+      "sha256": "f1b84333fe052f3d16f9ad04ade23a35fbd5da7c8104ea7e4a2fb44620e6c3d5"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2133",
+      "sha256": "d46e9b6cf489335bbdd70c9d75aa3060ec944aa1529dbdfcf39206060cc09f09"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2612",
+      "sha256": "9a1dbab872a61790ec8352dface93e8842e14dc88275fe0bbb02ff32e6ea999b"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1798",
+      "sha256": "39284920fd6675d9fe81d7d71e0b58745e9204393b3bfa7a68d9cf416f0cf389"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2081",
+      "sha256": "ca040ed46e7a4daa3379b1905affd9dd329cea7eac531dde735bcb95fbf3cc5a"
+    },
+    {
+      "kind": "food",
+      "id": "1513",
+      "sha256": "20b9817fb7a2b04d4f1b97f79ff9222bd6d9a1d2a5fa1373f300a4671a79367b"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-334",
+      "sha256": "3e82c4af405ee0084a3b31812883e9d881fffcff917c31eaa677504101aae856"
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1014",
+      "sha256": "ae392ba1b1a377380fcf35673b6264b2e340e5b972826b1a9b7ef4be0cf7c6f4"
+    }
+  ],
+  "items": [
+    {
+      "id": "fa01",
+      "category": "family",
+      "titles": {
+        "ko": "오시리아 놀이 하루",
+        "en": "Osiria Play Day",
+        "ja": "オシリアで遊ぶ一日",
+        "zh-CN": "奥西利亚游乐日",
+        "zh-TW": "奧西利亞遊樂日"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-1310"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fa02",
+      "category": "family",
+      "titles": {
+        "ko": "바다 사찰과 해양 관찰",
+        "en": "Temple & Ocean Discovery",
+        "ja": "海のお寺と海洋探検",
+        "zh-CN": "海边寺庙与海洋探索",
+        "zh-TW": "海邊寺廟與海洋探索"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-261"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-291"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-2172"
+        }
+      ]
+    },
+    {
+      "id": "fa03",
+      "category": "family",
+      "titles": {
+        "ko": "어린이 과학 탐험",
+        "en": "Little Scientists",
+        "ja": "小さな科学者の旅",
+        "zh-CN": "小小科学家之旅",
+        "zh-TW": "小小科學家之旅"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-340"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fa04",
+      "category": "family",
+      "titles": {
+        "ko": "해운대 바다 하루",
+        "en": "Haeundae Ocean Day",
+        "ja": "海雲台の海を楽しむ一日",
+        "zh-CN": "海云台海滨一日",
+        "zh-TW": "海雲臺海濱一日"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-373"
+        },
+        {
+          "kind": "food",
+          "id": "2899"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-2274"
+        },
+        {
+          "kind": "food",
+          "id": "1628"
+        }
+      ]
+    },
+    {
+      "id": "fa05",
+      "category": "family",
+      "titles": {
+        "ko": "송도 하늘과 숲",
+        "en": "Songdo Sky & Sea",
+        "ja": "松島の空と海",
+        "zh-CN": "松岛天空与海洋",
+        "zh-TW": "松島天空與海洋"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-286"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1422"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-326"
+        }
+      ]
+    },
+    {
+      "id": "fa06",
+      "category": "family",
+      "titles": {
+        "ko": "박물관과 평화공원",
+        "en": "Museum & Park Picnic",
+        "ja": "博物館と平和公園",
+        "zh-CN": "博物馆与和平公园",
+        "zh-TW": "博物館與和平公園"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-276"
+        },
+        {
+          "kind": "food",
+          "id": "204"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1731"
+        }
+      ]
+    },
+    {
+      "id": "fa07",
+      "category": "family",
+      "titles": {
+        "ko": "을숙도 자연 관찰",
+        "en": "Eulsukdo Nature Day",
+        "ja": "乙淑島で自然観察",
+        "zh-CN": "乙淑岛自然观察",
+        "zh-TW": "乙淑島自然觀察"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-304"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1671"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fa08",
+      "category": "family",
+      "titles": {
+        "ko": "초읍 숲과 간식",
+        "en": "Forest & Bakery Break",
+        "ja": "草邑の森とおやつ",
+        "zh-CN": "草邑森林与点心",
+        "zh-TW": "草邑森林與點心"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-344"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "2371"
+        }
+      ]
+    },
+    {
+      "id": "fa09",
+      "category": "family",
+      "titles": {
+        "ko": "범어사 천천히",
+        "en": "A Gentle Temple Day",
+        "ja": "梵魚寺をゆっくり巡る",
+        "zh-CN": "慢游梵鱼寺",
+        "zh-TW": "慢遊梵魚寺"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-402"
+        },
+        {
+          "kind": "food",
+          "id": "2884"
+        },
+        {
+          "kind": "food",
+          "id": "1816"
+        }
+      ]
+    },
+    {
+      "id": "fa10",
+      "category": "family",
+      "titles": {
+        "ko": "송정 바다와 열차",
+        "en": "Songjeong Beach Train",
+        "ja": "松亭の海と列車",
+        "zh-CN": "松亭海滨与列车",
+        "zh-TW": "松亭海濱與列車"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-280"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "열차·캡슐 예약과 돌아오는 교통 확인",
+            "en": "Check train or capsule reservations and return travel",
+            "ja": "列車・カプセルの予約と帰路を確認",
+            "zh-CN": "确认列车或胶囊车预约与返程交通",
+            "zh-TW": "確認列車或膠囊車預約與返程交通"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-348"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        }
+      ]
+    },
+    {
+      "id": "da01",
+      "category": "date",
+      "titles": {
+        "ko": "광안리 노을 산책",
+        "en": "Gwangalli Golden Hour",
+        "ja": "広安里の夕暮れ散歩",
+        "zh-CN": "广安里日落散步",
+        "zh-TW": "廣安里日落散步"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-285"
+        },
+        {
+          "kind": "destination",
+          "id": "gwangalli"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        }
+      ]
+    },
+    {
+      "id": "da02",
+      "category": "date",
+      "titles": {
+        "ko": "미포에서 청사포",
+        "en": "Coastal Capsule Date",
+        "ja": "尾浦から青沙浦へ",
+        "zh-CN": "尾浦到青沙浦",
+        "zh-TW": "尾浦到青沙浦"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-348"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "열차·캡슐 예약과 돌아오는 교통 확인",
+            "en": "Check train or capsule reservations and return travel",
+            "ja": "列車・カプセルの予約と帰路を確認",
+            "zh-CN": "确认列车或胶囊车预约与返程交通",
+            "zh-TW": "確認列車或膠囊車預約與返程交通"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        }
+      ]
+    },
+    {
+      "id": "da03",
+      "category": "date",
+      "titles": {
+        "ko": "달맞이 차 한 잔",
+        "en": "Dalmaji Tea Afternoon",
+        "ja": "タルマジでお茶時間",
+        "zh-CN": "迎月路午后品茶",
+        "zh-TW": "迎月路午後品茶"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1845"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-348"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        }
+      ]
+    },
+    {
+      "id": "da04",
+      "category": "date",
+      "titles": {
+        "ko": "흰여울의 오후",
+        "en": "Huinnyeoul Slow Afternoon",
+        "ja": "ヒンヨウルの午後",
+        "zh-CN": "白浅滩慢时光",
+        "zh-TW": "白淺灘慢時光"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-255"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        }
+      ]
+    },
+    {
+      "id": "da05",
+      "category": "date",
+      "titles": {
+        "ko": "송도 하늘 데이트",
+        "en": "Songdo Above the Sea",
+        "ja": "松島の空中デート",
+        "zh-CN": "松岛海上约会",
+        "zh-TW": "松島海上約會"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-286"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1422"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-833"
+        }
+      ]
+    },
+    {
+      "id": "da06",
+      "category": "date",
+      "titles": {
+        "ko": "다대포 노을",
+        "en": "Dadaepo Sunset Together",
+        "ja": "多大浦の夕日",
+        "zh-CN": "多大浦落日时光",
+        "zh-TW": "多大浦落日時光"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-287"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1718"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-366"
+        }
+      ]
+    },
+    {
+      "id": "da07",
+      "category": "date",
+      "titles": {
+        "ko": "망미 예술 산책",
+        "en": "Art & Riverside Date",
+        "ja": "望美のアート散歩",
+        "zh-CN": "望美艺术散步",
+        "zh-TW": "望美藝術散步"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-372"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-362"
+        }
+      ]
+    },
+    {
+      "id": "da08",
+      "category": "date",
+      "titles": {
+        "ko": "을숙도 미술 산책",
+        "en": "Eulsukdo Art Date",
+        "ja": "乙淑島のアート散歩",
+        "zh-CN": "乙淑岛艺术之旅",
+        "zh-TW": "乙淑島藝術之旅"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-1671"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-304"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        }
+      ]
+    },
+    {
+      "id": "da09",
+      "category": "date",
+      "titles": {
+        "ko": "전포와 서면",
+        "en": "Jeonpo Evening Date",
+        "ja": "田浦と西面の夕べ",
+        "zh-CN": "田浦与西面之夜",
+        "zh-TW": "田浦與西面之夜"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-1329"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1636"
+        }
+      ]
+    },
+    {
+      "id": "da10",
+      "category": "date",
+      "titles": {
+        "ko": "온천천과 과자",
+        "en": "Riverside & Pastries",
+        "ja": "川辺と焼き菓子",
+        "zh-CN": "河畔与甜点",
+        "zh-TW": "河畔與甜點"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "2887"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "이 권역에서 식사 선택·영업과 메뉴 확인",
+            "en": "Choose a meal in this area; check hours and menu",
+            "ja": "このエリアで食事を選び、営業時間とメニューを確認",
+            "zh-CN": "在此区域选择餐厅，确认营业时间与菜单",
+            "zh-TW": "在此區域選擇餐廳，確認營業時間與菜單"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fo01",
+      "category": "food",
+      "titles": {
+        "ko": "서면 국수와 커피",
+        "en": "Seomyeon Noodles & Coffee",
+        "ja": "西面の麺とコーヒー",
+        "zh-CN": "西面面食与咖啡",
+        "zh-TW": "西面麵食與咖啡"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1817"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1636"
+        }
+      ]
+    },
+    {
+      "id": "fo02",
+      "category": "food",
+      "titles": {
+        "ko": "용호 국밥과 팥",
+        "en": "Yongho Soup & Sweet Red Beans",
+        "ja": "龍湖のクッパと小豆",
+        "zh-CN": "龙湖汤饭与红豆甜品",
+        "zh-TW": "龍湖湯飯與紅豆甜品"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1511"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1459"
+        }
+      ]
+    },
+    {
+      "id": "fo03",
+      "category": "food",
+      "titles": {
+        "ko": "온천장 따뜻한 한 끼",
+        "en": "Oncheonjang Comfort Food",
+        "ja": "温泉場の温かい食卓",
+        "zh-CN": "温泉场暖心美食",
+        "zh-TW": "溫泉場暖心美食"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "2884"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1816"
+        }
+      ]
+    },
+    {
+      "id": "fo04",
+      "category": "food",
+      "titles": {
+        "ko": "달맞이 복국과 전통차",
+        "en": "Dalmaji Broth & Tea",
+        "ja": "タルマジのスープと伝統茶",
+        "zh-CN": "迎月路汤品与传统茶",
+        "zh-TW": "迎月路湯品與傳統茶"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1609"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1845"
+        }
+      ]
+    },
+    {
+      "id": "fo05",
+      "category": "food",
+      "titles": {
+        "ko": "영도 국밥과 바다 빵집",
+        "en": "Yeongdo Soup & Bakery",
+        "ja": "影島のクッパとベーカリー",
+        "zh-CN": "影岛汤饭与面包",
+        "zh-TW": "影島湯飯與麵包"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1837"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "권역 간 차량·택시 이동 계획",
+            "en": "Plan a car or taxi transfer between areas",
+            "ja": "エリア間は車・タクシー移動を計画",
+            "zh-CN": "规划区域间驾车或出租车交通",
+            "zh-TW": "規劃區域間開車或計程車交通"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1445"
+        }
+      ]
+    },
+    {
+      "id": "fo06",
+      "category": "food",
+      "titles": {
+        "ko": "연산 국밥과 디저트",
+        "en": "Yeonsan Neighborhood Bites",
+        "ja": "蓮山のクッパとデザート",
+        "zh-CN": "莲山汤饭与甜品",
+        "zh-TW": "蓮山湯飯與甜品"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1515"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "926"
+        }
+      ]
+    },
+    {
+      "id": "fo07",
+      "category": "food",
+      "titles": {
+        "ko": "부산대 돈가스와 과자",
+        "en": "University Quarter Bites",
+        "ja": "釜山大学前のとんかつとお菓子",
+        "zh-CN": "釜山大学炸猪排与点心",
+        "zh-TW": "釜山大學炸豬排與點心"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1506"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1452"
+        }
+      ]
+    },
+    {
+      "id": "fo08",
+      "category": "food",
+      "titles": {
+        "ko": "기장 밀면과 바다 커피",
+        "en": "Gijang Noodles & Coast",
+        "ja": "機張のミルミョンと海辺",
+        "zh-CN": "机张小麦面与海岸",
+        "zh-TW": "機張小麥麵與海岸"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1221"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "권역 간 차량·택시 이동 계획",
+            "en": "Plan a car or taxi transfer between areas",
+            "ja": "エリア間は車・タクシー移動を計画",
+            "zh-CN": "规划区域间驾车或出租车交通",
+            "zh-TW": "規劃區域間開車或計程車交通"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-262"
+        },
+        {
+          "kind": "food",
+          "id": "174"
+        }
+      ]
+    },
+    {
+      "id": "fo09",
+      "category": "food",
+      "titles": {
+        "ko": "당감 식사와 초읍 과자",
+        "en": "Danggam to Choeup",
+        "ja": "堂甘から草邑へ",
+        "zh-CN": "堂甘到草邑美食之旅",
+        "zh-TW": "堂甘到草邑美食之旅"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1108"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-354"
+        },
+        {
+          "kind": "food",
+          "id": "2371"
+        }
+      ]
+    },
+    {
+      "id": "fo10",
+      "category": "food",
+      "titles": {
+        "ko": "수영 국밥과 동네 디저트",
+        "en": "Suyeong Soup Trail",
+        "ja": "水営のクッパ巡り",
+        "zh-CN": "水营汤饭之旅",
+        "zh-TW": "水營湯飯之旅"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1921"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "디저트 가게 선정 중·확정 코스 아님",
+            "en": "Dessert venue not selected yet; this idea is incomplete",
+            "ja": "デザート店は選定中・未完成のアイデアです",
+            "zh-CN": "甜品店尚待确定，此构想未完成",
+            "zh-TW": "甜品店尚待確定，此構想未完成"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cu01",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "송도 바다의 옆길",
+        "en": "Songdo Beyond the Cable Car",
+        "ja": "松島の海辺の小道",
+        "zh-CN": "松岛海岸小路",
+        "zh-TW": "松島海岸小路"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-286"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-326"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "출입·운영·날씨를 방문 전 확인",
+            "en": "Check access, opening and weather before visiting",
+            "ja": "訪問前に立入・営業・天候を確認",
+            "zh-CN": "出发前确认开放情况、营业与天气",
+            "zh-TW": "出發前確認開放情況、營業與天氣"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cu02",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "다대포 느린 하루",
+        "en": "Slow Dadaepo",
+        "ja": "多大浦のゆったり時間",
+        "zh-CN": "慢游多大浦",
+        "zh-TW": "慢遊多大浦"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-1718"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-366"
+        }
+      ]
+    },
+    {
+      "id": "cu03",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "장림 색과 골목",
+        "en": "Jangnim Colors",
+        "ja": "長林の色と路地",
+        "zh-CN": "长林色彩与小巷",
+        "zh-TW": "長林色彩與小巷"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-333"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-2173"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "출입·운영·날씨를 방문 전 확인",
+            "en": "Check access, opening and weather before visiting",
+            "ja": "訪問前に立入・営業・天候を確認",
+            "zh-CN": "出发前确认开放情况、营业与天气",
+            "zh-TW": "出發前確認開放情況、營業與天氣"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cu04",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "망미 생활과 예술",
+        "en": "Mangmi Everyday Art",
+        "ja": "望美の日常とアート",
+        "zh-CN": "望美日常与艺术",
+        "zh-TW": "望美日常與藝術"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-372"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-301"
+        }
+      ]
+    },
+    {
+      "id": "cu05",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "초량 산복 이야기",
+        "en": "Choryang Hillside Stories",
+        "ja": "草梁の山腹物語",
+        "zh-CN": "草梁山城故事",
+        "zh-TW": "草梁山城故事"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-2594"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "휴식 시간",
+            "en": "Take a break",
+            "ja": "ひと休み",
+            "zh-CN": "休息时间",
+            "zh-TW": "休息時間"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "출입·운영·날씨를 방문 전 확인",
+            "en": "Check access, opening and weather before visiting",
+            "ja": "訪問前に立入・営業・天候を確認",
+            "zh-CN": "出发前确认开放情况、营业与天气",
+            "zh-TW": "出發前確認開放情況、營業與天氣"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cu06",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "영도 항구 산책",
+        "en": "Yeongdo Harbor Stories",
+        "ja": "影島の港町散歩",
+        "zh-CN": "影岛港口漫步",
+        "zh-TW": "影島港口漫步"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-369"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-256"
+        }
+      ]
+    },
+    {
+      "id": "cu07",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "용호 바위 해안",
+        "en": "Yongho Coastal Details",
+        "ja": "龍湖の海岸を眺める",
+        "zh-CN": "龙湖海岸风景",
+        "zh-TW": "龍湖海岸風景"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-2133"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "출입·운영·날씨를 방문 전 확인",
+            "en": "Check access, opening and weather before visiting",
+            "ja": "訪問前に立入・営業・天候を確認",
+            "zh-CN": "出发前确认开放情况、营业与天气",
+            "zh-TW": "出發前確認開放情況、營業與天氣"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cu08",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "회동 물가와 숲",
+        "en": "Hoedong Water & Woods",
+        "ja": "回東の水辺と森",
+        "zh-CN": "回东湖畔与森林",
+        "zh-TW": "回東湖畔與森林"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-2612"
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1798"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "출입·운영·날씨를 방문 전 확인",
+            "en": "Check access, opening and weather before visiting",
+            "ja": "訪問前に立入・営業・天候を確認",
+            "zh-CN": "出发前确认开放情况、营业与天气",
+            "zh-TW": "出發前確認開放情況、營業與天氣"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cu09",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "북항의 새로운 바다",
+        "en": "North Port Waterfront",
+        "ja": "北港の新しい海辺",
+        "zh-CN": "北港新海滨",
+        "zh-TW": "北港新海濱"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-2081"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "짧은 산책·개방 구간 확인",
+            "en": "A short walk; check open paths locally",
+            "ja": "短い散歩・通行可能な道を現地で確認",
+            "zh-CN": "短途散步，请确认道路开放情况",
+            "zh-TW": "短途散步，請確認道路開放情況"
+          }
+        },
+        {
+          "kind": "food",
+          "id": "1513"
+        }
+      ]
+    },
+    {
+      "id": "cu10",
+      "category": "dallabusan",
+      "titles": {
+        "ko": "가덕도 항구 하루",
+        "en": "Gadeokdo Harbor Day",
+        "ja": "加徳島の港を巡る",
+        "zh-CN": "加德岛港口一日",
+        "zh-TW": "加德島港口一日"
+      },
+      "status": "editorial-idea",
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-334"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "권역 간 차량·택시 이동 계획",
+            "en": "Plan a car or taxi transfer between areas",
+            "ja": "エリア間は車・タクシー移動を計画",
+            "zh-CN": "规划区域间驾车或出租车交通",
+            "zh-TW": "規劃區域間開車或計程車交通"
+          }
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1014"
+        },
+        {
+          "kind": "note",
+          "texts": {
+            "ko": "출입·운영·날씨를 방문 전 확인",
+            "en": "Check access, opening and weather before visiting",
+            "ja": "訪問前に立入・営業・天候を確認",
+            "zh-CN": "出发前确认开放情况、营业与天气",
+            "zh-TW": "出發前確認開放情況、營業與天氣"
+          }
+        }
+      ]
+    }
+  ]
+}

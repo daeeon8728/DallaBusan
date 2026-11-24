@@ -1,3 +1,6 @@
+import { CoursesPage } from './courses/CoursesPage.js';
+import { RecommendationDialog } from './campaigns/RecommendationDialog.js';
+import { getCourseCopy } from './i18n/courses.js';
 import { Promotions } from './Promotions.js';
 import { ExchangeNotice } from './currency/Price.js';
 import { CartPage } from './cart/CartPage.js';
@@ -13,8 +16,10 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { LocaleSchema, OfferQuerySchema, OffersResponseSchema, type Locale, type OfferCategory, type OffersResponse, type PublicOffer } from '@trip-fit/domain';
 import { getCopy, LANGUAGE_OPTIONS, readUiLocale } from './i18n/index.js';
 import { Icon, OfferCard, OfferDialog } from './Offer.js';
-import { DestinationPage, DestinationResults, MonthlyDestinations } from './Destinations.js';
+import { DestinationPage, DestinationResults } from './Destinations.js';
 import { getGuideCopy } from './i18n/guide.js';
+
+function canonicalRoute(path:string) { return path==='/recommended'||path.startsWith('/recommended/') ? '/courses/inspiration'+path.slice('/recommended'.length) : path; }
 
 const QUICK_CATEGORIES: OfferCategory[] = ['ticket', 'tour', 'yacht', 'package', 'activity', 'stay'];
 
@@ -22,7 +27,8 @@ export default function App() {
   const initialParams = new URLSearchParams(window.location.search);
   const parsedInitial = OfferQuerySchema.safeParse(Object.fromEntries(initialParams));
   const initial = parsedInitial.success ? parsedInitial.data : OfferQuerySchema.parse({});
-  const [route, setRoute] = useState(window.location.pathname);
+  const [route, setRoute] = useState(canonicalRoute(window.location.pathname));
+  const [navigationVersion,setNavigationVersion]=useState(0);
   const [locale, setLocale] = useState<Locale>(() => readUiLocale(window.location.search));
   const [search, setSearch] = useState(initial.q);
   const [query, setQuery] = useState(initial.q);
@@ -40,11 +46,14 @@ export default function App() {
   const copy = getCopy(locale);
   const guide = getGuideCopy(locale);
   const publicGuide = getPublicGuideCopy(locale);
+  const courseCopy=getCourseCopy(locale);
+  const isCourses=route==='/courses'||route.startsWith('/courses/');
   const guideKind = route === "/food" || route.startsWith("/food/") ? "food" : route === "/recommended" || route.startsWith("/recommended/") ? "recommended" : null;
-  function navigate(path: string) { const target=new URL(path,window.location.origin); target.searchParams.set('locale',locale); if(target.pathname==='/search'&&target.searchParams.has('provider')) { setProvider(target.searchParams.get('provider')??''); setCategory(target.searchParams.get('category')??''); setScope(target.searchParams.get('scope')??''); setQuery(''); setSearch(''); setPage(1); setState('loading'); } window.history.pushState(null, '', target.pathname+target.search); setRoute(target.pathname); setSelected(null); window.scrollTo({top:0,behavior:'instant'}); }
+  function navigate(path: string) { const target=new URL(path,window.location.origin); target.pathname=canonicalRoute(target.pathname); target.searchParams.set('locale',locale); if(target.pathname==='/search'&&target.searchParams.has('provider')) { setProvider(target.searchParams.get('provider')??''); setCategory(target.searchParams.get('category')??''); setScope(target.searchParams.get('scope')??''); setQuery(''); setSearch(''); setPage(1); setState('loading'); } window.history.pushState(null, '', target.pathname+target.search); setRoute(target.pathname); setNavigationVersion(value=>value+1); setSelected(null); window.scrollTo({top:0,behavior:'instant'}); }
+  useEffect(()=>{if(window.location.pathname!==route&&canonicalRoute(window.location.pathname)===route)window.history.replaceState(null,'',route+window.location.search);},[route]);
   useEffect(() => {
     const back = () => {
-      setRoute(window.location.pathname); setSelected(null);
+      setRoute(canonicalRoute(window.location.pathname)); setNavigationVersion(value=>value+1); setSelected(null);
       const params = new URLSearchParams(window.location.search);
       const parsed = OfferQuerySchema.safeParse(Object.fromEntries(params));
       const filters = parsed.success ? parsed.data : OfferQuerySchema.parse({});
@@ -55,7 +64,7 @@ export default function App() {
     window.addEventListener('popstate',back); return () => window.removeEventListener('popstate',back);
   }, []);
   useEffect(() => {
-    if (route === '/food' || route.startsWith('/food/') || route === '/recommended' || route.startsWith('/recommended/')) { const url=new URL(window.location.href); if(url.searchParams.get('locale')!==locale) { url.searchParams.delete('district'); url.searchParams.delete('category'); url.searchParams.delete('page'); } url.searchParams.set('locale',locale); window.history.replaceState(null,'',url.pathname+url.search); return; }
+    if (isCourses || route === '/food' || route.startsWith('/food/') || route === '/recommended' || route.startsWith('/recommended/')) { const url=new URL(window.location.href); if(url.searchParams.get('locale')!==locale&&(!isCourses||route.startsWith('/courses/inspiration'))) { url.searchParams.delete('district'); url.searchParams.delete('category'); url.searchParams.delete('page'); } url.searchParams.set('locale',locale); window.history.replaceState(null,'',url.pathname+url.search); return; }
     if (route.startsWith('/places/') || route === '/saved' || route === '/cart') { window.history.replaceState(null,'',route+'?locale='+locale); return; }
     if (route === '/') { const url=new URL(window.location.href); url.searchParams.set('locale',locale); window.history.replaceState(null,'',url.pathname+url.search); return; }
     if (route !== '/search') return;
@@ -66,7 +75,7 @@ export default function App() {
     if (scope) params.set('scope',scope);
     if (page > 1) params.set('page',String(page));
     window.history.replaceState(null,'','/search?'+params.toString());
-  }, [route,locale,query,category,provider,scope,page]);
+  }, [route,locale,query,category,provider,scope,page,isCourses]);
   useEffect(() => { document.documentElement.lang = locale; document.title = 'dallaBusan · ' + getCopy(locale).catalogTitle; }, [locale]);
   useEffect(() => {
     const controller = new AbortController();
@@ -89,11 +98,11 @@ export default function App() {
   function changePage(value: number) { setState('loading'); setPage(value); document.getElementById('offers')?.scrollIntoView({ behavior: 'smooth' }); }
   return <>
     <a className="skip-link" href="#main">{copy.skip}</a>
-    <header className="site-header"><a className="brand" href={'/?locale='+locale} aria-label="dallaBusan"><img src="/brand/dallabusan-logo.png" alt="dallaBusan" width="1254" height="1254" /></a><span className="header-tagline">{copy.tagline}</span><nav className="header-nav" aria-label={guide.navigation}><a href={'/?locale='+locale} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/"); } }}>{guide.home}</a><a href={'/search?locale='+locale} aria-current={route === "/search" ? "page" : undefined} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/search"); } }}>{guide.searchTitle}</a>{(['food','recommended'] as const).map(kind=><a key={kind} href={'/'+kind+'?locale='+locale} aria-current={guideKind===kind?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/'+kind);}}}>{publicGuide[kind]}</a>)}<a href={'/saved?locale='+locale} aria-current={route==='/saved'?'page':undefined} data-testid="saved-nav" onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/saved');}}}>{savedCopy.nav}<span className="saved-count" aria-live="polite">{saved.entries.length}</span></a></nav>
+    <header className="site-header"><a className="brand" href={'/?locale='+locale} aria-label="dallaBusan"><img src="/brand/dallabusan-logo.png" alt="dallaBusan" width="1254" height="1254" /></a><span className="header-tagline">{copy.tagline}</span><nav className="header-nav" aria-label={guide.navigation}><a href={'/?locale='+locale} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/"); } }}>{guide.home}</a><a href={'/search?locale='+locale} aria-current={route === "/search" ? "page" : undefined} onClick={event => { if (!event.ctrlKey && !event.metaKey) { event.preventDefault(); navigate("/search"); } }}>{guide.searchTitle}</a><a href={'/courses?locale='+locale} data-testid="courses-nav" aria-current={isCourses?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/courses');}}}>{courseCopy.nav}</a><a href={'/food?locale='+locale} aria-current={guideKind==='food'?'page':undefined} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/food');}}}>{publicGuide.food}</a><a href={'/saved?locale='+locale} aria-current={route==='/saved'?'page':undefined} data-testid="saved-nav" onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/saved');}}}>{savedCopy.nav}<span className="saved-count" aria-live="polite">{saved.entries.length}</span></a></nav>
       <div className="header-actions"><CartNav locale={locale} onNavigate={navigate}/><label className="language-select"><span aria-hidden="true">◎</span><span className="sr-only">{copy.language}</span><select aria-label={copy.language} value={locale} onChange={event => updateFilter(() => setLocale(LocaleSchema.parse(event.target.value)))}>{LANGUAGE_OPTIONS.map(item => <option key={item.locale} value={item.locale}>{item.label}</option>)}</select></label></div>
     </header>
     <main id="main"><ExchangeNotice locale={locale}/><SavedNotice locale={locale}/><CartNotice locale={locale}/>
-    {route === "/cart" ? <CartPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : route === "/saved" ? <SavedPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : guideKind ? route.split("/")[2] ? <PublicGuideDetail key={route+locale} kind={guideKind} id={route.split("/")[2]??""} locale={locale} onNavigate={navigate}/> : <PublicGuideList key={route+locale+attempt} kind={guideKind} locale={locale} onNavigate={navigate}/> : route.startsWith("/places/") ? <DestinationPage slug={route.split("/")[2] ?? ""} locale={locale} onNavigate={navigate} onOpen={setSelected} /> : <>
+    {isCourses ? <CoursesPage key={route+locale+navigationVersion+window.location.search} route={route} locale={locale} onNavigate={navigate}/> : route === "/cart" ? <CartPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : route === "/saved" ? <SavedPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : guideKind ? route.split("/")[2] ? <PublicGuideDetail key={route+locale} kind={guideKind} id={route.split("/")[2]??""} locale={locale} onNavigate={navigate}/> : <PublicGuideList key={route+locale+attempt} kind={guideKind} locale={locale} onNavigate={navigate}/> : route.startsWith("/places/") ? <DestinationPage slug={route.split("/")[2] ?? ""} locale={locale} onNavigate={navigate} onOpen={setSelected} /> : <>
       <section className={route === "/search" ? "hero search-hero" : "hero"} aria-labelledby="hero-title">
         <div className="hero-background" /><div className="hero-shade" />
         <div className="hero-content"><p className="eyebrow">{copy.eyebrow}<span>35° N / 129° E</span></p><h1 id="hero-title">{route === "/search" ? guide.searchTitle : copy.heroTitle}</h1><p className="hero-body">{copy.heroBody}</p>
@@ -101,7 +110,7 @@ export default function App() {
         </div><span className="hero-caption">GWANGALLI, BUSAN <span>01 / THE COAST</span></span>
       </section>
       {route === "/" && <Promotions key={locale} locale={locale} onNavigate={navigate} onOpen={setSelected}/>}
-      <MonthlyDestinations locale={locale} onNavigate={navigate} />
+
       {route === "/search" && <><DestinationResults locale={locale} query={query} onNavigate={navigate} /><ParkingSearch locale={locale} query={query}/></>}
       <section className="quick-section section-wrap" aria-labelledby="discover-title"><div className="section-intro"><p className="eyebrow blue">FIND YOUR MOMENT</p><h2 id="discover-title">{copy.discover}</h2></div>
         <div className="quick-grid">{QUICK_CATEGORIES.map(id => <a key={id} href="#offers" onClick={() => chooseCategory(id)} className={category === id ? 'quick-category active' : 'quick-category'}><span className="quick-icon"><Icon name={id} size={27} /></span><span>{copy.categories[id]}</span><Icon name="arrow" size={17} /></a>)}</div>
@@ -126,6 +135,7 @@ export default function App() {
     </>}
     </main>
     <footer className="site-footer section-wrap"><div className="footer-brand"><a className="brand" href={'/?locale='+locale} aria-label="dallaBusan"><img src="/brand/dallabusan-logo.png" alt="dallaBusan" width="1254" height="1254" loading="lazy" /></a><p>{copy.tagline}</p></div><div className="footer-information"><p>{copy.disclosure}</p><p>{copy.readOnly}</p>{data && <a href={'mailto:'+data.contactEmail}>{copy.contact} · {data.contactEmail}</a>}<details><summary>{copy.photoCredits}</summary><p><a href="https://commons.wikimedia.org/wiki/File:Gwangalli_Beach.jpg" target="_blank" rel="noreferrer">Gwangalli Beach — Chelsea Hicks</a> · <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a> · cropped for display.</p><p><a href="https://commons.wikimedia.org/wiki/File:Gamcheon_Culture_Village.jpg" target="_blank" rel="noreferrer">Gamcheon Culture Village — Bernard Gagnon</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">CC0</a> · cropped for display.</p><p><a href="/review-assets/credits.json" target="_blank" rel="noreferrer">{copy.photoCredits} ↗</a></p></details><span>© {new Date().getFullYear()} dallaBusan</span></div></footer>
+    {route==='/'&&<RecommendationDialog locale={locale} eligible={state==='ready'} onNavigate={navigate}/>}
     <OfferDialog offer={selected} locale={locale} onClose={() => setSelected(null)} />
   </>;
 }

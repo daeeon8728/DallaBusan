@@ -1,4 +1,4 @@
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures.js';
 
 test.beforeEach(async ({ page, context }) => {
   // Product image requests and affiliate navigations never hit real providers in CI.

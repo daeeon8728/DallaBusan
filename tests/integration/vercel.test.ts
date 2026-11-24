@@ -29,7 +29,7 @@ describe('Vercel services deployment',()=>{
   expect(config.rewrites.at(-1)?.source).toBe('/(.*)');
  });
  it('rewrites known SPA entry routes while allowing asset and private-file misses to remain 404',()=>{
-  const rewrites=config.services.web.rewrites??[];for(const source of ['/','/search','/saved','/cart','/food/:path*','/recommended/:path*','/places/:path*'])expect(rewrites).toContainEqual({source,destination:'/index.html'});
+  const rewrites=config.services.web.rewrites??[];for(const source of ['/','/search','/saved','/cart','/food/:path*','/recommended/:path*','/places/:path*','/courses/:path*'])expect(rewrites).toContainEqual({source,destination:'/index.html'});
   expect(rewrites.some((rule:{source:string})=>rule.source==='/(.*)')).toBe(false);expect(config.services.server.functions?.['src/app.ts']?.includeFiles).toContain('config/catalog/**');expect(config.services.server.functions?.['src/app.ts']?.includeFiles).toContain('data/snapshots/**');
  });
  it('selects a bundled read-only snapshot on Vercel and preserves explicit local/CLI databases',()=>{

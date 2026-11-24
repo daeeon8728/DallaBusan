@@ -1,3 +1,6 @@
+import { loadCourseCatalog } from './config/courses.js';
+import { createCourseService } from './services/courses.js';
+import { registerCourseRoutes } from './routes/courses.js';
 import { loadPromotionCatalog } from './config/promotions.js';
 import { createPromotionService } from './services/promotions.js';
 import { loadFoodPhotoOverrides } from './config/food-photos.js';
@@ -40,7 +43,10 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const database = loadRuntimeDatabaseConfig(undefined,options.readOnlySnapshot ?? false);
   const db = openDatabase(database.filename, { readOnly: database.readOnly });
   try { if (!database.readOnly) migrate(db); } catch (error) { db.close(); throw error; }
-  const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, createDestinationService(destinationConfig, offers,undefined,localization), createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos),parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
+  const destinationService=createDestinationService(destinationConfig,offers,undefined,localization);
+  const guideService=createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos);
+  const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, destinationService, guideService,parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
+  registerCourseRoutes(app,createCourseService(loadCourseCatalog(),destinationService,guideService));
   app.addHook('onClose', async () => { db.close(); });
   return app;
 }

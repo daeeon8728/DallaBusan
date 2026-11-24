@@ -14,3 +14,5 @@ export * from './cart.js';
 export * from './exchange.js';
 
 export * from './promotions.js';
+
+export * from './courses.js';

@@ -1210,3 +1210,65 @@ E2E는 npm run start의 dist와 외부 사진/예약 대역을 사용한다. 공
 실제 공개 화면에서 상품 카드24개/프로모션 카드3개,신규 영어 진입,5개 언어 선택 후 카드 유지,브라우저 pageerror0을 확인했다. 외부 제공처 사진만 대역이며 상품/프로모션 API는 실제 배포 응답이다. 예약 클릭/결제는 하지 않았다. var/imports/vercel-20261123/live-recovery.json에 결과를 보존했다. [공개 쿠폰 화면](screenshots/vercel-live-promotions-2026-11-24.png)과 [공개 상품 화면](screenshots/vercel-live-products-2026-11-24.png)을 직접 열어 읽을 수 있는 카드/조건 표시를 확인했다. 상품 캡처의 단색 사진은 대역으로 실제 사진 확보 증거가 아니다.
 
 이전6115ad8의 배포 Ready/실제 API500과 최종84288e4의 실제200 복구를 구분한다. CLI 캐시 경고/설치 스크립트 경고를 API 실패 원인으로 단정하거나 경고를 숨기지 않았다. 실제 원인은 함수 패키징의 ES 모듈 진입점과 API에 불필요했던 정적 의존성의 ESM require였다. 최종 검증 기록/시연 이미지만 별도 문서 커밋으로 반영하며 앱 코드는 바꾸지 않는다.
+
+
+## 2026-11-24 코스40개 기획·팝업 시안
+
+최신 요청으로 가족/데이트/맛집/dallaBusan 각10개,총40개 편집 초안과 docs/courses-plan.md를 작성했다. 기존 내부17개 테마·승인 상태·공공 DB·운영 카탈로그·앱 코드·.env·의존성/lockfile은 변경하지 않았다. 계획은 권역·메인/디저트 후보 ID·주차/아이 검수·실제 경로 제약·공개 보류·소스 근거·단계별 Proof를 포함한다. 신규 공개0/현장 검증0/최적화 완료0이다.
+
+내장 image_gen으로 영어 팝업 v1을 생성한 후 사용자 지시로 음식 패널의 커피/디저트를 제거한 v2를 생성했다. 최신 시안은 docs/design/course-popup-v2-2026-11-24.png이며 v1과 prompt 이력도 보존한다. 전체 시안의 음식만 있는 패널/영문/하단2버튼을 도구 반환 이미지로 확인했다. 합성 홍보 시안이며 실제 점포/명소 실사진·수상/발행 완료의 증거가 아니다.
+
+실제 웹 검색은 공식 관광 안내·미쉐린 목록/상세에 한정한 읽기 작업이며 예약/결제/제휴 클릭/번역 API/부산 공공 API 신규수집은 없다. 블루리본·웨이팅·아이 시설·실제 주차 입구/경로는 확인되지 않아 계획상 보류했다. Git 일반 상태 조회는 읽기 제한으로 실패했으나 권한을 높인 재조회에서 기존51ee258/깨끗한 상태를 확인했다. 문서·이미지 변경만이므로 lint/typecheck/test/build/E2E/dist smoke/배포는 이번 단계에 실행하지 않는다. 문서 구조·40개 ID·참조 파일 검사는 아래 후속 결과를 따른다.
+
+문서 구조 검사 종료0: FA/DA/FO/CU 각10개·합계40개·고유ID40개,본문의 음식점 ID26개 모두 국문 원본에 존재. 최신PNG1122×1402/2,191,093bytes와 v1/v2/프롬프트 파일 존재를 확인했다. 상대 문서 링크 검사 종료0. git status/diff --check 종료0(기존 CRLF 정규화 안내만 있음),변경은 docs/proof.md 및 신규 docs/courses-plan.md·docs/design/뿐이다. 빌드/테스트/배포는 문서·이미지 작업 범위에 따라 생략했다.
+
+
+## 2026-11-24 Google 소유권 파일·GTM/GA4 실제 연결
+
+사용자 제공 googlebf1f839e8f4debc5.html을 apps/web/public에 바이트 그대로 복사했다. SHA-256은9b3004ccc393953af2ead461a28a5c84cdc282d23c7d3e59c94fdf61dde003a1이다. 초기 공개404를 확인하고 파일만 분리한 f17fc9a를 push한 뒤 실제 URL200/원문일치/리디렉션없음을 확인했다. Search Console 계정의 최종 확인 버튼까지 대신 완료했다고 주장하지 않는다. 파일을 계속 보존한다.
+
+추가 요청으로 사용자의 Google Analytics 화면에서 기존 dallaBusan 스트림 URL과 G-2G1XYHDY7Y를 확인했다. GTM-5FJR79NS의 Google Analytics 태그1개/Initialization - All Pages를 준비했다. 새 템플릿이 자동으로 만든 사용자 제공 데이터 허용/자동 감지는 사용자가 직접 꺼서 저장했다. Windows computer-use는 해당 개인정보 설정을 직접 바꾸지 않았다. 계정 링크 추가 안함으로 추가 읽기 권한을 부여하지 않았고 신규 계정/API 비밀번호/로그인을 만들지 않았다.
+
+GTM 버전2(dallaBusan GA4 launch 2026-11-24) 게시를 실제 화면에서 확인했다. apps/web/index.html의 공식 최신 로더를 공통 head에1회 설치하고22bb93e를 push했다. web build 종료0,원본/산출물 로더1개·실행 가능한 dataLayer 초기화·직접 GA4 config 중복0을 확인했다. 실제 공개 사이트의 첫 접속과 /search 내부 이동 각각 page_view1회/HTTP204/측정ID일치,브라우저 pageerror0이었다. 제품 사진만 대역이고 Google 측정은 실제다. dashboard 집계가 끝났다는 의미는 아니다. 민감한 요청/cookie/client 식별자는 기록하지 않았다. 근거 docs/google-analytics-setup.md와 var/imports/google-analytics-20261124/live-check.json.
+
+## 2026-11-24 코스 아이디어 허브·수정 이미지 팝업 구현
+
+최신 구현 요청에 따라 기존 코스 제외 범위를 대체해 /courses 목록·상세와 /api/courses 목록·상세를 구현했다. 가족/데이트/맛집/dallaBusan 각10개,총40개는 **editorial-idea 미리보기**다. routeCheck=pending/fieldValidation=not-performed를 유지하며 승인 일정0/운영자 승인0/현장 검증0/동선 최적화 완료0이다. 기존 내부17개 템플릿과 추천 플래그는 바꾸지 않았다. 미쉐린/블루리본 배지·아이 메뉴/접근성·웨이팅/이동시간·주차 입구를 확인 없이 확정하지 않았다. FO10의 미선정 디저트와 그 외 일반 휴식/식사 안내는 구체 장소를 만들지 않고 미완성 안내로 남긴다.
+
+주요 파일:
+
+- packages/domain/src/courses.ts 및 barrel: HTTP/DB/React와 독립된 최소 DTO.
+- config/catalog/courses.json:40개 ID/5개 언어 제목·안내,정확한 원본 장소 namespace/ID와 SHA-256.
+- apps/server/src/config/courses.ts,services/courses.ts,routes/courses.ts,runtime.ts:원문 지문·공개 대상·중복 ID 확인,언어별 기존 명소/맛집 서비스 결합,불일치 정류점을 생략하지 않고 코스 전체 보류.
+- apps/web/src/courses/CoursesPage.tsx,i18n/courses.ts,App.tsx,public-guides.ts,global.css:상단 Attraction search와 Find restaurants 사이 Busan Courses,목록/분류/상세/언어 URL,공공 원문·자동 번역 고지·접힌 한국어 이름·출처 사진/실패 대체,가족 주변 주차·장소 상세의 기존 메뉴/운영/관련 상품 연결.
+- 기존 Travel inspiration을 /courses/inspiration으로 통합하고 /recommended의 기존 주소/쿼리를 보존해 전환했다. 홈/관광지 검색의 추천 명소2개는 코스 허브로 이동했다. 기존 추천여행 원문/필터/상세/API namespace는 유지한다.
+- apps/web/src/campaigns/RecommendationDialog.tsx,popupStorage.ts,public/campaigns/course-popup-v2.png:사용자가 음식만 남기도록 수정한 v2를 그대로 복사하고 콜라주 영역만 CSS로 표시한다. 시안의 인쇄 수량/버튼은 가리고 실제5개 언어 HTML/4개 분류 링크/하단2버튼으로 구현했다.
+- vercel.json:기존 두 서비스/라우팅/바인딩0개를 유지하고 web SPA의 /courses/:path*만 추가했다.
+- tests/unit/popup-storage.test.ts,integration/courses.test.ts,e2e/courses-popup.spec.ts 및 기존 회귀 fixture/이동 경로 검사. 기존 카탈로그 테스트는 명시적인 돌아온 탭 상태를 사용하고 신규 첫 방문/팝업 검사는 별도로 실제 동작을 검증한다. 테스트 제거/skip은 없다.
+
+Close/Escape/분류 이동은 해당 탭 세션에서 억제한다. 하루 안 보기는 기기 현지 달력 날짜 자정 기준이며 새 탭/새로고침에도 유지하고 다음 날짜의 새 로드에서 다시 표시한다. 팝업 전용 키만 쓰며 찜·장바구니는 보존한다. 저장 getter/setter 차단 시에도 닫고 하루 저장 성공으로 표시하지 않는다. native dialog,명시 초기 Close 초점·초점 복귀·배경 스크롤 잠금·44px/360px를 적용했다. API실패/0개이면 홈 팝업을 표시하지 않는다.
+
+검증 및 수정:
+
+| 명령/검사 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 최종 종료0 |
+| npm.cmd run typecheck | 최종 종료0 |
+| npm.cmd run test -- --run |32파일384개,최종 종료0 |
+| npm.cmd run check:providers |109소스,종료0 |
+| npm.cmd run build | domain→server→web,종료0/web178모듈 |
+| npm.cmd run data:localization:check |5개 언어 상품402/관광지220/맛집514,issues0/종료0 |
+| Vercel 공식 @vercel/backends 패키징 |830파일/코스JSON포함/독립 .mjs 함수 실행 종료0 |
+| dist 웹/경로 smoke | /courses,상세,inspiration,기존 추천상세,Google확인파일200;설정/.env/DB경로404 |
+
+공식 함수는 이전에 검증한 깨끗한 설치 디렉터리에 최종 domain/server 소스와 코스 설정을 복사해 빌드했다. 의존성/lockfile을 바꾸지 않아 npm ci를 이번에 다시 실행했다고 주장하지 않는다. 함수 산출물을 새 독립 디렉터리에 물리화하고 --no-experimental-detect-module/--no-experimental-require-module 제한으로 health200/상품402/프로모션3/맛집514/영문·일문 코스40/번체 상세fa04를 검증했다. 기존 ESM/정적 플러그인 분리와 readOnlySnapshot을 유지한다. 근거 var/imports/courses-20261124/package-check.{mjs,json}. E2E는 별도의 npm run start dist 서버와 외부 사진/예약·GTM 대역을 사용한다.
+
+처음 domain LocaleSchema import 경로와 이종 Map 추론 타입 오류를 수정했다. legacy URL 전환은 effect에서 직접 setState하지 않도록 수정했다. 숨겨진 dialog의 React autoFocus만으로 초점이 잡히지 않아 showModal 후 명시 focus로 수정했다. 원문 이름 접기를 추가하면서 주차 접기 테스트가 다른 summary를 선택한 문제는 중복 주차 접기를 없애고 전용 주차 컨트롤로 검증하도록 고쳤다. API 정적 의존성 회귀의 콜드 모듈 import가5초 테스트 제한에 포함되던 문제는 vi.mock 호이스팅을 유지한 정적 import로 옮겨 해결했다. 검사 제한시간을 늘리거나 경계 검사를 끄지 않았다. Zod PURE 주석/SQLite experimental 안내는 빌드 실패가 아니며 숨기지 않았다.
+
+신규 포털 수집/상품 추가·제외0. 원본 공공 JSON/DB/번역/음식점 제외·사진 정책/.env/의존성/lockfile은 변경하지 않았다. 로컬 코스 미리보기40개와 실제 현장 검수40개를 혼동하지 않는다. 최종 전체 E2E/시연 캡처/클라우드 결과는 아래 후속 기록으로 구분한다.
+
+최종 전체 npm.cmd run test:e2e는 **183 passed / 종료0 / 3.5분**이었다.3개 화면 크기에서 첫 방문·하루 억제의 자정 경계·새 탭·새로고침·저장 차단·Escape/초점·분류/방문 순서/장소 연결·주차·오류 재시도·기존 추천여행 이동과 상품/찜/장바구니/통화를 검증했다. 기존 전체180개 통과/주차3개 실패 상태는 위 수정 후 전부 재실행해 해소했다.
+
+[모바일 팝업](screenshots/course-popup-mobile-2026-11-24.png),[PC 팝업](screenshots/course-popup-desktop-2026-11-24.png),[모바일 코스](screenshots/courses-mobile-2026-11-24.png),[PC 코스](screenshots/courses-desktop-2026-11-24.png)를 보존했다. 팝업의 음식만 있는 최신 합성 패널·실제2버튼·모바일 가로 넘침 없음을 직접 열어 확인했다. 코스 사진의 단색은 E2E 대역이며 실제 장소 사진의 신규 확보 증거가 아니다.
+
+Google 파일/태그는 앞선 분리 커밋으로 실제 배포를 확인했으며 코스 구현은 검증 완료 소스를 이어서 push한다. 최종 클라우드 코스 응답/SPA/팝업 결과는 아래 후속 기록을 따른다.

@@ -123,3 +123,12 @@ Vercel 서비스별 installCommand는 저장소 루트에서 npm ci --include=de
 API 서비스는 일반 tsc dist를 함수 루트로 자동 선택하지 않게 outputDirectory=.를 유지한다. 서비스 buildCommand는 domain build와 server typecheck이며 Vercel이 원본 모듈을 변환/추적한다. @vercel/backends의 includeFiles는 저장소 루트 기준이다. 로컬 HTTP smoke뿐 아니라 실제 빌더가 만든 함수 파일을 독립 디렉터리에서 실행하고 상품·프로모션 API를 검사한다. Ready 상태만으로 서비스 정상 동작을 판정하지 않는다.
 
 API 함수가 사용하지 않는 정적 서버 플러그인을 최상위 import하지 않는다. @fastify/static은 webRoot가 있는 로컬 화면 서버의 초기화에서만 동적으로 불러온다. Vercel의 require(ESM) 제한은 --no-experimental-require-module로 별도 재현하며 로컬 Node 기본 동작만으로 판단하지 않는다.
+
+
+## 2026-11-24 코스 아이디어 허브·첫 방문 팝업
+
+최신 사용자 요청으로 /courses 목록·상세와 /api/courses를 추가한다. 가족/데이트/맛집/dallaBusan 각10개,총40개는 editorial-idea 미리보기이며 최적화/운영자·현장 검수가 끝난 일정이 아니다. 원본 ID/지문과 기존 공개 제외 정책을 검증하며 불일치 시 코스 전체를 보류한다. 기존 내부17개 테마의 pending/not-performed/recommendationEnabled=false는 보존한다.
+
+상단 메뉴는 Home → Attraction search → Busan Courses → Find restaurants → Saved다. 기존 Travel inspiration은 /courses/inspiration으로 통합하고 /recommended의 기존 링크도 전환한다. 추천 명소2개는 코스 허브로 이동한다. 가족의 주차/메뉴는 기존 출처 안내로 연결하며 아이 적합성/빈자리·입구/최적 동선 검증을 주장하지 않는다.
+
+홈 팝업은 사용자 수정 v2 콜라주와 5개 언어 HTML을 사용한다. 하단2버튼만 두며 Close/Escape/카테고리 이동은 탭 세션,하루 안 보기는 기기 현지 날짜 자정까지 억제한다. 전용 저장 키만 쓰고 찜/장바구니는 보존한다. 저장 실패를 성공으로 표시하지 않으며 키보드/초점 복귀/360px를 검증한다. 상세 상태·미선정 장소/수상/동선 이월은 docs/courses-plan.md와 docs/proof.md를 따른다.

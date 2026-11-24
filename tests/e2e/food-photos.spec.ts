@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures.js';
 import { loadGuideSnapshot } from '../../apps/server/src/config/guides.js';
 import { loadFoodVisibility } from '../../apps/server/src/config/food-visibility.js';
 import { loadFoodPhotoOverrides } from '../../apps/server/src/config/food-photos.js';

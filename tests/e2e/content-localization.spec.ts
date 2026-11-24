@@ -1,4 +1,4 @@
-import { test,expect } from '@playwright/test';
+import { test,expect } from './fixtures.js';
 import { OffersResponseSchema } from '@trip-fit/domain';
 test.beforeEach(async({context})=>{await context.route('**/*',route=>{const url=new URL(route.request().url());if(['127.0.0.1','localhost'].includes(url.hostname)||url.protocol==='data:')return route.continue();return route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="600" height="400" fill="#bad3dc"/></svg>'});});});
 test('foreign products, attraction gaps and restaurant gaps show the requested language',async({page},testInfo)=>{

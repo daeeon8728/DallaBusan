@@ -16,3 +16,5 @@
 완료 여부와 실제 HTTP/측정 결과는 아래 후속 검증 기록을 따른다.
 
 초기 로컬 검증: web workspace build 종료0. 원본/빌드 HTML의 GTM 로더1개와 dataLayer 초기화1회,직접 GA4 config 중복0을 실행 검사했다. 코스·팝업 소스는 이 정적 태그 커밋에 포함하지 않는다.
+
+실제 검증: GTM 버전2(dallaBusan GA4 launch 2026-11-24) 게시를 화면에서 확인했다. 사용자가 사용자 제공 데이터 기능을 직접 끄고 저장했으며 추가 계정 링크를 만들지 않았다. 커밋22bb93e 배포 후 공개 HTML의 로더1개,첫 방문과 /search 이동 각각 page_view1회/HTTP204/측정ID일치,브라우저 pageerror0을 확인했다. E2E와 별도의 단발 실제 측정이며 대시보드 집계 완료를 의미하지 않는다. 민감한 원본 요청/cookie/client ID는 기록하지 않는다. 근거 var/imports/google-analytics-20261124/live-check.json.

@@ -1,5 +1,6 @@
 import { OffersResponseSchema, PromotionsResponseSchema } from '@trip-fit/domain';
 import { describe, expect, it, vi } from 'vitest';
+import { createRuntimeApp } from '../../apps/server/src/runtime.js';
 
 vi.mock('@fastify/static', () => {
   throw new Error('API-only runtime must not load the standalone static server');
@@ -7,7 +8,7 @@ vi.mock('@fastify/static', () => {
 
 describe('API-only runtime dependency boundary', () => {
   it('serves catalog and promotions without importing the static server plugin', async () => {
-    const { createRuntimeApp } = await import('../../apps/server/src/runtime.js');
+
     const app = await createRuntimeApp({ readOnlySnapshot: true });
     try {
       const offers = await app.inject('/api/offers?locale=en');

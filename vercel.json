@@ -34,6 +34,10 @@
         {
           "source": "/places/:path*",
           "destination": "/index.html"
+        },
+        {
+          "source": "/courses/:path*",
+          "destination": "/index.html"
         }
       ],
       "installCommand": "cd ../.. && npm ci --include=dev --workspaces --include-workspace-root"

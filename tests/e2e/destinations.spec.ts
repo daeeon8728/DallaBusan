@@ -1,5 +1,5 @@
 import { DestinationDetailSchema } from '@trip-fit/domain';
-import { expect, test } from '@playwright/test';
+import { expect, test } from './fixtures.js';
 
 test.beforeEach(async ({ context }) => {
   await context.route('**/*', async route => {
@@ -10,9 +10,9 @@ test.beforeEach(async ({ context }) => {
   });
 });
 
-test('separate search includes monthly guides and the complete destination booking flow', async ({page,context},testInfo) => {
-  await page.goto('/search?locale=ko');
-  await expect(page.getByRole('heading',{level:1,name:'관광지 검색'})).toBeVisible();
+test('course hub includes monthly guides and the complete destination booking flow', async ({page,context},testInfo) => {
+  await page.goto('/courses?locale=ko');
+  await expect(page.getByRole('heading',{level:1,name:'나에게 맞는 부산을 찾아보세요.'})).toBeVisible();
   const banner = page.getByTestId('monthly-destinations');
   await expect(banner.getByRole('link').first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -45,7 +45,7 @@ test('search filters survive refresh, and back/forward restores the query', asyn
   expect((await page.getByTestId('offer-card').allTextContents()).every(text => text.includes('감천'))).toBe(true);
   await page.reload();
   await expect(page.getByRole('group').getByRole('button',{name:/하루 투어/})).toHaveAttribute('aria-pressed','true');
-  await page.getByTestId('monthly-destinations').locator('a[href^="/places/gamcheon"]').click();
+  await page.getByTestId('destination-results').locator('a[href^="/places/gamcheon"]').click();
   await expect(page.getByRole('heading',{level:1,name:'감천문화마을'})).toBeVisible();
   await page.goBack();
   await expect(page.getByRole('searchbox')).toHaveValue('감천');

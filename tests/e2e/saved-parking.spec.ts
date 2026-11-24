@@ -1,4 +1,4 @@
-import { expect,test } from '@playwright/test';
+import { expect,test } from './fixtures.js';
 import { ParkingDirectoryResponseSchema,GuideListSchema,GuideDetailSchema } from '@trip-fit/domain';
 test.beforeEach(async({context})=>{await context.route('**/*',async route=>{const url=new URL(route.request().url());if(url.hostname==='127.0.0.1'||url.hostname==='localhost'||url.protocol==='data:')return route.continue();return route.fulfill({contentType:route.request().resourceType()==='image'?'image/svg+xml':'text/html',body:route.request().resourceType()==='image'?'<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="600" height="400" fill="#b8d3db"/></svg>':'<p>External navigation test</p>'});});});
 test('saves a product, place and restaurant across reloads, language changes and removal',async({page},testInfo)=>{
