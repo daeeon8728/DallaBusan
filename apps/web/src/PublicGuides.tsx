@@ -1,3 +1,4 @@
+import {DetailAdvertisement} from './advertising/DetailAdvertisement.js';
 import { getLocalizationCopy } from './i18n/localization.js';
 import { NearbyParking } from './Parking.js';
 import { SaveButton } from './saved/SaveButton.js';
@@ -49,6 +50,7 @@ export function PublicGuideDetail({kind,id,locale,onNavigate}: {kind: GuideKind;
       <div className="public-guide-facts"><section><h2>{copy.about}</h2><p className="public-guide-story" lang={item.locale}>{item.description||details.unknown}</p></section><aside><dl>{([[copy.address,item.address],[copy.menu,kind==='food'?item.menu:undefined],[details.hours,item.hours],[copy.holiday,kind==='recommended'?item.holidays:undefined],[details.fees,kind==='recommended'?item.fees:undefined],[details.transport,kind==='recommended'?item.transport:undefined],[details.contact,item.phone]]).filter(([,value])=>value!==undefined).map(([label,text])=><div key={label}><dt>{label}</dt><dd lang={item.locale}>{text??details.unknown}</dd></div>)}</dl>{item.homepage&&<a className="source-link" href={item.homepage} target="_blank" rel="noopener noreferrer">{details.homepage} ↗</a>}</aside></div>
       {kind==='food'&&<NearbyParking kind="food" id={item.id} locale={locale}/>}
       <p className="public-guide-note">{copy.note}</p>{value&&<div className="photo-credit"><p>{copy.credit} · {copy.asOf}: {new Intl.DateTimeFormat(locale,{timeZone:'Asia/Seoul',dateStyle:'medium'}).format(new Date(value.source.collectedAt))}</p><a href={value.source.url} target="_blank" rel="noopener noreferrer">{copy.source} ↗</a><a href={value.source.licenseUrl} target="_blank" rel="noopener noreferrer">{copy.license} ↗</a></div>}
+      {kind==='food'&&<DetailAdvertisement locale={locale} identity={'food:'+item.id}/>}
     </>}
   </article>;
 }

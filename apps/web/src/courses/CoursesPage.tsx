@@ -1,3 +1,4 @@
+import {DetailAdvertisement} from '../advertising/DetailAdvertisement.js';
 import { Component,lazy,Suspense,useState,type ReactNode } from 'react';
 import { CourseDetailSchema, CoursesResponseSchema, CourseCategorySchema, type Course, type Locale } from '@trip-fit/domain';
 import { useGuideRequest } from '../hooks/useGuideRequest.js';
@@ -52,7 +53,7 @@ function CourseDetail({id,locale,onNavigate}:{id:string;locale:Locale;onNavigate
  {course.category==='family'&&step.kind!=='note'&&step.id&&<NearbyParking kind={step.kind} id={step.id} locale={locale}/>}
  {href&&<div className="course-transfer"><a href={href} target="_blank" rel="noopener noreferrer">{m.directions} ↗</a>{leg&&<span>{number.format(leg.distanceMeters/1000)} km · {Math.max(1,Math.round(leg.durationSeconds/60))} {m.minutes} ({m.road})</span>}</div>}
  </div></li>;
- })}</ol><p className="guide-note">{c.onward}</p></>}
+ })}</ol><p className="guide-note">{c.onward}</p><DetailAdvertisement locale={locale} identity={'course:'+course.id}/></>}
  </article>;
 }
 export function CoursesPage({ route, locale, onNavigate }: {

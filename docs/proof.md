@@ -1372,3 +1372,38 @@ Google 파일f17fc9a/GTM코드22bb93e/코스548f815를 순서대로 분리 배�
 - 공개 API 200: 상품402,프로모션3,관광지220,맛집514,일본어 코스40. 신규 채널 승인/전체 OTA 재고 수집/실시간 교통 확인으로 해석하지 않는다.
 - 공개 브라우저 검증의 OSM 타일/외부 이미지/GTM도 대역이다. 실제 경로 수집41회와 실제 공개 API 응답을 분리한다. 로컬 근거 `var/imports/course-maps-20261124/live-check.json`,live-360.png,live-1280.png.
 - Google CMS 설치 문의: 이 프로젝트는 React이며 CMS 설치 경로를 사용하지 않는다. 이번 코스 변경은 기존 GTM/GA4 태그를 추가·중복 설치하지 않았다. 앞서 page_view 전송 응답204는 확인했지만 GA4 대시보드 집계/경고 해제까지 확인했다고 보고하지 않는다.
+
+
+## 2026-11-24 AdSense 수동 광고 준비·기존 사이트 연결
+
+### 계정에서 실제 수행한 설정
+
+사용자가 열어둔 로그인 Chrome AdSense의 dallabusan.vercel.app을 확인했다. 최초 사이트 상태는 검토 필요/소유권 연결 미완료/ads.txt 찾을 수 없음이었다. 자동 광고·자동 최적화를 모두 사용 안 함으로 저장하고 사이트 기준 목록으로 재확인했다. 수동 디스플레이 반응형 단위 `DallaBusan - Detail Bottom - Responsive`(7687721544)를1개 발급하고 목록/코드로 확인했다. 계정에서 발급된 공개 publisher 식별자는 ca-pub-9707649247569634이며 비밀 API 키가 아니다. 지급·계정 권한·비밀번호·개인정보 선택/광고 CMP 설정은 변경하지 않았다.
+
+### 파일과 동작
+
+- web index.html의 공식 google-adsense-account 메타1개와 public/ads.txt를 추가했다. 기존 GTM/Google 검증 파일은 유지하며 AdSense JS를 전역 head에 추가하지 않았다.
+- web config/advertising.ts·advertising/policy.ts·DetailAdvertisement.tsx·advertising.css를 추가하고 관광지/맛집/코스 상세 끝에 수동 단위1개씩 연결했다. 홈/상품 목록/추천여행/찜/장바구니/지도/예약 버튼 위에는 추가하지 않았다. 본문 폭과 기존 매거진 레이아웃을 유지한다.
+- enabled=false이며 실제 사이트 승인·동의/CMP 검토 게이트가 완료되기 전에는 광고 script/요청/빈 칸을 만들지 않는다. 단위 발급/소유권 확인/심사 접수는 광고 게재 승인/수익 발생과 다르다.
+- 승인 이후 경로는 lazy visible slot/양수 폭/공통 script1회/SPA 취소/실패/광고 미제공 처리/5개 언어 광고 표시를 준비했다. 현재 검증된 실행 상태는 **비활성화**이며 실광고·활성화 후 CMP/입찰/표시까지 검사한 것으로 쓰지 않는다.
+- tests/unit/advertising.test.ts·tests/e2e/advertising.spec.ts, AGENTS/spec/plan과 docs/adsense-setup-2026-11-24.md에 상태·운영/공식 근거를 추가했다. .env·lockfile·버전·의존성·공공/제휴 원본은 변경하지 않았다.
+
+### 검증 결과와 수정
+
+| 명령 | 결과 |
+| --- | --- |
+| npm run lint | 종료0 |
+| npm run typecheck | 종료0,strict 전체 |
+| npm run check:providers | 종료0,117개 소스 |
+| npm run test -- --run | 종료0,34파일390개 |
+| npm run build | 종료0,domain→server→web |
+| npm run test:e2e -- tests/e2e/advertising.spec.ts tests/e2e/destinations.spec.ts tests/e2e/public-guides.spec.ts tests/e2e/courses-popup.spec.ts tests/e2e/course-map.spec.ts tests/e2e/navigation-preservation.spec.ts | 최초90통과/3실패: ads.txt의 Windows CRLF와 기대 LF 비교 차이 |
+| npm run test:e2e -- tests/e2e/advertising.spec.ts | 수정 후 종료0,6개 통과(360/768/1280px) |
+| node var/imports/adsense-20261124/dist-smoke.mjs | 종료0,5개 HTML/ads.txt HTTP200,메타1개/광고 script0,text/plain/정확한 seller행 확인 |
+| git diff --check | 종료0 |
+
+초기 TypeScript 오류는 빈 배열이 never[]로 추론된 광고 큐였다. 명시적 Array<Record<string,never>>로 해결했으며 any/비활성화/타입 단언으로 덮지 않았다. ads.txt 브라우저 검사는 줄바꿈을 제외한 정확한 seller행을 비교하도록 수정했다. 제품 파일의 내용을 임의로 바꾸거나 검증을 제거하지 않았다. 이후 해당6개 모두 통과했으며 기존90개 회귀는 앱 코드 수정 없이 통과 상태다. 기존 Zod 주석/메인 청크 크기/Node SQLite·색상 경고는 비차단으로 기록한다.
+
+E2E는 외부 이미지·OSM 타일·GTM/외부 링크 대역을 사용한다. 광고 script·doubleclick 요청0,대기 중 빈 슬롯0,기존6메뉴/너비·관광지·맛집·코스·지도·팝업을 확인했다. 실제 광고를 클릭/반복 로딩하지 않았다. 실제 계정 UI 설정/발급 결과와 대역 브라우저 검사를 구분한다. 실제 Vercel API 함수 코드는 변경하지 않아 함수 패키지 재검증은 생략했으며 기존 읽기 전용 서버·배포 라우팅을 유지한다.
+
+공개 배포/소유권 확인/심사 요청 결과는 이어서 기록한다. 아직 Google Ready 승인·실제 광고 노출·여행 광고만 노출·광고 수익을 완료로 보고하지 않는다.

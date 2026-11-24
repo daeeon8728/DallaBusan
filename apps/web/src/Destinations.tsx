@@ -1,3 +1,4 @@
+import {DetailAdvertisement} from './advertising/DetailAdvertisement.js';
 import { getLocalizationCopy } from './i18n/localization.js';
 import { NearbyParking } from './Parking.js';
 import { SaveButton } from './saved/SaveButton.js';
@@ -69,6 +70,7 @@ export function DestinationPage({ slug, locale, onNavigate, onOpen }: {
             : <p className="no-related">{copy.empty}</p>}
         </section>;
       })}</section>
+      <DetailAdvertisement locale={locale} identity={'destination:'+destination.slug}/>
     </>}
   </article>;
 }
