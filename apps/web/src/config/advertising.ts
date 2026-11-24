@@ -14,6 +14,6 @@ export const ADVERTISING:AdvertisingConfig={
   detailSlot:'7687721544',
   scriptUrl:'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9707649247569634',
   enabled:false,
-  approvalStatus:'requires-review',
+  approvalStatus:'getting-ready',
   privacyReviewStatus:'pending',
 };

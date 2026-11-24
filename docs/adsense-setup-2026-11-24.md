@@ -45,3 +45,11 @@
 - [광고 코드 구현](https://support.google.com/adsense/answer/9187252?hl=ko)
 - [광고 배치 정책](https://support.google.com/adsense/answer/1346295?hl=en)
 - [CMP 요구사항 안내](https://support.google.com/adsense/answer/11546682?hl=en)
+
+## 공개 배포·Google 확인 결과
+
+구현 커밋51c9f7a를 DallaBusan main으로 push했다. https://dallabusan.vercel.app/ 의 공식 계정 메타1개와 https://dallabusan.vercel.app/ads.txt 의200/text/plain/정확한 seller행을 실제 HTTP로 확인했다. 전역 광고 JS는0이다. 첫 배포 대기40초 동안은 이전 응답이었으며 이후 정상 반영됐다.
+
+로그인 AdSense에서 메타 태그 확인을 실행해 **사이트가 확인되었습니다**를 확인했다. 이어 기존 사이트의 비계약 검토 요청 버튼을 눌렀고 **준비 중 / 사이트의 광고 게재 가능 여부 검토 중 / 리뷰가 요청됨**을 확인했다. Google 화면은 보통 며칠, 경우에 따라2~4주를 안내한다. 이는 승인 완료가 아니다. 처음 목록의 ads.txt 찾을 수 없음 표시가 Google 재수집으로 해제됐다고 주장하지 않는다. 공개 파일은 이미200이며 별도 수집 지연이 가능하다.
+
+config의 승인 상태는 getting-ready로 기록하며 enabled=false/동의 검토 pending을 유지한다. 실광고 활성화와 CMP·개인정보 안내의 운영자 검토는 후속이며 Ready가 오기 전에 자동 활성화하지 않는다. 지급·계약/개인정보 설정은 변경하지 않았다.
