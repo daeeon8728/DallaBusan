@@ -1361,3 +1361,14 @@ Google 파일f17fc9a/GTM코드22bb93e/코스548f815를 순서대로 분리 배�
 - 로컬 실행 근거: var/imports/course-maps-20261124/dist-smoke.json,package-check.json. 임시 도구/산출물은 Git 제외한다.
 - 서비스 이용 정책·40개 순서/거리·운영 명령·한계는 docs/course-map-review-2026-11-24.md 참조.
 - 공개 배포의 반영 여부는 push 후 별도 기록한다. 이번 변경은 GTM/Google 태그 설정을 수정하지 않았다.
+
+
+### 공개 반영 확인 — 9079072
+
+- `git push dallabusan HEAD:main` 종료0. 대상 https://github.com/daeeon8728/DallaBusan, 구현 커밋9079072.
+- 첫45초 API 폴링 때는 이전 배포가 응답했다. 이후 새 지도 화면과 DTO가 반영된 것을 실제 공개 주소에서 확인했다. Ready 상태만으로 성공 판정하지 않았다.
+- https://dallabusan.vercel.app/courses/fa01?locale=en : 360/1280px 각각 번호 마커3/도로 경로1/메뉴6/전체40코스/가로 넘침 없음/콘솔 오류0. 전체 경로 보기 버튼도 동작했다.
+- `/search?locale=en`의 월간 명소2개와 `/recommended?locale=en`의 별도 목록12개를 유지했다. 최초 배너 검증은 비동기 응답 전에 개수를 읽어 실패했고 로딩 완료를 기다리도록 검증 스크립트만 수정했다. 앱 데이터/라우팅 변경은 없었다.
+- 공개 API 200: 상품402,프로모션3,관광지220,맛집514,일본어 코스40. 신규 채널 승인/전체 OTA 재고 수집/실시간 교통 확인으로 해석하지 않는다.
+- 공개 브라우저 검증의 OSM 타일/외부 이미지/GTM도 대역이다. 실제 경로 수집41회와 실제 공개 API 응답을 분리한다. 로컬 근거 `var/imports/course-maps-20261124/live-check.json`,live-360.png,live-1280.png.
+- Google CMS 설치 문의: 이 프로젝트는 React이며 CMS 설치 경로를 사용하지 않는다. 이번 코스 변경은 기존 GTM/GA4 태그를 추가·중복 설치하지 않았다. 앞서 page_view 전송 응답204는 확인했지만 GA4 대시보드 집계/경고 해제까지 확인했다고 보고하지 않는다.
