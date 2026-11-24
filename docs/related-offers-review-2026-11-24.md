@@ -34,3 +34,8 @@ API /api/offers/:id/related는 items[{offer,reason,places}], nearbyStays[{offer,
 ## 다이내믹 배너 초기 설정 프로토콜 보완
 
 공식 init-dynamic_v8 초기화는 iframe URL 생성뿐 아니라 load 후 WindowProxy 메시지2개(reloadSetting, edit width)를 전달한다. 별도 제3자 최상위 스크립트 실행 대신 서버가 검증한 initialMessages와 frameName을 공개 DTO로 제공하고, React가 지정 iframe에만 JSON 문자열 envelope를 전달한다. source/target origin·창 이름을 포함하고 postMessage 대상 origin은 실제 설정 URL의 정확한 origin이다. 임의 수신 메시지/resize/URL로 페이지를 바꾸지 않는다. 모션 감소는 URL과 초기 메시지의 isAutoPlay 양쪽에 적용한다. 테스트 iframe이 받은 메시지·출처·이름·순서·수량을5개 언어로 검증한다.
+
+
+## 실제 외부 배너 상태
+
+최종 배포에서 정확한 발급 URL과 초기 메시지 전달을 적용한 뒤에도 현재 제공처는 일반 FIND YOUR NEXT HOTEL/Book now 배너를 반환한다. 임베드 자체 표시와 호텔별 순환 카드·재고/가격 노출을 구분하며 후자는 미확인이다. 지도는 실제 지도/검색 UI 표시를 확인했지만 호텔 핀·전체 재고·예약 완료를 검증한 것은 아니다. 새 채널 제출/발급 값 변경/계약 동의 없이 이 상태를 보존한다. 상세 관찰은 proof.md를 따른다.
