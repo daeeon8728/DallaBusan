@@ -29,3 +29,8 @@ API /api/offers/:id/related는 items[{offer,reason,places}], nearbyStays[{offer,
 단위 검사는 관련도·비숙소/숙소 분리·단순 category 보완 차단·원문 지문 변경·5개 언어·실제 숙소 그룹/제공처 우선순위, 위젯 발급 값/호스트/언어/통화/날짜/모션/400·404/no-store를 검증한다. 브라우저는3개 화면에서 분리 목록·상세 전환·수동 외부 로드·오류/재시도·모바일 배너 비율·관련 카드 유지·5개 언어를 검증하며 실제 외부 iframe/이미지/GTM은 대역이다.
 
 실제 공식 스크립트와 지도/배너 HTML 각각1회의 HTTP200·프레임 차단 헤더 없음은 확인했다. HTML 응답과 실제 숙소 데이터/파트너 도메인·채널 승인을 구분한다. 새 계약/채널 제출/계정 변경/예약·결제는 하지 않는다. 자동 숙소 수집/실시간 가격 보장도 추가하지 않는다. 정확한 명령·배포 확인과 시연은 proof.md에 기록한다.
+
+
+## 다이내믹 배너 초기 설정 프로토콜 보완
+
+공식 init-dynamic_v8 초기화는 iframe URL 생성뿐 아니라 load 후 WindowProxy 메시지2개(reloadSetting, edit width)를 전달한다. 별도 제3자 최상위 스크립트 실행 대신 서버가 검증한 initialMessages와 frameName을 공개 DTO로 제공하고, React가 지정 iframe에만 JSON 문자열 envelope를 전달한다. source/target origin·창 이름을 포함하고 postMessage 대상 origin은 실제 설정 URL의 정확한 origin이다. 임의 수신 메시지/resize/URL로 페이지를 바꾸지 않는다. 모션 감소는 URL과 초기 메시지의 isAutoPlay 양쪽에 적용한다. 테스트 iframe이 받은 메시지·출처·이름·순서·수량을5개 언어로 검증한다.
