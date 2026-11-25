@@ -12,7 +12,7 @@ import {getCourseMapCopy} from '../i18n/course-map.js';
 import 'leaflet/dist/leaflet.css';
 function View({course,selected,reset}:{course:Course;selected:number|null;reset:number}){
  const map=useMap();
- useEffect(()=>{const points=course.steps.flatMap(s=>s.coordinates?[[s.coordinates.lat,s.coordinates.lng] as [number,number]]:[]);map.closePopup();if(points.length)map.fitBounds(latLngBounds(points),{padding:[38,38],maxZoom:15});},[course,map,reset]);
+ useEffect(()=>{const points=course.steps.flatMap(s=>s.coordinates?[[s.coordinates.lat,s.coordinates.lng] as [number,number]]:[]);map.closePopup();if(points.length)map.fitBounds(latLngBounds(points),{padding:[38,38],maxZoom:15,animate:false});},[course,map,reset]);
  useEffect(()=>{const point=selected===null?null:course.steps[selected]?.coordinates;if(point)map.setView([point.lat,point.lng],15,{animate:false});},[selected,course,map]);
  return null;
 }
@@ -24,7 +24,7 @@ export default function CourseMap({course,locale,selected,onSelect}:{course:Cour
  const segments=useMemo(()=>{const result:[number,number][][]=[];let segment:[number,number][]=[];for(const step of course.steps){if(step.coordinates)segment.push([step.coordinates.lat,step.coordinates.lng]);else{if(segment.length>1)result.push(segment);segment=[];}}if(segment.length>1)result.push(segment);return result;},[course]);
  return <section className="course-map-section" aria-label={c.map} data-testid="course-map"><div className="course-map-toolbar"><h2>{c.map}</h2><button onClick={()=>{onSelect(-1);setReset(n=>n+1);}}>{c.fit}</button></div>
  {failed&&<div role="status" className="map-status">{c.tiles}<button onClick={()=>{setFailed(false);setTileAttempt(n=>n+1);}}>{c.retry}</button></div>}
- <MapContainer center={[35.16,129.06]} zoom={11} scrollWheelZoom={false} className="course-map-canvas"><View course={course} selected={selected} reset={reset}/><TileLayer key={tileAttempt} url={COURSE_MAP.tiles} attribution={COURSE_MAP.attribution} eventHandlers={events}/>
+ <MapContainer center={[35.16,129.06]} zoom={11} zoomAnimation={false} fadeAnimation={false} markerZoomAnimation={false} scrollWheelZoom={false} className="course-map-canvas"><View course={course} selected={selected} reset={reset}/><TileLayer key={tileAttempt} url={COURSE_MAP.tiles} attribution={COURSE_MAP.attribution} eventHandlers={events}/>
  {course.route.status==='road-route'?<Polyline positions={course.route.geometry.map(p=>[p.lat,p.lng])} pathOptions={{color:'#126a88',weight:5,opacity:0.9}}/>:segments.map((segment,i)=><Polyline key={i} positions={segment} pathOptions={{color:'#9c784a',dashArray:'7 9',weight:3}}/>)}
  {course.steps.map((step,i)=>step.coordinates&&<Marker key={step.kind+':'+step.id} position={[step.coordinates.lat,step.coordinates.lng]} icon={icons[i]} title={String(i+1)+'. '+step.name} eventHandlers={{click:()=>onSelect(i)}}><Popup>{i+1}. {step.name}</Popup></Marker>)}</MapContainer>
  <p className="guide-note">{c.notice}</p><p className="course-map-credit"><a href={course.route.sourceUrl} target="_blank" rel="noopener noreferrer">{c.credit}</a> · <a href={COURSE_MAP.fixMap} target="_blank" rel="noopener noreferrer">{c.fix}</a></p></section>;

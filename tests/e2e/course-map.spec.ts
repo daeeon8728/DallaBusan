@@ -58,3 +58,17 @@ test('friends courses have a navigable overview, compact details, split map and 
  await page.getByRole('button',{name:'Open both searches'}).click();await expect(page.getByTestId('stay-comparison').locator('iframe')).toHaveCount(2);
  await page.screenshot({path:info.outputPath('stay-comparison.png'),animations:'disabled'});
 });
+
+test('rapid stop selection and leaving the map never leaves an animated viewport callback behind',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',error=>errors.push(error.stack??error.message));
+ for(const id of ['fr01','fa01','fr03','fr05','fr10']){
+  await page.goto('/courses/'+id+'?locale=en');
+  await page.getByTestId('course-map').locator('.course-map-pin').first().waitFor();
+  await page.getByTestId('course-overview').getByRole('button').nth(1).click();
+  await page.locator('.course-stay-link a').click();
+  await expect(page.getByTestId('stay-comparison')).toBeVisible();
+  await page.getByRole('button',{name:'Open both searches'}).click();
+  await expect(page.getByTestId('stay-comparison').locator('iframe')).toHaveCount(2);
+ }
+ expect(errors).toEqual([]);
+});

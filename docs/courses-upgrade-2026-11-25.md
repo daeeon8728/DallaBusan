@@ -66,3 +66,5 @@
 | fr08 | walking | 3.724 | 50 | 190 |
 | fr09 | driving | 5.699 | 7 | 155 |
 | fr10 | driving | 7.698 | 11 | 315 |
+
+지도 뷰포트는 fitBounds animate:false 및 zoom/fade/marker zoom 애니메이션 비활성화를 유지한다. 장소 선택 직후 다른 페이지로 이동할 때 Leaflet 잔여 콜백 오류가 없음을 pageerror 수집 회귀로 검증한다.
