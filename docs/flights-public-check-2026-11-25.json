@@ -1,0 +1,44 @@
+{
+  "sourceCommit": "353ba5c",
+  "checks": [
+    {
+      "path": "/api/travel-tools/flight-search?locale=en",
+      "status": 200,
+      "contentLocale": "en"
+    },
+    {
+      "path": "/api/travel-tools/flight-search?locale=ko",
+      "status": 200,
+      "contentLocale": "en"
+    },
+    {
+      "path": "/api/travel-tools/flight-search?locale=ja",
+      "status": 200,
+      "contentLocale": "en"
+    },
+    {
+      "path": "/api/travel-tools/flight-search?locale=zh-CN",
+      "status": 200,
+      "contentLocale": "en"
+    },
+    {
+      "path": "/api/travel-tools/flight-search?locale=zh-TW",
+      "status": 200,
+      "contentLocale": "en"
+    },
+    {
+      "path": "/api/food-assistance/1516?locale=en",
+      "status": 200,
+      "count": 3
+    },
+    {
+      "path": "/api/courses/fa01/offers?locale=en",
+      "status": 200,
+      "count": 3
+    }
+  ],
+  "asset": "/assets/index-GH-1F8zs.js",
+  "frontendFlight": true,
+  "frontendCourses": true,
+  "frontendFoodHelp": true
+}

@@ -1716,3 +1716,12 @@ config/catalog/travel-tools.json에 중립 flight-search/kind=flights로 원문 
 시연: [모바일 항공권 탭](design/flights-2026-11-25/flights-mobile.png),[PC 항공권 탭](design/flights-2026-11-25/flights-desktop.png). 이미 발급한 도구의 위치/조작을 확인하는 대역 캡처다. 실제 공개 도구 확인은 별도 계정 브라우저 결과다.
 
 새로운 깨끗한 frontend npm ci는 재실행하지 않았다. 함수 패키지는 이전 깨끗한 설치본의 backend 의존성에 최신 서버/domain 소스와 전체 공개 config/catalog를 복사해 실제 빌더로 재구성했다. Vercel 클라우드 배포/공개 반영과 로컬 빌더 성공은 구분하며 push 후 상태를 확인한다. 사용자 비밀키·.env·로그·var/.vercel는 커밋에 포함하지 않는다.
+
+
+### 항공권 포함 전체 변경의 push·공개 배포 확인
+
+기능 커밋353ba5cf3e004e975fccd1be813196198eae0f9f를 git push dallabusan HEAD:main으로 업로드했다(종료0,26b5321→353ba5c). git ls-remote의 main과 로컬 HEAD가 일치했고 작업 폴더가 깨끗함을 확인했다. origin은 다른 저장소이므로 사용하지 않았다.
+
+첫 공개 확인은 이전 배포의404였으며,이후 GitHub Vercel 상태가 success/Deployment has completed로 바뀐 것을 확인했다. 공개 /api/travel-tools/flight-search의5개 언어 모두200·실제 발급 URL/kind/contentLocale 동일,맛집 도움말1516의대안3개200,fa01코스 상품3개200을 확인했다. 공개 웹 자산 /assets/index-GH-1F8zs.js에 항공권·코스 중심 홈·식당 도움말이 포함됨도 확인했다. [공개 확인 결과](flights-public-check-2026-11-25.json)를 보관한다. 실제 항공권 검색/예약/결제는0이며 공개 검증에서 판매처 도구를 반복 로딩하지 않았다.
+
+[항공권 도구](https://dallabusan.vercel.app/travel-tools?section=flights&locale=en),[코스 중심 홈](https://dallabusan.vercel.app/?locale=en). 기록 이후 변경은 이 검증 문서/JSON뿐이므로 제품 빌드·테스트는 반복하지 않는다.
