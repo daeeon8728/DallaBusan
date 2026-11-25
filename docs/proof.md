@@ -1586,3 +1586,37 @@ E2E는 외부 이미지·OSM 타일·GTM/외부 링크 대역을 사용한다. �
 ### 최종 공개 사이트 확인
 
 d04c2c0 push 종료0 후 공개 main/index-BHLtSIIB.js와 CourseMap-Bilb10wU.js에서 안정화 옵션 zoomAnimation/fadeAnimation/markerZoomAnimation:false를 확인했다. live-check.mjs 최종 종료0:5개 언어 각각 목록200/전체50개/친구10개,친구 전체50건 상세200/도로 경로/구간 수 일치.360/1280px에서 친구 목록→번호 선택/선택 카드→숙소 비교 이동→클릭 전 iframe0/함께 열기2/함께 닫기0,가로 넘침 없음/pageerror0을 확인했다. 외부 iframe/사진·타일/분석은 이 공개 UI 검사에서도 대역이며 실제 제공처 검색·예약·광고 클릭0이다. 독립 로컬 회귀15개와 공개 동작 모두 지도 이탈 오류 없이 통과했다. 최종 공개 검증 자료는 var/imports/courses-upgrade-20261125/live-check.json에 로컬 보관한다. 제품 코드 이후 변경은 본 검증 기록뿐이므로 빌드/회귀를 반복하지 않는다.
+
+
+## 2026-11-25 공통 숙소 검색 조건·차별화 제안
+
+최신 요청: 날짜·인원을 한 번 입력해 양쪽 숙소 검색에 적용하고 검증,사이트만의 기능 검토. [구현/근거](shared-stay-search-2026-11-25.md),[차별화 제안](differentiation-2026-11-25.md)을 따른다. 차별화 문서의 현장 카드·숙소 권역·출발 전 체크는 **제안/미구현**이며 이번 제품 구현은 공통 숙소 검색이다.
+
+확인한 발급 위젯에는 날짜·인원 외부 변경 계약이 없어,실제 검증된 제휴 검색 링크 방식으로 공통 입력을 제공했다. 기존 위젯은 별도 조건의 보조 펼침 영역에 유지한다. 내부 호텔 재고/가격 비교·iframe 조작·새 비공개 API 계약/키·계정·채널 제출·예약·결제를 추가하지 않았다.
+
+실제 근거: 활성 사이트1980997의 공식 위젯 predefinedUrl/UrlBuilder와 기존 등록 사이트의 새 호텔/부산/English 발급 식별D21538974를 확인했다. 두 실제 판매처에서2026-12-10~13/성인4·객실2·아동1명7세의 필드 표시 및 나이7·발급 추적값·요청USD 보존을 확인했다. 공개 검색 페이지에서 인원 선택/검색을 수행했으며 호텔/예약/결제/광고 버튼 클릭0이다. 아고다 공개 CID1980997,트립닷컴 AID10925986/SID332880325/trip_sub3 D21538974는 config 경계에서만 관리한다. 브라우저의 개인 이름·쿠키/세션 식별값/원본 개인 URL은 공개 자료에 복제하지 않는다. 한 제공처는 이전 한국어 설정을 유지했으므로 판매처 언어/통화 재확인 안내를 제공한다.
+
+변경: domain/stay-search.ts/index의 순수 조건/DTO·날짜 검증,config/catalog/stay-search.json과 server config/stay-search.ts의 승인·추적/호스트·경로·case alias/중복·필드 매핑/제한 정책·공통 validateLink,server routes/stay-search.ts/runtime의 no-store GET/POST(2KiB,외부호출0),web SharedStaySearch.tsx/i18n/stay-search.ts/shared-stay-search.css·TravelTools.tsx의 공통 폼/좌우 링크·보조 위젯,App.tsx의 언어 변경 때 페이지 전체 재생성 제거·지도/배너의 개별 언어 key,관련 통합/E2E·문서/시연.
+
+| 검증 | 종료/결과 |
+| --- | --- |
+| npm run lint | 0,최종 렌더링/소스 규칙 |
+| npm run typecheck | 0,strict server/web/domain/tools |
+| npm run test -- --run | 최종0,38파일411개(9.28초) |
+| npm run check:providers | 0,137개 소스 |
+| npm run build | 0,domain→server→web |
+| npm run test:e2e | 첫 전체246통과/새 검사9실패,아래 수정 내용 참조 |
+| npm run test:e2e -- tests/e2e/shared-stay-search.spec.ts tests/e2e/travel-tools.spec.ts tests/e2e/course-map.spec.ts | 수정 후0,모바일/태블릿/PC36개(56.3초) |
+| node var/imports/stay-sync-20261125/package-check.mjs | 0,실제 Vercel 독립 함수850파일·require(ESM) 제한 실행,새 GET/POST2개 결과·기존API200 |
+| node var/imports/stay-sync-20261125/dist-smoke.mjs | 최종0,8개 기존/도구 페이지·5개 언어 공통POST/통화2개 링크·기존 상품/관련/코스/도구API 정상 |
+| node var/imports/stay-sync-20261125/capture.mjs | 최종0,360/1280px 링크2개·언어 변경 입력 유지·가로 넘침 없음/pageerror0 |
+
+검증 범위: 두 판매처의 날짜·성인·객실·아동 수/나이·5개 통화 동일 전달,1~30박/365일·실재 날짜·과거/역전/과다 인원·아동 나이 누락/0/17/범위·객실 최소 성인·추적값/호스트/경로·대소문자 중복·동적 파라미터 충돌·미승인/제한 제공처 차단,설정만으로 provider 변경,strict payload/no-store/사용자 URL·추적값 주입 거부. 공통 입력/실패 보존·조건 변경 이전 링크 차단·다섯 언어 전환 입력/통화·요청 취소/늦은 응답·외부 판매처 선로딩0·새 창 rel·두 열/세로 카드·기존 위젯 명시 열기·코스 지도 빠른 이탈을 확인했다.
+
+실패와 수정: 렌더링 중 ref를 읽던 새 UI를 lint가 막아 요청 제어용 ref와 화면 상태를 분리했다. 첫 새 E2E9개는 select의 정확한 label 텍스트 조회가 실제 접근성 이름과 맞지 않아 대기했다. combobox 역할/이름으로 조작하도록 수정하고 검사를 제거하지 않았다. 별도 시연에서 언어 전환 입력 초기화를 실제 발견해 기존 TravelToolsPage의 locale key를 제거하고 공통 폼 생명주기를 유지했다. 외부 위젯/지도·배너는 개별 key/언어 요청 취소로 정리한다. 이후 관련36개를 다시 통과했다. 전체246개 통과는 보완 전 이력이며 보완 뒤에는 변경된 공통/기존 도구·코스 이동36개를 재검증했다.
+
+첫 시연의 언어 입력 유지 검사는 실제 실패를 기록하고 수정 후 재실행했다. 단위/통합을 E2E와 동시에 실행할 때 기존 api-runtime 검사1건이5초 제한을 초과했고,제한을 늘리지 않고 별도 실행해411개 통과를 확인했다. 기존 Zod 주석·500KB 청크·Node SQLite/색상 안내는 비차단이다.
+
+시연: [PC 공통 검색](design/shared-stay-search-2026-11-25/search-1280.png),[모바일 공통 검색](design/shared-stay-search-2026-11-25/search-360.png). 실제 앱 폼·생성된 링크이며 외부 분석/이미지/iframe은 대역이다. 외부 숙소 결과·가격·호텔 재고를 내부에 적재한 캡처가 아니다. 실제 제공처 UI 확인과 자동 대역을 구분한다.
+
+공공 원본/DB·50코스/내부17테마·제휴 상품402/메인398·명소220·맛집514·기존 사진/번역·.env/의존성/lockfile은 보존했다. 신규 정적 상품0,새 API 비밀키0이다. 클룩 신규 위젯 pending/disabled도 유지한다. 의존성 변경이 없어 재설치는 생략하고 현재 소스로 실제 함수를 다시 패키징했다. 공개 배포/최종 결과는 이어서 기록한다.

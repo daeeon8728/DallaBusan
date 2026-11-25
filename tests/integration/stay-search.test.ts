@@ -1,0 +1,30 @@
+import {describe,it,expect} from 'vitest';
+import Fastify from 'fastify';
+import {LocaleSchema,DEFAULT_CURRENCY_BY_LOCALE,StaySearchResponseSchema,StaySearchOptionsSchema} from '@trip-fit/domain';
+import {loadStaySearchConfig,createStaySearchConfig} from '../../apps/server/src/config/stay-search.js';
+import {loadOfferCatalogConfig} from '../../apps/server/src/config/offers.js';
+import {registerStaySearchRoutes} from '../../apps/server/src/routes/stay-search.js';
+const criteria={checkIn:'2026-12-10',checkOut:'2026-12-13',adults:4,rooms:2,childAges:[7,0]};
+const source=()=>createStaySearchConfig(loadStaySearchConfig(),loadOfferCatalogConfig(),()=> '2026-11-25');
+describe('shared partner stay conditions',()=>{
+ it('uses each issued template with identical dates, rooms, adults and child ages in five currencies',()=>{
+  const config=loadStaySearchConfig(),service=source();for(const locale of LocaleSchema.options){
+   const options=StaySearchOptionsSchema.parse(service.options(locale));expect(options.partners).toHaveLength(2);expect(JSON.stringify(options)).not.toMatch(/baseUrl|allowedHosts|requiredQuery|bindings|sourceUrl/);
+   const result=StaySearchResponseSchema.parse(service.search(locale,criteria));expect(result.criteria).toEqual(criteria);expect(result.currency).toBe(DEFAULT_CURRENCY_BY_LOCALE[locale]);expect(result.items).toHaveLength(2);
+   for(const item of result.items){const partner=config.partners.find(p=>p.id===item.id);if(!partner)throw Error('No config');const url=new URL(item.href);expect(url.hostname).toBe(new URL(partner.baseUrl).hostname);expect(url.pathname).toBe(partner.path);for(const [key,value]of Object.entries(partner.requiredQuery))expect(url.searchParams.getAll(key)).toEqual([value]);const expected={checkIn:criteria.checkIn,checkOut:criteria.checkOut,adults:'4',rooms:'2',children:'2',childAges:'7,0',currency:result.currency};for(const [field,parameter]of Object.entries(partner.bindings)){const value=new Map(Object.entries(expected)).get(field);if(value===undefined)throw Error('Unknown binding');expect(url.searchParams.get(parameter)).toBe(value);}}
+  }
+ });
+ it('rejects invalid dates, excessive stays, ages and occupancy instead of dropping unsupported guests',()=>{
+  const service=source();for(const bad of [{...criteria,checkIn:'2026-02-29'},{...criteria,checkIn:'2026-11-24'},{...criteria,checkIn:'2027-11-26',checkOut:'2027-11-27'},{...criteria,checkOut:criteria.checkIn},{...criteria,checkOut:'2027-02-01'},{...criteria,adults:1},{...criteria,rooms:0},{...criteria,childAges:[18]},{...criteria,childAges:[-1]},{...criteria,childAges:[1,2,3,4,5]}])expect(()=>service.search('en',bad)).toThrow();
+  const zero=service.search('en',{...criteria,childAges:[]});for(const item of zero.items){const p=loadStaySearchConfig().partners.find(p=>p.id===item.id);if(!p)throw Error('No partner');const u=new URL(item.href);expect(u.searchParams.get(p.bindings.children)).toBe('0');expect(u.searchParams.get(p.bindings.childAges)).toBe('');}
+ });
+ it('fails closed on changed tracking, hosts, aliases and parameter collisions',()=>{
+  for(const mode of ['tracking','duplicate','alias','host','path','credentials','binding','collision']){const config=loadStaySearchConfig(),partner=config.partners[0];if(!partner)throw Error('No config');const u=new URL(partner.baseUrl),key=Object.keys(partner.requiredQuery)[0];if(!key)throw Error('No tracking');if(mode==='tracking')u.searchParams.set(key,'changed');if(mode==='duplicate')u.searchParams.append(key,partner.requiredQuery[key]??'');if(mode==='alias')u.searchParams.append(key.toUpperCase(),'changed');if(mode==='host')u.hostname='unapproved.example.test';if(mode==='path')u.pathname+='/other';if(mode==='credentials')u.username='user';if(mode==='binding')partner.bindings.adults=partner.bindings.rooms;if(mode==='collision')partner.bindings.adults=key;partner.baseUrl=u.href;expect(()=>createStaySearchConfig(config,loadOfferCatalogConfig())).toThrow();}
+ });
+ it('supports configuration-only providers and keeps restricted, disabled or pending partners private',()=>{
+  const config=loadStaySearchConfig(),catalog=loadOfferCatalogConfig(),partner=config.partners[0],provider=catalog.providers.find(p=>p.id===partner?.providerId);if(!partner||!provider)throw Error('No source');provider.id='PROVIDER_TEST_STAY';partner.providerId=provider.id;expect(createStaySearchConfig(config,catalog).options('en').partners[0]?.provider.id).toBe(provider.id);for(const mode of ['disabled','pending','restricted']){const changed=structuredClone(catalog),p=changed.providers.find(x=>x.id===provider.id);if(!p)throw Error('No provider');if(mode==='disabled')p.enabled=false;if(mode==='pending')p.approvalStatus='pending';if(mode==='restricted')p.bookingPolicy='verified-korean-guided-only';expect(createStaySearchConfig(config,changed).options('en').partners.some(item=>item.id===partner.id)).toBe(false);}partner.approvalStatus='pending';expect(createStaySearchConfig(config,catalog).search('en',criteria).items.some(item=>item.id===partner.id)).toBe(false);
+ });
+ it('has no-store local endpoints, strict payloads and no client URL or affiliate override',async()=>{
+  const app=Fastify();registerStaySearchRoutes(app,source());try{const options=await app.inject('/api/stay-search?locale=en');expect(options.statusCode).toBe(200);expect(options.headers['cache-control']).toBe('no-store');const r=await app.inject({method:'POST',url:'/api/stay-search',payload:{locale:'en',criteria}});expect(r.statusCode).toBe(200);expect(r.headers['cache-control']).toBe('no-store');expect(StaySearchResponseSchema.parse(r.json()).criteria).toEqual(criteria);for(const extra of [{url:'https://unapproved.example.test'},{cid:'x'},{providerId:'arbitrary'}])expect((await app.inject({method:'POST',url:'/api/stay-search',payload:{locale:'en',criteria,...extra}})).statusCode).toBe(400);expect((await app.inject('/api/stay-search?cid=x')).statusCode).toBe(400);expect((await app.inject({method:'POST',url:'/api/stay-search?locale=en',payload:{locale:'en',criteria}})).statusCode).toBe(400);}finally{await app.close();}
+ });
+});

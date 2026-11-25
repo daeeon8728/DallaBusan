@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-25",
+  "partners": [
+    {
+      "id": "stay-results",
+      "providerId": "PROVIDER_D",
+      "baseUrl": "https://www.agoda.com/partners/partnersearch.aspx?cid=1980997&hl=en&city=17172&pcs=2",
+      "allowedHosts": [
+        "www.agoda.com"
+      ],
+      "path": "/partners/partnersearch.aspx",
+      "requiredQuery": {
+        "cid": "1980997",
+        "city": "17172",
+        "pcs": "2"
+      },
+      "bindings": {
+        "checkIn": "checkin",
+        "checkOut": "checkout",
+        "adults": "NumberofAdults",
+        "rooms": "Rooms",
+        "children": "NumberofChildren",
+        "childAges": "childages",
+        "currency": "currency"
+      },
+      "sourceUrl": "https://partners.agoda.com/Tools/Sherpa",
+      "evidence": "Issued site1980997 widget predefinedUrl and official SquareCalendar UrlBuilder. Actual attributed landing retained Dec10-13,4adults/2rooms/1child age7/USD/CID1980997. Only public query keys recorded; no browser IDs retained.",
+      "enabled": true,
+      "approvalStatus": "approved",
+      "contentLocale": "en"
+    },
+    {
+      "id": "hotel-results",
+      "providerId": "PROVIDER_A",
+      "baseUrl": "https://www.trip.com/hotels/list?city=253&display=Busan&optionId=253&optionType=City&optionName=Busan&Allianceid=10925986&SID=332880325&trip_sub1=&trip_sub3=D21538974&locale=en-XX",
+      "allowedHosts": [
+        "www.trip.com"
+      ],
+      "path": "/hotels/list",
+      "requiredQuery": {
+        "Allianceid": "10925986",
+        "SID": "332880325",
+        "trip_sub3": "D21538974",
+        "city": "253"
+      },
+      "bindings": {
+        "checkIn": "checkin",
+        "checkOut": "checkout",
+        "adults": "adult",
+        "rooms": "crn",
+        "children": "children",
+        "childAges": "ages",
+        "currency": "curr"
+      },
+      "sourceUrl": "https://kr.trip.com/partners/tools/deeplink/create",
+      "evidence": "Hotel/Busan city/English link generated in existing account and site on2026-11-25; display/optionName normalized to observed English city name. Supplier UI confirmed dates4adults2rooms1child age7; attributed landing retained AID/SID/trip_sub3 and age7.",
+      "enabled": true,
+      "approvalStatus": "approved",
+      "contentLocale": "en"
+    }
+  ]
+}

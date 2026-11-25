@@ -53,9 +53,9 @@ test('friends courses have a navigable overview, compact details, split map and 
  await page.locator('.course-detail-hero').scrollIntoViewIfNeeded();
  await page.screenshot({path:info.outputPath('friends-overview.png'),animations:'disabled'});
  await page.locator('.course-stay-link a').click();await expect(page).toHaveURL(/travel-tools/);
- await expect(page.getByTestId('stay-comparison')).toBeVisible();
+ await expect(page.getByTestId('shared-stay-search')).toBeVisible();
  await expect(page.locator('iframe')).toHaveCount(0);
- await page.getByRole('button',{name:'Open both searches'}).click();await expect(page.getByTestId('stay-comparison').locator('iframe')).toHaveCount(2);
+ await page.getByRole('button',{name:'Apply to both partners'}).click();await expect(page.getByTestId('shared-stay-link')).toHaveCount(2);
  await page.screenshot({path:info.outputPath('stay-comparison.png'),animations:'disabled'});
 });
 
@@ -66,9 +66,9 @@ test('rapid stop selection and leaving the map never leaves an animated viewport
   await page.getByTestId('course-map').locator('.course-map-pin').first().waitFor();
   await page.getByTestId('course-overview').getByRole('button').nth(1).click();
   await page.locator('.course-stay-link a').click();
-  await expect(page.getByTestId('stay-comparison')).toBeVisible();
-  await page.getByRole('button',{name:'Open both searches'}).click();
-  await expect(page.getByTestId('stay-comparison').locator('iframe')).toHaveCount(2);
+  await expect(page.getByTestId('shared-stay-search')).toBeVisible();
+  await page.getByRole('button',{name:'Apply to both partners'}).click();
+  await expect(page.getByTestId('shared-stay-link')).toHaveCount(2);
  }
  expect(errors).toEqual([]);
 });

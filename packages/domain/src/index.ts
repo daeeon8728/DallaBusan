@@ -20,3 +20,5 @@ export * from './courses.js';
 export * from './stay-map.js';
 
 export * from './travel-tools.js';
+
+export * from './stay-search.js';

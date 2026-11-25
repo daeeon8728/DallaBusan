@@ -1,3 +1,5 @@
+import {SharedStaySearch} from './SharedStaySearch.js';
+import {getStaySearchCopy} from './i18n/stay-search.js';
 import {useEffect,useRef,useState} from 'react';import {TravelToolsSchema,TravelToolFrameSchema,PartnerResizeSchema,type Locale,type PublicOffer} from '@trip-fit/domain';import {useGuideRequest} from './hooks/useGuideRequest.js';import {getTravelToolsCopy} from './i18n/travel-tools.js';import {StayMap} from './StayMap.js';import {StayBanner} from './StayBanner.js';import {Promotions} from './Promotions.js';
 function ToolFrame({id,locale}:{id:string;locale:Locale}){
  const copy=getTravelToolsCopy(locale),request=useGuideRequest('/api/travel-tools/'+encodeURIComponent(id)+'?locale='+locale,TravelToolFrameSchema),value=request.value;
@@ -34,8 +36,8 @@ export function TravelToolsPage({locale,onNavigate,onOpen}:{locale:Locale;onNavi
   <div className="section-wrap"><div className="tools-filters" role="group" aria-label={copy.title}>{(['all','stays','experiences'] as const).map(key=><button key={key} aria-pressed={filter===key} onClick={()=>setFilter(key)}>{copy[key]}</button>)}</div>
    {request.pending&&<p role="status">{copy.open}…</p>}{request.error&&<div role="alert" className="error-notice"><p>{copy.failed}</p><button onClick={request.retry}>{copy.retry}</button></div>}
    {!request.pending&&!request.error&&request.value?.items.length===0&&<p>{copy.empty}</p>}
-   <div className="tools-sections">{filter!=='experiences'&&request.value?.items.some(tool=>tool.kind==='stays')&&<ToolGroup key={'stays-'+locale} tools={request.value.items.filter(tool=>tool.kind==='stays')} locale={locale} stays/>}{filter!=='stays'&&request.value?.items.some(tool=>tool.kind==='experiences')&&<ToolGroup key={'experiences-'+locale} tools={request.value.items.filter(tool=>tool.kind==='experiences')} locale={locale} stays={false}/>}</div>
-   {filter!=='experiences'&&<section className="tools-extras" aria-label={copy.stays}><h2>{copy.more}</h2><div className="tools-extra-grid"><StayMap locale={locale}/><StayBanner locale={locale}/></div></section>}
+   <div hidden={filter==='experiences'}><SharedStaySearch locale={locale}/></div><div className="tools-sections">{filter!=='experiences'&&request.value?.items.some(tool=>tool.kind==='stays')&&<details className="legacy-stay-tools" data-testid="independent-stay-tools"><summary>{getStaySearchCopy(locale).independent}</summary><p>{getStaySearchCopy(locale).independentNote}</p><ToolGroup key={'stays-'+locale} tools={request.value.items.filter(tool=>tool.kind==='stays')} locale={locale} stays/></details>}{filter!=='stays'&&request.value?.items.some(tool=>tool.kind==='experiences')&&<ToolGroup key={'experiences-'+locale} tools={request.value.items.filter(tool=>tool.kind==='experiences')} locale={locale} stays={false}/>}</div>
+   {filter!=='experiences'&&<section className="tools-extras" aria-label={copy.stays}><h2>{copy.more}</h2><div className="tools-extra-grid"><StayMap key={'map-'+locale} locale={locale}/><StayBanner key={'banner-'+locale} locale={locale}/></div></section>}
    <a className="travel-tools-link" href={'/search?locale='+locale} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();onNavigate('/search');}}}>{copy.back} ↗</a>
   </div><Promotions locale={locale} onNavigate={onNavigate} onOpen={onOpen}/>
  </article>;

@@ -1,3 +1,5 @@
+import {loadStaySearchConfig,createStaySearchConfig} from './config/stay-search.js';
+import {registerStaySearchRoutes} from './routes/stay-search.js';
 import {loadTravelToolConfig,createTravelToolConfig} from './config/travel-tools.js';
 import {registerTravelToolRoutes} from './routes/travel-tools.js';
 import {loadStayBannerConfig,createStayBannerConfig} from './config/stay-banner.js';
@@ -54,6 +56,7 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const destinationService=createDestinationService(destinationConfig,offers,undefined,localization);
   const guideService=createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos);
   const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, destinationService, guideService,parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
+  registerStaySearchRoutes(app,createStaySearchConfig(loadStaySearchConfig(),offerConfig));
   registerTravelToolRoutes(app,createTravelToolConfig(loadTravelToolConfig(),offerConfig));
   registerStayBannerRoutes(app,createStayBannerConfig(loadStayBannerConfig(),offerConfig));
   registerStayMapRoutes(app,createStayMapConfig(loadStayMapConfig(),offerConfig));
