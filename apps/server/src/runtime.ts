@@ -1,3 +1,7 @@
+import{loadCourseExpansion}from'./config/course-expansion.js';
+import {loadCourseModules} from './config/course-builder.js';
+import {createCourseBuilderService} from './services/course-builder.js';
+import {registerCourseBuilderRoutes} from './routes/course-builder.js';
 import {loadFoodAssistanceConfig} from './config/food-assistance.js';
 import {createFoodAssistanceService} from './services/food-assistance.js';
 import {registerFoodAssistanceRoutes} from './routes/food-assistance.js';
@@ -9,6 +13,7 @@ import {loadStayBannerConfig,createStayBannerConfig} from './config/stay-banner.
 import {registerStayBannerRoutes} from './routes/stay-banner.js';
 import {loadStayMapConfig,createStayMapConfig} from './config/stay-map.js';
 import {registerStayMapRoutes} from './routes/stay-map.js';
+import {loadCourseCommerce} from './config/course-commerce.js';
 import {loadCourseRoutes} from './config/course-routes.js';
 import { loadCourseCatalog } from './config/courses.js';
 import { createCourseService } from './services/courses.js';
@@ -63,8 +68,10 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   registerTravelToolRoutes(app,createTravelToolConfig(loadTravelToolConfig(),offerConfig));
   registerStayBannerRoutes(app,createStayBannerConfig(loadStayBannerConfig(),offerConfig));
   registerStayMapRoutes(app,createStayMapConfig(loadStayMapConfig(),offerConfig));
-  const courses=createCourseService(loadCourseCatalog(),destinationService,guideService,parkingAnchors,loadCourseRoutes());
+  const courseCatalog=loadCourseCatalog();
+  const courses=createCourseService(courseCatalog,destinationService,guideService,parkingAnchors,loadCourseRoutes(),loadCourseCommerce(courseCatalog,offerConfig),undefined,offers);
   registerCourseRoutes(app,courses);
+  registerCourseBuilderRoutes(app,createCourseBuilderService(courses,loadCourseModules(courseCatalog),destinationService,offers,loadCourseExpansion(),guideService,parkingAnchors));
   registerFoodAssistanceRoutes(app,createFoodAssistanceService(loadFoodAssistanceConfig(),foodSnapshot,guideService,courses));
   app.addHook('onClose', async () => { db.close(); });
   return app;

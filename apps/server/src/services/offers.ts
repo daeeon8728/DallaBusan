@@ -84,6 +84,10 @@ export function createOfferService(input: OfferCatalogConfig, today = () => new 
     return [{ id: raw.id, provider: { id: provider.id, displayName: provider.displayName }, href: validateLink(raw.href, provider), category: raw.category }];
   });
   return {
+    selectForDisplay(ids:readonly string[],locale:Locale){
+      const allowed=new Set(ids),seen=new Set<string>();
+      return current().filter(offer=>{if(!allowed.has(offer.id))return false;const key=groups.get(offer.id);if(key&&seen.has(key))return false;if(key)seen.add(key);return true;}).map(offer=>localize(offer,locale));
+    },
     get(id: string, locale: Locale = 'ko') { const offer=current().find(value => value.id===id); return offer?localize(offer,locale):null; },
     related(id:string,locale:Locale,places:readonly RelatedOfferPlace[]=[]){
       const all=current(),base=all.find(offer=>offer.id===id);

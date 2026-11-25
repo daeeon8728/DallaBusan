@@ -1,5 +1,5 @@
 import { OffersResponseSchema, PromotionsResponseSchema } from '@trip-fit/domain';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach,beforeEach,describe, expect, it, vi } from 'vitest';
 import { createRuntimeApp } from '../../apps/server/src/runtime.js';
 
 vi.mock('@fastify/static', () => {
@@ -7,6 +7,8 @@ vi.mock('@fastify/static', () => {
 });
 
 describe('API-only runtime dependency boundary', () => {
+  beforeEach(()=>{vi.useFakeTimers({toFake:['Date']});vi.setSystemTime(new Date('2026-11-23T03:00:00Z'));});
+  afterEach(()=>vi.useRealTimers());
   it('serves catalog and promotions without importing the static server plugin', async () => {
 
     const app = await createRuntimeApp({ readOnlySnapshot: true });

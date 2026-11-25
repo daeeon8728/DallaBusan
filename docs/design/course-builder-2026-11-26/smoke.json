@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-26",
+  "status": "passed",
+  "spaStatus": 200,
+  "checks": [
+    {
+      "locale": "en",
+      "status": 200,
+      "originals": 50,
+      "shorts": 24,
+      "places": 100,
+      "selectedProductGroups": 1
+    },
+    {
+      "locale": "ko",
+      "status": 200,
+      "originals": 50,
+      "shorts": 24,
+      "places": 100,
+      "selectedProductGroups": 1
+    },
+    {
+      "locale": "ja",
+      "status": 200,
+      "originals": 50,
+      "shorts": 24,
+      "places": 100,
+      "selectedProductGroups": 1
+    },
+    {
+      "locale": "zh-CN",
+      "status": 200,
+      "originals": 50,
+      "shorts": 24,
+      "places": 100,
+      "selectedProductGroups": 1
+    },
+    {
+      "locale": "zh-TW",
+      "status": 200,
+      "originals": 50,
+      "shorts": 24,
+      "places": 100,
+      "selectedProductGroups": 1
+    }
+  ],
+  "externalBookingCalls": 0,
+  "externalRoutingCalls": 0,
+  "photos": "mocked",
+  "mapStyle": "mocked",
+  "exchangeRates": "mocked"
+}

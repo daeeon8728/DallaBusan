@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-26",
+  "status": "editorial-idea",
+  "items": [
+    {
+      "id": "short-fa04-1",
+      "sourceCourseId": "fa04",
+      "sourceHash": "43472a614fa20a846e821b37708c5edbb83bbad99333f22d2699e0e3f251c9e6",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fa05-1",
+      "sourceCourseId": "fa05",
+      "sourceHash": "9e61104255a83e928a29d6a7fcc9ddd6c8cfe5888eee72aa04bfa735f228b58e",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fa08-1",
+      "sourceCourseId": "fa08",
+      "sourceHash": "20f389c7db28bacd5016886a40ce8e07e1b038b97f1ed5f308b5a1766f62f7ca",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fa10-1",
+      "sourceCourseId": "fa10",
+      "sourceHash": "7a6532c0ac80db7369aa118db0a3bd6719944c17c73c58be60b40bffe264a0c6",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da01-1",
+      "sourceCourseId": "da01",
+      "sourceHash": "830ced5e26d3024f5f942820bb0acc507849d9952900a4b4c316ee7717173eb0",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da02-1",
+      "sourceCourseId": "da02",
+      "sourceHash": "a7c4e3039640bc217cdfd47597a3afd5b64c2fe16c308e74b22c021c3cb38a3f",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da03-1",
+      "sourceCourseId": "da03",
+      "sourceHash": "9d90fd60cc0ac2acc528fab04df364499ed92e720d88d5a49ed63756d237bef5",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da04-1",
+      "sourceCourseId": "da04",
+      "sourceHash": "f04149f1c53b50e000f694513d24f254147566a3ae21bd212af57aa8a1ff8b5f",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da05-1",
+      "sourceCourseId": "da05",
+      "sourceHash": "effb05a4b3faa42cfb85b32be3519a2fa1da9f7ad228d544ee522523670aee90",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da06-1",
+      "sourceCourseId": "da06",
+      "sourceHash": "7384b2be37f2d67ac54fc385fff489573f0ce34095d6cf7081e0006ad6483d20",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da07-1",
+      "sourceCourseId": "da07",
+      "sourceHash": "613fd647ef351ca57c7084ac6f94b9aedf59f84f1310b5f90b3aad6bd78c8ae4",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da09-1",
+      "sourceCourseId": "da09",
+      "sourceHash": "f271528038211b4b4baa4b30bc67ee1212cdcb5ee23eb317ee681efe10b0c55f",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-da10-1",
+      "sourceCourseId": "da10",
+      "sourceHash": "45bbfacc3b7434d8c2fe57ee93154d6c4b364ff0ace16b18e772b6fe83d13fb5",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo01-1",
+      "sourceCourseId": "fo01",
+      "sourceHash": "84d976ab9d54fa9ade09b93e219feaa844a13a8402b2b114877ea41fcacffbf9",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo02-1",
+      "sourceCourseId": "fo02",
+      "sourceHash": "ba39d43835836b8fd0ca08e44dd41b465c7ccb80e8e503b311abfe0ff47c3889",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo03-1",
+      "sourceCourseId": "fo03",
+      "sourceHash": "f1ea8abf606aa8932df20928e446e6e8fed0930b348271cfbb7d0b4471784d91",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo04-1",
+      "sourceCourseId": "fo04",
+      "sourceHash": "2098671efd92dcd9c465ffe9830b19e214887b97833508e6375e81b952bd40b2",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo06-1",
+      "sourceCourseId": "fo06",
+      "sourceHash": "aad1f96790301da1c417ca6d5cc3298aa31c6634a74beeb09861eb3e7c21fd95",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo07-1",
+      "sourceCourseId": "fo07",
+      "sourceHash": "4790eb995f74905ae70935a1f5daa42dd223fa94774d75f105382e9b2b937ee8",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-fo10-1",
+      "sourceCourseId": "fo10",
+      "sourceHash": "963cb998a0e81f1da6e967f8a41522a1153fd0c90f3354b02a9ca11799606d20",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-cu01-1",
+      "sourceCourseId": "cu01",
+      "sourceHash": "10f02e63027043e42fb383517479333de2dd43777e5aee036054a0a34689073d",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-cu02-1",
+      "sourceCourseId": "cu02",
+      "sourceHash": "8ce9cf5fa6e2bbeee2e7cf91b23544472e20ea84f58def3d477cab508120912c",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-cu04-1",
+      "sourceCourseId": "cu04",
+      "sourceHash": "559d264df491b6dda0e4bf63a5619412380397cf54fb618842a54e48da093021",
+      "start": 0,
+      "end": 1
+    },
+    {
+      "id": "short-cu05-1",
+      "sourceCourseId": "cu05",
+      "sourceHash": "b7f84e77b7ad7fed972b4deb912cbcc6a909478bcc340c316e3b6b178fc06014",
+      "start": 0,
+      "end": 1
+    }
+  ]
+}

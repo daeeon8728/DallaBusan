@@ -26,3 +26,7 @@ export * from './stay-search.js';
 export * from './food-assistance.js';
 
 export * from './course-offers.js';
+
+export * from './course-commerce.js';
+
+export * from './course-builder.js';

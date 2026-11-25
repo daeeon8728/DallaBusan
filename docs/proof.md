@@ -1734,3 +1734,92 @@ config/catalog/travel-tools.json에 중립 flight-search/kind=flights로 원문 
 검증: npm.cmd run lint0, npm.cmd run typecheck0, npm.cmd run check:providers0(150소스), npm.cmd run build0. npm.cmd run test -- --run --maxWorkers=2는42파일425검사0(21.80초), npm.cmd run test:e2e -- tests/e2e/exchange.spec.ts는360/768/1280px9검사0(17.7초). 5개 통화·상품/상세/찜/장바구니·실패 시 원통화·재시도·늦은 환율 응답/언어 변경을 기존 대역으로 확인했다. 기존 dist 서버로 브라우저를 실행했으며 신규 테스트는 추가하지 않았다.
 
 [모바일 하단 안내](design/exchange-footer-2026-11-25/mobile.png),[PC 하단 안내](design/exchange-footer-2026-11-25/desktop.png)를 보관하며 모바일 캡처에서 상단 안내가 사라지고 푸터의 저작권 뒤에 기준일/출처/재시도가 표시됨을 확인했다. 사진·가격·환율은 검증용 대역이며 실판매/현재 환율 보증 자료가 아니다. 외부 제휴 이동·결제·유료 API0. 빌드의 기존 Zod/청크 경고는 비차단이다. 최신 사용자 요청에 따라 기존 배포 흐름의 dallabusan/main으로 반영한다.
+
+## 2026-11-25 코스 페르소나 필터와 Course-to-Commerce
+
+홈 상단에 전체/첫 방문/뚜벅이/커플/당일치기 5개 필터를 5개 언어로 추가했다. 기존 50개 코스의 메타데이터를 확장하고 대표 fa02/fa04/da01/da05를 첫 미리보기로 제공한다. 필터별 최대 6개와 전체 결과 링크, /courses의 persona/category/mode 조합을 구현했다. 소요시간은 편집 체류+기존 도로 모델 시간을 바탕으로 한 참고 범위다.
+
+코스 상세에 강조된 투어와 개별 상품 비교 영역 및 별도 종착지 숙소 영역을 추가했다. 주력 배치 4개/고유 상품 3개이며 신규 포털 수집 0·신규 공개 상품 0이다. 기존 명소 관계/공개 자격/제공처 우선순위/검수 상품 그룹을 재사용한다. 원본 지문이나 순서 변경·검토 만료·비공개 시 주력 연결을 보류한다. 대표 코스의 종착지 숙소 검수 관계는 없어 빈 안내를 표시한다. 요청한 더미 4개는 test-only fixture에 격리했다. 상품 원가격/제휴 URL/공공 DB/사진/키/의존성/lockfile은 변경하지 않았다. 상세 변경 파일 목록과 계약·출처·제한은 [검토 문서](course-commerce-review-2026-11-25.md)에 기록했다.
+
+검증 명령과 종료 결과:
+
+| 명령 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 0 |
+| npm.cmd run typecheck | 0 |
+| npm.cmd run check:providers | 0 / 소스 154개 |
+| npm.cmd run test -- --run --maxWorkers=2 | 0 / 43파일 430검사 |
+| npm.cmd run build | 0 / domain → server → web |
+| npm.cmd run data:courses:check | 0 / 50코스·50도로 경로·100원본 ID·placeholder 0·외부 호출 0 |
+| npm.cmd run test:e2e -- tests/e2e/home-courses.spec.ts tests/e2e/course-map.spec.ts tests/e2e/courses-popup.spec.ts tests/e2e/exchange.spec.ts | 0 / 360·768·1280px 총 63검사, 약 1.1분 |
+| 독립 dist 서버 HTTP/SPA smoke | 0 / 임시 포트4318, 5언어 모두 200·코스50·No Car33·주력 연결4, text/html SPA200. 생성한 프로세스 종료 |
+| git diff --check | 0 |
+
+새 통합 검사는 언어별 페르소나/복합 조건·원본 가격/통화 보존·운영 목업 차단·변경된 원본/정차 순서/만료/비공개 보류·종착지 제한·검수 숙소 그룹과 제공처 순위를 확인했다. 브라우저는 실제 빌드 산출물을 npm run start로 실행했다. 첫 화면 우선순위·모바일 가로 넘침·5개 언어 필터·전체 결과/새로고침·5개 통화·상세 재조회 실패 시 예약 링크 차단·외부 target/rel·지도 마커/경로/빠른 이탈·팝업 하루 안 보기·관광지/추천여행 독립성·기존 환율 오류 복구와 장바구니를 확인했다.
+
+실패와 수정: strict optional 속성 전달에서 발생한 bookingLabel의 undefined 타입 오류를 명시적으로 수정했다. CRLF로 인해 메서드 삽입이 누락된 경우 LF 정규화 후 수정했으며 타입 검사를 통과했다. 첫 통합 검사의 주력 상품 근거 확인은 최대12개인 기존 요약 목록에 상품이 없어서 실패했다. 전체 명소 상세의 명시 검수 관계를 직접 대조하도록 고쳐 430개 모두 통과했다. 첫 E2E의 3실패는 같은 목적의 상단/하단 링크에 대한 strict locator 중복이었다. 상단 header 범위로 수정 후 같은 63개를 모두 재검사하여 통과했다. 임시 HTTP smoke는 샌드박스 접속 제한과 검사 서버 종료 시점 이후 연결 실패가 있었고 독립 프로세스로 재실행했다. SPA 검사는 Accept 헤더가 없어 JSON404가 반환된 것이며 브라우저와 같은 text/html 요청으로 200을 확인했다. 제품 오류를 숨기거나 검사·timeout을 완화하지 않았다.
+
+실연동 구분: 상품·코스 HTTP는 저장된 공개 데이터/실제 검수 관계를 사용했다. 운영사 공식 상세 3개는 연결 범위 확인을 위해 읽기 전용으로 열었다. 사진·지도 타일·환율·외부 분석은 E2E/시연 대역이다. 실제 외부 제휴 이동·예약·결제·유료 API·신규 채널 제출 0. 코스 현장 검수/교통 시간표/전체 포함·무대기 보장은 하지 않았다. Vite의 기존 Zod annotation/큰 청크 경고와 SQLite experimental 경고는 비차단이다. 전체 E2E 중 변경과 무관한 제공처 도구 실연동은 실행하지 않았다. 이번 변경의 push/클라우드 배포는 수행하지 않았다.
+
+[PC 홈](design/course-commerce-2026-11-25/desktop-home.png) · [모바일 홈](design/course-commerce-2026-11-25/mobile-home.png) · [PC 비교](design/course-commerce-2026-11-25/desktop-commerce.png) · [모바일 비교](design/course-commerce-2026-11-25/mobile-commerce.png) · [dist smoke 기록](design/course-commerce-2026-11-25/smoke.json). 직접 캡처를 확인했으며 PC의 병렬 비교·모바일 세로 배치와 44px 조작 버튼을 유지했다. 사진은 레이아웃용 대역이고 캡처 범위 밖 상품은 스크롤해서 확인한다.
+
+## 2026-11-26 별도 코스 조합 페이지와 짧은 선택지24개
+
+최신 사용자 요청으로 /build-your-day를 구현했다. 기존50개 코스에 짧은24개 조합을 더해 이 페이지에서74개를 고를 수 있고, 기존 코스의 관광지/식당100곳을 개별 추가할 수 있다. 기존 /courses 목록50개와 관광지·맛집·추천여행·홈/팝업은 보존했다. 홈/코스 목록·상세/푸터에서 진입하며 상단6개 메뉴를 유지한다. 수동 추가·중복 방지·위아래 순서 변경·삭제·최대12개·기기 자동 저장·5개 언어·근처 직선거리 필터·번호 지도·하단 장소별 관련 상품을 제공한다. 실제 새 도로 경로/최적화/AI·예산은 구현하지 않았다.
+
+추가24개는 기존 검수 원본의 인접 두 장소를 재사용한 편집 아이디어다. 원본 순서 지문·공개 자격·도보 모드·체류 합계180분 이하·직선거리2km 이하를 확인했다. 근처 후보는 마지막 장소와 다음 코스 시작점의 직선거리3km 이내이며 도보시간으로 표시하지 않는다. 지도에는 새 연결선을 그리지 않고 번호 마커를 표시한다. 사람/현장 pending, 내부17개 템플릿, 원본 DB/JSON/사진/번역과 기존 제휴 URL은 유지한다. 신규 포털 수집0·신규 공개 상품0이다.
+
+선택 장소의 명시 검수 상품만 방문 순서별로 최대3개씩 제공하고 숙소는 실제 마지막 관광지와 연결된 것만 별도로 제공한다. 최신 상세 재조회와 제휴 링크/통화/사진 정책을 재사용했다. 전용 저장 키에는 장소 kind/id·저장일만 보관한다. 손상/저장 실패/다른 탭 충돌·미공개 ID를 보존하고 명시 초기화 시에도 찜/장바구니는 건드리지 않는다. 전체 파일 목록·24개 원본 연결·현재 한계는 [검토 문서](course-builder-review-2026-11-26.md), 순서는 [계획](course-builder-plan.md)에 기록했다.
+
+| 검증 명령 | 최종 결과 |
+| --- | --- |
+| npm.cmd run lint | 0 |
+| npm.cmd run typecheck | 0 |
+| npm.cmd run check:providers | 0 / 163소스 |
+| npm.cmd run test -- --run --maxWorkers=2 | 0 / 45파일440검사 |
+| npm.cmd run build | 0 / domain→server→web |
+| npm.cmd run data:courses:check | 0 / 원본50코스·50도로 경로·100원본ID·placeholder0·외부호출0 |
+| npm.cmd run test:e2e -- tests/e2e/course-builder.spec.ts tests/e2e/home-courses.spec.ts tests/e2e/course-map.spec.ts tests/e2e/courses-popup.spec.ts tests/e2e/exchange.spec.ts | 0 / 360·768·1280px,84검사,약1.3분 |
+| 독립 dist 서버 HTTP/SPA smoke | 0 / 임시4318,5개 언어 모두200·원본50+짧은24·장소100·선택 상품 그룹1·마지막 식당 시 숙소0·SPA200 |
+
+실패와 수정: App의 기존 삼항 분기 위치가 예상과 달라 페이지 연결 삽입이 누락된 것을 수정했다. 사용하지 않는 설명 변수와 테스트 배열 kind의 넓은 string 타입은 명시 스키마/타입으로 고쳤다. 빈 저장 초기화가 같은 snapshot을 유지하도록 수정하고 새 단위검사로 반복 렌더링을 방지했다. 전체 검사 중 자정 이후 기존 프로모션3개의 검토 기한이 만료되어 api-runtime 검사가 실패했다. 이 검사의 Date만 검수 당시인2026-11-23으로 고정하고 기존3개 단언을 유지했다. 실제 운영 정책은 만료3개를 숨기며 날짜/쿠폰 파일은 연장하지 않았다. 별도 프로모션 검사의 만료 차단도 유지했다. 이후440개가 모두 통과했다. 검사/timeout/배포 오류 처리를 비활성화하지 않았다.
+
+새 단위/통합 검사는 중복/원자적 한도·순서 복원·손상/크기초과/추적URL 위조·저장 실패 후 재시도·다른 탭 충돌·다른 저장 키 보존·원본 순서 변경/중복 모듈 보류·좌표/시간/근접 조건·잘못된 namespace/미공개 ID·선택 순서별 검수 상품·마지막 장소 숙소 제한을 확인했다. 브라우저는 실제 npm run start의 dist를 사용하여21개 새 조합 검사와63개 기존 회귀를 통과했다. 추가·삭제·재정렬·중복·새로고침·5개 언어·기기 저장 실패/손상·미공개 보존·한도 원자성·관련 상품/숙소 분리·JPY 표시·외부 링크 rel/target·지도 마커와 새 연결선0·가로 넘침0·pageerror0을 확인했다. 기존 지도 빠른 이탈·팝업 하루 안 보기·원래 관광지/추천여행·찜/장바구니/환율 회귀도 포함했다.
+
+[PC 조합](design/course-builder-2026-11-26/desktop-builder.png) · [모바일 조합](design/course-builder-2026-11-26/mobile-builder.png) · [PC 상품](design/course-builder-2026-11-26/desktop-products.png) · [모바일 상품](design/course-builder-2026-11-26/mobile-products.png) · [dist smoke JSON](design/course-builder-2026-11-26/smoke.json)을 보관했다. E2E 캡처를 직접 확인했으며 PC의 좌우 편집/목록, 모바일 세로 배치/하단 이동 버튼과44px 조작을 유지했다. 사진·배경 지도·환율·외부 분석은 대역이며 실제 외부 예약/결제·유료 API·라우팅 호출0이다. 독립 임시 서버는 검사 후 종료했다. 기존 Zod annotation/청크 크기/SQLite experimental 경고는 비차단이다.
+
+환경 파일·의존성·lockfile·원본 DB 변경은 없고 이번 코스 조합 변경의 push/클라우드 배포는 하지 않았다. 원격 제공처 도구/사진 실연동·새 조합 도로 라우팅/현장 접근성·전체 장소 검색 확대·다중 코스 저장/공유는 미실행이며 별도 요구/검수가 필요하다.
+
+## 2026-11-26 추가100개 코스·선택 편집·실시간 지도
+
+### 변경과 범위
+
+- `config/catalog/course-expansion.json`에 출처 지문167개와 신규100개를 추가했다. 짧은80개/제안 체류300분 이상20개이며 일반 식당 강제 포함0개다. 짧은 코스의 순서별 직선거리 합계 최대3.013293914km, 운영 한도4km다. 실제 도보거리·지하철 정거장 수가 아니다. 기존50개 원본·24개 단축은 유지하여 조합 라이브러리174개/선택 장소200곳이다. 신규100개는 같은 장소 집합의 순서만 바꾼 중복을 제외한다. 장소 자체의 재사용은 허용한다.
+- 서버 `config/course-expansion.ts`, `services/course-builder.ts`, `runtime.ts`, domain의 `course-builder.ts`에 원본 SHA-256 검증·공개 자격·역할/테마/권역·코스별 체류시간·선택 출처 모듈 계약을 연결했다. 원본/기존 지도 스냅샷/공개 제외 정책·내부17개 보류 템플릿은 보존했다.
+- 웹 `builder/BuilderPage.tsx`, `store.ts`, `builder.css`, `i18n/course-builder.ts`에 식당 기본 제외, 카페 분리, 코스 내 장소 체크/미리보기, 테마/권역 필터, 같은 위치의 장소 교체, 식당만 제거, ID 기반 복원 기능을 연결했다. 저장 전 미리보기는 저장된 My day와 구분한다. 모바일은 한 열의 넓은 카드·지도로 이동하는 미리보기 버튼을 사용하며 내 코스가 화면에 보이면 하단 이동 버튼을 숨겨 추가/삭제 버튼을 가리지 않는다.
+- `courses/CourseMap.tsx`는 새 조합의 방문 순서 점선 참고선을 즉시 갱신하며 좌표 없는 중간 장소를 건너 잇지 않는다. 실제 도로/최적 경로로 표시하지 않는다. OSRM 출처는 실제 저장 도로 경로에만 표시한다. 기존50개 실제 도로 경로는 원본 상세에 남겼다.
+- 상품은 현재 미리보기/저장 순서의 기존 검수 명소 관계만 사용하며 실제 마지막 장소 숙소를 별도 표시한다. 포털 신규 수집0/제휴상품 신규 발행0/추가 제외0이다. 독립 현재 API 조회 상품 total402, 만료 정책을 적용한 프로모션0건이며 행사 유효기간을 늘리지 않았다. 제휴 링크·가격·기존 환산 로직을 변경하지 않았다.
+- `scripts/check-course-expansion.ts`, package.json의 `data:builder:check`, 통합2개 파일·저장 단위·브라우저 테스트를 추가/보완했다. AGENTS·spec·catalog-plan과 조합 계획/검토를 최신 검토로 연결했다. 100개 전체 목록과 ID는 [추가 코스 검토](course-expansion-review-2026-11-26.md)에 기록했다.
+
+### 검증 결과
+
+| 명령/확인 | 결과 |
+| --- | --- |
+| npm run lint | 종료0, 최종 모바일 조작 보완 후에도 통과 |
+| npm run typecheck | 종료0, strict server/web/domain/tools |
+| npm run test -- --run --maxWorkers=2 | 종료0, 46파일443개 통과 |
+| npm run check:providers | 종료0, 164개 소스 경계 통과 |
+| npm run build | 종료0, domain→server→web; 최종 모바일 버튼 수정까지 재빌드 성공 |
+| npm run data:builder:check | 종료0, 5언어174/200·신규100/짧은80/긴20·원본74 보존·중복/거리/출처/체류 합계 통과, 외부 호출0 |
+| npm run data:courses:check | 종료0, 기존50개 도로 경로/100개 원본 연결 보존, 외부 호출0 |
+| npm run test:e2e -- tests/e2e/course-builder.spec.ts tests/e2e/home-courses.spec.ts tests/e2e/course-map.spec.ts tests/e2e/courses-popup.spec.ts tests/e2e/exchange.spec.ts | 종료0, 모바일/태블릿/PC 총90개 통과 |
+| npm run test:e2e -- tests/e2e/course-builder.spec.ts | 최종 모바일 지도 이동/버튼 겹침 보완 후 종료0, 27개 재검사 통과 |
+| 독립 dist HTTP smoke | 임시4318 서버의5언어 API200/174선택지/200장소/신규100 확인. /build-your-day·/courses·/search·/food HTML 응답200. 임시 서버는 종료 |
+| 실제 브라우저 시연 | PC/390px 모바일 미리보기·선택 해제·추가·새로고침 복원·지도 마커/참고선·가로 넘침 없음. pageerror0 |
+| git diff --check | 종료0. 샌드박스의 worktree 경로 접근 오류는 권한 있는 읽기 검사로 재실행하여 해결 |
+
+초기 서비스 모듈 타입 추론/괄호 오류는 스키마 파싱 타입을 명시해 수정했다. 초기 E2E 두 항목은 실제 탭 문구(5h+)·기존 공공자료의 긴 홍보 제목을 잘못 가정한 검색·필터 접근성 이름 때문에 실패했다. 테스트를 실제 문구/ID로 맞추고 박물관의 출처 고정 짧은 이름과 필터 aria-label을 보완한 뒤90개 전체와 최종27개 재검사를 통과했다. 시연 검토에서 모바일 카드 폭/하단 이동 버튼 겹침·지도 지연 로딩 상태 캡처를 발견하여 단일 열·가시성 감지·마커 로딩 완료 후 캡처로 보완했다. 검사를 끄거나 시간 초과를 늘려 숨기지 않았다.
+
+### 시연·한계
+
+[PC 미리보기](design/course-expansion-2026-11-26/desktop-preview.png) · [PC 복원](design/course-expansion-2026-11-26/desktop-saved.png) · [모바일 미리보기](design/course-expansion-2026-11-26/mobile-preview.png) · [모바일 복원](design/course-expansion-2026-11-26/mobile-saved.png) · [독립 smoke](design/course-expansion-2026-11-26/smoke.json)를 저장했다. 캡처를 직접 검토했다. E2E의 사진·배경 지도·환율·외부 분석은 대역이다. 캡처의 단색 사진/지도는 검증 대역이며 운영 사진 자산을 교체한 것이 아니다. 새 도로 라우팅 호출·제휴 예약/결제 클릭·유료 AI 호출은0이다. 경기일/영업/입구/보행·지하철 경로 실측과 사람/현장 승인은 미수행이다. 실시간 운영 보장·현지인 독점·최적 경로·교통시간으로 광고하지 않는다. Zod annotation·큰 지도 청크·SQLite experimental 경고는 기존 비차단 경고이며 숨기지 않았다. Git push·Vercel 배포는 이번 요청 범위에서 실행하지 않았다.

@@ -1,10 +1,10 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
-import { CourseCategorySchema } from '@trip-fit/domain';
+import { CourseCategorySchema, CoursePersonaSchema } from '@trip-fit/domain';
 const Text = z.strictObject({ ko: z.string().min(1), en: z.string().min(1), ja: z.string().min(1), 'zh-CN': z.string().min(1), 'zh-TW': z.string().min(1) });
 const Ref = z.object({ kind: z.enum(['destination', 'food']), id: z.string(), sha256: z.string().regex(/^[a-f0-9]{64}$/) });
-export const CourseCatalogSchema = z.object({ version: z.union([z.literal(1),z.literal(2)]), reviewedOn: z.string(), sources: z.array(Ref), items: z.array(z.object({ id: z.string().regex(/^(fa|da|fo|cu|fr)[0-9]{2}$/), category: CourseCategorySchema, titles: Text, status: z.literal('editorial-idea'), mode:z.enum(['walking','driving']).default('walking'),intro:Text.optional(),tips:Text.optional(), steps: z.array(z.discriminatedUnion('kind', [z.object({ kind: z.literal('destination'), id: z.string(),stayMinutes:z.number().int().min(10).max(360).default(45) }), z.object({ kind: z.literal('food'), id: z.string(),stayMinutes:z.number().int().min(10).max(360).default(45) }), z.object({ kind: z.literal('note'), texts: Text })])).min(1) })) });
+export const CourseCatalogSchema = z.object({ version: z.union([z.literal(1),z.literal(2)]), reviewedOn: z.string(), sources: z.array(Ref), items: z.array(z.object({ id: z.string().regex(/^(fa|da|fo|cu|fr)[0-9]{2}$/), category: CourseCategorySchema, titles: Text, status: z.literal('editorial-idea'),personaTag:z.array(CoursePersonaSchema).default([]),duration:Text.optional(),featured:z.boolean().default(false), mode:z.enum(['walking','driving']).default('walking'),intro:Text.optional(),tips:Text.optional(), steps: z.array(z.discriminatedUnion('kind', [z.object({ kind: z.literal('destination'), id: z.string(),stayMinutes:z.number().int().min(10).max(360).default(45) }), z.object({ kind: z.literal('food'), id: z.string(),stayMinutes:z.number().int().min(10).max(360).default(45) }), z.object({ kind: z.literal('note'), texts: Text })])).min(1) })) });
 export type CourseCatalog = z.infer<typeof CourseCatalogSchema>;
 export function loadCourseSourceRows() {
     const destinations = z.object({ destinations: z.array(z.object({ slug: z.string() }).passthrough()) }).parse(JSON.parse(readFileSync(new URL('../../../../config/catalog/destinations.json', import.meta.url), 'utf8')));

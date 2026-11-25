@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "evidenceStatus": "assistant-source-evidence",
+  "items": [
+    {
+      "courseId": "fa02",
+      "offerId": "e-131061",
+      "destinationId": "busan-261",
+      "sourceHash": "b2842b5bba172ea667930707b522854331a5d192c9b23fc1a33b1868b96c1ac3",
+      "courseHash": "4e821e25b74458c3470223a7ca23a905f0e0fc7bab87344557172dd7637e1919",
+      "evidenceUrl": "https://www.kkday.com/zh-tw/product/131061-busan-one-day-tour-south-korea",
+      "evidenceExcerpt": "釜山精華景點一日遊|海雲台天空膠囊列車・甘川文化村・海東龍宮寺・白淺灘文化村・青沙浦等熱門景點",
+      "reviewedOn": "2026-11-25",
+      "reviewExpiresOn": "2026-12-02",
+      "coverage": "selected-stop-options-only"
+    },
+    {
+      "courseId": "fa04",
+      "offerId": "b-74132",
+      "destinationId": "busan-373",
+      "sourceHash": "9751e5a9b103e2490840f23de86fcbe49a16922885799f58743f651324a3c201",
+      "courseHash": "43472a614fa20a846e821b37708c5edbb83bbad99333f22d2699e0e3f251c9e6",
+      "evidenceUrl": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan",
+      "evidenceExcerpt": "부산 스카이 캡슐, 감천문화마을, 해운대 블루라인 파크 일일 투어",
+      "reviewedOn": "2026-11-25",
+      "reviewExpiresOn": "2026-12-02",
+      "coverage": "selected-stop-options-only"
+    },
+    {
+      "courseId": "da01",
+      "offerId": "b-2278",
+      "destinationId": "gwangalli",
+      "sourceHash": "d8f5cbae492d7c3f760c83663f023a7e9a0c19c5d780143abe9e22760287ead1",
+      "courseHash": "830ced5e26d3024f5f942820bb0acc507849d9952900a4b4c316ee7717173eb0",
+      "evidenceUrl": "https://www.klook.com/ko/activity/2278-night-tour-busan",
+      "evidenceExcerpt": "부산 나이트 투어 - 송도 케이블카 & 더베이 101 & 광안리 해변 & 영도 수변공원",
+      "reviewedOn": "2026-11-25",
+      "reviewExpiresOn": "2026-12-02",
+      "coverage": "selected-stop-options-only"
+    },
+    {
+      "courseId": "da05",
+      "offerId": "b-2278",
+      "destinationId": "busan-1422",
+      "sourceHash": "d8f5cbae492d7c3f760c83663f023a7e9a0c19c5d780143abe9e22760287ead1",
+      "courseHash": "effb05a4b3faa42cfb85b32be3519a2fa1da9f7ad228d544ee522523670aee90",
+      "evidenceUrl": "https://www.klook.com/ko/activity/2278-night-tour-busan",
+      "evidenceExcerpt": "부산 나이트 투어 - 송도 케이블카 & 더베이 101 & 광안리 해변 & 영도 수변공원",
+      "reviewedOn": "2026-11-25",
+      "reviewExpiresOn": "2026-12-02",
+      "coverage": "selected-stop-options-only"
+    }
+  ]
+}

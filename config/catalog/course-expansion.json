@@ -1,0 +1,5710 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-26",
+  "evidenceStatus": "assistant-source-evidence",
+  "status": "editorial-idea",
+  "sources": [
+    {
+      "kind": "destination",
+      "id": "busan-364",
+      "sourceHash": "28da67e2be33e134eceed097bc715e118c780bc97f04dc9f54be0c10eed46523",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-267",
+      "sourceHash": "9a68a2cb11b00653ee9c21ca51070ee080280c2b016ac4900b748859e0ce2c27",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-367",
+      "sourceHash": "1c978fc9a61238b3f77ceff14bf0b8ec502255e5a9fa9e35d5dcad7f6bdaa9e1",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1881",
+      "sourceHash": "f082ced37488ff2b43f6b851ec1eb78e2ff7d1a1f66994275ea771406e846474",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "부산근현대역사관 본관",
+        "en": "Busan Modern & Contemporary History Museum",
+        "ja": "釜山近現代歴史館 本館",
+        "zh-CN": "釜山近现代历史馆本馆",
+        "zh-TW": "釜山近現代歷史館本館"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-272",
+      "sourceHash": "4635a0b1582164300c861af3eadb03b3b0f62691e86f7f4ea85851d6c218b857",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2284",
+      "sourceHash": "90d08126821e970b6dc8ff2e08e396d688ea463ae23a514033c02c694135144c",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-368",
+      "sourceHash": "1055ac34d40db00c1c73850314404de9a00d2e89767c34052bfa98325353641b",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-550",
+      "sourceHash": "4b2a34469e8c56a3ced8e24e824c5d227e17e051209c0c02cb39f327b0981f1b",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2491",
+      "sourceHash": "3d0060956010e83b3eb1c88035a253339d38ba6a5afdc64a78e5d7eefa373e91",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1838",
+      "sourceHash": "77a30d5b2defdf04678de2841c16ae18e58b45823a9e2092a817d915c8e1912b",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-274",
+      "sourceHash": "c3b6018c8e9f88795582cfd93e4953d9f5b3bfbf8a125c6cf017a5e5e76570bd",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2588",
+      "sourceHash": "7f749294acb330b482f3d78f25ff7ec14854c3afb3a51c85aeda66990d190006",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1613",
+      "sourceHash": "8b2f1a880c47c2247db549fd76e3edbbe30a0dc5c2b238b6936f40ab1ffd3d70",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-268",
+      "sourceHash": "f9e1b8a114e2e597601bbb0bc01c0fe4c8151c6534c92dc3156898e2322d6266",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2210",
+      "sourceHash": "0a84e493ab4601e02c63af153c2ad2f867f9c3c2426236698fcfb459a8d02ce6",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1467",
+      "sourceHash": "59bf4aefc1145479380f9200218ef572fe9e54b347b74bbecaee98717ace426c",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-273",
+      "sourceHash": "36daafc60858f056b4d032df09ca8ee742fab0c95335af2f4db86a7749e66146",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-299",
+      "sourceHash": "247249db0fa13ecdc92faeb7dbbf298a54e2b76e47c13254238775a5cfc92bc9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "gamcheon",
+      "sourceHash": "d9af71cf80ff2b552c08226e87957cf529e2c03fd58c686069b267b98c7b9451",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-288",
+      "sourceHash": "eae88831ccac668ae66129a0aa9b284444da79ecb53b83cbc2d1ff2585914c55",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2678",
+      "sourceHash": "f9bca1d38a3a3af1565df7175cb5c9cb66f5d1429c460aefa6bdd6f853598ad5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-298",
+      "sourceHash": "7106e0f4a3a7d4f507848ddfcaf437cdcf15b94f7e7f425fba2c3415aa5ed81a",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-302",
+      "sourceHash": "6b12b14751db227118488a68309cb8a31eb7de08babf918e13d2ae4777a25070",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2105",
+      "sourceHash": "bd83f250d2673e91a6ac130a3654062cca73bf3bbdd1e6b49003e894d6bb9ac7",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2106",
+      "sourceHash": "2fa3f5a8bff2ab1b47dacfb7f046d49b15db427a6bbd48498c27fb48d057931f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-255",
+      "sourceHash": "4c773c056ecdd73a6f21787e4a4809af939298be3b6d78bc4089d17d4fb86425",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2140",
+      "sourceHash": "d7a01c6717062fc44b7817e89d994efb2b00ac147604fdb97d4f6a2e414c8c31",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1776",
+      "sourceHash": "6279a52377dfc6a3112d5e260e09f47d70691fd2d9719e2238929dbf98fc7b1a",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-256",
+      "sourceHash": "f1b84333fe052f3d16f9ad04ade23a35fbd5da7c8104ea7e4a2fb44620e6c3d5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-369",
+      "sourceHash": "d8737bda09063df45d41c92e5d842a0f06cb3135f0b6e533005845f6c039cc83",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1179",
+      "sourceHash": "8eea93b6bafc1d57a456dc00c37e7a9b8535201a76253c248e8e332bb1aab47b",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2218",
+      "sourceHash": "e182277e39fef0c6c3cd52643a7863291041a7109c2f3b0a140c7f44697e08f5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-257",
+      "sourceHash": "4830066ac3331ca615045da939dfa0d56ed2eb4f47e1a88acdccec605c268329",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2153",
+      "sourceHash": "4de283ab0a20fea231cfc7aa0c8893d8395f9af345d90425d493d49d25ed3548",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1445",
+      "sourceHash": "0db712c149d228696a026f4908accc438aee539d609fdf4d6465975e3a6fc81f",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-258",
+      "sourceHash": "7bfd569a18d58b62f9c2f5d149fd417edc17dcefeee6cb7a4249b3cd33f92b4b",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1440",
+      "sourceHash": "01e8c7043b38a3b9df379bcd0e11b467fdc09e17ed1b7aaf8c2870fda4112b36",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-359",
+      "sourceHash": "e4d56391edacc0fde1dea68e30a49c9e93d1b0f65c9a7bd6ae450c56b196aae5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-286",
+      "sourceHash": "e8b3810a05de163879ef738c4f2dbd93dfda0db9b7ab41587315f1f2d7d3f005",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "송도해수욕장",
+        "en": "Songdo Beach",
+        "ja": "松島海水浴場",
+        "zh-CN": "松岛海水浴场",
+        "zh-TW": "松島海水浴場"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1422",
+      "sourceHash": "a4f745ca77aa25e3eb8006c96d10b3d54077a88300eee90d9000b33d7931af3f",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "송도해상케이블카",
+        "en": "Songdo Marine Cable Car",
+        "ja": "松島海上ケーブルカー",
+        "zh-CN": "松岛海上缆车",
+        "zh-TW": "松島海上纜車"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-833",
+      "sourceHash": "df275b582b61368405fbae95d8fab415b835f1f159cc5658a6cdb2f967c9aa46",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "송도용궁구름다리",
+        "en": "Songdo Yonggung Bridge",
+        "ja": "松島龍宮雲橋",
+        "zh-CN": "松岛龙宫云桥",
+        "zh-TW": "松島龍宮雲橋"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-326",
+      "sourceHash": "9ab8ef0a4ceb21a41cac29ec89ee9598c984ca78771b80d0414e18eaf7ca9912",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2173",
+      "sourceHash": "765a1cfc1b649d79b64b75eeb7dbafb10be0918ee8b5ef0488d7a0055aaa0786",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-287",
+      "sourceHash": "c0c038f68596e77a5114e5fdbf260b4072e2042343fe4124b5feda2378153088",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2157",
+      "sourceHash": "26b77e579f345444122efc4a881138035cf6bd0abef3569ca3df6f78dbd1883e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-366",
+      "sourceHash": "67f3e3c2dd22748cda5df42b06b1d7f68fc7536b6cd614e2ddf37d029cb6d5e3",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1718",
+      "sourceHash": "4e8e387bad842dd5867587f959730131a810ad09b693aea0e0395fef04857503",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-333",
+      "sourceHash": "47403d577030e488c20098c2e9c12a7b22d929152e79ebd63f3332eb0e77bb7c",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-415",
+      "sourceHash": "554003adc47ba01ccc0f7b0abf7d09f7a95877b0e3e6155eaa35b9311444a19f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-266",
+      "sourceHash": "145907194ca0861077664a0e0feef921138173a1afab972d0b3ef425e2020553",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2079",
+      "sourceHash": "6998942db11185997aa41cfabeae138867400ea3b841f3d55565c9ff074d2224",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2594",
+      "sourceHash": "d992c7c600782d6485b3711c29dba42febba11f9f21cbb6e5286a9a9529100aa",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2202",
+      "sourceHash": "72d8fc2cea6a48c6dcf30a3218586a77b22471d0e70d458267548fe675cb9b84",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2102",
+      "sourceHash": "f45bbfaad06379bf04ce39f6a72591078dd6abd3f9d3da2a98087ef36fb6d716",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1866",
+      "sourceHash": "29f13b5ccecebfeb8206b9fcee7599481867aa140f707bc6b78b6753b9b0d294",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-264",
+      "sourceHash": "9269d014bb2f0d75fa48f399ca3a39e5f7a5b95dd5f7aeddf4a7e06b6bae5727",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1696",
+      "sourceHash": "bfe38bd5863e3f31ff886c51ebfba378dc02a61bcce234f95807e02cd072dc34",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2200",
+      "sourceHash": "66d145630916d337a1999529ba2a57ea2e1d647175cb36da8e81c8c32ff148b5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1868",
+      "sourceHash": "bca10d459735e4909a54ac7946125da92c96a4a3fa623cd9c74e725820826a69",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2288",
+      "sourceHash": "e60a2bfcd7edff861d604953b8dcbe3d8ce789f9ac4367af360ae0bd6efc7c15",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1900",
+      "sourceHash": "64925dbe2d05e52961adac2519aed2a9f3cef309c6e36dccd3ae995fb10e687f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2187",
+      "sourceHash": "983ec8db96bc612ad4603ee20a8c8be31b4e28920de2e8dda950d8c52489bbae",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2081",
+      "sourceHash": "ca040ed46e7a4daa3379b1905affd9dd329cea7eac531dde735bcb95fbf3cc5a",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2086",
+      "sourceHash": "e33cb6f1b71fd14cb43df77239d2d60635b19fe529d97fc622d2e22029c6c6d9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2082",
+      "sourceHash": "077434083990821eb3850914fcb32e58625eed4dcffa5f0b251628afa0e9aabb",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1329",
+      "sourceHash": "75b4ed4918d3cc62fdfbe57336274036f0fbb1fbc914193096e5bb8d6008e5e9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-508",
+      "sourceHash": "cb421ce4fa56f4cfe8132fdc33264a35b776efd8f370cc6b68654117118b35da",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1819",
+      "sourceHash": "3808926875c16c5c7655917eb71b5cef4755eddfc18d17d228aaf07b06b27076",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1653",
+      "sourceHash": "b44bf5d2263eb744e6870df5b6a058512c6fbbc54820a4473b0f41e7097fbbe3",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1185",
+      "sourceHash": "81afcc7ba20b97deebc7e365a428cd382ca673e88b0174f235dfcb393a7633c2",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2077",
+      "sourceHash": "87cb7b139c7ba882f8d20a17aaafc6b73fc822bb8107d7f90ade94d78bc5a69f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-343",
+      "sourceHash": "b5a2868f5cc8d07d52c1f2b0d43ad8087b0d29ab20f736cefe553ece61deb80a",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-354",
+      "sourceHash": "5b97c12b603e79fdc4906eaba9c6aa8d2bb9f051b33b04b974b0d7adfb90e463",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2155",
+      "sourceHash": "88fc194edaa7e2d0dcadd79bd5e1e9b5331874e3d83e0f066b195f930a529a33",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2067",
+      "sourceHash": "4486480ebc16d12a7e8205bf9fada4e8a342a3df050f4b2ce2d27880e0a447af",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "2386",
+      "sourceHash": "0e8bb44e41669eaf29731bcdf57cffc94d4a90e2825fcced6ef8e87b06a1f0c1",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1636",
+      "sourceHash": "0513bf8e43becb1f035c69eb8b186c9add0690c5a7fe802da0df0e987331f91a",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-813",
+      "sourceHash": "7bebd32f2d1cfb7e5b3c4693f5f1cc5610f659a346431db1df238366242553c6",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-418",
+      "sourceHash": "ca29b610600ea88b635f2e9d3c5a5f4f4a72eeb02563a8d55f17785be4c3bf74",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-358",
+      "sourceHash": "4c4fa2fb3bd4c8ffeec1443a4c8074a9b04f32ff670e7afe7bdd1cce720990bc",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-372",
+      "sourceHash": "ab74242d1008e3d73afa58845639bd8f6b550706e96eff0b939b01f7d62ea4f9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1322",
+      "sourceHash": "99b5d12190522d8ad92b4242ce5b3313cda0621c014fb4b954d0815c25064586",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-301",
+      "sourceHash": "48384cf94f6e687becf14190b70deca09b3f79864950e503ece35be76cac25d6",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1305",
+      "sourceHash": "7e8acfe2ed000dd67698e37f131cf2b1c36185d6904eb595e137daac9454a972",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-308",
+      "sourceHash": "f1eead1a68cfec41cec954beda2e01001e936c2bf6eb1ccb8860a6f24cbb74eb",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-421",
+      "sourceHash": "7311f6d0efd19bd8ebe735eaac73090056c3347c363bcf15a214cdd44b78b60b",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-362",
+      "sourceHash": "279e130bc513d8ed49edaddae442eecc8001b18172d08198d34e5fe4121f16f8",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-420",
+      "sourceHash": "02cad9a5b5c4d0a69d9698f963490edf8a82aef2972d840e7140526bf1b61ac7",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-361",
+      "sourceHash": "5aab2d27bed723a904f13a8bb6c03997f2d948f69168c8239c2d9c581fb73507",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "영화의 거리",
+        "en": "Cinema Street",
+        "ja": "映画の街",
+        "zh-CN": "电影街",
+        "zh-TW": "電影街"
+      }
+    },
+    {
+      "kind": "food",
+      "id": "1628",
+      "sourceHash": "71b01c047eda9ddad50272eb214f3ea3f2948b1a7cc739e9bca94b1a1ada3462",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2121",
+      "sourceHash": "c0a8fd0a52268e0a42331a2be0a9424b8faa5352bfaab8bd76b93939cba4f841",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2145",
+      "sourceHash": "5fd537c20a737e9637adf3b8a5639ba054f7fd991d05132f48cb81d836a9cb9e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "gwangalli",
+      "sourceHash": "00ae887a618dfceb838d56dddb15dfbaf73776b70c6d8af1f6b2492b9aaaacae",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2166",
+      "sourceHash": "cfef3193008fe28fd9df87819d065eefa0f153eaa9fe8d5e2036f4fdee92eb3e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-285",
+      "sourceHash": "3e502532f262f8600d07cdf5ef955aec8e30e4e9b9bd1db5238e4d28fce3330e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1633",
+      "sourceHash": "f7f0e2e52dccdbbb2bcb49573e63d82784c9bc8a167f7c40bc2f9dc3e99ddf53",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-373",
+      "sourceHash": "e939ab1940fc82d8262581599816b72424b8f7bae2ac18a2ac693b3ed9bbb638",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "해운대해수욕장",
+        "en": "Haeundae Beach",
+        "ja": "海雲台海水浴場",
+        "zh-CN": "海云台海水浴场",
+        "zh-TW": "海雲臺海水浴場"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2274",
+      "sourceHash": "883e6d9161ef11ef2a1ddf348641c01de9fe743b72c1b2534c34f0b8a391b101",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "동백섬",
+        "en": "Dongbaek Island",
+        "ja": "冬柏島",
+        "zh-CN": "冬柏岛",
+        "zh-TW": "冬柏島"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2753",
+      "sourceHash": "1f355edb193dff43e54b15fd2b511ec3bb8fe4c2abcb98071c27aed1cc60ff4d",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1862",
+      "sourceHash": "8776b49c5294e87b0a80273f6011a2ab0fb8807342aefd7e3d0b4690500fefea",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-348",
+      "sourceHash": "90871a7889a15607d5f962be7dd4a900fc061bcf041f5df3710614c26ec854c9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2095",
+      "sourceHash": "ad449bfeca60aace6651efb27f988b0368bc92a832a908e1e8a877d373b2c33e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-280",
+      "sourceHash": "400c10b9054fb4e7add562c897e812a528b92b079a7214688f2fb1725d9131c3",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-261",
+      "sourceHash": "e980ee1f1c9ed7559b9f9092e9bf0e71d18a58759aa7ef5a0422cbf9908629e9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-291",
+      "sourceHash": "8253122c24d6fcd8f0605b3d61eb272951877f0cadd731978355996aae58d0d3",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-281",
+      "sourceHash": "29225bb3c4023c1f338519eecb8e35fe3c8d78150123026b610ab8edef3c9783",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-340",
+      "sourceHash": "8871608f3412f18129e746a34051d9f01c14385b5e61220860cb613bafca0d5f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2119",
+      "sourceHash": "08029a034d256643ee3fb41094b12bba587fb3b8ab8d3d8f92a3c5de5dc8cc58",
+      "role": "cafe",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-290",
+      "sourceHash": "eaf49f5baea954267377ab477c017bda5d8061fdc9427581c0201f43f3e988df",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2220",
+      "sourceHash": "8a61e105150622b61f9ab7100064df904bf27328b31140ade5a0808f5bd85b1d",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1581",
+      "sourceHash": "b1481af1e634ba806990efe2b1a89a5d0f270d8e74f918c0bf7205bbb1d37693",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2172",
+      "sourceHash": "07bda7efafce708226145da4589d5797dfa0e87d4430ee3f58f5436b2a25aef1",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-262",
+      "sourceHash": "5ad1afac81df16fd7d15ccfdc2616ef8d22e1583bc0ebf0caf6ec5c1a02dcfb7",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1709",
+      "sourceHash": "1ccf981c2efa7b152f69b586553d092bfa19eff3e3b2f9ba27a64cd70e0db554",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "174",
+      "sourceHash": "055ef24099eee60be85b9fe1446fda89d841dab8600ee3b06170e4ccb4dea809",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-259",
+      "sourceHash": "9b05a13f4ad90ccbcb7ef15734ff18b6fe49f188065f5e5cd92fe8eba8dada3e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-265",
+      "sourceHash": "7917530f9ad7785494690842966ab677fdf00c60b44a2e1a8fa6669805f61cbe",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "일광해수욕장",
+        "en": "Ilgwang Beach",
+        "ja": "日光海水浴場",
+        "zh-CN": "日光海水浴场",
+        "zh-TW": "日光海水浴場"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-757",
+      "sourceHash": "78f95acca93d10e8b34d5482a381c22d37703364e29fd5530a534b93f6446e2f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-425",
+      "sourceHash": "032f8202444365ebbca1a1168ca065eb5147ead03737f30829ca0eed7cf7634e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-450",
+      "sourceHash": "9e81026a197295d1904c7d24efe9be720f7a8870e7becde03d0e5cf8ccbe7c00",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-409",
+      "sourceHash": "9b2b86111eda70e45cc136536efaaff8d497bf057aab6a65b8bbfb0f8039ebb5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-419",
+      "sourceHash": "67be870c5df28d7ec5e7a2faaf92c36b9be58c77f0d5fbb50230cb756b17c963",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-501",
+      "sourceHash": "bd83e133a9b4dfa1eaf8ea497911be49c1728ec23b4a3f6b28842e091f70237c",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2566",
+      "sourceHash": "8f8e267d69853f1d9cc35598a7ba7072f65e7d98c90ae623fb2c8fefeac4e3c5",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-296",
+      "sourceHash": "a75f837be12a0c0131187192d02e10f13e26acd54affccee1f9523238857d519",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-297",
+      "sourceHash": "4f421b7229ce5f45b8837979e3a404227afd9b3905386072485c2aaec4cd6000",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-397",
+      "sourceHash": "60560217488c2f5b06e00216ec596d57b6d17045459978c27e7639e80fd1ea89",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "127",
+      "sourceHash": "496ca5ff3592f1edd79b7441a6866ffd085ffcd0032f52ff4266c819a4791c31",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-270",
+      "sourceHash": "870ffc6d36ea477216a5e1e3966ab73c186cd4b8fb5974bdf9528056a2439b4e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2204",
+      "sourceHash": "79b4163b3e0988b56500c348a3d91c8b3da0c186b94e6323181dc93d5bd1b23f",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1803",
+      "sourceHash": "b75b07d489db734697cb87971dea6e09aa1927759dc09b61e326edb067570af6",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "2354",
+      "sourceHash": "6d725baca0cdc67b21f70985268f6eb4a9b68c9d26c629d640114c903a59f826",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-527",
+      "sourceHash": "8d51715db8c6bd76e419186b3c1fb3c0fb2a26aa3c47c45a41cb35c579e0939d",
+      "role": "attraction",
+      "defaultMinutes": 180
+    },
+    {
+      "kind": "food",
+      "id": "1462",
+      "sourceHash": "5b41ca105d8afe38c38bd62b901f0e9b8698e8ed8a5b13b548298b0969d64204",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-344",
+      "sourceHash": "2d00998a121eb717a42f0f0d57fd914d64cc4fb05b28873be5e5ee71f04142eb",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-430",
+      "sourceHash": "4e68626a23bc964acda44d756f761e34980cae4ead0dfdfd7a54cb5cea808f4a",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2240",
+      "sourceHash": "8ecb9c1044ce1b820f878c5d9bbf108102fe2f3d12ff22e859236cde3228d062",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-347",
+      "sourceHash": "1e01b23374aa7ab9fa10b0a3fe72cb37ed464f0dd8cc5840d76c1da8bbbce83d",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1772",
+      "sourceHash": "9d3020b0433876b9ef1887a7bdc2c1450be89396868359cc1c812473474b27ea",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "2371",
+      "sourceHash": "d85c537c032a3faae0ea63d49d4a99b91011a5cce4f2e2b5aa8af68e5f758e4f",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1031",
+      "sourceHash": "e3dc69578751b374787ac232b4dfe3027414abba9c90bc5bdc7e57c2e66d0446",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-511",
+      "sourceHash": "bcbad4143b0e54247d7c02f9b03d5574cb8e4090edcb18e5c718643e16bcfbfe",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-325",
+      "sourceHash": "57adb948822179ff5e7d514f2b3cdf811aecf9ac1ad390ec8f39b6314b212d2e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1434",
+      "sourceHash": "5128531c71e53dda985a8311ee176ebbd609eed559dd3f93ea5663cf5cd580eb",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-315",
+      "sourceHash": "51e9f53e3282faea3283cebb8279743f89c4ca09878761ded0d934bc81e48c6e",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1890",
+      "sourceHash": "175967fa73cadeb3c92ae650eff3bb2b716774e8d9e699535d4fb698d1b4fcef",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2587",
+      "sourceHash": "8b30cb1026d762f076a8b208993a0086b04e7ef66750ba9d5d9729fb340690c0",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1014",
+      "sourceHash": "ae392ba1b1a377380fcf35673b6264b2e340e5b972826b1a9b7ef4be0cf7c6f4",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1676",
+      "sourceHash": "e35033175fd038de0d67b69b007c39b99f3e92225e2ba58fe944b9656a90eee0",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2085",
+      "sourceHash": "53de1eb15236d1c55063e8690c9777b53e05cc061b274cf85de654c41625b76c",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1310",
+      "sourceHash": "4b40d109d78e655fd38e100bab66e6a545077fc17b183e4bb1fb9bd71ab792b9",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-1671",
+      "sourceHash": "5ce9662dbd732ec59badd17a3870791c2a5c93e56e68e63ea7912f3a86c38087",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "destination",
+      "id": "busan-304",
+      "sourceHash": "df36e9df4bfa648457cd8c3e8ca85236f23a64940f76f94dcc36e96b84e92476",
+      "role": "attraction",
+      "defaultMinutes": 60,
+      "labels": {
+        "ko": "을숙도",
+        "en": "Eulsukdo",
+        "ja": "乙淑島",
+        "zh-CN": "乙淑岛",
+        "zh-TW": "乙淑島"
+      }
+    },
+    {
+      "kind": "destination",
+      "id": "busan-2189",
+      "sourceHash": "3320dcb7da5b4a23221a3fa6e5cbb19fe84ad2041e88f19fee5421acb612198a",
+      "role": "attraction",
+      "defaultMinutes": 60
+    },
+    {
+      "kind": "food",
+      "id": "1459",
+      "sourceHash": "39b4c6714106d67f96ad4ee94c4f75e48eabb1739ae1fab4bacc33191902f3cc",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1816",
+      "sourceHash": "9583e9e4765122ef11963941644e261498e9f47e8221febdc90f079a6ad08466",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1460",
+      "sourceHash": "3863afd0a9e9871b1c5c26a8a5ca031a17991c5238fddb5190a2282fbefe69b7",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1845",
+      "sourceHash": "0cbce2bd259aac17152e64239956ed3722512ad0d1c6c72e6f0d44375b5bf540",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "920",
+      "sourceHash": "1088dc82b6653d52755ac1e8280917391df5652bc37237d343021b44189b7472",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1447",
+      "sourceHash": "d60adb9d793f67efc0cf4f73ff815b90391a338cd38a36bf266123ef3eb5fa46",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1627",
+      "sourceHash": "ee39a5262bfbc32891a47a2d1d4e6de6942d6460342d34b99f86fbc46a10f481",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "926",
+      "sourceHash": "73efb1af91b112f7aefa5fce1c03ea85c6fb53fa4761f1864d2413eb57389ace",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1452",
+      "sourceHash": "54652762b4de4556782463e14de882ffbb6aced4fc2aa94a56b44d186b9e19cf",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "959",
+      "sourceHash": "fadd0482d52a9c0cc18f661d1297693d42a2092e4b69c3ee4a4f9600cfdd2b17",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "245",
+      "sourceHash": "994a3261f8499d1d5d76e46a20abede9380dafd849314e3318c4595c16fc6733",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1458",
+      "sourceHash": "b0258bc9f3254c390b388c95ffe7ff2b7b137af02ecf261131d0a53208f51320",
+      "role": "cafe",
+      "defaultMinutes": 45
+    },
+    {
+      "kind": "food",
+      "id": "1448",
+      "sourceHash": "7b031a3f1996fbadeea629db59569df73c70b6fdffb405abfa09daeedd469b6f",
+      "role": "cafe",
+      "defaultMinutes": 45
+    }
+  ],
+  "items": [
+    {
+      "id": "edit-001",
+      "band": "short",
+      "theme": "culture",
+      "area": "남포",
+      "titles": {
+        "ko": "계단에서 영화까지",
+        "en": "Steps, Stories & Cinema",
+        "ja": "40階段 × 釜山映画体験博物 feat. Cine Museum",
+        "zh-CN": "40阶梯 × 釜山电影体验博物 feat. Cine Museum",
+        "zh-TW": "40階梯 × 釜山電影體驗博物館 feat. Cine Museum"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-364"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-267"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-367"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-002",
+      "band": "short",
+      "theme": "culture",
+      "area": "남포",
+      "titles": {
+        "ko": "근현대사와 책방의 오후",
+        "en": "Modern History & Book Alley",
+        "ja": "釜山近现代史一览！！南浦洞亲子景点 × 釜山旧都心で出会うミニシアター、BNK釜山銀行アートシネマ・モトゥンイ劇場",
+        "zh-CN": "釜山近现代史一览！！南浦洞亲子景点 × 在釜山老城区邂逅的独立电影院——BNK釜山银行艺术剧院拐角剧场",
+        "zh-TW": "釜山近現代史一目瞭然！適合帶著孩子前往的南浦洞景點 × 在釜山舊城區遇見獨立電影院「BNK釜山銀行藝術電影院轉角劇場」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1881"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-272"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2284"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-003",
+      "band": "short",
+      "theme": "shopping",
+      "area": "남포",
+      "titles": {
+        "ko": "타워 전망과 지하상가",
+        "en": "Tower Views & Underground Finds",
+        "ja": "龍頭山公園 × 南浦、光復地下商店街",
+        "zh-CN": "龙头山公园 × 南浦、光复地下商街",
+        "zh-TW": "龍頭山公園 × 南浦、光復地下商街"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-368"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-550"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2491"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-004",
+      "band": "short",
+      "theme": "cafe",
+      "area": "남포",
+      "titles": {
+        "ko": "책방과 드립커피, 석당 컬렉션",
+        "en": "Books, Pour-over & Seokdang",
+        "ja": "宝水洞本屋通り × 東亜大学石堂博物館",
+        "zh-CN": "宝水洞书店街 × 东亚大学石堂博物馆",
+        "zh-TW": "寶水洞書店街 × 東亞大學石堂博物館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-272"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1838"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-274"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-005",
+      "band": "short",
+      "theme": "shopping",
+      "area": "남포",
+      "titles": {
+        "ko": "해안시장과 부산 빵 산책",
+        "en": "Harbour Market & Busan Bakes",
+        "ja": "海の匂いと人のぬくもりが交わる場所 ― 忠武洞海岸市場 × 南浦、光復地下商店街",
+        "zh-CN": "大海气息与人文气息交汇的地方，忠武洞海岸市场 × 南浦、光复地下商街",
+        "zh-TW": "融合海之氣味與人聲鼎沸──忠武洞海岸市場 × 南浦、光復地下商街"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2588"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1613"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2491"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-006",
+      "band": "short",
+      "theme": "culture",
+      "area": "남포",
+      "titles": {
+        "ko": "작은 전시와 구도심 커피",
+        "en": "Small Galleries & Old-town Coffee",
+        "ja": "漢城1918 × バウノバ",
+        "zh-CN": "汉城1918 × BAUNOVA",
+        "zh-TW": "漢城1918 × BAUNOVA"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-268"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2210"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1467"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-007",
+      "band": "short",
+      "theme": "culture",
+      "area": "서구",
+      "titles": {
+        "ko": "피란수도와 사진의 기억",
+        "en": "Wartime Capital & Photo Stories",
+        "ja": "臨時首都記念館 × 崔敏植ギャラリー",
+        "zh-CN": "临时首都纪念馆 × 崔敏植画廊",
+        "zh-TW": "臨時首都紀念館 × 崔敏植畫廊"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-273"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-274"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-299"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "서구",
+        "en": "Seo-gu",
+        "ja": "西区",
+        "zh-CN": "西区",
+        "zh-TW": "西區"
+      }
+    },
+    {
+      "id": "edit-008",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "감천",
+      "titles": {
+        "ko": "감천 골목과 어린왕자의 집",
+        "en": "Gamcheon Alleys & Little Prince",
+        "ja": "甘川文化村 × 甘川文化村に建てられた星の王子さまの家「リトルプリンスハウス」",
+        "zh-CN": "甘川文化村 × 建在甘川文化村的小王子的家——小王子之家",
+        "zh-TW": "甘川文化村 × 坐落於甘川文化村的「小王子之家」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "gamcheon"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-288"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2678"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "감천",
+        "en": "Gamcheon",
+        "ja": "甘川",
+        "zh-CN": "甘川",
+        "zh-TW": "甘川"
+      }
+    },
+    {
+      "id": "edit-009",
+      "band": "short",
+      "theme": "coast",
+      "area": "감천",
+      "titles": {
+        "ko": "색채마을에서 바다 전망으로",
+        "en": "Colourful Hills to Harbour Views",
+        "ja": "甘川文化村 × ヌリバラギ展望台",
+        "zh-CN": "甘川文化村 × 看世界观景台",
+        "zh-TW": "甘川文化村 × 看世界觀景台"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "gamcheon"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-299"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-298"
+          },
+          "minutes": 30
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "감천",
+        "en": "Gamcheon",
+        "ja": "甘川",
+        "zh-CN": "甘川",
+        "zh-TW": "甘川"
+      }
+    },
+    {
+      "id": "edit-010",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "대청",
+      "titles": {
+        "ko": "날씨를 읽고 도시를 내려다보기",
+        "en": "Weather Stories & City Lookouts",
+        "ja": "釜山気象観測所 × 望洋路沿いに広がるカラフルで活気のある「色彩村」",
+        "zh-CN": "釜山气象观测站 × 为望阳路注入五颜六色的活力，“色彩村”",
+        "zh-TW": "釜山氣象觀測站 × 讓望洋路充滿五彩繽紛的活力，「色彩村」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-302"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2105"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2106"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "대청",
+        "en": "Daecheong",
+        "ja": "大庁",
+        "zh-CN": "大厅洞",
+        "zh-TW": "大廳洞"
+      }
+    },
+    {
+      "id": "edit-011",
+      "band": "short",
+      "theme": "shopping",
+      "area": "영도",
+      "titles": {
+        "ko": "흰여울 책방과 산사의 여백",
+        "en": "Huinnyeoul Books & Temple Pause",
+        "ja": "ヒニョウル文化村 × 福泉寺",
+        "zh-CN": "白川文化村 × 福泉寺",
+        "zh-TW": "白淺灘文化村 × 福泉寺"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-255"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2140"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1776"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-012",
+      "band": "short",
+      "theme": "culture",
+      "area": "영도",
+      "titles": {
+        "ko": "조선소 예술과 영도다리 너머",
+        "en": "Shipyard Art & Across Yeongdo Bridge",
+        "ja": "カンカンイ芸術村 × 福泉寺",
+        "zh-CN": "奚琴艺术村 × 福泉寺",
+        "zh-TW": "奚琴藝術村 × 福泉寺"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-256"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-369"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1776"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-013",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "영도",
+      "titles": {
+        "ko": "봉산마을과 언덕 위 전망",
+        "en": "Bongsan Village & Hillside Views",
+        "ja": "素朴で純粋な人々が住む影島鳳山村 × 福泉寺",
+        "zh-CN": "不沾染一片尘垢的影岛凤山村 × 福泉寺",
+        "zh-TW": "一塵不染而純粹的影島鳳山村 × 福泉寺"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1179"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2218"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1776"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-014",
+      "band": "short",
+      "theme": "cafe",
+      "area": "영도",
+      "titles": {
+        "ko": "바다의 역사와 피아크 커피",
+        "en": "Maritime Stories & P.ARK Coffee",
+        "ja": "国立海洋博物館 × ピアク カペ エン ベーカリー",
+        "zh-CN": "国立海洋博物馆 × P-ark咖啡&烘焙",
+        "zh-TW": "國立海洋博物館 × P-ark咖啡&烘焙"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-257"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2153"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1445"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-015",
+      "band": "short",
+      "theme": "nature",
+      "area": "태종대",
+      "titles": {
+        "ko": "숲 산책 뒤 자동차극장",
+        "en": "Taejongdae Woods & Drive-in Cinema",
+        "ja": "太宗台遊園地 × 自然に囲まれた屋外映画館、太宗台ドライブインシアター",
+        "zh-CN": "太宗台 × 大自然中的露天影院——太宗台汽车影院",
+        "zh-TW": "太宗台 × 森林裡的期間限定－太宗臺露天汽車電影院"
+      },
+      "mode": "driving",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-258"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1440"
+          },
+          "minutes": 90
+        }
+      ],
+      "conditions": [
+        "event-schedule"
+      ],
+      "areas": {
+        "ko": "태종대",
+        "en": "Taejongdae",
+        "ja": "太宗台",
+        "zh-CN": "太宗台",
+        "zh-TW": "太宗臺"
+      }
+    },
+    {
+      "id": "edit-016",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "영도",
+      "titles": {
+        "ko": "항구 예술에서 흰여울까지",
+        "en": "Harbour Art to Huinnyeoul",
+        "ja": "カンカンイ芸術村 × ヒニョウル文化村",
+        "zh-CN": "奚琴艺术村 × 白川文化村",
+        "zh-TW": "奚琴藝術村 × 白淺灘文化村"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-256"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-255"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-017",
+      "band": "short",
+      "theme": "coast",
+      "area": "영도",
+      "titles": {
+        "ko": "영도다리와 해돋이 전망대",
+        "en": "Yeongdo Bridge & Sunrise Lookout",
+        "ja": "影島大橋 × 影島ヘドジ展望台",
+        "zh-CN": "影岛大桥 × 影岛日出观景台",
+        "zh-TW": "影島大橋 × 影島日出觀景臺"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-369"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2218"
+          },
+          "minutes": 35
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-018",
+      "band": "short",
+      "theme": "cafe",
+      "area": "영도",
+      "titles": {
+        "ko": "커피 한 잔과 봉래산 풍경",
+        "en": "Coffee & Bongnaesan Landscapes",
+        "ja": "ピアク カペ エン ベーカリー × 蓬莱山",
+        "zh-CN": "P-ark咖啡&烘焙 × 蓬萊山全景",
+        "zh-TW": "P-ark咖啡&烘焙 × 蓬萊山的景觀可謂絕美 ~！"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1445"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-359"
+          },
+          "minutes": 90
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-019",
+      "band": "short",
+      "theme": "coast",
+      "area": "송도",
+      "titles": {
+        "ko": "해변에서 케이블카와 구름다리",
+        "en": "Songdo Beach, Cable Car & Sky Bridge",
+        "ja": "松島海水浴場 × 松島龍宮雲橋",
+        "zh-CN": "松岛海水浴场 × 松岛龙宫云桥",
+        "zh-TW": "松島海水浴場 × 松島龍宮雲橋"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-286"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1422"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-833"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [
+        "ticket-weather"
+      ],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-020",
+      "band": "short",
+      "theme": "nature",
+      "area": "송도",
+      "titles": {
+        "ko": "구름다리와 암남 숲길",
+        "en": "Sky Bridge & Amnam Woods",
+        "ja": "松島龍宮雲橋 × 岩南半島・松島海岸ボルレ道",
+        "zh-CN": "松岛龙宫云桥 × 岩南公园",
+        "zh-TW": "松島龍宮雲橋 × 岩南半島南邊末端、與岩南公園相遇"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-833"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-326"
+          },
+          "minutes": 90
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-021",
+      "band": "short",
+      "theme": "coast",
+      "area": "송도",
+      "titles": {
+        "ko": "송도에서 누리바라기 전망까지",
+        "en": "Songdo to Nuribaragi Lookout",
+        "ja": "松島海水浴場 × ヌリバラギ展望台",
+        "zh-CN": "松岛海水浴场 × 看世界观景台",
+        "zh-TW": "松島海水浴場 × 看世界觀景台"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-286"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-298"
+          },
+          "minutes": 30
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-022",
+      "band": "short",
+      "theme": "nature",
+      "area": "송도",
+      "titles": {
+        "ko": "암남 숲과 바다 위 풍경",
+        "en": "Amnam Woods & Sea Views",
+        "ja": "岩南半島・松島海岸ボルレ道 × 最高に爽やかな海の絶景が望める松島海上ロープウェイ！",
+        "zh-CN": "岩南公园 × 清凉指数爆棚的海景松岛海上缆车！",
+        "zh-TW": "岩南半島南邊末端、與岩南公園相遇 × 透心涼無敵海景，松島海上纜車！"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-326"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-833"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1422"
+          },
+          "minutes": 50
+        }
+      ],
+      "conditions": [
+        "ticket-weather"
+      ],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-023",
+      "band": "short",
+      "theme": "shopping",
+      "area": "송도",
+      "titles": {
+        "ko": "송도 바다와 충무동 시장",
+        "en": "Songdo Sea & Chungmu Market",
+        "ja": "松島海水浴場 × 南浦、光復地下商店街",
+        "zh-CN": "松岛海水浴场 × 南浦、光复地下商街",
+        "zh-TW": "松島海水浴場 × 南浦、光復地下商街"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-286"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2588"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2491"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-024",
+      "band": "short",
+      "theme": "coast",
+      "area": "송도",
+      "titles": {
+        "ko": "바다 위 캐빈과 항구 전망",
+        "en": "Sea Cabins & Harbour Lookouts",
+        "ja": "最高に爽やかな海の絶景が望める松島海上ロープウェイ！ × ヌリバラギ展望台",
+        "zh-CN": "清凉指数爆棚的海景松岛海上缆车！ × 看世界观景台",
+        "zh-TW": "透心涼無敵海景，松島海上纜車！ × 看世界觀景台"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1422"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-298"
+          },
+          "minutes": 35
+        }
+      ],
+      "conditions": [
+        "ticket-weather"
+      ],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-025",
+      "band": "short",
+      "theme": "culture",
+      "area": "다대포",
+      "titles": {
+        "ko": "홍티의 예술과 노을 풍경",
+        "en": "Hongti Art & Estuary Views",
+        "ja": "地元のアートシーンを発展させる場所「ホンティアートセンター」 × 静かな海辺で癒しの散歩を、「多大浦パダヌリギル」",
+        "zh-CN": "引领当地艺术发展的空间——虹峙艺术中心 × 在安静的海边享受治愈散步——多大浦海洋世界路",
+        "zh-TW": "帶領當地藝術發展的空間「虹峙藝術中心」 × 在寧靜海灘療癒散步「多大浦世界路」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2173"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-287"
+          },
+          "minutes": 35
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2157"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "다대포",
+        "en": "Dadaepo",
+        "ja": "多大浦",
+        "zh-CN": "多大浦",
+        "zh-TW": "多大浦"
+      }
+    },
+    {
+      "id": "edit-026",
+      "band": "short",
+      "theme": "coast",
+      "area": "다대포",
+      "titles": {
+        "ko": "다대포 모래와 바다누리길",
+        "en": "Dadaepo Sand & Coastal Trail",
+        "ja": "多大浦海水浴場 × 静かな海辺で癒しの散歩を、「多大浦パダヌリギル」",
+        "zh-CN": "多大浦海水浴场 × 在安静的海边享受治愈散步——多大浦海洋世界路",
+        "zh-TW": "多大浦海水浴場 × 在寧靜海灘療癒散步「多大浦世界路」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-366"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2157"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "다대포",
+        "en": "Dadaepo",
+        "ja": "多大浦",
+        "zh-CN": "多大浦",
+        "zh-TW": "多大浦"
+      }
+    },
+    {
+      "id": "edit-027",
+      "band": "short",
+      "theme": "culture",
+      "area": "다대포",
+      "titles": {
+        "ko": "작은 예술 공간과 해변공원",
+        "en": "An Art Stop & Beach Park",
+        "ja": "地元のアートシーンを発展させる場所「ホンティアートセンター」 × 多大浦海辺公園",
+        "zh-CN": "引领当地艺术发展的空间——虹峙艺术中心 × 多大浦海边公园",
+        "zh-TW": "帶領當地藝術發展的空間「虹峙藝術中心」 × 多大浦海濱公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2173"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1718"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "다대포",
+        "en": "Dadaepo",
+        "ja": "多大浦",
+        "zh-CN": "多大浦",
+        "zh-TW": "多大浦"
+      }
+    },
+    {
+      "id": "edit-028",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "장림",
+      "titles": {
+        "ko": "색채 항구에서 홍티 예술로",
+        "en": "Colourful Jangnim to Hongti Art",
+        "ja": "長林浦口 × 地元のアートシーンを発展させる場所「ホンティアートセンター」",
+        "zh-CN": "长林浦口 × 引领当地艺术发展的空间——虹峙艺术中心",
+        "zh-TW": "長林浦口 × 帶領當地藝術發展的空間「虹峙藝術中心」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-333"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2173"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "장림",
+        "en": "Jangnim",
+        "ja": "長林",
+        "zh-CN": "长林",
+        "zh-TW": "長林"
+      }
+    },
+    {
+      "id": "edit-029",
+      "band": "short",
+      "theme": "culture",
+      "area": "초량",
+      "titles": {
+        "ko": "상해거리에서 오래된 병원까지",
+        "en": "Chinatown & Old Baekje Hospital",
+        "ja": "上海通り × 思い出を撮るイバグキル写真館",
+        "zh-CN": "上海街 × 拍下回忆的故事路照相馆",
+        "zh-TW": "上海街 × 拍下回憶的故事路照相館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-415"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-266"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2079"
+          },
+          "minutes": 35
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "초량",
+        "en": "Choryang",
+        "ja": "草梁",
+        "zh-CN": "草梁",
+        "zh-TW": "草梁"
+      }
+    },
+    {
+      "id": "edit-030",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "초량",
+      "titles": {
+        "ko": "산복도로의 사진과 이야기",
+        "en": "Hillside Photos & Ibagu Stories",
+        "ja": "物語をたどって歩く道、草梁イバグキル × 山腹道路の歴史を伝える「望洋路山腹道路展示館」",
+        "zh-CN": "追随故事漫步的道路，草梁故事路 × 记录着山腹道路历史的“望洋路山腹道路展览馆”",
+        "zh-TW": "伴隨故事前行的道路，草梁故事街 × 完整呈現山腹道路歷史的「望洋路山腹道路展覽館」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2594"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2202"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2102"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "초량",
+        "en": "Choryang",
+        "ja": "草梁",
+        "zh-CN": "草梁",
+        "zh-TW": "草梁"
+      }
+    },
+    {
+      "id": "edit-031",
+      "band": "short",
+      "theme": "cafe",
+      "area": "수정",
+      "titles": {
+        "ko": "오래된 집과 커피의 역사",
+        "en": "Historic Houses & Coffee History",
+        "ja": "100年の歴史を持つ家 × 国際珈琲博物館",
+        "zh-CN": "坐怀100年历史的房屋 × 国际咖啡博物馆",
+        "zh-TW": "承載百年歷史的老屋 × 釜山國際咖啡博物館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1866"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-264"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1696"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수정",
+        "en": "Sujeong",
+        "ja": "水晶",
+        "zh-CN": "水晶",
+        "zh-TW": "水晶"
+      }
+    },
+    {
+      "id": "edit-032",
+      "band": "short",
+      "theme": "culture",
+      "area": "수정",
+      "titles": {
+        "ko": "갤러리와 스카이웨이 전망",
+        "en": "A Gallery & Skyway Views",
+        "ja": "釜山の隠れたアートを見つけ出す「ギャラリー水晶」 × 生活の痕跡がアートに変わる場所、瀛州マンション",
+        "zh-CN": "寻找釜山隐秘的艺术空间——水晶画廊 × 生活痕迹蜕变成艺术的空间——Youngju Mansion",
+        "zh-TW": "尋找釜山的隱藏藝術「水晶藝廊」 × 生活痕跡化為藝術的空間「瀛州公寓」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2200"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1868"
+          },
+          "minutes": 35
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2288"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수정",
+        "en": "Sujeong",
+        "ja": "水晶",
+        "zh-CN": "水晶",
+        "zh-TW": "水晶"
+      }
+    },
+    {
+      "id": "edit-033",
+      "band": "short",
+      "theme": "coast",
+      "area": "북항",
+      "titles": {
+        "ko": "여행라운지에서 제1부두까지",
+        "en": "Travel Lounge & Historic Pier One",
+        "ja": "釜山トラベルラウンジで行われる本物の釜山体験プログラム × 釜山の話題の夜景スポット、北港親水公園",
+        "zh-CN": "釜山旅游中心（Travel Lounge）力荐的至尊釜山体验节目 × 冉冉升起的釜山夜景景点，北港亲水公园",
+        "zh-TW": "釜山旅遊中心推出的道地釜山體驗活動 × 釜山新興夜景勝地，北港親水公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1900"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2187"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2081"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "북항",
+        "en": "North Port",
+        "ja": "北港",
+        "zh-CN": "北港",
+        "zh-TW": "北港"
+      }
+    },
+    {
+      "id": "edit-034",
+      "band": "short",
+      "theme": "culture",
+      "area": "북항",
+      "titles": {
+        "ko": "책과 모형으로 읽는 북항",
+        "en": "North Port Through Books & Models",
+        "ja": "人と本が出会い、輝き、道標になる場所、「北斗七星図書館」 × 釜山の話題の夜景スポット、北港親水公園",
+        "zh-CN": "书与人相遇，成为光芒和道路的空间——北斗七星图书馆 × 冉冉升起的釜山夜景景点，北港亲水公园",
+        "zh-TW": "書在與人相遇後，成為光芒、指引方向的空間「北斗七星圖書館」 × 釜山新興夜景勝地，北港親水公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2086"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2082"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2081"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "북항",
+        "en": "North Port",
+        "ja": "北港",
+        "zh-CN": "北港",
+        "zh-TW": "北港"
+      }
+    },
+    {
+      "id": "edit-035",
+      "band": "short",
+      "theme": "cafe",
+      "area": "전포",
+      "titles": {
+        "ko": "공구길과 커피박물관, 로스터리",
+        "en": "Jeonpo Tools, Coffee Museum & Roastery",
+        "ja": "ヒップさいっぱいの田浦工具通り × ベルクロスターズ",
+        "zh-CN": "潮感十足的田浦工具街 × WERK ROASTERS",
+        "zh-TW": "新潮奔放的田浦工具街 × 貝克羅斯特斯"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1329"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-508"
+          },
+          "minutes": 50
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1819"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "전포",
+        "en": "Jeonpo",
+        "ja": "田浦",
+        "zh-CN": "田浦",
+        "zh-TW": "田浦"
+      }
+    },
+    {
+      "id": "edit-036",
+      "band": "short",
+      "theme": "culture",
+      "area": "서면",
+      "titles": {
+        "ko": "미술과 상상, 수학의 하루 조각",
+        "en": "Art, Imagination & Playful Maths",
+        "ja": "西面美術館 × 誰一人として、数学を諦めさせない！体験型の数学で遊ぼう「釜山数学文化館」",
+        "zh-CN": "西面美术馆 × 我们都可以摆脱“放弃学习数学的人”身份！体验型数学游戏空间“釜山数学文化馆”",
+        "zh-TW": "西面美術館 × 不用再放棄數學了！體驗型數學遊戲空間「釜山數學文化館」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1653"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1185"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2077"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "서면",
+        "en": "Seomyeon",
+        "ja": "西面",
+        "zh-CN": "西面",
+        "zh-TW": "西面"
+      }
+    },
+    {
+      "id": "edit-037",
+      "band": "short",
+      "theme": "nature",
+      "area": "시민공원",
+      "titles": {
+        "ko": "광장과 공원의 도시 산책",
+        "en": "City Plaza & Park Stories",
+        "ja": "宋象賢広場 × キャンプ・ハイアリアのすべて、釜山市民公園歴史文化館",
+        "zh-CN": "宋象贤广场 × 关于海厄利亚营的一切——釜山市民公园历史文化馆",
+        "zh-TW": "宋象賢廣場 × Hialeah部隊的一切，釜山市民公園歷史文化館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-343"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-354"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2155"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "시민공원",
+        "en": "Citizens Park",
+        "ja": "市民公園",
+        "zh-CN": "市民公园",
+        "zh-TW": "市民公園"
+      }
+    },
+    {
+      "id": "edit-038",
+      "band": "short",
+      "theme": "culture",
+      "area": "부산진",
+      "titles": {
+        "ko": "국악 체험과 열린 광장",
+        "en": "Korean Music & an Open Plaza",
+        "ja": "韓国の伝統音楽を求めて、国立釜山国楽院・国楽体験館 × 宋象賢広場",
+        "zh-CN": "寻找我们的声音，国立釜山国乐院国乐体验馆 × 宋象贤广场",
+        "zh-TW": "尋找韓國傳統聲音，國立釜山國樂院國樂體驗館 × 宋象賢廣場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2067"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-343"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "부산진",
+        "en": "Busanjin",
+        "ja": "釜山鎮",
+        "zh-CN": "釜山镇",
+        "zh-TW": "釜山鎮"
+      }
+    },
+    {
+      "id": "edit-039",
+      "band": "short",
+      "theme": "cafe",
+      "area": "전포",
+      "titles": {
+        "ko": "전포 로스터리 세 가지 취향",
+        "en": "Three Jeonpo Coffee Personalities",
+        "ja": "ベルクロスターズ × ブラック・アップ・コーヒー",
+        "zh-CN": "WERK ROASTERS × 黑咖啡",
+        "zh-TW": "貝克羅斯特斯 × 黑咖啡"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1819"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "2386"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1636"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "전포",
+        "en": "Jeonpo",
+        "ja": "田浦",
+        "zh-CN": "田浦",
+        "zh-TW": "田浦"
+      }
+    },
+    {
+      "id": "edit-040",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "범천",
+      "titles": {
+        "ko": "신발 이야기와 이중섭의 골목",
+        "en": "Shoe Stories & Lee Jung-seop Alleys",
+        "ja": "釜山の靴の話 × 虎川村",
+        "zh-CN": "釜山鞋物语 × 虎川村",
+        "zh-TW": "釜山鞋物語 × 虎川村"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-813"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-418"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-358"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "범천",
+        "en": "Beomcheon",
+        "ja": "凡川",
+        "zh-CN": "凡川",
+        "zh-TW": "凡川"
+      }
+    },
+    {
+      "id": "edit-041",
+      "band": "short",
+      "theme": "shopping",
+      "area": "망미",
+      "titles": {
+        "ko": "F1963의 책과 자동차 디자인",
+        "en": "F1963 Books & Automotive Design",
+        "ja": "F1963 × 複合文化スペース、ヒョンデモータースタジオ釜山",
+        "zh-CN": "F1963 × 复合文化空间现代汽车文化中心釜山",
+        "zh-TW": "F1963 × 複合文化空間「現代汽車文化中心釜山」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-372"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1322"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "망미",
+        "en": "Mangmi",
+        "ja": "望美",
+        "zh-CN": "望美",
+        "zh-TW": "望美"
+      }
+    },
+    {
+      "id": "edit-042",
+      "band": "short",
+      "theme": "shopping",
+      "area": "수영",
+      "titles": {
+        "ko": "옛 성터와 동네 시장",
+        "en": "Old Fortress & Neighbourhood Market",
+        "ja": "水営史跡公園 × 「感性」を売ります！広安総合市場",
+        "zh-CN": "水营史迹公园 × “感性”圣地! 广安综合市场",
+        "zh-TW": "水營史蹟公園 × 來去買「感性」！廣安綜合市場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-301"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1305"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수영",
+        "en": "Suyeong",
+        "ja": "水営",
+        "zh-CN": "水营",
+        "zh-TW": "水營"
+      }
+    },
+    {
+      "id": "edit-043",
+      "band": "short",
+      "theme": "culture",
+      "area": "센텀",
+      "titles": {
+        "ko": "미디어와 영화, 강변의 휴식",
+        "en": "Media, Cinema & Riverside Pause",
+        "ja": "釜山視聴者メディアセンター × APECナル公園",
+        "zh-CN": "釜山受众媒体中心 × APEC渡口公园",
+        "zh-TW": "釜山視聽者媒體中心 × APEC渡口公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-308"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-421"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-362"
+          },
+          "minutes": 50
+        }
+      ],
+      "conditions": [
+        "event-schedule"
+      ],
+      "areas": {
+        "ko": "센텀",
+        "en": "Centum",
+        "ja": "センタム",
+        "zh-CN": "Centum",
+        "zh-TW": "Centum"
+      }
+    },
+    {
+      "id": "edit-044",
+      "band": "short",
+      "theme": "culture",
+      "area": "센텀",
+      "titles": {
+        "ko": "벡스코와 영화의 전당 건축",
+        "en": "BEXCO & Cinema Centre Architecture",
+        "ja": "BEXCO × 映画の殿堂",
+        "zh-CN": "BEXCO（釜山会展中心） × 电影殿堂",
+        "zh-TW": "BEXCO（釜山會展中心） × 電影殿堂"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-420"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-421"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [
+        "event-schedule"
+      ],
+      "areas": {
+        "ko": "센텀",
+        "en": "Centum",
+        "ja": "センタム",
+        "zh-CN": "Centum",
+        "zh-TW": "Centum"
+      }
+    },
+    {
+      "id": "edit-045",
+      "band": "short",
+      "theme": "cafe",
+      "area": "마린시티",
+      "titles": {
+        "ko": "영화의 거리와 디저트, APEC 풍경",
+        "en": "Cinema Street, Dessert & APEC Views",
+        "ja": "映画の通り × 夜の散歩におすすめの素敵な夜景スポット、ヌリマルAPECハウス",
+        "zh-CN": "电影街 × 一边欣赏美丽的夜景一边享受夜间散步——APEC世峰楼",
+        "zh-TW": "電影街 × 在璀璨夜景之中散步，APEC世峰樓"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-361"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1628"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2121"
+          },
+          "minutes": 50
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "마린시티",
+        "en": "Marine City",
+        "ja": "マリンシティ",
+        "zh-CN": "Marine City",
+        "zh-TW": "Marine City"
+      }
+    },
+    {
+      "id": "edit-046",
+      "band": "short",
+      "theme": "coast",
+      "area": "수영",
+      "titles": {
+        "ko": "도모헌의 정원과 광안리 바다",
+        "en": "Domohun Gardens & Gwangalli Sea",
+        "ja": "釜山の未来をともに模索する場所「図謀軒」 × 広安里海水浴場",
+        "zh-CN": "共同“图谋”釜山未来的空间——图谋轩 × 广安里海水浴场",
+        "zh-TW": "帶有一同「謀求」釜山未來之意的空間「圖謀軒」 × 廣安里海水浴場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2145"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "gwangalli"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수영",
+        "en": "Suyeong",
+        "ja": "水営",
+        "zh-CN": "水营",
+        "zh-TW": "水營"
+      }
+    },
+    {
+      "id": "edit-047",
+      "band": "short",
+      "theme": "culture",
+      "area": "광안리",
+      "titles": {
+        "ko": "광안리 바다와 음악 감상",
+        "en": "Gwangalli Sea & Listening Room",
+        "ja": "広安里海水浴場 × 音楽を聴きながら一人飲みがしたい日は、広安里ゴルバン(小部屋)へ！",
+        "zh-CN": "广安里海水浴场 × 想一边聆听音乐一边享受独酒的日子——广安里Golbang",
+        "zh-TW": "廣安里海水浴場 × 想在音樂的陪伴下獨飲時的好選擇「廣安里裡屋」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "gwangalli"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2166"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [
+        "event-schedule"
+      ],
+      "areas": {
+        "ko": "광안리",
+        "en": "Gwangalli",
+        "ja": "広安里",
+        "zh-CN": "广安里",
+        "zh-TW": "廣安里"
+      }
+    },
+    {
+      "id": "edit-048",
+      "band": "short",
+      "theme": "shopping",
+      "area": "민락",
+      "titles": {
+        "ko": "수변공원과 광안종합시장",
+        "en": "Millak Waterfront & Gwangan Market",
+        "ja": "民楽水辺公園 × 「感性」を売ります！広安総合市場",
+        "zh-CN": "民乐水边公园 × “感性”圣地! 广安综合市场",
+        "zh-TW": "民樂水邊公園 × 來去買「感性」！廣安綜合市場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-285"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1305"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "민락",
+        "en": "Millak",
+        "ja": "民楽",
+        "zh-CN": "民乐",
+        "zh-TW": "民樂"
+      }
+    },
+    {
+      "id": "edit-049",
+      "band": "short",
+      "theme": "cafe",
+      "area": "수영",
+      "titles": {
+        "ko": "도모헌과 남천 베이커리",
+        "en": "Domohun & Namcheon Bakes",
+        "ja": "釜山の未来をともに模索する場所「図謀軒」 × オプス",
+        "zh-CN": "共同“图谋”釜山未来的空间——图谋轩 × 操作",
+        "zh-TW": "帶有一同「謀求」釜山未來之意的空間「圖謀軒」 × 操作"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2145"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1633"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수영",
+        "en": "Suyeong",
+        "ja": "水営",
+        "zh-CN": "水营",
+        "zh-TW": "水營"
+      }
+    },
+    {
+      "id": "edit-050",
+      "band": "short",
+      "theme": "nature",
+      "area": "수영",
+      "titles": {
+        "ko": "수영의 역사에서 강변 공원으로",
+        "en": "Suyeong History to Riverside Park",
+        "ja": "水営史跡公園 × APECナル公園",
+        "zh-CN": "水营史迹公园 × APEC渡口公园",
+        "zh-TW": "水營史蹟公園 × APEC渡口公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-301"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-362"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수영",
+        "en": "Suyeong",
+        "ja": "水営",
+        "zh-CN": "水营",
+        "zh-TW": "水營"
+      }
+    },
+    {
+      "id": "edit-051",
+      "band": "short",
+      "theme": "coast",
+      "area": "해운대",
+      "titles": {
+        "ko": "해운대에서 동백섬, 누리마루",
+        "en": "Haeundae, Dongbaek & Nurimaru",
+        "ja": "海雲台 × 夜の散歩におすすめの素敵な夜景スポット、ヌリマルAPECハウス",
+        "zh-CN": "海云台 × 一边欣赏美丽的夜景一边享受夜间散步——APEC世峰楼",
+        "zh-TW": "海雲台 × 在璀璨夜景之中散步，APEC世峰樓"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-373"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2274"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2121"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "해운대",
+        "en": "Haeundae",
+        "ja": "海雲台",
+        "zh-CN": "海云台",
+        "zh-TW": "海雲臺"
+      }
+    },
+    {
+      "id": "edit-052",
+      "band": "short",
+      "theme": "culture",
+      "area": "달맞이",
+      "titles": {
+        "ko": "달맞이 미술과 아세안 문화",
+        "en": "Dalmaji Art & ASEAN Culture",
+        "ja": "ジグザグアートセンター × 未知の世界「ASEAN」に親しみを感じたいなら？",
+        "zh-CN": "之字形艺术中心 × 想对陌生的“东盟”了解更多？",
+        "zh-TW": "之字形藝術中心 × 想親近陌生的「ASEAN」？"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2753"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1862"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "달맞이",
+        "en": "Dalmaji",
+        "ja": "タルマジ",
+        "zh-CN": "迎月路",
+        "zh-TW": "迎月路"
+      }
+    },
+    {
+      "id": "edit-053",
+      "band": "short",
+      "theme": "coast",
+      "area": "청사포",
+      "titles": {
+        "ko": "청사포 풍경과 달맞이 미술",
+        "en": "Cheongsapo Views & Dalmaji Art",
+        "ja": "青沙浦・尾浦 × ジグザグアートセンター",
+        "zh-CN": "青沙浦和尾浦 × 之字形艺术中心",
+        "zh-TW": "青沙浦和尾浦 × 之字形藝術中心"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-348"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2753"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "청사포",
+        "en": "Cheongsapo",
+        "ja": "青沙浦",
+        "zh-CN": "青沙浦",
+        "zh-TW": "青沙浦"
+      }
+    },
+    {
+      "id": "edit-054",
+      "band": "short",
+      "theme": "coast",
+      "area": "해운대",
+      "titles": {
+        "ko": "해변과 마린시티 영화 산책",
+        "en": "Beach & Marine City Cinema Walk",
+        "ja": "海雲台 × 映画の通り",
+        "zh-CN": "海云台 × 电影街",
+        "zh-TW": "海雲台 × 電影街"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-373"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-361"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "해운대",
+        "en": "Haeundae",
+        "ja": "海雲台",
+        "zh-CN": "海云台",
+        "zh-TW": "海雲臺"
+      }
+    },
+    {
+      "id": "edit-055",
+      "band": "short",
+      "theme": "culture",
+      "area": "송정",
+      "titles": {
+        "ko": "아세안 문화에서 구덕포 해안으로",
+        "en": "ASEAN Culture to Gudeokpo Coast",
+        "ja": "未知の世界「ASEAN」に親しみを感じたいなら？ × 海雲台の隠れた宝石、松亭九徳浦キル",
+        "zh-CN": "想对陌生的“东盟”了解更多？ × 海云台隐藏的宝石——松亭九德浦路",
+        "zh-TW": "想親近陌生的「ASEAN」？ × 海雲臺不為人知的寶藏景點「松亭九德浦路」"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1862"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2095"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "송정",
+        "en": "Songjeong",
+        "ja": "松亭",
+        "zh-CN": "松亭",
+        "zh-TW": "松亭"
+      }
+    },
+    {
+      "id": "edit-056",
+      "band": "short",
+      "theme": "coast",
+      "area": "송정",
+      "titles": {
+        "ko": "송정에서 청사포 해안 풍경",
+        "en": "Songjeong to Cheongsapo Coast",
+        "ja": "松亭海水浴場、竹島公園 × 青沙浦・尾浦",
+        "zh-CN": "松亭海水浴场 × 青沙浦和尾浦",
+        "zh-TW": "松亭海水浴場 × 青沙浦和尾浦"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-280"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-348"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "송정",
+        "en": "Songjeong",
+        "ja": "松亭",
+        "zh-CN": "松亭",
+        "zh-TW": "松亭"
+      }
+    },
+    {
+      "id": "edit-057",
+      "band": "short",
+      "theme": "coast",
+      "area": "구덕포",
+      "titles": {
+        "ko": "구덕포와 청사포의 두 바다",
+        "en": "Gudeokpo & Cheongsapo Sea Views",
+        "ja": "海雲台の隠れた宝石、松亭九徳浦キル × 青沙浦・尾浦",
+        "zh-CN": "海云台隐藏的宝石——松亭九德浦路 × 青沙浦和尾浦",
+        "zh-TW": "海雲臺不為人知的寶藏景點「松亭九德浦路」 × 青沙浦和尾浦"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2095"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-348"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "구덕포",
+        "en": "Gudeokpo",
+        "ja": "九徳浦",
+        "zh-CN": "九德浦",
+        "zh-TW": "九德浦"
+      }
+    },
+    {
+      "id": "edit-058",
+      "band": "short",
+      "theme": "culture",
+      "area": "송정",
+      "titles": {
+        "ko": "송정 해변과 아세안 문화",
+        "en": "Songjeong Beach & ASEAN Culture",
+        "ja": "松亭海水浴場、竹島公園 × 未知の世界「ASEAN」に親しみを感じたいなら？",
+        "zh-CN": "松亭海水浴场 × 想对陌生的“东盟”了解更多？",
+        "zh-TW": "松亭海水浴場 × 想親近陌生的「ASEAN」？"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-280"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1862"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "송정",
+        "en": "Songjeong",
+        "ja": "松亭",
+        "zh-CN": "松亭",
+        "zh-TW": "松亭"
+      }
+    },
+    {
+      "id": "edit-059",
+      "band": "short",
+      "theme": "shopping",
+      "area": "오시리아",
+      "titles": {
+        "ko": "용궁사와 수산과학, 바다 서점",
+        "en": "Temple, Marine Science & Seaside Books",
+        "ja": "海東龍宮寺 × エターナルジャーニー",
+        "zh-CN": "海东龙宫寺 × 永恒之旅书店",
+        "zh-TW": "海東龍宮寺 × 永恆之旅書店"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-261"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-291"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-281"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-060",
+      "band": "short",
+      "theme": "cafe",
+      "area": "오시리아",
+      "titles": {
+        "ko": "과학관과 음악을 듣는 카페",
+        "en": "Science & a Listening Cafe",
+        "ja": "国立釜山科学館 × 約2万枚のLP盤を保有するMUSIC COMPLEX SEOUL釜山店で、音楽の世界に浸ろう！",
+        "zh-CN": "国立釜山科学馆 × 在2万多张黑胶唱片海洋中遨游！Music Complex Seoul釜山店",
+        "zh-TW": "國立釜山科學館 × 噗通跳入2萬張黑膠唱片之中！Music Complex Seoul釜山店"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-340"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2119"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-061",
+      "band": "short",
+      "theme": "coast",
+      "area": "오시리아",
+      "titles": {
+        "ko": "오랑대 바다와 해광사",
+        "en": "Orangdae Sea & Haegwangsa",
+        "ja": "五郎台公園 × 静かな海辺のお寺「海光寺」で穏やかに迎える新年",
+        "zh-CN": "五郎台公园 × 在静谧的海边寺庙“海光寺”安静地迎接新年",
+        "zh-TW": "五郎台公園 × 在平靜大海前的寺廟「海光寺」安詳地迎接新年"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-290"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2220"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-062",
+      "band": "short",
+      "theme": "cafe",
+      "area": "오시리아",
+      "titles": {
+        "ko": "이터널저니와 라운지의 오후",
+        "en": "Eternal Journey & Lounge Afternoon",
+        "ja": "エターナルジャーニー × マッククイーンズラウンジ",
+        "zh-CN": "永恒之旅书店 × 麦昆酒廊",
+        "zh-TW": "永恆之旅書店 × 麥昆酒廊"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-281"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1581"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-063",
+      "band": "short",
+      "theme": "nature",
+      "area": "오시리아",
+      "titles": {
+        "ko": "오시리아 해안에서 오랑대까지",
+        "en": "Osiria Coast to Orangdae",
+        "ja": "美しい自然に囲まれ、伝説が伝わる「オシリア海岸散策路」 × 五郎台公園",
+        "zh-CN": "拥有美丽大自然和传说的“五侍利亚海岸散步路” × 五郎台公园",
+        "zh-TW": "優美大自然與傳說所在的「五侍利亞海岸步道」 × 五郎台公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2172"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-290"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-064",
+      "band": "short",
+      "theme": "cafe",
+      "area": "임랑",
+      "titles": {
+        "ko": "임랑과 박태준 기념관, 웨이브온",
+        "en": "Imrang, Park Tae-joon & Waveon",
+        "ja": "林浪海水浴場 × ウェーブオンコピ",
+        "zh-CN": "林浪海水浴场 × Waveon咖啡厅",
+        "zh-TW": "林浪海水浴場 × Waveon Coffee"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-262"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1709"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "174"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "임랑",
+        "en": "Imrang",
+        "ja": "林浪",
+        "zh-CN": "林浪",
+        "zh-TW": "林浪"
+      }
+    },
+    {
+      "id": "edit-065",
+      "band": "short",
+      "theme": "coast",
+      "area": "기장",
+      "titles": {
+        "ko": "죽성과 일광의 해안 풍경",
+        "en": "Jukseong & Ilgwang Coast",
+        "ja": "竹城聖堂 × 日光海水浴場",
+        "zh-CN": "竹城天主教堂 × 日光海水浴场",
+        "zh-TW": "竹城天主教堂 × 日光海水浴場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-259"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-265"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "기장",
+        "en": "Gijang",
+        "ja": "機張",
+        "zh-CN": "机张",
+        "zh-TW": "機張"
+      }
+    },
+    {
+      "id": "edit-066",
+      "band": "short",
+      "theme": "coast",
+      "area": "기장",
+      "titles": {
+        "ko": "기억을 담은 해안공원 두 곳",
+        "en": "Coastal Parks & Local Memories",
+        "ja": "朴泰俊記念館 × 新平小公園",
+        "zh-CN": "朴泰俊纪念馆 × 新平小公园",
+        "zh-TW": "朴泰俊紀念館 × 新平小公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1709"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-757"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "기장",
+        "en": "Gijang",
+        "ja": "機張",
+        "zh-CN": "机张",
+        "zh-TW": "機張"
+      }
+    },
+    {
+      "id": "edit-067",
+      "band": "short",
+      "theme": "nature",
+      "area": "장안",
+      "titles": {
+        "ko": "장안사에서 대룡 예술마을로",
+        "en": "Jangansa to Daeryong Art Village",
+        "ja": "長安寺 × 大龍村",
+        "zh-CN": "长安寺 × 大龙村",
+        "zh-TW": "長安寺 × 大龍村"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-425"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-450"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "장안",
+        "en": "Jangan",
+        "ja": "長安",
+        "zh-CN": "长安",
+        "zh-TW": "長安"
+      }
+    },
+    {
+      "id": "edit-068",
+      "band": "short",
+      "theme": "culture",
+      "area": "동래",
+      "titles": {
+        "ko": "읍성과 고분, 충렬사의 기억",
+        "en": "Dongnae Walls, Tombs & Memorial",
+        "ja": "東莱邑城 × 忠烈祠",
+        "zh-CN": "东莱邑城 × 忠烈祠",
+        "zh-TW": "東萊邑城 × 忠烈祠"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-409"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-419"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-501"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "동래",
+        "en": "Dongnae",
+        "ja": "東莱",
+        "zh-CN": "东莱",
+        "zh-TW": "東萊"
+      }
+    },
+    {
+      "id": "edit-069",
+      "band": "short",
+      "theme": "culture",
+      "area": "동래",
+      "titles": {
+        "ko": "기차역과 독립운동의 흔적",
+        "en": "Old Station & Independence Stories",
+        "ja": "1934列車東萊駅 — タイムトラベル展示館 × 忠烈祠",
+        "zh-CN": "“1934火车东莱站”时光旅行展览馆 × 忠烈祠",
+        "zh-TW": "1934火車東萊站 — 時光旅行展覽館 × 忠烈祠"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2566"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-296"
+          },
+          "minutes": 40
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-501"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "동래",
+        "en": "Dongnae",
+        "ja": "東莱",
+        "zh-CN": "东莱",
+        "zh-TW": "東萊"
+      }
+    },
+    {
+      "id": "edit-070",
+      "band": "short",
+      "theme": "cafe",
+      "area": "온천장",
+      "titles": {
+        "ko": "식물 이야기와 금강공원, 모모스",
+        "en": "Botany, Geumgang Park & Momos",
+        "ja": "禹長春記念館 × モモスコーヒー",
+        "zh-CN": "禹长春纪念馆 × MOMOS 咖啡",
+        "zh-TW": "禹長春紀念館 × MOMOS 咖啡"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-297"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-397"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "127"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "온천장",
+        "en": "Oncheonjang",
+        "ja": "温泉場",
+        "zh-CN": "温泉场",
+        "zh-TW": "溫泉場"
+      }
+    },
+    {
+      "id": "edit-071",
+      "band": "short",
+      "theme": "cafe",
+      "area": "온천장",
+      "titles": {
+        "ko": "자연사와 갤러리, 동네 빵집",
+        "en": "Natural History, Gallery & Bakery",
+        "ja": "釜山海洋自然史博物館 × カフェホミル",
+        "zh-CN": "釜山海洋自然史博物馆 × Homil咖啡馆",
+        "zh-TW": "釜山海洋自然史博物館 × Homil咖啡館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-270"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2204"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1803"
+          },
+          "minutes": 40
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "온천장",
+        "en": "Oncheonjang",
+        "ja": "温泉場",
+        "zh-CN": "温泉场",
+        "zh-TW": "溫泉場"
+      }
+    },
+    {
+      "id": "edit-072",
+      "band": "short",
+      "theme": "cafe",
+      "area": "동래",
+      "titles": {
+        "ko": "우장춘의 식물 이야기와 디저트",
+        "en": "Woo Jang-choon & Patisserie",
+        "ja": "禹長春記念館 × ボーヌパティスリー",
+        "zh-CN": "禹长春纪念馆 × Bonhour甜品店",
+        "zh-TW": "禹長春紀念館 × 邦尼派對三"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-297"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "2354"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "동래",
+        "en": "Dongnae",
+        "ja": "東莱",
+        "zh-CN": "东莱",
+        "zh-TW": "東萊"
+      }
+    },
+    {
+      "id": "edit-073",
+      "band": "short",
+      "theme": "sports",
+      "area": "사직",
+      "titles": {
+        "ko": "야구장과 파티쓰리의 경기날",
+        "en": "Ballpark & Patisserie Game Day",
+        "ja": "社稷野球場 × ボーヌパティスリー",
+        "zh-CN": "社稷棒球场 × Bonhour甜品店",
+        "zh-TW": "充滿激情和活力的“小釜山”——社稷棒球場 × 邦尼派對三"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-527"
+          },
+          "minutes": 210
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "2354"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [
+        "game-schedule"
+      ],
+      "areas": {
+        "ko": "사직",
+        "en": "Sajik",
+        "ja": "社稷",
+        "zh-CN": "社稷",
+        "zh-TW": "社稷"
+      }
+    },
+    {
+      "id": "edit-074",
+      "band": "short",
+      "theme": "sports",
+      "area": "사직",
+      "titles": {
+        "ko": "팬케이크 뒤 사직 경기 관람",
+        "en": "Pancakes Before the Ballgame",
+        "ja": "ヴィラ·ヴィレクラ × 社稷野球場",
+        "zh-CN": "Villa Villekulla × 社稷棒球场",
+        "zh-TW": "Villa Villekulla × 充滿激情和活力的“小釜山”——社稷棒球場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1462"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-527"
+          },
+          "minutes": 210
+        }
+      ],
+      "conditions": [
+        "game-schedule"
+      ],
+      "areas": {
+        "ko": "사직",
+        "en": "Sajik",
+        "ja": "社稷",
+        "zh-CN": "社稷",
+        "zh-TW": "社稷"
+      }
+    },
+    {
+      "id": "edit-075",
+      "band": "short",
+      "theme": "nature",
+      "area": "초읍",
+      "titles": {
+        "ko": "어린이대공원과 수원지 숲",
+        "en": "Grand Park, Reservoir & Healing Woods",
+        "ja": "子供大公園 × 釜山子供大公園癒しの森",
+        "zh-CN": "儿童大公园 × 釜山儿童大公园治愈之林",
+        "zh-TW": "兒童大公園 × 釜山兒童大公園治癒林"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-344"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-430"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2240"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "초읍",
+        "en": "Choeup",
+        "ja": "草邑",
+        "zh-CN": "草邑",
+        "zh-TW": "草邑"
+      }
+    },
+    {
+      "id": "edit-076",
+      "band": "short",
+      "theme": "cafe",
+      "area": "초읍",
+      "titles": {
+        "ko": "삼광사의 풍경과 동네 베이커리",
+        "en": "Samgwangsa Views & Local Bakes",
+        "ja": "三光寺 × 年華製菓",
+        "zh-CN": "三光寺 × 莲花糕点",
+        "zh-TW": "三光寺 × 蓮花糕點"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-347"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1772"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "2371"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "초읍",
+        "en": "Choeup",
+        "ja": "草邑",
+        "zh-CN": "草邑",
+        "zh-TW": "草邑"
+      }
+    },
+    {
+      "id": "edit-077",
+      "band": "short",
+      "theme": "culture",
+      "area": "사상",
+      "titles": {
+        "ko": "도서관과 생활사, 삼락의 쉼",
+        "en": "Library, Local History & Samnak",
+        "ja": "賢い釜山図書館生活 × 三楽エコパーク",
+        "zh-CN": "机智的釜山图书馆生活 × 三乐生态公园",
+        "zh-TW": "機智釜山圖書館生活 × 三樂生態公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1031"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-511"
+          },
+          "minutes": 50
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-325"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "사상",
+        "en": "Sasang",
+        "ja": "沙上",
+        "zh-CN": "沙上",
+        "zh-TW": "沙上"
+      }
+    },
+    {
+      "id": "edit-078",
+      "band": "short",
+      "theme": "shopping",
+      "area": "화명",
+      "titles": {
+        "ko": "강변에서 민속관과 작은 서점",
+        "en": "Riverside, Fishing Stories & Bookshop",
+        "ja": "一日中いても楽しめる華明生態公園 × ふと思索に耽りたい日は北区文化・芸術複合スペース、ムサイへ",
+        "zh-CN": "愉快一整天的华明生态公园 × 突然想陷入沉思的日子，北区文化艺术复合空间Mousai",
+        "zh-TW": "感受華明生態公園從日出到日落的魅力 × 想沉浸個人思緒的日子，北區文化藝術複合空間Mousai"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1434"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-315"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1890"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "화명",
+        "en": "Hwamyeong",
+        "ja": "華明",
+        "zh-CN": "华明",
+        "zh-TW": "華明"
+      }
+    },
+    {
+      "id": "edit-079",
+      "band": "short",
+      "theme": "neighborhood",
+      "area": "가덕",
+      "titles": {
+        "ko": "대항 등대와 어촌의 풍경",
+        "en": "Daehang Lighthouse & Fishing Village",
+        "ja": "加徳島の海の果てで出会う場所、大項漁港洞防波堤灯台 × ヒーリングできる釜山の漁村",
+        "zh-CN": "在加德岛的大海尽头邂逅的地方，大项渔港东防波堤灯塔 × 适合享受治愈时光的釜山渔村",
+        "zh-TW": "在加德島海的盡頭相遇-大項漁港洞防波堤燈塔 × 療癒身心的釜山漁村"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2587"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1014"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "가덕",
+        "en": "Gadeok",
+        "ja": "加徳",
+        "zh-CN": "加德",
+        "zh-TW": "加德"
+      }
+    },
+    {
+      "id": "edit-080",
+      "band": "short",
+      "theme": "nature",
+      "area": "구포",
+      "titles": {
+        "ko": "금빛노을브릿지와 문화예술플랫폼",
+        "en": "Sunset Bridge & Gupo Arts Platform",
+        "ja": "クムビッノウルブリッジ × 誰もがアーティストになれる場所、文化芸術プラットフォーム",
+        "zh-CN": "金色晚霞桥 × 所有人都能成为艺术家的地方——文化艺术平台",
+        "zh-TW": "金色晚霞橋 × 人人都能成為藝術家，文化藝術平台"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1676"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2085"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "구포",
+        "en": "Gupo",
+        "ja": "亀浦",
+        "zh-CN": "龟浦",
+        "zh-TW": "龜浦"
+      }
+    },
+    {
+      "id": "edit-081",
+      "band": "long",
+      "theme": "culture",
+      "area": "남포",
+      "titles": {
+        "ko": "남포 역사와 책방을 깊이 보는 날",
+        "en": "A Full Day of Nampo History & Books",
+        "ja": "40階段 × 宝水洞本屋通り",
+        "zh-CN": "40阶梯 × 宝水洞书店街",
+        "zh-TW": "40階梯 × 寶水洞書店街"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-364"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-267"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1881"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-368"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-272"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "남포",
+        "en": "Nampo",
+        "ja": "南浦",
+        "zh-CN": "南浦",
+        "zh-TW": "南浦"
+      }
+    },
+    {
+      "id": "edit-082",
+      "band": "long",
+      "theme": "neighborhood",
+      "area": "감천",
+      "titles": {
+        "ko": "감천에서 피란수도의 기억까지",
+        "en": "Gamcheon Art & Wartime Memories",
+        "ja": "甘川文化村 × 臨時首都記念館",
+        "zh-CN": "甘川文化村 × 临时首都纪念馆",
+        "zh-TW": "甘川文化村 × 臨時首都紀念館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "gamcheon"
+          },
+          "minutes": 150
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2678"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-288"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-299"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-273"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "감천",
+        "en": "Gamcheon",
+        "ja": "甘川",
+        "zh-CN": "甘川",
+        "zh-TW": "甘川"
+      }
+    },
+    {
+      "id": "edit-083",
+      "band": "long",
+      "theme": "neighborhood",
+      "area": "영도",
+      "titles": {
+        "ko": "영도 항구와 언덕, 흰여울 하루",
+        "en": "Yeongdo Harbours, Hills & Huinnyeoul",
+        "ja": "カンカンイ芸術村 × ヒニョウル文化村 · 83",
+        "zh-CN": "奚琴艺术村 × 白川文化村 · 83",
+        "zh-TW": "奚琴藝術村 × 白淺灘文化村 · 83"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-256"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-369"
+          },
+          "minutes": 30
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1179"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2218"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-255"
+          },
+          "minutes": 120
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-084",
+      "band": "long",
+      "theme": "culture",
+      "area": "영도",
+      "titles": {
+        "ko": "해양박물관에서 태종대까지",
+        "en": "Maritime Museum to Taejongdae",
+        "ja": "国立海洋博物館 × 太宗台遊園地",
+        "zh-CN": "国立海洋博物馆 × 太宗台",
+        "zh-TW": "國立海洋博物館 × 太宗台"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-257"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2153"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1445"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-258"
+          },
+          "minutes": 150
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "영도",
+        "en": "Yeongdo",
+        "ja": "影島",
+        "zh-CN": "影岛",
+        "zh-TW": "影島"
+      }
+    },
+    {
+      "id": "edit-085",
+      "band": "long",
+      "theme": "coast",
+      "area": "송도",
+      "titles": {
+        "ko": "송도의 바다와 숲을 채우는 하루",
+        "en": "Songdo Sea, Sky & Forest Day",
+        "ja": "松島海水浴場 × 岩南半島・松島海岸ボルレ道",
+        "zh-CN": "松岛海水浴场 × 岩南公园",
+        "zh-TW": "松島海水浴場 × 岩南半島南邊末端、與岩南公園相遇"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-286"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1422"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-833"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-326"
+          },
+          "minutes": 120
+        }
+      ],
+      "conditions": [
+        "ticket-weather"
+      ],
+      "areas": {
+        "ko": "송도",
+        "en": "Songdo",
+        "ja": "松島",
+        "zh-CN": "松岛",
+        "zh-TW": "松島"
+      }
+    },
+    {
+      "id": "edit-086",
+      "band": "long",
+      "theme": "coast",
+      "area": "다대포",
+      "titles": {
+        "ko": "홍티 예술부터 다대포 해변까지",
+        "en": "Hongti Art to Dadaepo Beach Day",
+        "ja": "地元のアートシーンを発展させる場所「ホンティアートセンター」 × 静かな海辺で癒しの散歩を、「多大浦パダヌリギル」 · 86",
+        "zh-CN": "引领当地艺术发展的空间——虹峙艺术中心 × 在安静的海边享受治愈散步——多大浦海洋世界路 · 86",
+        "zh-TW": "帶領當地藝術發展的空間「虹峙藝術中心」 × 在寧靜海灘療癒散步「多大浦世界路」 · 86"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2173"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-287"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1718"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-366"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2157"
+          },
+          "minutes": 75
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "다대포",
+        "en": "Dadaepo",
+        "ja": "多大浦",
+        "zh-CN": "多大浦",
+        "zh-TW": "多大浦"
+      }
+    },
+    {
+      "id": "edit-087",
+      "band": "long",
+      "theme": "culture",
+      "area": "초량",
+      "titles": {
+        "ko": "초량과 수정의 건축, 커피 이야기",
+        "en": "Choryang Houses & Coffee Heritage",
+        "ja": "上海通り × 国際珈琲博物館",
+        "zh-CN": "上海街 × 国际咖啡博物馆",
+        "zh-TW": "上海街 × 釜山國際咖啡博物館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-415"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-266"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2594"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1866"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-264"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1696"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "초량",
+        "en": "Choryang",
+        "ja": "草梁",
+        "zh-CN": "草梁",
+        "zh-TW": "草梁"
+      }
+    },
+    {
+      "id": "edit-088",
+      "band": "long",
+      "theme": "coast",
+      "area": "북항",
+      "titles": {
+        "ko": "책과 도시 변화로 걷는 북항 하루",
+        "en": "Books & Urban Change Around North Port",
+        "ja": "人と本が出会い、輝き、道標になる場所、「北斗七星図書館」 × 釜山トラベルラウンジで行われる本物の釜山体験プログラム",
+        "zh-CN": "书与人相遇，成为光芒和道路的空间——北斗七星图书馆 × 釜山旅游中心（Travel Lounge）力荐的至尊釜山体验节目",
+        "zh-TW": "書在與人相遇後，成為光芒、指引方向的空間「北斗七星圖書館」 × 釜山旅遊中心推出的道地釜山體驗活動"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2086"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2082"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2081"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2187"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1900"
+          },
+          "minutes": 30
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "북항",
+        "en": "North Port",
+        "ja": "北港",
+        "zh-CN": "北港",
+        "zh-TW": "北港"
+      }
+    },
+    {
+      "id": "edit-089",
+      "band": "long",
+      "theme": "cafe",
+      "area": "서면",
+      "titles": {
+        "ko": "전포의 커피와 서면의 예술 하루",
+        "en": "Jeonpo Coffee & Seomyeon Art Day",
+        "ja": "ヒップさいっぱいの田浦工具通り × 文化を通じて触れ合う複合文化施設「KT&G想像マダン釜山」",
+        "zh-CN": "潮感十足的田浦工具街 × 用文化沟通的复合文化空间釜山KT&G想象空间",
+        "zh-TW": "新潮奔放的田浦工具街 × 以文化交流的複合文化空間 KT&G想像廣場釜山"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1329"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-508"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1819"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1653"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1185"
+          },
+          "minutes": 90
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "서면",
+        "en": "Seomyeon",
+        "ja": "西面",
+        "zh-CN": "西面",
+        "zh-TW": "西面"
+      }
+    },
+    {
+      "id": "edit-090",
+      "band": "long",
+      "theme": "culture",
+      "area": "부산진",
+      "titles": {
+        "ko": "시민공원과 국악 체험의 긴 오후",
+        "en": "Citizens Park & Korean Music Day",
+        "ja": "釜山市民公園 × 宋象賢広場",
+        "zh-CN": "釜山市民公园 × 宋象贤广场",
+        "zh-TW": "釜山市民公園 × 宋象賢廣場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-354"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2155"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2067"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-343"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "부산진",
+        "en": "Busanjin",
+        "ja": "釜山鎮",
+        "zh-CN": "釜山镇",
+        "zh-TW": "釜山鎮"
+      }
+    },
+    {
+      "id": "edit-091",
+      "band": "long",
+      "theme": "shopping",
+      "area": "수영",
+      "titles": {
+        "ko": "망미의 디자인에서 수영의 일상까지",
+        "en": "Mangmi Design & Everyday Suyeong",
+        "ja": "F1963 × APECナル公園",
+        "zh-CN": "F1963 × APEC渡口公园",
+        "zh-TW": "F1963 × APEC渡口公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-372"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1322"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-301"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1305"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-362"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "수영",
+        "en": "Suyeong",
+        "ja": "水営",
+        "zh-CN": "水营",
+        "zh-TW": "水營"
+      }
+    },
+    {
+      "id": "edit-092",
+      "band": "long",
+      "theme": "culture",
+      "area": "센텀",
+      "titles": {
+        "ko": "센텀의 건축과 미디어, 강변 하루",
+        "en": "Centum Architecture, Media & Riverside",
+        "ja": "BEXCO × APECナル公園",
+        "zh-CN": "BEXCO（釜山会展中心） × APEC渡口公园",
+        "zh-TW": "BEXCO（釜山會展中心） × APEC渡口公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-420"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-421"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-308"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-362"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [
+        "event-schedule"
+      ],
+      "areas": {
+        "ko": "센텀",
+        "en": "Centum",
+        "ja": "センタム",
+        "zh-CN": "Centum",
+        "zh-TW": "Centum"
+      }
+    },
+    {
+      "id": "edit-093",
+      "band": "long",
+      "theme": "coast",
+      "area": "해운대",
+      "titles": {
+        "ko": "해운대와 동백섬, 마린시티 하루",
+        "en": "Haeundae to Marine City Day",
+        "ja": "海雲台 × マグ・デザート・ラブ",
+        "zh-CN": "海云台 × 马克杯甜点陷阱",
+        "zh-TW": "海雲台 × 馬克杯甜點陷阱"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-373"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2274"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2121"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-361"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1628"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "해운대",
+        "en": "Haeundae",
+        "ja": "海雲台",
+        "zh-CN": "海云台",
+        "zh-TW": "海雲臺"
+      }
+    },
+    {
+      "id": "edit-094",
+      "band": "long",
+      "theme": "culture",
+      "area": "달맞이",
+      "titles": {
+        "ko": "달맞이 전시부터 송정 바다까지",
+        "en": "Dalmaji Exhibitions to Songjeong Sea",
+        "ja": "ジグザグアートセンター × 松亭海水浴場、竹島公園",
+        "zh-CN": "之字形艺术中心 × 松亭海水浴场",
+        "zh-TW": "之字形藝術中心 × 松亭海水浴場"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2753"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1862"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2095"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-280"
+          },
+          "minutes": 90
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "달맞이",
+        "en": "Dalmaji",
+        "ja": "タルマジ",
+        "zh-CN": "迎月路",
+        "zh-TW": "迎月路"
+      }
+    },
+    {
+      "id": "edit-095",
+      "band": "long",
+      "theme": "coast",
+      "area": "오시리아",
+      "titles": {
+        "ko": "용궁사와 서점, 해안길을 잇는 날",
+        "en": "Temple, Books & Osiria Coastal Day",
+        "ja": "海東龍宮寺 × 五郎台公園",
+        "zh-CN": "海东龙宫寺 × 五郎台公园",
+        "zh-TW": "海東龍宮寺 × 五郎台公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-261"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-291"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-281"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2172"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-290"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-096",
+      "band": "long",
+      "theme": "sports",
+      "area": "오시리아",
+      "titles": {
+        "ko": "과학과 테마파크, 음악의 하루",
+        "en": "Science, Theme Park & Music Day",
+        "ja": "国立釜山科学館 × 約2万枚のLP盤を保有するMUSIC COMPLEX SEOUL釜山店で、音楽の世界に浸ろう！ · 96",
+        "zh-CN": "国立釜山科学馆 × 在2万多张黑胶唱片海洋中遨游！Music Complex Seoul釜山店 · 96",
+        "zh-TW": "國立釜山科學館 × 噗通跳入2萬張黑膠唱片之中！Music Complex Seoul釜山店 · 96"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-340"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1310"
+          },
+          "minutes": 240
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2119"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "오시리아",
+        "en": "Osiria",
+        "ja": "オシリア",
+        "zh-CN": "Osiria",
+        "zh-TW": "Osiria"
+      }
+    },
+    {
+      "id": "edit-097",
+      "band": "long",
+      "theme": "cafe",
+      "area": "임랑",
+      "titles": {
+        "ko": "임랑 해변과 기념관, 커피의 하루",
+        "en": "Imrang Beach, Memories & Coffee Day",
+        "ja": "林浪海水浴場 × 新平小公園",
+        "zh-CN": "林浪海水浴场 × 新平小公园",
+        "zh-TW": "林浪海水浴場 × 新平小公園"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-262"
+          },
+          "minutes": 90
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1709"
+          },
+          "minutes": 75
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "174"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-757"
+          },
+          "minutes": 90
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "임랑",
+        "en": "Imrang",
+        "ja": "林浪",
+        "zh-CN": "林浪",
+        "zh-TW": "林浪"
+      }
+    },
+    {
+      "id": "edit-098",
+      "band": "long",
+      "theme": "culture",
+      "area": "동래",
+      "titles": {
+        "ko": "성곽과 박물관으로 읽는 동래",
+        "en": "Dongnae Walls & Museums Day",
+        "ja": "東莱邑城 × 朴次貞義士生家",
+        "zh-CN": "东莱邑城 × 朴次贞义士故居",
+        "zh-TW": "東萊邑城 × 樸次貞義士故居"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-409"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-419"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-501"
+          },
+          "minutes": 60
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2566"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-296"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "동래",
+        "en": "Dongnae",
+        "ja": "東莱",
+        "zh-CN": "东莱",
+        "zh-TW": "東萊"
+      }
+    },
+    {
+      "id": "edit-099",
+      "band": "long",
+      "theme": "sports",
+      "area": "사직",
+      "titles": {
+        "ko": "디저트와 야구, 식물 이야기 하루",
+        "en": "Patisserie, Baseball & Botany Day",
+        "ja": "ボーヌパティスリー × 禹長春記念館",
+        "zh-CN": "Bonhour甜品店 × 禹长春纪念馆",
+        "zh-TW": "邦尼派對三 × 禹長春紀念館"
+      },
+      "mode": "walking",
+      "visits": [
+        {
+          "ref": {
+            "kind": "food",
+            "id": "2354"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-527"
+          },
+          "minutes": 210
+        },
+        {
+          "ref": {
+            "kind": "food",
+            "id": "1462"
+          },
+          "minutes": 45
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-297"
+          },
+          "minutes": 45
+        }
+      ],
+      "conditions": [
+        "game-schedule"
+      ],
+      "areas": {
+        "ko": "사직",
+        "en": "Sajik",
+        "ja": "社稷",
+        "zh-CN": "社稷",
+        "zh-TW": "社稷"
+      }
+    },
+    {
+      "id": "edit-100",
+      "band": "long",
+      "theme": "nature",
+      "area": "을숙도",
+      "titles": {
+        "ko": "현대미술과 철새를 보는 낙동강 하루",
+        "en": "Contemporary Art & Estuary Birds Day",
+        "ja": "釜山現代美術館 × 冬の渡り鳥の美しさに触れる「鳴旨渡り鳥バードウォッチングスポット 」",
+        "zh-CN": "釜山现代美术馆 × 邂逅冬候鸟之美的“鸣旨候鸟观鸟台”",
+        "zh-TW": "釜山現代美術館 × 遇見冬季候鳥之美的「鳴旨候鳥觀鳥臺」"
+      },
+      "mode": "driving",
+      "visits": [
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-1671"
+          },
+          "minutes": 120
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-304"
+          },
+          "minutes": 150
+        },
+        {
+          "ref": {
+            "kind": "destination",
+            "id": "busan-2189"
+          },
+          "minutes": 60
+        }
+      ],
+      "conditions": [],
+      "areas": {
+        "ko": "을숙도",
+        "en": "Eulsukdo",
+        "ja": "乙淑島",
+        "zh-CN": "乙淑岛",
+        "zh-TW": "乙淑島"
+      }
+    }
+  ]
+}

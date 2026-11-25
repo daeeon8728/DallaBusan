@@ -49,7 +49,7 @@ function PhotoCredit({offer,locale}: {offer:PublicOffer;locale:Locale}) {
     {offer.image.licenseUrl && <a href={offer.image.licenseUrl} target="_blank" rel="noopener noreferrer">{copy.license} ↗</a>}
   </details>;
 }
-export function OfferCard({ offer, locale, onOpen }: { offer: PublicOffer; locale: Locale; onOpen: (offer: PublicOffer) => void }) {
+export function OfferCard({ offer, locale, onOpen, actionLabel }: { offer: PublicOffer; locale: Locale; actionLabel?:string; onOpen: (offer: PublicOffer) => void }) {
   const copy = getCopy(locale);
   const price = offer.referencePrice;
   return <article className="offer-card" data-testid="offer-card" data-offer-id={offer.id}><SaveButton target={{kind:"offer",id:offer.id,title:offer.title}} locale={locale}/>
@@ -59,7 +59,7 @@ export function OfferCard({ offer, locale, onOpen }: { offer: PublicOffer; local
     {offer.localizationStatus === 'fallback' && <p className="original-note">{copy.original}</p>}{offer.localizationStatus === 'translated' && <p className="translated-note">{getDetailCopy(locale).translated}</p>}
     <BookingLanguage offer={offer} locale={locale}/><PhotoCredit offer={offer} locale={locale} />
     <p className="scope-note">{copy.scopes[offer.scope]}</p>
-    <div className="card-bottom"><div>{price ? <><span className="price-label">{copy.reference}</span><strong><Price amount={price.amount} currency={price.currency} locale={locale}/></strong></> : <span className="unknown-price">{copy.unknownPrice}</span>}</div><button className="text-action" onClick={() => onOpen(offer)}>{copy.details}<Icon name="arrow" size={16} /></button></div>
+    <div className="card-bottom"><div>{price ? <><span className="price-label">{copy.reference}</span><strong><Price amount={price.amount} currency={price.currency} locale={locale}/></strong></> : <span className="unknown-price">{copy.unknownPrice}</span>}</div><button className="text-action" onClick={() => onOpen(offer)}>{actionLabel??copy.details}<Icon name="arrow" size={16} /></button></div>
     <AddToCart offer={offer} locale={locale}/>
   </article>;
 }
@@ -81,7 +81,7 @@ function RelatedOffers({offerId,locale,onSelect}:{offerId:string;locale:Locale;o
     </section>
   </div>;
 }
-function OfferDialogContent({offer,locale,onSelect}:{offer:PublicOffer;locale:Locale;onSelect:(id:string)=>void}){
+function OfferDialogContent({offer,locale,onSelect,bookingLabel}:{offer:PublicOffer;locale:Locale;bookingLabel?:string|undefined;onSelect:(id:string)=>void}){
   const copy=getCopy(locale);
   return <><div className="dialog-product"><div className="dialog-gallery"><OfferImage key={offer.id} offer={offer} locale={locale}/><PhotoCredit offer={offer} locale={locale}/></div>
     <div className="dialog-body"><p className="dialog-kicker">{copy.categories[offer.category]} · {copy.scopes[offer.scope]}</p><h2 id="offer-title">{offer.title}</h2><SaveButton target={{kind:'offer',id:offer.id,title:offer.title}} locale={locale} inline/>
@@ -90,7 +90,7 @@ function OfferDialogContent({offer,locale,onSelect}:{offer:PublicOffer;locale:Lo
       <BookingLanguage offer={offer} locale={locale}/><p className="dialog-provider">{offer.provider.displayName}</p>
       <div className="dialog-price">{offer.referencePrice?<><span>{copy.reference}</span><strong><Price amount={offer.referencePrice.amount} currency={offer.referencePrice.currency} locale={locale}/></strong><small>{copy.priceDate}: {offer.referencePrice.observedOn}</small></>:<strong>{copy.unknownPrice}</strong>}</div>
       <AddToCart offer={offer} locale={locale}/><p className="fine-print">{copy.priceNote}</p><p className="fine-print">{copy.availability}</p>
-      <a className="primary-button booking-link" href={offer.href} target="_blank" rel="sponsored noopener noreferrer">{copy.book}<Icon name="arrow" size={20}/></a>
+      <a className="primary-button booking-link" href={offer.href} target="_blank" rel="sponsored noopener noreferrer">{bookingLabel??copy.book}<Icon name="arrow" size={20}/></a>
       <p className="external-note">{copy.external}</p><p className="affiliate-note">{copy.disclosure}</p>
     </div></div><RelatedOffers key={offer.id+locale} offerId={offer.id} locale={locale} onSelect={onSelect}/></>;
 }
@@ -99,7 +99,7 @@ function isOutside(event:PointerEvent<HTMLDialogElement>){
   const bounds=event.currentTarget.getBoundingClientRect();
   return event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom;
 }
-function ResolvedOfferDialog({offer,locale,onClose}:{offer:PublicOffer;locale:Locale;onClose:()=>void}){
+function ResolvedOfferDialog({offer,locale,onClose,bookingLabel}:{offer:PublicOffer;locale:Locale;bookingLabel?:string|undefined;onClose:()=>void}){
   const [trigger]=useState(()=>document.activeElement);
   const [selectedId,setSelectedId]=useState(offer.id);
   const ref=useRef<HTMLDialogElement>(null),scrollRef=useRef<HTMLDivElement>(null),closeRef=useRef<HTMLButtonElement>(null),outsidePointer=useRef<number|null>(null);
@@ -119,8 +119,8 @@ function ResolvedOfferDialog({offer,locale,onClose}:{offer:PublicOffer;locale:Lo
     onPointerCancel={()=>{outsidePointer.current=null;}}>
     <header className="offer-dialog-header"><p id="offer-dialog-heading">{text.heading}</p><button ref={closeRef} className="close-dialog" onClick={onClose} aria-label={copy.close}>×</button></header>
     <div ref={scrollRef} className="offer-dialog-scroll" data-testid="offer-dialog-scroll">
-      {current?<OfferDialogContent key={current.id+locale} offer={current} locale={locale} onSelect={setSelectedId}/>:<div className="dialog-pending">{request.error?<div role="alert"><p>{copy.failed}</p><button onClick={request.retry}>{copy.retry}</button></div>:<p role="status">{copy.loading}</p>}</div>}
+      {current?<OfferDialogContent key={current.id+locale} offer={current} locale={locale} onSelect={setSelectedId} bookingLabel={selectedId===offer.id?bookingLabel:undefined}/>:<div className="dialog-pending">{request.error?<div role="alert"><p>{copy.failed}</p><button onClick={request.retry}>{copy.retry}</button></div>:<p role="status">{copy.loading}</p>}</div>}
     </div>
   </dialog>;
 }
-export function OfferDialog({offer,locale,onClose}:{offer:PublicOffer|null;locale:Locale;onClose:()=>void}){return offer?<ResolvedOfferDialog key={offer.id} offer={offer} locale={locale} onClose={onClose}/>:null;}
+export function OfferDialog({offer,locale,onClose,bookingLabel}:{offer:PublicOffer|null;locale:Locale;bookingLabel?:string|undefined;onClose:()=>void}){return offer?<ResolvedOfferDialog key={offer.id} offer={offer} locale={locale} onClose={onClose} bookingLabel={bookingLabel}/>:null;}

@@ -1,11 +1,14 @@
-import { CourseOffersSchema, CourseSchema, CoursesResponseSchema, type CourseCategory, type Locale } from '@trip-fit/domain';
+import { CourseOffersSchema, CourseSchema, CoursesResponseSchema, type CoursePersona, type Course, type CourseCategory, type Locale } from '@trip-fit/domain';
 import type { CourseCatalog } from '../config/courses.js';
 import type { DestinationService } from './destinations.js';
 import type { GuideService } from './guides.js';
 import type { ParkingAnchor } from '../config/parking-directory.js';
 import type { CourseRouteSnapshot } from '../config/course-routes.js';
 import { courseRouteFingerprint,courseWaypoints,referenceCourseRoute } from './course-routing.js';
-export function createCourseService(config: CourseCatalog, destinations: DestinationService, guides: GuideService, anchors:ReadonlyMap<string,ParkingAnchor>=new Map(), routes:CourseRouteSnapshot={version:1,items:[]}) {
+import type {OfferService} from './offers.js';
+import type {CourseCommerceConfig} from '../config/course-commerce.js';
+import {getCourseCommerceCopy} from '../config/course-commerce-copy.js';
+export function createCourseService(config: CourseCatalog, destinations: DestinationService, guides: GuideService, anchors:ReadonlyMap<string,ParkingAnchor>=new Map(), routes:CourseRouteSnapshot={version:1,items:[]},commerce:CourseCommerceConfig['items']=[],today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()),offerSelection?:Pick<OfferService,'selectForDisplay'>) {
     const cache = new Map<Locale, ReturnType<typeof CourseSchema.parse>[]>();
     function items(locale: Locale) {
         const cached = cache.get(locale);
@@ -35,10 +38,27 @@ export function createCourseService(config: CourseCatalog, destinations: Destina
             const points=courseWaypoints(item,anchors), fingerprint=courseRouteFingerprint(item,points);
             const cachedRoute=routes.items.find(row=>row.id===item.id&&row.fingerprint===fingerprint&&row.route.mode===item.mode&&row.route.legs.length===item.steps.length-1);
             const route=cachedRoute?.route??referenceCourseRoute(item.mode);
-            return valid ? [CourseSchema.parse({intro:item.intro?.[locale]??'',tips:item.tips?.[locale]??'',route, id: item.id, category: item.category, title: item.titles[locale], locale, status: item.status, routeCheck: 'pending', fieldValidation: 'not-performed', steps, image: steps.find(step => step?.image)?.image ?? null, reviewedOn: config.reviewedOn })] : [];
+            return valid ? [CourseSchema.parse({personaTag:item.personaTag,duration:item.duration?.[locale]??'',featured:item.featured,intro:item.intro?.[locale]??'',tips:item.tips?.[locale]??'',route, id: item.id, category: item.category, title: item.titles[locale], locale, status: item.status, routeCheck: 'pending', fieldValidation: 'not-performed', steps, image: steps.find(step => step?.image)?.image ?? null, reviewedOn: config.reviewedOn })] : [];
         });
         cache.set(locale, result);
         return result;
+    }
+    function bookings(course:Course,locale:Locale){
+      const all=course.steps.flatMap(step=>{if(step.kind!=='destination'||!step.id)return [];const detail=destinations.get(step.id,locale);return detail?.related.map(row=>({...row,destinationId:step.id??'',destinationName:detail.destination.name}))??[];});
+      const rule=commerce.find(row=>row.courseId===course.id&&row.reviewedOn<=today()&&row.reviewExpiresOn>=today());
+      const main=rule?all.find(row=>row.offer.id===rule.offerId&&row.destinationId===rule.destinationId&&row.relationship==='tour'):undefined;
+      const text=getCourseCommerceCopy(locale);
+      const base=(offer:typeof all[number]['offer'])=>({provider:offer.provider.id,basePriceKRW:offer.referencePrice?.currency==='KRW'?Number(offer.referencePrice.amount):null,affiliateUrl:offer.href,offer});
+      const affiliateBundle=main?{...base(main.offer),title:main.offer.title,badgeText:text.badge,persuasionCopy:text.persuasion,destinationId:main.destinationId,spotName:main.destinationName}:null;
+      const endpoint=course.steps.at(-1),seen=new Set<string>();
+      const candidates=all.filter(row=>row.relationship!=='tour'&&row.offer.id!==main?.offer.id&&(row.relationship!=='stay'||endpoint?.kind==='destination'&&row.destinationId===endpoint.id));
+      const ranked=offerSelection?.selectForDisplay(candidates.map(row=>row.offer.id),locale).map(offer=>offer.id)??candidates.map(row=>row.offer.id);
+      const affiliateItems=candidates.filter(row=>ranked.includes(row.offer.id)).sort((a,b)=>ranked.indexOf(a.offer.id)-ranked.indexOf(b.offer.id)).flatMap(row=>{
+        const stay=row.relationship==='stay';
+        if(row.relationship==='tour'||row.offer.id===main?.offer.id||seen.has(row.offer.id)||stay&&(endpoint?.kind!=='destination'||row.destinationId!==endpoint.id))return [];
+        seen.add(row.offer.id);return [{...base(row.offer),spotName:row.destinationName,productTitle:row.offer.title,destinationId:row.destinationId,kind:stay?'stay' as const:'spot' as const,areaLabel:row.areaLabel}];
+      });
+      return {affiliateBundle,affiliateItems:[...affiliateItems.filter(row=>row.kind==='spot').slice(0,6),...affiliateItems.filter(row=>row.kind==='stay').slice(0,3)]};
     }
     return {
       offers(id:string,locale:Locale) {
@@ -53,8 +73,8 @@ export function createCourseService(config: CourseCatalog, destinations: Destina
             return [{destinationId:step.id,destinationName:detail.destination.name,relationship:item.relationship,offer:item.offer}];
           });
         }).slice(0,12);
-        return CourseOffersSchema.parse({locale,courseId:id,items:related});
+        return CourseOffersSchema.parse({locale,courseId:id,items:related,...bookings(course,locale)});
       },
-      list(locale: Locale, category?: CourseCategory) { const all = items(locale); return CoursesResponseSchema.parse({ locale, items: category ? all.filter(item => item.category === category) : all, total: all.length, counts: { friends: all.filter(x => x.category === 'friends').length, family: all.filter(x => x.category === 'family').length, date: all.filter(x => x.category === 'date').length, food: all.filter(x => x.category === 'food').length, dallabusan: all.filter(x => x.category === 'dallabusan').length } }); }, get(id: string, locale: Locale) { return items(locale).find(item => item.id === id) ?? null; } };
+      list(locale: Locale, category?: CourseCategory, persona?:CoursePersona) { const all = items(locale); return CoursesResponseSchema.parse({ locale, items: all.filter(item=>(!category||item.category===category)&&(!persona||item.personaTag.includes(persona))), total: all.length, counts: { friends: all.filter(x => x.category === 'friends').length, family: all.filter(x => x.category === 'family').length, date: all.filter(x => x.category === 'date').length, food: all.filter(x => x.category === 'food').length, dallabusan: all.filter(x => x.category === 'dallabusan').length } }); }, get(id: string, locale: Locale) { const course=items(locale).find(item=>item.id===id);return course?{...course,...bookings(course,locale)}:null; } };
 }
 export type CourseService = ReturnType<typeof createCourseService>;

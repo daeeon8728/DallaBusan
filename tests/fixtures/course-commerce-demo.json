@@ -1,0 +1,109 @@
+{
+  "environment": "test-only",
+  "bookable": false,
+  "items": [
+    {
+      "id": "demo-1",
+      "title": "Haeundae coast",
+      "personaTag": [
+        "first-timer",
+        "no-car"
+      ],
+      "duration": "6–8 hours (demo)",
+      "affiliateBundle": {
+        "title": "Demonstration coastal day tour",
+        "provider": "PROVIDER_A",
+        "badgeText": "DEMO — not bookable",
+        "basePriceKRW": 65000,
+        "affiliateUrl": "https://booking.example.test/demo-bundle-0",
+        "persuasionCopy": "Demo layout only. Not an actual offer."
+      },
+      "affiliateItems": [
+        {
+          "spotName": "Haeundae coast",
+          "productTitle": "Demonstration admission ticket",
+          "provider": "PROVIDER_B",
+          "basePriceKRW": 20000,
+          "affiliateUrl": "https://booking.example.test/demo-item-0"
+        }
+      ]
+    },
+    {
+      "id": "demo-2",
+      "title": "Temple and ocean",
+      "personaTag": [
+        "day-trip"
+      ],
+      "duration": "6–8 hours (demo)",
+      "affiliateBundle": {
+        "title": "Demonstration coastal day tour",
+        "provider": "PROVIDER_A",
+        "badgeText": "DEMO — not bookable",
+        "basePriceKRW": 70000,
+        "affiliateUrl": "https://booking.example.test/demo-bundle-1",
+        "persuasionCopy": "Demo layout only. Not an actual offer."
+      },
+      "affiliateItems": [
+        {
+          "spotName": "Temple and ocean",
+          "productTitle": "Demonstration admission ticket",
+          "provider": "PROVIDER_B",
+          "basePriceKRW": 25000,
+          "affiliateUrl": "https://booking.example.test/demo-item-1"
+        }
+      ]
+    },
+    {
+      "id": "demo-3",
+      "title": "Songdo sky and sea",
+      "personaTag": [
+        "first-timer",
+        "no-car"
+      ],
+      "duration": "6–8 hours (demo)",
+      "affiliateBundle": {
+        "title": "Demonstration coastal day tour",
+        "provider": "PROVIDER_A",
+        "badgeText": "DEMO — not bookable",
+        "basePriceKRW": 75000,
+        "affiliateUrl": "https://booking.example.test/demo-bundle-2",
+        "persuasionCopy": "Demo layout only. Not an actual offer."
+      },
+      "affiliateItems": [
+        {
+          "spotName": "Songdo sky and sea",
+          "productTitle": "Demonstration admission ticket",
+          "provider": "PROVIDER_B",
+          "basePriceKRW": 30000,
+          "affiliateUrl": "https://booking.example.test/demo-item-2"
+        }
+      ]
+    },
+    {
+      "id": "demo-4",
+      "title": "Gwangalli golden hour",
+      "personaTag": [
+        "couples",
+        "no-car"
+      ],
+      "duration": "6–8 hours (demo)",
+      "affiliateBundle": {
+        "title": "Demonstration coastal day tour",
+        "provider": "PROVIDER_A",
+        "badgeText": "DEMO — not bookable",
+        "basePriceKRW": 80000,
+        "affiliateUrl": "https://booking.example.test/demo-bundle-3",
+        "persuasionCopy": "Demo layout only. Not an actual offer."
+      },
+      "affiliateItems": [
+        {
+          "spotName": "Gwangalli golden hour",
+          "productTitle": "Demonstration admission ticket",
+          "provider": "PROVIDER_B",
+          "basePriceKRW": 35000,
+          "affiliateUrl": "https://booking.example.test/demo-item-3"
+        }
+      ]
+    }
+  ]
+}

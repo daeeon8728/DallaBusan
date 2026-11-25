@@ -1,0 +1,12 @@
+import{readFileSync}from'node:fs';import{createHash}from'node:crypto';import{z}from'zod';import{BuilderRefSchema,BuilderThemeSchema}from'@trip-fit/domain';import{loadCourseSourceRows}from'./courses.js';
+const Text=z.strictObject({ko:z.string().min(1),en:z.string().min(1),ja:z.string().min(1),'zh-CN':z.string().min(1),'zh-TW':z.string().min(1)});
+export const CourseExpansionSchema=z.strictObject({version:z.literal(1),reviewedOn:z.iso.date(),evidenceStatus:z.literal('assistant-source-evidence'),status:z.literal('editorial-idea'),sources:z.array(BuilderRefSchema.extend({sourceHash:z.string().regex(/^[a-f0-9]{64}$/),role:z.enum(['attraction','cafe','restaurant']),labels:Text.optional(),defaultMinutes:z.number().int().min(10).max(360)})),items:z.array(z.strictObject({id:z.string().regex(/^edit-[0-9]{3}$/),band:z.enum(['short','long']),theme:BuilderThemeSchema,area:z.string(),areas:Text,titles:Text,mode:z.enum(['walking','driving']),visits:z.array(z.strictObject({ref:BuilderRefSchema,minutes:z.number().int().min(10).max(360)})).min(2).max(12),conditions:z.array(z.enum(['game-schedule','event-schedule','ticket-weather']))})).length(100)});
+export type CourseExpansion=z.infer<typeof CourseExpansionSchema>;
+export function selectCourseExpansion(data:CourseExpansion,rows:ReadonlyMap<string,unknown>){
+ const key=(ref:{kind:string;id:string})=>ref.kind+':'+ref.id;
+ if(new Set(data.items.map(row=>row.id)).size!==data.items.length||new Set(data.sources.map(key)).size!==data.sources.length)throw Error('Duplicate expansion identity');
+ const sets=new Set<string>();for(const item of data.items){const signature=item.visits.map(v=>key(v.ref)).sort().join('|');if(sets.has(signature)||new Set(item.visits.map(v=>key(v.ref))).size!==item.visits.length)throw Error('Duplicate expansion stop set');sets.add(signature);}
+ const sources=data.sources.filter(ref=>{const source=rows.get(key(ref));return source!==undefined&&createHash('sha256').update(JSON.stringify(source)).digest('hex')===ref.sourceHash;}),valid=new Set(sources.map(key));
+ return {...data,sources,items:data.items.filter(item=>item.visits.every(v=>valid.has(key(v.ref))))};
+}
+export function loadCourseExpansion(){const input:unknown=JSON.parse(readFileSync(new URL('../../../../config/catalog/course-expansion.json',import.meta.url),'utf8'));return selectCourseExpansion(CourseExpansionSchema.parse(input),loadCourseSourceRows());}

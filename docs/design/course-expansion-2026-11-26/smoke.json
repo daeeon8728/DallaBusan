@@ -1,0 +1,49 @@
+{
+  "locales": [
+    {
+      "locale": "ko",
+      "status": 200,
+      "modules": 174,
+      "places": 200,
+      "newCourses": 100
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "modules": 174,
+      "places": 200,
+      "newCourses": 100
+    },
+    {
+      "locale": "ja",
+      "status": 200,
+      "modules": 174,
+      "places": 200,
+      "newCourses": 100
+    },
+    {
+      "locale": "zh-CN",
+      "status": 200,
+      "modules": 174,
+      "places": 200,
+      "newCourses": 100
+    },
+    {
+      "locale": "zh-TW",
+      "status": 200,
+      "modules": 174,
+      "places": 200,
+      "newCourses": 100
+    }
+  ],
+  "screens": [
+    "desktop-preview.png",
+    "desktop-saved.png",
+    "mobile-preview.png",
+    "mobile-saved.png"
+  ],
+  "pageErrors": [],
+  "externalCalls": 0,
+  "finalMobileLayout": "single-column cards; preview scrolls to map; floating shortcut hidden while plan is visible",
+  "externalCallsNote": "Initial isolated API/UI smoke used browser fixtures. Final mobile screenshots were repeated for controls; no new road-routing or booking calls."
+}

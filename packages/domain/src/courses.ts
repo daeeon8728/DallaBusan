@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import {CoursePersonaSchema,CourseAffiliateBundleSchema,CourseAffiliateItemSchema} from './course-commerce.js';
 import { LocaleSchema } from './schemas.js';
 export const CourseCategorySchema = z.enum(['family', 'date', 'friends', 'food', 'dallabusan']);
 export const CoursePointSchema = z.object({lat:z.number().min(34).max(36),lng:z.number().min(128).max(130)});
@@ -19,11 +20,13 @@ export const CourseStepSchema = z.object({
 });
 export const CourseSchema = z.object({id:z.string(),category:CourseCategorySchema,title:z.string(),locale:LocaleSchema,
   status:z.literal('editorial-idea'),routeCheck:z.literal('pending'),fieldValidation:z.literal('not-performed'),
+  personaTag:z.array(CoursePersonaSchema).default([]),duration:z.string().default(''),featured:z.boolean().default(false),
+  affiliateBundle:CourseAffiliateBundleSchema.nullable().default(null),affiliateItems:z.array(CourseAffiliateItemSchema).default([]),
   intro:z.string(),tips:z.string(),steps:z.array(CourseStepSchema).min(1),route:CourseRouteSchema,
   image:z.object({url:z.string(),credit:z.string()}).nullable(),reviewedOn:z.string(),
 });
 // List/popup requests never carry all detailed descriptions and road geometries.
-export const CourseSummarySchema = CourseSchema.omit({route:true,steps:true}).extend({
+export const CourseSummarySchema = CourseSchema.omit({route:true,steps:true,affiliateBundle:true,affiliateItems:true}).extend({
   steps:z.array(CourseStepSchema.omit({sourceCollectedAt:true,description:true,menu:true,hours:true,holidays:true})),
   route:CourseRouteSchema.omit({geometry:true,legs:true}),
 });
