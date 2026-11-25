@@ -22,3 +22,7 @@ export * from './stay-map.js';
 export * from './travel-tools.js';
 
 export * from './stay-search.js';
+
+export * from './food-assistance.js';
+
+export * from './course-offers.js';

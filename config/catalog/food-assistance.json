@@ -1,0 +1,1119 @@
+{
+  "version": 1,
+  "reviewedOn": "2026-11-25",
+  "reviewedBy": "assistant-source-evidence",
+  "groups": [
+    {
+      "id": "rice-soup",
+      "labels": {
+        "ko": "국밥",
+        "en": "Rice soup",
+        "ja": "クッパ",
+        "zh-CN": "汤饭",
+        "zh-TW": "湯飯"
+      },
+      "members": [
+        {
+          "id": "204",
+          "fingerprint": "dfbd608984c9a71f53867ad375aa6b890c382a01a5eebaf177f96123de3ccb1d",
+          "evidence": "돼지국밥 ￦10,000\n수육백반 ￦12,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1118",
+          "fingerprint": "ba12506fd2b0f1ba632d3910391e9cceaf56222e73b47e055a61a6f065ee3675",
+          "evidence": "수육백반 ￦14,000\n돼지국밥 ￦10,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1511",
+          "fingerprint": "76012e94d64a20460fd985acde2ac7ed5996fbc0ad86f2a261375b45634d2994",
+          "evidence": "돼지국밥 ￦12,000\n수육 ￦40,000 / 45,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1512",
+          "fingerprint": "c0c1f168c74c1ee6bc6ca79f000502d8d4f2593b4eed6bc330647ebb1f06837c",
+          "evidence": "돼지국밥, 막국수",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1513",
+          "fingerprint": "cc5fdf5228085fb600f4f2c60953b18f9f8495a7850b9a821b700f7ba5c98bcb",
+          "evidence": "돼지국밥, 모듬수육",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1515",
+          "fingerprint": "0544cda8f0d85756d6d2cc8537a1924290b7d63a4747c966f6a9455bcc3a655b",
+          "evidence": "수육백반, 돼지국밥",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1516",
+          "fingerprint": "3803d85fab9e380b18716b4641d86e98626a8fb4d77acb11807f9fee9861c5ea",
+          "evidence": "돼지국밥 ￦10,000\n수육 ￦30,000 / 35,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1616",
+          "fingerprint": "f3c09e6491b57a5c0abe15765bfe481f3fc10ace71b4ccea5729a4cdb945c2be",
+          "evidence": "돼지국밥, 순대국밥, 내장국밥, 따로국밥, 수육백반, 찹쌀순대, 수육",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1818",
+          "fingerprint": "fc9d47e7e04a04ee2c2ce41aa290ffc3bc5522a50400a0244ca896ab3187e71a",
+          "evidence": "수육백반 ￦12,000\n돼지국밥 ￦9,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1837",
+          "fingerprint": "0540593568731c3688d356bf411b31f534a196f5d3df017cf9a7f7399c9739ef",
+          "evidence": "돼지국밥 ￦10,000\n모듬수육 ￦25,000-35,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "yeongdo"
+        },
+        {
+          "id": "1921",
+          "fingerprint": "bd0a092c8ef6c288f56639bb8ae6fa5127cf6669ff32ac122e5d1884a3cd299f",
+          "evidence": "돼지국밥",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "2365",
+          "fingerprint": "c92bf358c4039557d806b93789083b4f0e8c63c33f9f73ab0d96561b3d42b2b5",
+          "evidence": "수육한접시 ￦10,000\n돼지국밥 ￦10,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "2820",
+          "fingerprint": "eb5bb9c0f0470664972ac79bf94ea1cf75a2810469ab2dc53539f8fcfcd5b0eb",
+          "evidence": "돼지국밥",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "2903",
+          "fingerprint": "f7f9aa55332ddd786f95f06daf1a4c9e33186c2a70888ef830343b43a8dcf549",
+          "evidence": "토렴국밥 ￦12,000\n밀면 ￦11,000",
+          "dish": {
+            "korean": "토렴국밥",
+            "labels": {
+              "ko": "토렴국밥",
+              "en": "Toryeom rice soup",
+              "ja": "トリョム式クッパ",
+              "zh-CN": "浇汤饭",
+              "zh-TW": "澆湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "198",
+          "fingerprint": "b601ac2a2e5524d34fd0ab393e8e68d0ca37f3f859aa012d32c33e2a84155440",
+          "evidence": "왕순대국밥 ￦9,000\n수육 ￦30,000 / 45,000",
+          "dish": {
+            "korean": "왕순대국밥",
+            "labels": {
+              "ko": "왕순대국밥",
+              "en": "Large blood sausage rice soup",
+              "ja": "スンデクッパ",
+              "zh-CN": "血肠汤饭",
+              "zh-TW": "血腸湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "961",
+          "fingerprint": "0b5381d68196b85607589c12790e7a2aa983e775be341205cc7d6c211a36a87b",
+          "evidence": "돼지국밥 ￦9,000\n수육 ￦24,000",
+          "dish": {
+            "korean": "돼지국밥",
+            "labels": {
+              "ko": "돼지국밥",
+              "en": "Pork rice soup",
+              "ja": "豚肉クッパ",
+              "zh-CN": "猪肉汤饭",
+              "zh-TW": "豬肉湯飯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1618",
+          "fingerprint": "954d03a7afdea09cfae19a8aebf7f4eea62317f35aa0cd4b3051f44dd393f60c",
+          "evidence": "따로국밥, 수육백반",
+          "dish": {
+            "korean": "따로국밥",
+            "labels": {
+              "ko": "따로국밥",
+              "en": "Soup with rice served separately",
+              "ja": "ご飯別添えクッパ",
+              "zh-CN": "汤饭（米饭另上）",
+              "zh-TW": "湯飯（米飯另上）"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "milmyeon",
+      "labels": {
+        "ko": "밀면",
+        "en": "Milmyeon noodles",
+        "ja": "ミルミョン",
+        "zh-CN": "小麦冷面",
+        "zh-TW": "小麥冷麵"
+      },
+      "members": [
+        {
+          "id": "94",
+          "fingerprint": "6dbce21ce8e9a74ea3016dc373b489e6969246e644087eea6179ed3744b347a0",
+          "evidence": "물 밀면, 비빔밀면",
+          "dish": {
+            "korean": "비빔밀면",
+            "labels": {
+              "ko": "비빔밀면",
+              "en": "Spicy mixed milmyeon",
+              "ja": "ビビンミルミョン",
+              "zh-CN": "辣拌小麦冷面",
+              "zh-TW": "辣拌小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "95",
+          "fingerprint": "dacaf630c5627a7371bd7a14b8c097d9c067c7919be73e75b2d9d9e3c335ab9f",
+          "evidence": "물밀면 ￦9,000\n비빔밀면 ￦9,000",
+          "dish": {
+            "korean": "물밀면",
+            "labels": {
+              "ko": "물밀면",
+              "en": "Milmyeon in cold broth",
+              "ja": "スープ入りミルミョン",
+              "zh-CN": "汤小麦冷面",
+              "zh-TW": "湯小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "102",
+          "fingerprint": "f02812b5f18869cc8f4ef6bf98207089db3e31e83079fdd9fe619513408bec50",
+          "evidence": "밀면, 비빔밀면",
+          "dish": {
+            "korean": "비빔밀면",
+            "labels": {
+              "ko": "비빔밀면",
+              "en": "Spicy mixed milmyeon",
+              "ja": "ビビンミルミョン",
+              "zh-CN": "辣拌小麦冷面",
+              "zh-TW": "辣拌小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1108",
+          "fingerprint": "8e189d3e9c0281ad5cb681b9c92ac18a8c71c9a251d7c68739a58e9180f0ee8f",
+          "evidence": "밀면, 비빔밀면, 손만두4개/8개, 손칼국수",
+          "dish": {
+            "korean": "비빔밀면",
+            "labels": {
+              "ko": "비빔밀면",
+              "en": "Spicy mixed milmyeon",
+              "ja": "ビビンミルミョン",
+              "zh-CN": "辣拌小麦冷面",
+              "zh-TW": "辣拌小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1221",
+          "fingerprint": "1842c0b05068e366e8c380042dd7fc4c00dcfa851b9e4a971aeda161e17ff54e",
+          "evidence": "물밀면, 비빔밀면, 찐만두",
+          "dish": {
+            "korean": "물밀면",
+            "labels": {
+              "ko": "물밀면",
+              "en": "Milmyeon in cold broth",
+              "ja": "スープ入りミルミョン",
+              "zh-CN": "汤小麦冷面",
+              "zh-TW": "湯小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1507",
+          "fingerprint": "0fd68b3f302a563e28176763587f684e92f15645f3fa522ea9b29e65c23112d2",
+          "evidence": "밀면 ￦8,000\n주물럭 ￦9,000",
+          "dish": {
+            "korean": "밀면",
+            "labels": {
+              "ko": "밀면",
+              "en": "Milmyeon noodles",
+              "ja": "ミルミョン",
+              "zh-CN": "小麦冷面",
+              "zh-TW": "小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1508",
+          "fingerprint": "01f112f4d17a567f204c1bdf6bbcb02aa3b1d96768ce651fad38736a2c48c0c6",
+          "evidence": "물밀면 ￦8,000\n물비빔밀면 ￦9,000",
+          "dish": {
+            "korean": "물밀면",
+            "labels": {
+              "ko": "물밀면",
+              "en": "Milmyeon in cold broth",
+              "ja": "スープ入りミルミョン",
+              "zh-CN": "汤小麦冷面",
+              "zh-TW": "湯小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1509",
+          "fingerprint": "9dec6579cdd46d9d9c292fb8cea4a71d890842b10c53e0c4f9e58e2663c83147",
+          "evidence": "밀면, 비빔만두",
+          "dish": {
+            "korean": "밀면",
+            "labels": {
+              "ko": "밀면",
+              "en": "Milmyeon noodles",
+              "ja": "ミルミョン",
+              "zh-CN": "小麦冷面",
+              "zh-TW": "小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1510",
+          "fingerprint": "17e36fd8de4e6ced72d5b5e3376683083d4f32822cf5c42ab96df46ec7890ee5",
+          "evidence": "비빔밀면, 들깨칼국수",
+          "dish": {
+            "korean": "비빔밀면",
+            "labels": {
+              "ko": "비빔밀면",
+              "en": "Spicy mixed milmyeon",
+              "ja": "ビビンミルミョン",
+              "zh-CN": "辣拌小麦冷面",
+              "zh-TW": "辣拌小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1602",
+          "fingerprint": "bb5cc51890b8a421c47ceae31325e11af6b338457987c7d41d9c114cfedcddb0",
+          "evidence": "물밀면, 비빔밀면, 개금만두, 고기고명, 회고명추가",
+          "dish": {
+            "korean": "물밀면",
+            "labels": {
+              "ko": "물밀면",
+              "en": "Milmyeon in cold broth",
+              "ja": "スープ入りミルミョン",
+              "zh-CN": "汤小麦冷面",
+              "zh-TW": "湯小麥冷麵"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "labels": {
+        "ko": "피자",
+        "en": "Pizza",
+        "ja": "ピザ",
+        "zh-CN": "披萨",
+        "zh-TW": "披薩"
+      },
+      "members": [
+        {
+          "id": "124",
+          "fingerprint": "37083140bab11c5842bf49ee4c86b0e115e0535af357cb3278ae76f8880c99f8",
+          "evidence": "치즈크러스트피자 ￦25,000 / 29,000\n오븐스파게티 ￦9,000",
+          "dish": {
+            "korean": "치즈크러스트피자",
+            "labels": {
+              "ko": "치즈크러스트피자",
+              "en": "Cheese-crust pizza",
+              "ja": "チーズクラストピザ",
+              "zh-CN": "芝心披萨",
+              "zh-TW": "芝心披薩"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1486",
+          "fingerprint": "614b6d6ced886c5ee4f7e0d24092fa48c9a93e35241be74b2172ff0a39a44b39",
+          "evidence": "청포도 샐러드, 마르게리따 피자",
+          "dish": {
+            "korean": "마르게리따 피자",
+            "labels": {
+              "ko": "마르게리따 피자",
+              "en": "Margherita pizza",
+              "ja": "マルゲリータピザ",
+              "zh-CN": "玛格丽特披萨",
+              "zh-TW": "瑪格麗特披薩"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "puffer-soup",
+      "labels": {
+        "ko": "복국",
+        "en": "Pufferfish soup",
+        "ja": "フグスープ",
+        "zh-CN": "河豚汤",
+        "zh-TW": "河豚湯"
+      },
+      "members": [
+        {
+          "id": "146",
+          "fingerprint": "bdabf9b00135fd46a8efda7b6773aed6478dc98843d3b9fd8e2f06aa8a5acb33",
+          "evidence": "은복국(지리 / 탕) ￦15,000 / 16,000\n밀복국(지리 / 탕) ￦22,000 / 23,000",
+          "dish": {
+            "korean": "은복국",
+            "labels": {
+              "ko": "은복국",
+              "en": "Eunbok pufferfish soup",
+              "ja": "サバフグのスープ",
+              "zh-CN": "银河豚汤",
+              "zh-TW": "銀河豚湯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "190",
+          "fingerprint": "96f9da75c9c14b6591ab08d81360004fc5c9bfe7a26c40b3df9fbe2fb4a942c7",
+          "evidence": "복지리, 흰밀복수육",
+          "dish": {
+            "korean": "복지리",
+            "labels": {
+              "ko": "복지리",
+              "en": "Clear pufferfish soup",
+              "ja": "フグの澄ましスープ",
+              "zh-CN": "清河豚汤",
+              "zh-TW": "清河豚湯"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1609",
+          "fingerprint": "52f176888abeca5ce5b678b3154dbe528daaef4f2137251cf79741062523f5f0",
+          "evidence": "복국, 복매운탕, 은복수육, 대구탕",
+          "dish": {
+            "korean": "복국",
+            "labels": {
+              "ko": "복국",
+              "en": "Pufferfish soup",
+              "ja": "フグスープ",
+              "zh-CN": "河豚汤",
+              "zh-TW": "河豚湯"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "sashimi",
+      "labels": {
+        "ko": "생선회",
+        "en": "Fish sashimi",
+        "ja": "魚の刺身",
+        "zh-CN": "生鱼片",
+        "zh-TW": "生魚片"
+      },
+      "members": [
+        {
+          "id": "154",
+          "fingerprint": "f82be8d75d303576b2722b7e0382ac3f466b281c9e3cc519d8861c39d1e64582",
+          "evidence": "줄가자미(이시가리) (시가)",
+          "dish": {
+            "korean": "줄가자미(이시가리)",
+            "labels": {
+              "ko": "줄가자미(이시가리)",
+              "en": "Roughscale sole (ishigari)",
+              "ja": "イシガレイ（イシガリ）",
+              "zh-CN": "石鲽（Ishigari）",
+              "zh-TW": "石鰈（Ishigari）"
+            }
+          },
+          "area": "haeundae"
+        },
+        {
+          "id": "577",
+          "fingerprint": "311a2e58e44c1c25e10f93cef538f2ea8190cf2e2d05f2202c58dd9a14cffdac",
+          "evidence": "세꼬시(넙치), 모듬회",
+          "dish": {
+            "korean": "모듬회",
+            "labels": {
+              "ko": "모듬회",
+              "en": "Assorted sashimi",
+              "ja": "刺身盛り合わせ",
+              "zh-CN": "什锦生鱼片",
+              "zh-TW": "什錦生魚片"
+            }
+          },
+          "area": "haeundae"
+        },
+        {
+          "id": "214",
+          "fingerprint": "e2cade78f8fde4c08459af58ff618db9c01a9de636be89fddab37c27d6bd2260",
+          "evidence": "모둠회(M), 코스(L)",
+          "dish": {
+            "korean": "모둠회(M)",
+            "labels": {
+              "ko": "모둠회(M)",
+              "en": "Assorted sashimi (M)",
+              "ja": "刺身盛り合わせ（M）",
+              "zh-CN": "什锦生鱼片（M）",
+              "zh-TW": "什錦生魚片（M）"
+            }
+          },
+          "area": "gwangalli"
+        },
+        {
+          "id": "1439",
+          "fingerprint": "3fb96b51d28f0cc6db42035227e228c92adbd200c8a97b6324390727bbd352a3",
+          "evidence": "A코스, 모둠회",
+          "dish": {
+            "korean": "모둠회",
+            "labels": {
+              "ko": "모둠회",
+              "en": "Assorted sashimi",
+              "ja": "刺身盛り合わせ",
+              "zh-CN": "什锦生鱼片",
+              "zh-TW": "什錦生魚片"
+            }
+          },
+          "area": "gwangalli"
+        },
+        {
+          "id": "1576",
+          "fingerprint": "0b3d5577bd6708dc68cf9f93a4d44328ef5269a49a9225d46fabfefd38a80b5e",
+          "evidence": "자연산모둠회",
+          "dish": {
+            "korean": "자연산모둠회",
+            "labels": {
+              "ko": "자연산모둠회",
+              "en": "Assorted wild-fish sashimi",
+              "ja": "天然魚の刺身盛り合わせ",
+              "zh-CN": "野生鱼生鱼片拼盘",
+              "zh-TW": "野生魚生魚片拼盤"
+            }
+          },
+          "area": "haeundae"
+        },
+        {
+          "id": "1585",
+          "fingerprint": "f1de5f5674b5e6c79e5fb13c1c5b997da00c75f09a9986ad701167432c9060eb",
+          "evidence": "도다리세꼬시, 우럭, 광어, 잡어, 참돔, 광어통마리",
+          "dish": {
+            "korean": "도다리세꼬시",
+            "labels": {
+              "ko": "도다리세꼬시",
+              "en": "Thinly sliced flounder with bones",
+              "ja": "カレイの骨付き薄切り刺身",
+              "zh-CN": "带骨薄切鲽鱼",
+              "zh-TW": "帶骨薄切鰈魚"
+            }
+          },
+          "area": "gwangalli"
+        }
+      ]
+    },
+    {
+      "id": "coffee",
+      "labels": {
+        "ko": "커피",
+        "en": "Coffee",
+        "ja": "コーヒー",
+        "zh-CN": "咖啡",
+        "zh-TW": "咖啡"
+      },
+      "members": [
+        {
+          "id": "1467",
+          "fingerprint": "85b691ad531c6bf7523719c6a2ad7db85fab131cab1ad5cea5fd6c48f7fa1188",
+          "evidence": "아메리카노, 카페라떼",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1840",
+          "fingerprint": "d1961b65281e5168306a4399aa57633b4c18357d8d5eaa01fc1c14f96c6aa22f",
+          "evidence": "7:01 AM Blend(시그니처 블렌드) 아메리카노 ￦5,500\n달항아리(Dal Hangari) ￦8,000",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1635",
+          "fingerprint": "cdd9ad5807aed79fb33024cab30258989f638a2cc11dae4cfb61c5d7f4155893",
+          "evidence": "에스프레소, 아메리카노, 필터커피, 카페라테, 콜드브루, 얼그레이, 베이글",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1636",
+          "fingerprint": "1216dbd73aa7278e85c4357d53ffe054ccd149441590a9dd086f85905ed1a340",
+          "evidence": "핸드드립커피, 에스프레소, 아메리카노, 유기농밀크티, 빅토리아딸기케이크, 말차쇼콜라케이크, 바질치즈스콘,  바닐라마들렌, 체리피낭시에",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1637",
+          "fingerprint": "0bd630b952ea7e1003eef71277c3c0accaa4f34971268f30ddc28d4be5a8c217",
+          "evidence": "에스프레소, 아메리카노, 카페라테, 플랫화이트, 바닐라라테, 아인슈페너, 필터커피, 애플시나몬에이드, 애플시나몬블랙티, 당근/레몬/블루베리/홍차컵케이크",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1628",
+          "fingerprint": "f2087f4fbdd6565d2d0bdfcd9c0f004f8d4847d0df3d17725d7f07b31c7bf517",
+          "evidence": "아메리카노, 카페라테, 생토노레, 피스타치오파리브레스트, 비올렛, 라즈베리생토노레, 메종쇼콜라에클레르",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1460",
+          "fingerprint": "6a67992e926d03d24b14e21d69db76cbd8b0d46decdff765b7f86d5f08cb21e3",
+          "evidence": "시나몬 크림라떼, 스페셜티 아메리카노",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1447",
+          "fingerprint": "67b12cb97cc71bcd2f36fe119a6d3b6d9196a9e7898eb1d91700f1ee3be050c2",
+          "evidence": "사이폰커피(블렌딩), 생크림케이크",
+          "dish": {
+            "korean": "사이폰커피(블렌딩)",
+            "labels": {
+              "ko": "사이폰커피(블렌딩)",
+              "en": "Siphon coffee (blend)",
+              "ja": "サイフォンコーヒー（ブレンド）",
+              "zh-CN": "虹吸咖啡（拼配）",
+              "zh-TW": "虹吸咖啡（配方）"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1627",
+          "fingerprint": "87f4240c527bafc0523bab5cff31d0c70280ede3db225929a952e7c2d7b195ee",
+          "evidence": "딸기밀푀유, 쇼콜라타르트, 오렌지코코아마들렌, 무화과크림치즈피낭시에, 해남밤고구마크렘브륄레, 아메리카노, 카페라테",
+          "dish": {
+            "korean": "아메리카노",
+            "labels": {
+              "ko": "아메리카노",
+              "en": "Americano",
+              "ja": "アメリカーノ",
+              "zh-CN": "美式咖啡",
+              "zh-TW": "美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "127",
+          "fingerprint": "3a60b224691fd303844d9d0d7edc4fbde7a33a0b7f46a347595760ad5c33f454",
+          "evidence": "오늘의 핸드드립 ￦6,500\n아메리카노 쇼콜라 ￦6,000",
+          "dish": {
+            "korean": "아메리카노 쇼콜라",
+            "labels": {
+              "ko": "아메리카노 쇼콜라",
+              "en": "Americano Chocolat",
+              "ja": "アメリカーノ・ショコラ",
+              "zh-CN": "Chocolat美式咖啡",
+              "zh-TW": "Chocolat美式咖啡"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "beef-barbecue",
+      "labels": {
+        "ko": "소고기 구이",
+        "en": "Beef barbecue",
+        "ja": "牛焼肉",
+        "zh-CN": "烤牛肉",
+        "zh-TW": "烤牛肉"
+      },
+      "members": [
+        {
+          "id": "141",
+          "fingerprint": "b254bfcfd24d3858627307e4c7c6d7ebb608dfa207426130bdb9f71306bfbd4a",
+          "evidence": "등심(100g) ￦85,000\n생갈비(100g) ￦85,000",
+          "dish": {
+            "korean": "생갈비",
+            "labels": {
+              "ko": "생갈비",
+              "en": "Unmarinated beef ribs",
+              "ja": "味付けなし牛カルビ",
+              "zh-CN": "原味牛肋排",
+              "zh-TW": "原味牛肋排"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1626",
+          "fingerprint": "c447009f622ae582410cbdcb238daa91170adb2008892ed769a73e969bf55ee5",
+          "evidence": "한우생갈비, 한우양념갈비, 불고기, 뚝배기된장",
+          "dish": {
+            "korean": "한우생갈비",
+            "labels": {
+              "ko": "한우생갈비",
+              "en": "Unmarinated Korean beef ribs",
+              "ja": "韓牛生カルビ",
+              "zh-CN": "韩牛原味肋排",
+              "zh-TW": "韓牛原味肋排"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1479",
+          "fingerprint": "85a6bbab20635c38f4bbcd3442e961f50774b7e65595ae0bca9e69852f09872d",
+          "evidence": "한우 숙성등심, 한우차돌샤브전골",
+          "dish": {
+            "korean": "한우 숙성등심",
+            "labels": {
+              "ko": "한우 숙성등심",
+              "en": "Aged Korean beef sirloin",
+              "ja": "熟成韓牛サーロイン",
+              "zh-CN": "熟成韩牛西冷",
+              "zh-TW": "熟成韓牛西冷"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "sushi",
+      "labels": {
+        "ko": "초밥",
+        "en": "Sushi",
+        "ja": "寿司",
+        "zh-CN": "寿司",
+        "zh-TW": "壽司"
+      },
+      "members": [
+        {
+          "id": "1229",
+          "fingerprint": "8f472f012f22aeda8e2dd59228e8fe1356137245837c23b54c23e276adbeef8c",
+          "evidence": "특정식 ￦36,000\n특초밥 ￦20,000",
+          "dish": {
+            "korean": "특초밥",
+            "labels": {
+              "ko": "특초밥",
+              "en": "Special sushi",
+              "ja": "特上寿司",
+              "zh-CN": "特选寿司",
+              "zh-TW": "特選壽司"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1237",
+          "fingerprint": "b6f50f063484ff75331d40d457fbdd522b22153e998a4c15e7c1c55456667f52",
+          "evidence": "김초밥(후토마끼) ￦17,000\n초밥 정식 특선 ￦30,000-50,000",
+          "dish": {
+            "korean": "김초밥(후토마끼)",
+            "labels": {
+              "ko": "김초밥(후토마끼)",
+              "en": "Futomaki sushi roll",
+              "ja": "太巻き寿司",
+              "zh-CN": "太卷寿司",
+              "zh-TW": "太卷壽司"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1504",
+          "fingerprint": "757de52874e8b53c42d4e5f52f99383847189a0515d817b042bf7167e67dfe2c",
+          "evidence": "모듬초밥, 특선초밥",
+          "dish": {
+            "korean": "모듬초밥",
+            "labels": {
+              "ko": "모듬초밥",
+              "en": "Assorted sushi",
+              "ja": "寿司盛り合わせ",
+              "zh-CN": "什锦寿司",
+              "zh-TW": "什錦壽司"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1500",
+          "fingerprint": "6fbd59d673784aeac6c0ad0d5a3676875b3c55e4b869c26e0d09bcb49549d9cb",
+          "evidence": "물회소바 중, 명품초밥",
+          "dish": {
+            "korean": "명품초밥",
+            "labels": {
+              "ko": "명품초밥",
+              "en": "Premium sushi",
+              "ja": "特選寿司",
+              "zh-CN": "精品寿司",
+              "zh-TW": "精品壽司"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "936",
+          "fingerprint": "760534cdf1295a2b801ab263264b84c5c812824fe156dd99de31eb9fcf58fb72",
+          "evidence": "생선초밥, 코스요리",
+          "dish": {
+            "korean": "생선초밥",
+            "labels": {
+              "ko": "생선초밥",
+              "en": "Fish sushi",
+              "ja": "魚の寿司",
+              "zh-CN": "鱼寿司",
+              "zh-TW": "魚壽司"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1272",
+          "fingerprint": "0504b7929ec1cb1c191c5b987aa7db92bcf00e665d841ae1e8a13636dd7d8aa6",
+          "evidence": "추천초밥 12p, 광어+연어초밥 10p, 생선턱살구이",
+          "dish": {
+            "korean": "추천초밥 12p",
+            "labels": {
+              "ko": "추천초밥 12p",
+              "en": "Recommended sushi, 12 pieces",
+              "ja": "おすすめ寿司12貫",
+              "zh-CN": "推荐寿司12件",
+              "zh-TW": "推薦壽司12件"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "eel-rice",
+      "labels": {
+        "ko": "장어덮밥",
+        "en": "Eel rice bowl",
+        "ja": "うなぎご飯",
+        "zh-CN": "鳗鱼饭",
+        "zh-TW": "鰻魚飯"
+      },
+      "members": [
+        {
+          "id": "1492",
+          "fingerprint": "25698451113e86fc25f6e3dc9584124735cab433d3298581f817162b8feeaa71",
+          "evidence": "히츠마부시 ￦40,000\n아나고 히츠마부시 ￦28,000",
+          "dish": {
+            "korean": "히츠마부시",
+            "labels": {
+              "ko": "히츠마부시",
+              "en": "Hitsumabushi eel rice",
+              "ja": "ひつまぶし",
+              "zh-CN": "鳗鱼饭三吃",
+              "zh-TW": "鰻魚飯三吃"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1498",
+          "fingerprint": "459b1b4beb2f260236d424efd4475853d5483518a1ca284b09b525b1ff2d3699",
+          "evidence": "우나쥬 ￦43,000\n히츠마부시 ￦38,000",
+          "dish": {
+            "korean": "히츠마부시",
+            "labels": {
+              "ko": "히츠마부시",
+              "en": "Hitsumabushi eel rice",
+              "ja": "ひつまぶし",
+              "zh-CN": "鳗鱼饭三吃",
+              "zh-TW": "鰻魚飯三吃"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    },
+    {
+      "id": "dumplings",
+      "labels": {
+        "ko": "만두",
+        "en": "Dumplings",
+        "ja": "餃子",
+        "zh-CN": "饺子",
+        "zh-TW": "餃子"
+      },
+      "members": [
+        {
+          "id": "1617",
+          "fingerprint": "0b409a1a7b6ebf0201c26c22b7c00f3f8544ca9f15c97582b56e2cc3fdbc0338",
+          "evidence": "고기만두, 찐교자, 군만두, 맵군, 새우교자, 마라만두",
+          "dish": {
+            "korean": "고기만두",
+            "labels": {
+              "ko": "고기만두",
+              "en": "Meat dumplings",
+              "ja": "肉まん",
+              "zh-CN": "肉馅包子",
+              "zh-TW": "肉餡包子"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "965",
+          "fingerprint": "e85b142468afa34ba47439699e4d85476d0342be69e848132db29076053149aa",
+          "evidence": "삼선만두 ￦10,500\n군만두 ￦8,000",
+          "dish": {
+            "korean": "군만두",
+            "labels": {
+              "ko": "군만두",
+              "en": "Fried dumplings",
+              "ja": "焼き餃子",
+              "zh-CN": "煎饺",
+              "zh-TW": "煎餃"
+            }
+          },
+          "area": "busan-mainland"
+        },
+        {
+          "id": "1489",
+          "fingerprint": "de0d16ede2d01d1918c524ac8de6a52d4931e773697240885b81c2b16dc25e7d",
+          "evidence": "오향장육 ￦23,000 / 29,000\n군만두 ￦7,000",
+          "dish": {
+            "korean": "군만두",
+            "labels": {
+              "ko": "군만두",
+              "en": "Fried dumplings",
+              "ja": "焼き餃子",
+              "zh-CN": "煎饺",
+              "zh-TW": "煎餃"
+            }
+          },
+          "area": "busan-mainland"
+        }
+      ]
+    }
+  ]
+}

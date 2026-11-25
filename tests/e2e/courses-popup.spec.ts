@@ -66,7 +66,7 @@ test('all original categories contain ten ideas, support URL refresh/back and so
   await page.goBack(); await expect(page).toHaveURL(/category=food/); await expect(page.getByTestId('course-card')).toHaveCount(10);
   await page.goto('/courses/fa04?locale=en'); await expect(page.locator('.course-stops>li')).toHaveCount(4);
   await expect(page.locator('.course-warning').filter({hasText:'not validated'})).toHaveCount(1);
-  await page.locator('.course-stops a[href^="/food/2899"]').click(); await expect(page).toHaveURL(/\/food\/2899/); await expect(page.locator('.public-guide-facts')).toBeVisible();
+  await page.locator('.course-stops a[href^="/food/2899"]').filter({hasText:/^Place details ↗$/}).click(); await expect(page).toHaveURL(/\/food\/2899/); await expect(page.locator('.public-guide-facts')).toBeVisible();
   await page.goBack(); await expect(page).toHaveURL(/\/courses\/fa04/);
   for(const locale of ['ja','zh-CN','zh-TW','ko','en']) {
     await page.locator('.language-select select').selectOption(locale);

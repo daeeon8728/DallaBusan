@@ -1,4 +1,4 @@
-import { CourseSchema, CoursesResponseSchema, type CourseCategory, type Locale } from '@trip-fit/domain';
+import { CourseOffersSchema, CourseSchema, CoursesResponseSchema, type CourseCategory, type Locale } from '@trip-fit/domain';
 import type { CourseCatalog } from '../config/courses.js';
 import type { DestinationService } from './destinations.js';
 import type { GuideService } from './guides.js';
@@ -40,6 +40,21 @@ export function createCourseService(config: CourseCatalog, destinations: Destina
         cache.set(locale, result);
         return result;
     }
-    return { list(locale: Locale, category?: CourseCategory) { const all = items(locale); return CoursesResponseSchema.parse({ locale, items: category ? all.filter(item => item.category === category) : all, total: all.length, counts: { friends: all.filter(x => x.category === 'friends').length, family: all.filter(x => x.category === 'family').length, date: all.filter(x => x.category === 'date').length, food: all.filter(x => x.category === 'food').length, dallabusan: all.filter(x => x.category === 'dallabusan').length } }); }, get(id: string, locale: Locale) { return items(locale).find(item => item.id === id) ?? null; } };
+    return {
+      offers(id:string,locale:Locale) {
+        const course=items(locale).find(item=>item.id===id);if(!course)return null;
+        const seen=new Set<string>();
+        const related=course.steps.flatMap(step=>{
+          if(step.kind!=='destination'||!step.id)return [];
+          const detail=destinations.get(step.id,locale);if(!detail)return [];
+          return detail.related.flatMap(item=>{
+            if(item.relationship==='stay'||seen.has(item.offer.id))return [];
+            seen.add(item.offer.id);
+            return [{destinationId:step.id,destinationName:detail.destination.name,relationship:item.relationship,offer:item.offer}];
+          });
+        }).slice(0,12);
+        return CourseOffersSchema.parse({locale,courseId:id,items:related});
+      },
+      list(locale: Locale, category?: CourseCategory) { const all = items(locale); return CoursesResponseSchema.parse({ locale, items: category ? all.filter(item => item.category === category) : all, total: all.length, counts: { friends: all.filter(x => x.category === 'friends').length, family: all.filter(x => x.category === 'family').length, date: all.filter(x => x.category === 'date').length, food: all.filter(x => x.category === 'food').length, dallabusan: all.filter(x => x.category === 'dallabusan').length } }); }, get(id: string, locale: Locale) { return items(locale).find(item => item.id === id) ?? null; } };
 }
 export type CourseService = ReturnType<typeof createCourseService>;

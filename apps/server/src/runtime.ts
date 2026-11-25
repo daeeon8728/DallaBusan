@@ -1,3 +1,6 @@
+import {loadFoodAssistanceConfig} from './config/food-assistance.js';
+import {createFoodAssistanceService} from './services/food-assistance.js';
+import {registerFoodAssistanceRoutes} from './routes/food-assistance.js';
 import {loadStaySearchConfig,createStaySearchConfig} from './config/stay-search.js';
 import {registerStaySearchRoutes} from './routes/stay-search.js';
 import {loadTravelToolConfig,createTravelToolConfig} from './config/travel-tools.js';
@@ -60,7 +63,9 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   registerTravelToolRoutes(app,createTravelToolConfig(loadTravelToolConfig(),offerConfig));
   registerStayBannerRoutes(app,createStayBannerConfig(loadStayBannerConfig(),offerConfig));
   registerStayMapRoutes(app,createStayMapConfig(loadStayMapConfig(),offerConfig));
-  registerCourseRoutes(app,createCourseService(loadCourseCatalog(),destinationService,guideService,parkingAnchors,loadCourseRoutes()));
+  const courses=createCourseService(loadCourseCatalog(),destinationService,guideService,parkingAnchors,loadCourseRoutes());
+  registerCourseRoutes(app,courses);
+  registerFoodAssistanceRoutes(app,createFoodAssistanceService(loadFoodAssistanceConfig(),foodSnapshot,guideService,courses));
   app.addHook('onClose', async () => { db.close(); });
   return app;
 }

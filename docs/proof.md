@@ -1625,3 +1625,94 @@ d04c2c0 push 종료0 후 공개 main/index-BHLtSIIB.js와 CourseMap-Bilb10wU.js�
 ### 최종 공개 배포 확인
 
 495120c push 종료0. 새 /api/stay-search와 공개 번들/페이지를 확인한 후 live-check.mjs 종료0:5개 언어 GET/POST200·제공처2개·KRW/USD/JPY/CNY/TWD 요청 통화와 모든 날짜/성인/객실/아동 수/나이 파라미터·발급 추적값 동일성을 검사했다.360/1280px에서 공통 입력→링크2개→성인 변경 시 이전 링크0→번체 전환 입력 유지→재적용 링크2개,가로 넘침 없음/pageerror0을 확인했다. 공개 UI 검사는 외부 분석/판매처 요청을 대역으로 처리했으며 실제 판매처 결과 페이지 이동0이다. 앞선 실제 판매처 조건 표시 검증과 구분한다. 최종 자료는 var/imports/stay-sync-20261125/live-check.json에 로컬 보관했다. 제품 소스 이후 변경은 검증 기록/차별화 제안뿐이므로 빌드·회귀를 반복하지 않는다.
+
+
+## 2026-11-25 대안 식당·현장 카드 / 코스 중심 홈·영문 지도
+
+### 변경과 출처
+
+- domain: food-assistance.ts/course-offers.ts의 strict 공개 계약과 index export.
+- server: config/food-assistance.ts, services/food-assistance.ts, routes/food-assistance.ts, runtime.ts, services/courses.ts/routes/courses.ts. 읽기 전용 도움말과 기존 명소 관계를 재사용하는 코스 상품 API.
+- catalog: food-assistance.json의 명시 메뉴 그룹·원문 인용·전체 언어 지문. 10그룹/62식당, 현재 후보를 제공하는 식당48곳. 원본/공개 제외/사진/번역은 보존.
+- web: FoodAssistance.tsx·i18n/food-assistance.ts·food-assistance.css, PublicGuides.tsx 및 코스 식사 지점 진입. 한국어 원문 카드512곳/전체 상태514곳, food:2261/2262 한국어 원문 부재 안내.
+- web 홈: HomeCourses.tsx·i18n/home-courses.ts·home-courses.css·App.tsx. 코스3개를 첫 콘텐츠로 보여주며5범주/전체50코스 연결. 기존 검색·배너·프로모션·전체 상품·팝업 보존.
+- web 코스: CourseBookings.tsx/CoursesPage.tsx에서 현재 공개 명소의 검수된 비숙소 상품 최대12개, 중복 제거, 기존 상품 상세 재조회/외부 예약 이동. 코스 묶음 가격/패키지 판매로 오인시키지 않음.
+- 지도: config/english-map.ts, courses/EnglishBasemap.tsx, CourseMap.tsx/config/course-map.ts. Leaflet/OSM/저장 경로·핀은 유지하고 OpenFreeMap 벡터 배경에 영어→로마자 지명을 적용. 도로 번호 보존, 미제공 지명 임의 번역 없음.
+- package.json에 data:food-assistance:check, apps/web/package.json/lockfile에 maplibre-gl6.19.0·@maplibre/maplibre-gl-leaflet0.1.4 고정. 설치23패키지 추가/335감사/취약점0. .env 변경0.
+- tests: food-assistance 통합/E2E, course-offers 통합, english-map 단위, home-courses E2E. 기존 course-map·courses-popup·shared-stay-search 검증을 새 동작에 맞춰 보완. AGENTS/spec/plan/catalog-plan/차별화 제안과 restaurant-help-review 문서 갱신.
+
+공공 원본 수집일은2026-11-12이며 메뉴 묶음 검토일2026-11-25와 구분한다. assistant-source-evidence이며 사람/현장 승인·실시간 대기/영업·알레르기 적합성 검증을 뜻하지 않는다. 후보 거리25~2,500m는 대표 위치 간 직선거리다. 코스 맥락은 실제 포함 식당에만 제공하고 기존 코스/경로를 대안으로 자동 교체하지 않는다.
+
+### 최종 검증
+
+| 명령 / 작업 | 종료 및 결과 |
+| --- | --- |
+| npm.cmd run lint | 0 |
+| npm.cmd run typecheck | 0, server/web/domain 및 tools strict |
+| npm.cmd run test -- --run --maxWorkers=2 | 0,41파일/423검사 통과,23.98초 |
+| npm.cmd run check:providers | 0,149소스 검사 |
+| npm.cmd run build | 0,domain→server→web,영문 지도/worker 정적 산출물 생성 |
+| npm.cmd run data:food-assistance:check | 0,5개 언어 각각 상태514/한국어 카드512/대안48,10그룹62원문 ID 재계산 |
+| 관련6개 E2E 파일,3화면 크기 | 최초96개 중93통과·3개 기존 링크 선택자 모호성 실패. 정확한 상세 링크로 수정한 뒤 해당3개 재실행0/모두 통과. 최종 전체96개를 한 번에 재실행한 결과라고 주장하지 않음 |
+| 주문 카드 키보드/복사 집중 검사 | 3화면 모두 통과 |
+| 모바일 식당/주문 카드 시연 재검사 | 0,2개 통과 및 캡처 보관 |
+| dist 실행/HTTP smoke | 0,임시127.0.0.1:4328 서버:9페이지/10API 응답200,실행 후 종료 |
+| 실제 OpenFreeMap 시연 | 지도 응답10건/실패 응답0/canvas1/pageerror0,영어·로마자 지명과 기존 경로·출처 표시를 캡처에서 확인 |
+| 360/1280px 홈 시연 | 가로 넘침0. 사진·분석은 대역,지도만 별도 실제 소스 |
+| git diff --check | 0,CRLF 정규화 안내 외 공백 오류 없음 |
+
+E2E 명령: npm.cmd run test:e2e -- tests/e2e/home-courses.spec.ts tests/e2e/food-assistance.spec.ts tests/e2e/public-guides.spec.ts tests/e2e/course-map.spec.ts tests/e2e/shared-stay-search.spec.ts tests/e2e/courses-popup.spec.ts
+
+보완 후 명령: npm.cmd run test:e2e -- tests/e2e/courses-popup.spec.ts --grep "all original categories"
+
+검증 내용: 원본 지문/메뉴 변경 시 연결 보류,미공개 식당 차단,한국어 원문 부재,권역 분리,빈 후보,유효 코스 포함 관계와 다음 장소 비교,5개 언어,오래된 응답/재시도,실패한 사진 대체,복사 성공/실패,수량·질문 문구,바깥/Escape/고정 닫기·Tab 순환·초점/스크롤 복구·기존 저장 보존,홈 카테고리/상품 상세/언어 전환,지도 스타일 실패/재시도·빠른 코스 이탈,기존 팝업·독립 관광지/맛집/추천여행·숙소 조건.
+
+### 발견한 실패와 수정
+
+1. 전체 타입 검사에서 기존 숙소 E2E의 [locale,currency]가 string|undefined로 추론돼 실패했다. satisfies [string,string][]로 구조를 명시했으며 검사를 완화하지 않았다.
+2. 최초 커버리지 checker가 한국어 원문이 없는2개 식당을 발견했다. 외국어 메타데이터를 한국어 주소로 만들지 않고 nullable 카드/준비 안내를 추가했다.
+3. native dialog의 마지막 Tab 이동이 브라우저 쪽으로 빠지는 것을 집중 검사로 발견해 첫/마지막 요소 간 순환을 구현했다. 이후3화면 모두 통과.
+4. 동시 검증 중 다수 worker 시작 지연/기존5초 제한 초과가 발생했다. timeout/검사를 변경하지 않고 maxWorkers=2로 전체 실행해423개 통과했다.
+5. 새 홈과 프로모션의 형제 key가 locale로 겹쳐 언어 전환 때 이전 카드가 남았다. home-courses:/promotions: 접두사로 분리했고5개 언어 E2E 통과.
+6. NodeNext tools 검사가 브라우저 지도 라이브러리의 타입 선언을 따라가 실패했다. 지도 런타임 타입은 web Bundler 경계로 두고 테스트 대상 텍스트 변환은 순수 함수로 분리했다. skipLibCheck/검사 제외 없이 strict 통과.
+7. 새 대안 링크와 기존 상세 링크가 같은 음식점 경로를 가리켜 기존 E2E의 href prefix 선택자가2개를 찾았다. 정확한 상세 링크를 선택하도록 보완하고 해당3개 회귀를 통과했다.
+8. 첫 dist smoke는 Accept 헤더 없이 SPA 경로를 요청해404였다. 실제 브라우저의 text/html 헤더로 정상200을 확인했다. 이후 외부 사진 응답 때문에 networkidle 대기가 만료되어 사진을 대역으로 분리했다. 지도 시연도 모든 네트워크의 완전 유휴는15초 내 도달하지 않았지만 실제 응답10건/오류 안내0/페이지 오류0과 영문 렌더링을 확인했다. 전체 타일·모든 줌 단계 로드 완료라고 주장하지 않는다.
+
+### 시연과 남은 범위
+
+- [PC 코스 중심 홈](design/field-help-2026-11-25/home-1280.png)
+- [모바일 코스 중심 홈](design/field-help-2026-11-25/home-360.png)
+- [실제 영문 배경 지도](design/field-help-2026-11-25/english-map.png)
+- [모바일 대안 식당](design/field-help-2026-11-25/restaurant-alternatives-mobile.png)
+- [모바일 한국어 주문 카드](design/field-help-2026-11-25/korean-order-card-mobile.png)
+
+대역 화면의 공통 색 면은 검증용 이미지이며 운영 상품/관광지 사진을 대체하지 않는다. 실제 지도 시연만 공개 OpenFreeMap을 사용했다. 실제 식당 방문·대기/좌석 조회·메뉴 주문·제휴 구매/결제·항공권 발급·유료 API 호출은0건이다.
+
+기존 상품402/메인398,명소220,맛집514,편집 코스50/내부 테마17,원본 공공 DB/번역·사진·발급 링크·제공처 승인 상태를 보존했다. 새 상품 수집0/새 제휴 발급 링크0. 항공권은 공식 제휴 지원만 확인했으며 현재 계정 조건과 실제 발급 URL을 확인하지 않아 구현 이월이다. 새 의존성은 실제 설치/lockfile과 로컬 빌드로 확인했고 깨끗한 별도 복사본의 npm ci/Vercel 함수 재패키징·공개 배포는 이번에 수행하지 않았다. WebGL 미지원 실기기 및 모든 지도 POI 영문 표기는 보장하지 않는다. GitHub push/Vercel 배포는 미실행이며 로컬 구현·검증 결과다. 기존 Zod 주석·500KB 청크·Node SQLite/색상 경고는 비차단이며 지도 코드는 코스 화면에서만 지연 로드된다.
+
+
+## 2026-11-25 항공권 검색 추가 및 전체 변경 push 준비
+
+사용자 명시 요청으로 기존 코스 중심 홈·영문 지도·식당 도움말까지 포함해 DallaBusan 저장소에 올린다. 로그인된 기존 제휴 계정에서 항공권/English/도착Busan 검색창 S21548718을 실제 생성하고 원문 iframe을 확인했다. 기존 사이트332880325/AID10925986 발급이며 신규 계정·계약·채널은 만들지 않았다. 실제 화면에서 왕복/편도·출발지·Busan·날짜·좌석 등급·성인/아동/유아·Search를 확인했다. 검색 결과 이동/예약/결제는 하지 않았다. 수수료율·모든 국가/카드의 수익 인정은 확인하지 않았다.
+
+config/catalog/travel-tools.json에 중립 flight-search/kind=flights로 원문 URL을 보관하고 최소 공개 목록/수동 프레임을 재사용한다. 홈 보조 링크→/travel-tools?section=flights→항공권 탭이며5개 UI 언어/실제 영어 위젯 고지,예시 날짜를 직접 변경하고 공항·통화·수하물·운임을 재확인하라는 안내를 제공한다. 외부 도구의 고정 날짜를 임의 쿼리로 바꾸지 않는다. 공통 숙소 조건은 항공권과 독립적이다.
+
+변경: domain/travel-tools.ts,config/catalog/travel-tools.json,web App.tsx/TravelTools.tsx/i18n/flights.ts/travel-tools.css,flights 통합·E2E와 기존 travel-tools 검증,AGENTS/spec/plan/catalog-plan,docs/flights-review-2026-11-25.md. 새 키·의존성0. 이전 턴의 새 지도 의존성과 lockfile은 함께 포함한다.
+
+| 확인 | 결과 |
+| --- | --- |
+| npm.cmd run lint | 0 |
+| npm.cmd run typecheck | 0 |
+| npm.cmd run build | 0,domain/server/web 및 정적 지도 worker |
+| npm.cmd run check:providers | 0,150소스 |
+| npm.cmd run test -- --run --maxWorkers=2 | 0,42파일/425검사,22.38초 |
+| npm.cmd run test:e2e -- tests/e2e/flights.spec.ts tests/e2e/travel-tools.spec.ts tests/e2e/shared-stay-search.spec.ts tests/e2e/home-courses.spec.ts | 0,3화면36검사,35.3초 |
+| node var/imports/flights-20261125/dist-smoke.mjs | 0,9페이지/5개 언어 도구4개·항공kind/공통 숙소2링크·친구 코스10개와 전체50/기존 관련 상품 정상,외부 호출0 |
+| node var/imports/flights-20261125/package-check.mjs | 0,실제 Vercel 함수856파일을 독립 디렉터리에 전개하고 require(ESM) 제한하에서 항공/음식점 도움말/코스 상품/기존 상품402·프로모션3·맛집514·코스50와 숙소 API 정상 |
+| 공식 발급 도구 직접 표시 | 실제 영어 UI/Busan 기본값/검색 폼 확인. iframe 대역 검사와 구분 |
+
+도구 테스트의 기존3개 기대값을 실제 승인 도구4개로 갱신했으며 기존 숙소·상품 도구 동작 검사는 유지했다. 항공권 URL/추적·중복·호스트·경로/승인 변경 차단,설정만으로 제공처 변경,최초 외부 콘텐츠0,정확한 수동 iframe·sandbox/새 창·닫기/오류 재시도,언어/주소·새로고침,360/768/1280px 넘침 없음과 기존 숙소 입력/환산을 검증했다.
+
+시연: [모바일 항공권 탭](design/flights-2026-11-25/flights-mobile.png),[PC 항공권 탭](design/flights-2026-11-25/flights-desktop.png). 이미 발급한 도구의 위치/조작을 확인하는 대역 캡처다. 실제 공개 도구 확인은 별도 계정 브라우저 결과다.
+
+새로운 깨끗한 frontend npm ci는 재실행하지 않았다. 함수 패키지는 이전 깨끗한 설치본의 backend 의존성에 최신 서버/domain 소스와 전체 공개 config/catalog를 복사해 실제 빌더로 재구성했다. Vercel 클라우드 배포/공개 반영과 로컬 빌더 성공은 구분하며 push 후 상태를 확인한다. 사용자 비밀키·.env·로그·var/.vercel는 커밋에 포함하지 않는다.

@@ -38,7 +38,8 @@
     "data:parking-directory:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-parking-directory.ts",
     "data:localization:check": "npm run build --workspace @trip-fit/domain && tsx scripts/check-localization.ts",
     "data:courses:routes:refresh": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/refresh-course-routes.ts",
-    "data:courses:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-course-routes.ts"
+    "data:courses:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-course-routes.ts",
+    "data:food-assistance:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-food-assistance.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

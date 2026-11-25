@@ -1,5 +1,5 @@
 {
-  "reviewedOn": "2026-11-24",
+  "reviewedOn": "2026-11-25",
   "siteOrigin": "https://dallabusan.vercel.app",
   "tools": [
     {
@@ -167,6 +167,42 @@
       "fluid": false,
       "cardCount": null,
       "variants": {}
+    },
+    {
+      "id": "flight-search",
+      "providerId": "PROVIDER_A",
+      "enabled": true,
+      "approvalStatus": "approved",
+      "kind": "flights",
+      "titles": {
+        "en": "Flights to Busan",
+        "ko": "부산행 항공권",
+        "ja": "釜山行きの航空券",
+        "zh-CN": "飞往釜山的机票",
+        "zh-TW": "飛往釜山的機票"
+      },
+      "sourceUrl": "https://kr.trip.com/partners/tools/searchbox",
+      "allowedHosts": [
+        "www.trip.com"
+      ],
+      "pathPrefix": "/partners/ad/S21548718",
+      "frameName": "S21548718",
+      "protocol": "none",
+      "width": 320,
+      "height": 320,
+      "fluid": false,
+      "cardCount": null,
+      "variants": {
+        "en": {
+          "url": "https://www.trip.com/partners/ad/S21548718?Allianceid=10925986&SID=332880325&trip_sub1=",
+          "contentLocale": "en",
+          "currency": null,
+          "requiredQuery": {
+            "Allianceid": "10925986",
+            "SID": "332880325"
+          }
+        }
+      }
     }
   ]
 }

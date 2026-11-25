@@ -1,3 +1,6 @@
+import {getFlightCopy} from './i18n/flights.js';
+import {HomeCourses} from './HomeCourses.js';
+import {getHomeCourseCopy} from './i18n/home-courses.js';
 import {TravelToolsPage,TravelToolsLink} from './TravelTools.js';
 import { CoursesPage } from './courses/CoursesPage.js';
 import { RecommendationDialog } from './campaigns/RecommendationDialog.js';
@@ -66,6 +69,7 @@ export default function App() {
   }, []);
   useEffect(() => {
     if (isCourses || route === '/food' || route.startsWith('/food/') || route === '/recommended' || route.startsWith('/recommended/')) { const url=new URL(window.location.href); if(url.searchParams.get('locale')!==locale&&(!isCourses||route.startsWith('/courses/inspiration'))) { url.searchParams.delete('district'); url.searchParams.delete('category'); url.searchParams.delete('page'); } url.searchParams.set('locale',locale); window.history.replaceState(null,'',url.pathname+url.search); return; }
+    if(route==='/travel-tools'){const target=new URL(window.location.href);target.searchParams.set('locale',locale);if(target.searchParams.get('section')!=='flights')target.searchParams.delete('section');window.history.replaceState(null,'',target.pathname+target.search);return;}
     if (route.startsWith('/places/') || route === '/saved' || route === '/cart' || route === '/travel-tools') { window.history.replaceState(null,'',route+'?locale='+locale); return; }
     if (route === '/') { const url=new URL(window.location.href); url.searchParams.set('locale',locale); window.history.replaceState(null,'',url.pathname+url.search); return; }
     if (route !== '/search') return;
@@ -103,14 +107,15 @@ export default function App() {
       <div className="header-actions"><CartNav locale={locale} onNavigate={navigate}/><label className="language-select"><span aria-hidden="true">◎</span><span className="sr-only">{copy.language}</span><select aria-label={copy.language} value={locale} onChange={event => updateFilter(() => setLocale(LocaleSchema.parse(event.target.value)))}>{LANGUAGE_OPTIONS.map(item => <option key={item.locale} value={item.locale}>{item.label}</option>)}</select></label></div>
     </header>
     <main id="main"><ExchangeNotice locale={locale}/><SavedNotice locale={locale}/><CartNotice locale={locale}/>
-    {route==='/travel-tools'?<TravelToolsPage locale={locale} onNavigate={navigate} onOpen={setSelected}/>:isCourses ? <CoursesPage key={route+locale+navigationVersion+window.location.search} route={route} locale={locale} onNavigate={navigate}/> : route === "/cart" ? <CartPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : route === "/saved" ? <SavedPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : guideKind ? route.split("/")[2] ? <PublicGuideDetail key={route+locale} kind={guideKind} id={route.split("/")[2]??""} locale={locale} onNavigate={navigate}/> : <PublicGuideList key={route+locale+attempt} kind={guideKind} locale={locale} onNavigate={navigate}/> : route.startsWith("/places/") ? <DestinationPage slug={route.split("/")[2] ?? ""} locale={locale} onNavigate={navigate} onOpen={setSelected} /> : <>
-      <section className={route === "/search" ? "hero search-hero" : "hero"} aria-labelledby="hero-title">
+    {route==='/travel-tools'?<TravelToolsPage locale={locale} onNavigate={navigate} onOpen={setSelected}/>:isCourses ? <CoursesPage onOpen={setSelected} key={route+locale+navigationVersion+window.location.search} route={route} locale={locale} onNavigate={navigate}/> : route === "/cart" ? <CartPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : route === "/saved" ? <SavedPage locale={locale} onNavigate={navigate} onOpen={setSelected}/> : guideKind ? route.split("/")[2] ? <PublicGuideDetail key={route+locale} kind={guideKind} id={route.split("/")[2]??""} locale={locale} onNavigate={navigate}/> : <PublicGuideList key={route+locale+attempt} kind={guideKind} locale={locale} onNavigate={navigate}/> : route.startsWith("/places/") ? <DestinationPage slug={route.split("/")[2] ?? ""} locale={locale} onNavigate={navigate} onOpen={setSelected} /> : <>
+      {route==='/'&&<HomeCourses key={'home-courses:'+locale} locale={locale} onNavigate={navigate}/>}
+      <section className={route === "/search" ? "hero search-hero" : "hero home-secondary-search"} aria-labelledby="hero-title">
         <div className="hero-background" /><div className="hero-shade" />
-        <div className="hero-content"><p className="eyebrow">{copy.eyebrow}<span>35° N / 129° E</span></p><h1 id="hero-title">{route === "/search" ? guide.searchTitle : copy.heroTitle}</h1><p className="hero-body">{copy.heroBody}</p>
-          <form className="search-form" onSubmit={submit}><label className="sr-only" htmlFor="offer-search">{copy.searchLabel}</label><Icon name="search" size={23} /><input id="offer-search" type="search" maxLength={100} placeholder={copy.placeholder} value={search} onChange={event => setSearch(event.target.value)} /><button type="submit">{copy.search}<Icon name="arrow" size={20} /></button></form><TravelToolsLink locale={locale} onNavigate={navigate}/>
+        <div className="hero-content"><p className="eyebrow">{copy.eyebrow}<span>35° N / 129° E</span></p>{route==='/search'?<h1 id="hero-title">{guide.searchTitle}</h1>:<h2 id="hero-title">{getHomeCourseCopy(locale).search}</h2>}<p className="hero-body">{copy.heroBody}</p>
+          <form className="search-form" onSubmit={submit}><label className="sr-only" htmlFor="offer-search">{copy.searchLabel}</label><Icon name="search" size={23} /><input id="offer-search" type="search" maxLength={100} placeholder={copy.placeholder} value={search} onChange={event => setSearch(event.target.value)} /><button type="submit">{copy.search}<Icon name="arrow" size={20} /></button></form><div className="home-preparation-links"><TravelToolsLink locale={locale} onNavigate={navigate}/><a className="travel-tools-link" data-testid="flights-link" href={'/travel-tools?'+new URLSearchParams({locale,section:'flights'})} onClick={event=>{if(!event.ctrlKey&&!event.metaKey){event.preventDefault();navigate('/travel-tools?section=flights');}}}>{getFlightCopy(locale).link} ↗</a></div>
         </div><span className="hero-caption">GWANGALLI, BUSAN <span>01 / THE COAST</span></span>
       </section>
-      {route === "/" && <Promotions key={locale} locale={locale} onNavigate={navigate} onOpen={setSelected}/>}
+      {route === "/" && <Promotions key={'promotions:'+locale} locale={locale} onNavigate={navigate} onOpen={setSelected}/>}
       <MonthlyDestinations locale={locale} onNavigate={navigate}/>
 
       {route === "/search" && <><DestinationResults locale={locale} query={query} onNavigate={navigate} /><ParkingSearch locale={locale} query={query}/></>}
