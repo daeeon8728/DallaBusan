@@ -1581,3 +1581,8 @@ E2E는 외부 이미지·OSM 타일·GTM/외부 링크 대역을 사용한다. �
 539c275 push 종료0 후 공개 목록50개/친구10개와 새 번들을 확인했다. 최초 공개 상세 검사에서fr04가 한 번 실패했으나 당시 응답 상태가 저장되지 않아 원인을 단정하지 않는다. 이후 직접 조회200/도로 경로와5개 언어50건 상세를 확인했다. 이어 빠른 장소 선택→숙소 페이지 전환의 실제 배포 검사에서 Leaflet의 _leaflet_pos 읽기 오류를 포착했다. 대역 전체243개 통과만으로 공개 페이지 무오류를 확정하지 않았다. fitBounds의 animate:false와 MapContainer의 zoom/fade/marker zoom 애니메이션 비활성화로 뷰포트 전환 콜백을 없애고,5종 코스에서 선택 직후 이탈을 반복하며 pageerror를 수집하는 회귀를 추가한다. 최종 재검증/재배포 결과는 이어서 기록한다.
 
 지도 안정화 뒤 lint/typecheck/check:providers132소스/npm run build 모두 종료0,단위·통합37파일406개 재실행 종료0이다. npm run test:e2e -- tests/e2e/course-map.spec.ts 종료0,모바일/태블릿/PC15개(34.6초) 통과. 새 회귀는 화면별5개 코스에서 번호 선택 직후 숙소 페이지로 이동하고 두 검색창을 열며 pageerror0을 요구한다. 전체243개는 애니메이션 보완 전 통과 이력이고 격리된 지도 옵션 변경 뒤에는 관련15개를 재검증했다. 이후 공개 사이트의 최종 결과를 이어서 기록한다.
+
+
+### 최종 공개 사이트 확인
+
+d04c2c0 push 종료0 후 공개 main/index-BHLtSIIB.js와 CourseMap-Bilb10wU.js에서 안정화 옵션 zoomAnimation/fadeAnimation/markerZoomAnimation:false를 확인했다. live-check.mjs 최종 종료0:5개 언어 각각 목록200/전체50개/친구10개,친구 전체50건 상세200/도로 경로/구간 수 일치.360/1280px에서 친구 목록→번호 선택/선택 카드→숙소 비교 이동→클릭 전 iframe0/함께 열기2/함께 닫기0,가로 넘침 없음/pageerror0을 확인했다. 외부 iframe/사진·타일/분석은 이 공개 UI 검사에서도 대역이며 실제 제공처 검색·예약·광고 클릭0이다. 독립 로컬 회귀15개와 공개 동작 모두 지도 이탈 오류 없이 통과했다. 최종 공개 검증 자료는 var/imports/courses-upgrade-20261125/live-check.json에 로컬 보관한다. 제품 코드 이후 변경은 본 검증 기록뿐이므로 빌드/회귀를 반복하지 않는다.
