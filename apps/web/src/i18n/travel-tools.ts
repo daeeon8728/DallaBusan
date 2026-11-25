@@ -5,4 +5,12 @@ const COPY={
  ja:{title:'旅行予約ツール',intro:'釜山の宿泊施設を検索し、チケットや体験、提携先のプランを探しましょう。',note:'ツールを開いたときだけ提携先のコンテンツを読み込みます。料金・空き状況・予約は販売元で確認してください。予約により手数料を受け取る場合があります。',open:'ツールを開く',close:'ツールを閉じる',newTab:'提携先で開く',retry:'再試行',failed:'ツールを読み込めませんでした。',all:'すべて',stays:'宿泊施設を探す',experiences:'チケット・体験',english:'この提携ツールは現在英語で提供されています。言語・通貨・日付・人数は予約サイトで確認してください。',picks:'釜山で絞り込んだ提携先の最新商品です。韓国全域で利用するサービスも含まれる場合があり、当サイトの確認済みカタログとは別です。',fallback:'表示されない場合は、提携先で直接開いてください。',empty:'現在利用できるツールはありません。',more:'釜山旅行の準備を続ける',back:'確認済みの商品を見る'},
  'zh-CN':{title:'旅行预订工具',intro:'搜索釜山住宿，探索门票、体验和合作平台商品。',note:'仅在打开工具时加载合作平台内容。请在预订平台确认价格、可用情况及预订。我们可能获得预订佣金。',open:'打开工具',close:'关闭工具',newTab:'在合作平台打开',retry:'重试',failed:'无法加载此工具。',all:'全部工具',stays:'查找住宿',experiences:'门票与体验',english:'此合作工具目前提供英文版本。请在预订平台确认语言、货币、日期及人数。',picks:'合作平台筛选釜山后实时推荐的商品，也可能包含韩国全境通用服务，与本站审核商品目录分开。',fallback:'若工具无法显示，请直接在合作平台打开。',empty:'目前没有可用工具。',more:'继续准备釜山之旅',back:'浏览审核商品'},
  'zh-TW':{title:'旅行預訂工具',intro:'搜尋釜山住宿，探索門票、體驗及合作平台商品。',note:'僅在開啟工具時載入合作平台內容。請在預訂平台確認價格、可用情況及預訂。我們可能獲得預訂佣金。',open:'開啟工具',close:'關閉工具',newTab:'在合作平台開啟',retry:'重試',failed:'無法載入此工具。',all:'全部工具',stays:'尋找住宿',experiences:'門票與體驗',english:'此合作工具目前提供英文版本。請在預訂平台確認語言、貨幣、日期及人數。',picks:'合作平台篩選釜山後即時推薦的商品，也可能包含韓國全境通用服務，與本站審核商品目錄分開。',fallback:'若工具無法顯示，請直接在合作平台開啟。',empty:'目前沒有可用工具。',more:'繼續準備釜山之旅',back:'瀏覽審核商品'},
-};export function getTravelToolsCopy(locale:Locale){return COPY[locale];}
+};export function getTravelToolsCopy(locale:Locale){return {...COPY[locale],...COMPARISON[locale]};}
+
+const COMPARISON={
+ en:{compare:'Two hotel searches. One clear view.',compareIntro:'Open the searches side by side. Set the same dates and guests in each partner tool to compare your options; results are not synchronized.',openBoth:'Open both searches',closeBoth:'Close both searches'},
+ ko:{compare:'숙소 검색, 좌우로 비교하세요.',compareIntro:'두 검색창을 나란히 열어보세요. 같은 날짜·인원을 각 판매처에 설정해 비교할 수 있습니다. 검색 결과는 자동 동기화되지 않습니다.',openBoth:'두 검색창 함께 열기',closeBoth:'두 검색창 닫기'},
+ ja:{compare:'2つの宿泊検索を並べて比較',compareIntro:'検索を並べて開けます。日付・人数は各提携先で同じ条件に設定してください。結果は自動同期されません。',openBoth:'両方の検索を開く',closeBoth:'両方の検索を閉じる'},
+ 'zh-CN':{compare:'两个住宿搜索，并排比较。',compareIntro:'并排打开搜索，在各平台设置相同日期与人数以比较选项。搜索结果不会自动同步。',openBoth:'同时打开两个搜索',closeBoth:'关闭两个搜索'},
+ 'zh-TW':{compare:'兩個住宿搜尋，並排比較。',compareIntro:'並排開啟搜尋，在各平台設定相同日期與人數以比較選項。搜尋結果不會自動同步。',openBoth:'同時開啟兩個搜尋',closeBoth:'關閉兩個搜尋'},
+};

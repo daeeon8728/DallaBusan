@@ -6,7 +6,7 @@ import {buildParkingAnchors,loadParkingAttractions} from '../apps/server/src/con
 import {COURSE_MAP_CONFIG,courseRoutesPath,loadCourseRoutes,CourseRouteSnapshotSchema,type CourseRouteSnapshot} from '../apps/server/src/config/course-routes.js';
 import {courseRouteFingerprint,courseWaypoints,parseCourseRoadRoute} from '../apps/server/src/services/course-routing.js';
 const config=loadCourseCatalog();
-if(config.items.length!==40)throw new Error('Expected 40 source-checked courses; review source fingerprints first');
+if(config.items.length!==50)throw new Error('Expected 50 source-checked courses; review source fingerprints first');
 const anchors=buildParkingAnchors(loadDestinationConfig(),loadGuideSnapshot('food'),loadParkingAttractions());
 const prior=loadCourseRoutes(),items:CourseRouteSnapshot['items']=[];
 let calls=0;

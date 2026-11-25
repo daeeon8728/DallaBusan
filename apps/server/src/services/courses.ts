@@ -40,6 +40,6 @@ export function createCourseService(config: CourseCatalog, destinations: Destina
         cache.set(locale, result);
         return result;
     }
-    return { list(locale: Locale, category?: CourseCategory) { const all = items(locale); return CoursesResponseSchema.parse({ locale, items: category ? all.filter(item => item.category === category) : all, total: all.length, counts: { family: all.filter(x => x.category === 'family').length, date: all.filter(x => x.category === 'date').length, food: all.filter(x => x.category === 'food').length, dallabusan: all.filter(x => x.category === 'dallabusan').length } }); }, get(id: string, locale: Locale) { return items(locale).find(item => item.id === id) ?? null; } };
+    return { list(locale: Locale, category?: CourseCategory) { const all = items(locale); return CoursesResponseSchema.parse({ locale, items: category ? all.filter(item => item.category === category) : all, total: all.length, counts: { friends: all.filter(x => x.category === 'friends').length, family: all.filter(x => x.category === 'family').length, date: all.filter(x => x.category === 'date').length, food: all.filter(x => x.category === 'food').length, dallabusan: all.filter(x => x.category === 'dallabusan').length } }); }, get(id: string, locale: Locale) { return items(locale).find(item => item.id === id) ?? null; } };
 }
 export type CourseService = ReturnType<typeof createCourseService>;

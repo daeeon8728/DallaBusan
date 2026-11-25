@@ -15,12 +15,12 @@ describe('source-linked editorial course previews', () => {
   let app: FastifyInstance;
   beforeAll(async () => { app = await createRuntimeApp({ readOnlySnapshot: true }); });
   afterAll(async () => { await app?.close(); });
-  it('serves forty ideas in five languages with ten per category and pending checks', async () => {
+  it('serves fifty ideas in five languages with ten per category and pending checks', async () => {
     for (const locale of LocaleSchema.options) {
       const r = await app.inject('/api/courses?locale='+locale); expect(r.statusCode).toBe(200);
       const input: unknown = r.json(), data = CoursesResponseSchema.parse(input);
-      expect(data.total).toBe(40); expect(data.items).toHaveLength(40); expect(data.counts).toEqual({family:10,date:10,food:10,dallabusan:10});
-      expect(new Set(data.items.map(x=>x.id)).size).toBe(40);
+      expect(data.total).toBe(50); expect(data.items).toHaveLength(50); expect(data.counts).toEqual({family:10,date:10,friends:10,food:10,dallabusan:10});
+      expect(new Set(data.items.map(x=>x.id)).size).toBe(50);
       for (const item of data.items) {
         expect(item.locale).toBe(locale); expect(item.status).toBe('editorial-idea'); expect(item.routeCheck).toBe('pending'); expect(item.fieldValidation).toBe('not-performed');
         expect(item.steps.every(step=>step.kind!=='note'&&step.coordinates!==null)).toBe(true);
@@ -65,4 +65,23 @@ describe('source-linked editorial course previews', () => {
     const service = createCourseService(config,createDestinationService(loadDestinationConfig(),createOfferService(loadOfferCatalogConfig())),createGuideService({food:loadGuideSnapshot('food'),recommended:null}));
     expect(service.get(first.id,'en')).toBeNull(); expect(service.list('en').items.some(x=>x.id===first.id)).toBe(false);
   });
+  it('adds ten distinct friends sequences with specific five-language guidance and all route legs', async()=>{
+    const catalog=loadCourseCatalog(),friends=catalog.items.filter(item=>item.category==='friends');
+    expect(friends).toHaveLength(10);
+    const sequences=catalog.items.map(item=>JSON.stringify(item.steps.map(step=>step.kind+':'+('id' in step?step.id:''))));
+    expect(new Set(sequences).size).toBe(catalog.items.length);
+    for(const locale of LocaleSchema.options){
+      const filtered=CoursesResponseSchema.parse((await app.inject('/api/courses?category=friends&locale='+locale)).json());
+      expect(filtered.items).toHaveLength(10);expect(filtered.total).toBe(50);
+      for(const item of friends){
+        const result=await app.inject('/api/courses/'+item.id+'?locale='+locale);expect(result.statusCode).toBe(200);
+        const course=CourseDetailSchema.parse(result.json()).course;
+        expect(course.category).toBe('friends');expect(course.intro.length).toBeGreaterThan(20);expect(course.tips.length).toBeGreaterThan(15);
+        expect(course.steps.every(step=>step.id&&step.coordinates&&step.image&&step.href)).toBe(true);
+        expect(course.route.legs).toHaveLength(course.steps.length-1);expect(course.route.status).toBe('road-route');
+        if(locale==='en'&&item.id==='fr09'){const meal=course.steps.find(step=>step.kind==='food'&&step.id==='1108');expect(meal?.description).toBe('');expect(meal?.menu).toBeTruthy();}
+      }
+    }
+  });
+
 });

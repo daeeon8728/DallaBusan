@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "reviewedOn": "2026-11-24",
+  "reviewedOn": "2026-11-25",
   "sources": [
     {
       "kind": "destination",
@@ -2288,6 +2288,486 @@
         "zh-CN": "海岸路段请确认天气、风力与通行限制，天黑前完成移动。",
         "zh-TW": "海岸路段請確認天氣、風力與通行限制，天黑前完成移動。"
       }
+    },
+    {
+      "id": "fr01",
+      "category": "friends",
+      "titles": {
+        "ko": "전포 골목과 커피 친구들",
+        "en": "Jeonpo Coffee & Creative Alleys",
+        "ja": "友達と全浦カフェ・路地巡り",
+        "zh-CN": "朋友的田浦咖啡与街巷",
+        "zh-TW": "朋友的田浦咖啡與街巷"
+      },
+      "status": "editorial-idea",
+      "mode": "walking",
+      "intro": {
+        "ko": "전포공구길 골목을 둘러보고 블랙업커피와 커피스가모에서 커피·케이크를 골라 즐긴 뒤 상상마당으로 이어가는 도보 제안입니다. 두 카페는 모두 방문하거나 하나를 골라 쉬어가세요.",
+        "en": "Browse Jeonpo’s alleys, choose coffee and cake at Blackup Coffee and Coffee Sugamo, then continue to the cultural space at Sangsangmadang. Visit both cafés or take your break at just one.",
+        "ja": "全浦の路地を歩き、ブラックアップとコーヒースガモでコーヒーやケーキを選んで、想像マダンへ。カフェは両方でも、一軒だけでも。",
+        "zh-CN": "逛田浦街巷，在Blackup Coffee和Coffee Sugamo选择咖啡与蛋糕，再前往想象空间。两家咖啡店可都去，也可选一家休息。",
+        "zh-TW": "逛田浦街巷，在Blackup Coffee和Coffee Sugamo選擇咖啡與蛋糕，再前往想像空間。兩家咖啡店可都去，也可選一家休息。"
+      },
+      "tips": {
+        "ko": "카페 주문과 상상마당 전시·행사 여부는 각각 확인하세요. 전시 입장이나 좌석을 보장하지 않습니다.",
+        "en": "Check café orders and the cultural venue’s current exhibitions separately. Seats and exhibition admission are not guaranteed.",
+        "ja": "注文条件や開催中の展示は各施設で確認してください。座席・展示入場は保証しません。",
+        "zh-CN": "请分别确认点单要求及当期展览，不保证座位或展览入场。",
+        "zh-TW": "請分別確認點餐要求及當期展覽，不保證座位或展覽入場。"
+      },
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-1329",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "food",
+          "id": "1636",
+          "stayMinutes": 40
+        },
+        {
+          "kind": "food",
+          "id": "1447",
+          "stayMinutes": 40
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1185",
+          "stayMinutes": 45
+        }
+      ]
+    },
+    {
+      "id": "fr02",
+      "category": "friends",
+      "titles": {
+        "ko": "광안리 국밥과 바다 산책",
+        "en": "Gwangalli Bites & Beach Photos",
+        "ja": "広安里の食事と海辺フォト",
+        "zh-CN": "广安里美食与海边合影",
+        "zh-TW": "廣安里美食與海邊合影"
+      },
+      "status": "editorial-idea",
+      "mode": "walking",
+      "intro": {
+        "ko": "안목에서 식사하고 홍옥당의 팥 디저트를 고른 뒤 광안리 해변과 민락수변공원을 걸으며 단체 사진을 남기는 코스입니다.",
+        "en": "Start with a meal at Anmok and red-bean sweets at Hongokdang, then walk Gwangalli Beach and Millak Waterfront Park for photos together.",
+        "ja": "アンモクで食事、ホンオクダンで小豆スイーツ。その後は広安里海岸と民楽水辺公園を歩いて記念撮影。",
+        "zh-CN": "先在Anmok用餐、Hongokdang吃红豆甜点，再沿广安里海滩和民乐水边公园散步合影。",
+        "zh-TW": "先在Anmok用餐、Hongokdang吃紅豆甜點，再沿廣安里海灘和民樂水邊公園散步合影。"
+      },
+      "tips": {
+        "ko": "해변은 바람과 기상에 맞춰 조정하세요. 야경 점등·공연·짧은 대기는 보장하지 않습니다.",
+        "en": "Adjust the beach walk for wind and weather. Lighting schedules, performances and short queues are not guaranteed.",
+        "ja": "風や天候に合わせて散歩を調整。ライトアップ・公演・短い待ち時間は保証しません。",
+        "zh-CN": "请按风力与天气调整海边行程，不保证灯光、演出或排队时间。",
+        "zh-TW": "請按風力與天氣調整海邊行程，不保證燈光、演出或排隊時間。"
+      },
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1921",
+          "stayMinutes": 55
+        },
+        {
+          "kind": "food",
+          "id": "959",
+          "stayMinutes": 30
+        },
+        {
+          "kind": "destination",
+          "id": "gwangalli",
+          "stayMinutes": 50
+        },
+        {
+          "kind": "destination",
+          "id": "busan-285",
+          "stayMinutes": 35
+        }
+      ]
+    },
+    {
+      "id": "fr03",
+      "category": "friends",
+      "titles": {
+        "ko": "해운대 아트와 달맞이 차",
+        "en": "Haeundae Art & Tea with Friends",
+        "ja": "友達と海雲台アート・お茶",
+        "zh-CN": "海云台艺术与好友茶聚",
+        "zh-TW": "海雲臺藝術與好友茶聚"
+      },
+      "status": "editorial-idea",
+      "mode": "walking",
+      "intro": {
+        "ko": "거대곰탕 식사로 시작해 해운대 해변과 지그재그아트센터를 둘러보고 비비비당의 차로 마무리합니다. 해변 이후 오르막 이동을 감안하세요.",
+        "en": "Begin with a meal at Geodae Gomtang, visit Haeundae Beach and Zigzag Art Center, and finish with tea at Bibibidang. Allow for uphill sections after the beach.",
+        "ja": "コデコムタンで食事後、海雲台海岸とジグザグアートセンターへ。最後はビビビダンでお茶を。海岸の先の坂道に余裕を。",
+        "zh-CN": "从Geodae Gomtang用餐开始，游览海云台海滩与Zigzag艺术中心，最后在Bibibidang喝茶。海滩后有上坡路段。",
+        "zh-TW": "從Geodae Gomtang用餐開始，遊覽海雲臺海灘與Zigzag藝術中心，最後在Bibibidang喝茶。海灘後有上坡路段。"
+      },
+      "tips": {
+        "ko": "전시 운영·입장료와 카페 주문 조건은 방문 전 확인하세요. 언덕 구간은 일행의 보행 속도에 맞추세요.",
+        "en": "Check exhibition access, fees and café ordering requirements. Set a comfortable pace for the uphill sections.",
+        "ja": "展示の営業・料金とカフェの注文条件を確認し、坂道は皆のペースに合わせてください。",
+        "zh-CN": "请确认展览开放、收费及咖啡店点单要求，上坡按同行者体力调整。",
+        "zh-TW": "請確認展覽開放、收費及咖啡店點餐要求，上坡依同行者體力調整。"
+      },
+      "steps": [
+        {
+          "kind": "food",
+          "id": "2899",
+          "stayMinutes": 55
+        },
+        {
+          "kind": "destination",
+          "id": "busan-373",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "destination",
+          "id": "busan-2753",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "food",
+          "id": "1845",
+          "stayMinutes": 40
+        }
+      ]
+    },
+    {
+      "id": "fr04",
+      "category": "friends",
+      "titles": {
+        "ko": "영도 항구와 베이커리 모임",
+        "en": "Yeongdo Harbor & Bakery Hangout",
+        "ja": "影島の港とベーカリー集合",
+        "zh-CN": "影岛港口与面包店相聚",
+        "zh-TW": "影島港口與麵包店相聚"
+      },
+      "status": "editorial-idea",
+      "mode": "driving",
+      "intro": {
+        "ko": "영도다리에서 시작해 재기돼지국밥과 깡깡이예술마을을 둘러보고 피아크 베이커리로 이동합니다. 마지막 구간이 길어 차량 이동으로 제안합니다.",
+        "en": "Meet at Yeongdo Bridge, have a meal at Jaegi Dwaeji Gukbap, explore Kangkangee Arts Village, then drive to P.ARK bakery. The longer final transfer makes this a driving idea.",
+        "ja": "影島大橋で集合し、チェギテジクッパとカンカンイ芸術村を訪れて、最後はP.ARKへ。後半の移動が長いため車向けです。",
+        "zh-CN": "从影岛大桥集合，品尝Jaegi猪肉汤饭、逛敲敲艺术村，最后开车去P.ARK面包店。末段较长，建议驾车。",
+        "zh-TW": "從影島大橋集合，品嘗Jaegi豬肉湯飯、逛敲敲藝術村，最後開車去P.ARK麵包店。末段較長，建議開車。"
+      },
+      "tips": {
+        "ko": "운전자는 음주하지 말고 목적지별 주차·동승 인원을 확인하세요. 항구 작업 구역은 들어가지 마세요.",
+        "en": "The driver should not drink. Confirm parking and vehicle capacity; stay out of working harbor areas.",
+        "ja": "運転者は飲酒せず、駐車場と定員を確認。港の作業区域には入らないでください。",
+        "zh-CN": "司机请勿饮酒，确认停车与车辆人数，不要进入港口作业区。",
+        "zh-TW": "駕駛請勿飲酒，確認停車與車輛人數，不要進入港口作業區。"
+      },
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-369",
+          "stayMinutes": 25
+        },
+        {
+          "kind": "food",
+          "id": "1837",
+          "stayMinutes": 55
+        },
+        {
+          "kind": "destination",
+          "id": "busan-256",
+          "stayMinutes": 45
+        },
+        {
+          "kind": "food",
+          "id": "1445",
+          "stayMinutes": 50
+        }
+      ]
+    },
+    {
+      "id": "fr05",
+      "category": "friends",
+      "titles": {
+        "ko": "송도 바다와 구름다리 산책",
+        "en": "Songdo Coast & Bridge Walk",
+        "ja": "松島の海と雲橋ウォーク",
+        "zh-CN": "松岛海岸与云桥散步",
+        "zh-TW": "松島海岸與雲橋散步"
+      },
+      "status": "editorial-idea",
+      "mode": "walking",
+      "intro": {
+        "ko": "송도해변에서 용궁구름다리와 암남공원 방향으로 걷고 디에이블 송도점에서 식사하는 해안 코스입니다. 해안 출입 가능 여부부터 확인하세요.",
+        "en": "Walk from Songdo Beach toward Yonggung Suspension Bridge and Amnam Park, then sit down for a meal at D.Able Songdo. Check coastal access before setting out.",
+        "ja": "松島海岸から龍宮雲橋・岩南公園方面へ歩き、ディエイブル松島店で食事。出発前に海岸の通行可否を確認してください。",
+        "zh-CN": "从松岛海滩走向龙宫云桥和岩南公园，再到D.Able松岛店用餐。出发前请确认海岸通行情况。",
+        "zh-TW": "從松島海灘走向龍宮雲橋和岩南公園，再到D.Able松島店用餐。出發前請確認海岸通行情況。"
+      },
+      "tips": {
+        "ko": "계단·우천·강풍 통제와 구름다리 운영을 확인하세요. 케이블카 탑승은 이 도보 시간에 포함되지 않습니다.",
+        "en": "Check stairs, bridge opening and closures in rain or strong winds. Cable-car rides are not included in the walking estimate.",
+        "ja": "階段・雨天や強風時の規制・橋の営業を確認。ケーブルカーの乗車時間は徒歩の推定に含みません。",
+        "zh-CN": "请确认台阶、云桥开放及风雨管制，步行估算不含缆车。",
+        "zh-TW": "請確認階梯、雲橋開放及風雨管制，步行估算不含纜車。"
+      },
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-286",
+          "stayMinutes": 40
+        },
+        {
+          "kind": "destination",
+          "id": "busan-833",
+          "stayMinutes": 35
+        },
+        {
+          "kind": "destination",
+          "id": "busan-326",
+          "stayMinutes": 50
+        },
+        {
+          "kind": "food",
+          "id": "960",
+          "stayMinutes": 60
+        }
+      ]
+    },
+    {
+      "id": "fr06",
+      "category": "friends",
+      "titles": {
+        "ko": "다대포 식사와 노을 모임",
+        "en": "Dadaepo Meal & Sunset Catch-up",
+        "ja": "多大浦の食事と夕景",
+        "zh-CN": "多大浦聚餐与落日",
+        "zh-TW": "多大浦聚餐與落日"
+      },
+      "status": "editorial-idea",
+      "mode": "driving",
+      "intro": {
+        "ko": "영진돼지국밥 본점에서 식사한 뒤 차량으로 다대포해변공원과 해수욕장으로 이동하고 아미산전망대로 이어갑니다. 일몰 시각에 맞춰 순서는 조정하세요.",
+        "en": "Have a meal at Yeongjin Dwaeji Gukbap, drive to Dadaepo Beach Park and beach, then continue to Amisan Observatory. Adjust your timing around sunset.",
+        "ja": "ヨンジンテジクッパ本店で食事後、車で多大浦海辺公園・海岸へ。最後は峨眉山展望台へ、日没時刻に合わせて調整を。",
+        "zh-CN": "先在Yeongjin猪肉汤饭本店用餐，开车到多大浦海滨公园与海滩，再到峨眉山展望台。请围绕日落时间调整。",
+        "zh-TW": "先在Yeongjin豬肉湯飯本店用餐，開車到多大浦海濱公園與海灘，再到峨眉山展望台。請依日落時間調整。"
+      },
+      "tips": {
+        "ko": "전망대 운영시간과 주차를 확인하세요. 노을·분수 공연이나 날씨를 보장하지 않습니다.",
+        "en": "Check observatory hours and parking. Sunset visibility, fountain performances and weather are not guaranteed.",
+        "ja": "展望台の営業時間と駐車場を確認。夕景・噴水公演・天候は保証しません。",
+        "zh-CN": "请确认展望台开放时间与停车，不保证晚霞、喷泉表演或天气。",
+        "zh-TW": "請確認展望臺開放時間與停車，不保證晚霞、噴泉表演或天氣。"
+      },
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1118",
+          "stayMinutes": 55
+        },
+        {
+          "kind": "destination",
+          "id": "busan-1718",
+          "stayMinutes": 35
+        },
+        {
+          "kind": "destination",
+          "id": "busan-366",
+          "stayMinutes": 50
+        },
+        {
+          "kind": "destination",
+          "id": "busan-287",
+          "stayMinutes": 35
+        }
+      ]
+    },
+    {
+      "id": "fr07",
+      "category": "friends",
+      "titles": {
+        "ko": "송정 태국음식과 바닷길",
+        "en": "Songjeong Thai Bites & Sea Air",
+        "ja": "松亭のタイ料理と海風",
+        "zh-CN": "松亭泰餐与海风",
+        "zh-TW": "松亭泰餐與海風"
+      },
+      "status": "editorial-idea",
+      "mode": "walking",
+      "intro": {
+        "ko": "어밤부에서 식사하고 송정 해변과 구덕포길을 걸은 뒤 올드머그에서 쉬어갑니다. 식사부터 카페까지 이어지는 친구 모임용 도보 코스입니다.",
+        "en": "Meet for a meal at Eobambu, walk Songjeong Beach and Gudeokpo-gil, then relax at Old Mug. A food-to-café walking idea for catching up with friends.",
+        "ja": "アバンブで食事し、松亭海岸と九徳浦の道を歩いてオールドマグで一休み。友達との食事からカフェまでの徒歩プランです。",
+        "zh-CN": "在Eobambu聚餐，散步松亭海滩与九德浦路，再去Old Mug休息。适合朋友从用餐一路聊到咖啡店。",
+        "zh-TW": "在Eobambu聚餐，散步松亭海灘與九德浦路，再去Old Mug休息。適合朋友從用餐一路聊到咖啡店。"
+      },
+      "tips": {
+        "ko": "일행이 많으면 좌석과 식재료를 먼저 확인하세요. 서핑 수업·장비 대여는 포함된 상품이 아닙니다.",
+        "en": "For larger groups, check seats and ingredients first. Surf lessons and equipment rental are not included.",
+        "ja": "大人数なら座席と食材を先に確認。サーフィン講習・用具レンタルは含みません。",
+        "zh-CN": "人数较多请先确认座位与食材，不包含冲浪课程或装备租赁。",
+        "zh-TW": "人數較多請先確認座位與食材，不包含衝浪課程或裝備租賃。"
+      },
+      "steps": [
+        {
+          "kind": "food",
+          "id": "1477",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "destination",
+          "id": "busan-280",
+          "stayMinutes": 40
+        },
+        {
+          "kind": "destination",
+          "id": "busan-2095",
+          "stayMinutes": 35
+        },
+        {
+          "kind": "food",
+          "id": "1460",
+          "stayMinutes": 40
+        }
+      ]
+    },
+    {
+      "id": "fr08",
+      "category": "friends",
+      "titles": {
+        "ko": "망미 전시와 강변 친구 모임",
+        "en": "Mangmi Art & Riverside Friends",
+        "ja": "望美のアートと川辺の集い",
+        "zh-CN": "望美艺术与河畔好友行",
+        "zh-TW": "望美藝術與河畔好友行"
+      },
+      "status": "editorial-idea",
+      "mode": "walking",
+      "intro": {
+        "ko": "수영사적공원에서 시작해 F1963 전시 공간과 마이클어반팜테이블 식사를 연결하고 APEC나루공원으로 걸어갑니다.",
+        "en": "Start at Suyeong Historical Park, explore F1963, have a meal at Michael’s Urban Farm Table, and walk on to APEC Naru Park.",
+        "ja": "水営史跡公園からF1963へ。マイケルズ・アーバンファームテーブルで食事後、APECナル公園へ歩きます。",
+        "zh-CN": "从水营史迹公园到F1963，在Michael’s Urban Farm Table用餐，再步行到APEC Naru公园。",
+        "zh-TW": "從水營史蹟公園到F1963，在Michael’s Urban Farm Table用餐，再步行到APEC Naru公園。"
+      },
+      "tips": {
+        "ko": "전시 일정과 단체 식사 좌석을 별도 확인하세요. 강변까지는 도보 이동이 길어질 수 있습니다.",
+        "en": "Check exhibitions and group seating separately. Allow extra time for the walk to the river.",
+        "ja": "展示日程と団体席を別途確認し、川辺までの徒歩に余裕を持たせてください。",
+        "zh-CN": "请分别确认展览日程与团体座位，留足步行到河边的时间。",
+        "zh-TW": "請分別確認展覽日程與團體座位，留足步行到河邊的時間。"
+      },
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-301",
+          "stayMinutes": 35
+        },
+        {
+          "kind": "destination",
+          "id": "busan-372",
+          "stayMinutes": 55
+        },
+        {
+          "kind": "food",
+          "id": "1589",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "destination",
+          "id": "busan-362",
+          "stayMinutes": 40
+        }
+      ]
+    },
+    {
+      "id": "fr09",
+      "category": "friends",
+      "titles": {
+        "ko": "시민공원과 밀면·케이크",
+        "en": "Citizens Park, Noodles & Cake",
+        "ja": "市民公園・ミルミョン・ケーキ",
+        "zh-CN": "市民公园、冷面与蛋糕",
+        "zh-TW": "市民公園、冷麵與蛋糕"
+      },
+      "status": "editorial-idea",
+      "mode": "driving",
+      "intro": {
+        "ko": "부산시민공원 산책 뒤 당감밀면에서 식사하고 연화제과의 케이크로 마무리합니다. 세 장소 사이 이동은 차량 기준으로 확인하세요.",
+        "en": "Take a stroll in Busan Citizens Park, sit down at Danggam Milmyeon, and finish with cake at Yeonhwa Bakery. Transfers between the three stops are shown for driving.",
+        "ja": "釜山市民公園を散策後、堂甘ミルミョンで食事し、ヨンファ製菓のケーキで締めくくります。移動は車の目安です。",
+        "zh-CN": "在釜山市民公园散步后，到Danggam Milmyeon用餐，再去Yeonhwa Bakery吃蛋糕。三站间按驾车显示。",
+        "zh-TW": "在釜山市民公園散步後，到Danggam Milmyeon用餐，再去Yeonhwa Bakery吃蛋糕。三站間以開車顯示。"
+      },
+      "tips": {
+        "ko": "케이크 종류와 판매 수량은 변동될 수 있습니다. 주차와 단체 좌석은 각 장소에서 확인하세요.",
+        "en": "Cake varieties and availability can change. Confirm parking and group seating with each venue.",
+        "ja": "ケーキの種類・在庫は変わります。駐車場と団体席は各店舗で確認してください。",
+        "zh-CN": "蛋糕种类与数量可能变化，请向各场所确认停车与团体座位。",
+        "zh-TW": "蛋糕種類與數量可能變動，請向各場所確認停車與團體座位。"
+      },
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-354",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "food",
+          "id": "1108",
+          "stayMinutes": 55
+        },
+        {
+          "kind": "food",
+          "id": "2371",
+          "stayMinutes": 40
+        }
+      ]
+    },
+    {
+      "id": "fr10",
+      "category": "friends",
+      "titles": {
+        "ko": "오시리아 놀이공원 친구 여행",
+        "en": "Osiria Adventure with Friends",
+        "ja": "友達とオシリア・アドベンチャー",
+        "zh-CN": "好友奥西利亚冒险日",
+        "zh-TW": "好友奧西利亞冒險日"
+      },
+      "status": "editorial-idea",
+      "mode": "driving",
+      "intro": {
+        "ko": "롯데월드 어드벤처 부산에서 시간을 보내고 고향연화에서 식사한 뒤 해동용궁사를 방문하는 차량 코스입니다. 놀이공원 체류를 늘리면 마지막 방문은 다른 날로 나누세요.",
+        "en": "Spend time at Lotte World Adventure Busan, have a meal at Gohyang Yeonhwa, then visit Haedong Yonggungsa. If you stay longer at the theme park, save the temple for another day.",
+        "ja": "ロッテワールド・アドベンチャー釜山、コヒャンヨンファの食事、海東龍宮寺を車で巡ります。遊園地で長く過ごす場合、お寺は別の日に。",
+        "zh-CN": "在釜山乐天世界游玩，到Gohyang Yeonhwa用餐，再去海东龙宫寺。若游乐园停留较久，请把寺庙另排一天。",
+        "zh-TW": "在釜山樂天世界遊玩，到Gohyang Yeonhwa用餐，再去海東龍宮寺。若遊樂園停留較久，請把寺廟另排一天。"
+      },
+      "tips": {
+        "ko": "놀이기구 운영·키/연령 제한·티켓과 사찰 운영시간을 별도 확인하세요. 대기시간과 주차는 이동 예상에 포함되지 않습니다.",
+        "en": "Check rides, height/age limits, tickets and temple hours separately. Queues and parking are outside the transfer estimate.",
+        "ja": "アトラクション・身長年齢制限・チケット・寺院の時間を別途確認。行列と駐車は移動の推定外です。",
+        "zh-CN": "请分别确认设施、身高年龄限制、门票和寺庙开放时间，移动估算不含排队及停车。",
+        "zh-TW": "請分別確認設施、身高年齡限制、門票和寺廟開放時間，移動估算不含排隊及停車。"
+      },
+      "steps": [
+        {
+          "kind": "destination",
+          "id": "busan-1310",
+          "stayMinutes": 210
+        },
+        {
+          "kind": "food",
+          "id": "1804",
+          "stayMinutes": 60
+        },
+        {
+          "kind": "destination",
+          "id": "busan-261",
+          "stayMinutes": 45
+        }
+      ]
     }
   ]
 }

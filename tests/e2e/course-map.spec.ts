@@ -25,3 +25,36 @@ test('reference routes never bridge missing middle coordinates and localized map
  await page.route('**/api/courses/fa01?locale=ja',route=>route.fulfill({json:detail}));await page.goto('/courses/fa01?locale=ja');const map=page.getByTestId('course-map');await expect(map.locator('.course-map-pin')).toHaveCount(2);await expect(map.locator('path.leaflet-interactive')).toHaveCount(0);await expect(page.getByRole('heading',{name:'コースを地図で確認'})).toBeVisible();await expect(page.getByText('参考地点のみ',{exact:false})).toBeVisible();
  await expect(page.locator('.header-nav a[href^="/search"]')).toHaveCount(1);await expect(page.locator('.header-nav a[href^="/recommended"]')).toHaveCount(1);
 });
+
+test('friends courses have a navigable overview, compact details, split map and hotel comparison entry',async({page},info)=>{
+ await page.goto('/courses?category=friends&locale=en');
+ await expect(page.getByTestId('course-card')).toHaveCount(10);
+ await expect(page.locator('.course-categories a[aria-current="page"]')).toContainText('Friends');
+ await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(10);
+ await page.locator('.course-mode-filters a[href*="mode=walking"]').click();await expect(page.getByTestId('course-card')).toHaveCount(6);await expect(page).toHaveURL(/category=friends.*mode=walking/);
+ await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(6);
+ await page.locator('.course-mode-filters a').first().click();await expect(page.getByTestId('course-card')).toHaveCount(10);
+ await page.getByTestId('course-card').first().click();
+ const overview=page.getByTestId('course-overview');await expect(overview).toBeVisible();
+ await expect(overview.getByRole('button')).toHaveCount(4);
+ await expect(page.locator('.course-stop-expanded[open]')).toHaveCount(0);
+ await overview.getByRole('button').nth(1).click();
+ await expect(page.locator('#course-stop-1')).toBeFocused();
+ await expect(page.locator('#course-stop-1')).toHaveAttribute('data-selected','true');
+ await expect(page.getByTestId('course-map').locator('.course-map-pin.is-active')).toHaveCount(1);
+ await page.locator('#course-stop-1 .course-stop-expanded summary').click();
+ await expect(page.locator('#course-stop-1 .course-stop-description')).toBeVisible();
+ const map=await page.locator('.course-map-side').boundingBox(),list=await page.locator('.course-itinerary').boundingBox();
+ if(!map||!list)throw Error('Missing route layout');
+ if(info.project.name==='desktop'){expect(map.x).toBeGreaterThan(list.x+list.width-1);await expect(page.locator('.course-map-side')).toHaveCSS('position','sticky');}
+ else expect(map.y).toBeLessThan(list.y);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.getByRole('button',{name:'Show full route'}).click();
+ await page.locator('.course-detail-hero').scrollIntoViewIfNeeded();
+ await page.screenshot({path:info.outputPath('friends-overview.png'),animations:'disabled'});
+ await page.locator('.course-stay-link a').click();await expect(page).toHaveURL(/travel-tools/);
+ await expect(page.getByTestId('stay-comparison')).toBeVisible();
+ await expect(page.locator('iframe')).toHaveCount(0);
+ await page.getByRole('button',{name:'Open both searches'}).click();await expect(page.getByTestId('stay-comparison').locator('iframe')).toHaveCount(2);
+ await page.screenshot({path:info.outputPath('stay-comparison.png'),animations:'disabled'});
+});

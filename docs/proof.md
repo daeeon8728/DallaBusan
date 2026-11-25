@@ -1541,3 +1541,36 @@ E2E는 외부 이미지·OSM 타일·GTM/외부 링크 대역을 사용한다. �
 - 클룩의 인스타그램 등록 AID가 별도 웹사이트 위젯에 허용된다는 근거는 확인되지 않았다. 신규 도구는 계속 pending/disabled이며 운영자의 웹사이트 등록/AID 또는 담당자 확인이 필요하다. 기존 상품 링크를 일괄 삭제하거나 계정/채널을 대신 제출하지 않았다.
 - 최초 공개 검사 한 번은 목록을 찾지 못했으나 당시 응답 상태가 기록되지 않아 원인을 단정하지 않는다. 이후5개 언어 직접 응답과 전체 공개 검사를 다시 실행해 모두 통과했다. 로컬/클라우드 파일 해시 동일성 대신 실제 기능·배포 번들 내용으로 확인했다.
 - 실제 상품/호텔 검색 제출·예약·결제·광고 클릭0. 공개 캡처는 기존 대역 시연이며 포털 개인정보 화면/실제 외부 광고 캡처는 Git에 추가하지 않았다. 로컬 증거는 var/imports/affiliate-tools-20261124/live-check.json·real-widgets.json에 보관한다. 이후 변경은 문서뿐이므로 제품 빌드405개 단위/통합·237개 E2E를 반복하지 않았다.
+
+
+## 2026-11-25 코스 한눈 요약·친구10개·숙소 좌우 비교
+
+최신 요청: 코스가 한눈에 들어오도록 보완,숙소 검색을 화면 반씩 나눠 비교,친구끼리 코스10개 추가. [설계·코스별 검토](courses-upgrade-2026-11-25.md)를 따른다.
+
+변경: domain/courses.ts의 friends 계약·counts,server config/routes/services/courses.ts의 fr ID/필터·집계,config/catalog/courses.json의 source-pinned 친구10개/5개 언어 소개·팁 및 course-routes.json의 새 도로 경로10개,수집/check CLI50개,web courses/CoursesPage.tsx·courses.css·i18n/courses.ts·course-overview.ts의 간결한 커버/4개 수치·번호 요약/키보드 초점·지도 선택/PC 고정지도/접이식 원문·메뉴/운영 미리보기/목록 번호와 도보·차량 URL필터/숙소 연결,TravelTools.tsx·travel-tools.css·i18n/travel-tools.ts의 숙소 두 열·명시적 함께 열기/개별 닫기·티켓 별도 영역/검색 프레임 우선,관련 단위·E2E 및 AGENTS/spec/catalog-plan/본 기록/시연.
+
+| 검증 | 종료/관찰 결과 |
+| --- | --- |
+| npm run data:courses:routes:refresh | 0,추가 입력10회만1.5초 간격 호출,50개 road-route/참고0 |
+| npm run data:courses:check | 0,50코스/50경로·100원본지문·미선정노드0·외부호출0 |
+| npm run lint | 0,최종 프레임 배치/문구 반영 후 재검사 |
+| npm run typecheck | 0,strict server/web/domain/tools |
+| npm run test -- --run | 0,37파일406개;최종 추가 확인은 아래 기록 |
+| npm run check:providers | 0,132소스 |
+| npm run build | 0,최종domain→server→web |
+| node var/imports/courses-upgrade-20261125/package-check.mjs | 0,실제 Vercel 독립 함수846파일·require(ESM) 제한 실행,전체50개/친구 상세·기존 API200 |
+| node var/imports/courses-upgrade-20261125/dist-smoke.mjs | 0,최종dist8개 페이지200·5개 언어 친구10개/전체50개/모든 친구 상세와 경로200·공개 상품402·기존관련API/3도구·클룩 신규404 |
+| node var/imports/courses-upgrade-20261125/capture.mjs | 0,독립 임시 서버360/1280px 대역 시연·가로 넘침 없음·종료 시 서버 닫기 |
+
+기존40개 코스 객체/40개 도로 경로와100개 원본 지문을 HEAD와 구조 비교해 모두 동일함을 확인했다. 기존 내부17개 테마·pending/not-performed 플래그·공공 DB/사진·번역 원본·제휴 URL/발급 CID·.env·lockfile·의존성은 보존했다.50개는 편집 제안이고 최적화/현장 승인/현재 영업·짧은 웨이팅·수상·아동 적합성을 보장하지 않는다. 이동 모델과 체류 제안을 분리하고 당감밀면1108의 영어 설명 원문 빈 문자열은 메뉴·주소로 보완해 표시하며 임의 설명을 만들지 않았다.
+
+실패와 수정: 첫406개 검사 중 새 검사가 모든 장소의 설명이 채워졌다고 잘못 가정해1개 실패했다. 실제 공공 원문을 확인하고 누락 그대로/기존 메뉴 제공을 검사하도록 수정해406개 통과했다. 첫 전체 E2E는240개 통과/3개 실패였으며 새 레이아웃에서 가족 안내가 먼저 나와 기존 ‘첫 번째 경고’ 가정이 깨진 동일 원인이었다. 실제 편집 미검수 경고 문구를 직접 확인하도록 변경했고 경고/가족 안내를 삭제하지 않았다. 최종 전체 결과는 이어서 기록한다.
+
+초기 문서 편집 도구는 CRLF를 전제해 적용 전 중단돼 줄바꿈 정규화 후 적용했다. 캡처 도구 첫 실행은 이미 종료된 E2E 서버4317에 접속해 거절됐고 독립 임시 서버4327을 띄우는 방식으로 수정했다. 둘 다 제품 오류로 숨기거나 성공으로 처리하지 않았다. 기존 Zod 주석/500KB 번들·Node SQLite 안내는 비차단이다.
+
+시연: [PC 방문 순서](design/courses-upgrade-2026-11-25/overview-1280.png),[PC 카드와 지도](design/courses-upgrade-2026-11-25/route-1280.png),[모바일 방문 순서](design/courses-upgrade-2026-11-25/overview-360.png),[PC 숙소 비교](design/courses-upgrade-2026-11-25/stays-1280.png),[모바일 숙소 비교](design/courses-upgrade-2026-11-25/stays-360.png). 사진/OSM타일/외부 iframe/GTM은 **대역**이며 실제 제공처 검색 결과/호텔 재고나 새 사진 확보 증거가 아니다. 실제 무료 라우팅10회는 별도 수집이며 타일 prefetch·실제 예약/검색 제출·결제/광고 클릭·신규계약/채널 생성0이다. 기존 공개 상품402/메인398·명소220·맛집514,신규 정적 상품0,공개 코스50을 유지한다. 숙소의 조건/결과 자동 동기화와 새 비공개 API연동은 구현하지 않았다. 의존성 변경이 없어 재설치는 생략했으며 현재 소스로 Vercel 함수를 다시 빌드했다.
+
+
+### 최종 회귀 결과
+
+최종 전체 npm run test:e2e 종료0,243개 모두 통과(3.4분). 최종 단위/통합도 다시 실행해37파일406개 종료0,check:providers132소스 종료0이다. 기존 네비게이션/공공 검색·맛집·추천여행/팝업·하루 안 보기/찜·장바구니·환율/관련 상품/수동 위젯을 포함한다. 친구10개/도보6개·차량4개 필터·URL/새로고침,번호 선택/초점/지도 연동·접힌 설명 펼치기,PC 고정 지도와 작은 화면 적층,두 숙소 프레임의 수동 동시 열기/개별 닫기·필터/언어 전환 정리·외부 선로딩0을 확인했다. 마지막 diff 공백 검사에서 프레임 이전 빈 줄의 공백을 제거했고 재검사0이다. 이후 제품 동작 변경은 없으며 공개 배포 결과는 이어서 기록한다.

@@ -54,8 +54,8 @@ test('blocked daily storage reports failure and Escape/keyboard close remain usa
   await page.keyboard.press('Escape'); await expect(popup).not.toBeVisible(); expect(await page.evaluate(()=>document.body.style.overflow)).not.toBe('hidden');
 });
 
-test('all four categories contain ten ideas, support URL refresh/back and source detail links', async ({page,request},testInfo) => {
-  await page.goto('/courses?locale=en'); await expect(page.getByTestId('course-card')).toHaveCount(40);
+test('all original categories contain ten ideas, support URL refresh/back and source detail links', async ({page,request},testInfo) => {
+  await page.goto('/courses?locale=en'); await expect(page.getByTestId('course-card')).toHaveCount(50);
   const nav=page.locator('.header-nav'); const links=await nav.locator('a').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')?.split('?')[0]));
   expect(links.indexOf('/courses')).toBe(links.indexOf('/search')+1); expect(links.indexOf('/food')).toBe(links.indexOf('/courses')+1);
   for(const category of ['family','date','food','dallabusan']) {
@@ -65,7 +65,7 @@ test('all four categories contain ten ideas, support URL refresh/back and source
   }
   await page.goBack(); await expect(page).toHaveURL(/category=food/); await expect(page.getByTestId('course-card')).toHaveCount(10);
   await page.goto('/courses/fa04?locale=en'); await expect(page.locator('.course-stops>li')).toHaveCount(4);
-  await expect(page.locator('.course-warning').first()).toContainText('not validated');
+  await expect(page.locator('.course-warning').filter({hasText:'not validated'})).toHaveCount(1);
   await page.locator('.course-stops a[href^="/food/2899"]').click(); await expect(page).toHaveURL(/\/food\/2899/); await expect(page.locator('.public-guide-facts')).toBeVisible();
   await page.goBack(); await expect(page).toHaveURL(/\/courses\/fa04/);
   for(const locale of ['ja','zh-CN','zh-TW','ko','en']) {
@@ -100,7 +100,7 @@ test('family parking is informational and course failure retries without fabrica
   await page.route('**/api/courses?*',route=>route.fulfill({status:503,json:{error:'Unavailable'}}));
   await page.goto('/courses?locale=en'); await expect(page.locator('.courses-page [role="alert"]')).toContainText('could not be loaded');
   await expect(page.getByTestId('course-card')).toHaveCount(0); await page.unroute('**/api/courses?*');
-  await page.locator('.courses-page').getByRole('button',{name:'Try again'}).click(); await expect(page.getByTestId('course-card')).toHaveCount(40);
+  await page.locator('.courses-page').getByRole('button',{name:'Try again'}).click(); await expect(page.getByTestId('course-card')).toHaveCount(50);
   await page.goto('/courses/fa99?locale=en'); await expect(page.getByRole('heading',{level:1})).toHaveText('This course idea is unavailable.');
 });
 
