@@ -1725,3 +1725,12 @@ config/catalog/travel-tools.json에 중립 flight-search/kind=flights로 원문 
 첫 공개 확인은 이전 배포의404였으며,이후 GitHub Vercel 상태가 success/Deployment has completed로 바뀐 것을 확인했다. 공개 /api/travel-tools/flight-search의5개 언어 모두200·실제 발급 URL/kind/contentLocale 동일,맛집 도움말1516의대안3개200,fa01코스 상품3개200을 확인했다. 공개 웹 자산 /assets/index-GH-1F8zs.js에 항공권·코스 중심 홈·식당 도움말이 포함됨도 확인했다. [공개 확인 결과](flights-public-check-2026-11-25.json)를 보관한다. 실제 항공권 검색/예약/결제는0이며 공개 검증에서 판매처 도구를 반복 로딩하지 않았다.
 
 [항공권 도구](https://dallabusan.vercel.app/travel-tools?section=flights&locale=en),[코스 중심 홈](https://dallabusan.vercel.app/?locale=en). 기록 이후 변경은 이 검증 문서/JSON뿐이므로 제품 빌드·테스트는 반복하지 않는다.
+
+
+## 2026-11-25 환율 안내를 페이지 맨 아래로 이동
+
+사용자 요청으로 App.tsx의 ExchangeNotice를 main 첫 요소에서 공통 site-footer 뒤로 이동했다. 홈·관광지·맛집·코스·장바구니·도구 등 모든 페이지에 한 번만 표시한다. 환산 기준일/출처/예상 가격 고지/재시도·aria-live와 기존 환산 동작은 유지한다. API·환율 계산·공공/제휴 데이터·의존성·환경 파일 변경은 없다.
+
+검증: npm.cmd run lint0, npm.cmd run typecheck0, npm.cmd run check:providers0(150소스), npm.cmd run build0. npm.cmd run test -- --run --maxWorkers=2는42파일425검사0(21.80초), npm.cmd run test:e2e -- tests/e2e/exchange.spec.ts는360/768/1280px9검사0(17.7초). 5개 통화·상품/상세/찜/장바구니·실패 시 원통화·재시도·늦은 환율 응답/언어 변경을 기존 대역으로 확인했다. 기존 dist 서버로 브라우저를 실행했으며 신규 테스트는 추가하지 않았다.
+
+[모바일 하단 안내](design/exchange-footer-2026-11-25/mobile.png),[PC 하단 안내](design/exchange-footer-2026-11-25/desktop.png)를 보관하며 모바일 캡처에서 상단 안내가 사라지고 푸터의 저작권 뒤에 기준일/출처/재시도가 표시됨을 확인했다. 사진·가격·환율은 검증용 대역이며 실판매/현재 환율 보증 자료가 아니다. 외부 제휴 이동·결제·유료 API0. 빌드의 기존 Zod/청크 경고는 비차단이다. 최신 사용자 요청에 따라 기존 배포 흐름의 dallabusan/main으로 반영한다.
