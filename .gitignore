@@ -27,3 +27,16 @@ sites/
 
 # Local Vercel project links, build output and pulled environment files.
 .vercel/
+
+# Private admin sessions, content database and initial password
+var/admin/
+
+# Local verification captures and duplicate design exports; production assets live in apps/web/public.
+docs/screenshots/
+docs/design/**/*.png
+docs/design/**/*.jpg
+docs/design/**/*.jpeg
+docs/design/**/*.webp
+docs/design/**/smoke.json
+26-11-05 intent.md
+var/git-cleanup-manifest.json
