@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/admin-e2e',workers:1,use:{baseURL:'http://127.0.0.1:4320',browserName:'chromium',trace:'retain-on-failure'},webServer:{command:'node --import tsx scripts/test-admin-server.ts',url:'http://127.0.0.1:4320/api/health',env:{NODE_ENV:'test',DATABASE_PATH:':memory:'},reuseExistingServer:false,timeout:60000},projects:[{name:'desktop',use:{viewport:{width:1440,height:1000}}},{name:'mobile',use:{viewport:{width:390,height:844}}}]});

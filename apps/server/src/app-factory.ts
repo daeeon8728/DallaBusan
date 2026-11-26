@@ -50,7 +50,7 @@ export function buildApp(config: ServerConfig, webRoot?: string, catalog?: Catal
       const isApi = pathname === '/api' || pathname.startsWith('/api/');
       if (request.method === 'GET' && !isApi && !extname(pathname)
         && request.headers.accept?.includes('text/html')) {
-        return reply.sendFile('index.html');
+        return reply.sendFile(pathname==='/admin'?'admin.html':'index.html');
       }
       return reply.code(404).send({ error: 'Not Found' });
     });

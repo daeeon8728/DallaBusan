@@ -10,7 +10,7 @@ import { getPublicGuideCopy, guidePath } from './i18n/public-guides.js';
 import { getDetailCopy } from './i18n/details.js';
 function GuidePhoto({item,locale}: {item: PublicGuide;locale: Locale}) {
   const [failed,setFailed]=useState(false); const copy=getPublicGuideCopy(locale);
-  return <div className="public-guide-photo">{item.imageUrl && !failed ? <img src={item.imageUrl} alt={item.name} loading="lazy" onError={()=>setFailed(true)} /> : <div className="public-guide-placeholder"><span aria-hidden="true">⌖</span><p>{copy.noPhoto}</p></div>}<small>{copy.credit}</small></div>;
+  return <div className="public-guide-photo">{item.imageUrl && !failed ? <img src={item.imageUrl} alt={item.name} loading="lazy" onError={()=>setFailed(true)} /> : <div className="public-guide-placeholder"><span aria-hidden="true">⌖</span><p>{copy.noPhoto}</p></div>}<small>{item.imageCredit??copy.credit}</small></div>;
 }
 function readFilters(locale: Locale) {
   const params=new URLSearchParams(window.location.search);

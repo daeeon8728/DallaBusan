@@ -1,0 +1,4 @@
+import type {FastifyInstance} from 'fastify';
+import {MapLinksQuerySchema,MapRefsSchema} from '@trip-fit/domain';
+import type {MapLinkService} from '../services/map-links.js';
+export function registerMapLinkRoutes(app:FastifyInstance,service:MapLinkService){app.get('/api/map-links',async(request,reply)=>{reply.header('Cache-Control','no-store');const q=MapLinksQuerySchema.safeParse(request.query);if(!q.success)return reply.code(400).send({error:'invalid-map-query'});const refs=MapRefsSchema.safeParse(q.data.places.split(',').map(row=>{const p=row.split(':');return p.length===2?{kind:p[0],id:p[1]}:null;}));if(!refs.success)return reply.code(400).send({error:'invalid-map-places'});return service.links(refs.data,q.data.locale,q.data.mode)??reply.code(404).send({error:'unavailable-map-place'});});}

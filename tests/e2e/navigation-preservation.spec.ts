@@ -25,7 +25,7 @@ test('adding courses preserves all six visible navigation entries and both publi
     await expect(page.getByTestId('courses-nav')).not.toHaveAttribute('aria-current','page');
     await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
     await page.reload(); await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
-    await page.getByTestId('courses-nav').click(); await expect(page.getByTestId('course-card')).toHaveCount(50);
+    await page.getByTestId('courses-nav').click(); await expect(page.getByTestId('course-card')).toHaveCount(150);
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   }
   await page.goto('/search?locale=en'); await expect(page.getByTestId('destination-result')).toHaveCount(6);

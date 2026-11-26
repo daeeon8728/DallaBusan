@@ -23,7 +23,7 @@ export function MonthlyDestinations({ locale, onNavigate }: { locale: Locale; on
   const { value, error, retry } = useGuideRequest('/api/destinations?locale=' + locale, DestinationListSchema);
   const items = value ? value.featured.length ? value.featured : value.items.slice(0,2) : [];
   const month = value ? new Intl.DateTimeFormat(locale, { year: 'numeric', month: 'long', timeZone: 'Asia/Seoul' }).format(new Date(value.month + '-01T00:00:00+09:00')) : '';
-  return <section className="monthly-section section-wrap" aria-labelledby="monthly-title" data-testid="monthly-destinations">
+  return <section data-home-section="destinations" className="monthly-section section-wrap" aria-labelledby="monthly-title" data-testid="monthly-destinations">
     <div className="monthly-heading"><div><p className="eyebrow blue">{copy.editorPick}</p><h2 id="monthly-title">{value?.featured.length ? copy.monthly : copy.guides}</h2></div>{value && <span>{month}</span>}</div>
     {!value && !error && <p role="status">{copy.loading}</p>}
     {error && <div className="error-notice" role="alert"><p>{copy.failed}</p><button onClick={retry}>{copy.retry}</button></div>}

@@ -36,7 +36,7 @@ export function createCourseService(config: CourseCatalog, destinations: Destina
                     valid = false;
                     return null;
                 }
-                return { kind: step.kind, id: step.id, name: value.item.name, originalName: value.item.originalName, contentTranslation: value.item.contentTranslation, href: '/food/' + step.id, address: value.item.address, image: value.item.imageUrl ? { url: value.item.imageUrl, credit: value.source.credit } : null, sourceUrl: value.source.url, locale: value.item.locale,coordinates:anchors.get('food:'+step.id)?.coordinates??null,stayMinutes:step.stayMinutes,sourceCollectedAt:value.source.collectedAt,description:value.item.description,menu:value.item.menu,hours:value.item.hours,holidays:value.item.holidays };
+                return { kind: step.kind, id: step.id, name: value.item.name, originalName: value.item.originalName, contentTranslation: value.item.contentTranslation, href: '/food/' + step.id, address: value.item.address, image: value.item.imageUrl ? { url: value.item.imageUrl, credit: value.item.imageCredit??value.source.credit } : null, sourceUrl: value.source.url, locale: value.item.locale,coordinates:anchors.get('food:'+step.id)?.coordinates??null,stayMinutes:step.stayMinutes,sourceCollectedAt:value.source.collectedAt,description:value.item.description,menu:value.item.menu,hours:value.item.hours,holidays:value.item.holidays };
             });
             const points=courseWaypoints(item,anchors), fingerprint=courseRouteFingerprint(item,points);
             const cachedRoute=routes.items.find(row=>row.id===item.id&&row.fingerprint===fingerprint&&row.route.mode===item.mode&&row.route.legs.length===item.steps.length-1);

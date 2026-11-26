@@ -17,11 +17,12 @@ function publicRecord(row: GuideRecord, requestedLocale: Locale, machine: boolea
     fees: row.fees, transport: row.transport, phone: row.phone, homepage: row.homepage, description: row.description, imageUrl: row.imageUrl,
     contentTranslation:machine?'machine':'source', translationFallback: row.locale !== requestedLocale || (!row.localizedTitle && requestedLocale !== 'ko') };
 }
-export function createGuideService(snapshots: Readonly<Partial<Record<GuideKind, GuideSnapshot | null>>>, text: TextLocalizer = ORIGINAL_TEXT, foodVisibility?: FoodVisibility, foodPhotos: ReadonlyMap<string,string> = new Map()) {
+export function createGuideService(snapshots: Readonly<Partial<Record<GuideKind, GuideSnapshot | null>>>, text: TextLocalizer = ORIGINAL_TEXT, foodVisibility?: FoodVisibility, foodPhotos: ReadonlyMap<string,string> = new Map(),foodPhotoCredits:ReadonlyMap<string,{credit:string;sourceUrl:string}>=new Map()) {
   const photo = (kind: GuideKind, value: ReturnType<typeof localizeGuideRecord>) => {
     const url = kind === 'food' ? foodPhotos.get(value.row.id) : undefined;
     return url ? {...value,row:{...value.row,imageUrl:url}} : value;
   };
+  const record=(kind:GuideKind,row:GuideRecord,locale:Locale,machine:boolean)=>({...publicRecord(row,locale,machine),imageCredit:kind==='food'?foodPhotoCredits.get(row.id)?.credit??null:null,imageSourceUrl:kind==='food'?foodPhotoCredits.get(row.id)?.sourceUrl??null:null});
   const cache = new Map<string, ReturnType<typeof localizeGuideRecord>[]>();
   function records(kind: GuideKind, locale: Locale) {
     const key=kind+'|'+locale;const cached=cache.get(key);if(cached)return cached;
@@ -37,7 +38,7 @@ export function createGuideService(snapshots: Readonly<Partial<Record<GuideKind,
       const snapshot=snapshots[kind];if(!snapshot)return null;const rows=records(kind,query.locale);const q=normalize(query.q);
       const filtered=rows.filter(({row})=>(!q||normalize([row.name,row.originalName,row.description,row.menu,row.address,row.district,row.category].filter(Boolean).join(' ')).includes(q))&&(!query.district||row.district===query.district)&&(!query.category||row.category===query.category));
       const total=filtered.length,pages=Math.ceil(total/12),page=Math.min(query.page,Math.max(1,pages));
-      return GuideListSchema.parse({kind,locale:query.locale,items:filtered.slice((page-1)*12,page*12).map(({row,machine})=>publicRecord(row,query.locale,machine)),source:source(snapshot,query.locale),total,availableTotal:rows.length,page,pages,
+      return GuideListSchema.parse({kind,locale:query.locale,items:filtered.slice((page-1)*12,page*12).map(({row,machine})=>record(kind,row,query.locale,machine)),source:source(snapshot,query.locale),total,availableTotal:rows.length,page,pages,
         districts:[...new Set(rows.flatMap(({row})=>row.district?[row.district]:[]))].sort((a,b)=>a.localeCompare(b,query.locale)),categories:[...new Set(rows.flatMap(({row})=>row.category?[row.category]:[]))].sort((a,b)=>a.localeCompare(b,query.locale))});
     },
     get(kind: GuideKind,id: string,locale: Locale) {
@@ -45,7 +46,7 @@ export function createGuideService(snapshots: Readonly<Partial<Record<GuideKind,
       const found=records(kind,locale).find(value=>value.row.id===id);
       const fallback=snapshot.languages.find(group=>group.locale==='ko')?.records.find(row=>row.id===id);
       const value=found??(fallback?photo(kind,localizeGuideRecord(fallback,locale,text)):null);if(!value)return null;
-      return GuideDetailSchema.parse({kind,requestedLocale:locale,item:publicRecord(value.row,locale,value.machine),source:source(snapshot,locale)});
+      return GuideDetailSchema.parse({kind,requestedLocale:locale,item:record(kind,value.row,locale,value.machine),source:source(snapshot,locale)});
     },
     available(kind: GuideKind) { return Boolean(snapshots[kind]); },
   };

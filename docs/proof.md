@@ -1859,3 +1859,79 @@ config/catalog/travel-tools.json에 중립 flight-search/kind=flights로 원문 
 [PC 홈5분류](design/booking-guide-2026-11-26/desktop-home-categories.png) · [모바일 홈](design/booking-guide-2026-11-26/mobile-home-categories.png) · [PC 예약 안내](design/booking-guide-2026-11-26/desktop-booking-guide.png) · [모바일 예약 안내](design/booking-guide-2026-11-26/mobile-booking-guide.png) · [독립 smoke](design/booking-guide-2026-11-26/smoke.json)를 보관하고 직접 검토했다. 시연의 단색 사진·배경 지도/환율/외부 분석은 대역이며 운영 자산을 교체하지 않았다. 실제 외부 예약/결제·새 도로 라우팅·유료 API 호출은0이다. 상품 원문 열람은 별도 공식 웹 자료 조사이며 캐시된 원문일 수 있다. 정책/재고가 실시간으로 검증됐다고 표시하지 않는다. 신규100개의 도로/대중교통/입구·가족 적합성·현장 검수는 미수행이며 방문 순서 참고선과 편집 아이디어 상태를 유지한다. 기존 Zod annotation/지도 청크/SQLite experimental 비차단 경고는 유지한다.
 
 검증 후 사용자 지시대로 dallabusan main에 후속 커밋/푸시한다. GitHub 반영과 Vercel/AWS 배포 완료는 구분한다. AWS 이관은 전체 소스/workspace·lockfile·설정·공개 데이터 스냅샷을 전달하고 .env는 비공개 환경 설정으로 분리하며 .md는 런타임 필수가 아니라고 안내했다. 이번 작업에서 AWS 계정·서버·도메인 설정은 수행하지 않았다.
+
+## 2026-11-26 모바일 코스 사진 축소·AWS 바탕화면 전달본
+
+### 변경
+
+모바일600px 이하에서 홈·일반 코스 목록을88×96px 사진 + 제목/체류 제안/번호별 방문 순서의 가로 카드로 바꿨다.5개 카테고리와 전체 보기는3열2행으로 모두 표시하고 버튼44px를 유지한다. 긴 제목/정차지 이름은 카드에서 줄이되 전체 텍스트/접근성 이름과 상세 원문은 보존한다. 상세 대표 사진은140px, 상세 장소 사진96px, 조합 선택지 사진88px로 줄였다. 데스크톱 레이아웃·원본 사진/출처·150개 코스 데이터·제휴 링크·환산·저장 정책은 바꾸지 않았다. 파일은 home-courses.css·courses/courses.css·builder/builder.css 및 기존 home-courses E2E의 모바일 사진 크기/텍스트 옆 배치 검증이다.
+
+### 코드 검증
+
+- npm run lint / typecheck / build: 모두 종료0.
+- npm run test -- --run --maxWorkers=2:47파일446개 통과, 종료0.
+- npm run check:providers:171개 경계 검사 통과, 종료0.
+- npm run test:e2e -- tests/e2e/home-courses.spec.ts tests/e2e/courses-popup.spec.ts tests/e2e/course-map.spec.ts tests/e2e/course-builder.spec.ts: 모바일/태블릿/PC81개 통과, 종료0.
+- 제한 환경의 첫 브라우저 실행은 임시 서버 준비에 응답하지 않아 종료 후 로컬 서버/브라우저 실행 권한으로 재실행했다. 실패를 검사 비활성화로 감추지 않았다.
+- [모바일 홈](design/mobile-aws-handoff-2026-11-26/mobile-home.png)과 [모바일 코스 목록](design/mobile-aws-handoff-2026-11-26/mobile-courses.png)을 보관하고 홈 캡처를 직접 검토했다. 사진·지도·환율 등 외부 요청은 대역이며 운영 이미지를 대체하지 않았다. 새 API/상품 수집0·추가 제외0·실제 제휴 예약/결제0이다.
+
+### AWS 전달본과 재현 검증
+
+사용자 요청으로 바탕화면에 DallaBusan-AWS-2026-11-26 폴더와 같은 이름 ZIP을 복사했다. 최신 모바일 변경을 포함하며 기준 Git 커밋은e5c7847이다. .md와 docs/·.git·node_modules·dist·로그·로컬 운영 DB·실제 .env는 공유 ZIP에서 제외했다. apps/packages/config/data/scripts/tests와 루트 설정·lockfile·.npmrc/.node-version·이미지·공개 SQLite 백업을 포함했다. 신규 AWS-SETUP.txt, 키 없는 .env.aws.example, SHA-256 목록 AWS-CONTENTS.json, 설치/실행 확인 AWS-VERIFICATION.json을 포함해376개 파일이다.
+
+기존 node_modules와 분리된 scratch 복사본에서 npm ci --include=dev --workspaces --include-workspace-root --offline로331개 패키지를 새 설치했다(종료0,335개 감사,취약점0). 이어 npm run build와 npm run db:restore가 종료0이다. 공개 백업의 무결성/해시/8개 테이블을 검증해 새 임시 DB로만 복원했고 기존 사용자 DB는 덮어쓰지 않았다. production 모드 독립 dist 서버를 실행해 코스150/상품402/관광지220/맛집514/영문 추천여행238 및 신규 코스 HTML200을 확인했다. 검증 서버는 종료했다. Node24.14.1/npm11.11.0의 Windows 재현 검증이며 AWS/Linux 실제 계정 배포 검증은 아니다. 서버 런타임과 HTTPS/프로세스 관리/영속 저장소는 AWS 담당자가 구성하도록 안내했다.
+
+별도 바탕화면 DallaBusan-AWS-2026-11-26-PRIVATE 폴더의 .env에 기존 키를 보존하고 AWS용 NODE_ENV=production/HOST=0.0.0.0/PORT=3001/DATABASE_PATH=var/trip-fit.sqlite만 맞췄다. 원본 프로젝트 .env는 수정하지 않았다. 비공개로만 전달하고 GitHub/공개 S3/공유 ZIP에는 포함하지 않도록 PRIVATE-ENV.txt에 안내했다. 공개 파일의 실제 키 일치0건·복사 후 전 파일 SHA-256 일치·ZIP376개 항목과 필수 dotfile 포함·실제 .env/Markdown/node_modules/dist/Git 미포함을 검증했다. 초기 키 검사에서 빈 값 뒤 주석을 값으로 읽은 오탐은 개행을 넘지 않는 파서로 바로잡아 재검사했다.
+
+ZIP 크기13,584,275바이트, SHA-256:86a3e1dbc09c27b1102325fb37ecb7a7a0eef84cc88d961deb409d26034a52e6. 기존 바탕화면 파일을 덮어쓰거나 삭제하지 않았다. 이번 요청으로 Git push·Vercel/AWS 배포는 실행하지 않았고 모바일 수정은 로컬 소스와 AWS 전달본에 반영했다.
+
+
+## 2026-11-26 관리자 분리·Google Maps 내보내기·Git 정리
+
+### 변경 범위
+
+- 별도 Vite HTML 진입점 `apps/web/admin.html`, `src/admin/{AdminPage,main,admin.css}`, domain/admin 계약, 서버 admin config/security/store/content/routes, setup CLI를 추가했다. 공개 HTML의 분석/광고 코드를 관리자에 넣지 않았다.
+- 코스 5개 언어 편집/신규 제작/장소 정렬·체류시간/숨김, 상품 등록/편집·출처·참고가·관광지 관계, 사진 URL/크레딧/권한·장소 숨김, 홈6영역 순서/노출·제목/대표 코스, JSON 백업·게시 이력 복원을 제공한다. 원본 스냅샷·관광 DB는 보존한다. 자유 CSS/스크립트 편집·이미지 업로드·계정/제휴 계약 관리는 구현하지 않았다.
+- 별도 SQLite 초안/게시본/최근20개 이력, 버전 CAS, 게시 전 서버 검증/원자 반영, provider/source 정체성·공개 자격·정확 십진수·가격 미확인 null을 유지한다. 기존 미공개 상품은 관리자도 우회할 수 없다.
+- scrypt, 무작위 해시 세션, HttpOnly/SameSiteStrict/HTTPS Secure, 30분 유휴/8시간 절대 만료, 정확 Origin+CSRF, 로그인 시도 제한, 로그아웃 회전·무효화, 관리자 HTML no-store/프레임 차단을 구현했다. `.env`의 기존 키를 보존하고 초기 비밀번호는 Git 제외 개인 파일에만 생성했다. 재실행 시 기존 인증을 보존한다.
+- Vercel/readOnlySnapshot은 관리자503이며 저장 디렉터리를 만들지 않는다. AWS 영구 단일 서버용이다. AWS 저장본을 기존 Vercel 공개 사이트로 동기화하는 기능은 없다.
+- `domain/map-links`, server config/service/route, 5개 언어 UI를 추가했다. 공개 ID/좌표 재조회 → keyless Google Maps URL, 모바일 경유지3개 제한으로1–5/5–9/9–12 분할, 대중교통 인접 구간별, 좌표 미확인 시 전체 연결 차단과 개별 장소 링크를 제공한다. 조합 미리보기/저장 선택의 실제 순서가 바뀌면 URL을 갱신하고 오래된 링크를 숨긴다.
+- GOOGLE_MAPS_EMBED_API_KEY 빈 항목을 .env/.env.example에 추가했다. 제한된 브라우저 키 설정 후 내장 Google 장소 지도 우선, 번호별 장소 선택·재시도·Leaflet 참고 지도 전환을 구현했다. 현재 실제 키 미설정으로 Leaflet을 유지한다. 내장 Google 전체 도로 길찾기·한국 도보/차량 지원·실시간 최적화를 보장하지 않는다. 공식 콘솔 Maps Embed API 화면을 사용자 브라우저에 열었다.
+- 공개 홈의 순서 편집 래퍼를 추가하면서 발견한 모바일 hero/editorial 가로 넘침을 수정했다. 이전 작은 코스 사진 CSS 변경을 보존했다.
+
+### 검증 명령과 결과
+
+| 명령/검증 | 결과 |
+| --- | --- |
+| npm run lint | 종료0 |
+| npm run typecheck | 종료0, 서버·웹·domain·tools strict |
+| npm run test -- --run --maxWorkers=4 | 종료0, 50파일460테스트 통과 |
+| 관리자/콘텐츠/지도3개 파일 표적 재검사 --maxWorkers=2 | 종료0,14테스트 통과 |
+| npm run check:providers | 종료0,187개 소스 경계 검사 |
+| npm run build | 종료0, domain→server→web, index.html/admin.html 별도 산출 |
+| npm run test:e2e:admin -- --output=docs/design/admin-2026-11-26 | 종료0, PC1440/mobile390 총2개 전체 제작·저장·검증·게시·공개 반영·이력 검사 |
+| 공개9개 spec 회귀(홈/조합/지도/내비/관광지/맛집/번역/상품창/프로모션) | 150개 모두 통과. 지도 신규 검사를 함께 실행한156개 중 신규3개는 아래 기대값 수정 후 별도 재검증 |
+| npm run test:e2e -- tests/e2e/map-export.spec.ts | 최종 종료0,360/768/1280 총6개 통과;5개 언어·새탭·대중교통·조합 순서 갱신·오류 재시도·설정된 iframe 대역 |
+| npm run data:courses:check | 종료0, 원본50개/도로50개/100개 원본ID/외부호출0 |
+| npm run data:builder:check | 종료0, 신규100(80짧음/20김),기존74,장소200,외부호출0 |
+| npm run admin:setup 및 재실행 | 종료0, 최초 비공개 계정 파일 생성/두 번째 인증 변경0 |
+| npm run start dist HTTP smoke | 관리자HTML/로그인/bootstrap/로그아웃·공개API 모두200, 관리자X-Frame-Options=DENY·분석태그0 |
+| git diff --check / git check-ignore | 공백오류0; .env/관리DB/초기비밀번호/시연파일 제외 확인 |
+
+첫 전체 병렬 단위 검사는 CPU 경쟁으로5초 제한4건이 실패했다. 관리자 비활성 경로는 원본 서비스를 그대로 재사용하도록 중복 컴파일을 제거하고4workers로460개를 통과했다. 암호 유도+5개 언어 전체 bootstrap을 함께 확인하는 단일 검사는 동시 브라우저 작업에서5초를 넘을 수 있어15초로 명시했으며 실제 검사는 그대로 유지한다.
+
+첫 공개 회귀는 홈 wrapper의 가로 넘침, 과거50개로 고정된 내비 회귀 기대값, 11월25일 검토 만료 프로모션을 발견했다. 실제 만료를 연장하지 않았다. 프로모션 E2E만 검토 시점의 공식 스냅샷/고정 시계 대역으로 변경하고 만료 숨김·재시도를 유지했다. Google 신규 E2E의 fa01 정류장 기대값(3개 정류장=대중교통2구간)과 조합 페이지의 명시적 미리보기 조작을 수정한 뒤6개를 모두 통과했다. 관리자 이력은 뷰포트 간 누적을 보존하므로 증가분을 검증하도록 수정했다.
+
+빌드에는 기존 대형 지도 청크, Zod 주석 주석처리 경고가 남으며 실패는 아니다. SQLite experimental/NO_COLOR 경고도 종료 실패가 아니다.
+
+### 실제 상태와 대역 구분
+
+- 실제 로컬 dist 공개: 코스150,상품402,관광지220,음식점514,영어 추천여행238. 관리자 원본상품588 중 제공처/자격 제한185+명시비활성1 제외,공개402. 관광지+맛집 관리 대상734. 운영 관리자 게시 버전0이며 테스트 코스/가짜 상품을 실제 게시하지 않았다. 포털 신규 수집·새 제휴 채널 승인·계약·실제 예약/결제는0이다.
+- 관리자 통합/E2E 게시·복원은 임시 DB와 테스트 계정에만 수행했다. 신규 상품 등록은 테스트 전용 중립 레지스트리와 공식 발급 형식 대역으로 검증했다. 실제 외부 상품을 만들어 운영 카탈로그에 넣지 않았다.
+- Google Maps URL 구성은 실제 서버 로직, 외부 Google 페이지/iframe/OSM 타일·이미지는 브라우저 대역이다. 실제 Embed 키/결제 프로젝트/도메인 제한·한국 길찾기 실연동은 키 발급 후 확인한다. 비공개 관광 API 키는 브라우저에 보내지 않는다.
+- 로컬 시연: docs/design/admin-2026-11-26 아래 PC/모바일 dashboard/layout.png와 dist-smoke.json. Git에는 올리지 않았다.
+- 안내: docs/admin-guide.md, docs/google-maps-setup.md. AGENTS/spec/plan/catalog-plan/README에 최신 요청을 추가했다.
+
+### 저장소 정리
+
+사용자 요청으로 c1501d9를 DallaBusan main에 푸시했다. 과거 캡처·디자인 복사본·오래된 루트 초안131개(31.91MiB)를 git rm --cached로만 제거했고 로컬131개 모두 존재한다. 운영 이미지·공개 DB·데이터·소스·검수 문서·테스트·lockfile은 유지했다. .gitignore에 재유입 차단을 추가했다. 과거 Git 이력은 재작성하지 않았다. 관리자 비밀번호와 로컬 DB는 이 정리 전후 모두 미추적이다.

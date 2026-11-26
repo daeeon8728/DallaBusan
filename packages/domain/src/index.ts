@@ -31,3 +31,6 @@ export * from './course-commerce.js';
 
 export * from './course-builder.js';
 export * from './booking-guide.js';
+export * from './admin.js';
+
+export * from './map-links.js';

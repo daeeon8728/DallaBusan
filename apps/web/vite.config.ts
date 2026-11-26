@@ -5,6 +5,7 @@ const webRoot=fileURLToPath(new URL('.',import.meta.url));
 export default defineConfig({
   root:webRoot,
   plugins:[react()],
+  build:{rollupOptions:{input:{main:fileURLToPath(new URL('./index.html',import.meta.url)),admin:fileURLToPath(new URL('./admin.html',import.meta.url))}}},
   server:{
     host:'127.0.0.1',port:5173,strictPort:true,
     // Used only by npm run dev. Vercel routes public /api requests to its API service.

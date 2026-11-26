@@ -40,3 +40,6 @@ docs/design/**/*.webp
 docs/design/**/smoke.json
 26-11-05 intent.md
 var/git-cleanup-manifest.json
+
+# Local design verification directories include traces and error context.
+docs/design/*/

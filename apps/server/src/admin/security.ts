@@ -1,0 +1,5 @@
+import{randomBytes,scrypt,timingSafeEqual,createHash,createHmac}from'node:crypto';
+const derive=(password:string,salt:string)=>new Promise<Buffer>((resolve,reject)=>scrypt(password,salt,64,{N:32768,r:8,p:3,maxmem:64*1024*1024},(error,key)=>error?reject(error):resolve(key)));
+export async function hashAdminPassword(password:string){const salt=randomBytes(16).toString('hex');return 'scrypt:'+salt+':'+(await derive(password,salt)).toString('hex');}
+export async function verifyAdminPassword(password:string,hash:string){const parts=hash.split(':');if(parts.length!==3||!parts[1]||!parts[2])return false;const expected=Buffer.from(parts[2],'hex'),actual=await derive(password,parts[1]);return expected.length===actual.length&&timingSafeEqual(expected,actual);}
+export const token=()=>randomBytes(32).toString('hex');export const digest=(value:string)=>createHash('sha256').update(value).digest('hex');export const csrf=(secret:string,session:string)=>createHmac('sha256',secret).update('csrf:'+session).digest('hex');export function equal(a:string,b:string){const x=Buffer.from(a),y=Buffer.from(b);return x.length===y.length&&timingSafeEqual(x,y);}

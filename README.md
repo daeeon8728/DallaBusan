@@ -88,3 +88,10 @@ KKday285개 추가의 출처/보류/다국어 예약 링크는 [신규 카탈로
 ## Vercel 다중 서비스 배포 준비
 
 루트 vercel.json에서 web과 server를 정의한다. 현재 구성은 사용자 최종 확인 대기이며,세부 공개 경로·바인딩0개 근거·읽기 전용 공공 DB·Windows 로컬 CLI 한계는 [배포 검토](docs/vercel-deployment-2026-11-24.md)를 따른다. 로컬 vercel dev 서버를 외부 공개하지 않으며,실제 배포/패키징 검증 완료로 해석하지 않는다.
+
+
+## 콘텐츠 관리자 · Google Maps
+
+별도 관리자 주소는 `/admin`(빌드 서버) 또는 `/admin.html`이다. `npm run admin:setup`으로 개인 관리자 계정을 초기화한 뒤 [관리자 안내](docs/admin-guide.md)를 따른다. 영구 AWS/로컬 서버에서만 게시하며 Vercel 함수에서는 쓰기가 비활성화된다.
+
+코스와 조합 페이지에서 Google Maps로 현재 순서를 내보낼 수 있다. 키 없이 사용하며 사이트 내부 Google 지도 전환용 키는 [Google Maps 설정](docs/google-maps-setup.md)을 따른다. 비밀번호·실행 DB·.env는 Git에 올리지 않는다.
