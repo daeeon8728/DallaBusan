@@ -1,3 +1,4 @@
+import {getMapLinkCopy} from '../i18n/map-links.js';
 import {BuilderLink} from '../builder/BuilderLink.js';
 import {CourseBookings} from './CourseBookings.js';
 import {getFoodAssistanceCopy} from '../i18n/food-assistance.js';
@@ -17,10 +18,10 @@ class MapBoundary extends Component<{children:ReactNode;message:string},{failed:
  static getDerivedStateFromError(){return {failed:true};}
  override render(){return this.state.failed?<p role="status">{this.props.message}</p>:this.props.children;}
 }
-function directions(from:Course['steps'][number],to:Course['steps'][number],mode:Course['route']['mode']){
+function directions(from:Course['steps'][number],to:Course['steps'][number]){
  if(!from.coordinates||!to.coordinates)return null;
  const url=new URL('https://www.google.com/maps/dir/');
- url.search=new URLSearchParams({api:'1',origin:from.coordinates.lat+','+from.coordinates.lng,destination:to.coordinates.lat+','+to.coordinates.lng,travelmode:mode}).toString();return url.href;
+ url.search=new URLSearchParams({api:'1',origin:from.coordinates.lat+','+from.coordinates.lng,destination:to.coordinates.lat+','+to.coordinates.lng,travelmode:'transit'}).toString();return url.href;
 }
 function StopPhoto({image,name,missing}:{image:Course['image'];name:string;missing:string}){const[failed,setFailed]=useState(false);return image&&!failed?<figure className="course-stop-photo"><img src={image.url} alt={name} loading="lazy" onError={()=>setFailed(true)}/><figcaption>{image.credit}</figcaption></figure>:<p className="guide-note">{missing}</p>;}
 
@@ -55,13 +56,13 @@ function CourseDetail({id,locale,onNavigate,onOpen}:{id:string;locale:Locale;onN
   <div className="course-route-layout">
    <aside className="course-map-side"><MapBoundary key={course.id+locale} message={m.routeFail}><Suspense fallback={<p role="status">{c.loading}</p>}><CourseMap course={course} locale={locale} selected={selected} onSelect={i=>setSelected(i<0?null:i)}/></Suspense></MapBoundary>{course.route.collectedAt&&<p className="guide-note">{m.date}: <time dateTime={course.route.collectedAt}>{date(course.route.collectedAt)}</time></p>}<p className="guide-note">{m.plan}</p></aside>
    <section className="course-itinerary" aria-labelledby="course-sequence-title"><h2 id="course-sequence-title">{c.sequence}</h2><ol className="course-stops">{course.steps.map((step,i)=>{
-    const next=course.steps[i+1],href=next?directions(step,next,course.route.mode):null,leg=course.route.legs[i];
+    const next=course.steps[i+1],href=next?directions(step,next):null,leg=course.route.legs[i];
     return <li id={'course-stop-'+i} tabIndex={-1} key={step.kind+':'+step.id} data-selected={selected===i?'true':undefined}><span className="course-stop-number">{String(i+1).padStart(2,'0')}</span><div className="course-stop-body"><div className="course-stop-heading"><h3 lang={step.locale}>{step.name}</h3><span>{m.stay} · {step.stayMinutes} {m.minutes}</span></div>
      <div className="course-stop-glance"><StopPhoto key={step.kind+':'+step.id} image={step.image} name={step.name} missing={c.noPhoto}/><div>{step.kind==='food'&&<p className="course-menu-preview"><strong>{m.menu}</strong><span>{step.menu??m.unknown}</span></p>}{step.address&&<p className="course-address">{step.address}</p>}<p className="course-hours-preview"><strong>{m.hours}</strong><span>{step.hours??m.unknown}</span></p></div></div>
      <details className="course-stop-expanded"><summary>{o.about}</summary>{step.contentTranslation==='machine'&&<p className="guide-note">{getLocalizationCopy(locale).machine}</p>}{locale!=='ko'&&step.originalName&&step.originalName!==step.name&&<p lang="ko">{getLocalizationCopy(locale).original}: {step.originalName}</p>}{step.description&&<p className="course-stop-description" lang={step.locale}>{step.description}</p>}<dl className="course-stop-facts">{step.kind==='food'&&<><dt>{m.menu}</dt><dd>{step.menu??m.unknown}</dd></>}<dt>{m.hours}</dt><dd>{step.hours??m.unknown}</dd><dt>{m.holidays}</dt><dd>{step.holidays??m.unknown}</dd></dl>{step.sourceCollectedAt&&<p className="guide-note">{m.sourceDate}: <time dateTime={step.sourceCollectedAt}>{date(step.sourceCollectedAt)}</time></p>}{step.sourceUrl&&<a href={step.sourceUrl} target="_blank" rel="noopener noreferrer">{c.source} ↗</a>}</details>
      <div className="course-stop-actions">{step.kind==='food'&&step.id&&<a href={'/food/'+step.id+'?'+new URLSearchParams({locale,course:course.id,help:'alternatives'})} onClick={e=>{if(!e.ctrlKey&&!e.metaKey){e.preventDefault();onNavigate('/food/'+step.id+'?'+new URLSearchParams({course:course.id,help:'alternatives'}));}}}>{getFoodAssistanceCopy(locale).alternatives} ↗</a>}{step.coordinates&&<button onClick={()=>{setSelected(i);document.querySelector('[data-testid="course-map"]')?.scrollIntoView({behavior:'auto',block:'center'});}}>{m.view}</button>}{step.href&&<a href={step.href+'?locale='+locale} onClick={e=>{if(!e.ctrlKey&&!e.metaKey){e.preventDefault();onNavigate(step.href??'/courses');}}}>{c.details} ↗</a>}</div>
      {course.category==='family'&&step.kind!=='note'&&step.id&&<NearbyParking kind={step.kind} id={step.id} locale={locale}/>}
-     {href&&<div className="course-transfer"><a href={href} target="_blank" rel="noopener noreferrer">{m.directions} ↗</a>{leg&&<span>{number.format(leg.distanceMeters/1000)} km · {Math.max(1,Math.round(leg.durationSeconds/60))} {m.minutes} ({m.road})</span>}</div>}
+     {href&&<div className="course-transfer"><a href={href} target="_blank" rel="noopener noreferrer">{m.directions} · {getMapLinkCopy(locale).transit} ↗</a>{leg&&<span>{number.format(leg.distanceMeters/1000)} km · {Math.max(1,Math.round(leg.durationSeconds/60))} {m.minutes} ({m.road})</span>}</div>}
     </div></li>;
    })}</ol></section>
   </div>

@@ -1,4 +1,4 @@
-import {afterAll,beforeAll,expect,it} from 'vitest';
+import {afterAll,beforeAll,expect,it,vi} from 'vitest';
 import type {FastifyInstance} from 'fastify';
 import {MapLinksSchema,LocaleSchema,CourseDetailSchema} from '@trip-fit/domain';
 import {createRuntimeApp} from '../../apps/server/src/runtime.js';
@@ -19,3 +19,10 @@ it('splits up to twelve stops without dropping any and exports transit one leg a
  anchors.delete('destination:'+refs[5]?.id);const missing=service.links(refs,'en','recommended');expect(missing?.missingCoordinates).toBe(true);expect(missing?.parts).toEqual([]);expect(missing?.legs).toEqual([]);expect(missing?.stops).toHaveLength(12);
 });
 it('rejects unknown places, arbitrary URLs, duplicate and oversized routes, and invalid keys',async()=>{for(const places of ['url:https://evil.test','destination:busan-373,destination:busan-373',Array.from({length:13},(_,i)=>'food:'+i).join(',')])expect((await app.inject('/api/map-links?'+new URLSearchParams({places}))).statusCode).toBe(400);expect((await app.inject('/api/map-links?places=food:missing')).statusCode).toBe(404);expect(loadMapLinkConfig({GOOGLE_MAPS_EMBED_API_KEY:'secret\ninvalid'}).embedKey).toBeNull();});
+it('uses transit legs by default and isolates regression servers from a real environment key',async()=>{
+ const path='/api/map-links?places=destination:busan-373,destination:busan-1422&locale=en';
+ const current=MapLinksSchema.parse((await app.inject(path)).json());expect(current.mode).toBe('transit');expect(new URL(current.parts[0]?.url??'').searchParams.get('travelmode')).toBe('transit');
+ vi.stubEnv('GOOGLE_MAPS_EMBED_API_KEY','test-only-browser-key-at-least-thirty-characters');
+ let isolated:FastifyInstance|undefined,injected:FastifyInstance|undefined;
+ try{isolated=await createRuntimeApp({readOnlySnapshot:true});expect(MapLinksSchema.parse((await isolated.inject(path)).json()).embedEnabled).toBe(false);injected=await createRuntimeApp({readOnlySnapshot:true,mapLinkConfig:{embedKey:'test-only-explicit-key'}});expect(MapLinksSchema.parse((await injected.inject(path)).json()).embedEnabled).toBe(true);}finally{await isolated?.close();await injected?.close();vi.unstubAllEnvs();}
+});

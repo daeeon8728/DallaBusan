@@ -1935,3 +1935,15 @@ ZIP 크기13,584,275바이트, SHA-256:86a3e1dbc09c27b1102325fb37ecb7a7a0eef84cc
 ### 저장소 정리
 
 사용자 요청으로 c1501d9를 DallaBusan main에 푸시했다. 과거 캡처·디자인 복사본·오래된 루트 초안131개(31.91MiB)를 git rm --cached로만 제거했고 로컬131개 모두 존재한다. 운영 이미지·공개 DB·데이터·소스·검수 문서·테스트·lockfile은 유지했다. .gitignore에 재유입 차단을 추가했다. 과거 Git 이력은 재작성하지 않았다. 관리자 비밀번호와 로컬 DB는 이 정리 전후 모두 미추적이다.
+
+
+## 2026-11-26 지도 키 실연동·부산 대중교통 기본값
+
+- 운영자가 추가한 GOOGLE_MAPS_EMBED_API_KEY의 존재/형식만 마스킹 확인했다. 키 원문을 소스/로그/문서/Git에 복사하지 않았다. 기존 키를 읽지 않은3001 프로젝트 서버만 확인 후 재시작했다. 실제 Google Embed에서 롯데월드 인근 지도·핀·Google 저작자 표시를 확인했다.
+- 실제 소비자 Google Maps 전체3정차지 링크는 운전·도보 비활성/경로 계산 불가였다. 같은 롯데월드→고향연화 단일 구간의 transit 링크는 버스181 등 대중교통 결과를 표시했다. 모든 구간의 운행/소요시간이나 한국 차량·도보 길찾기가 가능하다고 확대하지 않는다.
+- CourseMap의 공개 기본 내보내기를 대중교통 인접구간으로 바꾸고5개 언어 안내를 수정했다. 기존 각 장소의 ‘다음 장소 길찾기’도 transit로 전송하며 실제 모드를 표기한다. 원래 OSRM 도로 예상값은 그대로 출처를 유지하며 Google 대중교통 시간으로 바꾸지 않는다.
+- domain MapLinksQuery 기본값=transit. 이전 명시 mode URL 계약은 호환 보존. runtime의 NODE_ENV=test는 실제 .env 키를 무시하고 명시 mapLinkConfig 테스트 주입만 허용한다. 운영 키가 생긴 뒤에도 E2E가 실제 지도 요청을 반복하지 않게 했다.
+- lint/typecheck/check:providers(187)/build 종료0. 지도 통합4개 종료0. 지도·내보내기 E2E21개(360/768/1280) 종료0. 전체 npm run test -- --run --maxWorkers=2: 종료0,50파일461개 통과.
+- 최신 dist smoke /api/map-links:200,embedEnabled=true,mode=transit,3곳→2구간,모든 링크 travelmode=transit. 로컬 Google 지도 실연동과 E2E 외부 대역을 구분한다. API 키/제한/결제계정 설정은 변경하지 않았다.
+- 공개 Vercel API200이지만 embedEnabled=false를 확인했다. 로컬 .env는 Vercel에 자동 전송되지 않으므로 공개 사이트의 환경 변수/재배포가 별도로 필요하다. Vercel 지도 전환을 완료했다고 표시하지 않는다.
+- Maps JavaScript API는 별도 다중 마커/선 표시 도구이며 한국 Google 도보/차량 길찾기 지원을 추가하지 않는다. 이번 변경은 Embed 지도+대중교통 내보내기이며 Maps JavaScript API 추가 호출은 없다.

@@ -10,7 +10,7 @@ test('draws the road route and numbered stops, supports selection and full-route
  await map.locator('.course-map-pin').first().click();await expect(page.locator('.course-stops>li').first()).toHaveAttribute('data-selected','true');
  await page.getByRole('button',{name:'Show full route'}).click();await expect(map.locator('.course-map-pin.is-active')).toHaveCount(0);
  await page.getByRole('button',{name:'Show on map',exact:true}).nth(1).click();await expect(map.locator('.course-map-pin.is-active')).toHaveCount(1);await expect(page.locator('.course-stops>li').nth(1)).toHaveAttribute('data-selected','true');
- await expect(page.locator('.course-transfer a')).toHaveCount(2);await expect(page.locator('.course-transfer a').first()).toHaveAttribute('href',/travelmode=driving/);
+ await expect(page.locator('.course-transfer a')).toHaveCount(2);await expect(page.locator('.course-transfer a').first()).toHaveAttribute('href',/travelmode=transit/);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.getByRole('button',{name:'Show full route'}).click();await map.scrollIntoViewIfNeeded();await page.screenshot({path:testInfo.outputPath('course-road-map.png'),animations:'disabled'});
  expect(routing).toEqual([]);expect(errors).toEqual([]);

@@ -1,4 +1,4 @@
-import {loadMapLinkConfig} from './config/map-links.js';
+import {loadMapLinkConfig,type MapLinkConfig} from './config/map-links.js';
 import {createMapLinkService} from './services/map-links.js';
 import {registerMapLinkRoutes} from './routes/map-links.js';
 import{loadAdminConfig,type AdminConfig}from'./config/admin.js';
@@ -49,7 +49,7 @@ import { createOfferService } from './services/offers.js';
 import { loadDestinationConfig } from './config/destinations.js';
 import { createDestinationService } from './services/destinations.js';
 
-export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySnapshot?: boolean;adminConfig?:AdminConfig } = {}) {
+export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySnapshot?: boolean;adminConfig?:AdminConfig;mapLinkConfig?:MapLinkConfig } = {}) {
   const config = loadServerConfig();
   const webRoot = options.serveWeb
     ? fileURLToPath(new URL('../../web/dist/', import.meta.url))
@@ -89,7 +89,9 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const promotions=createPromotionService(loadPromotionCatalog(),offerConfig,publicOffers);
   const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), publicOffers, destinationService, guideService,parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
   registerAdminRoutes(app,adminConfig,managed,adminStore);
-  registerMapLinkRoutes(app,createMapLinkService(loadMapLinkConfig(),destinationService,guideService,parkingAnchors));
+  // Regression servers must not inherit a real browser key from the operator's .env.
+  const mapLinkConfig=options.mapLinkConfig??(config.NODE_ENV==='test'?{embedKey:null}:loadMapLinkConfig());
+  registerMapLinkRoutes(app,createMapLinkService(mapLinkConfig,destinationService,guideService,parkingAnchors));
   registerBookingGuideRoutes(app,createBookingGuideService(loadBookingGuideConfig(),offerConfig,publicOffers));
   registerStaySearchRoutes(app,createStaySearchConfig(loadStaySearchConfig(),offerConfig));
   registerTravelToolRoutes(app,createTravelToolConfig(loadTravelToolConfig(),offerConfig));
