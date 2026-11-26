@@ -95,3 +95,8 @@ KKday285개 추가의 출처/보류/다국어 예약 링크는 [신규 카탈로
 별도 관리자 주소는 `/admin`(빌드 서버) 또는 `/admin.html`이다. `npm run admin:setup`으로 개인 관리자 계정을 초기화한 뒤 [관리자 안내](docs/admin-guide.md)를 따른다. 영구 AWS/로컬 서버에서만 게시하며 Vercel 함수에서는 쓰기가 비활성화된다.
 
 코스와 조합 페이지에서 Google Maps로 현재 순서를 내보낼 수 있다. 키 없이 사용하며 사이트 내부 Google 지도 전환용 키는 [Google Maps 설정](docs/google-maps-setup.md)을 따른다. 비밀번호·실행 DB·.env는 Git에 올리지 않는다.
+
+
+## Cloudflare Workers
+
+Cloudflare Git 빌드 설정은 저장소 루트에서 Build `npm run build:cloudflare`, Deploy `npm run deploy:cloudflare`를 사용한다. `npm run check:cloudflare`는 업로드 없는 패키징 검증이다. 화면은 Workers 정적 자산, API는 기존 Node 서버에 연결한다. [구성·환경 변수·관리자 제한](docs/cloudflare-deployment.md)을 확인한다.

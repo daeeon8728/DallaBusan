@@ -43,3 +43,9 @@ var/git-cleanup-manifest.json
 
 # Local design verification directories include traces and error context.
 docs/design/*/
+
+# Cloudflare local state, dry-run bundles and local-only bindings
+.wrangler/
+.dev.vars
+.dev.vars.*
+var/cloudflare-build/

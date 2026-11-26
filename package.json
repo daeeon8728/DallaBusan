@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "npm run build --workspace @trip-fit/domain && concurrently --kill-others --names domain,server,web \"npm run dev --workspace @trip-fit/domain\" \"npm run dev --workspace @trip-fit/server\" \"npm run dev --workspace @trip-fit/web\"",
     "lint": "eslint . --max-warnings 0",
-    "typecheck": "npm run typecheck --workspaces && tsc -p tsconfig.tools.json",
+    "typecheck": "npm run typecheck --workspaces && tsc -p tsconfig.tools.json && npm run typecheck:cloudflare",
     "test": "vitest",
     "check:providers": "tsx scripts/check-provider-boundaries.ts",
     "build": "npm run build --workspace @trip-fit/domain && npm run build --workspace @trip-fit/server && npm run build --workspace @trip-fit/web",
@@ -43,7 +43,12 @@
     "data:builder:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-course-expansion.ts",
     "data:booking-guides:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-booking-guides.ts",
     "admin:setup": "node --import tsx scripts/admin-setup.ts",
-    "test:e2e:admin": "playwright test --config playwright.admin.config.ts"
+    "test:e2e:admin": "playwright test --config playwright.admin.config.ts",
+    "typecheck:cloudflare": "tsc -p apps/cloudflare/tsconfig.json",
+    "build:cloudflare": "npm run build --workspace @trip-fit/domain && npm run typecheck:cloudflare && npm run build --workspace @trip-fit/web",
+    "deploy:cloudflare": "wrangler deploy --config wrangler.jsonc",
+    "check:cloudflare": "wrangler deploy --config wrangler.jsonc --dry-run --outdir var/cloudflare-build",
+    "dev:cloudflare": "wrangler dev --config wrangler.jsonc --ip 127.0.0.1 --port 4319"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -57,8 +62,9 @@
     "tsx": "4.23.15",
     "typescript": "5.9.3",
     "typescript-eslint": "8.72.1",
+    "vite": "7.3.7",
     "vitest": "4.1.12",
-    "vite": "7.3.7"
+    "wrangler": "4.168.0"
   },
   "overrides": {
     "minimatch": "11.0.5"

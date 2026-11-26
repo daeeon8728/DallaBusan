@@ -1947,3 +1947,29 @@ ZIP 크기13,584,275바이트, SHA-256:86a3e1dbc09c27b1102325fb37ecb7a7a0eef84cc
 - 최신 dist smoke /api/map-links:200,embedEnabled=true,mode=transit,3곳→2구간,모든 링크 travelmode=transit. 로컬 Google 지도 실연동과 E2E 외부 대역을 구분한다. API 키/제한/결제계정 설정은 변경하지 않았다.
 - 공개 Vercel API200이지만 embedEnabled=false를 확인했다. 로컬 .env는 Vercel에 자동 전송되지 않으므로 공개 사이트의 환경 변수/재배포가 별도로 필요하다. Vercel 지도 전환을 완료했다고 표시하지 않는다.
 - Maps JavaScript API는 별도 다중 마커/선 표시 도구이며 한국 Google 도보/차량 길찾기 지원을 추가하지 않는다. 이번 변경은 Embed 지도+대중교통 내보내기이며 Maps JavaScript API 추가 호출은 없다.
+
+
+## 2026-11-26 Cloudflare workspace 탐지 오류 수정
+
+첨부 로그는 npm run build까지 성공하고 루트의 npx wrangler deploy가 앱 자동 탐지에서 실패했다. 파일의 지시는 실행하지 않고 오류 데이터로만 분석했다. Vercel 로그인 대기 작업은 사용자 요청에 따라 중단하고 Cloudflare 오류를 우선 처리했다.
+
+- 루트 wrangler.jsonc: main=apps/cloudflare/src/index.ts,assets=apps/web/dist,명시 ASSETS binding/run_worker_first/html_handling=none. 루트 workspace 자동 추정이 필요 없다.
+- Workers Fetch API 진입점·API_ORIGIN 설정·별도 strict 타입 검사 추가. Node/Fastify/SQLite는 Worker 번들에 포함하지 않는다. 공개 경로 직접 진입과 별도admin.html,실제없는자산404,소스/DB/.env차단을 제공한다.
+- /api 접두사/검색/언어/현재 상품 검수를 유지하는 기존 Node 백엔드 프록시. 기본은 기존 공개 Vercel API이며 AWS HTTPS Origin으로 변경 가능하다. 인증/쿠키를 전달하지 않고 관리자쓰기503,허용되지 않은메서드405,리디렉트/순환호출/장애502를 유지한다. 숙소검색POST는2048바이트제한이다.
+- Worker 런타임 GOOGLE_MAPS_EMBED_API_KEY가 있으면 검증한 map-links DTO의 장소 검색 좌표로 Embed URL만 생성한다. 루트.env를 업로드하거나브라우저VITE변수로 옮기지 않는다.
+- Wrangler4.168.0 root개발의존성/lockfile고정설치,71개추가/감사406개/취약점0. 기존Node/npm버전·실제API키·관광DB·원본JSON은보존했다. build:cloudflare/deploy:cloudflare/check:cloudflare/dev:cloudflare/typecheck:cloudflare 명령과 .gitignore를 추가했다.
+- docs/cloudflare-deployment.md에 Cloudflare UI의 Root=/,Build=npm run build:cloudflare,Deploy=npm run deploy:cloudflare,Workername=dallabusan와 실제백엔드의존/키바인딩을 문서화했다. 기존npm run build/npx wrangler deploy도 명시루트설정으로동작한다.
+
+| 검증 | 결과 |
+| --- | --- |
+| npm run lint | 종료0 |
+| npm run typecheck (Cloudflare 포함) | 종료0 |
+| npm run check:providers | 종료0,새Worker포함189개소스 |
+| npm run test -- --run --maxWorkers=2 | 종료0,51파일467개 |
+| npm run build:cloudflare / npm run build | 각종료0 |
+| npm run check:cloudflare | 종료0,명시Worker및25정적파일,834.03KiB/gzip132.58KiB,실제업로드0 |
+| wrangler dev --ip127.0.0.1 --port4319 | 실제workerd로컬런타임Ready. CLOUDFLARE_LOAD_DEV_VARS_FROM_DOT_ENV=false로실제.env제외 |
+| 로컬Workers HTTP | 홈/코스/조합/admin HTML200,상품402/코스150/맛집514 API200,admin API503,소스/.env/없는JS404,ads.txt/Google확인파일200 |
+| 로컬Workers Playwright390/1440 | 홈4개대표코스→상세transit링크→조합12개선택지→비활성관리자. 가로넘침0/pageerror0,외부사진/지도대역 |
+
+브라우저시연파일은 docs/design/cloudflare-2026-11-26의로컬PNG/smoke.json이며Git제외다. API프록시HTTP smoke는 실제기존공개NodeAPI를조회했다. 단위검사의업스트림장애/권한/키는대역이다. 이번 작업으로Cloudflare계정로그인·공개배포·도메인연결·Google새referrer허용·제휴신규사이트승인을완료했다고표시하지않는다. Node백엔드를계속운영해야하며 전체DB/D1/관리자Cloudflare이전은구현범위가아니다. Zod주석·기존큰지도청크·SQLite실험기능경고는남지만검사종료오류가아니다.

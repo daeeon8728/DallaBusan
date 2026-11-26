@@ -20,7 +20,7 @@ export function inspectSource(filePath: string, source: string): string[] {
   const errors: string[] = [];
   const isDomain = normalized.startsWith('packages/domain/');
   const isWeb = normalized.startsWith('apps/web/src/');
-  const isConfig = normalized.startsWith('apps/server/src/config/');
+  const isConfig = normalized.startsWith('apps/server/src/config/') || normalized === 'apps/cloudflare/src/config.ts';
   const isAdapter = normalized.startsWith('apps/server/src/providers/affiliate/');
   const tree = ts.createSourceFile(normalized, source, ts.ScriptTarget.Latest, true);
 
@@ -67,7 +67,7 @@ async function collect(directory: string): Promise<string[]> {
 }
 
 async function main() {
-  const sources = (await Promise.all(['apps/web/src', 'apps/server/src', 'packages/domain/src']
+  const sources = (await Promise.all(['apps/web/src', 'apps/server/src', 'apps/cloudflare/src', 'packages/domain/src']
     .map((directory) => collect(path.join(ROOT, directory))))).flat();
   const violations: string[] = [];
   for (const source of sources) {

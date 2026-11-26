@@ -222,3 +222,8 @@ food-assistance.json의 명시 메뉴/권역·전체 언어 지문·현재 공�
 최신 요청으로 별도 /admin(/admin.html) 소유자 로그인과 코스·상품·사진 URL·장소 숨김·홈 섹션 순서 관리, 초안 저장/검증/게시/복원을 허용한다. docs/admin-guide.md를 따른다. 원본 JSON/공공 DB를 덮어쓰지 않고 var/admin의 별도 SQLite를 사용한다. Vercel/readOnlySnapshot에서는 쓰기를 차단하며 AWS 영구 서버에서만 게시한다. 사용자 비밀번호·세션·관리 DB는 Git 밖에 둔다. 제휴 자격·원본 ID/지문·기존 비공개 정책은 관리자도 우회하지 않는다. 새 코스와 편집 순서는 검수 전 참고 경로이며 기존 도로 스냅샷을 잘못 재사용하지 않는다. UI 자유 CSS/스크립트 편집은 허용하지 않는다.
 
 Google Maps 경로 내보내기와 선택적 Embed API를 허용한다. docs/google-maps-setup.md를 따른다. 내보내기는 keyless이며 원본 공개 ID와 좌표를 재조회한다. 모바일 최대3개 경유지로 분할하고 대중교통은 인접 구간별로 제공한다. 미확인 좌표를 건너 연결하지 않는다. GOOGLE_MAPS_EMBED_API_KEY는 서버 전용 비밀과 다른 referrer/API 제한 브라우저 키로 iframe에만 사용하며 VITE_에 넣지 않는다. 미설정 상태는 기존 Leaflet 지도를 유지한다. 한국 도보/차량 API 지원을 보장하지 않는다. 실제 Google 호출 대신 대역으로 검증한다. 관리자 E2E는 npm run test:e2e:admin, 일반 검사·빌드와 함께 수행한다.
+
+
+## 2026-11-26 Cloudflare 배포 오류 수정
+
+사용자 요청으로 루트 wrangler.jsonc의 명시 Worker 진입점과 apps/web/dist 정적 자산을 배포한다. docs/cloudflare-deployment.md를 따른다. Fastify/SQLite를 Workers에 가져오지 않으며 API_ORIGIN의 기존 검증 Node API를 프록시한다. 관리자 쓰기는503이다. 쿠키/Authorization 전달·업스트림리디렉트·자기호출·소스/DB 정적공개를 금지한다. 새 키는 Worker 런타임 바인딩에만 넣고 루트 .env/관리DB를 업로드하지 않는다. build:cloudflare/check:cloudflare(업로드 없는 dry-run)/typecheck:cloudflare와 기본 검사를 수행한다. 실제 Workers 로컬 검증과 클라우드 계정 배포 성공을 구분한다.
