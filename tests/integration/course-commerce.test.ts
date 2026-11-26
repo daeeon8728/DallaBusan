@@ -25,7 +25,7 @@ it('filters each persona in every language and combines it with category without
  expect(list.items.length).toBeGreaterThan(0);expect(list.items.map(row=>row.id)).toEqual(all.items.filter(row=>row.personaTag.includes(persona)).map(row=>row.id));
  if(persona==='no-car')expect(list.items.every(row=>row.route.mode==='walking')).toBe(true);
  }
- expect(all.items.every(row=>row.duration.length>4&&row.route.status==='road-route')).toBe(true);
+ expect(all.items.every(row=>row.duration.length>4&&row.route.status===(row.origin==='original'?'road-route':'reference'))).toBe(true);
  }
  const combined=CoursesResponseSchema.parse((await app.inject('/api/courses?category=date&persona=no-car')).json());expect(combined.items.length).toBeGreaterThan(0);expect(combined.items.every(row=>row.category==='date'&&row.route.mode==='walking')).toBe(true);
  expect((await app.inject('/api/courses?persona=invalid')).statusCode).toBe(400);

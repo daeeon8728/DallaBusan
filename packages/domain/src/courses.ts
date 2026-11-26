@@ -19,7 +19,7 @@ export const CourseStepSchema = z.object({
   sourceCollectedAt:z.string().datetime().nullable(),description:z.string().nullable(),menu:z.string().nullable(),hours:z.string().nullable(),holidays:z.string().nullable(),
 });
 export const CourseSchema = z.object({id:z.string(),category:CourseCategorySchema,title:z.string(),locale:LocaleSchema,
-  status:z.literal('editorial-idea'),routeCheck:z.literal('pending'),fieldValidation:z.literal('not-performed'),
+  origin:z.enum(['original','curated']).default('original'),status:z.literal('editorial-idea'),routeCheck:z.literal('pending'),fieldValidation:z.literal('not-performed'),
   personaTag:z.array(CoursePersonaSchema).default([]),duration:z.string().default(''),featured:z.boolean().default(false),
   affiliateBundle:CourseAffiliateBundleSchema.nullable().default(null),affiliateItems:z.array(CourseAffiliateItemSchema).default([]),
   intro:z.string(),tips:z.string(),steps:z.array(CourseStepSchema).min(1),route:CourseRouteSchema,

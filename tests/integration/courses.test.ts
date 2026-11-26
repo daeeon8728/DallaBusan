@@ -15,16 +15,16 @@ describe('source-linked editorial course previews', () => {
   let app: FastifyInstance;
   beforeAll(async () => { app = await createRuntimeApp({ readOnlySnapshot: true }); });
   afterAll(async () => { await app?.close(); });
-  it('serves fifty ideas in five languages with ten per category and pending checks', async () => {
+  it('serves 150 ideas in the original five categories with pending checks', async () => {
     for (const locale of LocaleSchema.options) {
       const r = await app.inject('/api/courses?locale='+locale); expect(r.statusCode).toBe(200);
       const input: unknown = r.json(), data = CoursesResponseSchema.parse(input);
-      expect(data.total).toBe(50); expect(data.items).toHaveLength(50); expect(data.counts).toEqual({family:10,date:10,friends:10,food:10,dallabusan:10});
-      expect(new Set(data.items.map(x=>x.id)).size).toBe(50);
+      expect(data.total).toBe(150); expect(data.items).toHaveLength(150); expect(data.counts).toEqual({family:42,date:44,friends:20,food:23,dallabusan:21});expect(data.items.filter(c=>c.origin==='original')).toHaveLength(50);expect(data.items.filter(c=>c.origin==='curated')).toHaveLength(100);
+      expect(new Set(data.items.map(x=>x.id)).size).toBe(150);
       for (const item of data.items) {
         expect(item.locale).toBe(locale); expect(item.status).toBe('editorial-idea'); expect(item.routeCheck).toBe('pending'); expect(item.fieldValidation).toBe('not-performed');
         expect(item.steps.every(step=>step.kind!=='note'&&step.coordinates!==null)).toBe(true);
-        expect(item.route.status).toBe('road-route');expect(item.route).not.toHaveProperty('geometry');expect(item.intro.length).toBeGreaterThan(10);
+        expect(item.route.status).toBe(item.origin==='original'?'road-route':'reference');expect(item.route).not.toHaveProperty('geometry');expect(item.intro.length).toBeGreaterThan(10);
         expect(item).not.toHaveProperty('travelMinutes'); expect(item).not.toHaveProperty('award'); expect(item).not.toHaveProperty('bookingUrl');
         for(const step of item.steps) if(step.kind==='note') { expect(step.href).toBeNull(); expect(step.id).toBeNull(); } else {
           expect(step.href).toMatch(/^\/(places|food)\//); expect(step.id).not.toBeNull(); expect(step.sourceUrl).toMatch(/^https?:/);
@@ -48,7 +48,7 @@ describe('source-linked editorial course previews', () => {
     expect(()=>selectSourceCheckedCourses(duplicate,rows)).toThrow('Duplicate course');
   });
   it('filters categories, resolves source details and validates missing/invalid requests', async () => {
-    const list: unknown = (await app.inject('/api/courses?category=food')).json(); expect(CoursesResponseSchema.parse(list).items).toHaveLength(10);
+    const list: unknown = (await app.inject('/api/courses?category=food')).json(); expect(CoursesResponseSchema.parse(list).items).toHaveLength(23);
     const detail: unknown = (await app.inject('/api/courses/fa01?locale=en')).json(), course = CourseDetailSchema.parse(detail).course;
     expect(course.steps[0]?.href).toBe('/places/busan-1310');
     expect(course.route.geometry.length).toBeGreaterThan(1);expect(course.route.legs).toHaveLength(course.steps.length-1);expect(course.steps[1]?.menu).not.toBeNull();
@@ -72,7 +72,7 @@ describe('source-linked editorial course previews', () => {
     expect(new Set(sequences).size).toBe(catalog.items.length);
     for(const locale of LocaleSchema.options){
       const filtered=CoursesResponseSchema.parse((await app.inject('/api/courses?category=friends&locale='+locale)).json());
-      expect(filtered.items).toHaveLength(10);expect(filtered.total).toBe(50);
+      expect(filtered.items).toHaveLength(20);expect(filtered.total).toBe(150);
       for(const item of friends){
         const result=await app.inject('/api/courses/'+item.id+'?locale='+locale);expect(result.statusCode).toBe(200);
         const course=CourseDetailSchema.parse(result.json()).course;

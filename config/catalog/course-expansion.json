@@ -1281,7 +1281,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-002",
@@ -1326,7 +1327,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-003",
@@ -1371,7 +1373,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-004",
@@ -1416,7 +1419,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-005",
@@ -1461,7 +1465,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-006",
@@ -1506,7 +1511,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-007",
@@ -1551,7 +1557,8 @@
         "ja": "西区",
         "zh-CN": "西区",
         "zh-TW": "西區"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-008",
@@ -1596,7 +1603,8 @@
         "ja": "甘川",
         "zh-CN": "甘川",
         "zh-TW": "甘川"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-009",
@@ -1641,7 +1649,8 @@
         "ja": "甘川",
         "zh-CN": "甘川",
         "zh-TW": "甘川"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-010",
@@ -1686,7 +1695,8 @@
         "ja": "大庁",
         "zh-CN": "大厅洞",
         "zh-TW": "大廳洞"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-011",
@@ -1731,7 +1741,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-012",
@@ -1776,7 +1787,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-013",
@@ -1821,7 +1833,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-014",
@@ -1866,7 +1879,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-015",
@@ -1906,7 +1920,8 @@
         "ja": "太宗台",
         "zh-CN": "太宗台",
         "zh-TW": "太宗臺"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-016",
@@ -1944,7 +1959,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-017",
@@ -1982,7 +1998,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-018",
@@ -2020,7 +2037,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-019",
@@ -2067,7 +2085,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-020",
@@ -2105,7 +2124,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-021",
@@ -2143,7 +2163,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-022",
@@ -2190,7 +2211,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-023",
@@ -2235,7 +2257,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-024",
@@ -2275,7 +2298,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-025",
@@ -2320,7 +2344,8 @@
         "ja": "多大浦",
         "zh-CN": "多大浦",
         "zh-TW": "多大浦"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-026",
@@ -2358,7 +2383,8 @@
         "ja": "多大浦",
         "zh-CN": "多大浦",
         "zh-TW": "多大浦"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-027",
@@ -2396,7 +2422,8 @@
         "ja": "多大浦",
         "zh-CN": "多大浦",
         "zh-TW": "多大浦"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-028",
@@ -2434,7 +2461,8 @@
         "ja": "長林",
         "zh-CN": "长林",
         "zh-TW": "長林"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-029",
@@ -2479,7 +2507,8 @@
         "ja": "草梁",
         "zh-CN": "草梁",
         "zh-TW": "草梁"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-030",
@@ -2524,7 +2553,8 @@
         "ja": "草梁",
         "zh-CN": "草梁",
         "zh-TW": "草梁"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-031",
@@ -2569,7 +2599,8 @@
         "ja": "水晶",
         "zh-CN": "水晶",
         "zh-TW": "水晶"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-032",
@@ -2614,7 +2645,8 @@
         "ja": "水晶",
         "zh-CN": "水晶",
         "zh-TW": "水晶"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-033",
@@ -2659,7 +2691,8 @@
         "ja": "北港",
         "zh-CN": "北港",
         "zh-TW": "北港"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-034",
@@ -2704,7 +2737,8 @@
         "ja": "北港",
         "zh-CN": "北港",
         "zh-TW": "北港"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-035",
@@ -2749,7 +2783,8 @@
         "ja": "田浦",
         "zh-CN": "田浦",
         "zh-TW": "田浦"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-036",
@@ -2794,7 +2829,8 @@
         "ja": "西面",
         "zh-CN": "西面",
         "zh-TW": "西面"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-037",
@@ -2839,7 +2875,8 @@
         "ja": "市民公園",
         "zh-CN": "市民公园",
         "zh-TW": "市民公園"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-038",
@@ -2877,7 +2914,8 @@
         "ja": "釜山鎮",
         "zh-CN": "釜山镇",
         "zh-TW": "釜山鎮"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-039",
@@ -2922,7 +2960,8 @@
         "ja": "田浦",
         "zh-CN": "田浦",
         "zh-TW": "田浦"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-040",
@@ -2967,7 +3006,8 @@
         "ja": "凡川",
         "zh-CN": "凡川",
         "zh-TW": "凡川"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-041",
@@ -3005,7 +3045,8 @@
         "ja": "望美",
         "zh-CN": "望美",
         "zh-TW": "望美"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-042",
@@ -3043,7 +3084,8 @@
         "ja": "水営",
         "zh-CN": "水营",
         "zh-TW": "水營"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-043",
@@ -3090,7 +3132,8 @@
         "ja": "センタム",
         "zh-CN": "Centum",
         "zh-TW": "Centum"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-044",
@@ -3130,7 +3173,8 @@
         "ja": "センタム",
         "zh-CN": "Centum",
         "zh-TW": "Centum"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-045",
@@ -3175,7 +3219,8 @@
         "ja": "マリンシティ",
         "zh-CN": "Marine City",
         "zh-TW": "Marine City"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-046",
@@ -3213,7 +3258,8 @@
         "ja": "水営",
         "zh-CN": "水营",
         "zh-TW": "水營"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-047",
@@ -3253,7 +3299,8 @@
         "ja": "広安里",
         "zh-CN": "广安里",
         "zh-TW": "廣安里"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-048",
@@ -3291,7 +3338,8 @@
         "ja": "民楽",
         "zh-CN": "民乐",
         "zh-TW": "民樂"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-049",
@@ -3329,7 +3377,8 @@
         "ja": "水営",
         "zh-CN": "水营",
         "zh-TW": "水營"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-050",
@@ -3367,7 +3416,8 @@
         "ja": "水営",
         "zh-CN": "水营",
         "zh-TW": "水營"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-051",
@@ -3412,7 +3462,8 @@
         "ja": "海雲台",
         "zh-CN": "海云台",
         "zh-TW": "海雲臺"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-052",
@@ -3450,7 +3501,8 @@
         "ja": "タルマジ",
         "zh-CN": "迎月路",
         "zh-TW": "迎月路"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-053",
@@ -3488,7 +3540,8 @@
         "ja": "青沙浦",
         "zh-CN": "青沙浦",
         "zh-TW": "青沙浦"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-054",
@@ -3526,7 +3579,8 @@
         "ja": "海雲台",
         "zh-CN": "海云台",
         "zh-TW": "海雲臺"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-055",
@@ -3564,7 +3618,8 @@
         "ja": "松亭",
         "zh-CN": "松亭",
         "zh-TW": "松亭"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-056",
@@ -3602,7 +3657,8 @@
         "ja": "松亭",
         "zh-CN": "松亭",
         "zh-TW": "松亭"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-057",
@@ -3640,7 +3696,8 @@
         "ja": "九徳浦",
         "zh-CN": "九德浦",
         "zh-TW": "九德浦"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-058",
@@ -3678,7 +3735,8 @@
         "ja": "松亭",
         "zh-CN": "松亭",
         "zh-TW": "松亭"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-059",
@@ -3723,7 +3781,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-060",
@@ -3761,7 +3820,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-061",
@@ -3799,7 +3859,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-062",
@@ -3837,7 +3898,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-063",
@@ -3875,7 +3937,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-064",
@@ -3920,7 +3983,8 @@
         "ja": "林浪",
         "zh-CN": "林浪",
         "zh-TW": "林浪"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-065",
@@ -3958,7 +4022,8 @@
         "ja": "機張",
         "zh-CN": "机张",
         "zh-TW": "機張"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-066",
@@ -3996,7 +4061,8 @@
         "ja": "機張",
         "zh-CN": "机张",
         "zh-TW": "機張"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-067",
@@ -4034,7 +4100,8 @@
         "ja": "長安",
         "zh-CN": "长安",
         "zh-TW": "長安"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-068",
@@ -4079,7 +4146,8 @@
         "ja": "東莱",
         "zh-CN": "东莱",
         "zh-TW": "東萊"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-069",
@@ -4124,7 +4192,8 @@
         "ja": "東莱",
         "zh-CN": "东莱",
         "zh-TW": "東萊"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-070",
@@ -4169,7 +4238,8 @@
         "ja": "温泉場",
         "zh-CN": "温泉场",
         "zh-TW": "溫泉場"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-071",
@@ -4214,7 +4284,8 @@
         "ja": "温泉場",
         "zh-CN": "温泉场",
         "zh-TW": "溫泉場"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-072",
@@ -4252,7 +4323,8 @@
         "ja": "東莱",
         "zh-CN": "东莱",
         "zh-TW": "東萊"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-073",
@@ -4292,7 +4364,8 @@
         "ja": "社稷",
         "zh-CN": "社稷",
         "zh-TW": "社稷"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-074",
@@ -4332,7 +4405,8 @@
         "ja": "社稷",
         "zh-CN": "社稷",
         "zh-TW": "社稷"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-075",
@@ -4377,7 +4451,8 @@
         "ja": "草邑",
         "zh-CN": "草邑",
         "zh-TW": "草邑"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-076",
@@ -4422,7 +4497,8 @@
         "ja": "草邑",
         "zh-CN": "草邑",
         "zh-TW": "草邑"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-077",
@@ -4467,7 +4543,8 @@
         "ja": "沙上",
         "zh-CN": "沙上",
         "zh-TW": "沙上"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-078",
@@ -4512,7 +4589,8 @@
         "ja": "華明",
         "zh-CN": "华明",
         "zh-TW": "華明"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-079",
@@ -4550,7 +4628,8 @@
         "ja": "加徳",
         "zh-CN": "加德",
         "zh-TW": "加德"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-080",
@@ -4588,7 +4667,8 @@
         "ja": "亀浦",
         "zh-CN": "龟浦",
         "zh-TW": "龜浦"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-081",
@@ -4647,7 +4727,8 @@
         "ja": "南浦",
         "zh-CN": "南浦",
         "zh-TW": "南浦"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-082",
@@ -4706,7 +4787,8 @@
         "ja": "甘川",
         "zh-CN": "甘川",
         "zh-TW": "甘川"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-083",
@@ -4765,7 +4847,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-084",
@@ -4817,7 +4900,8 @@
         "ja": "影島",
         "zh-CN": "影岛",
         "zh-TW": "影島"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-085",
@@ -4871,7 +4955,8 @@
         "ja": "松島",
         "zh-CN": "松岛",
         "zh-TW": "松島"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-086",
@@ -4930,7 +5015,8 @@
         "ja": "多大浦",
         "zh-CN": "多大浦",
         "zh-TW": "多大浦"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-087",
@@ -4996,7 +5082,8 @@
         "ja": "草梁",
         "zh-CN": "草梁",
         "zh-TW": "草梁"
-      }
+      },
+      "category": "dallabusan"
     },
     {
       "id": "edit-088",
@@ -5055,7 +5142,8 @@
         "ja": "北港",
         "zh-CN": "北港",
         "zh-TW": "北港"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-089",
@@ -5114,7 +5202,8 @@
         "ja": "西面",
         "zh-CN": "西面",
         "zh-TW": "西面"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-090",
@@ -5166,7 +5255,8 @@
         "ja": "釜山鎮",
         "zh-CN": "釜山镇",
         "zh-TW": "釜山鎮"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-091",
@@ -5225,7 +5315,8 @@
         "ja": "水営",
         "zh-CN": "水营",
         "zh-TW": "水營"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-092",
@@ -5279,7 +5370,8 @@
         "ja": "センタム",
         "zh-CN": "Centum",
         "zh-TW": "Centum"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-093",
@@ -5338,7 +5430,8 @@
         "ja": "海雲台",
         "zh-CN": "海云台",
         "zh-TW": "海雲臺"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-094",
@@ -5390,7 +5483,8 @@
         "ja": "タルマジ",
         "zh-CN": "迎月路",
         "zh-TW": "迎月路"
-      }
+      },
+      "category": "date"
     },
     {
       "id": "edit-095",
@@ -5449,7 +5543,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-096",
@@ -5494,7 +5589,8 @@
         "ja": "オシリア",
         "zh-CN": "Osiria",
         "zh-TW": "Osiria"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-097",
@@ -5546,7 +5642,8 @@
         "ja": "林浪",
         "zh-CN": "林浪",
         "zh-TW": "林浪"
-      }
+      },
+      "category": "food"
     },
     {
       "id": "edit-098",
@@ -5605,7 +5702,8 @@
         "ja": "東莱",
         "zh-CN": "东莱",
         "zh-TW": "東萊"
-      }
+      },
+      "category": "family"
     },
     {
       "id": "edit-099",
@@ -5659,7 +5757,8 @@
         "ja": "社稷",
         "zh-CN": "社稷",
         "zh-TW": "社稷"
-      }
+      },
+      "category": "friends"
     },
     {
       "id": "edit-100",
@@ -5704,7 +5803,8 @@
         "ja": "乙淑島",
         "zh-CN": "乙淑岛",
         "zh-TW": "乙淑島"
-      }
+      },
+      "category": "family"
     }
   ]
 }

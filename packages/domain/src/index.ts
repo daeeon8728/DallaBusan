@@ -30,3 +30,4 @@ export * from './course-offers.js';
 export * from './course-commerce.js';
 
 export * from './course-builder.js';
+export * from './booking-guide.js';

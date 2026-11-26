@@ -1823,3 +1823,39 @@ config/catalog/travel-tools.json에 중립 flight-search/kind=flights로 원문 
 ### 시연·한계
 
 [PC 미리보기](design/course-expansion-2026-11-26/desktop-preview.png) · [PC 복원](design/course-expansion-2026-11-26/desktop-saved.png) · [모바일 미리보기](design/course-expansion-2026-11-26/mobile-preview.png) · [모바일 복원](design/course-expansion-2026-11-26/mobile-saved.png) · [독립 smoke](design/course-expansion-2026-11-26/smoke.json)를 저장했다. 캡처를 직접 검토했다. E2E의 사진·배경 지도·환율·외부 분석은 대역이다. 캡처의 단색 사진/지도는 검증 대역이며 운영 사진 자산을 교체한 것이 아니다. 새 도로 라우팅 호출·제휴 예약/결제 클릭·유료 AI 호출은0이다. 경기일/영업/입구/보행·지하철 경로 실측과 사람/현장 승인은 미수행이다. 실시간 운영 보장·현지인 독점·최적 경로·교통시간으로 광고하지 않는다. Zod annotation·큰 지도 청크·SQLite experimental 경고는 기존 비차단 경고이며 숨기지 않았다. Git push·Vercel 배포는 이번 요청 범위에서 실행하지 않았다.
+
+## 2026-11-26 선행 push·예약 전 조건 안내·150개 코스와 기존5분류 복원
+
+### 요청 반영과 변경
+
+선행 완료분은 GitHub dallabusan 원격 main에345625e(`feat: add editable Busan course library`)로 푸시했다. 이후 사용자 승인에 따라 예약 상품의 실제 이용 조건 안내를 구현했고, 추가 요청에 따라 홈·목록의 별도 First-Timer/No Car/Couples/1-Day Trip 필터 줄을 제거했다. 기존 Family/Date/Friends/Food/dallaBusan5분류에 원본50+신규100을 통합했다. 수량은42/44/20/23/21, 총150개다. 각 원본50개 ID·순서·도로 경로를 보존했다. 신규100개의 상세·지도·관련 상품·편집 연결을 공개했다. 홈 카테고리에서 기존3개와 신규3개를 함께 볼 수 있다. 조합 라이브러리174개는 별도 단축24를 포함하는 수이며150개와 혼동하지 않는다.
+
+신규 파일: domain booking-guide.ts, 서버 config/services/routes booking-guides.ts 및 config expanded-course-copy.ts, config/catalog/booking-guides.json, 웹 booking/BookingGuide.tsx·booking-guide.css·i18n/booking-guide.ts, scripts/check-booking-guides.ts, 통합/E2E booking-guides.test/spec.ts, 검토 문서/시연. 수정: runtime·domain courses·추가 코스 schema/data/서비스·홈/목록·상품 상세·BuilderLink/BuilderPage·관련 테스트·package.json·AGENTS/spec/catalog-plan. 전체 상품 원본/가격/사진/DB/.env/lockfile은 보존했다.
+
+예약 전 진행 언어/외국인/아동/집결·교환/취소·환불/추가 비용/해외카드7개를5개 언어로 표시한다. 공식 원문8개 상품21개 항목의 검토이며 실제 결제 검증0이다. 미검토 항목은 미확인이다.8개 상품의 해외카드 지원은 모두 미확인으로 유지한다. 한국어 사이트/영문 사이트/후기를 외국인·가이드·카드 보장으로 바꾸지 않는다. 같은 상품 원문·ID·provider·링크 지문/호스트/검토 기한을 대조하고 변경/만료 시 전체 미확인으로 복원한다. 열어둔 화면에서도 만료를 반영한다. 송도 상품의 취소 불가/미사용 환불 안내는 상충으로 표시하고 해외 전화번호 수신 여부는 확인 필요로 표시했다. 출처는 [검토 문서](booking-guide-review-2026-11-26.md)에 기록했다.
+
+포털/API 신규 상품 수집0·새 예약 링크 발급0·상품 발행/추가 제외0이다. 기존 공개 상품402와 제한 업체 제외 정책을 유지한다. 미공개 상품의 예약 안내도404로 차단한다. 새로운 읽기 전용 안내 API는 no-store이며 원본 지문/설정/키를 공개하지 않는다.
+
+### 최종 검증
+
+| 명령·검사 | 결과 |
+| --- | --- |
+| npm run lint | 종료0, 새 CLI 추가 후까지 재확인 |
+| npm run typecheck | 종료0, server/web/domain/tools strict |
+| node node_modules/typescript/bin/tsc -p tsconfig.tools.json | 신규 CLI 포함 종료0 |
+| npm run test -- --run --maxWorkers=2 | 종료0,47파일446개 통과 |
+| npm run check:providers | 종료0,171개 소스 경계 통과 |
+| npm run build | 종료0, domain→server→web 최종 성공 |
+| npm run data:booking-guides:check | 종료0,8상품21항목/5언어/기한 경과0/외부 호출0 |
+| npm run data:builder:check | 종료0, 기존74+추가100/장소200/단거리80·장기20/중복·지문·직선거리 검증 유지 |
+| npm run data:courses:check | 종료0, 원본50개 도로 경로·100개 원본 연결 보존 |
+| npm run test:e2e -- tests/e2e/home-courses.spec.ts tests/e2e/courses-popup.spec.ts tests/e2e/course-map.spec.ts tests/e2e/course-builder.spec.ts tests/e2e/offer-dialog.spec.ts tests/e2e/booking-guides.spec.ts tests/e2e/exchange.spec.ts | 종료0,모바일/태블릿/PC114개 통과 |
+| 독립 dist start smoke | 임시4318 서버의5언어 코스150/원본50/추가100/분류수·신규 상세·상충 조건 API200과 홈/목록/상세/조합 HTML200 확인. 종료 후 임시 서버 종료 |
+
+초기 타입 검사에서 persona UI 제거 후 남은 참조를 발견해 제거했다. 기존 코스 수를10개로 고정한 한 단위 테스트는 새 분류수23으로 갱신한 뒤 전체446개를 통과했다. 초기 PC E2E37/38 중 만료 테스트 한 건은 테스트의1초 기한이 재시도 전에 이미 지나서 실패했다. 브라우저 시계의 현재 시각+60초를 기한으로 설정하고61초를 명시 진행해 만료 전 기재/만료 후 미확인을 검사하도록 수정했다. 최종114개 모두 통과했으며 검사를 비활성화하거나 시간 초과를 늘리지 않았다. 시연 파일 복사에서 잘못 추측한 Playwright 폴더명은 실제 출력 경로로 수정했다.
+
+### 시연과 운영 한계
+
+[PC 홈5분류](design/booking-guide-2026-11-26/desktop-home-categories.png) · [모바일 홈](design/booking-guide-2026-11-26/mobile-home-categories.png) · [PC 예약 안내](design/booking-guide-2026-11-26/desktop-booking-guide.png) · [모바일 예약 안내](design/booking-guide-2026-11-26/mobile-booking-guide.png) · [독립 smoke](design/booking-guide-2026-11-26/smoke.json)를 보관하고 직접 검토했다. 시연의 단색 사진·배경 지도/환율/외부 분석은 대역이며 운영 자산을 교체하지 않았다. 실제 외부 예약/결제·새 도로 라우팅·유료 API 호출은0이다. 상품 원문 열람은 별도 공식 웹 자료 조사이며 캐시된 원문일 수 있다. 정책/재고가 실시간으로 검증됐다고 표시하지 않는다. 신규100개의 도로/대중교통/입구·가족 적합성·현장 검수는 미수행이며 방문 순서 참고선과 편집 아이디어 상태를 유지한다. 기존 Zod annotation/지도 청크/SQLite experimental 비차단 경고는 유지한다.
+
+검증 후 사용자 지시대로 dallabusan main에 후속 커밋/푸시한다. GitHub 반영과 Vercel/AWS 배포 완료는 구분한다. AWS 이관은 전체 소스/workspace·lockfile·설정·공개 데이터 스냅샷을 전달하고 .env는 비공개 환경 설정으로 분리하며 .md는 런타임 필수가 아니라고 안내했다. 이번 작업에서 AWS 계정·서버·도메인 설정은 수행하지 않았다.

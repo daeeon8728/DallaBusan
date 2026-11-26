@@ -1,3 +1,5 @@
+import type{CourseExpansion}from'../config/course-expansion.js';
+import{expandedCourseCopy}from'../config/expanded-course-copy.js';
 import { CourseOffersSchema, CourseSchema, CoursesResponseSchema, type CoursePersona, type Course, type CourseCategory, type Locale } from '@trip-fit/domain';
 import type { CourseCatalog } from '../config/courses.js';
 import type { DestinationService } from './destinations.js';
@@ -8,13 +10,14 @@ import { courseRouteFingerprint,courseWaypoints,referenceCourseRoute } from './c
 import type {OfferService} from './offers.js';
 import type {CourseCommerceConfig} from '../config/course-commerce.js';
 import {getCourseCommerceCopy} from '../config/course-commerce-copy.js';
-export function createCourseService(config: CourseCatalog, destinations: DestinationService, guides: GuideService, anchors:ReadonlyMap<string,ParkingAnchor>=new Map(), routes:CourseRouteSnapshot={version:1,items:[]},commerce:CourseCommerceConfig['items']=[],today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()),offerSelection?:Pick<OfferService,'selectForDisplay'>) {
+export function createCourseService(config: CourseCatalog, destinations: DestinationService, guides: GuideService, anchors:ReadonlyMap<string,ParkingAnchor>=new Map(), routes:CourseRouteSnapshot={version:1,items:[]},commerce:CourseCommerceConfig['items']=[],today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()),offerSelection?:Pick<OfferService,'selectForDisplay'>,expansion?:CourseExpansion) {
+    const expanded:CourseCatalog['items']=expansion?.items.map(row=>({id:row.id,category:row.category,titles:row.titles,status:'editorial-idea',personaTag:[],featured:false,mode:row.mode,steps:row.visits.map(v=>v.ref.kind==='food'?{kind:'food',id:v.ref.id,stayMinutes:v.minutes}:{kind:'destination',id:v.ref.id,stayMinutes:v.minutes}),intro:expandedCourseCopy.intro,tips:expandedCourseCopy.tips,duration:{ko:expandedCourseCopy.duration.ko+' '+row.visits.reduce((s,v)=>s+v.minutes,0),en:expandedCourseCopy.duration.en+' '+row.visits.reduce((s,v)=>s+v.minutes,0),ja:expandedCourseCopy.duration.ja+' '+row.visits.reduce((s,v)=>s+v.minutes,0),'zh-CN':expandedCourseCopy.duration['zh-CN']+' '+row.visits.reduce((s,v)=>s+v.minutes,0),'zh-TW':expandedCourseCopy.duration['zh-TW']+' '+row.visits.reduce((s,v)=>s+v.minutes,0)}}))??[];
     const cache = new Map<Locale, ReturnType<typeof CourseSchema.parse>[]>();
     function items(locale: Locale) {
         const cached = cache.get(locale);
         if (cached)
             return cached;
-        const result = config.items.flatMap(item => {
+        const result = [...config.items,...expanded].flatMap(item => {
             let valid = true;
             const steps = item.steps.map(step => {
                 if (step.kind === 'note')
@@ -38,7 +41,7 @@ export function createCourseService(config: CourseCatalog, destinations: Destina
             const points=courseWaypoints(item,anchors), fingerprint=courseRouteFingerprint(item,points);
             const cachedRoute=routes.items.find(row=>row.id===item.id&&row.fingerprint===fingerprint&&row.route.mode===item.mode&&row.route.legs.length===item.steps.length-1);
             const route=cachedRoute?.route??referenceCourseRoute(item.mode);
-            return valid ? [CourseSchema.parse({personaTag:item.personaTag,duration:item.duration?.[locale]??'',featured:item.featured,intro:item.intro?.[locale]??'',tips:item.tips?.[locale]??'',route, id: item.id, category: item.category, title: item.titles[locale], locale, status: item.status, routeCheck: 'pending', fieldValidation: 'not-performed', steps, image: steps.find(step => step?.image)?.image ?? null, reviewedOn: config.reviewedOn })] : [];
+            return valid ? [CourseSchema.parse({origin:item.id.startsWith('edit-')?'curated':'original',personaTag:item.personaTag,duration:item.duration?.[locale]??'',featured:item.featured,intro:item.intro?.[locale]??'',tips:item.tips?.[locale]??'',route, id: item.id, category: item.category, title: item.titles[locale], locale, status: item.status, routeCheck: 'pending', fieldValidation: 'not-performed', steps, image: steps.find(step => step?.image)?.image ?? null, reviewedOn: config.reviewedOn })] : [];
         });
         cache.set(locale, result);
         return result;

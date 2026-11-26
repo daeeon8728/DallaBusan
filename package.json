@@ -40,7 +40,8 @@
     "data:courses:routes:refresh": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/refresh-course-routes.ts",
     "data:courses:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-course-routes.ts",
     "data:food-assistance:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-food-assistance.ts",
-    "data:builder:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-course-expansion.ts"
+    "data:builder:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-course-expansion.ts",
+    "data:booking-guides:check": "npm run build --workspace @trip-fit/domain && node --import tsx scripts/check-booking-guides.ts"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

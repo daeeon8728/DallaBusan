@@ -1,0 +1,519 @@
+{
+  "version": 1,
+  "evidenceStatus": "assistant-source-evidence",
+  "items": [
+    {
+      "offerId": "b-74132",
+      "providerId": "PROVIDER_B",
+      "externalId": "74132",
+      "sourceHash": "db09e5274b1a0e1c8704523e49bc1c6cd80f46d98c1f860cdcf20a62a5bc3459",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "guide-language",
+          "status": "source-listed",
+          "texts": {
+            "ko": "영어·중국어·일본어가 표시되어 있습니다. 원하는 진행 언어의 옵션과 날짜를 선택하세요.",
+            "en": "English, Chinese and Japanese are listed. Select an option and date offering your preferred language.",
+            "ja": "英語・中国語・日本語の記載があります。希望言語に対応するプランと日付を選んでください。",
+            "zh-CN": "页面列出英语、中文、日语，请选择提供所需语言的方案与日期。",
+            "zh-TW": "頁面列出英語、中文、日語，請選擇提供所需語言的方案與日期。"
+          },
+          "evidence": [
+            {
+              "excerpt": "영어/중국어/일본어",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan"
+            }
+          ]
+        },
+        {
+          "field": "meeting-point",
+          "status": "source-listed",
+          "texts": {
+            "ko": "스태프 미팅 상품입니다. 정확한 집결 장소와 시간은 선택한 옵션과 예약 안내에서 확인하세요.",
+            "en": "Staff meeting is listed. Confirm the exact departure point and time for your selected option.",
+            "ja": "スタッフ集合型です。選択したプランの正確な集合場所と時刻を確認してください。",
+            "zh-CN": "商品注明需与工作人员会合，请确认所选方案的具体集合地点和时间。",
+            "zh-TW": "商品註明需與工作人員會合，請確認所選方案的確切集合地點與時間。"
+          },
+          "evidence": [
+            {
+              "excerpt": "스태프 미팅",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/74132-busan-oneday-tour-busan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "b-148741",
+      "providerId": "PROVIDER_B",
+      "externalId": "148741",
+      "sourceHash": "b361c6136c82fe8261f81ce721afa0ccedb880e71e857429ca37d9f025f005eb",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "guide-language",
+          "status": "source-listed",
+          "texts": {
+            "ko": "영어·중국어가 표시되어 있습니다. 언어는 날짜와 옵션에서 다시 확인하세요.",
+            "en": "English and Chinese are listed. Recheck language for your date and option.",
+            "ja": "英語・中国語の記載があります。日付とプランごとの言語を確認してください。",
+            "zh-CN": "页面列出英语和中文，请确认具体日期与方案的语言。",
+            "zh-TW": "頁面列出英語與中文，請確認實際日期與方案的語言。"
+          },
+          "evidence": [
+            {
+              "excerpt": "영어/중국어",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour"
+            }
+          ]
+        },
+        {
+          "field": "meeting-point",
+          "status": "source-listed",
+          "texts": {
+            "ko": "스태프 미팅 상품입니다. 정확한 집결 장소와 시간은 선택한 옵션과 예약 안내에서 확인하세요.",
+            "en": "Staff meeting is listed. Confirm the exact departure point and time for your selected option.",
+            "ja": "スタッフ集合型です。選択したプランの正確な集合場所と時刻を確認してください。",
+            "zh-CN": "商品注明需与工作人员会合，请确认所选方案的具体集合地点和时间。",
+            "zh-TW": "商品註明需與工作人員會合，請確認所選方案的確切集合地點與時間。"
+          },
+          "evidence": [
+            {
+              "excerpt": "스태프 미팅",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/148741-sunset-haeundae-sky-capsule-busan-night-view-tour"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "b-75094",
+      "providerId": "PROVIDER_B",
+      "externalId": "75094",
+      "sourceHash": "5f1e0ea54d91577211b471baff3c22baf0ca7b66b65896940069e829705efcca",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-06",
+      "claims": [
+        {
+          "field": "children",
+          "status": "source-listed",
+          "texts": {
+            "ko": "상품에는 연령 제한이 없다고 적혀 있지만, 개별 놀이기구의 신장·안전 제한과 아동 요금은 별도로 확인해야 합니다.",
+            "en": "The listing states no age limit for this product. Check ride-specific height/safety limits and child pricing separately.",
+            "ja": "商品自体の年齢制限はないと記載。各遊具の身長・安全制限と子供料金は別途確認してください。",
+            "zh-CN": "商品注明无年龄限制，但各游乐设施的身高、安全限制及儿童票价需另行确认。",
+            "zh-TW": "商品註明無年齡限制，但各遊樂設施的身高、安全限制及兒童票價須另行確認。"
+          },
+          "evidence": [
+            {
+              "excerpt": "이용 가능 연령이 제한되어 있지 않습니다.",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/75094-lotte-world-busan"
+            }
+          ]
+        },
+        {
+          "field": "meeting-point",
+          "status": "source-listed",
+          "texts": {
+            "ko": "시설 주소는 부산 기장군 동부산관광로 42입니다. 실제 입장 위치는 바우처에서 확인하세요.",
+            "en": "Venue address: 42 Dongbusangwangwang-ro, Gijang-gun, Busan. Check your voucher for the entrance.",
+            "ja": "施設住所は釜山・機張郡・東釜山観光路42。入口はバウチャーで確認してください。",
+            "zh-CN": "设施地址为釜山机张郡东釜山观光路42号，具体入口请查看凭证。",
+            "zh-TW": "設施地址為釜山機張郡東釜山觀光路42號，實際入口請查看憑證。"
+          },
+          "evidence": [
+            {
+              "excerpt": "동부산관광로 42",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/75094-lotte-world-busan"
+            }
+          ]
+        },
+        {
+          "field": "cancellation",
+          "status": "check-required",
+          "texts": {
+            "ko": "2026년 11월 1일~12월 6일 표시 패키지는 바우처 사용·교환 전 취소 시 전액 환불 안내가 있습니다. 판매처 고객센터에 요청하며, 선택한 옵션의 규정을 다시 확인하세요.",
+            "en": "The displayed Nov 1–Dec 6, 2026 package lists a full refund before voucher use/exchange through provider support. Recheck your selected option.",
+            "ja": "表示の2026年11月1日〜12月6日プランは使用・交換前の全額返金を案内。販売元への連絡と選択プランの再確認が必要です。",
+            "zh-CN": "页面所示2026年11月1日至12月6日方案注明凭证使用或兑换前可申请全额退款，请联系销售方并核对所选方案。",
+            "zh-TW": "頁面所示2026年11月1日至12月6日方案註明憑證使用或兌換前可申請全額退款，請聯絡銷售方並核對所選方案。"
+          },
+          "evidence": [
+            {
+              "excerpt": "바우처 사용(교환) 전 예약 취소시 100% 환불",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/75094-lotte-world-busan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "b-91702",
+      "providerId": "PROVIDER_B",
+      "externalId": "91702",
+      "sourceHash": "9859a1e49a379ace3cd062a3dea8db060cd017059130a49739cf66cd8f8849b4",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "meeting-point",
+          "status": "source-listed",
+          "texts": {
+            "ko": "지정장소 미팅이며 주소로 222 Gwanganhaebyeon-ro 54beon-gil이 표시됩니다. 승선 부두와 집결 시각을 예약 안내에서 반드시 확인하세요.",
+            "en": "A designated meeting and 222 Gwanganhaebyeon-ro 54beon-gil are listed. Confirm the boarding dock and time in your booking instructions.",
+            "ja": "指定場所集合で、住所は222 Gwanganhaebyeon-ro 54beon-gil。乗船桟橋と時刻は予約案内で確認してください。",
+            "zh-CN": "页面注明指定地点会合，并列出222 Gwanganhaebyeon-ro 54beon-gil，请务必核对登船码头及时间。",
+            "zh-TW": "頁面註明指定地點會合，並列出222 Gwanganhaebyeon-ro 54beon-gil，請務必核對登船碼頭及時間。"
+          },
+          "evidence": [
+            {
+              "excerpt": "지정장소 미팅",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/91702-busan-yacht"
+            },
+            {
+              "excerpt": "222 Gwanganhaebyeon-ro 54beon-gil",
+              "locale": "ko",
+              "url": "https://www.klook.com/ko/activity/91702-busan-yacht"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "a-52607026",
+      "providerId": "PROVIDER_A",
+      "externalId": "52607026",
+      "sourceHash": "1a725fa7c2cec76f2f95b2d29cc18dc2ae83821fc76dbb83a9b9189ab3719c93",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "guide-language",
+          "status": "source-listed",
+          "texts": {
+            "ko": "영어·한국어 가이드 옵션이 구분되어 있습니다. 영어 안내가 필요하면 해당 옵션을 선택하세요.",
+            "en": "English-guide and Korean-guide options are separate. Select the English-guide option if needed.",
+            "ja": "英語ガイドと韓国語ガイドのプランは別です。必要な言語のプランを選んでください。",
+            "zh-CN": "英语导游与韩语导游为不同方案，请按所需语言选择。",
+            "zh-TW": "英語導遊與韓語導遊為不同方案，請依所需語言選擇。"
+          },
+          "evidence": [
+            {
+              "excerpt": "영어 가이드 (정규 출발)",
+              "locale": "ko",
+              "url": "https://kr.trip.com/things-to-do/detail/52607026/"
+            },
+            {
+              "excerpt": "한국어 가이드 (정규 출발)",
+              "locale": "ko",
+              "url": "https://kr.trip.com/things-to-do/detail/52607026/"
+            }
+          ]
+        },
+        {
+          "field": "meeting-point",
+          "status": "source-listed",
+          "texts": {
+            "ko": "부산역 집결 안내는 KTX 부산역 1번 출구이며 지하철 출구가 아닙니다. 선택 옵션의 다른 집결지·시간도 확인하세요.",
+            "en": "The Busan Station meeting is at KTX Busan Station Exit 1, not a subway exit. Confirm your option’s meeting point and time.",
+            "ja": "釜山駅集合は地下鉄ではなくKTX釜山駅1番出口です。プランごとの集合場所と時刻を確認してください。",
+            "zh-CN": "釜山站集合点是KTX釜山站1号出口，不是地铁出口，请核对所选方案的地点和时间。",
+            "zh-TW": "釜山站集合點是KTX釜山站1號出口，不是地鐵出口，請核對所選方案的地點及時間。"
+          },
+          "evidence": [
+            {
+              "excerpt": "KTX 부산역 1번 출구, 지하철역 출구가 아닙니다",
+              "locale": "ko",
+              "url": "https://kr.trip.com/things-to-do/detail/52607026/"
+            }
+          ]
+        },
+        {
+          "field": "cancellation",
+          "status": "check-required",
+          "texts": {
+            "ko": "페이지에는 이용 전날 10:00까지 무료 취소가 표시됩니다. 정확한 현지 시간 기준과 선택 옵션의 마감은 결제 전에 확인하세요.",
+            "en": "The page lists free cancellation until 10:00 on the day before use. Confirm the applicable local time and option deadline before paying.",
+            "ja": "利用前日10:00まで無料キャンセルと表示。適用される現地時間とプラン別締切を決済前に確認してください。",
+            "zh-CN": "页面标示使用前一天10:00前免费取消，请在付款前确认当地时区及方案截止时间。",
+            "zh-TW": "頁面標示使用前一天10:00前免費取消，請在付款前確認當地時區及方案截止時間。"
+          },
+          "evidence": [
+            {
+              "excerpt": "사용일 1일 전 10:00까지 무료 취소 가능",
+              "locale": "ko",
+              "url": "https://kr.trip.com/things-to-do/detail/52607026/"
+            }
+          ]
+        },
+        {
+          "field": "extra-costs",
+          "status": "source-listed",
+          "texts": {
+            "ko": "중식은 개인 부담으로 표시되어 있습니다. 다른 포함·불포함 항목도 선택 옵션에서 확인하세요.",
+            "en": "Lunch is listed as self-paid. Check the other inclusions and exclusions for your selected option.",
+            "ja": "昼食は自己負担です。他の含まれるもの・含まれないものもプランで確認してください。",
+            "zh-CN": "页面注明午餐自费，其他包含及不包含项目请核对所选方案。",
+            "zh-TW": "頁面註明午餐自費，其他包含與不包含項目請核對所選方案。"
+          },
+          "evidence": [
+            {
+              "excerpt": "중식",
+              "locale": "ko",
+              "url": "https://kr.trip.com/things-to-do/detail/52607026/"
+            },
+            {
+              "excerpt": "자비 부담",
+              "locale": "ko",
+              "url": "https://kr.trip.com/things-to-do/detail/52607026/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "e-138477",
+      "providerId": "PROVIDER_E",
+      "externalId": "138477",
+      "sourceHash": "2e11b7b63943faa1d74c0de017480f7e7809a708b870dd9dde765c852aa4f6e9",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "foreign-participation",
+          "status": "source-listed",
+          "texts": {
+            "ko": "외국인 여행자용 패스로 소개되어 있습니다. 실물 카드 수령에는 여권이 필요하며 개별 시설의 참가 조건은 별도 확인하세요.",
+            "en": "Marketed for international visitors. Passport is required for physical-card collection; check individual attraction eligibility separately.",
+            "ja": "外国人旅行者向けパスです。実物カード受取にはパスポートが必要で、各施設の利用条件は別途確認してください。",
+            "zh-CN": "商品面向外国游客，领取实体卡需出示护照，各设施的参与条件需另行确认。",
+            "zh-TW": "商品面向外國旅客，領取實體卡須出示護照，各設施的參加條件須另行確認。"
+          },
+          "evidence": [
+            {
+              "excerpt": "專為外國旅客設計",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+            },
+            {
+              "excerpt": "憑證與護照",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+            }
+          ]
+        },
+        {
+          "field": "meeting-point",
+          "status": "source-listed",
+          "texts": {
+            "ko": "실물 카드는 지정 교환처에서 수령합니다. 모바일 패스는 앱 QR을 쓰며, 시설별 티켓 교환 절차는 별도로 확인하세요.",
+            "en": "Physical cards require a designated collection point; mobile passes use an app QR. Check each attraction’s ticket-exchange procedure.",
+            "ja": "実物カードは指定受取所、モバイルパスはアプリQRを使用。各施設のチケット交換手順を確認してください。",
+            "zh-CN": "实体卡须在指定地点领取，电子通行证使用App二维码，各设施的换票流程请另行确认。",
+            "zh-TW": "實體卡須在指定地點領取，電子通行證使用App QR碼，各設施的換票流程請另行確認。"
+          },
+          "evidence": [
+            {
+              "excerpt": "指定兌換處",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+            },
+            {
+              "excerpt": "出示 QR Code",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+            }
+          ]
+        },
+        {
+          "field": "extra-costs",
+          "status": "source-listed",
+          "texts": {
+            "ko": "교통카드 충전 금액은 별도입니다. 모바일 패스에는 교통카드 기능이 없고, 빠른 입장권은 포함되지 않습니다.",
+            "en": "Transit top-ups are extra. The mobile pass has no transit-card function, and express ride access is not included.",
+            "ja": "交通カードへのチャージは別料金。モバイルパスに交通機能はなく、優先乗車パスも含まれません。",
+            "zh-CN": "交通卡充值金额另计，电子通行证无交通卡功能，也不包含快速通关服务。",
+            "zh-TW": "交通卡儲值金額另計，電子通行證無交通卡功能，也不包含快速通關服務。"
+          },
+          "evidence": [
+            {
+              "excerpt": "加值額度另計",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+            },
+            {
+              "excerpt": "不包含 Magic Pass",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/138477-visit-busan-pass-discount-free-attractions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "e-111594",
+      "providerId": "PROVIDER_E",
+      "externalId": "111594",
+      "sourceHash": "deb7c67d975f1ea4d4850634cdee149898535344fce77cc5781da2e89490574a",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "foreign-participation",
+          "status": "check-required",
+          "texts": {
+            "ko": "외국인 예약 조건은 미확인입니다. QR을 문자로 발송하며 한국 휴대폰 번호 예시가 있어 해외 번호로 수신 가능한지 문의하세요.",
+            "en": "Foreign-visitor booking eligibility is not confirmed. QR delivery uses SMS with a Korean-number example; ask whether your overseas number works.",
+            "ja": "外国人の予約条件は未確認です。韓国番号例のあるSMSでQRを送るため、海外番号で受信可能か確認してください。",
+            "zh-CN": "外国游客的预订条件尚未确认。QR码以短信发送，号码示例为韩国号码，请先询问海外号码能否接收。",
+            "zh-TW": "外國旅客的預訂條件尚未確認。QR碼以簡訊傳送，號碼範例為韓國號碼，請先詢問海外號碼能否接收。"
+          },
+          "evidence": [
+            {
+              "excerpt": "문자로 입장을위한 QR코드",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            },
+            {
+              "excerpt": "010-0000-0000",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            }
+          ]
+        },
+        {
+          "field": "children",
+          "status": "check-required",
+          "texts": {
+            "ko": "36개월 미만 무료 안내와 증빙서류 요구가 있습니다. 해외 여권 등 인정 서류는 판매처에 확인하세요.",
+            "en": "Under-36-month free entry requires age evidence. Ask which overseas documents or passport are accepted.",
+            "ja": "36か月未満無料には年齢証明が必要です。海外の証明書・パスポートの可否は販売元に確認してください。",
+            "zh-CN": "未满36个月免费需提供证明，请向销售方确认是否接受外国护照等文件。",
+            "zh-TW": "未滿36個月免費須提供證明，請向銷售方確認是否接受外國護照等文件。"
+          },
+          "evidence": [
+            {
+              "excerpt": "36개월미만 무료입장",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            },
+            {
+              "excerpt": "증빙서류지참 필수",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            }
+          ]
+        },
+        {
+          "field": "meeting-point",
+          "status": "check-required",
+          "texts": {
+            "ko": "송도베이스테이션 주소는 부산 서구 송도해변로 171입니다. 당일 구매·사용은 불가로 안내되어 있으니 여행일 전에 구매 조건을 확인하세요.",
+            "en": "Songdo Base Station: 171 Songdohaebyeon-ro, Seo-gu, Busan. The listing says no same-day purchase/use; check timing before your travel day.",
+            "ja": "松島ベースステーションは釜山西区松島海辺路171。当日購入・利用不可の案内があるため事前確認が必要です。",
+            "zh-CN": "松岛基地站地址为釜山西区松岛海边路171号，页面注明不可当天购买当天使用，请提前确认。",
+            "zh-TW": "松島基地站地址為釜山西區松島海邊路171號，頁面註明不可當天購買當天使用，請提前確認。"
+          },
+          "evidence": [
+            {
+              "excerpt": "송도해변로 171",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            },
+            {
+              "excerpt": "당일 구매 당일 사용 불가",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            }
+          ]
+        },
+        {
+          "field": "cancellation",
+          "status": "conflicting",
+          "texts": {
+            "ko": "취소 불가와 미사용 티켓 전액 환불 안내가 함께 있어 규정이 상충합니다. 결제 전 판매처에 정확한 적용 조건을 문의하세요.",
+            "en": "The page shows both no cancellation and refunds for unused tickets. These conflict; ask the provider for the applicable terms before paying.",
+            "ja": "キャンセル不可と未使用券の全額返金が併記され矛盾しています。決済前に販売元へ適用条件を確認してください。",
+            "zh-CN": "页面同时出现不可取消与未使用票全额退款说明，条款冲突，请在付款前向销售方确认适用条件。",
+            "zh-TW": "頁面同時出現不可取消與未使用票全額退款說明，條款衝突，請在付款前向銷售方確認適用條件。"
+          },
+          "evidence": [
+            {
+              "excerpt": "취소 불가",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            },
+            {
+              "excerpt": "미사용 티켓에 한하여 100% 환불",
+              "locale": "ko",
+              "url": "https://www.kkday.com/ko/product/111594"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "offerId": "e-105514",
+      "providerId": "PROVIDER_E",
+      "externalId": "105514",
+      "sourceHash": "c759072a5726f6bca6475774cc274ef2059972f4ed9dc92b324a619dce184c16",
+      "reviewedOn": "2026-11-26",
+      "reviewExpiresOn": "2026-12-09",
+      "claims": [
+        {
+          "field": "guide-language",
+          "status": "source-listed",
+          "texts": {
+            "ko": "가이드 없는 입장권으로 표시되어 있습니다. 직원의 외국어 응대 가능 여부는 별도 확인하세요.",
+            "en": "Listed as an admission ticket without a guided tour. Foreign-language staff support is not confirmed.",
+            "ja": "ガイドなしの入場券です。スタッフの外国語対応は別途確認してください。",
+            "zh-CN": "商品标示无导览，工作人员能否提供外语服务尚未确认。",
+            "zh-TW": "商品標示無導覽，工作人員能否提供外語服務尚未確認。"
+          },
+          "evidence": [
+            {
+              "excerpt": "無導覽",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/105514-busan-x-the-sky-observatory-ticket-haeundae"
+            }
+          ]
+        },
+        {
+          "field": "children",
+          "status": "check-required",
+          "texts": {
+            "ko": "페이지의 일반 입장 기준은 36개월 미만 무료, 36개월~만 13세 미만 아동입니다. 실제 옵션의 요금·증빙 조건은 확인하세요.",
+            "en": "General admission rules list under 36 months free and children from 36 months to under 13. Check your option’s prices and proof requirements.",
+            "ja": "一般入場基準は36か月未満無料、36か月〜13歳未満が子供区分です。プラン料金と証明条件を確認してください。",
+            "zh-CN": "页面一般入场规则为未满36个月免费、36个月至未满13岁为儿童，实际方案票价及证明要求请另行确认。",
+            "zh-TW": "頁面一般入場規則為未滿36個月免費、36個月至未滿13歲為兒童，實際方案票價及證明要求請另行確認。"
+          },
+          "evidence": [
+            {
+              "excerpt": "未滿 36 個月",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/105514-busan-x-the-sky-observatory-ticket-haeundae"
+            },
+            {
+              "excerpt": "36 個月至未滿 13 歲",
+              "locale": "zh-TW",
+              "url": "https://www.kkday.com/zh-tw/product/105514-busan-x-the-sky-observatory-ticket-haeundae"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

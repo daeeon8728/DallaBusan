@@ -1,3 +1,5 @@
+import{BookingGuide}from'./booking/BookingGuide.js';
+import{getBookingGuideCopy}from'./i18n/booking-guide.js';
 import {StayBanner} from './StayBanner.js';
 import {StayMap} from './StayMap.js';
 import {getOfferDialogCopy} from './i18n/offer-dialog.js';
@@ -90,9 +92,10 @@ function OfferDialogContent({offer,locale,onSelect,bookingLabel}:{offer:PublicOf
       <BookingLanguage offer={offer} locale={locale}/><p className="dialog-provider">{offer.provider.displayName}</p>
       <div className="dialog-price">{offer.referencePrice?<><span>{copy.reference}</span><strong><Price amount={offer.referencePrice.amount} currency={offer.referencePrice.currency} locale={locale}/></strong><small>{copy.priceDate}: {offer.referencePrice.observedOn}</small></>:<strong>{copy.unknownPrice}</strong>}</div>
       <AddToCart offer={offer} locale={locale}/><p className="fine-print">{copy.priceNote}</p><p className="fine-print">{copy.availability}</p>
+      <button className="booking-guide-jump" onClick={()=>{const heading=document.getElementById('booking-guide-heading');heading?.scrollIntoView({block:'start'});heading?.focus({preventScroll:true});}}>{getBookingGuideCopy(locale).jump} ↓</button>
       <a className="primary-button booking-link" href={offer.href} target="_blank" rel="sponsored noopener noreferrer">{bookingLabel??copy.book}<Icon name="arrow" size={20}/></a>
       <p className="external-note">{copy.external}</p><p className="affiliate-note">{copy.disclosure}</p>
-    </div></div><RelatedOffers key={offer.id+locale} offerId={offer.id} locale={locale} onSelect={onSelect}/></>;
+    </div></div><BookingGuide key={offer.id+locale} offer={offer} locale={locale}/><RelatedOffers key={offer.id+locale} offerId={offer.id} locale={locale} onSelect={onSelect}/></>;
 }
 function isOutside(event:PointerEvent<HTMLDialogElement>){
   if(event.target!==event.currentTarget)return false;

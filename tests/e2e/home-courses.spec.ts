@@ -18,12 +18,12 @@ test('home shows courses before search, promotions and products, with usable cat
  await page.screenshot({path:info.outputPath('home-personas.png'),animations:'disabled'});
  const hero=await home.boundingBox(),search=await page.locator('.home-secondary-search').boundingBox();
  if(!hero||!search)throw Error('Missing home sections');expect(hero.y).toBeLessThan(search.y);
- await home.getByRole('button',{name:'No Car',exact:true}).click();await expect(home.getByTestId('home-course-card')).toHaveCount(6);
- await expect(home.getByRole('button',{name:'No Car',exact:true})).toHaveAttribute('aria-pressed','true');
+ await home.getByRole('button',{name:'Family 42',exact:true}).click();await expect(home.getByTestId('home-course-card')).toHaveCount(6);
+ await expect(home.getByRole('button',{name:'Family 42',exact:true})).toHaveAttribute('aria-pressed','true');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:info.outputPath('home-courses.png'),animations:'disabled'});
  expect(mapLoads).toEqual([]);expect(errors).toEqual([]);
- await home.getByTestId('home-course-card').first().click();await expect(page).toHaveURL(/\/courses\/fa04\?locale=en/);
+ await home.getByTestId('home-course-card').first().click();await expect(page).toHaveURL(/\/courses\/fa01\?locale=en/);
 });
 test('course shows genuinely related products and opens the existing product dialog',async({page})=>{
  await page.goto('/courses/fa01?locale=en');
@@ -40,20 +40,16 @@ test('home works in all five languages and can retry a failed course load',async
  for(const locale of ['ko','ja','zh-CN','zh-TW','en']){
   await page.locator('.language-select select').selectOption(locale);
   await expect(home.getByTestId('home-course-card')).toHaveCount(4);await expect(page.locator('html')).toHaveAttribute('lang',locale);
- const label=locale==='ko'?'첫 방문 필수':locale==='ja'?'初めての釜山':locale==='zh-CN'?'初访必去':locale==='zh-TW'?'初訪必去':'First-Timer';await expect(home.getByRole('button',{name:label,exact:true})).toBeVisible();
+ await expect(home.getByTestId('home-course-categories').getByRole('button')).toHaveCount(6);await expect(home.getByRole('button',{name:'First-Timer',exact:true})).toHaveCount(0);
  }
  await page.reload();await expect(home.getByTestId('home-course-card')).toHaveCount(4);
 });
 
-test('persona choices are localized, link to the complete filtered list and preserve combined filters',async({page})=>{
- await page.goto('/?locale=en');const home=page.getByTestId('home-courses');
- for(const name of ['First-Timer','No Car','Couples','1-Day Trip']){await home.getByRole('button',{name,exact:true}).click();await expect(home.getByTestId('home-course-card')).toHaveCount(6);}
- await home.locator('header').getByRole('link',{name:/See every matching course/}).click();await expect(page).toHaveURL(/persona=day-trip/);
- await expect(page.getByTestId('course-card')).toHaveCount(9);
- await page.locator('.course-categories').getByRole('link',{name:/Family/}).click();await expect(page).toHaveURL(/persona=day-trip/);await expect(page.getByTestId('course-card')).toHaveCount(5);
- await page.locator('.course-mode-filters').getByRole('link',{name:'Driving',exact:true}).click();await expect(page).toHaveURL(/persona=day-trip/);await expect(page.getByTestId('course-card')).toHaveCount(4);
- await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(4);
+test('only the original five categories remain and all 150 courses are reachable',async({page})=>{
+ await page.goto('/?locale=en');const home=page.getByTestId('home-courses');await expect(home.getByTestId('home-course-categories').getByRole('button')).toHaveCount(6);for(const name of ['First-Timer','No Car','Couples','1-Day Trip'])await expect(home.getByRole('button',{name,exact:true})).toHaveCount(0);
+ await home.getByRole('button',{name:'dallaBusan 21',exact:true}).click();await expect(home.getByTestId('home-course-card')).toHaveCount(6);await expect(home.locator('[href*="edit-"]')).toHaveCount(3);await home.locator('header').getByRole('link').click();await expect(page).toHaveURL(/category=dallabusan/);await expect(page.getByTestId('course-card')).toHaveCount(21);await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(21);await page.locator('.course-categories a').first().click();await expect(page.getByTestId('course-card')).toHaveCount(150);await expect(page.locator('.course-persona-link')).toHaveCount(0);await page.locator('a[href^="/courses/edit-001?"]').click();await expect(page.getByRole('heading',{level:1})).toHaveText('Steps, Stories & Cinema');await expect(page.locator('.course-stops>li')).toHaveCount(3);await expect(page.locator('.leaflet-marker-icon')).toHaveCount(3);
 });
+
 test('bundle and spot choices use the existing five currencies and booking links are fresh and sponsored',async({page},info)=>{
  await page.route('**/api/exchange-rates',route=>route.fulfill({json:exchangeFixture()}));
  await page.goto('/courses/fa04?locale=en');const bundle=page.getByTestId('course-bundle'),spots=page.getByTestId('course-spot-items');

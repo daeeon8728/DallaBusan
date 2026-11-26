@@ -54,16 +54,16 @@ test('blocked daily storage reports failure and Escape/keyboard close remain usa
   await page.keyboard.press('Escape'); await expect(popup).not.toBeVisible(); expect(await page.evaluate(()=>document.body.style.overflow)).not.toBe('hidden');
 });
 
-test('all original categories contain ten ideas, support URL refresh/back and source detail links', async ({page,request},testInfo) => {
-  await page.goto('/courses?locale=en'); await expect(page.getByTestId('course-card')).toHaveCount(50);
+test('all original categories contain original and added ideas, support URL refresh/back and source detail links', async ({page,request},testInfo) => {
+  await page.goto('/courses?locale=en'); await expect(page.getByTestId('course-card')).toHaveCount(150);
   const nav=page.locator('.header-nav'); const links=await nav.locator('a').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href')?.split('?')[0]));
   expect(links.indexOf('/courses')).toBe(links.indexOf('/search')+1); expect(links.indexOf('/food')).toBe(links.indexOf('/courses')+1);
-  for(const category of ['family','date','food','dallabusan']) {
+  for(const [category,count] of [['family',42],['date',44],['food',23],['dallabusan',21]] as const) {
     await page.locator('.course-categories a[href*="category='+category+'"]').click();
-    await expect(page.getByTestId('course-card')).toHaveCount(10); await expect(page).toHaveURL(new RegExp('category='+category));
-    await page.reload(); await expect(page.getByTestId('course-card')).toHaveCount(10);
+    await expect(page.getByTestId('course-card')).toHaveCount(count); await expect(page).toHaveURL(new RegExp('category='+category));
+    await page.reload(); await expect(page.getByTestId('course-card')).toHaveCount(count);
   }
-  await page.goBack(); await expect(page).toHaveURL(/category=food/); await expect(page.getByTestId('course-card')).toHaveCount(10);
+  await page.goBack(); await expect(page).toHaveURL(/category=food/); await expect(page.getByTestId('course-card')).toHaveCount(23);
   await page.goto('/courses/fa04?locale=en'); await expect(page.locator('.course-stops>li')).toHaveCount(4);
   await expect(page.locator('.course-warning').filter({hasText:'not validated'})).toHaveCount(1);
   await page.locator('.course-stops a[href^="/food/2899"]').filter({hasText:/^Place details ↗$/}).click(); await expect(page).toHaveURL(/\/food\/2899/); await expect(page.locator('.public-guide-facts')).toBeVisible();
@@ -74,7 +74,7 @@ test('all original categories contain ten ideas, support URL refresh/back and so
     await expect(page.getByRole('heading',{level:1})).toHaveText(data.items.find(x=>x.id==='fa04')?.title??'missing');
     await expect(page.locator('html')).toHaveAttribute('lang',locale);
   }
-  await page.goto('/courses?category=family&locale=en'); await expect(page.getByTestId('course-card')).toHaveCount(10);
+  await page.goto('/courses?category=family&locale=en'); await expect(page.getByTestId('course-card')).toHaveCount(42);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.screenshot({path:testInfo.outputPath('courses-family.png'),animations:'disabled'});
 });
@@ -83,7 +83,7 @@ test('popup opens courses while the original destination and inspiration pages r
   await page.goto('/'); await expect(page.getByTestId('course-popup')).toBeVisible();
   await expect(page.getByTestId('monthly-destinations').locator('a')).toHaveCount(2);
   await page.getByTestId('course-popup').getByRole('link',{name:/Family/}).click();
-  await expect(page).toHaveURL(/\/courses\?category=family/); await expect(page.getByTestId('course-card')).toHaveCount(10);
+  await expect(page).toHaveURL(/\/courses\?category=family/); await expect(page.getByTestId('course-card')).toHaveCount(42);
   await expect(page.getByTestId('monthly-destinations')).toHaveCount(0);
   await page.getByTestId('recommended-nav').click(); await expect(page).toHaveURL(/\/recommended\?locale=en/);
   await expect(page.getByTestId('public-guide-card')).toHaveCount(12);
@@ -100,7 +100,7 @@ test('family parking is informational and course failure retries without fabrica
   await page.route('**/api/courses?*',route=>route.fulfill({status:503,json:{error:'Unavailable'}}));
   await page.goto('/courses?locale=en'); await expect(page.locator('.courses-page [role="alert"]')).toContainText('could not be loaded');
   await expect(page.getByTestId('course-card')).toHaveCount(0); await page.unroute('**/api/courses?*');
-  await page.locator('.courses-page').getByRole('button',{name:'Try again'}).click(); await expect(page.getByTestId('course-card')).toHaveCount(50);
+  await page.locator('.courses-page').getByRole('button',{name:'Try again'}).click(); await expect(page.getByTestId('course-card')).toHaveCount(150);
   await page.goto('/courses/fa99?locale=en'); await expect(page.getByRole('heading',{level:1})).toHaveText('This course idea is unavailable.');
 });
 

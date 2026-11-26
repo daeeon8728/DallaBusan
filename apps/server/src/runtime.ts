@@ -1,3 +1,6 @@
+import{loadBookingGuideConfig}from'./config/booking-guides.js';
+import{createBookingGuideService}from'./services/booking-guides.js';
+import{registerBookingGuideRoutes}from'./routes/booking-guides.js';
 import{loadCourseExpansion}from'./config/course-expansion.js';
 import {loadCourseModules} from './config/course-builder.js';
 import {createCourseBuilderService} from './services/course-builder.js';
@@ -64,12 +67,13 @@ export async function createRuntimeApp(options: { serveWeb?: boolean; readOnlySn
   const destinationService=createDestinationService(destinationConfig,offers,undefined,localization);
   const guideService=createGuideService({food:foodSnapshot,recommended:loadGuideSnapshot('recommended')},localization,foodVisibility,foodPhotos);
   const app = buildApp(config, webRoot, createCatalogService(db, attraction.serviceKey !== null, attraction.cacheTtlMs), offers, destinationService, guideService,parking,config.NODE_ENV === 'test' ? undefined : createExchangeService(),promotions);
+  registerBookingGuideRoutes(app,createBookingGuideService(loadBookingGuideConfig(),offerConfig,offers));
   registerStaySearchRoutes(app,createStaySearchConfig(loadStaySearchConfig(),offerConfig));
   registerTravelToolRoutes(app,createTravelToolConfig(loadTravelToolConfig(),offerConfig));
   registerStayBannerRoutes(app,createStayBannerConfig(loadStayBannerConfig(),offerConfig));
   registerStayMapRoutes(app,createStayMapConfig(loadStayMapConfig(),offerConfig));
   const courseCatalog=loadCourseCatalog();
-  const courses=createCourseService(courseCatalog,destinationService,guideService,parkingAnchors,loadCourseRoutes(),loadCourseCommerce(courseCatalog,offerConfig),undefined,offers);
+  const courses=createCourseService(courseCatalog,destinationService,guideService,parkingAnchors,loadCourseRoutes(),loadCourseCommerce(courseCatalog,offerConfig),undefined,offers,loadCourseExpansion());
   registerCourseRoutes(app,courses);
   registerCourseBuilderRoutes(app,createCourseBuilderService(courses,loadCourseModules(courseCatalog),destinationService,offers,loadCourseExpansion(),guideService,parkingAnchors));
   registerFoodAssistanceRoutes(app,createFoodAssistanceService(loadFoodAssistanceConfig(),foodSnapshot,guideService,courses));

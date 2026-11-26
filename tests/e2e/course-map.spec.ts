@@ -28,12 +28,12 @@ test('reference routes never bridge missing middle coordinates and localized map
 
 test('friends courses have a navigable overview, compact details, split map and hotel comparison entry',async({page},info)=>{
  await page.goto('/courses?category=friends&locale=en');
- await expect(page.getByTestId('course-card')).toHaveCount(10);
+ await expect(page.getByTestId('course-card')).toHaveCount(20);
  await expect(page.locator('.course-categories a[aria-current="page"]')).toContainText('Friends');
- await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(10);
- await page.locator('.course-mode-filters a[href*="mode=walking"]').click();await expect(page.getByTestId('course-card')).toHaveCount(6);await expect(page).toHaveURL(/category=friends.*mode=walking/);
- await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(6);
- await page.locator('.course-mode-filters a').first().click();await expect(page.getByTestId('course-card')).toHaveCount(10);
+ await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(20);
+ await page.locator('.course-mode-filters a[href*="mode=walking"]').click();await expect(page.getByTestId('course-card')).toHaveCount(16);await expect(page).toHaveURL(/category=friends.*mode=walking/);
+ await page.reload();await expect(page.getByTestId('course-card')).toHaveCount(16);
+ await page.locator('.course-mode-filters a').first().click();await expect(page.getByTestId('course-card')).toHaveCount(20);
  await page.getByTestId('course-card').first().click();
  const overview=page.getByTestId('course-overview');await expect(overview).toBeVisible();
  await expect(overview.getByRole('button')).toHaveCount(4);
