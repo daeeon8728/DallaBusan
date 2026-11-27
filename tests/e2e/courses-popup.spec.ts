@@ -13,7 +13,7 @@ test.beforeEach(async ({ context,page }) => {
 
 test('first English visit uses corrected collage and two working buttons; Close persists only this tab', async ({page,context},testInfo) => {
   const errors:string[]=[]; page.on('pageerror',e=>errors.push(e.message));
-  await page.goto('/');
+  await page.goto('/?locale=en');
   const dialog = page.getByTestId('course-popup');
   await expect(dialog).toBeVisible(); await expect(dialog.locator('footer button')).toHaveCount(2);
   await expect(dialog.locator('img')).toHaveAttribute('src','/campaigns/course-popup-v2.png');
@@ -24,16 +24,16 @@ test('first English visit uses corrected collage and two working buttons; Close 
   await expect(dialog).not.toBeVisible(); await page.reload(); await expect(page.getByTestId('offer-card').first()).toBeVisible();
   await expect(dialog).not.toBeVisible();
   expect(await page.evaluate(()=>localStorage.getItem('dallabusan:recommendation-day:v1'))).toBeNull();
-  const fresh = await context.newPage(); await fresh.goto('/'); await expect(fresh.getByTestId('course-popup')).toBeVisible();
+  const fresh = await context.newPage(); await fresh.goto('/?locale=en'); await expect(fresh.getByTestId('course-popup')).toBeVisible();
   await fresh.close(); expect(errors).toEqual([]);
 });
 
 test('daily suppression survives another tab/reload and expires at the next local day', async ({page,context}) => {
   const now = new Date(2026,10,24,23,58);
-  await page.clock.setFixedTime(now); await page.goto('/');
+  await page.clock.setFixedTime(now); await page.goto('/?locale=en');
   await page.getByTestId('course-popup').getByRole('button',{name:'Don’t show today'}).click();
   await page.reload(); await expect(page.getByTestId('offer-card').first()).toBeVisible(); await expect(page.getByTestId('course-popup')).not.toBeVisible();
-  const other = await context.newPage(); await other.clock.setFixedTime(now); await other.goto('/');
+  const other = await context.newPage(); await other.clock.setFixedTime(now); await other.goto('/?locale=en');
   await expect(other.getByTestId('offer-card').first()).toBeVisible(); await expect(other.getByTestId('course-popup')).not.toBeVisible(); await other.close();
   await page.clock.setFixedTime(new Date(2026,10,25,0,1)); await page.reload(); await expect(page.getByTestId('course-popup')).toBeVisible();
 });
@@ -46,7 +46,7 @@ test('blocked daily storage reports failure and Escape/keyboard close remain usa
       original.call(this,key,value);
     };
   });
-  await page.goto('/'); const popup=page.getByTestId('course-popup'); await expect(popup).toBeVisible();
+  await page.goto('/?locale=en'); const popup=page.getByTestId('course-popup'); await expect(popup).toBeVisible();
   await popup.getByRole('button',{name:'Don’t show today'}).click(); await expect(popup).not.toBeVisible();
   await expect(page.locator('.popup-storage-notice')).toContainText('Could not save');
   await page.reload(); await expect(page.getByTestId('offer-card').first()).toBeVisible(); await expect(popup).not.toBeVisible();
@@ -80,7 +80,7 @@ test('all original categories contain original and added ideas, support URL refr
 });
 
 test('popup opens courses while the original destination and inspiration pages remain independent', async ({page}) => {
-  await page.goto('/'); await expect(page.getByTestId('course-popup')).toBeVisible();
+  await page.goto('/?locale=en'); await expect(page.getByTestId('course-popup')).toBeVisible();
   await expect(page.getByTestId('monthly-destinations').locator('a')).toHaveCount(2);
   await page.getByTestId('course-popup').getByRole('link',{name:/Family/}).click();
   await expect(page).toHaveURL(/\/courses\?category=family/); await expect(page.getByTestId('course-card')).toHaveCount(42);

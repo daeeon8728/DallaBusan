@@ -227,3 +227,10 @@ Google Maps 경로 내보내기와 선택적 Embed API를 허용한다. docs/goo
 ## 2026-11-26 Cloudflare 배포 오류 수정
 
 사용자 요청으로 루트 wrangler.jsonc의 명시 Worker 진입점과 apps/web/dist 정적 자산을 배포한다. docs/cloudflare-deployment.md를 따른다. Fastify/SQLite를 Workers에 가져오지 않으며 API_ORIGIN의 기존 검증 Node API를 프록시한다. 관리자 쓰기는503이다. 쿠키/Authorization 전달·업스트림리디렉트·자기호출·소스/DB 정적공개를 금지한다. 새 키는 Worker 런타임 바인딩에만 넣고 루트 .env/관리DB를 업로드하지 않는다. build:cloudflare/check:cloudflare(업로드 없는 dry-run)/typecheck:cloudflare와 기본 검사를 수행한다. 실제 Workers 로컬 검증과 클라우드 계정 배포 성공을 구분한다.
+
+
+## 2026-11-27 한국어 기본 진입
+
+최신 사용자 요청으로 최초 공개 UI와 잘못된 locale의 기본값을 ko로 변경한다. 이 범위에서 2026-11-23의 영어 기본 진입 규칙을 대체한다. 최초 HTML의 lang·제목·설명도 한국어로 제공하며, 유효한 명시 locale과 언어 선택·URL·새로고침·뒤로가기 보존은 유지한다. 서버 공공 API 기본 계약·원본 콘텐츠·제휴 설정은 변경하지 않는다.
+
+한국어 문서 제목은 ‘부산 여행 코스 짜기 – 달라부산’이다. 현재 사이트 이용은 무료이고 월1,900원은 아직 출시·과금되지 않는 향후 선택형 요금제 기획안이다. 제공 기능·출시일·확정 판매를 임의로 약속하거나 구독/결제를 구현하지 않는다. 외부 체험·숙소 예약 비용은 별도로 안내한다. 게시용 소개글은 docs/landing-copy-ko.md를 기준으로 하며 실제 외부 게시와 SEO 재점검은 별도 확인한다.

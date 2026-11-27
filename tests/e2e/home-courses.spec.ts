@@ -12,7 +12,7 @@ test.beforeEach(async({context})=>{
 test('home shows courses before search, promotions and products, with usable category choices',async({page},info)=>{
  const errors:string[]=[],mapLoads:string[]=[];
  page.on('pageerror',error=>errors.push(error.message));page.on('request',request=>{if(request.url().includes('maplibre-gl-worker')||request.url().includes('tiles.openfreemap.org'))mapLoads.push(request.url());});
- await page.goto('/');
+ await page.goto('/?locale=en');
  const home=page.getByTestId('home-courses');await expect(home.getByTestId('home-course-card')).toHaveCount(4);
  if((page.viewportSize()?.width??1280)<=600){const card=home.getByTestId('home-course-card').first(),photo=await card.locator('.course-photo').boundingBox(),title=await card.locator('h2').boundingBox();if(!photo||!title)throw Error('Missing compact card');expect(photo.height).toBeLessThanOrEqual(100);expect(title.x).toBeGreaterThan(photo.x+photo.width);}
  await expect(page.getByRole('heading',{level:1})).toHaveText('Your Busan day starts here.');

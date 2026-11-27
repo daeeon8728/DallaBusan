@@ -67,5 +67,8 @@
     "to-busan": "前往釜山",
     "regional": "釜山及周邊"
   },
-  "previousResults": "上次結果：{count}個"
+  "previousResults": "上次結果：{count}個",
+  "pageTitle": "釜山旅遊路線規劃 – dallaBusan",
+  "metaDescription": "為赴釜山的外國旅客提供旅遊路線、景點、餐廳與地圖資訊。可免費組合短程路線，體驗與住宿預訂於外部銷售平台完成。",
+  "pricingNotice": "目前網站可免費使用。每月1,900韓元的選用付費方案仍在規劃中，尚未推出，也未收取訂閱費。體驗、住宿等旅遊商品的預訂費用另計。"
 }

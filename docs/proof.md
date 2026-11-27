@@ -1973,3 +1973,37 @@ ZIP 크기13,584,275바이트, SHA-256:86a3e1dbc09c27b1102325fb37ecb7a7a0eef84cc
 | 로컬Workers Playwright390/1440 | 홈4개대표코스→상세transit링크→조합12개선택지→비활성관리자. 가로넘침0/pageerror0,외부사진/지도대역 |
 
 브라우저시연파일은 docs/design/cloudflare-2026-11-26의로컬PNG/smoke.json이며Git제외다. API프록시HTTP smoke는 실제기존공개NodeAPI를조회했다. 단위검사의업스트림장애/권한/키는대역이다. 이번 작업으로Cloudflare계정로그인·공개배포·도메인연결·Google새referrer허용·제휴신규사이트승인을완료했다고표시하지않는다. Node백엔드를계속운영해야하며 전체DB/D1/관리자Cloudflare이전은구현범위가아니다. Zod주석·기존큰지도청크·SQLite실험기능경고는남지만검사종료오류가아니다.
+
+
+## 2026-11-27 한국어 기본 진입·검색 제목·요금 안내
+
+### 변경 범위
+
+- apps/web/src/i18n/locale.ts: 누락·잘못된 locale의 UI 기본값을 ko로 변경했다. 유효한 명시 언어와 언어 선택·URL·새로고침·뒤로가기 보존은 유지한다. 공공 API 기본 계약·원본 데이터는 변경하지 않았다.
+- apps/web/index.html와 App.tsx, i18n의 5개 언어 JSON: 최초 HTML도 한국어로 제공하고 한국어 제목을 ‘부산 여행 코스 짜기 – 달라부산’으로 맞췄다. 언어 전환 후 제목·메타 설명도 해당 언어로 갱신한다. 한국어 제목18자·메타 설명101자다.
+- 공통 푸터에서 현재 사이트 이용 무료, 향후 선택형 월1,900원 기획안의 미출시·미과금 상태, 외부 여행 상품 예약 비용 별도를5개 언어로 구분했다. 운영자가 직접 미래 요금제임을 확인했으며, 제공 기능·출시일·확정 판매를 만들어 넣지 않았다. 구독/결제 구현은 없다.
+- tests/unit/default-locale.test.ts와 promotions E2E: 기본 한국어·잘못된 언어·원시 HTML·SEO 제목·요금 구분·명시5개 언어와 이동/복원을 검증한다. 기존 영어 홈/팝업 회귀는 locale=en을 명시했다.
+- docs/landing-copy-ko.md: ZORA에 붙여 넣을 게시용 소개글, 기능·요금 표, 번호 목록, FAQ, 언어 수의 확인 근거, 실제 기능 중심 차별점 본문을 작성했다. 외부 게시·SEO 재점검·AI 인용 성과를 완료로 표시하지 않았다.
+- eslint.config.js: Cloudflare가 생성한 .wrangler 임시 번들만 기존 생성물 제외 목록에 추가했다. 운영 소스 검사 규칙은 유지했다. AGENTS.md에 최신 언어/요금 요청을 추가했다.
+
+### 검증
+
+| 명령·항목 | 최종 결과 |
+| --- | --- |
+| npm run lint | 종료0. 최초 실행은 .wrangler 자동 생성 JS의214개 오류로 실패; 생성물 경계 수정 후 통과 |
+| npm run typecheck | 종료0, strict 및 Cloudflare 포함 |
+| npm run test -- --run --maxWorkers=2 | 종료0,51파일467개 통과 |
+| npm run check:providers | 종료0,189개 소스 검사 |
+| npm run build | 종료0, domain→server→web |
+| npm run test:e2e -- tests/e2e/promotions.spec.ts tests/e2e/home-courses.spec.ts tests/e2e/courses-popup.spec.ts --output=docs/design/korean-default-2026-11-27 | 종료0,360/768/1280px 총48개 통과 |
+| dist 직접 실행 HTTP smoke | 종료0,홈/코스 HTML 한국어·새제목200,상품 API402개·코스 API150개200; 임시 서버 종료 |
+| git diff --check / git check-ignore | 공백 오류0, .env와 시연 캡처 Git 제외 |
+
+첫 HTTP smoke는 HTML 직접 경로 /courses에 기본 */* Accept를 보내404를 받았다. 브라우저와 동일한 text/html Accept로 재검증하여200을 확인했으며, 기존 SPA fallback의 요청 구분을 변경하지 않았다. 실패 후 생성한 임시 프로세스도 종료했다. 기존 Zod 주석·큰 지도 청크·SQLite 실험 기능 경고는 빌드 실패가 아니다.
+
+### 실제·대역·미실행 구분
+
+- 로컬 산출물/API는 실제 검증된 공개 스냅샷이며, 원본상품588/공개402/제외186(기존 제공처 자격185+명시비활성1),메인398,코스150을 유지했다. 신규 포털 수집·상품/사진/가격 변경은0이다.
+- 브라우저의 외부 사진·분석 태그·지도·제휴 페이지는 대역이다. 프로모션은 기존 검토 시점 fixture이며 만료된 실제 행사를 갱신하거나 다시 게시하지 않았다. 실제 예약·결제·유료 API 호출은0이다.
+- 캡처는 docs/design/korean-default-2026-11-27 아래 korean-default-home.png 등이며 Git에서 제외했다. 모바일 캡처를 직접 열어 한국어 메뉴·요약·작은 코스 카드 표시를 확인했다.
+- 한국어 기본 페이지 변경은 새 배포가 반영되어야 공개 사이트에서 보인다. 로컬 검증을 Vercel 배포 완료로 간주하지 않는다. 외부 ZORA 게시 화면의 수정/제출 및 재점검은 수행하지 않았다.
